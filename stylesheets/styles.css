@@ -579,6 +579,10 @@ h3 {
   color: #b6b6b6;
 }
 
+a > code {
+    color: #ffcc00 !important;
+}
+
 a {
   color: #ffcc00;
   font-weight: 400;
@@ -626,8 +630,7 @@ code {
   font-family: "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color: #efefef;
   font-size: 13px;
-  margin: 0 4px;
-  padding: 4px 6px;
+  padding: 4px 0px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
@@ -818,6 +821,29 @@ section #title .credits.left {
 }
 section #title .credits.right {
   float: right;
+}
+
+#logo {
+    float:left;
+    height:140%;
+    width:auto;
+    position: absolute;
+    top: 50%;
+	transform: translateY(-50%);
+}
+
+#logoContainer {
+    position:relative;
+}
+
+#titleHeader {
+    margin-left:auto;
+    margin-right: 0px;
+    width:85%
+}
+
+.clear {
+    clear: both;
 }
 
 @media print, screen and (max-width: 720px) {

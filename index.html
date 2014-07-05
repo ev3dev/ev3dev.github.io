@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ev3dev by WasabiFan</title>
+    <title>ev3dev - Linux on an EV3</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -16,63 +16,131 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
-      <div id="header">
+</head>
+<body>
+    <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/WasabiFan/ev3dev">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/WasabiFan/ev3dev/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/WasabiFan/ev3dev/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
+            <li class="fork"><a href="https://github.com/WasabiFan/ev3dev">View On GitHub</a></li>
+            <li class="downloads"><a href="https://github.com/WasabiFan/ev3dev/zipball/master">ZIP</a></li>
+            <li class="downloads"><a href="https://github.com/WasabiFan/ev3dev/tarball/master">TAR</a></li>
+            <li class="title">DOWNLOADS</li>
         </nav>
-      </div><!-- end header -->
+    </div><!-- end header -->
 
     <div class="wrapper">
 
-      <section>
-        <div id="title">
-          <h1>ev3dev</h1>
-          <p>ev3dev - Debian GNU/Linux 7 on LEGO MINDSTORMS EV3!</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/WasabiFan">WasabiFan</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+        <section>
+            <div id="title">
+                <div id="logoContainer">
+                    <img id="logo" src="https://avatars3.githubusercontent.com/u/6878323?s=140" />
+                    <div id="titleHeader" class="clear">
+                        <h1>ev3dev</h1>
+                        <p>Debian GNU/Linux 7 on LEGO MINDSTORMS EV3!</p>
+                    </div>
+                </div>
+                <hr class="clear">
+                <span class="credits left">Project maintained by <a href="https://github.com/rhempel">Ralph Hempel</a> and <a href="https://github.com/dlech">David Lechner</a></span>
+                <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+            </div>
 
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+            <h3>
+                Introduction
+            </h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            <p>
+                The <a href="https://github.com/mindboards/ev3dev">
+                    <code>ev3dev</code>
+                </a> distribution is a full Debian 7 (wheezy) Linux distribution running on the 3.3.x kernel that has been customized for the LEGO MINDSTORMS EV3 controller.
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+                Rather than use custom language bindings that use direct access to mmap'ed memory, this distribution aims to allow as many programming languages as possible to access the EV3 peripherals using simple Linux file access. If your favorite programming language is available as an ARM port, and it can read and write files, you can use it to program the EV3.
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+                Currently the <code>ev3dev</code> distribution includes the following languages:
+                <ul>
+                    <li>bash/dash</li>
+                    <li>awk/gawk</li>
+                    <li>perl</li>
+                    <li>Lua</li>
+                    <li>guile</li>
+                    <li>ruby</li>
+                    <li>python</li>
+                </ul>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+                If your favorite language isn't listed, you can still program with the EV3. <code>ev3dev</code> supports standard <code>apt</code> tools, so once you get up-and-running you can install whatever language you like.
+            </p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+            <h3>Features</h3>
+            <p>
+                Features above and beyond the official LEGO kernel include:
+                <ul>
+                    <li>Support for Atheros, Realtek, and other wifi chipsets so you're not stuck with one specific wifi dongle</li>
+                    <li>Support for SSH terminal sessions</li>
+                    <li>Ethernet over USB functionality and a full network stack</li>
+                    <li>Actual user accounts instead of passwordless root access</li>
+                    <li>Fully upgradeable and customizable install using standard "apt" tools, running on the brick</li>
+                    <li>NFS file share / file transfer capability</li>
+                    <li>Automatic NTP clock updates </li>
+                    <li>Access to device drivers through user-space filesystem</li>
+                    <li>Built in text editors like vim and nano</li>
+                    <li>Prebuilt support for programming languages like Lua, perl, gawk, Python, guile, Ruby, and more</li>
+                    <li>Support for all host operating systems including Windows, Mac, Linux, Android, even Blackberry!</li>
+                </ul>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+            <p>
+                Don't want to give up your official LEGO MINDSTORMS EV3 kernel and rootfs? You don't need to!
+            </p>
+            <p>
+                Just install  <code>ev3dev</code>  on any microSD card (min 1GB suggested, but can you even buy one that small anymore?) and plug it into the microSD slot on the EV3. The uboot loader will look on the card, find the <code>ev3dev</code> kernel and happily boot that instead!
+            </p>
+            <p>
+                When you want to use the official LEGO tools, just shutdown the EV3, unplug the <code>ev3dev</code> microSD card and restart the brick.
+            </p>
+            <p>
+                This is still an early beta, so it's not as polished as the official LEGO offering, but it's getting better every week as we add support for more of the native EV3 drivers. Alongside the main kernel, work is also being done on <a href="https://github.com/ev3dev/brickdm">brickdm</a>, which adds a LEGO-like GUI.
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+            </p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+            <h3>The state of the project</h3>
+            <p>
+                Currently, the project is being maintained by @dlech and @rhempel in their spare time. Active development is being done in the main <a href="https://github.com/mindboards/ev3dev-kernel">
+                    <code>ev3dev-kernel</code>
+                </a> repo as well as in places like <a href="https://github.com/ev3dev/brickdm">
+                    <code>brickdm</code>
+                </a> and other related packages.
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                <code>ev3dev</code> supports many of the basic functions of the brick. This includes:
+                <ul>
+                    <li>Motors</li>
+                    <li>Sensors</li>
+                    <li>Sound</li>
+                    <li>LEDs</li>
+                    <li>LCD Display</li>
+                </ul>
+            </p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+            <h3>Assorted Questions / FAQ</h3>
+            <p>
+                <h4>Does ev3dev replace the firmware on my EV3 programmable brick?</h4>
+            <p>
+                No. <code>ev3dev</code> runs completely off of a SD card, leaving the existing firmware intact. To restore the original functionality of your brick, just power it off and remove the SD card containing <code>ev3dev</code>. When you turn it back on, it will boot using the existing firmware.
+            </p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+            <h4>Can <code>ev3dev</code> do everything that the official firmware can?</h4>
+            <p>
+                No. Although the goal is to support as much as we can, some things will probably never make it in to <code>ev3dev</code> for various reasons. Here are some things that <code>ev3dev</code> doesn't do (currently):
+                <ul>
+                    <li>Offer a GUI on boot</li>
+                    <li>Run programs from EV3-G</li>
+                    <li>Automaticcally configure everything on the PC (such as networking)</li>
+                </ul>
+            </p>
+
+            <h4>What's a Linux?</h4>
+            <p>
+                If you are at this section right now out of true inquiry, that probably means that <code>ev3dev</code> itn't something for you yet. We're currently in a heavy development stage so <code>ev3dev</code> requires some more advanced knowledge and lots of time to use. We invite you to look here often, because some day we will have many more user-friendly features for you to take advantage of.
+            </p>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+
+</body>
 </html>
