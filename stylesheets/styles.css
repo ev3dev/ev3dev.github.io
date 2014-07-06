@@ -889,3 +889,34 @@ section #title .credits.right {
     display: none;
   }
 }
+
+:target {
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1;
+    -o-animation: target-fade 3s 1;
+    animation: target-fade 3s 1;
+}
+
+@-webkit-keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
+
+@-moz-keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
+
+@-o-keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
+
+@keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
