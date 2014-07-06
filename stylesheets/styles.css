@@ -839,11 +839,14 @@ section #title .credits.right {
 
 #logo {
     float:left;
-    height:140%;
+    max-height:140%;
     width:auto;
+    max-width:15%;
     position: absolute;
     top: 50%;
 	transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 #logoContainer {
@@ -854,6 +857,16 @@ section #title .credits.right {
     margin-left:auto;
     margin-right: 0px;
     width:85%
+}
+
+@media print, screen and (max-width: 450px) {
+    #logo {
+        display: none;
+    }
+
+    #titleHeader {
+    width:100%
+    }
 }
 
 .clear {
