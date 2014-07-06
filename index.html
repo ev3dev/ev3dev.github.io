@@ -91,6 +91,7 @@
                 Put more simply: <code>ev3dev</code> can do almost everything normal Linux can, while the stock LEGO kernel cannot.
             </p>
 
+            <h4>Using the <code>ev3dev</code> Kernel:</h4>
             <p>
                 Don't want to give up your official LEGO MINDSTORMS EV3 kernel and rootfs? You don't need to!
             </p>
@@ -102,7 +103,6 @@
             </p>
             <p>
                 This is still an early beta, so it's not as polished as the official LEGO offering, but it's getting better every week as we add support for more of the native EV3 drivers. Alongside the main kernel, work is also being done on <a href="https://github.com/ev3dev/brickdm">brickdm</a>, which adds a LEGO-like GUI.
-
             </p>
 
             <h3>The state of the project</h3>
@@ -113,13 +113,13 @@
                     <code>brickdm</code>
                 </a> and other related packages.
 
-                <code>ev3dev</code> supports many of the basic functions of the brick. This includes:
+                <code>ev3dev</code> supports many of the basic functions of the brick, including:
                 <ul>
                     <li>Motors</li>
                     <li>Sensors</li>
                     <li>Sound</li>
                     <li>LEDs</li>
-                    <li>LCD Display</li>
+                    <li>The LCD</li>
                 </ul>
             </p>
 
@@ -128,11 +128,11 @@
                 To start working with <code>ev3dev</code>, head over to the <a href="https://github.com/mindboards/ev3dev/wiki/getting-started-v2">getting started</a> page on the main wiki.
             </p>
 
-            <h3>Assorted Questions / FAQ</h3>
+            <h3>Assorted Info / FAQ</h3>
             <p>
                 <h4>Does ev3dev replace the firmware on my EV3 programmable brick?</h4>
             <p>
-                No. <code>ev3dev</code> runs completely off of a SD card, leaving the existing firmware intact. To restore the original functionality of your brick, just power it off and remove the SD card containing <code>ev3dev</code>. When you turn it back on, it will boot using the existing firmware.
+                No. <code>ev3dev</code> runs completely off of an SD card, leaving the existing firmware intact. To restore the original functionality of your brick, just power it off and remove the SD card containing <code>ev3dev</code>. When you turn it back on, it will boot using the existing firmware.
             </p>
 
             <h4>Can <code>ev3dev</code> do everything that the official firmware can?</h4>
@@ -141,13 +141,13 @@
                 <ul>
                     <li>Offer a GUI on boot</li>
                     <li>Run programs from EV3-G</li>
-                    <li>Automatically configure everything on the PC (such as networking)</li>
+                    <li>Automatically configure PC interaction (networking)</li>
                 </ul>
             </p>
 
             <h4>What's a Linux?</h4>
             <p>
-                If you are at this section right now out of true inquiry, that probably means that <code>ev3dev</code> itn't something for you (yet). We're currently in a heavy development stage so <code>ev3dev</code> requires some more advanced knowledge and lots of time to use. We invite you to look here often, because some day we will have many more user-friendly features for you to take advantage of.
+                If you are at this section right now out of true inquiry, that probably means that <code>ev3dev</code> itn't something for you (yet). We're currently in a heavy development stage so <code>ev3dev</code> requires some more advanced knowledge and lots of time to use. We invite you to look here often, because some day we will have many more user-friendly features for you to take advantage of. Stay tuned!
             </p>
 
         </section>
