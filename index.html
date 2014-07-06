@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <hr class="clear">
-                <span class="credits left">Project maintained by <a href="https://github.com/rhempel">Ralph Hempel</a> and <a href="https://github.com/dlech">David Lechner</a></span>
-                <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+                <span class="credits left">Project maintained by <a href="https://github.com/rhempel">Ralph Hempel</a> and <a href="https://github.com/dlech">David Lechner, with help from </a></span>
+                <span class="credits right">Hosted on GitHub Pages <!--&mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a>--></span>
             </div>
 
             <h3>
@@ -56,7 +56,7 @@
                     <code>ev3dev</code>
                 </a> distribution is a full Debian 7 (wheezy) Linux distribution running on the 3.3.x kernel that has been customized for the LEGO MINDSTORMS EV3 controller. (<a href="#whatsLinux">huh?</a>)
 
-                Rather than use custom language bindings that use direct access to mmap'ed memory, this distribution aims to allow as many programming languages as possible to access the EV3 peripherals using simple Linux file access. If your favorite programming language is available as an ARM port, and it can read and write files, you can use it to program the EV3.
+                Rather than use custom language bindings that use direct access to mmap'ed files, this distribution aims to allow as many programming languages as possible to access the EV3 peripherals using simple Linux file access. If your favorite programming language is available as an ARM port, and it can read and write files, you can use it to program the EV3.
 
                 Currently the <code>ev3dev</code> distribution includes the following languages:
                 <ul>
@@ -70,6 +70,16 @@
                 </ul>
 
                 If your favorite language isn't listed, you can still program with the EV3. <code>ev3dev</code> supports standard <code>apt</code> tools, so once you get up-and-running you can install whatever language you like.
+
+                And although you <i>can</i> directly access the APIs via file I/O if you want to, let's face it: that's hard. It's much easier when you have a higher-level library to use. Contributors have written language wrappers for the following languages:
+
+                <ul>
+                    <li><a href="https://github.com/fdetro/ev3dev-lang/tree/master/cpp">C++ by @fdetro</a></li>
+                    <li><a href="https://github.com/fdetro/ev3dev-lang/tree/master/lua">Lua by @fdetro</a></li>
+                    <li><a href="https://github.com/mattrajca/GoEV3">Google Go by @mattrajca</a></li>
+                    <li>Python <a href="https://github.com/mindboards/ev3dev/issues/63#issuecomment-42717732">Rubik's cube solver by @cavenel</a> and <a href="https://gist.github.com/dlech/11098915">balancing robot by @dlech</a></li>
+                    <li><a href="https://github.com/WasabiFan/ev3dev-NodeJS">Node.js by @wasabifan</a></li>
+                </ul>
             </p>
 
             <h3>Features</h3>
@@ -151,6 +161,9 @@
             </p>
 
         </section>
+        <hr />
+
+
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
