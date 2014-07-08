@@ -249,6 +249,10 @@ pre {
   margin: 1em 0;
 }
 
+p {
+    text-align: justify;
+}
+
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
@@ -579,6 +583,10 @@ h3 {
   color: #b6b6b6;
 }
 
+a > code {
+    color: #ffcc00 !important;
+}
+
 a {
   color: #ffcc00;
   font-weight: 400;
@@ -605,7 +613,7 @@ strong {
 }
 
 .wrapper {
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
@@ -626,8 +634,7 @@ code {
   font-family: "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color: #efefef;
   font-size: 13px;
-  margin: 0 4px;
-  padding: 4px 6px;
+  padding: 4px 0px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
@@ -709,10 +716,9 @@ dt {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 #header nav {
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 0 10px;
-  background: blue;
   margin: 6px auto;
 }
 #header nav li {
@@ -769,8 +775,19 @@ dt {
 #header nav li.fork {
   float: left;
   margin-left: 0px;
+  }
+
+#header nav li.wiki {
+  float: left;
+  margin-left: 6px;
 }
-#header nav li.downloads {
+
+#header nav li.issues {
+  float: left; 
+  margin-left: 6px;
+}
+
+#header nav li.otherPlaces {
   float: right;
   margin-left: 6px;
 }
@@ -781,7 +798,7 @@ dt {
 }
 
 section {
-  max-width: 650px;
+  max-width: 750px;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 70px;
@@ -820,6 +837,42 @@ section #title .credits.right {
   float: right;
 }
 
+#logo {
+    float:left;
+    max-height:140%;
+    width:auto;
+    max-width:15%;
+    position: absolute;
+    top: 50%;
+	transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+#logoContainer {
+    position:relative;
+}
+
+#titleHeader {
+    margin-left:auto;
+    margin-right: 0px;
+    width:85%
+}
+
+@media print, screen and (max-width: 450px) {
+    #logo {
+        display: none;
+    }
+
+    #titleHeader {
+    width:100%
+    }
+}
+
+.clear {
+    clear: both;
+}
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
@@ -848,4 +901,35 @@ section #title .credits.right {
   nav {
     display: none;
   }
+}
+
+:target {
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1;
+    -o-animation: target-fade 3s 1;
+    animation: target-fade 3s 1;
+}
+
+@-webkit-keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
+
+@-moz-keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
+
+@-o-keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
+}
+
+@keyframes target-fade {
+    0% { color: rgb(255, 204, 0); }
+    70% { color: rgb(255, 204, 0); }
+    100% { color: #e8e8e8 }
 }
