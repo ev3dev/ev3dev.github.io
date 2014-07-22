@@ -772,18 +772,29 @@ dt {
   -o-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
 }
+
+#header nav li.projects {
+  float: left; 
+  margin-left: 6px;
+}
+
+#header nav li.home {
+  float: left; 
+  margin-left: 6px;
+}
+
 #header nav li.fork {
-  float: left;
-  margin-left: 0px;
-  }
+  float: right;
+  margin-left: 6px;
+}
 
 #header nav li.wiki {
-  float: left;
+  float: right;
   margin-left: 6px;
 }
 
 #header nav li.issues {
-  float: left; 
+  float: right; 
   margin-left: 6px;
 }
 
