@@ -1,55 +1,19 @@
+---
+title: ev3dev
+subtitle: Debian on LEGO MINDSTORMS EV3!
+---
+
 ﻿<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ev3dev - Debian on LEGO MINDSTORMS EV3</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-</head>
+{% include head.html %}
 <body>
-    <div id="header">
-        <nav>
-            <li class="home"><a href="index.html">Home</a></li>
-            <li class="projects"><a href="Projects.html">Projects That Use ev3dev</a></li>
-
-            <li class="wiki"><a href="https://github.com/mindboards/ev3dev/wiki">Wiki</a></li>
-            <li class="issues"><a href="https://github.com/mindboards/ev3dev/issues">Issues</a></li>
-        </nav>
-    </div><!-- end header -->
-
+    {% include header.html %}
     <div class="wrapper">
-
         <section>
-            <div id="title">
-                <div id="logoContainer">
-                    <a href="index.html">
-                        <img id="logo" src="https://avatars3.githubusercontent.com/u/6878323?s=140" />
-                    </a>
-                    <div id="titleHeader" class="clear">
-                        <h1>ev3dev</h1>
-                        <p>Debian on LEGO MINDSTORMS EV3!</p>
-                    </div>
-                </div>
-                <hr class="clear">
-                <span class="credits left">Project maintained by <a href="https://github.com/rhempel">Ralph Hempel</a> and <a href="https://github.com/dlech">David Lechner</a>, with help from the community</span>
-                <span class="credits right">Hosted on GitHub Pages <!--&mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a>--></span>
-            </div>
-
+            {% include title.html %}
             <h3>
                 Introduction
             </h3>
-
             <p>
                 The <a href="https://github.com/mindboards/ev3dev">
                     <code>ev3dev</code>
@@ -67,7 +31,7 @@
                     <li>ruby</li>
                     <li>python</li>
                     <li>Google Go (golang)</li>
-                    <li>nodejs</li>
+                    <li>Node.js</li>
                 </ul>
 
                 If your favorite language isn't listed, you can still program with the EV3. <code>ev3dev</code> supports standard <code>apt</code> tools, so once you get up-and-running you can install whatever language you like.
@@ -75,10 +39,10 @@
                 And although you <i>can</i> directly access the APIs via file I/O if you want to, let's face it: that's hard. It's much easier when you have a higher-level library to use. Contributors have written language wrappers for the following languages:
 
                 <ul>
-                    <li><a href="https://github.com/fdetro/ev3dev-lang/tree/master/cpp">C++ by @fdetro</a></li>
-                    <li><a href="https://github.com/fdetro/ev3dev-lang/tree/master/lua">Lua by @fdetro</a></li>
-                    <li><a href="https://github.com/mattrajca/GoEV3">Google Go by @mattrajca</a></li>
-                    <li><a href="http://wasabifan.github.io/ev3dev-NodeJS/">Node.js by @wasabifan</a></li>
+                    <li><a href="https://github.com/fdetro/ev3dev-lang/tree/master/cpp">C++</a> by @fdetro</li>
+                    <li><a href="https://github.com/fdetro/ev3dev-lang/tree/master/lua">Lua</a> by @fdetro</li>
+                    <li><a href="https://github.com/mattrajca/GoEV3">Google Go</a> by @mattrajca</li>
+                    <li><a href="http://wasabifan.github.io/ev3dev-NodeJS/">Node.js</a> by @wasabifan</li>
                 </ul>
             </p>
 
@@ -117,7 +81,7 @@
 
             <h3>The state of the project</h3>
             <p>
-                Currently, the project is being maintained by @dlech and @rhempel in their spare time. Active development is being done in the main <a href="https://github.com/mindboards/ev3dev-kernel">
+                Currently, the project is being maintained by @dlech and @rhempel in their spare time. Active development is being done in the main <a href="https://github.com/ev3dev/ev3dev-kernel">
                     <code>ev3dev-kernel</code>
                 </a> repo as well as in places like <a href="https://github.com/ev3dev/brickdm">
                     <code>brickdm</code>
@@ -161,11 +125,7 @@
             </p>
 
         </section>
-        <hr />
-
-
+        {% include footer.html %}
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-
 </body>
 </html>

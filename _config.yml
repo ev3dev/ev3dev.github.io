@@ -1,0 +1,3 @@
+exclude: [README.md]
+gems:
+  - jekyll-mentions
