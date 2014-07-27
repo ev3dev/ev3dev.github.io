@@ -1,3 +1,4 @@
+markdown: kramdown
 permalink: pretty
 exclude: [README.md]
 

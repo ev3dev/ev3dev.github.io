@@ -5,6 +5,7 @@ category: projects
 ---
 
 You can find a demo of the robot using the rubiks cube example here:
+
 <iframe width="560" height="315" src="//www.youtube.com/embed/HuKsfp19yF0" frameborder="0" allowfullscreen="1" > </iframe><br />
 
 
