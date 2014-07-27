@@ -9,18 +9,14 @@ You can view your changes locally by installing [jekyll](http://jekyllrb.com/).
 
 In ubuntu 14.04:
 
-    sudo apt-get install git ruby1.9.1-dev nodejs
-    sudo gem install jekyll
+    sudo apt-get install git ruby2.0-dev nodejs
+    sudo gem install bundle
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
-    jekyll serve &
+    bundle install
+    bundle exec jekyll serve --watch &
     www-browser http://localhost:4000 &
     # work, work, work
-    jekyll build
-    # refresh browser
-    # repeat until satisfied
-    git commit -am "<describe your changes here>"
-    git push
 
 Alternately, when forking, you can create a new branch called `gh-pages`, then your
 changes can be viewed as `http://<user>.github.io/ev3dev.github.io`. When you do this

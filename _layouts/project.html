@@ -1,0 +1,25 @@
+---
+
+---
+﻿<!doctype html>
+<html>
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <div class="wrapper">
+        <section>
+            {% include title.html %}
+            <div class="breadcrumbs">
+                <a href="/projects">&lt; Back to Projects Gallery</a>
+            </div>
+            {{ content }}
+            <br />
+            <div id="project-credit">
+                {% assign author_mention = page.author %}
+                Posted by {% include author-mention.html %} on {{ page.date | date_to_string }}
+            </div>
+        </section>
+        {% include footer.html %}
+    </div>
+</body>
+</html>

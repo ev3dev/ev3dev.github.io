@@ -13,12 +13,20 @@ title: Projects
             <p>
                 This is where we keep a collection of all the projects that people are working on using ev3dev. We invite you to click through the links below to see what cool stuff ev3dev can do!
             </p>
-            <ul>
-                <li><a href="https://github.com/mindboards/ev3dev/issues/63#issuecomment-42717732">Rubik's cube solver</a> by @cavenel</li>
-                <li><a href="https://gist.github.com/dlech/11098915">Balancing robot</a> by @dlech and @G33kDude</li>
-                <li><a href="http://youtu.be/9pjpQoZoW6E">Drawing robot</a> by @cavenel</li>
+            <ul id="projects-list">
+                {% for post in site.posts %}
+                    {% if post.categories.first == "projects" %}
+                        <li>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                            {% if post.author %}
+                                {% assign author_mention = post.author %}
+                                by {% include author-mention.html %}
+                            {% endif %}
+                            ({{ post.date | date_to_string }})
+                        </li>
+                    {% endif %}
+                {% endfor %}
             </ul>
-
         </section>
         {% include footer.html %}
     </div>

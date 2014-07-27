@@ -1,3 +1,5 @@
+permalink: pretty
 exclude: [README.md]
+
 gems:
   - jekyll-mentions

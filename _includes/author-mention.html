@@ -1,0 +1,16 @@
+<!-- Provides @mention function for author_mention variable -->
+
+{% assign authors = author_mention | split: ' ' %}
+{% for author in authors %}
+    {% assign author_no_at_sign = author | strip_html | remove_first: "@" %}
+    {% assign at_sign = author | strip_html | replace: author_no_at_sign %}
+    <!-- first function does not work and truncate function returns trailing "..." -->
+    {% assign test_at_sign_is_first = author | truncate: 4 | replace: "@" | size %}
+    <!-- this looks weird, but it was the only way I could figure out how to test
+         that the first character of author is "@" -->
+    {% if at_sign.size > 0 and test_at_sign_is_first == 3 %}
+        <a href="https://github.com/{{ author_no_at_sign }}">{{ author }}</a>
+    {% else %}
+        {{ author }}
+    {% endif %}
+{% endfor %}

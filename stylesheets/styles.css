@@ -798,6 +798,7 @@ dt {
   float: right;
   margin-left: 6px;
 }
+
 #header nav li.title {
   float: right;
   margin-right: 10px;
@@ -864,6 +865,22 @@ section #title p {
     margin-left:auto;
     margin-right: 0px;
     width:92%
+}
+
+.breadcrumbs {
+	margin-top: -30px;
+	margin-bottom: 30px;
+}
+
+#projects-list li {
+	margin-bottom: 10px;
+	font-size: 110%;
+}
+
+#project-credit {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: -50px;
 }
 
 @media print, screen and (max-width: 450px) {
