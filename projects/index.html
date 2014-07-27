@@ -17,7 +17,7 @@ title: Projects
                 {% for post in site.posts %}
                     {% if post.categories.first == "projects" %}
                         <li>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
+                            <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
                             {% if post.author %}
                                 {% assign author_mention = post.author %}
                                 by {% include author-mention.html %}
