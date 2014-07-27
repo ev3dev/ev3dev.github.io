@@ -9,7 +9,7 @@ You can view your changes locally by installing [jekyll](http://jekyllrb.com/).
 
 In ubuntu 14.04:
 
-    sudo apt-get install git ruby2.0-dev nodejs
+    sudo apt-get install git ruby2.0 ruby2.0-dev nodejs
     sudo gem install bundle
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
