@@ -5,7 +5,7 @@ This is the web page at <http://www.ev3dev.org> and also <http://ev3dev.github.i
 
 Feel free to fork and make a pull request.
 
-You can view your changes locally by installing [jekyll](http://jekyllrb.com/).
+You can view your changes locally by installing [jekyll](https://help.github.com/articles/using-jekyll-with-pages).
 
 In ubuntu 14.04:
 
