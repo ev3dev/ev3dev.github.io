@@ -15,11 +15,11 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
                 Introduction
             </h3>
             <p>
-                The <code>ev3dev</code> distribution is a full Debian 7 (wheezy) Linux distribution running on the 3.3.x kernel that has been customized for the LEGO MINDSTORMS EV3 controller. (<a href="#whatsLinux">huh?</a>)
+                The ev3dev distribution is a full Debian 7 (wheezy) Linux distribution running on the 3.3.x kernel that has been customized for the LEGO MINDSTORMS EV3 controller. (<a href="#whatsLinux">huh?</a>)
 
                 Rather than use custom language bindings that use direct access to mmap'ed files, this distribution aims to allow as many programming languages as possible to access the EV3 peripherals using simple Linux file access. If your favorite programming language is available as an ARM port, and it can read and write files, you can use it to program the EV3.
 
-                Currently the <code>ev3dev</code> distribution includes the following languages:
+                Currently the ev3dev distribution includes the following languages:
                 <ul>
                     <li>bash/dash</li>
                     <li>awk/gawk</li>
@@ -32,7 +32,7 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
                     <li>Node.js</li>
                 </ul>
 
-                If your favorite language isn't listed, you can still program with the EV3. <code>ev3dev</code> supports standard <code>apt</code> tools, so once you get up-and-running you can install whatever language you like.
+                If your favorite language isn't listed, you can still program with the EV3. ev3dev supports standard <code>apt</code> tools, so once you get up-and-running you can install whatever language you like.
 
                 And although you <i>can</i> directly access the APIs via file I/O if you want to, let's face it: that's hard. It's much easier when you have a higher-level library to use. Contributors have written language wrappers for the following languages:
 
@@ -61,18 +61,18 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
                     <li>Prebuilt support for programming languages like Lua, perl, gawk, Python, guile, Ruby, and more</li>
                     <li>Support for all host operating systems including Windows, Mac, Linux, Android, even Blackberry!</li>
                 </ul>
-                Put more simply: <code>ev3dev</code> can do almost everything normal Linux can, while the stock LEGO kernel cannot.
+                Put more simply: ev3dev can do almost everything normal Linux can, while the stock LEGO kernel cannot.
             </p>
 
-            <h4>Using the <code>ev3dev</code> Kernel:</h4>
+            <h4>Using the ev3dev Kernel:</h4>
             <p>
                 Don't want to give up your official LEGO MINDSTORMS EV3 kernel and rootfs? You don't need to!
             </p>
             <p>
-                Just install  <code>ev3dev</code>  on any microSD card (min 1GB suggested, but can you even buy one that small anymore?) and plug it into the microSD slot on the EV3. The uboot loader will look on the card, find the <code>ev3dev</code> kernel and happily boot that instead!
+                Just install  ev3dev  on any microSD card (min 1GB suggested, but can you even buy one that small anymore?) and plug it into the microSD slot on the EV3. The uboot loader will look on the card, find the ev3dev kernel and happily boot that instead!
             </p>
             <p>
-                When you want to use the official LEGO tools, just shutdown the EV3, unplug the <code>ev3dev</code> microSD card and restart the brick.
+                When you want to use the official LEGO tools, just shutdown the EV3, unplug the ev3dev microSD card and restart the brick.
             </p>
             <p>
                 This is still an early beta, so it's not as polished as the official LEGO offering, but it's getting better every week as we add support for more of the native EV3 drivers. Alongside the main kernel, work is also being done on <a href="https://github.com/ev3dev/brickdm">brickdm</a>, which adds a LEGO-like GUI.
@@ -86,7 +86,7 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
                     <code>brickdm</code>
                 </a> and other related packages.
 
-                <code>ev3dev</code> supports many of the basic functions of the brick, including:
+                ev3dev supports many of the basic functions of the brick, including:
                 <ul>
                     <li>Motors</li>
                     <li>Sensors</li>
@@ -98,19 +98,19 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
 
             <h3>Getting Started</h3>
             <p>
-                To start working with <code>ev3dev</code>, head over to the <a href="https://github.com/ev3dev/ev3dev/wiki/getting-started-v2">getting started</a> page on the main wiki.
+                To start working with ev3dev, head over to the <a href="https://github.com/ev3dev/ev3dev/wiki/getting-started-v2">getting started</a> page on the main wiki.
             </p>
 
             <h3>Assorted Info / FAQ</h3>
             <p>
                 <h4>Does ev3dev replace the firmware on my EV3 programmable brick?</h4>
             <p>
-                No. <code>ev3dev</code> runs completely off of an SD card, leaving the existing firmware intact. To restore the original functionality of your brick, just power it off and remove the SD card containing <code>ev3dev</code>. When you turn it back on, it will boot using the existing firmware.
+                No. ev3dev runs completely off of an SD card, leaving the existing firmware intact. To restore the original functionality of your brick, just power it off and remove the SD card containing ev3dev. When you turn it back on, it will boot using the existing firmware.
             </p>
 
-            <h4>Can <code>ev3dev</code> do everything that the official firmware can?</h4>
+            <h4>Can ev3dev do everything that the official firmware can?</h4>
             <p>
-                No. Although the goal is to support as much as we can, some things will probably never make it in to <code>ev3dev</code> for various reasons. Here are some things that <code>ev3dev</code> doesn't do (currently):
+                No. Although the goal is to support as much as we can, some things will probably never make it in to ev3dev for various reasons. Here are some things that ev3dev doesn't do (currently):
                 <ul>
                     <li>Offer a GUI on boot</li>
                     <li>Run programs from EV3-G</li>
@@ -120,7 +120,7 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
 
             <h4 id="whatsLinux">What's a Linux?</h4>
             <p>
-                If you are at this section right now as a result of true inquiry, that probably means that <code>ev3dev</code> itn't something for you (yet). We're currently in a heavy development stage so <code>ev3dev</code> requires some more advanced knowledge and lots of time to use. We invite you to look here often, because some day we will have many more user-friendly features for you to take advantage of. Stay tuned!
+                If you are at this section right now as a result of true inquiry, that probably means that ev3dev isn't something for you (yet). We're currently in a heavy development stage so ev3dev requires some more advanced knowledge and lots of time to use. We invite you to look here often, because some day we will have many more user-friendly features for you to take advantage of. Stay tuned!
             </p>
 
         </section>
