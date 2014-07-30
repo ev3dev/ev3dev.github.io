@@ -609,10 +609,22 @@ strong {
 }
 
 .wrapper {
-  max-width: 750px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
+}
+
+.project-content-wrapper {
+    width: calc(100% - 250px);
+}
+
+.project-sidebar {    
+    float: right;
+    right: 0;
+    position: absolute;
+    width: 220px;
+    text-align:center;
 }
 
 section img {
@@ -712,12 +724,12 @@ dt {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 #header nav {
-  max-width: 750px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 10px;
   margin: 6px auto;
 }
-#header nav li {
+.button {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   list-style: none;
@@ -727,7 +739,7 @@ dt {
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   font-size: 14px;
 }
-#header nav li a {
+.button a {
   color: white;
   border: 1px solid #5d910b;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #93bd20), color-stop(100%, #659e10));
@@ -754,7 +766,7 @@ dt {
   display: inline-block;
   text-align: center;
 }
-#header nav li a:hover {
+.button a:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #749619), color-stop(100%, #527f0e));
   background: -webkit-linear-gradient(#749619, #527f0e);
   background: -moz-linear-gradient(#749619, #527f0e);
@@ -806,7 +818,7 @@ dt {
 }
 
 section {
-  max-width: 750px;
+  max-width: 900px;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 70px;
@@ -869,7 +881,7 @@ section #title p {
 
 .breadcrumbs {
 	margin-top: -30px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 #projects-list li {

@@ -1,5 +1,6 @@
 ---
 author: "@G33kDude and @dlech"
+code_url: "https://gist.github.com/dlech/11098915"
 layout: project
 category: projects
 ---
@@ -20,5 +21,3 @@ TODO: Update for new motor ABI, make a video, building instructions,
 Wiimote control, smartphone control, and more...
 
 ![ev3dev HTWay](https://dl.dropbox.com/s/gdrb1uk3uy20anu/Gyro_Bot5.png)
-
-Code is [here](https://gist.github.com/dlech/11098915).
