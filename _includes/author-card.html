@@ -1,6 +1,6 @@
 <!-- Provides unofficial GitHub card function for author_card variable -->
 
-{% assign authors = author_card | split: ' ' %}
+{% assign authors = author_card %}
 {% for author in authors %}
     {% assign author_no_at_sign = author | strip_html | remove_first: "@" %}
     {% assign at_sign = author | strip_html | replace: author_no_at_sign %}
@@ -10,5 +10,7 @@
          that the first character of author is "@" -->
     {% if at_sign.size > 0 and test_at_sign_is_first == 3 %}
         <div data-card-user="{{author_no_at_sign}}"></div><br/>
+    {% else %}
+        <div class="user-card"><div class="user-card-name">{{ author }}</div></div>
     {% endif %}
 {% endfor %}

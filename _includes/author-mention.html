@@ -1,6 +1,6 @@
 <!-- Provides @mention function for author_mention variable -->
 
-{% assign authors = author_mention | split: ' ' %}
+{% assign authors = author_mention %}
 {% for author in authors %}
     {% assign author_no_at_sign = author | strip_html | remove_first: "@" %}
     {% assign at_sign = author | strip_html | replace: author_no_at_sign %}
@@ -12,5 +12,8 @@
         <a href="https://github.com/{{ author_no_at_sign }}">{{ author }}</a>
     {% else %}
         {{ author }}
+    {% endif %}
+    {% if forloop.index < forloop.length %}
+        and
     {% endif %}
 {% endfor %}

@@ -3,9 +3,6 @@ author: "@cavenel"
 programming_language: Python
 source_code_url: "https://github.com/cavenel/ev3dev_examples"
 youtube_video_id: HuKsfp19yF0
-
-layout: "project"
-category: "projects"
 ---
 
 The model is based on [mindcub3r](http://www.mindcuber.com/mindcub3r/mindcub3r.html), from David Gilday.

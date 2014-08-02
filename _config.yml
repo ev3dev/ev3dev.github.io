@@ -4,3 +4,12 @@ exclude: [README.md, Gemfile, Gemfile.lock]
 
 gems:
   - jekyll-mentions
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "project"
+      category: "projects"

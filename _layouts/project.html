@@ -19,18 +19,23 @@
                 {% if page.project_homepage_url %}
                     <div class="button">
                         <a href="{{ page.project_homepage_url }}">Project Homepage</a>
-                    </div><br /><br />
+                    </div><br />
+                {% endif %}
+                {% if page.building_instructions_url %}
+                    <div class="button">
+                        <a href="{{ page.building_instructions_url }}">Building Instructions</a>
+                    </div><br />
                 {% endif %}
                 {% if page.source_code_url %}
                     <div class="button">
                         <a href="{{ page.source_code_url }}">Source Code</a>
-                    </div><br /><br />
+                    </div><br />
                 {% endif %}
                 {% if page.programming_language %}
-                    Written In {{page.programming_language}}<br /><br />
+                    Written In {{page.programming_language}}<br />
                 {% endif %}
                 {% if page.author %}
-                    Author:<br />
+                    <br />Created By<br /><br />
                     {% assign author_card = page.author %}
                     {% include author-card.html %}
                 {% endif %}

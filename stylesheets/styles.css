@@ -620,12 +620,16 @@ strong {
     width: calc(100% - 250px);
 }
 
-.project-sidebar {    
+.project-sidebar {
     float: right;
     right: 0;
     position: absolute;
-    width: 220px;
+    width: 180px;
     text-align:center;
+}
+
+.project-sidebar .button a {
+    width: 150px;
 }
 
 section img {
@@ -974,9 +978,9 @@ section #title p {
 .user-card {
     position: relative;
     min-height: 40px;
-    background-color: #fff;
+    background-color: #333333;
     font-family: "Helvetica", Arial, sans-serif;
-    color: #111111;
+    color: #fff;
     border-radius: 2px;
     text-align: center;
     font-weight: 100;
@@ -1019,13 +1023,13 @@ section #title p {
     }
 
     .user-card .user-card-name {
-        font-size: 1.5em;
+        font-size: 1.1em;
         font-weight: normal;
         vertical-align: middle;
     }
 
     .user-card .user-card-login {
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: 100;
         vertical-align: middle;
     }
