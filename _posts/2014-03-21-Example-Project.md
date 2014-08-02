@@ -1,18 +1,14 @@
 ---
 author: "@wasabifan" #The GitHub username of the post's author or authors, separated by spaces. This is the only "required" field, but it is highly encouraged to fill out as many as you can.
-language: JavaScript #The programming language that the project was written with
+programming_language: JavaScript #The programming language that the project was written with
 
-youtube_video_pre: "Here's a video:" #Text to be displayed before the video; will only be included if a video is supplied
-youtube_video: abc123 #The video ID of the YouTube video to be displayed with this post
+youtube_video_id: abc123 #The video ID of the YouTube video to be displayed with this post
 
-github_repo: "github.com/myuser/myrepo" #Provide a link to a dedicated GitHub repo
-code_url: "example.com/myproject" #Fallback if no GitHub repo is provided;
-homepage: "example.com" #A pretty home page for the project
+source_code_url: "https://github.com/myuser/myrepo" #Provide a link to your code
+project_homepage_url: "http://example.com" #A pretty home page for the project
 
-published: false #Hides the project from the published site (set this to true to publish it)
-
-layout: project
-category: projects
+layout: "project"
+category: "projects"
 ---
 
 Put your content here. It can be any Markdown, HTML, plain text, or a combination of the three.

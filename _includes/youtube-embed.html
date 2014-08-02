@@ -1,7 +1,7 @@
-﻿{% if page.youtube_video %}
-    {% if page.youtube_video_pre %}
-        {{page.youtube_video_pre}}<br/>
+﻿{% if page.youtube_video_id %}
+    {% if page.youtube_video_id_pre %}
+        {{page.youtube_video_id_pre}}<br/>
     {% endif %}
-    <iframe width="560" height="315" src="//www.youtube.com/embed/{{page.youtube_video}}?rel=0" frameborder="0" allowfullscreen="1"> </iframe>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/{{page.youtube_video_id}}?rel=0" frameborder="0" allowfullscreen="1"> </iframe>
     <br /><br />
 {% endif %}

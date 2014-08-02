@@ -9,10 +9,6 @@
     <!-- this looks weird, but it was the only way I could figure out how to test
          that the first character of author is "@" -->
     {% if at_sign.size > 0 and test_at_sign_is_first == 3 %}
-        {% if card_style %}
-            <iframe class="author-card" style="{{card_style}}" src="http://lab.lepture.com/github-cards/card.html?user={{ author_no_at_sign }}" frameborder="0" scrolling="0" allowtransparency></iframe> 
-        {% else %}  
-            <iframe class="author-card" src="http://lab.lepture.com/github-cards/card.html?user={{ author_no_at_sign }}" frameborder="0" scrolling="0" width="400" height="200" allowtransparency></iframe>
-        {% endif %}
+        <div data-card-user="{{author_no_at_sign}}"></div><br/>
     {% endif %}
 {% endfor %}

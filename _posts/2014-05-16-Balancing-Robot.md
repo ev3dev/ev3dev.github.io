@@ -1,8 +1,9 @@
 ---
 author: "@G33kDude and @dlech"
-code_url: "https://gist.github.com/dlech/11098915"
-layout: project
-category: projects
+source_code_url: "https://gist.github.com/dlech/11098915"
+
+layout: "project"
+category: "projects"
 ---
 
 This is still a work in progress. It is a Segway-style balancing robot based on

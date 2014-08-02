@@ -16,22 +16,22 @@
                 <h3>
                     Project Info
                 </h3>
-                {% if page.github_repo %}
+                {% if page.project_homepage_url %}
                     <div class="button">
-                        <a href="{{ page.github_repo }}">Get the code on GitHub</a>
-                    </div><br /><br />
-                {% elsif page.code_url %}
-                    <div class="button">
-                        <a href="{{ page.code_url }}">Get the code</a>
+                        <a href="{{ page.project_homepage_url }}">Project Homepage</a>
                     </div><br /><br />
                 {% endif %}
-                {% if page.homepage %}
-                    Homepage: <a href="{{ page.homepage }}">{{ page.homepage }}</a> <br /><br />
+                {% if page.source_code_url %}
+                    <div class="button">
+                        <a href="{{ page.source_code_url }}">Source Code</a>
+                    </div><br /><br />
+                {% endif %}
+                {% if page.programming_language %}
+                    Written In {{page.programming_language}}<br /><br />
                 {% endif %}
                 {% if page.author %}
-                Author:<br/><br/>                
+                    Author:<br />
                     {% assign author_card = page.author %}
-                    {% assign card_style = "width:100%;height:200px;" %}
                     {% include author-card.html %}
                 {% endif %}
             </div>
@@ -40,8 +40,7 @@
                 {{ content }}
                 <br />
                 <div id="project-credit">
-                    {% assign author_mention = page.author %}
-                    Posted by {% include author-mention.html %} on {{ page.date | date_to_string }}
+                    Posted on {{ page.date | date_to_string }}
                 </div>
             </div>
         </section>

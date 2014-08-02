@@ -1,12 +1,11 @@
 ---
 author: "@cavenel"
-language: Python
-github_repo: "https://github.com/cavenel/ev3dev_examples"
-youtube_video_pre: "You can find a demo of the robot using the rubiks cube example here:"
-youtube_video: HuKsfp19yF0
+programming_language: Python
+source_code_url: "https://github.com/cavenel/ev3dev_examples"
+youtube_video_id: HuKsfp19yF0
 
-layout: project
-category: projects
+layout: "project"
+category: "projects"
 ---
 
 The model is based on [mindcub3r](http://www.mindcuber.com/mindcub3r/mindcub3r.html), from David Gilday.

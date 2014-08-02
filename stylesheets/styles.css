@@ -616,6 +616,7 @@ strong {
 }
 
 .project-content-wrapper {
+    width: 650px;
     width: calc(100% - 250px);
 }
 
@@ -969,3 +970,62 @@ section #title p {
     70% { color: rgb(255, 204, 0); }
     100% { color: #e8e8e8 }
 }
+
+.user-card {
+    position: relative;
+    min-height: 40px;
+    background-color: #fff;
+    font-family: "Helvetica", Arial, sans-serif;
+    color: #111111;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: 100;
+    padding: 5px;
+
+    -moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    -o-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+    .user-card .user-card-avatar {
+        position: absolute;
+        float: left;
+        max-height: 100%;
+        width: auto;
+        max-width: 20%;
+        top: 50%;
+
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+        .user-card .user-card-avatar img {
+            vertical-align: middle;
+            border: 1px solid #aaa;
+            border-radius: 2px;
+        }
+
+    .user-card .user-card-text {
+        clear: both;
+        margin-left: auto;
+        margin-right: 0;
+        width: 75%;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .user-card .user-card-name {
+        font-size: 1.5em;
+        font-weight: normal;
+        vertical-align: middle;
+    }
+
+    .user-card .user-card-login {
+        font-size: 1em;
+        font-weight: 100;
+        vertical-align: middle;
+    }
