@@ -627,14 +627,18 @@ strong {
 .project-content-wrapper {
     width: 650px;
     width: calc(100% - 250px);
+    display: inline;
+    float: left;
+    margin-right: 20px;
 }
 
 .project-sidebar {
-    float: right;
-    right: 0;
-    position: absolute;
+    float: left;
+    display: inline;
     width: 180px;
     text-align:center;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .project-sidebar .button a {
@@ -909,6 +913,66 @@ section #title p {
 	margin-bottom: -50px;
 }
 
+.user-card {
+    position: relative;
+    min-height: 40px;
+    background-color: #333333;
+    font-family: "Helvetica", Arial, sans-serif;
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: 100;
+    padding: 5px;
+
+    -moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    -o-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.user-card .user-card-avatar {
+    position: absolute;
+    float: left;
+    max-height: 100%;
+    width: auto;
+    max-width: 20%;
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.user-card .user-card-avatar img {
+    vertical-align: middle;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
+
+.user-card .user-card-text {
+    clear: both;
+    margin-left: auto;
+    margin-right: 0;
+    width: 75%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.user-card .user-card-name {
+    font-size: 1.1em;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.user-card .user-card-login {
+    font-size: 0.9em;
+    font-weight: 100;
+    vertical-align: middle;
+}
+
+
 @media print, screen and (max-width: 450px) {
     #logo {
         display: none;
@@ -921,6 +985,18 @@ section #title p {
 
 .clear {
     clear: both;
+}
+
+@media print, screen and (max-width: 850px) {
+  .project-content-wrapper {
+      float: none;
+  }
+
+  .project-sidebar {
+      float: none;
+      display: table;
+      margin: 0 auto;
+  }
 }
 
 @media print, screen and (max-width: 720px) {
@@ -983,62 +1059,3 @@ section #title p {
     70% { color: rgb(255, 204, 0); }
     100% { color: #e8e8e8 }
 }
-
-.user-card {
-    position: relative;
-    min-height: 40px;
-    background-color: #333333;
-    font-family: "Helvetica", Arial, sans-serif;
-    color: #fff;
-    border-radius: 2px;
-    text-align: center;
-    font-weight: 100;
-    padding: 5px;
-
-    -moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
-    -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
-    -o-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
-}
-
-    .user-card .user-card-avatar {
-        position: absolute;
-        float: left;
-        max-height: 100%;
-        width: auto;
-        max-width: 20%;
-        top: 50%;
-
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-
-        .user-card .user-card-avatar img {
-            vertical-align: middle;
-            border: 1px solid #aaa;
-            border-radius: 2px;
-        }
-
-    .user-card .user-card-text {
-        clear: both;
-        margin-left: auto;
-        margin-right: 0;
-        width: 75%;
-        height: 100%;
-        vertical-align: middle;
-    }
-
-    .user-card .user-card-name {
-        font-size: 1.1em;
-        font-weight: normal;
-        vertical-align: middle;
-    }
-
-    .user-card .user-card-login {
-        font-size: 0.9em;
-        font-weight: 100;
-        vertical-align: middle;
-    }

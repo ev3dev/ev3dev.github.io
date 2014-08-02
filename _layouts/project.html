@@ -12,6 +12,10 @@
             <div class="breadcrumbs">
                 <a href="{{ site.github.url }}/projects">&lt; Back to Projects Gallery</a>
             </div>
+            <div class="project-content-wrapper">
+                {% include youtube-embed.html %}
+                {{ content }}
+            </div>
             <div class="project-sidebar">
                 <h3>
                     Project Info
@@ -40,13 +44,8 @@
                     {% include author-card.html %}
                 {% endif %}
             </div>
-            <div class="project-content-wrapper">
-                {% include youtube-embed.html %}
-                {{ content }}
-                <br />
-                <div id="project-credit">
-                    Posted on {{ page.date | date_to_string }}
-                </div>
+            <div id="project-credit" class="clear">
+                Posted on {{ page.date | date_to_string }}
             </div>
         </section>
         {% include footer.html %}
