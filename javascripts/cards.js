@@ -7,7 +7,7 @@
             $cardDiv.append('<div class="user-card-text"></div>');
             var $textDiv = $cardDiv.children(':last-child');
             $textDiv.append('<div class="user-card-name">' + (userData.name || userData.login) + '</div>');
-            $textDiv.append('<div class="user-card-login">@' + userData.login + '</div>');
+            $textDiv.append('<div class="user-card-login"><a href="' + userData.html_url + '">@' + userData.login + '</a></div>');
         });        
     });
 });
