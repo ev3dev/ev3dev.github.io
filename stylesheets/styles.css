@@ -972,14 +972,6 @@ section #title p {
     vertical-align: middle;
 }
 
-.user-card .user-card-login a {
-    color: #fff;
-}
-
-.user-card .user-card-login a:hover {
-    color: #ffcc00;
-}
-
 @media print, screen and (max-width: 450px) {
     #logo {
         display: none;
