@@ -972,7 +972,6 @@ section #title p {
     vertical-align: middle;
 }
 
-
 @media print, screen and (max-width: 450px) {
     #logo {
         display: none;
