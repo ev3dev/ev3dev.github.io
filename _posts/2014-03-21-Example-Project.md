@@ -1,7 +1,7 @@
 ---
-# Fill out as many of these as you can.
+# Fill out as many of these as you can, and delete the rest.
 author: [ "@wasabifan", "The ev3dev Team" ] # The person(s) who created this project. 
-# Any author that starts with "@" will pull infomation from github.
+# Any author that starts with "@" will pull information from github.
 programming_language: "JavaScript" # The programming language used in this project
 
 youtube_video_id: rrNaLfE9PWA # The video ID of the YouTube video to be displayed with this post
