@@ -25,14 +25,14 @@ but with some simple edits you can place them where **you** want them.
     * [stopmotors](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/stopmotors)
 
  3. Scripts discovering sensors and / or motors
-    * blinkleds
-    * setled
-    * showleds
-    * showmotor
-    * showpower
-    * showsensors
-    * showsound
-    * testmotor 
+    * [blinkleds](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/blinkleds)
+    * [setled](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/setled)
+    * [showleds](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showleds)
+    * [showmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showmotor)
+    * [showpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showpower)
+    * [showsensors](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showsensors)
+    * [showsound](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showsound)
+    * [testmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/testmotor)
 
 ### Have your EV3 report it's IP-address by speach after boot
 For this an update is needed to `/media/mmc_p1/ev3dev.rc.local` 
