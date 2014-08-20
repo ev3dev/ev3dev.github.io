@@ -6,9 +6,9 @@ programming_language: "Bourne shell script" # The programming language used in t
 
 #youtube_video_id: rrNaLfE9PWA # The video ID of the YouTube video to be displayed with this post
 
-project_homepage_url: "none yet" # Homepage for this project
+#project_homepage_url: "none yet" # Homepage for this project
 source_code_url: "https://github.com/BertLindeman/bert-ev3dev-examples" # Provide a link to your code
-building_instructions_url: "none"
+#building_instructions_url: "none"
 ---
 
 ### Examples of bits and pieces running at Jessie level 
