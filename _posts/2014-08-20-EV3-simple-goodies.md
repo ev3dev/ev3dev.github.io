@@ -20,9 +20,10 @@ but with some simple edits you can place them where **you** want them.
     * [asciicolor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/asciicolors)
 
  2. Scripts related to managing the EV3-brick
-    * [checkpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/checkpower)
-    * [showactivity](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showactivity)
-    * [stopmotors](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/stopmotors)
+    * [checkpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/checkpower) 
+    Add this script to a crontab to check for the battery voltage. On lower power the EV3-led on the left will blink green on lower voltage, then amber and eventually red (with one beep).
+    * [showactivity](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showactivity) Makes the right green led blink on I/O activity.
+    * [stopmotors](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/stopmotors) Well, stops all motors.
 
  3. Scripts discovering sensors and / or motors
     * [blinkleds](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/blinkleds)
