@@ -51,4 +51,4 @@ Add the next lines to the bottom of `/media/mmc_p1/ev3dev.rc.local`
 
 
 and an extra script [`tellIP`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/tellIP)
-in the same directory
+in the same directory: `/media/mmc_p1/`
