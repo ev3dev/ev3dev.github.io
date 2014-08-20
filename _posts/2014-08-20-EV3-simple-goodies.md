@@ -17,7 +17,7 @@ These shell-scripts are located on my EV3-brick at `/usr/local/bin`
 but with some simple edits you can place them where **you** want them.
 
  1. Supporting script(s) used by other scripts
-    * [asciicolor] (https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/asciicolors)
+    * [asciicolor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/asciicolors)
 
  2. Scripts related to managing the EV3-brick
     * [checkpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/checkpower)
