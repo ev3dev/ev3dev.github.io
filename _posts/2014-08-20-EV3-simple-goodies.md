@@ -39,6 +39,7 @@ For this an update is needed to
 [`/media/mmc_p1/ev3dev.rc.local`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/rc.local)
 
 Add the next lines to the bottom of `/media/mmc_p1/ev3dev.rc.local`
+
 ```
 #
 # use speach to tell the available network IP addresses
