@@ -41,13 +41,14 @@ For this an update is needed to
 
 Add the next lines to the bottom of `/media/mmc_p1/ev3dev.rc.local`
 
-```if [ -e /media/mmc_p1/tellIP ]; then    ```
 
-```echo "Executing /media/mmc_p1/tellIP"   ```
+    if [ -e /media/mmc_p1/tellIP ]; then
 
-```source /media/mmc_p1/tellIP             ```
+      echo "Executing /media/mmc_p1/tellIP"
+      source /media/mmc_p1/tellIP
 
-```fi                                      ```
+    fi
+
 
 
 and an extra script [`tellIP`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/tellIP)

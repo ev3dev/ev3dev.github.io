@@ -687,6 +687,7 @@ pre {
   overflow-y: hidden;
 }
 pre code {
+  font-family: monospace, serif;
   color: #efefef;
   text-shadow: 0px 1px 0px #000;
   margin: 0;
