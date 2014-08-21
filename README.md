@@ -26,8 +26,6 @@ Installing Jekyll in  Windows
 
 Then run:
 
-    gem install jekyll
-    gem install wdm
     gem install bundle
     git clone https://github.com/<user>/ev3dev.github.io
     cd ev3dev.github.io
@@ -39,7 +37,7 @@ Now you should be able to visit your page at: [http://localhost:4000](http://loc
 Previewing Your Changes Online
 ---
 
-Alternately, when forking, you can create a new branch called `gh-pages`, then your
+When forking, you can create a new branch called `gh-pages`, then your
 changes can be viewed as `http://<user>.github.io/ev3dev.github.io`. When you do this
 though, GitHub will send you lots of email like this, which you should ignore.
 
