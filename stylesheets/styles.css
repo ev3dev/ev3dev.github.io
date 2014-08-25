@@ -1009,18 +1009,47 @@ section #title p {
     display: block;
   }
 }
-@media print, screen and (max-width: 480px) {
+@media print, screen and (max-width: 590px) {
   #header {
-    margin-top: -20px;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 20px;
+
+      height: auto;
+      width: auto;
+
+      left: auto;
+      top: auto;
+      right: auto;
+
+      background: none;
+      border: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none;
   }
 
   section {
-    margin-top: 40px;
+      margin-top: 10px;
   }
 
-  nav {
-    display: none;
+  #header nav {
+      padding: 0 0 0 0;
+      margin: 0 26px 0 0;
   }
+
+      #header nav .button {
+          float: none !important;
+      }
+
+            #header nav .button a {
+                width: 100%;
+            }
+
+      #header nav .button.right {
+          display: none;
+      }
 }
 
 :target {
