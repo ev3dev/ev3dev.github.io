@@ -814,6 +814,17 @@ dt {
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
 }
 
+.nav-menu {
+  list-style: none;
+  display: none;
+  line-height: 50px;
+  height: 50px;
+  padding: 8px 6px;
+
+  cursor: pointer;
+  float: right;
+}
+
 #header nav li.left {
   float: left; 
   margin-right: 6px;
@@ -1009,18 +1020,54 @@ section #title p {
     display: block;
   }
 }
-@media print, screen and (max-width: 480px) {
-  #header {
-    margin-top: -20px;
-  }
 
-  section {
-    margin-top: 40px;
-  }
+@media print, screen and (max-width: 590px) {
+    #header {
+        margin: -20px auto 0 auto;
+        position: relative;
+        padding: 0 20px;
+        height: 50px;
+        width: auto;
+        left: auto;
+        top: auto;
+        right: auto;
+    }
 
-  nav {
-    display: none;
-  }
+    section {
+        margin-top: 10px;
+    }
+
+    #header nav {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+        #header nav .button {
+            float: none !important;
+            display: block;
+            margin-left: 0 !important;
+            margin-right: 26px !important;
+        }
+
+        #header nav > .right {
+            padding-top: 30px;
+        }
+
+            #header nav > .right ~ .right {
+                padding-top: 0;
+            }
+
+        #header nav .button a {
+            width: 100%;
+        }
+
+    .nav-menu {
+        display: inline;
+    }
+
+    #header.mobile-hidden nav .button {
+        display: none;
+    }
 }
 
 :target {
