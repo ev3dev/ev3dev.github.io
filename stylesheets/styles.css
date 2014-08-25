@@ -1041,15 +1041,26 @@ section #title p {
 
       #header nav .button {
           float: none !important;
+          display: block;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
       }
+
+        #header nav > .right {
+            padding-top: 30px;
+        }
+
+        #header nav > .right ~ .right {
+            padding-top: 0;
+        }
 
             #header nav .button a {
                 width: 100%;
             }
 
-      #header nav .button.right {
+      /*#header nav .button.right {
           display: none;
-      }
+      }*/
 }
 
 :target {
