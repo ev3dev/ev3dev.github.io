@@ -814,32 +814,12 @@ dt {
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
 }
 
-#header nav li.projects {
+#header nav li.left {
   float: left; 
-  margin-left: 6px;
+  margin-right: 6px;
 }
 
-#header nav li.home {
-  float: left; 
-  margin-left: 6px;
-}
-
-#header nav li.fork {
-  float: right;
-  margin-left: 6px;
-}
-
-#header nav li.wiki {
-  float: right;
-  margin-left: 6px;
-}
-
-#header nav li.issues {
-  float: right; 
-  margin-left: 6px;
-}
-
-#header nav li.otherPlaces {
+#header nav li.right {
   float: right;
   margin-left: 6px;
 }
