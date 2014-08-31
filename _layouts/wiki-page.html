@@ -1,0 +1,50 @@
+---
+
+---
+﻿<!doctype html>
+<html>
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <div class="wrapper">
+        <section>
+            {% include title.html %}
+            <div class="breadcrumbs">
+                <a href="{{ site.github.url }}/wiki">&lt; Back to Wiki Home</a>
+            </div>
+            <div class="content-with-sidebar">
+                {{ content }}
+            </div>
+            <div class="sidebar">
+                <h3>
+                    Wiki index
+                </h3>
+                <div id="wiki-index-search-bar">
+                    <!--<input type="text" id="wiki-index-search" onkeydown="wikiSearchKeyDown" />-->
+                </div>
+                <ul id="wiki-index" class="collapsed">
+                    {% for page in site.pages %}
+                    {% if page.category == "wiki" %}
+                    <li>
+                        <a href="{{ site.github.url }}{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <div id="wiki-index-expand">
+                    <a href="#" onclick="expandWikiIndex()" >expand</a>
+                </div>
+            </div>
+</section>
+        {% include footer.html %}
+    </div>
+    <script>
+        //function wikiSearchKeyDown() {
+        //}
+
+        function expandWikiIndex() {
+            $('#wiki-index.collapsed').removeClass('collapsed');
+        }
+    </script>
+</body>
+</html>
