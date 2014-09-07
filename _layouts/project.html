@@ -36,10 +36,11 @@
                     </div><br />
                 {% endif %}
                 {% if page.programming_language %}
+                    <br />
                     Written In {{page.programming_language}}<br />
                 {% endif %}
                 {% if page.author %}
-                    <br />Created By<br /><br />
+                    <br />Created By:<br /><br />
                     {% assign author_card = page.author %}
                     {% include author-card.html %}
                 {% endif %}
