@@ -13,3 +13,10 @@ defaults:
     values:
       layout: "project"
       category: "projects"
+  -
+    scope:
+      path: "wiki"
+    values:
+      category: "wiki"
+      layout: "wiki-page"
+      tags: "wiki"

@@ -16,7 +16,7 @@ title: Projects
             <p>
                 Would you like your project added to the list? We would! <a href="https://github.com/ev3dev/ev3dev/wiki/Posting-A-Project">Create a page and send us a pull request.</a>
             </p>
-            <ul id="projects-list">
+            <ul class="item-list">
                 {% for post in site.posts %}
                     {% if post.categories.first == "projects" %}
                         <li>
