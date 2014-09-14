@@ -1,6 +1,6 @@
 ---
 # Fill out as many of these as you can, and delete the rest.
-author: [ "@BertLindeman", Netherlands ] # The person(s) who created this project. 
+author: [ "@BertLindeman" ] # The person(s) who created this project. 
 # Any author that starts with "@" will pull information from github.
 programming_language: "Bourne shell script" # The programming language used in this project
 
@@ -18,6 +18,7 @@ but with some simple edits you can place them where **you** want them.
 
  1. Supporting script(s) used by other scripts
     * [asciicolor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/asciicolors) Creates some variables to ease using ANSI colors in shell script. E.G. red blue etc. 
+    * [bert_ev3dev_functions](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/bert_ev3dev_functions) Replaces asciicolor and adds some common functions.
 
  2. Scripts related to managing the EV3-brick
     * [checkpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/checkpower) 
@@ -29,8 +30,8 @@ but with some simple edits you can place them where **you** want them.
     * [blinkleds](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/blinkleds) Simply blink the EV3 leds a few times. 
     * [setled](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/setled) Script to set an EV3-led **red** / **green** / **amber** **ON** or **OFF** and set a trigger for it. Do not confuse with the **setleds** program to set keyboard leds.
     * [showleds](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showleds) Provides a very small display of the status of the EV3-leds.
-    * [showmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showmotor) Finds the tacho-motor number for attached motors. Displays many fields related to the motor(s). **Updated 2014-08-21** Did not process ALL motor directories. Tested with EV3 (large and mini) and NXT motor. 
-    * [showpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showpower) Shows various fields related to the EV3-power. **Updated 2014-08-21** Explain that status is always *Discharging* by kernel design.
+    * [showmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showmotor) Finds the tacho-motor number for attached motors. Displays many fields related to the motor(s). Tested with EV3 (large and mini) and NXT motor. 
+    * [showpower](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showpower) Shows various fields related to the EV3-power. 
     * [showsensors](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showsensors) Show data about connected sensors. Only *regular* sensors that are recognized are reported, I assume I2C sensors are not yet supported by the script.
     * [showsound](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showsound) Shows a little info from the snd-legoev3 driver. (Not to be confused with the sound-sensor!)
     * [testmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/testmotor) Test one motor. Too simple script, only uses a fixed suffix on ```/sys/class/tacho-motor/tacho-motor``` The kernel takes the *next* number if a motor is plugged in. Algorithm in [showmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showmotor) is connecting motor port to tacho-motor suffix. You can call testmotor with one parameter: the number of the motor. E.g. ```testmotor 3```
