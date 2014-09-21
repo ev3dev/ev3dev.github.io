@@ -3,6 +3,9 @@ title: ev3dev
 subtitle: Debian on LEGO MINDSTORMS EV3!
 ---
 
+* Table of Contents
+{:toc}
+
 ## Introduction
 
 The ev3dev distribution is a full Debian 7 (wheezy) Linux distribution running
@@ -75,7 +78,7 @@ Features above and beyond the official LEGO kernel include:
 Put more simply: ev3dev can do almost everything normal Linux can, while the
 stock LEGO kernel cannot.
 
-### Using the ev3dev Kernel:
+#### Using the ev3dev Kernel:
 
 Don't want to give up your official LEGO MINDSTORMS EV3 kernel and rootfs? You
 don't need to!
@@ -113,14 +116,14 @@ main wiki.
 
 ## Assorted Info / FAQ
 
-### Does ev3dev replace the firmware on my EV3 programmable brick?
+#### Does ev3dev replace the firmware on my EV3 programmable brick?
 
 No. ev3dev runs completely off of an SD card, leaving the existing firmware
 intact. To restore the original functionality of your brick, just power it off
 and remove the SD card containing ev3dev. When you turn it back on, it will
 boot using the existing firmware.
 
-### Can ev3dev do everything that the official firmware can?
+#### Can ev3dev do everything that the official firmware can?
 
 No. Although the goal is to support as much as we can, some things will
 probably never make it in to ev3dev for various reasons. Here are some things
@@ -130,7 +133,7 @@ that ev3dev doesn't do (currently):
 * Run programs from EV3-G
 * Automatically configure PC interaction (networking)
 
-### What's a Linux?
+#### What's a Linux?
 
 If you are at this section right now as a result of true inquiry, that probably
 means that ev3dev isn't something for you (yet). We're currently in a heavy

@@ -341,6 +341,10 @@ nav ol {
   list-style-image: none;
 }
 
+li ul {
+  margin-bottom: 0px;
+}
+
 /* =============================================================================
    Embedded content
    ========================================================================== */
@@ -569,6 +573,7 @@ h1 {
 h2 {
   font-size: 24px;
   border-bottom:1px groove #b6b6b6;
+  clear: both;
 }
 
 h4, h5, h6 {
@@ -1007,6 +1012,19 @@ section #title p {
 .youtube-embed {
     width: 100%;
     height: 300px;
+}
+
+#markdown-toc::before {
+  content: "On this page:";
+  font-weight: bold;
+}
+
+#markdown-toc {
+  float: right;
+  list-style: none;
+  background-color: #303030;
+  padding: 20px 30px;
+  margin-left: 30px;
 }
 
 @media print, screen and (max-width: 450px) {

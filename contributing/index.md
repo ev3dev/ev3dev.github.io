@@ -2,6 +2,9 @@
 title: Contributing
 ---
 
+* Table of Contents
+{:toc}
+
 ev3dev is a HUGE project and we are always happy to receive help.
 Here are some of the many ways you can contribute to the project.
 

@@ -19,3 +19,6 @@ defaults:
     values:
       layout: "project"
       category: "projects"
+
+kramdown:
+    toc_levels: "2,3"
