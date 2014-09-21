@@ -1,55 +1,43 @@
 ---
-
+layout: page
 ---
-﻿<!doctype html>
-<html>
-{% include head.html %}
-<body>
-    {% include header.html %}
-    <div class="wrapper">
-        <section>
-            {% include title.html %}
-            <div class="breadcrumbs">
-                <a href="{{ site.github.url }}/projects">&lt; Back to Projects Gallery</a>
-            </div>
-            <div class="project-content-wrapper">
-                {% include youtube-embed.html %}
-                {{ content }}
-            </div>
-            <div class="project-sidebar">
-                <h3>
-                    Project Info
-                </h3>
-                {% if page.project_homepage_url %}
-                    <div class="button">
-                        <a href="{{ page.project_homepage_url }}">Project Homepage</a>
-                    </div><br />
-                {% endif %}
-                {% if page.building_instructions_url %}
-                    <div class="button">
-                        <a href="{{ page.building_instructions_url }}">Building Instructions</a>
-                    </div><br />
-                {% endif %}
-                {% if page.source_code_url %}
-                    <div class="button">
-                        <a href="{{ page.source_code_url }}">Source Code</a>
-                    </div><br />
-                {% endif %}
-                {% if page.programming_language %}
-                    <br />
-                    Written In {{page.programming_language}}<br />
-                {% endif %}
-                {% if page.author %}
-                    <br />Created By:<br /><br />
-                    {% assign author_card = page.author %}
-                    {% include author-card.html %}
-                {% endif %}
-            </div>
-            <div id="project-credit" class="clear">
-                Posted on {{ page.date | date_to_string }}
-            </div>
-        </section>
-        {% include footer.html %}
-    </div>
-</body>
-</html>
+
+<div class="breadcrumbs">
+    <a href="{{ site.github.url }}/projects">&lt; Back to Projects Gallery</a>
+</div>
+<div class="project-content-wrapper">
+    {% include youtube-embed.html %}
+    {{ content }}
+</div>
+<div class="project-sidebar">
+    <h3>
+        Project Info
+    </h3>
+    {% if page.project_homepage_url %}
+        <div class="button">
+            <a href="{{ page.project_homepage_url }}">Project Homepage</a>
+        </div><br />
+    {% endif %}
+    {% if page.building_instructions_url %}
+        <div class="button">
+            <a href="{{ page.building_instructions_url }}">Building Instructions</a>
+        </div><br />
+    {% endif %}
+    {% if page.source_code_url %}
+        <div class="button">
+            <a href="{{ page.source_code_url }}">Source Code</a>
+        </div><br />
+    {% endif %}
+    {% if page.programming_language %}
+        <br />
+        Written In {{page.programming_language}}<br />
+    {% endif %}
+    {% if page.author %}
+        <br />Created By:<br /><br />
+        {% assign author_card = page.author %}
+        {% include author-card.html %}
+    {% endif %}
+</div>
+<div id="project-credit" class="clear">
+    Posted on {{ page.date | date_to_string }}
+</div>

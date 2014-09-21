@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-﻿This is where we keep a collection of all the projects that people are working
+This is where we keep a collection of all the projects that people are working
 on using ev3dev. We invite you to click through the links below to see what
 cool stuff ev3dev can do!
 
