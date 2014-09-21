@@ -9,7 +9,13 @@ defaults:
   -
     scope:
       path: ""
-      type: "post"
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
     values:
       layout: "project"
       category: "projects"

@@ -184,12 +184,12 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  margin: 0.83em 0;
+  margin: 1.83em 0 0.83em 0;
 }
 
 h3 {
   font-size: 1.17em;
-  margin: 1em 0;
+  margin: 1.5em 0 1em 0;
 }
 
 h4 {
@@ -550,7 +550,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #e8e8e8;
-  margin: 0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
@@ -569,6 +568,7 @@ h1 {
 
 h2 {
   font-size: 24px;
+  border-bottom:1px groove #b6b6b6;
 }
 
 h4, h5, h6 {
@@ -581,7 +581,6 @@ h3 {
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
   color: #cecece;
-  border-bottom:1px groove #b6b6b6;
 }
 
 h4 {
