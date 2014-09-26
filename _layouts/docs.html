@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+<div class="breadcrumbs">
+{% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
+{% assign link='/' %}
+{% for dir in parent_dirs %}
+    {% if forloop.last %}
+        {{ dir }}
+    {% else %}
+        {% assign link=link | append: dir | append: '/' %}
+        <a href="{{ link }}">{{ dir }}</a> &gt;
+    {% endif %}
+{% endfor %}
+</div>
+<hr />
+
+{{ content }}

@@ -1,0 +1,27 @@
+{% case sensor.sensor_type %}
+{% when 'nxt-analog-sensor' %}
+    {% assign connection = "Analog/NXT" %}
+    {% if sensor.name == 'lego-nxt-touch' or sensor.name == 'lego-nxt-light' or sensor.name == 'nxt-analog' %}
+        {% assign autodetect = "Y" %}
+    {% else %}
+        {% assign autodetect = "N[^nxt-analog]" %}
+    {% endif %}
+{% when 'ev3-analog-sensor' %}
+    {% assign connection = "Analog/EV3" %}
+    {% assign autodetect = "Y" %}
+{% when 'nxt-i2c-sensor' %}
+    {% assign connection = "I2C/NXT" %}
+    {% assign autodetect = "Y" %}
+{% when 'gpio-pcf857xr' or 'pcf8591' or 'rtc-ds1307' %}
+    {% assign connection = "I2C/Other" %}
+    {% assign autodetect = "N[^standard-i2c]" %}
+{% when 'lm75' %}
+    {% assign connection = "I2C/Other" %}
+    {% assign autodetect = "Y[^lm75]" %}
+{% when 'legoev3-uart' %}
+    {% assign connection = "UART/EV3" %}
+    {% assign autodetect = "Y" %}
+{% else %}
+    {% assign connection = "" %}
+    {% assign autodetect = "" %}
+{% endcase %}

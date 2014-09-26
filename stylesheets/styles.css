@@ -184,12 +184,12 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  margin: 1.83em 0 0.83em 0;
+  margin: 2em 0 0.83em 0;
 }
 
 h3 {
   font-size: 1.17em;
-  margin: 1.5em 0 1em 0;
+  margin: 1.83em 0 1em 0;
 }
 
 h4 {
@@ -320,7 +320,12 @@ ul {
 }
 
 dd {
-  margin: 0 0 0 40px;
+  margin: 0 0 12px 40px;
+}
+
+dd ol,
+dd ul {
+  margin-bottom: 0px;
 }
 
 /*
@@ -342,6 +347,10 @@ nav ol {
 }
 
 li ul {
+  margin-bottom: 0px;
+}
+
+ul ul {
   margin-bottom: 0px;
 }
 
@@ -532,8 +541,50 @@ textarea {
  * Remove most spacing between table cells
  */
 table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+th {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #434343;
+  color: #b6b6b6;
+  font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: normal;
+}
+
+td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #434343;
+}
+
+table#sensor-info,
+.footnotes table {
+  width: auto;
+}
+
+#sensor-info th,
+#sensor-info td,
+#sensor-modes th,
+#sensor-modes td {
+  border: 1px solid #434343;
+}
+
+#sensor-info tr.d0 th,
+#sensor-info tr.d0 td,
+#sensor-modes tr.d0 th,
+#sensor-modes tr.d0 td {
+  background-color: #333333;
+}
+
+#sensor-info tr.d1 th,
+#sensor-info tr.d1 td,
+#sensor-modes tr.d1 th,
+#sensor-modes tr.d1 td {
+  background-color: #272727;
 }
 
 body {
@@ -573,19 +624,13 @@ h1 {
 h2 {
   font-size: 24px;
   border-bottom:1px groove #b6b6b6;
-  clear: both;
-}
-
-h4, h5, h6 {
-  color: #e8e8e8;
 }
 
 h3 {
   font-size: 18px;
   line-height: 24px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-weight: normal;
-  color: #cecece;
+  font-weight: bold;
 }
 
 h4 {
@@ -593,7 +638,6 @@ h4 {
   line-height: 20px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
-  color: #b6b6b6;
 }
 
 a > code {
@@ -644,9 +688,8 @@ strong {
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
-
     padding: 20px;
-
+    color: #fff;
     background: #191919;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -663,8 +706,9 @@ strong {
 }
 
 .project-sidebar h3 {
+    margin-top: 0;
     border-bottom: none;
-    color: #fff;
+    color: inherit;
 }
 
 .project-sidebar .button a {
@@ -686,8 +730,7 @@ code {
   font-family: monospace, serif;
   color: #efefef;
   font-size: 13px;
-  padding: 4px 2px;
-
+  padding: 0px 3px;
   background: #191919;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -732,26 +775,6 @@ pre code {
   box-shadow: none;
   background: transparent;
   border: none;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th {
-  text-align: left;
-  padding: 5px 10px;
-  border-bottom: 1px solid #434343;
-  color: #b6b6b6;
-  font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-weight: normal;
-}
-
-td {
-  text-align: left;
-  padding: 5px 10px;
-  border-bottom: 1px solid #434343;
 }
 
 hr {
@@ -936,7 +959,7 @@ section #title p {
 
 .breadcrumbs {
 	margin-top: -30px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 #projects-list li {

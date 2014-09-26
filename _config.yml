@@ -1,12 +1,24 @@
 markdown: kramdown
 permalink: pretty
-exclude: [README.md, Gemfile, Gemfile.lock]
+exclude: [README.md, Gemfile, Gemfile.lock, repo-metadata.html]
 
 gems:
   - jekyll-mentions
   - jekyll-sitemap
 
 defaults:
+  -
+    scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: "docs"
+  -
+    scope:
+      path: "docs/sensors"
+      type: "pages"
+    values:
+      category: "sensors"
   -
     scope:
       path: ""
