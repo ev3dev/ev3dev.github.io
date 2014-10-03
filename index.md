@@ -54,7 +54,7 @@ contributors. Here's a full list:
 * Extra languages:
     * [Google Go](https://github.com/mattrajca/GoEV3) by @mattrajca
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
-    * [C (with optional Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
+    * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
 
 ## Features
 
