@@ -52,7 +52,7 @@ contributors. Here's a full list:
     * [Node.js](https://github.com/ev3dev/ev3dev-lang/tree/language-binding-unification/js)
     * [Vala](https://github.com/ev3dev/ev3dev-lang/tree/language-binding-unification/vala)
 * Extra languages:
-    * [Google Go](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
 
