@@ -5,23 +5,33 @@ title: Contributing
 * Table of Contents
 {:toc}
 
-ev3dev is a HUGE project and we are always happy to receive help.
+ev3dev is a **HUGE** project and we are always happy to receive help.
 Here are some of the many ways you can contribute to the project.
 
 ## Write some documentation
 
-All of our documentation (including this website) is maintained through GitHub
-via [pull requests]. If you find an error or would like to add new
-documentation to the [wiki], you can find instructions on how to contribute
-[here][contribute-to-wiki]. If you have an idea or correction for this website,
-you can submit it [here][this-website].
+All of our documentation (including this entire website) is maintained through
+GitHub via [pull requests] (so you will need a GitHub account if you don't
+already have one). All of the *docs* pages have a link that says "Edit on
+Github". Just follow the link and make your changes - and be sure to preview
+before saving changes. Github will automatically create a pull request. We will
+review your changes before incorporating them into the site.
+
+Even if a page doesn't have the edit link, you can actually still make changes.
+Just find it [here][this-website].
+
+We are also in the process of migrating the [wiki] documentation to this site.
+It would be nice to get some help with this. Pick a page and figure out where
+it should go (probably under *docs* somewhere). But be sure to ask first,
+though, in case we don't actually want that particular page migrated.
 
 ## Write some software
 
-As the hardware drivers are being finalized, development will be shifting to software that can interface
-with the hardware. There are many <a href="https://github.com/ev3dev">packages on GitHub</a> that you can
-hack on. Additionally, there are some language bindings listed on the <a href="/">home page</a> that are
-not part of the ev3dev GitHub organization (yet).
+As the hardware drivers are being finalized, development will be shifting to
+software that can interface with the hardware. There are many [packages on
+GitHub][ev3dev-github-org] that you can hack on. Additionally, there are some
+language bindings listed on the [home page](/) that are not part of the ev3dev
+GitHub organization (yet).
 
 If you have never used GitHub before, it's super-easy. [Read about it][GitHub Help],
 then send a pull request.
@@ -62,3 +72,4 @@ hardware and we will make it work for you. See this
 [ev3-creating-a-console-cable]: http://botbench.com/blog/2013/08/15/ev3-creating-console-cable
 [Saleae referral]: http://go.referralcandy.com/share/8LP4Z9L
 [will-work-for-sensors]: http://lechnology.com/2014/08/will-work-for-sensors
+[ev3dev-github-org]: https://github.com/ev3dev

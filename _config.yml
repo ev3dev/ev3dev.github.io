@@ -15,6 +15,12 @@ defaults:
       layout: "docs"
   -
     scope:
+      path: "docs/tutorials"
+      type: "pages"
+    values:
+      category: "tutorials"
+  -
+    scope:
       path: "docs/sensors"
       type: "pages"
     values:

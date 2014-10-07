@@ -2,6 +2,9 @@
 layout: page
 ---
 
+<div class="edit-on-github">
+<a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">Edit on Github</a>
+</div>
 <div class="breadcrumbs">
 {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
 {% assign link='/' %}

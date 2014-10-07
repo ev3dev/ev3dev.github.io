@@ -1,0 +1,21 @@
+---
+title: Tutorials
+---
+
+{% assign tutorials=site.pages | where: "category", "tutorials" | groupby: "subject" %}
+<ul>
+    {% for other_page in tutorials %}
+    {% if other_page.subject != last_subject %}
+    {% if !last_subject %}
+    </ul>
+    {% endif %}
+        <li>{{ other_page.subject }}</li>
+    <ul>
+    {% assign last_subject=other_page.subject %}
+    {% endif %}
+    {% if other_page.url != page.url %}
+        <li><a href="{{ other_page.url }}">{{ other_page.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+</ul>

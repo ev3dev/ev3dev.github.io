@@ -8,8 +8,8 @@ subtitle: Debian on LEGO MINDSTORMS EV3!
 
 ## Introduction
 
-The ev3dev distribution is a full Debian 7 (wheezy) Linux distribution running
-on the 3.3.x kernel that has been customized for the LEGO MINDSTORMS EV3
+The ev3dev distribution is a full Debian (jessie) Linux distribution running
+on the 3.16.x kernel that has been customized for the LEGO MINDSTORMS EV3
 controller.
 
 Rather than use custom language bindings that use direct access to mmap'ed
@@ -112,8 +112,7 @@ ev3dev supports many of the basic functions of the brick, including:
 * The LCD
 
 ## Getting Started
-To start working with ev3dev, head over to the [Getting Started] page on the
-main wiki.
+To start working with ev3dev, head over to the [Getting Started] page.
 
 ## Assorted Info / FAQ
 
@@ -142,6 +141,6 @@ development stage so ev3dev requires some more advanced knowledge and lots of
 time to use. We invite you to look here often, because some day we will have
 many more user-friendly features for you to take advantage of. Stay tuned!
 
-[Getting Started]: https://github.com/ev3dev/ev3dev/wiki/getting-started-v2
+[Getting Started]: docs/getting-started
 [ev3dev-kernel]: https://github.com/ev3dev/ev3dev-kernel
 [brickman]: https://github.com/ev3dev/brickman
