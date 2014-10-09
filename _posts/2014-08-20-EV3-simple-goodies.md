@@ -37,18 +37,37 @@ but with some simple edits you can place them where **you** want them.
     * [testmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/testmotor) Test one motor. Too simple script, only uses a fixed suffix on ```/sys/class/tacho-motor/tacho-motor``` The kernel takes the *next* number if a motor is plugged in. Algorithm in [showmotor](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/showmotor) is connecting motor port to tacho-motor suffix. You can call testmotor with one parameter: the number of the motor. E.g. ```testmotor 3```
     
 
-### Have your EV3 report it's IP-address by speach after boot
-For this an update is needed to 
-[`/media/mmc_p1/ev3dev.rc.local`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/rc.local)
+
+### Have your EV3 report the IP-addresses by speach after boot 
+##### Starting at ev3dev image ev3dev-jessie-2014-10-07
+
+For this an update is needed to `/etc/rc.local`
+
+Add the next lines near the bottom of `/etc/rc.local`
+But **before** the `exit 0`
+
+```
+if [ -e /media/mmc_p1/tellIP ]; then
+echo "Executing /media/mmc_p1/tellIP"
+. /media/mmc_p1/tellIP
+fi
+```
+
+and place the script [`tellIP`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/tellIP)
+in the directory: `/media/mmc_p1/`
+
+##### OLDER ev3dev images (ev3dev-jessie-2014-10-07-12 and before)
+
+For this an update is needed to `/media/mmc_p1/ev3dev.rc.local`
 
 Add the next lines to the bottom of `/media/mmc_p1/ev3dev.rc.local`
 
+```
+if [ -e /media/mmc_p1/tellIP ]; then
+echo "Executing /media/mmc_p1/tellIP"
+. /media/mmc_p1/tellIP
+fi
+```
 
-    if [ -e /media/mmc_p1/tellIP ]; then
-      echo "Executing /media/mmc_p1/tellIP"
-      source /media/mmc_p1/tellIP
-    fi
-
-
-and an extra script [`tellIP`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/tellIP)
+and place the script [`tellIP`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/tellIP)
 in the same directory: `/media/mmc_p1/`
