@@ -2018,6 +2018,68 @@
         "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=168"
     },
     {
+        "default_address": "0x58",
+        "default_address_footnote": "[^address]",
+        "device_class_footnote": "[^servo-motor-devices]",
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MS_8CH_SERVO",
+        "ms_mode_info": [
+            {
+                "decimals": "3",
+                "description": "EV3 Compatible",
+                "id": "0",
+                "name": "MS-8CH-SERVO-V3",
+                "notes": "\n    \n[^battery-voltage]: The current voltage scaling is based on\n    the manufacturers documentation, however it seems to be low.\n    If you are seeing this too, please open an issue on GitHub\n    and we will change the scaling.\n    \n    ",
+                "raw_max": "255",
+                "raw_min": "127",
+                "si_max": "9400",
+                "si_min": "4700",
+                "units": "V",
+                "units_description": "volts",
+                "value0": "Battery voltage (0 to 9400)",
+                "value0_footnote": "[^battery-voltage]"
+            },
+            {
+                "decimals": "3",
+                "description": "Older versions",
+                "id": "1",
+                "name": "MS-8CH-SERVO",
+                "name_footnote": "[^old-mode]",
+                "notes": "\n[^old-mode]: Older versions of this sensor have the battery\n    voltage at a different address. If the default mode does not\n    return a value, try this mode.\n    \n    ",
+                "raw_max": "255",
+                "raw_min": "127",
+                "si_max": "9400",
+                "si_min": "4700",
+                "units": "V",
+                "units_description": "volts",
+                "value0": "Battery voltage (0 to 9400)",
+                "value0_footnote": "[^battery-voltage]"
+            }
+        ],
+        "name": "ms-8ch-servo",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [msensor] device. See the [Servo Motor Class](../servo-motor-class)\n    for more information. The `servo_motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    \n    ",
+        "num_modes": "2",
+        "ops.probe_cb": "ms_8ch_servo_probe_cb",
+        "ops.remove_cb": "ms_8ch_servo_remove_cb",
+        "product_id": "NXTServo",
+        "sensor_type": "nxt-i2c-sensor",
+        "url_name": "mindsensors.com-8-channel-servo-controller",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "8-channel Servo Controller",
+        "vendor_part_number": "NxtServo",
+        "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=93"
+    },
+    {
         "default_address": "0x38",
         "default_address_footnote": "[^addresses]",
         "device_class": "[gpio](https://www.kernel.org/doc/Documentation/gpio/) [^usage]",

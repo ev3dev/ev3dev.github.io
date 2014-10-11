@@ -25,7 +25,7 @@ connected to a single input port at a time.
 ### sysfs Attributes
 
 Sensors can be found at `/sys/class/msensor/sensor<N>`, where `<N>` is
-incremented each time a sensor is loaded (is is not related to which port
+incremented each time a sensor is loaded (it is not related to which port
 the sensor is plugged in to).
 
 `bin_data` (read/write)
