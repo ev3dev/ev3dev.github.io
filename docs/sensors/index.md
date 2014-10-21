@@ -159,7 +159,7 @@ kernel.
     not have individual drivers. This is the value returned by the `name`
     attribute in the [msensor class].
 
-[LEGO 8528]: http://shop.lego.com/en-US/Converter-Cables-for-LEGO-MINDSTORMS-NXT-8528/
+[LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [I2C protocol]: https://en.wikipedia.org/wiki/I2c
 [I2C Sensor Addressing]: i2c-sensor-addressing
 [Using I2C Sensors]: using-i2c-sensors
@@ -167,6 +167,6 @@ kernel.
 [using-uart-sensors-on-any-linux]: http://lechnology.com/2014/09/using-uart-sensors-on-any-linux/
 [opening an issue]: https://github.com/ev3dev/ev3dev/issues
 [contributing page]: http://www.ev3dev.org/contributing/
-[msensor class]: msensor-class
-[EV3 Input Port Driver]: ev3-input-port
+[msensor class]: /docs/drivers/msensor-class
+[EV3 Input Port Driver]: /docs/drivers/ev3-input-port
 [Supported Sensors]: #supported-sensors

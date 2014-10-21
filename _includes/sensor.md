@@ -166,4 +166,4 @@ or values returned by said attributes.
 
 {{ footnotes }}
 
-[msensor]: ../msensor-class
+[msensor]: ../../drivers/msensor-class

@@ -91,4 +91,4 @@ the sensor is plugged in to).
     need to divide to get the actual value.
 
 [nxt-i2c-sensor]: ../nxt-i2c-sensor
-[supported sensors]: ../#supported-sensors
+[supported sensors]: /docs/sensors#supported-sensors

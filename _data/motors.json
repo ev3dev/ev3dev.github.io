@@ -1,0 +1,169 @@
+[
+    {
+        "name": "ev3-tacho-motor",
+        "device_type": "ev3-tacho-motor",
+        "class": "tacho-motor-class",
+        "autodetect": "Y[^ev3-large-motor]",
+        "vendor_name": "Firgelli",
+        "vendor_part_name": "L12 EV3 50mm",
+        "vendor_url": "http://store.firgelli.com/product_p/l12-ev3-50.htm"
+    },
+    {
+        "name": "ev3-tacho-motor",
+        "device_type": "ev3-tacho-motor",
+        "class": "tacho-motor-class",
+        "autodetect": "Y[^ev3-large-motor]",
+        "vendor_name": "Firgelli",
+        "vendor_part_name": "L12 EV3 100mm",
+        "vendor_url": "http://store.firgelli.com/product_p/l12-ev3-100.htm"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_name": "Electric Technic Motor 9V Geared",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=47154c01"
+    },
+    {
+        "name": "rcx-led",
+        "device_type": "rcx-led",
+        "class": "leds-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "6035",
+        "vendor_part_name": "Light Brick 1 x 2 with Single Side Light",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=6035"
+    },
+    {
+        "name": "rcx-led",
+        "device_type": "rcx-led",
+        "class": "leds-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "6637",
+        "vendor_part_name": "Fiber Optics Element",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=6637"
+    },
+    {
+        "name": "rcx-led",
+        "device_type": "rcx-led",
+        "class": "leds-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "8870",
+        "vendor_part_name": "Power Functions Light",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=8870-1"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "8882",
+        "vendor_part_name": "Power Functions XL-Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=8882-1"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "8883",
+        "vendor_part_name": "Power Functions M-Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=8883-1"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "9670",
+        "vendor_part_name": "Power Functions E-Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=9670-1"
+    },
+    {
+        "name": "ev3-tacho-motor",
+        "device_type": "ev3-tacho-motor",
+        "class": "tacho-motor-class",
+        "autodetect": "Y[^ev3-large-motor]",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "9842",
+        "vendor_part_name": "NXT Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=9842-1"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "43362",
+        "vendor_part_name": "Electric Technic Mini-Motor 9v",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=43362c01"
+    },
+    {
+        "name": "ev3-tacho-motor",
+        "device_type": "ev3-tacho-motor",
+        "class": "tacho-motor-class",
+        "autodetect": "Y",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "45502",
+        "vendor_part_name": "EV3 Large Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=45502-1"
+    },
+    {
+        "name": "ev3-tacho-motor",
+        "device_type": "ev3-tacho-motor",
+        "class": "tacho-motor-class",
+        "autodetect": "Y",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "45503",
+        "vendor_part_name": "EV3 Medium Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=45503-1"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "70823",
+        "vendor_part_name": "Electric Technic Micromotor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=5119-1"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "71427",
+        "vendor_part_name": "Electric Technic Mini-Motor 9v",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=71427c01"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "74569",
+        "vendor_part_name": "Electric Technic Motor 9V",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=2838c01"
+    },
+    {
+        "name": "rcx-motor",
+        "device_type": "rcx-motor",
+        "class": "dc-motor-class",
+        "autodetect": "N",
+        "vendor_name": "LEGO",
+        "vendor_part_number": "88002",
+        "vendor_part_name": "Power Functions Train Motor",
+        "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=88002-1"
+    }
+]
