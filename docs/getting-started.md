@@ -109,7 +109,7 @@ you want to use and on the OS of your host computer, so pick the one that applie
     * Hopefully you can figure it out. I'm putting off writing detailed docs
       until brickman is a bit more stable.
 * Bluetooth
-    * Can someone figure this out and write up some documentation please?
+    * For now, see instructions [here](https://github.com/ev3dev/ev3dev/issues/193#issuecomment-61431048). Bluetooth via brickman is comming sooner or later.
 
 ## Step 5: First things to do with ev3dev
 
