@@ -47,10 +47,11 @@ enhanced regularly. You can also get bindings for other languages from our
 contributors. Here's a full list:
 
 * Unified bindings:
-    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/language-binding-unification/lua)
-    * [C++](https://github.com/ev3dev/ev3dev-lang/tree/language-binding-unification/cpp)
-    * [Node.js](https://github.com/ev3dev/ev3dev-lang/tree/language-binding-unification/js)
-    * [Vala](https://github.com/ev3dev/ev3dev-lang/tree/language-binding-unification/vala)
+    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
+    * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
+    * [Node.js](https://github.com/ev3dev/ev3dev-lang/tree/develop/js)
+    * [R](https://github.com/ev3dev/ev3dev-lang/tree/develop/R)
+    * [Vala](https://github.com/ev3dev/ev3dev-lang/tree/develop/vala)
 * Extra languages:
     * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
