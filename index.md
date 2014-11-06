@@ -41,7 +41,7 @@ library to use. We have an official "unified" language binding repository
 Node.JS and vala.
 
 These unified bindings are all built around a single
-[API specification](http://github.com/ev3dev/ev3dev-lang/blob/language-binding-unification/wrapper-specification.md)
+[API specification](https://github.com/ev3dev/ev3dev-lang/blob/develop/wrapper-specification.md)
 so the interface is almost identical for each, and they are being updated and
 enhanced regularly. You can also get bindings for other languages from our
 contributors. Here's a full list:
