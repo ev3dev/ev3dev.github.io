@@ -967,6 +967,12 @@ section #title p {
     margin-top: -30px;
 }
 
+    .edit-on-github .disabled {
+        color: rgba(240, 231, 213, 0.59);
+        font-size: 12px;
+        margin-top: 1px;
+    }
+
 #projects-list li {
 	margin-bottom: 10px;
 	font-size: 110%;
