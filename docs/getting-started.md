@@ -78,7 +78,7 @@ blank, you can press any of the directional buttons (up, down, left, right)
 to toggle displaying boot messages.</s> (Plymouth is currently broken, so no
 boot messages for now.)
 
-The first boot will take a little longer that subsequent boots because the EV3
+The first boot will take a little longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
 items.
 
@@ -92,6 +92,7 @@ like this on the screen:
 * Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)
 * Try writing the image to the SD card again.
 * You may have a bad/incompatible SD card - try a different SD card.
+* Check the condition of the EV3 batteries.
 
 ## Step 4: Setup a network connection
 
@@ -180,8 +181,9 @@ doing this. You need some free disk space available in order to run this command
 
 ### Update packages
 
-Make sure your EV3 is connected to the Internet first. Updating the package
-list the first time will take a few minutes.
+Make sure your EV3 is connected to the Internet first. 
+Updating the packages for the first time will take minutes.
+The duration depends on the speed class of the SD card and on the updates involved.
 
     root@ev3dev:~# apt-get update
     root@ev3dev:~# apt-get upgrade
