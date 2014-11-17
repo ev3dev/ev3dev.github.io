@@ -1,5 +1,5 @@
 ---
-title: Setup bluetooth audio with PulseAudio - A2DP only
+title: Setting up bluetooth audio with PulseAudio - A2DP only
 subject: Bluetooth
 ---
 
