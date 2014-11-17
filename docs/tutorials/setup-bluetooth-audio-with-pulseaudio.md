@@ -1,5 +1,5 @@
 ---
-title: Bluetooth audio with PulseAudio - A2DP only
+title: Setup bluetooth audio with PulseAudio - A2DP only
 subject: Bluetooth
 ---
 
@@ -15,75 +15,76 @@ subject: Bluetooth
   PulseAudio 5 only supports the A2DP profile and not HSP/HFP see [note 2],  
   although it is under development see [note 3].  
   
-  The A2DP profile supports:<br />
-  `UUID: Audio Source`  <br />
-  `UUID: Audio Sink`  <br />
+  The A2DP profile supports:
+  `UUID: Audio Source`  
+  `UUID: Audio Sink`  
 
 ### How to get PulseAudio working with Bluetooth 
   **This should all be done as root**  
   
-  1 Install pulseaudio:  
+1 Install pulseaudio:  
 
-<strong>apt-get install --no-install-recommends pulseaudio pulseaudio-module-bluetooth</strong>    
+`apt-get install --no-install-recommends pulseaudio pulseaudio-module-bluetooth`
 
-  2 Create a systemd service for running pulseaudio as the pulse user.  
-    Save the following lines (without the lines)  as `/etc/systemd/system/pulseaudio.service`  
--------------------------------------------------------------------------------  
+2 Create a systemd service for running pulseaudio as the pulse user.  
+  Save the following lines as `/etc/systemd/system/pulseaudio.service`  
+```  
 [Unit]  
 Description=Pulse Audio  
-  <br />
-[Service]  <br />
+  
+[Service]  
 Type=simple  
 ExecStart=/usr/bin/pulseaudio --system --disallow-exit --disable-shm  
---------------------------------------------------------------------------------  <br />
+```
   and reload systemd with `systemctl daemon-reload`
   
-  3 Give the `pulse` user permission to use Bluetooth.  
-    Save the following lines (without the lines) to `/etc/dbus-1/system.d/pulseaudio-bluetooth.conf`  
---------------------------------------------------------------------------------  <br />
-&lt;busconfig&gt;  <br />
-  <br />
-&nbsp;&lt;policy user="pulse"&gt;  <br />
-&nbsp;&nbsp;&nbsp;&lt;allow send_destination="org.bluez"/&gt;  <br />
-&nbsp;&lt;/policy><br />
- <br />
-&lt;/busconfig&gt;  <br />
---------------------------------------------------------------------------------  <br />
-<br />
-   4 Paste the following lines (without the lines) to the **end** of `/etc/pulse/system.pa`:  
---------------------------------------------------------------------------------  <br />
-&#35;&#35;&#35; Automatically load driver modules for Bluetooth hardware  <br />
-.ifexists module-bluetooth-policy.so  <br />
-load-module module-bluetooth-policy  <br />
-.endif <br /> 
- <br />
-.ifexists module-bluetooth-discover.so  <br />
-load-module module-bluetooth-discover  <br />
-.endif  <br />
---------------------------------------------------------------------------------  <br />  
-
-  5 Start the systemd service: `systemctl start pulseaudio.service`
-
-  6 Run bluetoothctl to connect the device.  <br />
-  You only need to do the pairing stuff once. <br />
-  Be sure to substitute the address of the actual device your are connecting to.<br />
-  Here are the commands:<br />
+3 Give the `pulse` user permission to use Bluetooth.  
+  Save the following lines to `/etc/dbus-1/system.d/pulseaudio-bluetooth.conf`  
+```
+<busconfig>
   
-`agent on`  
-`default-agent`  
-`scan on`  
-`pair 11:11:11:11:11:11`  
-`trust 11:11:11:11:11:11`  
-`connect 11:11:11:11:11:11`  
-          
-  7 Now, you should be able to play sound from a remote device on your EV3 without any further configuration.
+ <policy user="pulse">  
+  <allow send_destination="org.bluez"/>  
+ </policy>  
  
-  8 To play sound from the EV3 on a remote device, there are a few more steps.  
-    * add `root` and your own non-root user(s) to the `audio` and `pulse-access` groups:  
+</busconfig>  
+```
+  
+
+4 Paste the following lines to the **end** of `/etc/pulse/system.pa`:  
+```
+### Automatically load driver modules for Bluetooth hardware  
+.ifexists module-bluetooth-policy.so  
+load-module module-bluetooth-policy  
+.endif  
+ 
+.ifexists module-bluetooth-discover.so  
+load-module module-bluetooth-discover  
+.endif  
+```
+
+5 Start the systemd service: `systemctl start pulseaudio.service`
+
+6 Run bluetoothctl to connect the device.  
+  You only need to do the pairing stuff once. 
+  Be sure to substitute the address of the actual device your are connecting to.  
+  Here are the commands:
+```  
+agent on  
+default-agent  
+scan on  
+pair 11:11:11:11:11:11  
+trust 11:11:11:11:11:11  
+connect 11:11:11:11:11:11  
+```  
+7 Now, you should be able to play sound from a remote device on your EV3 without any further configuration.
+ 
+8 To play sound from the EV3 on a remote device, there are a few more steps.  
+  * add `root` and your own non-root user(s) to the `audio` and `pulse-access` groups:  
       `usermod -a -G pulse-access,audio root`  
       `usermod -a -G pulse-access,audio myuser`  
 
-    * Run `pactl list cards`.  
+  * Run `pactl list cards`.  
     The end of the output should look something like this:  
 ```  
             Card #1  
@@ -112,7 +113,8 @@ load-module module-bluetooth-discover  <br />
                         Part of profile(s): a2dp_source  
 ```  
 
-  * The active profile probably doesn't say `a2dp`, so set it by running:
+  * The active profile probably doesn't say `a2dp`, although in the output above it already has been set.
+    So set it by running:
     `pactl set-card-profile 1 a2dp`  
     The "1" in this command is the number of the BT card from the output above.  
   
@@ -121,7 +123,7 @@ load-module module-bluetooth-discover  <br />
   `paplay -d bluez_sink.00_17_E7_BD_1C_8E /usr/share/sounds/alsa/Front_Center.wav`  
   Possibly error messages like `xcb_connection_has_error() returned true` have been seen and not explained.  
   But there seems to be no ill effect on BT audio.  
-  For my simple non-root user I get:  
+  Using my simple non-root user I get:  
       `Failed to create secure directory (/run/user/0/pulse): Permission denied`  
       but playback **does** work.  
 
