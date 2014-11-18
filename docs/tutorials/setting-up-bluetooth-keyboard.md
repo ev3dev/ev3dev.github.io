@@ -1,5 +1,5 @@
 ---
-title: Bluetooth keyboard
+title: Setting Up Bluetooth keyboard
 subject: Bluetooth
 ---
 
