@@ -25,12 +25,12 @@ The remote device we are connecting to needs to have at least one of these profi
 
 **This should almost all be done as root**
 
-1. Install pulseaudio:
+1.  Install pulseaudio:
 
         apt-get install --no-install-recommends pulseaudio pulseaudio-module-bluetooth
 
-2. Create a systemd service for running pulseaudio as the pulse user.
-Save the following lines as `/etc/systemd/system/pulseaudio.service`
+2.  Create a systemd service for running pulseaudio as the pulse user.
+    Save the following lines as `/etc/systemd/system/pulseaudio.service`
 
         [Unit]
         Description=Pulse Audio
@@ -43,8 +43,8 @@ Save the following lines as `/etc/systemd/system/pulseaudio.service`
     
         systemctl daemon-reload
 
-3. Give the `pulse` user permission to use Bluetooth.
-Save the following lines to `/etc/dbus-1/system.d/pulseaudio-bluetooth.conf`
+3.  Give the `pulse` user permission to use Bluetooth.
+    Save the following lines to `/etc/dbus-1/system.d/pulseaudio-bluetooth.conf`
 
         <busconfig>
       
@@ -54,61 +54,62 @@ Save the following lines to `/etc/dbus-1/system.d/pulseaudio-bluetooth.conf`
       
         </busconfig>
 
-4. Paste the following lines to the **end** of `/etc/pulse/system.pa`:
+4.  Paste the following lines to the **end** of `/etc/pulse/system.pa`:
 
         ### Automatically load driver modules for Bluetooth hardware
         .ifexists module-bluetooth-policy.so
-        load-module module-bluetooth-policy
+          load-module module-bluetooth-policy
         .endif
+        
         .ifexists module-bluetooth-discover.so
-        load-module module-bluetooth-discover
+          load-module module-bluetooth-discover
         .endif
 
-5. Start the systemd service: `systemctl start pulseaudio.service`
+5.  Start the systemd service: `systemctl start pulseaudio.service`
 
-6. Connect the device, example using brickman on the EV3 screen.
-You only need to do the pairing stuff once.
+6.  Connect the device, example using brickman on the EV3 screen.
+    You only need to do the pairing stuff once.
 
     Actions to do:
 
     On the brickman main screen scroll to the `Bluetooth` option:
     
-    {% include screenshot.html source="/images/brickman/main-menu-incl-bluetooth.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/main-menu.png" %}
     
     Press the EV3 "ENTER" button (the center button). 
     Scroll with the up or down button to `Start Scan` and press "ENTER"
     
-    {% include screenshot.html source="/images/brickman/bluetooth-start-scan.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-start-scan.png" %}
 
     Did you set the target device "discoverable"? If not, better do that now.
     
     Scroll down (or up if you like) to the device you want to use.
     Press "ENTER" to select:
     
-    {% include screenshot.html source="/images/brickman/bluetooth-select-device.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-select-device.png" %}
 
     On the brickman device page:
     Select `Pair` and press "ENTER"
     
-    {% include screenshot.html source="/images/brickman/bluetooth-before-pair.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-before-pair.png" %}
 
     On the remote device you also need to accept the pairing.
 
     Select `Accept` and press "ENTER"
 
-    {% include screenshot.html source="/images/brickman/bluetooth-accept-pairing.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-accept-pairing.png" %}
 
     After successful pairing select `Connect` and press "ENTER":
 
-    {% include screenshot.html source="/images/brickman/bluetooth-after-pair.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-after-pair.png" %}
 
     If all went well (no error seen on the EV3) the screen looks like:
 
-    {% include screenshot.html source="/images/brickman/bluetooth-after-connect.png" scale="50" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-after-connect.png" %}
 
-7. Now, you should be able to play sound from a remote device on your EV3 without any further configuration.
+7.  Now, you should be able to play sound from a remote device on your EV3 without any further configuration.
 
-8. To play sound from the EV3 on a remote device, there are a few more steps.
+8.  To play sound from the EV3 on a remote device, there are a few more steps.
     * add your own non-root user(s) to the `audio` and `pulse-access` groups:
   
             usermod -a -G pulse-access,audio myuser
@@ -147,12 +148,12 @@ You only need to do the pairing stuff once.
     The active profile probably doesn't say `a2dp`.
     So set it by running:
 
-            pactl set-card-profile 2 a2dp
+        pactl set-card-profile 2 a2dp
 
     The "2" in this command is the number of the BT card from the output above.
 
-9. Now you can play sound using paplay.
-Look at the name of the sink with:
+9.  Now you can play sound using paplay.
+    Look at the name of the sink with:
         
         pactl list sinks
 
