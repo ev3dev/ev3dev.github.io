@@ -1820,7 +1820,7 @@
         "product_id": "Sonar",
         "sensor_type": "nxt-i2c-sensor",
         "slow": "true",
-        "url_name": "lego-nxt-ultrasonicsensor",
+        "url_name": "lego-nxt-ultrasonic-sensor",
         "vendor_id": "LEGO",
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Ultrasonic  Sensor",
