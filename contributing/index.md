@@ -40,7 +40,8 @@ then send a pull request.
 
 Have some sensor that isn't supported yet? With a little technical know-how
 and the right attitude, there is nothing stopping you. Open an [issue] on
-GitHub and we can help you get started.
+GitHub and we can help you get started. For an example of just how easy it
+can be to add a sensor, check out [this commit][ms-angle-sensor-commit].
 
 Some things you will need:
 
@@ -69,6 +70,7 @@ hardware and we will make it work for you. See this
 [GitHub Help]: https://help.github.com/
 [mindsensors.com EV3 Console Adapter]: http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=189&MMN_position=39:39
 [issue]: https://github.com/ev3dev/ev3dev/issues
+[ms-angle-sensor-commit]: https://github.com/ev3dev/ev3dev-kernel/commit/0bb5e72135f8abf789db5d061a78a26f6281ed2f
 [ev3-creating-a-console-cable]: http://botbench.com/blog/2013/08/15/ev3-creating-console-cable
 [Saleae referral]: http://go.referralcandy.com/share/8LP4Z9L
 [will-work-for-sensors]: http://lechnology.com/2014/08/will-work-for-sensors
