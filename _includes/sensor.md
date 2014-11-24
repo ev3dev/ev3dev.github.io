@@ -55,13 +55,25 @@
     {% if sensor.vendor_id %}
     <tr class="{% cycle 'info': 'd0', 'd1' %}">
         <th><code>vendor_id</code></th>
-        <td>{{ sensor.vendor_id }}</td>
+        <td>
+            {{ sensor.vendor_id }}<!--
+            {% if sensor.vendor_id_footnote %}
+                --><span markdown="1">{{ sensor.vendor_id_footnote }}</span><!--
+            {% endif %}
+            -->
+        </td>
     </tr>
     {% endif %}
     {% if sensor.product_id %}
     <tr class="{% cycle 'info': 'd0', 'd1' %}">
         <th><code>product_id</code></th>
-        <td>{{ sensor.product_id }}</td>
+        <td>
+            {{ sensor.product_id }}<!--
+            {% if sensor.product_id_footnote %}
+                --><span markdown="1">{{ sensor.product_id_footnote }}</span><!--
+            {% endif %}
+            -->
+        </td>
     </tr>
     {% endif %}
     {%if sensor.device_class == null %}
@@ -71,6 +83,9 @@
     </tr>
     {% endif %}
 </table>
+
+Values in the tables that look like `this` are the names of sysfs attributes
+or values returned by said attributes.
 
 {%if sensor.device_class == null %}
 ### Modes
@@ -114,7 +129,11 @@
                 {% endif %}
             {% else %}
                 <i>none</i>
+            {% endif %}<!--
+            {% if mode.units_footnote %}
+            --><span markdown='1'>{{ mode.units_footnote }}</span><!--
             {% endif %}
+            -->
         </td>
         <td>
             <code>
@@ -127,19 +146,20 @@
         </td>
         <td>
             <code>
-                {% assign num_modes=1 %}
+                {% assign num_values=1 %}
                 {% if mode.data_sets %}
-                    {% assign num_modes=mode.data_sets %}
+                    {% assign num_values=mode.data_sets %}
                 {% endif %}
-                {{ num_modes }}
+                {{ num_values }}
             </code>
         </td>
         <td>
-            {% for i in (1..num_modes) %}
+            {% for i in (1..num_values) %}
+                {% assign value=forloop.index0 | prepend: 'value' %}
+                {% if mode[value] %}
                 {% if i > 1 %}
                     <br />
                 {% endif %}
-                {% assign value=forloop.index0 | prepend: 'value' %}
                 {% assign value_footnote=value | append: '_footnote' %}
                 <span style="white-space:nowrap;">
                     <code>{{ value }}</code>: {{ mode[value] }}<!--
@@ -148,14 +168,12 @@
                     {% endif %}
                     -->
                 </span>
+                {% endif %}
             {% endfor %}
         </td>
     </tr>
     {% endfor %}
 </table>
-
-Values in the tables that look like `this` are the names of sysfs attributes
-or values returned by said attributes.
 
 [^dp]: Decimal places. For example, if the range of a value is from 0 to 1000
     and `dp` is `1`, then the acutal range is 0.0 to 100.0 in the units specified.
@@ -163,6 +181,36 @@ or values returned by said attributes.
 [^not-read-only]: This mode is not availible when the sensor is connected to a
     read-only input port like the HiTechnic NXT Sensor MUX.
 {% endif %}
+
+### Commands
+{% assign num_commands = sensor.num_commands | plus: 0 %}
+{% if num_commands > 0 %}
+<table id="sensor-info">
+    <tr class="{% cycle 'commands': 'd0', 'd1' %}">
+        <th><code>command</code></th>
+        <th>Description</th>
+    </tr>
+    {% for command in sensor.ms_cmd_info %}
+    {% if command.notes %}
+        {% assign footnotes=footnotes | append: command.notes %}
+    {% endif %}
+    <tr class="{% cycle 'commands': 'd0', 'd1' %}">
+        <td>
+            <code>{{ command.name }}</code><!--
+            {% if command.name_footnote %}
+                --><span markdown="1">{{ command.name_footnote }}</span><!--
+            {% endif %}
+            -->
+        </td>
+        <td>{{ command.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+This sensor does not support commands.
+{% endif %}
+
+### Notes
 
 {{ footnotes }}
 

@@ -148,7 +148,7 @@ kernel.
 [^standard-i2c]: The auto-detection algorithm detects this sensor as an I2C
     sensor and the port is automatically put into I2C mode. However, the sensor
     does not follow the LEGO MINDSTORMS convention for I2C sensors, so the
-    exact type of sensor cannot be determined. See [I2C Sensor Considerations]
+    exact type of sensor cannot be determined. See [Using I2C Sensors]
     for information on how to manually load the correct driver.
 
 [^lm75]: Temperature sensors using the lm75 module can be auto-detected.
@@ -158,6 +158,11 @@ kernel.
 [^ev3-uart-driver]: This is not the name of a real driver. UART/EV3 sensors do
     not have individual drivers. This is the value returned by the `name`
     attribute in the [msensor class].
+
+[^mi-xg1300l]: The auto-detection algorithm detects this sensor as an I2C
+    sensor and the port is automatically put into I2C mode. However, this sensor
+    only partially follows the LEGO MINDSTORMS convention for I2C sensors, so the
+    driver must be loaded manually. See the sensor's page for more information.
 
 [LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [I2C protocol]: https://en.wikipedia.org/wiki/I2c

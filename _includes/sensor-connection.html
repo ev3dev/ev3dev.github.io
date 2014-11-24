@@ -11,7 +11,11 @@
     {% assign autodetect = "Y" %}
 {% when 'nxt-i2c-sensor' %}
     {% assign connection = "I2C/NXT" %}
-    {% assign autodetect = "Y" %}
+    {% if sensor.name == 'mi-xg1300l' %}
+        {% assign autodetect = "N[^mi-xg1300l]" %}
+    {% else %}
+        {% assign autodetect = "Y" %}
+    {% endif %}
 {% when 'gpio-pcf857xr' or 'pcf8591' or 'rtc-ds1307' %}
     {% assign connection = "I2C/Other" %}
     {% assign autodetect = "N[^standard-i2c]" %}
