@@ -16,6 +16,9 @@
     {% else %}
         {% assign autodetect = "Y" %}
     {% endif %}
+{% when 'wedo-sensor' %}
+    {% assign connection = "Analog/WeDo" %}
+    {% assign autodetect = "Y" %}
 {% when 'gpio-pcf857xr' or 'pcf8591' or 'rtc-ds1307' %}
     {% assign connection = "I2C/Other" %}
     {% assign autodetect = "N[^standard-i2c]" %}

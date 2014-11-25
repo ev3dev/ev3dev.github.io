@@ -29,11 +29,16 @@ sensors are designed for the NXT, but also work on the EV3. The EV3 cannot
 differentiate between most of these sensors though, so you have to tell it
 which one your have or just use the generic driver.
 
+WeDo sensors, referred to as **Analog/WeDo**, are also analog sensors. They are
+actually electrically similar to Analog/EV3 sensors (require 5V power and have
+ID resistor). Currently, we only support WeDo sensors attached to a WeDo hub,
+but if someone would like to design a cable and modify the `ev3-analog-sensor`
+driver, we could easily make them work with the input ports on the EV3.
+
 RCX sensors also fall into this category, but do not work with the EV3 - at
 least not with the converter cable described in the NXT Hardware Developers
 kit. This is due to a difference in the input port pins between the EV3 and
-the NXT. If someone wants to research the [LEGO 8528] cable or design a new
-converter cable, we could probably make them work.
+the NXT. If someone wants design a new converter cable, we could make them work.
 
 ### LEGO NXT Color Sensor
 
