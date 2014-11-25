@@ -21,9 +21,13 @@ of the `commands` attribute.
 `commands` (read-only)
 : Returns a space separated list of commands supported by the motor controller.
 
-`duty_cycle` (read/write)
-: Sets the duty cycle of the PWM signal sent to the motor. Values are -100
-to 100 (-100% to 100%).
+`duty_cycle_sp` (read/write)
+: Sets the duty cycle setpoint of the PWM signal sent to the motor. Values
+-100 to 100 (-100% to 100%).
+
+`duty_cycle` (read)
+: Shows the current duty cycle of the PWM signal sent to the motor. Values
+-100 to 100 (-100% to 100%).
 
 `name` (read-only)
 : Returns the name of the motor controller's driver.

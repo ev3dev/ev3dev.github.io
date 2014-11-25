@@ -64,6 +64,13 @@ the sensor is plugged in to).
 : Returns the current mode. Writing one of the values returned by `modes` sets
     the sensor to that mode.
 
+`commands` (read-only)
+: Returns a space separated list of the valid commands for the sensor. Returns
+-ENOSYS if no commands are supported.
+
+`command` (write-only)
+: Sends a command to the sensor.
+
 `num_values` (read-only)
 : Returns the number of `value<N>` attributes that will return a valid value
     for the current mode.

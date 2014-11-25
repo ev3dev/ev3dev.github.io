@@ -8,7 +8,7 @@
                 "decimals": "3",
                 "description": "Raw analog value",
                 "id": "0",
-                "name": "EV3-ANALOG",
+                "name": "ANALOG",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "5000",
@@ -38,7 +38,7 @@
                 "decimals": "3",
                 "description": "Raw analog value",
                 "id": "0",
-                "name": "NXT-ANALOG-0",
+                "name": "ANALOG-0",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "5000",
@@ -52,7 +52,7 @@
                 "decimals": "3",
                 "description": "Raw analog value<br />Pin 5 high",
                 "id": "1",
-                "name": "NXT-ANALOG-1",
+                "name": "ANALOG-1",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "5000",
@@ -66,49 +66,6 @@
         "sensor_type": "nxt-analog-sensor",
         "url_name": "generic-nxt-analog-sensor",
         "vendor_part_name": "Generic NXT Analog Sensor"
-    },
-    {
-        "i2c_mode_info": [
-            {
-                "id": "0",
-                "read_data_reg": "0"
-            },
-            {
-                "id": "1",
-                "read_data_reg": "0"
-            },
-            {
-                "id": "2",
-                "read_data_reg": "0"
-            }
-        ],
-        "id": "UNKNOWN_I2C_SENSOR",
-        "ms_mode_info": [
-            {
-                "description": "Unsigned 8-bit data",
-                "id": "0",
-                "name": "I2C-U8"
-            },
-            {
-                "data_type": "MSENSOR_DATA_S8",
-                "description": "Signed 8-bit data",
-                "id": "1",
-                "name": "I2C-S8"
-            },
-            {
-                "data_type": "MSENSOR_DATA_S16",
-                "description": "Signed 16-bit data",
-                "id": "2",
-                "name": "I2C-S16"
-            }
-        ],
-        "name": "nxt-i2c",
-        "num_modes": "3",
-        "product_id": "unknown",
-        "sensor_type": "nxt-i2c-sensor",
-        "url_name": "unknown-nxt-i2c-sensor",
-        "vendor_id": "UNKNOWN",
-        "vendor_part_name": "Unknown NXT I2C Sensor"
     },
     {
         "default_address": "0x01",
@@ -147,7 +104,7 @@
             {
                 "description": "Color",
                 "id": "0",
-                "name": "HT-COL1-COL",
+                "name": "COLOR",
                 "notes": "\n[^color-value]: Color Values:<br />\n    ![Color chart](http://www.hitechnic.com/contents/media/Color%20Number.jpg)\n    \n    ",
                 "raw_max": "17",
                 "si_max": "17",
@@ -157,19 +114,19 @@
             {
                 "description": "Red component",
                 "id": "1",
-                "name": "HT-COL1-RED",
+                "name": "RED",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
                 "description": "Green component",
                 "id": "2",
-                "name": "HT-COL1-GRN",
+                "name": "GREEN",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
                 "description": "Blue component",
                 "id": "3",
-                "name": "HT-COL1-BLU",
+                "name": "BLUE",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
@@ -177,7 +134,7 @@
                 "data_type": "MSENSOR_DATA_U16",
                 "description": "Raw values",
                 "id": "4",
-                "name": "HT-COL1-RAW",
+                "name": "RAW",
                 "raw_max": "USHRT_MAX",
                 "si_max": "USHRT_MAX",
                 "value0": "Red Component (0 to 255)",
@@ -188,7 +145,7 @@
                 "data_sets": "4",
                 "description": "Normalized values",
                 "id": "5",
-                "name": "HT-COL1-NRM",
+                "name": "NORM",
                 "value0": "Red Component (0 to 255)",
                 "value1": "Green Component (0 to 255)",
                 "value2": "Blue Component (0 to 255)",
@@ -198,7 +155,7 @@
                 "data_sets": "4",
                 "description": "All values",
                 "id": "6",
-                "name": "HT-COL1-ALL",
+                "name": "ALL",
                 "value0": "Color (0 to 17)",
                 "value0_footnote": "[^color-value]",
                 "value1": "Red Component (0 to 255)",
@@ -217,6 +174,13 @@
     },
     {
         "default_address": "0x01",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "0",
+                "cmd_reg": "0",
+                "id": "0"
+            }
+        ],
         "i2c_mode_info": [
             {
                 "id": "0",
@@ -229,20 +193,21 @@
             {
                 "id": "2",
                 "read_data_reg": "0"
-            },
-            {
-                "id": "3",
-                "read_data_reg": "0",
-                "set_mode_data": "0",
-                "set_mode_reg": "0"
             }
         ],
         "id": "HT_NXT_ANGLE_SENSOR",
+        "ms_cmd_info": [
+            {
+                "description": "Reset angle values",
+                "id": "0",
+                "name": "RESET"
+            }
+        ],
         "ms_mode_info": [
             {
                 "description": "Angle",
                 "id": "0",
-                "name": "HT-ANG-DEG2",
+                "name": "ANGLE",
                 "raw_max": "180",
                 "si_max": "180",
                 "units": "deg",
@@ -254,7 +219,7 @@
                 "description": "Accumulated angle",
                 "figures": "9",
                 "id": "1",
-                "name": "HT-ANG-ACC",
+                "name": "ACCEL",
                 "raw_max": "INT_MAX",
                 "raw_min": "INT_MIN",
                 "si_max": "INT_MAX",
@@ -267,7 +232,7 @@
                 "data_type": "MSENSOR_DATA_S16",
                 "description": "Rotational speed",
                 "id": "2",
-                "name": "HT-ANG-RPM",
+                "name": "SPEED",
                 "raw_max": "SHRT_MAX",
                 "raw_min": "SHRT_MIN",
                 "si_max": "SHRT_MAX",
@@ -275,23 +240,11 @@
                 "units": "RPM",
                 "units_description": "revolutions per minute",
                 "value0": "Angle (-32768 to 32768)"
-            },
-            {
-                "description": "Reset angle",
-                "id": "3",
-                "name": "HT-ANG-RSET",
-                "name_footnote": "[^mode3]",
-                "notes": "\n[^mode3]: `HT-ANG-RSET` mode is exactly the same as `HT-ANG-DEG2` except\n    that the angle is reset each time the mode is set to `HT-ANG-RSET`.\n    \n    ",
-                "raw_max": "180",
-                "si_max": "180",
-                "units": "deg",
-                "units_description": "degrees",
-                "value0": "Angle (0 to 180)"
             }
         ],
         "name": "ht-nxt-angle",
-        "num_modes": "4",
-        "num_read_only_modes": "3",
+        "num_commands": "1",
+        "num_modes": "3",
         "product_id": "AnglSnsr",
         "sensor_type": "nxt-i2c-sensor",
         "url_name": "hitechnic-nxt-angle-sensor",
@@ -318,7 +271,7 @@
             {
                 "description": "Single-axis acceleration",
                 "id": "0",
-                "name": "HT-ACCL",
+                "name": "ACCEL",
                 "notes": "\n[^mode-0-value]: Value is 8 most significant bits out of 10-bit total resolution.\n    \n    ",
                 "value0": "Acceleration (coarse value)",
                 "value0_footnote": "[^mode-0-value]"
@@ -327,7 +280,7 @@
                 "data_sets": "6",
                 "description": "Three-axis acceleration",
                 "id": "1",
-                "name": "HT-ACCL-ALL",
+                "name": "ALL",
                 "notes": "\n[^mode-1-value]: Only the 2 most significant bits are used.\n    Actual value is `MSB << 2 + LSB >> 6` or `MSB << 2 + LSB & 0x03`\n    (can someone confirm which one?).\n    \n    ",
                 "value0": "X-axis acceleration (most significant byte)",
                 "value1": "Y-axis acceleration (most significant byte)",
@@ -369,7 +322,7 @@
                 "decimals": "1",
                 "description": "Barometric Pressure",
                 "id": "0",
-                "name": "HT-BAR-PRES",
+                "name": "PRESS",
                 "raw_max": "29400",
                 "raw_min": "30400",
                 "si_max": "3000",
@@ -381,7 +334,7 @@
                 "decimals": "1",
                 "description": "Temperature",
                 "id": "1",
-                "name": "HT-BAR-TEMP",
+                "name": "TEMP",
                 "raw_max": "1000",
                 "si_max": "1000",
                 "units": "C",
@@ -450,7 +403,7 @@
             {
                 "description": "Color",
                 "id": "0",
-                "name": "HT-COL2-COL",
+                "name": "COLOR",
                 "notes": "\n[^color-value]: Color Values:<br />\n    ![Color chart](http://www.hitechnic.com/contents/media/Color%20Number.jpg)\n    \n    ",
                 "raw_max": "17",
                 "si_max": "17",
@@ -460,32 +413,32 @@
             {
                 "description": "Red component",
                 "id": "1",
-                "name": "HT-COL2-RED",
+                "name": "RED",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
                 "description": "Green component",
                 "id": "2",
-                "name": "HT-COL2-GRN",
+                "name": "GREEN",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
                 "description": "Blue component",
                 "id": "3",
-                "name": "HT-COL2-BLU",
+                "name": "BLUE",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
                 "description": "White component",
                 "id": "4",
-                "name": "HT-COL2-WHT",
+                "name": "WHITE",
                 "value0": "Reflected light intensity (0 to 255)"
             },
             {
                 "data_sets": "4",
                 "description": "Normalized values",
                 "id": "5",
-                "name": "HT-COL2-NRM",
+                "name": "NORM",
                 "value0": "Red Component (0 to 255)",
                 "value1": "Green Component (0 to 255)",
                 "value2": "Blue Component (0 to 255)",
@@ -495,7 +448,7 @@
                 "data_sets": "5",
                 "description": "All values",
                 "id": "6",
-                "name": "HT-COL2-ALL",
+                "name": "ALL",
                 "value0": "Red Component (0 to 255)",
                 "value1": "Green Component (0 to 255)",
                 "value2": "Blue Component (0 to 255)",
@@ -507,7 +460,7 @@
                 "data_type": "MSENSOR_DATA_U16",
                 "description": "Raw values",
                 "id": "7",
-                "name": "HT-COL2-RAW",
+                "name": "RAW",
                 "raw_max": "USHRT_MAX",
                 "si_max": "USHRT_MAX",
                 "value0": "Red Component (0 to 255)",
@@ -548,7 +501,7 @@
                 "data_type": "MSENSOR_DATA_S32",
                 "description": "Proximity (long range)",
                 "id": "0",
-                "name": "HT-EOPD-L",
+                "name": "LONG",
                 "notes": "\n[^adjusted-value]: This value is the square root of the\n    raw value. You can derive a value proportional (linear)\n    to distance by dividing a constant by this value,\n    e.g. `35 / value0`.\n    \n    ",
                 "pct_max": "100",
                 "raw_max": "5000",
@@ -561,7 +514,7 @@
                 "data_type": "MSENSOR_DATA_S32",
                 "description": "Proximity (short range)",
                 "id": "1",
-                "name": "HT-EOPD-S",
+                "name": "SHORT",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "100",
@@ -586,7 +539,7 @@
                 "data_type": "MSENSOR_DATA_S32",
                 "description": "Raw value (non-linear)",
                 "id": "0",
-                "name": "HT-FORCE",
+                "name": "FORCE",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "1023",
@@ -610,7 +563,7 @@
                 "data_type": "MSENSOR_DATA_S32",
                 "description": "Angular speed",
                 "id": "0",
-                "name": "HT-GYRO",
+                "name": "GYRO",
                 "pct_max": "100",
                 "raw_max": "4880",
                 "si_max": "400",
@@ -642,7 +595,7 @@
             {
                 "description": "???",
                 "id": "0",
-                "name": "HT-IRLINK",
+                "name": "IRLINK",
                 "value0": "???"
             }
         ],
@@ -675,7 +628,7 @@
                 "data_type": "MSENSOR_DATA_S8",
                 "description": "Single Motor Control",
                 "id": "0",
-                "name": "HT-IRRECV",
+                "name": "1-MOTOR",
                 "notes": "\n[^values]: Value of -128 is brake. Speed values only occur in\n    discrete steps (-100, -86, -72, -58, -44, -30, -16, 0, 16, 30,\n    44, 58, 72, 86 and 100).\n    \n    ",
                 "units": "pct",
                 "units_description": "percent",
@@ -687,7 +640,7 @@
                 "data_type": "MSENSOR_DATA_S8",
                 "description": "Eight Motor Controls",
                 "id": "1",
-                "name": "HT-IRRECV-8",
+                "name": "8-MOTOR",
                 "notes": "\n[^value-map]: In \"Motor NX\", the number is the channel,\n    A is the red/left control and B is the blue/right control.\n    \n    ",
                 "units": "pct",
                 "units_description": "percent",
@@ -733,7 +686,7 @@
             {
                 "description": "IR Proximity",
                 "id": "0",
-                "name": "HT-PIR",
+                "name": "PROX",
                 "pct_min": "-100",
                 "si_max": "100",
                 "si_min": "-100",
@@ -767,7 +720,7 @@
                 "data_type": "MSENSOR_DATA_S8",
                 "description": "Compass Direction",
                 "id": "0",
-                "name": "HT-CMP-DEG2",
+                "name": "COMAPASS",
                 "raw_max": "180",
                 "si_max": "180",
                 "units": "deg",
@@ -794,7 +747,7 @@
                 "data_type": "MSENSOR_DATA_S32",
                 "description": "Magnetic field???",
                 "id": "0",
-                "name": "HT-MAG",
+                "name": "MAG",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "1023",
@@ -835,7 +788,7 @@
             {
                 "description": "Direction (unmodulated)",
                 "id": "0",
-                "name": "HT-DIR-DC",
+                "name": "DC",
                 "notes": "\n[^values]: Direction values:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | No signal   |\n    | 1     | Far left    |\n    | ...   |             |\n    | 5     | Center      |\n    | ...   |             |\n    | 9     | Far right   |\n    \n    ",
                 "raw_max": "9",
                 "si_max": "9",
@@ -845,7 +798,7 @@
             {
                 "description": "Direction (modulated)",
                 "id": "1",
-                "name": "HT-DIR-AC",
+                "name": "AC",
                 "raw_max": "9",
                 "si_max": "9",
                 "value0": "Direction (0 to 9)",
@@ -855,7 +808,7 @@
                 "data_sets": "7",
                 "description": "All values (unmodulated)",
                 "id": "2",
-                "name": "HT-DIR-DALL",
+                "name": "DC-ALL",
                 "value0": "Direction (0 to 9)",
                 "value0_footnote": "[^values]",
                 "value1": "Sensor 1 signal strength (0 to 9)",
@@ -875,7 +828,7 @@
                 "data_sets": "6",
                 "description": "All values (modulated)",
                 "id": "3",
-                "name": "HT-DIR-AALL",
+                "name": "AC-ALL",
                 "value0": "Direction (0 to 9)",
                 "value0_footnote": "[^values]",
                 "value1": "Sensor 1 signal strength (0 to 9)",
@@ -904,6 +857,23 @@
     {
         "default_address": "0x08",
         "device_class_footnote": "[^more-devices]",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "0",
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_data": "1",
+                "cmd_reg": "0",
+                "id": "1"
+            },
+            {
+                "cmd_data": "2",
+                "cmd_reg": "0",
+                "id": "2"
+            }
+        ],
         "i2c_mode_info": [
             {
                 "id": "0",
@@ -925,49 +895,46 @@
             }
         ],
         "id": "HT_NXT_SENSOR_MUX",
+        "ms_cmd_info": [
+            {
+                "description": "Halt",
+                "id": "0",
+                "name": "HALT"
+            },
+            {
+                "description": "Start auto-detection",
+                "id": "1",
+                "name": "DETECT",
+                "name_footnote": "[^auto-detect]<sup>,</sup>[^auto-detect-sensors]",
+                "notes": "\n[^auto-detect]: The sensor mux must be halted before\n    sending the detect command, otherwise it will result\n    an error (-EPERM).\n    \n    \n[^auto-detect-sensors]: Only these sensors can be\n    automatically detected:\n    \n    - LEGO NXT Ultrasonic\n    - HiTechnic NXT Compass\n    - HiTechnic NXT Color\n    - HiTechnic NXT Acceleration / Tilt\n    - HiTechnic NXT IR Seeker\n    - HiTechnic Super Pro\n    - HiTechnic NXT Color V2\n    - HiTechnic NXT IR Seeker V2\n    \n    "
+            },
+            {
+                "description": "Run",
+                "id": "2",
+                "name": "RUN"
+            }
+        ],
         "ms_mode_info": [
             {
                 "data_sets": "2",
-                "description": "Run mode (polling attached sensors)",
+                "description": "Status",
                 "id": "0",
-                "name": "HT-SMUX-RUN",
-                "notes": "\n[^mode]: Actual mode:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | Halt        |\n    | 1     | Detect      |\n    | 2     | Run         |\n    \n    \n[^status-bits]: Status bits:\n    \n    | Bit | Description    |\n    |-----|----------------|\n    | 0   | Low/no battery |\n    | 1   | Running        |\n    | 2   | Halted         |\n    | 3   | Error          |\n    \n    ",
-                "value0": "Mode",
-                "value0_footnote": "[^mode]",
-                "value1": "Status",
-                "value1_footnote": "[^status-bits]"
-            },
-            {
-                "data_sets": "2",
-                "description": "Start auto-detection",
-                "id": "1",
-                "name": "HT-SMUX-DETECT",
-                "name_footnote": "[^auto-detect-mode]<sup>,</sup>[^auto-detect-sensors]",
-                "notes": "\n[^auto-detect-mode]: The sensor must be in `HT-SMUX-HALT` mode before\n    entering `HT-SMUX-DETECT` mode. Attempting to set `HT-SMUX-DETECT`\n    mode from `HT-SMUX-RUN` mode will result in an error (-EPERM).\n    \n    \n[^auto-detect-sensors]: Only these sensors can be auto-detected:\n    \n    - LEGO NXT Ultrasonic\n    - HiTechnic NXT Compass\n    - HiTechnic NXT Color\n    - HiTechnic NXT Acceleration / Tilt\n    - HiTechnic NXT IR Seeker\n    - HiTechnic Super Pro\n    - HiTechnic NXT Color V2\n    - HiTechnic NXT IR Seeker V2\n    ",
-                "value0": "Mode",
-                "value0_footnote": "[^mode]",
-                "value1": "Status",
-                "value1_footnote": "[^status-bits]"
-            },
-            {
-                "data_sets": "2",
-                "description": "Halt mode (not polling)",
-                "id": "2",
-                "name": "HT-SMUX-HALT",
-                "value0": "Mode",
-                "value0_footnote": "[^mode]",
+                "name": "MUX",
+                "notes": "\n[^state]: Run state:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | Halt        |\n    | 1     | Detect      |\n    | 2     | Run         |\n    \n    \n[^status-bits]: Status bits:\n    \n    | Bit | Description    |\n    |-----|----------------|\n    | 0   | Low/no battery |\n    | 1   | Running        |\n    | 2   | Halted         |\n    | 3   | Error          |\n    \n    ",
+                "value0": "Run state",
+                "value0_footnote": "[^state]",
                 "value1": "Status",
                 "value1_footnote": "[^status-bits]"
             }
         ],
         "name": "ht-nxt-smux",
         "notes": "\n[^more-devices]: The `ht-nxt-smux` driver loads more devices in addition to\n    the [msensor] device. See [ht-smux-input-port](../ht-smux-input-port) for\n    more information.\n    \n    ",
-        "num_modes": "3",
-        "num_read_only_modes": "1",
+        "num_commands": "3",
+        "num_modes": "1",
         "ops.poll_cb": "ht_sensor_mux_poll_cb",
         "ops.remove_cb": "ht_sensor_mux_remove_cb",
-        "ops.set_mode_post_cb": "ht_sensor_mux_set_mode_post_cb",
-        "ops.set_mode_pre_cb": "ht_sensor_mux_set_mode_pre_cb",
+        "ops.send_cmd_post_cb": "ht_sensor_mux_send_cmd_post_cb",
+        "ops.send_cmd_pre_cb": "ht_sensor_mux_send_cmd_pre_cb",
         "product_id": "SensrMUX",
         "sensor_type": "nxt-i2c-sensor",
         "url_name": "hitechnic-nxt-sensor-multiplexer",
@@ -1020,7 +987,7 @@
                 "data_type": "MSENSOR_DATA_U16",
                 "description": "Analog inputs",
                 "id": "0",
-                "name": "HT-SPRO-AIN",
+                "name": "AIN",
                 "value0": "Analog input A0 (0 to 1023)",
                 "value1": "Analog input A1 (0 to 1023)",
                 "value2": "Analog input A2 (0 to 1023)",
@@ -1029,31 +996,31 @@
             {
                 "description": "Digital inputs",
                 "id": "1",
-                "name": "HT-SPRO-DIN",
+                "name": "DIN",
                 "value0": "Bits B0-B7 (0 to 255)"
             },
             {
                 "description": "Digital outputs",
                 "id": "2",
-                "name": "HT-SPRO-DOT",
+                "name": "DOUT",
                 "value0": "Bits B0-B7 (0 to 255)"
             },
             {
                 "description": "Digital input/output controls",
                 "id": "3",
-                "name": "HT-SPRO-DCT",
+                "name": "DCTRL",
                 "value0": "Bits B0-B7 (0 to 255)"
             },
             {
                 "description": "Strobe output",
                 "id": "4",
-                "name": "HT-SPRO-STB",
+                "name": "STROBE",
                 "value0": "Bits S0-S3 (0 to 15)"
             },
             {
                 "description": "LED control",
                 "id": "5",
-                "name": "HT-SPRO-LED",
+                "name": "LED",
                 "notes": "\n[^led-states]: LED states:\n    \n    | Value | Description  |\n    |-------|--------------|\n    | 0     | None         |\n    | 1     | Red          |\n    | 2     | Blue         |\n    | 3     | Red and blue |\n    \n    ",
                 "value0": "LED state",
                 "value0_footnote": "[^led-states]"
@@ -1062,7 +1029,7 @@
                 "data_sets": "5",
                 "description": "Analog output O0",
                 "id": "6",
-                "name": "HT-SPRO-AO0",
+                "name": "AOUT-0",
                 "value0": "Mode",
                 "value1": "Frequency, most significant byte",
                 "value2": "Frequency, least significant byte",
@@ -1073,7 +1040,7 @@
                 "data_sets": "5",
                 "description": "Analog output O1",
                 "id": "7",
-                "name": "HT-SPRO-AO1",
+                "name": "AOUT-1",
                 "value0": "Mode",
                 "value1": "Frequency, most significant byte",
                 "value2": "Frequency, least significant byte",
@@ -1425,6 +1392,98 @@
         "vendor_part_number": "45509"
     },
     {
+        "id": "WEDO_MOTION_SENSOR",
+        "ms_mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_U8",
+                "description": "Raw analog value",
+                "id": "0",
+                "name": "RAW",
+                "raw_max": "255",
+                "si_max": "255",
+                "value0": "Motion (0 - 255)"
+            }
+        ],
+        "name": "wedo-motion",
+        "num_modes": "1",
+        "sensor_type": "wedo-sensor",
+        "url_name": "lego-wedo-motion-sensor",
+        "vendor_name": "LEGO",
+        "vendor_part_name": "WeDo Motion Sensor",
+        "vendor_part_number": "9583",
+        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9583-motion-sensor",
+        "wedo_mode_info": [
+            {
+                "analog_cb": "wedo_raw_cb",
+                "id": "0"
+            }
+        ]
+    },
+    {
+        "id": "WEDO_TILT_SENSOR",
+        "ms_mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_U8",
+                "description": "Tilt status",
+                "id": "0",
+                "name": "TILT",
+                "notes": "\n[^tilt-values]: Tilt values:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | Level       |\n    | 1     | Front       |\n    | 2     | Back        |\n    | 3     | Left        |\n    | 4     | Right       |\n    | 5     | Unknown     |\n    \n    ",
+                "value0": "Tilt (0 to 5)",
+                "value0_footnote": "[^tilt-values]"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_S8",
+                "description": "Tilt around 2 separate axes",
+                "id": "1",
+                "name": "TILT-AXIS",
+                "notes": "\n[^axis-values]: Axis values:\n    \n    | Value0 | Value1 | Value2 | Description |\n    |--------|--------|--------|-------------|\n    | 0      | 0      | 1      | Level       |\n    | 0      | 1      | 1      | Front       |\n    | 0      | -1     | 1      | Back        |\n    | -1     | 0      | 1      | Left        |\n    | 1      | 0      | 1      | Right       |\n    | 0      | 0      | 0      | Unknown     |\n    \n    ",
+                "value0": "Tilt Left/Right (-1/0/1)",
+                "value0_footnote": "[^axis-values]",
+                "value1": "Tilt Back/Front (-1/0/1)",
+                "value1_footnote": "[^axis-values]",
+                "value2": "Tilt value valid (0/1)",
+                "value2_footnote": "[^axis-values]"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_U8",
+                "description": "Raw analog value",
+                "id": "2",
+                "name": "RAW",
+                "notes": "\n[^raw-values]: Raw values:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | Unknown     |\n    | < 48  | Back        |\n    | < 99  | Right       |\n    | < 153 | Level       |\n    | < 204 | Front       |\n    | < 255 | Left        |\n    \n    ",
+                "raw_max": "255",
+                "si_max": "255",
+                "value0": "Tilt (0 - 255)",
+                "value0_footnote": "[^raw-values]"
+            }
+        ],
+        "name": "wedo-tilt",
+        "num_modes": "3",
+        "sensor_type": "wedo-sensor",
+        "url_name": "lego-wedo-tilt-sensor",
+        "vendor_name": "LEGO",
+        "vendor_part_name": "WeDo Tilt Sensor",
+        "vendor_part_number": "9584",
+        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9584-tilt-sensor",
+        "wedo_mode_info": [
+            {
+                "analog_cb": "wedo_tilt_status_cb",
+                "id": "0"
+            },
+            {
+                "analog_cb": "wedo_tilt_axis_cb",
+                "id": "1"
+            },
+            {
+                "analog_cb": "wedo_raw_cb",
+                "id": "2"
+            }
+        ]
+    },
+    {
         "default_address": "0x02",
         "i2c_mode_info": [
             {
@@ -1467,7 +1526,7 @@
                 "decimals": "3",
                 "description": "Input Voltage",
                 "id": "0",
-                "name": "ES-IN-VOLT",
+                "name": "IN-VOLT",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "units": "V",
@@ -1479,7 +1538,7 @@
                 "decimals": "3",
                 "description": "Input Current",
                 "id": "1",
-                "name": "ES-IN-AMP",
+                "name": "IN-AMP",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "units": "A",
@@ -1491,7 +1550,7 @@
                 "decimals": "3",
                 "description": "Output Voltage",
                 "id": "2",
-                "name": "ES-OUT-VOLT",
+                "name": "OUT-VOLT",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "units": "V",
@@ -1503,7 +1562,7 @@
                 "decimals": "3",
                 "description": "Output Current",
                 "id": "3",
-                "name": "ES-OUT-AMP",
+                "name": "OUT-AMP",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "units": "A",
@@ -1514,7 +1573,7 @@
                 "data_type": "MSENSOR_DATA_S16_BE",
                 "description": "Energy",
                 "id": "4",
-                "name": "ES-JOULE",
+                "name": "JOULE",
                 "raw_max": "100",
                 "si_max": "100",
                 "units": "J",
@@ -1526,7 +1585,7 @@
                 "decimals": "3",
                 "description": "Input Power",
                 "id": "5",
-                "name": "ES-IN-WATT",
+                "name": "IN-WATT",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "units": "W",
@@ -1538,7 +1597,7 @@
                 "decimals": "3",
                 "description": "Output Power",
                 "id": "6",
-                "name": "ES-OUT-WATT",
+                "name": "OUT-WATT",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "units": "W",
@@ -1551,7 +1610,7 @@
                 "decimals": "3",
                 "description": "All",
                 "id": "7",
-                "name": "ES-ALL",
+                "name": "ALL",
                 "raw_max": "10000",
                 "si_max": "10000",
                 "value0": "Input Voltage (0 to 10000)",
@@ -1638,7 +1697,7 @@
                 "decimals": "1",
                 "description": "Reflected light<br />LED on",
                 "id": "0",
-                "name": "NXT-REFLECT",
+                "name": "REFLECT",
                 "pct_max": "100",
                 "raw_max": "543",
                 "raw_min": "4116",
@@ -1653,7 +1712,7 @@
                 "decimals": "1",
                 "description": "Ambient light<br />LED off",
                 "id": "1",
-                "name": "NXT-AMBIENT",
+                "name": "AMBIENT",
                 "pct_max": "100",
                 "raw_max": "773",
                 "raw_min": "4164",
@@ -1691,7 +1750,7 @@
                 "decimals": "1",
                 "description": "Sound pressure level<br />Flat weighting",
                 "id": "0",
-                "name": "NXT-SND-DB",
+                "name": "DB",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "1000",
@@ -1705,7 +1764,7 @@
                 "decimals": "1",
                 "description": "Sound pressure level<br />A weighting",
                 "id": "1",
-                "name": "NXT-SND_DBA",
+                "name": "DBA",
                 "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "1000",
@@ -1767,7 +1826,7 @@
             {
                 "description": "Continuous measurement",
                 "id": "0",
-                "name": "NXT-US-CM",
+                "name": "US-DIST-CM",
                 "units": "cm",
                 "units_description": "centimeters",
                 "value0": "Distance (0 to 255)"
@@ -1776,7 +1835,7 @@
                 "decimals": "1",
                 "description": "Continuous measurement",
                 "id": "1",
-                "name": "NXT-US-IN",
+                "name": "US-DIST-IN",
                 "si_max": "1000",
                 "units": "in",
                 "units_description": "inches",
@@ -1785,7 +1844,7 @@
             {
                 "description": "Single measurement",
                 "id": "2",
-                "name": "NXT-US-SI-CM",
+                "name": "US-SI-CM",
                 "notes": "\n[^single-measurement]: The value is read when the mode is set\n    and does not change - even when polling is enabled. To read a\n    new value, set the mode again (e.g. `echo NXT-US-SI-CM > mode`).\n    \n    ",
                 "units": "cm",
                 "units_description": "centimeters",
@@ -1796,7 +1855,7 @@
                 "decimals": "1",
                 "description": "Single measurement",
                 "id": "3",
-                "name": "NXT-US-SI-IN",
+                "name": "US-SI-IN",
                 "si_max": "1000",
                 "units": "in",
                 "units_description": "inches",
@@ -1806,7 +1865,7 @@
             {
                 "description": "Listen",
                 "id": "4",
-                "name": "NXT-US-LIST",
+                "name": "US-LISTEN",
                 "notes": "\n[^listen-value]: A value of `1` indicates that another ultrasonic\n    sensor has been detected. A `1` can also be triggered by a loud\n    noise such as clapping.\n    \n    ",
                 "raw_max": "1",
                 "si_max": "1",
@@ -1814,7 +1873,7 @@
                 "value0_footnote": "[^listen-value]"
             }
         ],
-        "name": "lego-nxt-ultrasonic",
+        "name": "lego-nxt-us",
         "num_modes": "5",
         "num_read_only_modes": "2",
         "product_id": "Sonar",
@@ -1823,13 +1882,30 @@
         "url_name": "lego-nxt-ultrasonic-sensor",
         "vendor_id": "LEGO",
         "vendor_name": "LEGO",
-        "vendor_part_name": "NXT Ultrasonic  Sensor",
+        "vendor_part_name": "NXT Ultrasonic Sensor",
         "vendor_part_number": "9846",
         "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
     },
     {
-        "default_address": "0x0A",
-        "default_address_footnote": "[^address]",
+        "default_address": "0x01",
+        "i2c_cmd_info": [
+            {
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_reg": "0",
+                "id": "1"
+            },
+            {
+                "cmd_reg": "0",
+                "id": "2"
+            },
+            {
+                "cmd_reg": "0",
+                "id": "3"
+            }
+        ],
         "i2c_mode_info": [
             {
                 "id": "0",
@@ -1841,42 +1917,502 @@
             },
             {
                 "id": "2",
-                "read_data_reg": "0",
-                "set_mode_data": "'W'",
-                "set_mode_reg": "0"
+                "read_data_reg": "0"
             },
             {
                 "id": "3",
-                "read_data_reg": "0",
-                "set_mode_data": "'B'",
-                "set_mode_reg": "0"
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MI_CRUIZCORE_XG1300L",
+        "ms_cmd_info": [
+            {
+                "description": "Reset device",
+                "id": "0",
+                "name": "RESET",
+                "name_footnote": "[^reset-description]",
+                "notes": "\n[^reset-description]: Recalculate bias drift, reset accumulated angle,\n    set accelerometer scaling factor to 2G,\n    this has to be done with sensor not moving\n    and is strongly recommended to be called manually before work\n    \n    "
+            },
+            {
+                "description": "Set accelerometer scaling to 2G",
+                "id": "1",
+                "name": "ACCEL-2G"
+            },
+            {
+                "description": "Set accelerometer scaling to 4G",
+                "id": "2",
+                "name": "ACCEL-4G"
+            },
+            {
+                "description": "Set accelerometer scaling to 8G",
+                "id": "3",
+                "name": "ACCEL-8G"
+            }
+        ],
+        "ms_mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_S16",
+                "decimals": "2",
+                "description": "Angle",
+                "id": "0",
+                "name": "ANGLE",
+                "units": "deg",
+                "units_description": "degrees",
+                "value0": "Z-axis angle (-18000 to 18000)"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_S16",
+                "decimals": "2",
+                "description": "Rotational speed",
+                "id": "1",
+                "name": "SPEED",
+                "units": "d/s",
+                "units_description": "degrees per second",
+                "value0": "Z-axis rotational speed"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_S16",
+                "decimals": "3",
+                "description": "Acceleration in X, Y, Z axis",
+                "id": "2",
+                "name": "ACCEL",
+                "notes": "\n[^gravity-units]: 1 g ~ 9.81\u00a0m/s<sup>2</sup>\n    \n    ",
+                "units": "g",
+                "units_description": "Standard gravity",
+                "units_footnote": "[^gravity-units]",
+                "value0": "Acceleration in X axis",
+                "value1": "Acceleration in Y axis",
+                "value2": "Acceleration in Z axis"
+            },
+            {
+                "data_sets": "5",
+                "data_type": "MSENSOR_DATA_S16",
+                "description": "All values",
+                "id": "3",
+                "name": "ALL",
+                "notes": "\n[^mode3-angle]: Two decimal places\n    \n[^mode3-speed]: Two decimal places\n    \n[^mode3-accel]: Three decimal places,\n    range as was set by last command\n    \n    ",
+                "value0": "Z-axis angle (-18000 to 18000)",
+                "value0_footnote": "[^mode3-angle]",
+                "value1": "Z-axis rotational speed",
+                "value1_footnote": "[^mode3-speed]",
+                "value2": "X-axis acceleration",
+                "value2_footnote": "[^mode3-accel]",
+                "value3": "Y-axis acceleration",
+                "value3_footnote": "[^mode3-accel]",
+                "value4": "Z-axis acceleration",
+                "value4_footnote": "[^mode3-accel]"
+            }
+        ],
+        "name": "mi-xg1300l",
+        "notes": "\n[^ids]: CruizCore XG1300L doesn't follow LEGO guidelines by\n    returning vendor, product and firmware version values. As a\n    result, this sensor can't be automatically detected. Until\n    we find another way to identify the sensor, the driver has to\n    be loaded manually.\n    \n    Register I2C device:\n    <pre>\n    echo mi-xg1300l 0x01 > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </pre>\n    \n    ",
+        "num_commands": "4",
+        "num_modes": "4",
+        "num_read_only_modes": "4",
+        "ops.poll_cb": "mi_xg1300l_poll_cb",
+        "ops.probe_cb": "mi_xg1300l_probe_cb",
+        "ops.remove_cb": "mi_xg1300l_remove_cb",
+        "ops.send_cmd_post_cb": "mi_xg1300l_send_cmd_post_cb",
+        "product_id": "XG1300L",
+        "product_id_footnote": "[^ids]",
+        "sensor_type": "nxt-i2c-sensor",
+        "url_name": "microinfinity-digital-gyroscope-and-accelerometer",
+        "vendor_id": "mnfinity",
+        "vendor_id_footnote": "[^ids]",
+        "vendor_name": "Microinfinity",
+        "vendor_part_name": "Digital Gyroscope And Accelerometer",
+        "vendor_part_number": "CruizCore XG 1300L",
+        "vendor_website": "http://www.minfinity.com/eng/page.php?Main=1&sub=1&tab=5"
+    },
+    {
+        "default_address": "0x11",
+        "default_address_footnote": "[^address]",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'C'",
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_data": "'c'",
+                "cmd_reg": "0",
+                "id": "1"
+            },
+            {
+                "cmd_data": "'1'",
+                "cmd_reg": "0",
+                "id": "2"
+            },
+            {
+                "cmd_data": "'2'",
+                "cmd_reg": "0",
+                "id": "3"
+            },
+            {
+                "cmd_data": "'3'",
+                "cmd_reg": "0",
+                "id": "4"
+            },
+            {
+                "cmd_data": "'4'",
+                "cmd_reg": "0",
+                "id": "5"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "2",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "3",
+                "read_data_reg": "0"
             },
             {
                 "id": "4",
-                "read_data_reg": "0",
-                "set_mode_data": "'A'",
-                "set_mode_reg": "0"
+                "read_data_reg": "0"
             },
             {
                 "id": "5",
-                "read_data_reg": "0",
-                "set_mode_data": "'E'",
-                "set_mode_reg": "0"
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MS_ABSOLUTE_IMU",
+        "ms_cmd_info": [
+            {
+                "description": "Begin compass calibration",
+                "id": "0",
+                "name": "BEGIN-COMP-CAL"
             },
             {
-                "id": "6",
-                "read_data_reg": "0",
-                "set_mode_data": "'U'",
-                "set_mode_reg": "0"
+                "description": "End compass calibration",
+                "id": "1",
+                "name": "END-COMP-CAL"
+            },
+            {
+                "description": "Change accelerometer sensitivity to 2G and gyro sensitivity to 250 deg/sec",
+                "id": "2",
+                "name": "ACCEL-2G",
+                "name_footnote": "[^accel-commands]",
+                "notes": "\n[^accel-commands]: Wait 50 msec after sending command for sensor to reconfigure itself.\n    \n    "
+            },
+            {
+                "description": "Change accelerometer sensitivity to 4G and gyro sensitivity to 500 deg/sec",
+                "id": "3",
+                "name": "ACCEL-4G",
+                "name_footnote": "[^accel-commands]"
+            },
+            {
+                "description": "Change accelerometer sensitivity to 8G and gyro sensitivity to 2000 deg/sec",
+                "id": "4",
+                "name": "ACCEL-8G",
+                "name_footnote": "[^accel-commands]"
+            },
+            {
+                "description": "Change accelerometer sensitivity to 16G and gyro sensitivity to 2000 deg/sec",
+                "id": "5",
+                "name": "ACCEL-16G",
+                "name_footnote": "[^accel-commands]"
+            }
+        ],
+        "ms_mode_info": [
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_U8",
+                "description": "Tilt",
+                "id": "0",
+                "name": "TILT",
+                "units": "deg",
+                "units_description": "degrees",
+                "value0": "X-axis angle (0 to 180)",
+                "value1": "Y-axis angle (0 to 180)",
+                "value2": "Y-axis angle (0 to 180)"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_S16",
+                "description": "Acceleration",
+                "id": "1",
+                "name": "ACCEL",
+                "name_footnote": "[^accel]",
+                "notes": "\n[^accel]: Only returns data from models with an accelerometer\n    (AbsoluteIMU-AC/AbsoluteIMU-A).\n    \n[^gravity-units]: 1 g = 9.81 m/s<sup>2</sup>\n    \n    ",
+                "units": "g",
+                "units_description": "Standard gravity",
+                "value0": "X-axis acceleration",
+                "value1": "Y-axis acceleration",
+                "value2": "Z-axis acceleration"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_U16",
+                "description": "Compass",
+                "id": "2",
+                "name": "COMPASS",
+                "name_footnote": "[^compass]",
+                "notes": "\n[^compass]: Only returns data from models with a compass\n    (AbsoluteIMU-C/AbsoluteIMU-AC/AbsoluteIMU-ACG).\n    \n    ",
+                "units": "deg",
+                "units_description": "degrees",
+                "value0": "Heading (0 to 360)"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_S16",
+                "description": "Magnetic field",
+                "id": "3",
+                "name": "MAG",
+                "name_footnote": "[^compass]",
+                "value0": "X-axis magnetic field",
+                "value1": "Y-axis magnetic field",
+                "value2": "Z-axis magnetic field"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_S16",
+                "decimals": "1",
+                "description": "Gryo",
+                "id": "4",
+                "name": "GYRO",
+                "name_footnote": "[^gyro]",
+                "notes": "\n[^gyro]: Only returns data from models with a gyro\n    (AbsoluteIMU-ACG).\n    \n    ",
+                "raw_max": "10000",
+                "si_max": "875",
+                "units": "d/s",
+                "units_description": "degrees per second",
+                "value0": "X-axis rotational speed",
+                "value1": "Y-axis rotational speed",
+                "value2": "Z-axis rotational speed"
+            },
+            {
+                "data_sets": "23",
+                "description": "All data",
+                "id": "5",
+                "name": "ALL",
+                "name_footnote": "[^all]",
+                "notes": "\n[^all]: Reads all data from the sensor. Use `bin_data`\n    attribute to read values. Some values will not be scaled.\n    See manufacturer docs for more info.\n    \n    "
+            }
+        ],
+        "name": "ms-absolute-imu",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
+        "num_commands": "6",
+        "num_modes": "6",
+        "ops.poll_cb": "ms_imu_poll_cb",
+        "ops.send_cmd_post_cb": "ms_imu_send_cmd_post_cb",
+        "product_id": "AbsIMU",
+        "sensor_type": "nxt-i2c-sensor",
+        "url_name": "mindsensors.com-gyro-multisensitivity-accelerometer-and-compass",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "Gyro, MultiSensitivity Accelerometer and Compass",
+        "vendor_part_number": "AbsoluteIMU(-A/C/G)",
+        "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=169&MMN_position=30:30"
+    },
+    {
+        "default_address": "0x18",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'r'",
+                "cmd_reg": "0",
+                "id": "0"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "2",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "3",
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MS_ANGLE_SENSOR",
+        "ms_cmd_info": [
+            {
+                "description": "Reset angle values",
+                "id": "0",
+                "name": "RESET"
+            }
+        ],
+        "ms_mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_S32",
+                "description": "Angle",
+                "id": "0",
+                "name": "ANGLE",
+                "units": "deg",
+                "units_description": "degrees",
+                "value0": "Angle"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_S32",
+                "decimals": "1",
+                "description": "High-precision angle",
+                "id": "1",
+                "name": "ANGLE2",
+                "raw_max": "360",
+                "si_max": "1800",
+                "units": "deg",
+                "units_description": "degrees",
+                "value0": "Angle"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "MSENSOR_DATA_S16",
+                "description": "Rotational Speed",
+                "id": "2",
+                "name": "SPEED",
+                "raw_max": "100",
+                "si_max": "100",
+                "units": "rpm",
+                "units_description": "revolutions per minute",
+                "value0": "Rotational Speed (-4000 to 4000)"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "MSENSOR_DATA_S32",
+                "description": "All values",
+                "id": "3",
+                "name": "ALL",
+                "notes": "\n[^mode3-value1]: Angle value times 2\n    (i.e. value of 10 = angle of 5 degrees).\n    Allows for 0.5 degree precision.\n    \n[^mode3-value2]: Value needs to be converted to\n    16-bit signed integer. Example:\n    `if (value2 > 32767) value2 = value2 - 65536`\n    \n    ",
+                "raw_max": "100",
+                "si_max": "100",
+                "value0": "Angle",
+                "value1": "Angle x2",
+                "value1_footnote": "[^mode3-value1]",
+                "value2": "Rotational Speed",
+                "value2_footnote": "[^mode3-value2]"
+            }
+        ],
+        "name": "ms-angle",
+        "num_commands": "1",
+        "num_modes": "4",
+        "product_id": "AngSens",
+        "sensor_type": "nxt-i2c-sensor",
+        "url_name": "mindsensors.com-glidewheel-as",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "GlideWheel-AS",
+        "vendor_part_number": "AngleSensor",
+        "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=173"
+    },
+    {
+        "default_address": "0x0A",
+        "default_address_footnote": "[^address]",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'W'",
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_data": "'B'",
+                "cmd_reg": "0",
+                "id": "1"
+            },
+            {
+                "cmd_data": "'D'",
+                "cmd_reg": "0",
+                "id": "2"
+            },
+            {
+                "cmd_data": "'P'",
+                "cmd_reg": "0",
+                "id": "3"
+            },
+            {
+                "cmd_data": "'A'",
+                "cmd_reg": "0",
+                "id": "4"
+            },
+            {
+                "cmd_data": "'E'",
+                "cmd_reg": "0",
+                "id": "5"
+            },
+            {
+                "cmd_data": "'U'",
+                "cmd_reg": "0",
+                "id": "6"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0"
             }
         ],
         "id": "MS_LIGHT_SENSOR_ARRAY",
+        "ms_cmd_info": [
+            {
+                "description": "Calibrate white",
+                "id": "0",
+                "name": "CAL-WHITE"
+            },
+            {
+                "description": "Calibrate black",
+                "id": "1",
+                "name": "CAL-BLACK"
+            },
+            {
+                "description": "Put sensor to sleep",
+                "id": "2",
+                "name": "SLEEP",
+                "name_footnote": "[^sleep]",
+                "notes": "\n[^sleep]: `poll_ms` must be set to `0` in order for sensor to sleep.\n    \n    "
+            },
+            {
+                "description": "Wake up the sensor",
+                "id": "3",
+                "name": "WAKE",
+                "name_footnote": "[^wake]",
+                "notes": "\n[^wake]: Will return an error (-ENXIO) if sensor is actually asleep.\n    Completes successfully if sensor is already awake.\n    \n    "
+            },
+            {
+                "description": "Configures sensor for 60Hz electrical mains",
+                "id": "4",
+                "name": "60HZ"
+            },
+            {
+                "description": "Configures sensor for 50Hz electrical mains",
+                "id": "5",
+                "name": "50HZ"
+            },
+            {
+                "description": "Configures sensor for any (50/60Hz) electrical mains",
+                "id": "6",
+                "name": "UNIVERSAL"
+            }
+        ],
         "ms_mode_info": [
             {
                 "data_sets": "8",
                 "description": "Calibrated values",
                 "id": "0",
-                "name": "MS-LSA-CAL",
+                "name": "CAL",
                 "raw_max": "100",
                 "si_max": "100",
                 "units": "pct",
@@ -1895,7 +2431,7 @@
                 "data_type": "MSENSOR_DATA_S16",
                 "description": "Raw values",
                 "id": "1",
-                "name": "MS-LSA-RAW",
+                "name": "RAW",
                 "raw_max": "USHRT_MAX",
                 "si_max": "USHRT_MAX",
                 "value0": "LED 0 (0 to ???)",
@@ -1906,108 +2442,12 @@
                 "value5": "LED 5 (0 to ???)",
                 "value6": "LED 6 (0 to ???)",
                 "value7": "LED 7 (0 to ???)"
-            },
-            {
-                "data_sets": "8",
-                "description": "Calibrate to white",
-                "id": "2",
-                "name": "MS-LSA-C-W",
-                "name_footnote": "[^config-modes]",
-                "notes": "\n[^config-modes]: This mode returns the same values as `MS-LSA-CAL`\n    \n    ",
-                "raw_max": "100",
-                "si_max": "100",
-                "units": "pct",
-                "units_description": "percent",
-                "value0": "LED 0 (0 to 100)",
-                "value1": "LED 1 (0 to 100)",
-                "value2": "LED 2 (0 to 100)",
-                "value3": "LED 3 (0 to 100)",
-                "value4": "LED 4 (0 to 100)",
-                "value5": "LED 5 (0 to 100)",
-                "value6": "LED 6 (0 to 100)",
-                "value7": "LED 7 (0 to 100)"
-            },
-            {
-                "data_sets": "8",
-                "description": "Calibrate to black",
-                "id": "3",
-                "name": "MS-LSA-C-B",
-                "name_footnote": "[^config-modes]",
-                "raw_max": "100",
-                "si_max": "100",
-                "units": "pct",
-                "units_description": "percent",
-                "value0": "LED 0 (0 to 100)",
-                "value1": "LED 1 (0 to 100)",
-                "value2": "LED 2 (0 to 100)",
-                "value3": "LED 3 (0 to 100)",
-                "value4": "LED 4 (0 to 100)",
-                "value5": "LED 5 (0 to 100)",
-                "value6": "LED 6 (0 to 100)",
-                "value7": "LED 7 (0 to 100)"
-            },
-            {
-                "data_sets": "8",
-                "description": "Configure for 60Hz electrical mains",
-                "id": "4",
-                "name": "MS-LSA-C-A",
-                "name_footnote": "[^config-modes]",
-                "raw_max": "100",
-                "si_max": "100",
-                "units": "pct",
-                "units_description": "percent",
-                "value0": "LED 0 (0 to 100)",
-                "value1": "LED 1 (0 to 100)",
-                "value2": "LED 2 (0 to 100)",
-                "value3": "LED 3 (0 to 100)",
-                "value4": "LED 4 (0 to 100)",
-                "value5": "LED 5 (0 to 100)",
-                "value6": "LED 6 (0 to 100)",
-                "value7": "LED 7 (0 to 100)"
-            },
-            {
-                "data_sets": "8",
-                "description": "Configure for 50Hz electrical mains",
-                "id": "5",
-                "name": "MS-LSA-C-E",
-                "name_footnote": "[^config-modes]",
-                "raw_max": "100",
-                "si_max": "100",
-                "units": "pct",
-                "units_description": "percent",
-                "value0": "LED 0 (0 to 100)",
-                "value1": "LED 1 (0 to 100)",
-                "value2": "LED 2 (0 to 100)",
-                "value3": "LED 3 (0 to 100)",
-                "value4": "LED 4 (0 to 100)",
-                "value5": "LED 5 (0 to 100)",
-                "value6": "LED 6 (0 to 100)",
-                "value7": "LED 7 (0 to 100)"
-            },
-            {
-                "data_sets": "8",
-                "description": "Configure for universal electrical mains",
-                "id": "6",
-                "name": "MS-LSA-C-U",
-                "name_footnote": "[^config-modes]",
-                "raw_max": "100",
-                "si_max": "100",
-                "units": "pct",
-                "units_description": "percent",
-                "value0": "LED 0 (0 to 100)",
-                "value1": "LED 1 (0 to 100)",
-                "value2": "LED 2 (0 to 100)",
-                "value3": "LED 3 (0 to 100)",
-                "value4": "LED 4 (0 to 100)",
-                "value5": "LED 5 (0 to 100)",
-                "value6": "LED 6 (0 to 100)",
-                "value7": "LED 7 (0 to 100)"
             }
         ],
         "name": "ms-light-array",
         "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
-        "num_modes": "7",
-        "num_read_only_modes": "2",
+        "num_commands": "7",
+        "num_modes": "2",
         "product_id": "LSArray",
         "sensor_type": "nxt-i2c-sensor",
         "url_name": "mindsensors.com-light-sensor-array",
@@ -2037,7 +2477,7 @@
                 "decimals": "3",
                 "description": "EV3 Compatible",
                 "id": "0",
-                "name": "MS-8CH-SERVO-V3",
+                "name": "V3",
                 "notes": "\n    \n[^battery-voltage]: The current voltage scaling is based on\n    the manufacturers documentation, however it seems to be low.\n    If you are seeing this too, please open an issue on GitHub\n    and we will change the scaling.\n    \n    ",
                 "raw_max": "255",
                 "raw_min": "127",
@@ -2052,7 +2492,7 @@
                 "decimals": "3",
                 "description": "Older versions",
                 "id": "1",
-                "name": "MS-8CH-SERVO",
+                "name": "OLD",
                 "name_footnote": "[^old-mode]",
                 "notes": "\n[^old-mode]: Older versions of this sensor have the battery\n    voltage at a different address. If the default mode does not\n    return a value, try this mode.\n    \n    ",
                 "raw_max": "255",
