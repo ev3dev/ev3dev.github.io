@@ -1845,7 +1845,7 @@
                 "description": "Single measurement",
                 "id": "2",
                 "name": "US-SI-CM",
-                "notes": "\n[^single-measurement]: The value is read when the mode is set\n    and does not change - even when polling is enabled. To read a\n    new value, set the mode again (e.g. `echo NXT-US-SI-CM > mode`).\n    \n    ",
+                "notes": "\n[^single-measurement]: The value is read when the mode is set\n    and does not change - even when polling is enabled. To read a\n    new value, set the mode again (e.g. `echo US-SI-CM > mode`).\n    \n    ",
                 "units": "cm",
                 "units_description": "centimeters",
                 "value0": "Distance (0 to 255)",
