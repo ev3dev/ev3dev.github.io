@@ -1,0 +1,30 @@
+---
+layout:
+---
+[
+    {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title }}",
+        "href": "{{ site.github.url }}{{ post.url }}",
+        "author":  "{{ post.author | join: ', ' }}",
+        "date": {
+            "day": "{{ post.date | date: "%d" }}",
+            "month": "{{ post.date | date: "%B" }}",
+            "year": "{{ post.date | date: "%Y" }}"
+        },
+        "loopid" : "post-{{ forloop.index }}",
+        "category": "{{ post.categories }}"
+    },
+    {% endfor %}    
+    {% for page in site.pages %}
+    {
+      "title"    : "{{ page.title }}",
+      "href"     : "{{ site.github.url }}{{ page.url }}",
+      "loopid": "page-{{ forloop.index }}",
+      "category": "{{ page.categories }}",
+      {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
+      "breadcrumbs": "{{ parent_dirs | join: ' > ' }}"
+    },
+    {% endfor %}
+    false    
+]

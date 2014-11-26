@@ -9,17 +9,24 @@ gems:
 defaults:
   -
     scope:
-      path: "docs"
+      path: "docs/"
       type: "pages"
     values:
       layout: "docs"
       category: "docs"
   -
     scope:
+      path: "docs/drivers"
+      type: "pages"
+    values:
+      layout: "docs"
+      categories: "docs drivers"
+  -
+    scope:
       path: "docs/tutorials"
       type: "pages"
     values:
-      category: "tutorials"
+      categories: "tutorials docs"
   -
     scope:
       path: "docs/drivers"
@@ -31,7 +38,7 @@ defaults:
       path: "docs/sensors"
       type: "pages"
     values:
-      category: "sensors"
+      categories: "sensors docs"
   -
     scope:
       path: ""
