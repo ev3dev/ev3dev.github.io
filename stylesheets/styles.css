@@ -813,8 +813,7 @@ dt {
   margin: 6px auto;
 }
 
-.headerBox {    
-    line-height: 50px;
+.header-box {
     list-style: none;
 }
 
@@ -848,6 +847,7 @@ dt {
 #search-dropdown {
     position: relative;
     left: -180px;
+    top: 8px;
     width: 320px;
 
     max-height: 500px;

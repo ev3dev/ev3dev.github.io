@@ -29,16 +29,16 @@ defaults:
       categories: "tutorials docs"
   -
     scope:
-      path: "docs/drivers"
-      type: "pages"
-    values:
-      category: "drivers"
-  -
-    scope:
       path: "docs/sensors"
       type: "pages"
     values:
       categories: "sensors docs"
+  -
+    scope:
+      path: "docs/motors"
+      type: "pages"
+    values:
+      categories: "motors docs"
   -
     scope:
       path: ""

@@ -4,7 +4,7 @@ layout:
 
 var searchData;
 var dataLoading = false;
-var itemLoadTimer;
+var itemLoadTimer, searchKeystrokeEventTimer;
 
 var projectResultArea, docResultArea, miscResultArea;
 $(document).ready(function () {
@@ -51,6 +51,16 @@ function searchFocus() {
         });
     else
         searchUpdate();
+}
+
+function searchTextChanged() {
+    if(searchKeystrokeEventTimer != undefined)
+        clearTimeout(searchKeystrokeEventTimer);
+
+    searchKeystrokeEventTimer = setTimeout(function() {
+        searchKeystrokeEventTimer = undefined;
+        searchUpdate();
+    }, 400);
 }
 
 //Loads the data from the JSON document
