@@ -10,7 +10,9 @@
     <div class="wrapper">
         <section>
             {% include title.html %}
-            {{ content }}
+            <div id="mainContent">
+                {{ content }}
+            </div>
         </section>
         {% include footer.html %}
     </div>

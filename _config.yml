@@ -13,13 +13,7 @@ defaults:
       type: "pages"
     values:
       layout: "docs"
-      category: "docs"
-  -
-    scope:
-      path: "docs/tutorials"
-      type: "pages"
-    values:
-      category: "tutorials"
+      categories: "docs"
   -
     scope:
       path: "docs/drivers"
@@ -28,10 +22,22 @@ defaults:
       category: "drivers"
   -
     scope:
+      path: "docs/tutorials"
+      type: "pages"
+    values:
+      category: "tutorials"
+  -
+    scope:
       path: "docs/sensors"
       type: "pages"
     values:
       category: "sensors"
+  -
+    scope:
+      path: "docs/motors"
+      type: "pages"
+    values:
+      category: "motors"
   -
     scope:
       path: ""

@@ -6,16 +6,7 @@ layout: page
 <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">Edit on Github</a>
 </div>
 <div class="breadcrumbs">
-{% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
-{% assign link='/' %}
-{% for dir in parent_dirs %}
-    {% if forloop.last %}
-        {{ dir }}
-    {% else %}
-        {% assign link=link | append: dir | append: '/' %}
-        <a href="{{ link }}">{{ dir }}</a> &gt;
-    {% endif %}
-{% endfor %}
+{% include breadcrumbs.html %}
 </div>
 <hr />
 

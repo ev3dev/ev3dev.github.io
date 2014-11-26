@@ -1,5 +1,6 @@
 ---
 title: Getting Started with ev3dev
+categories: docs getting-started
 ---
 
 * Table of Contents
