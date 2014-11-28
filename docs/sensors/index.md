@@ -146,8 +146,8 @@ kernel.
 
 [^nxt-analog]: The auto-detection algorithm detects this sensor as an Analog/NXT
     type sensor but it cannot determine the exact sensor type. The generic
-    analog driver (nxt-analog) will be loaded by default for this sensor. See
-    [Analog Sensor Considerations] for information on how to manually load the
+    analog driver (nxt-analog) will be loaded by default for this sensor. See the
+    [NXT Analog Host Driver] for information on how to manually load the
     correct driver.
 
 [^standard-i2c]: The auto-detection algorithm detects this sensor as an I2C
@@ -172,6 +172,7 @@ kernel.
 [LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [I2C protocol]: https://en.wikipedia.org/wiki/I2c
 [I2C Sensor Addressing]: i2c-sensor-addressing
+[NXT Analog Host Driver]: http://www.ev3dev.org/docs/drivers/nxt-analog-host/
 [Using I2C Sensors]: using-i2c-sensors
 [UART]: https://en.wikipedia.org/wiki/Uart
 [using-uart-sensors-on-any-linux]: http://lechnology.com/2014/09/using-uart-sensors-on-any-linux/
