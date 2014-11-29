@@ -35,7 +35,7 @@ The driver will default to the Large Motor settings.
 be use with MINDSTORMS RCX motor, Power Functions motors and any other
 'plain' DC motor. By 'plain', we mean the motor is just a motor
 without any kind of controller.
-- `rxc-led`: Force the port to load the [rcx-led] device. This can be
+- `rcx-led`: Force the port to load the [rcx-led] device. This can be
 used with the MINDSTORMS RCX LED, Power Functions LEDs or any other
 LED connected to pins 1 and 2 of the output port.
 - `raw`: Exports gpios, pwm and analog/digital converter values to sysfs
