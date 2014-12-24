@@ -19,18 +19,20 @@ the motor is plugged in to).
 of the `commands` attribute.
 
 `commands` (read-only)
-: Returns a space separated list of commands supported by the motor controller.
+: Returns a space separated list of commands supported by the motor
+controller.
 
-`duty_cycle_sp` (read/write)
-: Sets the duty cycle setpoint of the PWM signal sent to the motor. Values
--100 to 100 (-100% to 100%).
+`device_name` (read-only)
+: Returns the name of the motor device/driver.
 
 `duty_cycle` (read)
 : Shows the current duty cycle of the PWM signal sent to the motor. Values
--100 to 100 (-100% to 100%).
+are -100 to 100 (-100% to 100%).
 
-`name` (read-only)
-: Returns the name of the motor controller's driver.
+`duty_cycle_sp` (read/write)
+: Writing sets the duty cycle setpoint of the PWM signal sent to the motor.
+Valid values are -100 to 100 (-100% to 100%). Reading returns the current
+setpoint.
 
 `polarity`: (read/write)
 : Sets the polarity of the motor. Valid values are `normal` and `inverted`.

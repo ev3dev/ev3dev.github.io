@@ -1,15 +1,14 @@
 [
     {
         "id": "GENERIC_EV3_ANALOG_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "3",
                 "description": "Raw analog value",
                 "id": "0",
                 "name": "ANALOG",
-                "pct_max": "100",
                 "raw_max": "5000",
                 "si_max": "5000",
                 "units": "V",
@@ -26,15 +25,19 @@
     {
         "analog_mode_info": [
             {
+                "id": "0",
+                "pin5_state": "LEGO_PORT_GPIO_LOW"
+            },
+            {
                 "id": "1",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_HIGH"
+                "pin5_state": "LEGO_PORT_GPIO_HIGH"
             }
         ],
         "id": "GENERIC_NXT_ANALOG_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "3",
                 "description": "Raw analog value",
                 "id": "0",
@@ -48,7 +51,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "3",
                 "description": "Raw analog value<br />Pin 5 high",
                 "id": "1",
@@ -100,7 +103,7 @@
             }
         ],
         "id": "HT_NXT_COLOR_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "Color",
                 "id": "0",
@@ -131,7 +134,7 @@
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_U16",
+                "data_type": "LEGO_SENSOR_DATA_U16",
                 "description": "Raw values",
                 "id": "4",
                 "name": "RAW",
@@ -173,6 +176,13 @@
         "vendor_part_name": "NXT Color Sensor"
     },
     {
+        "cmd_info": [
+            {
+                "description": "Reset angle values",
+                "id": "0",
+                "name": "RESET"
+            }
+        ],
         "default_address": "0x01",
         "i2c_cmd_info": [
             {
@@ -196,14 +206,7 @@
             }
         ],
         "id": "HT_NXT_ANGLE_SENSOR",
-        "ms_cmd_info": [
-            {
-                "description": "Reset angle values",
-                "id": "0",
-                "name": "RESET"
-            }
-        ],
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "Angle",
                 "id": "0",
@@ -215,7 +218,7 @@
                 "value0": "Angle (0 to 180)"
             },
             {
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Accumulated angle",
                 "figures": "9",
                 "id": "1",
@@ -229,7 +232,7 @@
                 "value0": "Angle (-2147483648 to 2147483647)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Rotational speed",
                 "id": "2",
                 "name": "SPEED",
@@ -267,7 +270,7 @@
             }
         ],
         "id": "HT_NXT_ACCELERATION_TILT_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "Single-axis acceleration",
                 "id": "0",
@@ -317,7 +320,7 @@
             }
         ],
         "id": "HT_NXT_BAROMETRIC_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "decimals": "1",
                 "description": "Barometric Pressure",
@@ -399,7 +402,7 @@
             }
         ],
         "id": "HT_NXT_COLOR_SENSOR_V2",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "Color",
                 "id": "0",
@@ -457,7 +460,7 @@
             },
             {
                 "data_sets": "4",
-                "data_type": "MSENSOR_DATA_U16",
+                "data_type": "LEGO_SENSOR_DATA_U16",
                 "description": "Raw values",
                 "id": "7",
                 "name": "RAW",
@@ -484,40 +487,34 @@
     {
         "analog_mode_info": [
             {
-                "analog_cb": "ht_eopd_sensor_cb",
                 "id": "0",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_HIGH"
+                "pin5_state": "LEGO_PORT_GPIO_HIGH"
             },
             {
-                "analog_cb": "ht_eopd_sensor_cb",
                 "id": "1",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_LOW"
+                "pin5_state": "LEGO_PORT_GPIO_LOW"
             }
         ],
         "id": "HT_EOPD_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Proximity (long range)",
                 "id": "0",
                 "name": "LONG",
                 "notes": "\n[^adjusted-value]: This value is the square root of the\n    raw value. You can derive a value proportional (linear)\n    to distance by dividing a constant by this value,\n    e.g. `35 / value0`.\n    \n    ",
-                "pct_max": "100",
-                "raw_max": "5000",
-                "si_max": "100",
+                "scale": "ht_eopd_sensor_scale",
                 "value0": "Proximity (0-100)",
                 "value0_footnote": "[^adjusted-value]"
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Proximity (short range)",
                 "id": "1",
                 "name": "SHORT",
-                "pct_max": "100",
-                "raw_max": "5000",
-                "si_max": "100",
+                "scale": "ht_eopd_sensor_scale",
                 "value0": "Proximity (0-100)",
                 "value0_footnote": "[^adjusted-value]"
             }
@@ -533,10 +530,10 @@
     },
     {
         "id": "HT_FORCE_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Raw value (non-linear)",
                 "id": "0",
                 "name": "FORCE",
@@ -557,10 +554,10 @@
     },
     {
         "id": "HT_GYRO_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Angular speed",
                 "id": "0",
                 "name": "GYRO",
@@ -591,7 +588,7 @@
             }
         ],
         "id": "HT_NXT_IR_LINK_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "???",
                 "id": "0",
@@ -623,9 +620,9 @@
             }
         ],
         "id": "HT_NXT_IR_RECEIVER_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
-                "data_type": "MSENSOR_DATA_S8",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Single Motor Control",
                 "id": "0",
                 "name": "1-MOTOR",
@@ -637,7 +634,7 @@
             },
             {
                 "data_sets": "8",
-                "data_type": "MSENSOR_DATA_S8",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Eight Motor Controls",
                 "id": "1",
                 "name": "8-MOTOR",
@@ -682,7 +679,7 @@
             }
         ],
         "id": "HT_NXT_PIR_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "IR Proximity",
                 "id": "0",
@@ -715,9 +712,9 @@
             }
         ],
         "id": "HT_NXT_COMPASS_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
-                "data_type": "MSENSOR_DATA_S8",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Compass Direction",
                 "id": "0",
                 "name": "COMAPASS",
@@ -741,10 +738,10 @@
     },
     {
         "id": "HT_MAGNETIC_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Magnetic field???",
                 "id": "0",
                 "name": "MAG",
@@ -784,7 +781,7 @@
             }
         ],
         "id": "HT_NXT_IR_SEEKER_SENSOR_V2",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "Direction (unmodulated)",
                 "id": "0",
@@ -855,22 +852,41 @@
         "vendor_website": "http://www.hitechnic.com/cgi-bin/commerce.cgi?preadd=action&key=NSK1042"
     },
     {
+        "cmd_info": [
+            {
+                "description": "Halt",
+                "id": "0",
+                "name": "HALT"
+            },
+            {
+                "description": "Start auto-detection",
+                "id": "1",
+                "name": "DETECT",
+                "name_footnote": "[^auto-detect]<sup>,</sup>[^auto-detect-sensors]",
+                "notes": "\n[^auto-detect]: The sensor mux must be halted before\n    sending the detect command, otherwise it will result\n    an error (-EPERM).\n    \n    \n[^auto-detect-sensors]: Only these sensors can be\n    automatically detected:\n    \n    - LEGO NXT Ultrasonic\n    - HiTechnic NXT Compass\n    - HiTechnic NXT Color\n    - HiTechnic NXT Acceleration / Tilt\n    - HiTechnic NXT IR Seeker\n    - HiTechnic Super Pro\n    - HiTechnic NXT Color V2\n    - HiTechnic NXT IR Seeker V2\n    \n    "
+            },
+            {
+                "description": "Run",
+                "id": "2",
+                "name": "RUN"
+            }
+        ],
         "default_address": "0x08",
         "device_class_footnote": "[^more-devices]",
         "i2c_cmd_info": [
             {
-                "cmd_data": "0",
-                "cmd_reg": "0",
+                "cmd_data": "HT_NXT_SMUX_COMMAND_HALT",
+                "cmd_reg": "HT_NXT_SMUX_COMMAND_REG",
                 "id": "0"
             },
             {
-                "cmd_data": "1",
-                "cmd_reg": "0",
+                "cmd_data": "HT_NXT_SMUX_COMMAND_DETECT",
+                "cmd_reg": "HT_NXT_SMUX_COMMAND_REG",
                 "id": "1"
             },
             {
-                "cmd_data": "2",
-                "cmd_reg": "0",
+                "cmd_data": "HT_NXT_SMUX_COMMAND_RUN",
+                "cmd_reg": "HT_NXT_SMUX_COMMAND_REG",
                 "id": "2"
             }
         ],
@@ -895,26 +911,7 @@
             }
         ],
         "id": "HT_NXT_SENSOR_MUX",
-        "ms_cmd_info": [
-            {
-                "description": "Halt",
-                "id": "0",
-                "name": "HALT"
-            },
-            {
-                "description": "Start auto-detection",
-                "id": "1",
-                "name": "DETECT",
-                "name_footnote": "[^auto-detect]<sup>,</sup>[^auto-detect-sensors]",
-                "notes": "\n[^auto-detect]: The sensor mux must be halted before\n    sending the detect command, otherwise it will result\n    an error (-EPERM).\n    \n    \n[^auto-detect-sensors]: Only these sensors can be\n    automatically detected:\n    \n    - LEGO NXT Ultrasonic\n    - HiTechnic NXT Compass\n    - HiTechnic NXT Color\n    - HiTechnic NXT Acceleration / Tilt\n    - HiTechnic NXT IR Seeker\n    - HiTechnic Super Pro\n    - HiTechnic NXT Color V2\n    - HiTechnic NXT IR Seeker V2\n    \n    "
-            },
-            {
-                "description": "Run",
-                "id": "2",
-                "name": "RUN"
-            }
-        ],
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "2",
                 "description": "Status",
@@ -928,13 +925,14 @@
             }
         ],
         "name": "ht-nxt-smux",
-        "notes": "\n[^more-devices]: The `ht-nxt-smux` driver loads more devices in addition to\n    the [msensor] device. See [ht-smux-input-port](../ht-smux-input-port) for\n    more information.\n    \n    ",
+        "notes": "\n[^more-devices]: The `ht-nxt-smux` driver loads more devices\n    in addition to the [lego-sensor] class device. See\n    [ht-nxt-smux-port] for more information.\n    ^\n    [ht-nxt-smux-port]: /docs/ports/ht-nxt-smux-port\n    \n    ",
         "num_commands": "3",
         "num_modes": "1",
-        "ops.poll_cb": "ht_sensor_mux_poll_cb",
-        "ops.remove_cb": "ht_sensor_mux_remove_cb",
-        "ops.send_cmd_post_cb": "ht_sensor_mux_send_cmd_post_cb",
-        "ops.send_cmd_pre_cb": "ht_sensor_mux_send_cmd_pre_cb",
+        "ops.poll_cb": "ht_nxt_smux_poll_cb",
+        "ops.probe_cb": "ht_nxt_smux_probe_cb",
+        "ops.remove_cb": "ht_nxt_smux_remove_cb",
+        "ops.send_cmd_post_cb": "ht_nxt_smux_send_cmd_post_cb",
+        "ops.send_cmd_pre_cb": "ht_nxt_smux_send_cmd_pre_cb",
         "product_id": "SensrMUX",
         "sensor_type": "nxt-i2c-sensor",
         "url_name": "hitechnic-nxt-sensor-multiplexer",
@@ -981,10 +979,10 @@
             }
         ],
         "id": "HT_NXT_SUPER_PRO_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "4",
-                "data_type": "MSENSOR_DATA_U16",
+                "data_type": "LEGO_SENSOR_DATA_U16",
                 "description": "Analog inputs",
                 "id": "0",
                 "name": "AIN",
@@ -1061,8 +1059,10 @@
     },
     {
         "id": "LEGO_EV3_ULTRASONIC",
-        "ms_mode_info": [
+        "mode_info": [
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "Continuous measurement<br />LEDs: On, steady",
                 "id": "0",
@@ -1072,6 +1072,8 @@
                 "value0": "Distance (0-2550)"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "Continuous measurement<br />LEDs: On, steady",
                 "id": "1",
@@ -1081,6 +1083,8 @@
                 "value0": "Distance (0-1003)"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Listen<br />LEDs: On, blinking",
                 "id": "2",
                 "name": "US-LISTEN",
@@ -1089,6 +1093,8 @@
                 "value0_footnote": "[^listen-value]"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "Single measurement<br />LEDs: On momentarily when mode is set, then off",
                 "id": "3",
@@ -1100,6 +1106,8 @@
                 "value0_footnote": "[^single-measurement]"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "Single measurement<br />LEDs: On momentarily when mode is set, then off",
                 "id": "4",
@@ -1110,6 +1118,8 @@
                 "value0_footnote": "[^single-measurement]"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "???<br />LEDs: On, steady",
                 "id": "5",
@@ -1121,6 +1131,8 @@
                 "value0": "Distance (0-2550)"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "???<br />LEDs: On, steady",
                 "id": "6",
@@ -1131,9 +1143,10 @@
                 "value0": "Distance (0-1003)"
             }
         ],
-        "name": "ev3-uart-30",
+        "name": "lego-ev3-uart-30",
         "num_modes": "5",
-        "sensor_type": "legoev3-uart",
+        "num_view_modes": "3",
+        "sensor_type": "ev3-uart-sensor",
         "url_name": "lego-ev3-ultrasonic-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Ultrasonic Sensor",
@@ -1141,8 +1154,10 @@
     },
     {
         "id": "LEGO_EV3_GYRO",
-        "ms_mode_info": [
+        "mode_info": [
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Angle",
                 "id": "0",
                 "name": "GYRO-ANG",
@@ -1154,6 +1169,8 @@
                 "value0_footnote": "[^angle-overflow]<sup>,</sup>[^direction]"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Rotational Speed",
                 "id": "1",
                 "name": "GYRO-RATE",
@@ -1165,6 +1182,8 @@
                 "value0_footnote": "[^direction]"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Raw sensor value ???",
                 "id": "2",
                 "name": " GYRO-FAS",
@@ -1173,6 +1192,7 @@
             },
             {
                 "data_sets": "2",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Angle and Rotational Speed",
                 "id": "3",
                 "name": "GYRO-G&A",
@@ -1184,6 +1204,7 @@
             },
             {
                 "data_sets": "4",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Calibration ???",
                 "id": "4",
                 "name": "GYRO-CAL",
@@ -1193,9 +1214,10 @@
                 "value3": "???"
             }
         ],
-        "name": "ev3-uart-32",
+        "name": "lego-ev3-uart-32",
         "num_modes": "5",
-        "sensor_type": "legoev3-uart",
+        "num_view_modes": "3",
+        "sensor_type": "ev3-uart-sensor",
         "url_name": "lego-ev3-gyro-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Gyro Sensor",
@@ -1203,8 +1225,10 @@
     },
     {
         "id": "LEGO_EV3_COLOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Reflected light<br />Red LED on",
                 "id": "0",
                 "name": "COL-REFLECT",
@@ -1213,6 +1237,8 @@
                 "value0": "Reflected light intensity (0 to 100)"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Ambient light<br />Red LEDs off",
                 "id": "1",
                 "name": "COL-AMBIENT",
@@ -1221,9 +1247,11 @@
                 "value0": "Ambient light intensity (0 to 100)"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Color<br />All LEDs rapidly cycling, appears white",
                 "id": "2",
-                "name": "COL-AMBIENT",
+                "name": "COL-COLOR",
                 "notes": "\n[^color-values]: Color values:\n    \n    | Value | Color  |\n    |-------|--------|\n    | 0     | none   |\n    | 1     | black  |\n    | 2     | blue   |\n    | 3     | green  |\n    | 4     | yellow |\n    | 5     | red    |\n    | 6     | white  |\n    | 7     | brown  |\n    \n    ",
                 "units": "col",
                 "units_description": "color",
@@ -1232,6 +1260,7 @@
             },
             {
                 "data_sets": "2",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Raw Reflected<br />Red LED on",
                 "id": "3",
                 "name": "REF-RAW",
@@ -1240,6 +1269,7 @@
             },
             {
                 "data_sets": "3",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Raw Color Components<br />All LEDs rapidly cycling, appears white",
                 "id": "4",
                 "name": "RGB-RAW",
@@ -1249,6 +1279,7 @@
             },
             {
                 "data_sets": "4",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Calibration ???<br />All LEDs rapidly cycling, appears white",
                 "id": "5",
                 "name": "COL-CAL",
@@ -1260,32 +1291,25 @@
                 "value3": "???"
             }
         ],
-        "name": "ev3-uart-29",
+        "name": "lego-ev3-uart-29",
         "num_modes": "6",
-        "sensor_type": "legoev3-uart",
+        "num_view_modes": "3",
+        "sensor_type": "ev3-uart-sensor",
         "url_name": "lego-ev3-color-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Color Sensor",
         "vendor_part_number": "45506"
     },
     {
-        "analog_mode_info": [
-            {
-                "analog_cb": "ev3_touch_sensor_cb",
-                "id": "0"
-            }
-        ],
         "id": "LEGO_EV3_TOUCH_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
                 "description": "Button state",
                 "id": "0",
                 "name": "TOUCH",
                 "notes": "\n[^mode0-value]: Values:\n    \n    | Value | Description |\n    |:-----:|:-----------:|\n    | `0`   | Released    |\n    | `1`   | Pressed     |\n    \n    ",
-                "pct_max": "100",
-                "raw_max": "1",
-                "si_max": "1",
+                "scale": "lego_ev3_touch_sensor_scale",
                 "value0": "State (0 or 1)",
                 "value0_footnote": "[^mode0-value]"
             }
@@ -1300,8 +1324,10 @@
     },
     {
         "id": "LEGO_EV3_INFRARED",
-        "ms_mode_info": [
+        "mode_info": [
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Proximity",
                 "id": "0",
                 "name": "IR-PROX",
@@ -1313,6 +1339,7 @@
             },
             {
                 "data_sets": "8",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "IR Seeker",
                 "id": "1",
                 "name": "IR-SEEK",
@@ -1338,6 +1365,7 @@
             },
             {
                 "data_sets": "4",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "IR Remote Control",
                 "id": "2",
                 "name": "IR-REMOTE",
@@ -1354,6 +1382,8 @@
                 "value3_footnote": "[^remote-mode-values]"
             },
             {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "IR Remote Control",
                 "id": "3",
                 "name": "IR-REM-A",
@@ -1363,12 +1393,14 @@
             },
             {
                 "data_sets": "4",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Alternate IR Seeker ???",
                 "id": "4",
                 "name": "IR-S-ALT",
                 "name_footnote": "[^alt-seeker-mode]",
                 "notes": "\n[^alt-seeker-mode]: `IR-S-ALT` mode is not usable.\n    When switching to this mode, the sensor quits responding\n    to the keep-alive messages and the sensor resets.\n    \n    ",
                 "units": "pct",
+                "units_description": "percent",
                 "value0": "??? (0 to 100)",
                 "value1": "??? (0 to 100)",
                 "value2": "??? (0 to 100)",
@@ -1376,6 +1408,7 @@
             },
             {
                 "data_sets": "2",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Calibration ???",
                 "id": "5",
                 "name": "IR-CAL",
@@ -1383,63 +1416,115 @@
                 "value1": "??? (0 to 1023)"
             }
         ],
-        "name": "ev3-uart-33",
+        "name": "lego-ev3-uart-33",
         "num_modes": "6",
-        "sensor_type": "legoev3-uart",
+        "num_view_modes": "3",
+        "sensor_type": "ev3-uart-sensor",
         "url_name": "lego-ev3-infrared-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Infrared Sensor",
         "vendor_part_number": "45509"
     },
     {
-        "id": "WEDO_MOTION_SENSOR",
-        "ms_mode_info": [
+        "cmd_info": [
             {
-                "data_sets": "1",
-                "data_type": "MSENSOR_DATA_U8",
-                "description": "Raw analog value",
-                "id": "0",
-                "name": "RAW",
-                "raw_max": "255",
-                "si_max": "255",
-                "value0": "Motion (0 - 255)"
+                "description": "Turns off the outputs of the ports.",
+                "id": "WEDO_HUB_CMD_OUTPUT_OFF",
+                "name": "OUT-OFF"
+            },
+            {
+                "description": "Turns on the outputs of the ports.",
+                "id": "WEDO_HUB_CMD_OUTPUT_ON",
+                "name": "OUT-ON"
+            },
+            {
+                "description": "Clears error.",
+                "id": "WEDO_HUB_CMD_CLEAR_ERROR",
+                "name": "CLEAR-ERR"
             }
         ],
-        "name": "wedo-motion",
+        "id": "0",
+        "mode_info": [
+            {
+                "data_sets": "2",
+                "data_type": "LEGO_SENSOR_DATA_U16",
+                "description": "Hub status",
+                "id": "WEDO_HUB_MODE_HUB",
+                "name": "HUB",
+                "notes": "\n[^status-bits]: Status Bits:\n    \n    | Bit | Description |\n    |:---:|:-----------:|\n    | 0   | Echo        |\n    | 1   |             |\n    | 2   |             |\n    | 3   |             |\n    | 4   |             |\n    | 5   |             |\n    | 6   | High Power  |\n    | 7   | Outputs Off |\n    \n    ",
+                "value0": "Status bits",
+                "value0_footnote": "[^status-bits]",
+                "value1": "Voltage (millivolts)"
+            }
+        ],
+        "module": "wedo",
+        "name": "wedo-hub",
+        "num_commands": "3",
         "num_modes": "1",
+        "sensor_type": "wedo-hub-sensor",
+        "url_name": "lego-wedo-usb-hub",
+        "vendor_name": "LEGO",
+        "vendor_part_name": "WeDo USB Hub",
+        "vendor_part_number": "9581",
+        "vendor_website": "https://education.lego.com/en-us/lego-education-product-database/wedo/9581-lego-usb-hub"
+    },
+    {
+        "id": "WEDO_MOTION_SENSOR",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_U8",
+                "description": "Proximity",
+                "id": "0",
+                "name": "PROX",
+                "raw_max": "219",
+                "raw_min": "71",
+                "si_max": "100",
+                "units": "pct",
+                "units_description": "percent",
+                "value0": "Proximity (0 - 100)"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_U8",
+                "description": "Raw analog value",
+                "id": "1",
+                "name": "RAW",
+                "value0": "Proximity (0 - 255)"
+            }
+        ],
+        "module": "wedo",
+        "name": "wedo-motion",
+        "num_modes": "2",
         "sensor_type": "wedo-sensor",
         "url_name": "lego-wedo-motion-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "WeDo Motion Sensor",
         "vendor_part_number": "9583",
-        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9583-motion-sensor",
-        "wedo_mode_info": [
-            {
-                "analog_cb": "wedo_raw_cb",
-                "id": "0"
-            }
-        ]
+        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9583-motion-sensor"
     },
     {
         "id": "WEDO_TILT_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_U8",
+                "data_type": "LEGO_SENSOR_DATA_U8",
                 "description": "Tilt status",
                 "id": "0",
                 "name": "TILT",
                 "notes": "\n[^tilt-values]: Tilt values:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | Level       |\n    | 1     | Front       |\n    | 2     | Back        |\n    | 3     | Left        |\n    | 4     | Right       |\n    | 5     | Unknown     |\n    \n    ",
+                "scale": "wedo_tilt_scale",
                 "value0": "Tilt (0 to 5)",
                 "value0_footnote": "[^tilt-values]"
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_S8",
+                "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Tilt around 2 separate axes",
                 "id": "1",
                 "name": "TILT-AXIS",
                 "notes": "\n[^axis-values]: Axis values:\n    \n    | Value0 | Value1 | Value2 | Description |\n    |--------|--------|--------|-------------|\n    | 0      | 0      | 1      | Level       |\n    | 0      | 1      | 1      | Front       |\n    | 0      | -1     | 1      | Back        |\n    | -1     | 0      | 1      | Left        |\n    | 1      | 0      | 1      | Right       |\n    | 0      | 0      | 0      | Unknown     |\n    \n    ",
+                "scale": "wedo_tilt_axis_scale",
                 "value0": "Tilt Left/Right (-1/0/1)",
                 "value0_footnote": "[^axis-values]",
                 "value1": "Tilt Back/Front (-1/0/1)",
@@ -1449,17 +1534,16 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_U8",
+                "data_type": "LEGO_SENSOR_DATA_U8",
                 "description": "Raw analog value",
                 "id": "2",
                 "name": "RAW",
                 "notes": "\n[^raw-values]: Raw values:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | Unknown     |\n    | < 48  | Back        |\n    | < 99  | Right       |\n    | < 153 | Level       |\n    | < 204 | Front       |\n    | < 255 | Left        |\n    \n    ",
-                "raw_max": "255",
-                "si_max": "255",
                 "value0": "Tilt (0 - 255)",
                 "value0_footnote": "[^raw-values]"
             }
         ],
+        "module": "wedo",
         "name": "wedo-tilt",
         "num_modes": "3",
         "sensor_type": "wedo-sensor",
@@ -1467,21 +1551,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "WeDo Tilt Sensor",
         "vendor_part_number": "9584",
-        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9584-tilt-sensor",
-        "wedo_mode_info": [
-            {
-                "analog_cb": "wedo_tilt_status_cb",
-                "id": "0"
-            },
-            {
-                "analog_cb": "wedo_tilt_axis_cb",
-                "id": "1"
-            },
-            {
-                "analog_cb": "wedo_raw_cb",
-                "id": "2"
-            }
-        ]
+        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9584-tilt-sensor"
     },
     {
         "default_address": "0x02",
@@ -1520,9 +1590,9 @@
             }
         ],
         "id": "LEGO_POWER_STORAGE_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "Input Voltage",
                 "id": "0",
@@ -1534,7 +1604,7 @@
                 "value0": "Voltage (0 to 10000)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "Input Current",
                 "id": "1",
@@ -1546,7 +1616,7 @@
                 "value0": "Current (0 to 10000)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "Output Voltage",
                 "id": "2",
@@ -1558,7 +1628,7 @@
                 "value0": "Voltage (0 to 10000)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "Output Current",
                 "id": "3",
@@ -1570,7 +1640,7 @@
                 "value0": "Current (0 to 10000)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "description": "Energy",
                 "id": "4",
                 "name": "JOULE",
@@ -1581,7 +1651,7 @@
                 "value0": "Energy (0 to 100)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "Input Power",
                 "id": "5",
@@ -1593,7 +1663,7 @@
                 "value0": "Power (0 to 10000)"
             },
             {
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "Output Power",
                 "id": "6",
@@ -1606,7 +1676,7 @@
             },
             {
                 "data_sets": "7",
-                "data_type": "MSENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "decimals": "3",
                 "description": "All",
                 "id": "7",
@@ -1648,23 +1718,15 @@
         "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/mindstorms/9749-nxt-temperature-sensor/"
     },
     {
-        "analog_mode_info": [
-            {
-                "analog_cb": "nxt_touch_sensor_cb",
-                "id": "0"
-            }
-        ],
         "id": "LEGO_NXT_TOUCH_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
                 "description": "Button state",
                 "id": "0",
                 "name": "TOUCH",
                 "notes": "\n[^mode0-value]: Values:\n    \n    | Value | Description |\n    |:-----:|:-----------:|\n    | `0`   | Released    |\n    | `1`   | Pressed     |\n    \n    ",
-                "pct_max": "100",
-                "raw_max": "1",
-                "si_max": "1",
+                "scale": "nxt_touch_sensor_scale",
                 "value0": "State (0 or 1)",
                 "value0_footnote": "[^mode0-value]"
             }
@@ -1682,18 +1744,18 @@
         "analog_mode_info": [
             {
                 "id": "0",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_HIGH"
+                "pin5_state": "LEGO_PORT_GPIO_HIGH"
             },
             {
                 "id": "1",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_LOW"
+                "pin5_state": "LEGO_PORT_GPIO_LOW"
             }
         ],
         "id": "LEGO_NXT_LIGHT_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "1",
                 "description": "Reflected light<br />LED on",
                 "id": "0",
@@ -1708,7 +1770,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "1",
                 "description": "Ambient light<br />LED off",
                 "id": "1",
@@ -1735,18 +1797,18 @@
         "analog_mode_info": [
             {
                 "id": "0",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_LOW"
+                "pin5_state": "LEGO_PORT_GPIO_LOW"
             },
             {
                 "id": "1",
-                "pin5_state": "EV3_INPUT_PORT_GPIO_HIGH"
+                "pin5_state": "LEGO_PORT_GPIO_HIGH"
             }
         ],
         "id": "LEGO_NXT_SOUND_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "1",
                 "description": "Sound pressure level<br />Flat weighting",
                 "id": "0",
@@ -1760,7 +1822,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "1",
                 "description": "Sound pressure level<br />A weighting",
                 "id": "1",
@@ -1787,42 +1849,42 @@
         "i2c_mode_info": [
             {
                 "id": "0",
-                "pin1_state": "EV3_INPUT_PORT_GPIO_HIGH",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "1",
-                "pin1_state": "EV3_INPUT_PORT_GPIO_HIGH",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "2",
-                "pin1_state": "EV3_INPUT_PORT_GPIO_HIGH",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "3",
-                "pin1_state": "EV3_INPUT_PORT_GPIO_HIGH",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "4",
-                "pin1_state": "EV3_INPUT_PORT_GPIO_HIGH",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             }
         ],
         "id": "LEGO_NXT_ULTRASONIC_SENSOR",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "description": "Continuous measurement",
                 "id": "0",
@@ -1887,6 +1949,30 @@
         "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
     },
     {
+        "cmd_info": [
+            {
+                "description": "Reset device",
+                "id": "0",
+                "name": "RESET",
+                "name_footnote": "[^reset-description]",
+                "notes": "\n[^reset-description]: Recalculate bias drift, reset accumulated angle,\n    set accelerometer scaling factor to 2G,\n    this has to be done with sensor not moving\n    and is strongly recommended to be called manually before work\n    \n    "
+            },
+            {
+                "description": "Set accelerometer scaling to 2G",
+                "id": "1",
+                "name": "ACCEL-2G"
+            },
+            {
+                "description": "Set accelerometer scaling to 4G",
+                "id": "2",
+                "name": "ACCEL-4G"
+            },
+            {
+                "description": "Set accelerometer scaling to 8G",
+                "id": "3",
+                "name": "ACCEL-8G"
+            }
+        ],
         "default_address": "0x01",
         "i2c_cmd_info": [
             {
@@ -1925,34 +2011,10 @@
             }
         ],
         "id": "MI_CRUIZCORE_XG1300L",
-        "ms_cmd_info": [
-            {
-                "description": "Reset device",
-                "id": "0",
-                "name": "RESET",
-                "name_footnote": "[^reset-description]",
-                "notes": "\n[^reset-description]: Recalculate bias drift, reset accumulated angle,\n    set accelerometer scaling factor to 2G,\n    this has to be done with sensor not moving\n    and is strongly recommended to be called manually before work\n    \n    "
-            },
-            {
-                "description": "Set accelerometer scaling to 2G",
-                "id": "1",
-                "name": "ACCEL-2G"
-            },
-            {
-                "description": "Set accelerometer scaling to 4G",
-                "id": "2",
-                "name": "ACCEL-4G"
-            },
-            {
-                "description": "Set accelerometer scaling to 8G",
-                "id": "3",
-                "name": "ACCEL-8G"
-            }
-        ],
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "2",
                 "description": "Angle",
                 "id": "0",
@@ -1963,7 +2025,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "2",
                 "description": "Rotational speed",
                 "id": "1",
@@ -1974,12 +2036,13 @@
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Acceleration in X, Y, Z axis",
                 "id": "2",
                 "name": "ACCEL",
                 "notes": "\n[^gravity-units]: 1 g ~ 9.81\u00a0m/s<sup>2</sup>\n    \n    ",
+                "scale": "mi_xg1300l_scale",
                 "units": "g",
                 "units_description": "Standard gravity",
                 "units_footnote": "[^gravity-units]",
@@ -1989,11 +2052,12 @@
             },
             {
                 "data_sets": "5",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "All values",
                 "id": "3",
                 "name": "ALL",
                 "notes": "\n[^mode3-angle]: Two decimal places\n    \n[^mode3-speed]: Two decimal places\n    \n[^mode3-accel]: Three decimal places,\n    range as was set by last command\n    \n    ",
+                "scale": "mi_xg1300l_scale",
                 "value0": "Z-axis angle (-18000 to 18000)",
                 "value0_footnote": "[^mode3-angle]",
                 "value1": "Z-axis rotational speed",
@@ -2011,7 +2075,6 @@
         "num_commands": "4",
         "num_modes": "4",
         "num_read_only_modes": "4",
-        "ops.poll_cb": "mi_xg1300l_poll_cb",
         "ops.probe_cb": "mi_xg1300l_probe_cb",
         "ops.remove_cb": "mi_xg1300l_remove_cb",
         "ops.send_cmd_post_cb": "mi_xg1300l_send_cmd_post_cb",
@@ -2027,6 +2090,43 @@
         "vendor_website": "http://www.minfinity.com/eng/page.php?Main=1&sub=1&tab=5"
     },
     {
+        "cmd_info": [
+            {
+                "description": "Begin compass calibration",
+                "id": "0",
+                "name": "BEGIN-COMP-CAL"
+            },
+            {
+                "description": "End compass calibration",
+                "id": "1",
+                "name": "END-COMP-CAL"
+            },
+            {
+                "description": "Change accelerometer sensitivity to 2G and gyro sensitivity to 250 deg/sec",
+                "id": "2",
+                "name": "ACCEL-2G",
+                "name_footnote": "[^accel-commands]",
+                "notes": "\n[^accel-commands]: Wait 50 msec after sending command for sensor to reconfigure itself.\n    \n    "
+            },
+            {
+                "description": "Change accelerometer sensitivity to 4G and gyro sensitivity to 500 deg/sec",
+                "id": "3",
+                "name": "ACCEL-4G",
+                "name_footnote": "[^accel-commands]"
+            },
+            {
+                "description": "Change accelerometer sensitivity to 8G and gyro sensitivity to 2000 deg/sec",
+                "id": "4",
+                "name": "ACCEL-8G",
+                "name_footnote": "[^accel-commands]"
+            },
+            {
+                "description": "Change accelerometer sensitivity to 16G and gyro sensitivity to 2000 deg/sec",
+                "id": "5",
+                "name": "ACCEL-16G",
+                "name_footnote": "[^accel-commands]"
+            }
+        ],
         "default_address": "0x11",
         "default_address_footnote": "[^address]",
         "i2c_cmd_info": [
@@ -2088,50 +2188,14 @@
             }
         ],
         "id": "MS_ABSOLUTE_IMU",
-        "ms_cmd_info": [
-            {
-                "description": "Begin compass calibration",
-                "id": "0",
-                "name": "BEGIN-COMP-CAL"
-            },
-            {
-                "description": "End compass calibration",
-                "id": "1",
-                "name": "END-COMP-CAL"
-            },
-            {
-                "description": "Change accelerometer sensitivity to 2G and gyro sensitivity to 250 deg/sec",
-                "id": "2",
-                "name": "ACCEL-2G",
-                "name_footnote": "[^accel-commands]",
-                "notes": "\n[^accel-commands]: Wait 50 msec after sending command for sensor to reconfigure itself.\n    \n    "
-            },
-            {
-                "description": "Change accelerometer sensitivity to 4G and gyro sensitivity to 500 deg/sec",
-                "id": "3",
-                "name": "ACCEL-4G",
-                "name_footnote": "[^accel-commands]"
-            },
-            {
-                "description": "Change accelerometer sensitivity to 8G and gyro sensitivity to 2000 deg/sec",
-                "id": "4",
-                "name": "ACCEL-8G",
-                "name_footnote": "[^accel-commands]"
-            },
-            {
-                "description": "Change accelerometer sensitivity to 16G and gyro sensitivity to 2000 deg/sec",
-                "id": "5",
-                "name": "ACCEL-16G",
-                "name_footnote": "[^accel-commands]"
-            }
-        ],
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_U8",
+                "data_type": "LEGO_SENSOR_DATA_U8",
                 "description": "Tilt",
                 "id": "0",
                 "name": "TILT",
+                "scale": "ms_imu_scale",
                 "units": "deg",
                 "units_description": "degrees",
                 "value0": "X-axis angle (0 to 180)",
@@ -2140,7 +2204,7 @@
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Acceleration",
                 "id": "1",
                 "name": "ACCEL",
@@ -2154,7 +2218,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_U16",
+                "data_type": "LEGO_SENSOR_DATA_U16",
                 "description": "Compass",
                 "id": "2",
                 "name": "COMPASS",
@@ -2166,7 +2230,7 @@
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Magnetic field",
                 "id": "3",
                 "name": "MAG",
@@ -2177,7 +2241,7 @@
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
                 "description": "Gryo",
                 "id": "4",
@@ -2205,7 +2269,6 @@
         "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
         "num_commands": "6",
         "num_modes": "6",
-        "ops.poll_cb": "ms_imu_poll_cb",
         "ops.send_cmd_post_cb": "ms_imu_send_cmd_post_cb",
         "product_id": "AbsIMU",
         "sensor_type": "nxt-i2c-sensor",
@@ -2217,6 +2280,13 @@
         "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=169&MMN_position=30:30"
     },
     {
+        "cmd_info": [
+            {
+                "description": "Reset angle values",
+                "id": "0",
+                "name": "RESET"
+            }
+        ],
         "default_address": "0x18",
         "i2c_cmd_info": [
             {
@@ -2244,17 +2314,10 @@
             }
         ],
         "id": "MS_ANGLE_SENSOR",
-        "ms_cmd_info": [
-            {
-                "description": "Reset angle values",
-                "id": "0",
-                "name": "RESET"
-            }
-        ],
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "Angle",
                 "id": "0",
                 "name": "ANGLE",
@@ -2264,7 +2327,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "decimals": "1",
                 "description": "High-precision angle",
                 "id": "1",
@@ -2277,7 +2340,7 @@
             },
             {
                 "data_sets": "1",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Rotational Speed",
                 "id": "2",
                 "name": "SPEED",
@@ -2289,7 +2352,7 @@
             },
             {
                 "data_sets": "3",
-                "data_type": "MSENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",
                 "description": "All values",
                 "id": "3",
                 "name": "ALL",
@@ -2316,6 +2379,77 @@
         "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=173"
     },
     {
+        "default_address": "0x50, 0x51, 0x52",
+        "default_address_footnote": "[^addresses]",
+        "id": "MS_EV3_SENSOR_MUX",
+        "mode_info": [
+            {
+                "data_sets": "0",
+                "description": "EV3 Sensor Multiplexer",
+                "id": "0",
+                "name": "MUX",
+                "name_footnote": "[^mode]",
+                "notes": "\n[^mode]: This mode does not do anything useful.\n    \n    "
+            }
+        ],
+        "name": "ms-ev3-smux",
+        "notes": "\n[^addresses]: This sensor appears as three separate sensors,\n    one for each channel on the sensor mux.\n    \n    ",
+        "num_modes": "2",
+        "num_read_only_modes": "1",
+        "ops.poll_cb": "ms_ev3_smux_poll_cb",
+        "ops.probe_cb": "ms_ev3_smux_probe_cb",
+        "ops.remove_cb": "ms_ev3_smux_remove_cb",
+        "product_id": "Ev3SMux",
+        "sensor_type": "nxt-i2c-sensor",
+        "url_name": "mindsensors.com-ev3-sensor-multiplexer",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "EV3 Sensor Multiplexer",
+        "vendor_part_number": "EV3SensorMUX",
+        "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=207"
+    },
+    {
+        "cmd_info": [
+            {
+                "description": "Calibrate white",
+                "id": "0",
+                "name": "CAL-WHITE"
+            },
+            {
+                "description": "Calibrate black",
+                "id": "1",
+                "name": "CAL-BLACK"
+            },
+            {
+                "description": "Put sensor to sleep",
+                "id": "2",
+                "name": "SLEEP",
+                "name_footnote": "[^sleep]",
+                "notes": "\n[^sleep]: `poll_ms` must be set to `0` in order for sensor to sleep.\n    \n    "
+            },
+            {
+                "description": "Wake up the sensor",
+                "id": "3",
+                "name": "WAKE",
+                "name_footnote": "[^wake]",
+                "notes": "\n[^wake]: Will return an error (-ENXIO) if sensor is actually asleep.\n    Completes successfully if sensor is already awake.\n    \n    "
+            },
+            {
+                "description": "Configures sensor for 60Hz electrical mains",
+                "id": "4",
+                "name": "60HZ"
+            },
+            {
+                "description": "Configures sensor for 50Hz electrical mains",
+                "id": "5",
+                "name": "50HZ"
+            },
+            {
+                "description": "Configures sensor for any (50/60Hz) electrical mains",
+                "id": "6",
+                "name": "UNIVERSAL"
+            }
+        ],
         "default_address": "0x0A",
         "default_address_footnote": "[^address]",
         "i2c_cmd_info": [
@@ -2366,48 +2500,7 @@
             }
         ],
         "id": "MS_LIGHT_SENSOR_ARRAY",
-        "ms_cmd_info": [
-            {
-                "description": "Calibrate white",
-                "id": "0",
-                "name": "CAL-WHITE"
-            },
-            {
-                "description": "Calibrate black",
-                "id": "1",
-                "name": "CAL-BLACK"
-            },
-            {
-                "description": "Put sensor to sleep",
-                "id": "2",
-                "name": "SLEEP",
-                "name_footnote": "[^sleep]",
-                "notes": "\n[^sleep]: `poll_ms` must be set to `0` in order for sensor to sleep.\n    \n    "
-            },
-            {
-                "description": "Wake up the sensor",
-                "id": "3",
-                "name": "WAKE",
-                "name_footnote": "[^wake]",
-                "notes": "\n[^wake]: Will return an error (-ENXIO) if sensor is actually asleep.\n    Completes successfully if sensor is already awake.\n    \n    "
-            },
-            {
-                "description": "Configures sensor for 60Hz electrical mains",
-                "id": "4",
-                "name": "60HZ"
-            },
-            {
-                "description": "Configures sensor for 50Hz electrical mains",
-                "id": "5",
-                "name": "50HZ"
-            },
-            {
-                "description": "Configures sensor for any (50/60Hz) electrical mains",
-                "id": "6",
-                "name": "UNIVERSAL"
-            }
-        ],
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "8",
                 "description": "Calibrated values",
@@ -2428,7 +2521,7 @@
             },
             {
                 "data_sets": "8",
-                "data_type": "MSENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Raw values",
                 "id": "1",
                 "name": "RAW",
@@ -2472,7 +2565,7 @@
             }
         ],
         "id": "MS_8CH_SERVO",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "decimals": "3",
                 "description": "EV3 Compatible",
@@ -2506,7 +2599,7 @@
             }
         ],
         "name": "ms-8ch-servo",
-        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [msensor] device. See the [Servo Motor Class](../servo-motor-class)\n    for more information. The `servo_motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    \n    ",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    .\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/motors/servo-motor-class\n    \n    ",
         "num_modes": "2",
         "ops.probe_cb": "ms_8ch_servo_probe_cb",
         "ops.remove_cb": "ms_8ch_servo_remove_cb",
@@ -2561,23 +2654,15 @@
         "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=77"
     },
     {
-        "analog_mode_info": [
-            {
-                "analog_cb": "ms_touch_mux_cb",
-                "id": "0"
-            }
-        ],
         "id": "MS_TOUCH_SENSOR_MUX",
-        "ms_mode_info": [
+        "mode_info": [
             {
                 "data_sets": "3",
                 "description": "Touch sensors",
                 "id": "0",
                 "name": "TOUCH-MUX",
                 "notes": "\n[^values]: Values:\n    \n    | Value | Description |\n    |:-----:|:-----------:|\n    | `0`   | Released    |\n    | `1`   | Pressed     |\n    \n    ",
-                "pct_max": "100",
-                "raw_max": "1",
-                "si_max": "1",
+                "scale": "ms_touch_mux_scale",
                 "value0": "Sensor T1 state",
                 "value0_footnote": "[^values]",
                 "value1": "Sensor T2 state",

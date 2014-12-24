@@ -12,7 +12,7 @@ a (fairly) uniform register layout.
 
 We call sensors that were designed following LEGO's guidelines **I2C/NXT**
 sensors. This common register layout lets us autodetect the type of sensor
-and proves access to the sensor via the [msensor] class.
+and proves access to the sensor via the [lego-sensor] class.
 
 We refer to sensors that do not conform to LEGO's specifications as
 **I2C/Other** sensors. There are so many types of I2C chips in the wild
@@ -35,7 +35,7 @@ make sure your are using the correct `sensor<N>` device node. NOTE: A
 
 ## Using I2C/NXT Sensors
 
-See the page on [The MINDSTORMS Sensor Device Class][msensor] for general usage.
+See the page on [The MINDSTORMS Sensor Device Class][lego-sensor] for general usage.
 This page only covers the I2C specifics.
 
 ### Polling
@@ -43,7 +43,7 @@ This page only covers the I2C specifics.
 When we say "polled", we just mean that the EV3 brick initiates a read command
 to read data from the sensor. The data that is read depends on the current
 mode that is selected. You can change the polling rate using the `poll_ms`
-attribute (of the `msensor` device). You can also disable polling by setting
+attribute (of the `lego-sensor` device). You can also disable polling by setting
 `poll_ms` to `0`. When polling is disabled, you can initiate a data read by
 setting the mode again. By default, I2C/NXT sensors are polled every 100
 milliseconds. The default value can be changed via a module parameter.
@@ -242,7 +242,7 @@ With the mindsensors.com Realtime Clock Sensor on input port 2.
     00:                         46 72 65 65 20 72 61 6d            Free ram
     10: 20 73 70 61 63 65 21                                space!
 
-[msensor]: ../msensor-class
+[lego-sensor]: ../lego-sensor-class
 [I2C Sensor Addressing]: ../i2c-sensor-addressing
 [port splitter]: http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=79
 [sensor MUX]: http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=179

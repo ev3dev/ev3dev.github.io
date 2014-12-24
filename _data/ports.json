@@ -1,0 +1,173 @@
+[
+    {
+        "connection_types": "I2C/NXT, Analog/NXT",
+        "description": "HiTechnic NXT Sensor Multiplexer Input Port",
+        "mode_info": [
+            {
+                "description": "Analog/NXT sensor",
+                "id": "HT_NXT_SMUX_PORT_MODE_ANALOG",
+                "name": "analog",
+                "name_footnote": "[^analog-mode]",
+                "notes": "\n[^analog-mode]: The [nxt-analog] driver will be loaded when\n    this mode is set. You must manually specify the correct\n    driver for your sensor using `set_device` if you want to use\n    another driver. Any driver with a connection type of\n    Analog/NXT is allowed.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
+            },
+            {
+                "description": "I2C/NXT sensor",
+                "id": "HT_NXT_SMUX_PORT_MODE_I2C",
+                "name": "i2c",
+                "name_footnote": "[^i2c-mode]",
+                "notes": "\n[^i2c-mode]: If one of the supported sensors was detected\n    by invoking the `DETECT` command on the [ht-nxt-smux]\n    associated with this port, then the appropriate driver will\n    be automatically loaded. Otherwise, you can use `set_device`\n    to load the correct driver for your sensor. Any driver with\n    a connection type of I2C/NXT is allowed.\n    ^\n    [ht-nxt-smux]: /docs/sensors/hitechnic-nxt-sensor-multiplexer\n    \n    "
+            }
+        ],
+        "module": "ht-nxt-smux",
+        "name": "ht-nxt-smux-port",
+        "num_modes": 2,
+        "prefix": "mux",
+        "url_name": "ht-nxt-smux-port"
+    },
+    {
+        "connection_types": "UART/EV3, UART/Other, I2C/NXT, I2C/Other, Analog/EV3, Analog/NXT",
+        "description": "EV3 Input Port",
+        "mode_info": [
+            {
+                "description": "Automatically detect sensors.",
+                "id": "EV3_INPUT_PORT_MODE_AUTO",
+                "name": "auto",
+                "name_footnote": "[^auto-mode]",
+                "notes": "\n[^auto-mode]: In auto mode, the port will attempt to\n    automatically detect the type of sensor that was connected\n    and load the appropriate driver. See the list of [supported\n    sensors] to determine if a sensor can be automatically\n    detected.\n    ^\n    [supported sensors]: /docs/sensors/#supported-sensors\n    \n    "
+            },
+            {
+                "description": "Load the [nxt-analog] device.",
+                "id": "EV3_INPUT_PORT_MODE_NXT_ANALOG",
+                "name": "nxt-analog",
+                "name_footnote": "[^nxt-analog-mode]",
+                "notes": "\n[^nxt-analog-mode]: This loads the [generic NXT/Analog sensor]\n    [nxt-analog] driver. Use `set_device` to load the appropriate\n    device/driver.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
+            },
+            {
+                "description": "Load the [nxt-color-sensor] device.",
+                "id": "EV3_INPUT_PORT_MODE_NXT_COLOR",
+                "name": "nxt-color",
+                "name_footnote": "[^nxt-color-mode]",
+                "notes": "\n[^nxt-color-mode]: NXT Color sensor driver has not been\n    implemented yet, so right now, this mode does nothing.\n    \n    "
+            },
+            {
+                "description": "Configure for I2C communications and load the [nxt-i2c-host] device.",
+                "id": "EV3_INPUT_PORT_MODE_NXT_I2C",
+                "name": "nxt-i2c"
+            },
+            {
+                "description": "Load the [ev3-analog] device.",
+                "id": "EV3_INPUT_PORT_MODE_EV3_ANALOG",
+                "name": "ev3-analog"
+            },
+            {
+                "description": "Configure for UART communications and load the [ev3-uart-host] device.",
+                "id": "EV3_INPUT_PORT_MODE_EV3_UART",
+                "name": "ev3-uart"
+            },
+            {
+                "description": "Configure for UART communications but do not load any device.",
+                "id": "EV3_INPUT_PORT_MODE_OTHER_UART",
+                "name": "other-uart"
+            },
+            {
+                "description": "Provide access to low level drivers.",
+                "id": "EV3_INPUT_PORT_MODE_RAW",
+                "name": "raw",
+                "name_footnote": "[^raw-mode]",
+                "notes": "\n[^raw-mode]: Exports gpios and analog/digital converter values\n    to sysfs so that they can be controlled directly.\n    \n    "
+            }
+        ],
+        "module": "legoev3-ports",
+        "name": "legoev3-input-port",
+        "num_modes": 8,
+        "prefix": "in",
+        "url_name": "legoev3-input-port"
+    },
+    {
+        "connection_types": "tacho-motor, dc-motor, led",
+        "description": "EV3 Output Port",
+        "mode_info": [
+            {
+                "description": "Automatically detect motors when they are connected.",
+                "id": "EV3_OUTPUT_PORT_MODE_AUTO",
+                "name": "auto",
+                "name_footnote": "[^auto-mode]",
+                "notes": "\n[^auto-mode]: Only the EV3/NXT large motors and the EV3\n    medium motor can be automatically detected. All other devices\n    must be manually configured.\n    \n    "
+            },
+            {
+                "description": "Load the [ev3-tacho-motor] device.",
+                "id": "EV3_OUTPUT_PORT_MODE_TACHO_MOTOR",
+                "name": "ev3-tacho-motor",
+                "name_footnote": "[^ev3-tacho-motor-mode]",
+                "notes": "\n[^ev3-tacho-motor-mode]: Currently only supports loading the\n    driver with EV3/NXT Large Motor settings. In the future, you\n    will be able to change the driver using `set_device`.\n    ^\n    [ev3-tacho-motor]: /docs/drivers/ev3-tacho-motor\n    \n    "
+            },
+            {
+                "description": "Load the [rcx-motor] device.",
+                "id": "EV3_OUTPUT_PORT_MODE_DC_MOTOR",
+                "name": "rcx-motor",
+                "name_footnote": "[^rcx-motor-mode]",
+                "notes": "\n[^rcx-motor-mode]: This can be use with MINDSTORMS RCX\n    motors, Power Functions motors and any other 'plain' DC\n    motor. By 'plain', we mean the motor is just a motor without\n    any feedback.\n    ^\n    [rcx-motor]: /docs/drivers/rcx-motor\n    \n    "
+            },
+            {
+                "description": "Load the [rcx-led] device.",
+                "id": "EV3_OUTPUT_PORT_MODE_LED",
+                "name": "rcx-led",
+                "name_footnote": "[^rcx-led-mode]",
+                "notes": "\n[^rcx-led-mode]: This can be used with MINDSTORMS RCX LEDs,\n    Power Functions LEDs or any other LED connected to pins 1\n    and 2 of the output port.\n    ^\n    [rcx-led]: /docs/drivers/rcx-led\n    \n    "
+            },
+            {
+                "description": "Provide access to low level drivers.",
+                "id": "EV3_OUTPUT_PORT_MODE_RAW",
+                "name": "raw",
+                "name_footnote": "[^raw-mode]",
+                "notes": "\n[^raw-mode]: Exports gpios, pwm and analog/digital converter\n    values to sysfs so that they can be controlled directly.\n    \n    "
+            }
+        ],
+        "module": "legoev3-ports",
+        "name": "legoev3-output-port",
+        "num_modes": 5,
+        "prefix": "out",
+        "url_name": "legoev3-output-port"
+    },
+    {
+        "connection_types": "UART/EV3, Analog/EV3",
+        "description": "mindsensors.com EV3 Sensor Multiplexer Input Port",
+        "mode_info": [
+            {
+                "description": "UART/EV3 sensor",
+                "id": "MS_EV3_SMUX_MODE_UART",
+                "name": "uart",
+                "name_footnote": "[^uart-mode]",
+                "notes": "\n[^uart-mode]: UART sensor types are not automatically\n    detected. By default, the `lego-ev3-uart-29` driver (LEGO\n    EV3 Color Sensor) will be loaded when this mode is set.\n    Use `set_device` to load other sensor devices/drivers.\n    \n    Supported sensors are:\n    \n    | Sensor Name         | Device/Driver Name |\n    |---------------------|--------------------|\n    | LEGO EV3 Color      | `lego-ev3-uart-29` |\n    | LEGO EV3 Ultrasonic | `lego-ev3-uart-30` |\n    | LEGO EV3 GYRO       | `lego-ev3-uart-32` |\n    | LEGO EV3 Infrared   | `lego-ev3-uart-33` |\n    \n    "
+            },
+            {
+                "description": "Analog/EV3 sensor",
+                "id": "MS_EV3_SMUX_MODE_ANALOG",
+                "name": "analog",
+                "name_footnote": "[^analog-mode]",
+                "notes": "\n[^analog-mode]: Currently only the LEGO EV3 Touch sensor is\n    supported. The `lego-ev3-touch` device/driver is loaded when\n    this mode is set.\n    \n    "
+            }
+        ],
+        "module": "ms-ev3-smux",
+        "name": "ms-ev3-smux-port",
+        "num_modes": 2,
+        "prefix": "mux",
+        "url_name": "ms-ev3-smux-port"
+    },
+    {
+        "connection_types": "Analog/WeDo, dc-motor, led",
+        "description": "LEGO WeDo Port",
+        "mode_info": [
+            {
+                "description": "Automatic",
+                "id": "0",
+                "name": "AUTO"
+            }
+        ],
+        "module": "wedo",
+        "name": "wedo-port",
+        "num_modes": 1,
+        "prefix": "wedo",
+        "url_name": "wedo-port"
+    }
+]

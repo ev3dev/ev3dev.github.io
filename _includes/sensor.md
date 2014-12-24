@@ -12,7 +12,7 @@
 
 <table id="sensor-info">
     <tr class="{% cycle 'info': 'd0', 'd1' %}">
-        <th><code>name</code></th>
+        <th><code>device_name</code></th>
         <td><code>{{ sensor.name }}</code></td>
     </tr>
     {%if sensor.vendor_website %}
@@ -44,7 +44,7 @@
             {%if sensor.device_class %}
                 <span markdown="1">{{ sensor.device_class }}</span><!--
             {% else %}
-                <span markdown="1">[msensor]</span><!--
+                <span markdown="1">[lego-sensor]</span><!--
             {% endif %}
             {%if sensor.device_class_footnote %}
                 --><span markdown="1">{{ sensor.device_class_footnote }}</span><!--
@@ -84,9 +84,6 @@
     {% endif %}
 </table>
 
-Values in the tables that look like `this` are the names of sysfs attributes
-or values returned by said attributes.
-
 {%if sensor.device_class == null %}
 ### Modes
 
@@ -95,11 +92,11 @@ or values returned by said attributes.
         <th><code>mode</code></th>
         <th>Description</th>
         <th><code>units</code></th>
-        <th><code>dp</code><span markdown="1">[^dp]</span></th>
+        <th><code>decimals</code><span markdown="1">[^decimals]</span></th>
         <th><code>num_values</code></th>
         <th>Values</th>
     </tr>
-    {% for mode in sensor.ms_mode_info %}
+    {% for mode in sensor.mode_info %}
     {% if mode.notes %}
         {% assign footnotes=footnotes | append: mode.notes %}
     {% endif %}
@@ -175,8 +172,8 @@ or values returned by said attributes.
     {% endfor %}
 </table>
 
-[^dp]: Decimal places. For example, if the range of a value is from 0 to 1000
-    and `dp` is `1`, then the acutal range is 0.0 to 100.0 in the units specified.
+[^decimals]: Decimal places. For example, if the range of a value is from 0 to 1000
+    and `decimals` is `1`, then the acutal range is 0.0 to 100.0 in the units specified.
 
 [^not-read-only]: This mode is not availible when the sensor is connected to a
     read-only input port like the HiTechnic NXT Sensor MUX.
@@ -190,7 +187,7 @@ or values returned by said attributes.
         <th><code>command</code></th>
         <th>Description</th>
     </tr>
-    {% for command in sensor.ms_cmd_info %}
+    {% for command in sensor.cmd_info %}
     {% if command.notes %}
         {% assign footnotes=footnotes | append: command.notes %}
     {% endif %}
@@ -202,7 +199,7 @@ or values returned by said attributes.
             {% endif %}
             -->
         </td>
-        <td>{{ command.description }}</td>
+        <td><span markdown="1">{{ command.description }}</span></td>
     </tr>
     {% endfor %}
 </table>
@@ -214,4 +211,4 @@ This sensor does not support commands.
 
 {{ footnotes }}
 
-[msensor]: ../../drivers/msensor-class
+[lego-sensor]: ../../drivers/lego-sensor-class

@@ -17,6 +17,9 @@ the motor is plugged in to).
 to `run` will cause the servo to be driven to the position set in the
 `position` attribute. Setting to `float` will remove power from the motor.
 
+`device_name` (read-only)
+: Returns the name of the servo device/driver.
+
 `max_pulse_ms` (read/write)
 : Used to set the pulse size in milliseconds for the signal that tells the
 servo to drive to the maximum (clockwise) position. Default value is 2400.
@@ -36,9 +39,6 @@ changes to this attribute to take effect.
 servo to drive to the miniumum (counter-clockwise) position. Default value
 is 600. Valid values are 300 to 700. You must write to the position
 attribute for changes to this attribute to take effect.
-
-`name` (read-only)
-: Returns the name of the servo controller's driver.
 
 `polarity` (read/write)
 : Sets the polarity of the servo. Valid values are `normal` and `inverted`.

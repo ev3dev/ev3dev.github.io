@@ -32,8 +32,9 @@ which one your have or just use the generic driver.
 WeDo sensors, referred to as **Analog/WeDo**, are also analog sensors. They are
 actually electrically similar to Analog/EV3 sensors (require 5V power and have
 ID resistor). Currently, we only support WeDo sensors attached to a WeDo hub,
-but if someone would like to design a cable and modify the `ev3-analog-sensor`
-driver, we could easily make them work with the input ports on the EV3.
+but if someone would like to design a cable and modify the `wedo-sensor` and
+`lego-ports` drivers, we could easily make them work with the input ports on
+the EV3.
 
 RCX sensors also fall into this category, but do not work with the EV3 - at
 least not with the converter cable described in the NXT Hardware Developers
@@ -74,7 +75,7 @@ not just the input ports.
 General resources:
 
 * [Sensor Tutorial]
-* [The MINDSTORMS Sensor (msensor) Class][msensor class]
+* [The LEGO Sensor (lego-sensor) Class][lego-sensor class]
 * [EV3 Input Port Driver]
 
 I2C sensor resources (applies to both I2C/NXT and I2C/Other):
@@ -137,7 +138,11 @@ kernel.
                 --><span markdown="1">[^ev3-uart-driver]</span><!--
             {% endif %}
             -->
+            {% if sensor.module %}
+            <span style="white-space:nowrap;">({{ sensor.module }})</span>
+            {% else %}
             <span style="white-space:nowrap;">({{ sensor.sensor_type }})</span>
+            {% endif %}
         </td>
     </tr>
     {% assign prev_vendor_name = sensor.vendor_name %}
@@ -160,9 +165,11 @@ kernel.
     You must run `modprobe lm75` for this to happen. You can also make the
     lm75 module load automatically on boot by adding it to `/etc/modules`.
 
-[^ev3-uart-driver]: This is not the name of a real driver. UART/EV3 sensors do
-    not have individual drivers. This is the value returned by the `name`
-    attribute in the [msensor class].
+[^ev3-uart-driver]: When UART/EV3 sensors are connecte to an EV3 input port
+    (or any other tty device for that matter), they actually use the
+    `ev3-uart-sensor-ld` driver, which is a tty line discipline. The
+    `ev3-uart-sensor` module is currently only used with the mindsensors.com
+    EV3 Sensor Multiplexer.
 
 [^mi-xg1300l]: The auto-detection algorithm detects this sensor as an I2C
     sensor and the port is automatically put into I2C mode. However, this sensor
@@ -178,6 +185,6 @@ kernel.
 [using-uart-sensors-on-any-linux]: http://lechnology.com/2014/09/using-uart-sensors-on-any-linux/
 [opening an issue]: https://github.com/ev3dev/ev3dev/issues
 [contributing page]: http://www.ev3dev.org/contributing/
-[msensor class]: /docs/drivers/msensor-class
+[lego-sensor class]: /docs/drivers/lego-sensor-class
 [EV3 Input Port Driver]: /docs/drivers/ev3-input-port
 [Supported Sensors]: #supported-sensors

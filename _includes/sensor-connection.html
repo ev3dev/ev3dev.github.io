@@ -16,6 +16,10 @@
     {% else %}
         {% assign autodetect = "Y" %}
     {% endif %}
+{% when 'wedo-hub-sensor' %}
+    {% assign connection = "USB" %}
+    {% assign autodetect = "Y" %}
+    {% assign sensor.sensor_type = "wedo" %}
 {% when 'wedo-sensor' %}
     {% assign connection = "Analog/WeDo" %}
     {% assign autodetect = "Y" %}
@@ -25,7 +29,7 @@
 {% when 'lm75' %}
     {% assign connection = "I2C/Other" %}
     {% assign autodetect = "Y[^lm75]" %}
-{% when 'legoev3-uart' %}
+{% when 'ev3-uart-sensor' %}
     {% assign connection = "UART/EV3" %}
     {% assign autodetect = "Y" %}
 {% else %}
