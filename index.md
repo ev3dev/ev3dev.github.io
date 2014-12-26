@@ -36,26 +36,7 @@ you can install whatever language you like.
 
 And although you *can* directly access the APIs via file I/O if you want to,
 let's face it: that's tedious. It's much easier when you have a higher-level
-library to use. We have an official "unified" language binding repository
-[here](http://github.com/ev3dev/ev3dev-lang), with support for C++, Lua,
-Node.JS and vala.
-
-These unified bindings are all built around a single
-[API specification](https://github.com/ev3dev/ev3dev-lang/blob/develop/wrapper-specification.md)
-so the interface is almost identical for each, and they are being updated and
-enhanced regularly. You can also get bindings for other languages from our
-contributors. Here's a full list:
-
-* Unified bindings:
-    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
-    * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
-    * [Node.js](https://github.com/ev3dev/ev3dev-lang/tree/develop/js)
-    * [R](https://github.com/ev3dev/ev3dev-lang/tree/develop/R)
-    * [Vala](https://github.com/ev3dev/ev3dev-lang/tree/develop/vala)
-* Extra languages:
-    * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
-    * [Python](https://github.com/topikachu/python-ev3) by @topikachu
-    * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
+library to use. Learn more about our pre-made language bindings on the [documentation page](docs/libraries).
 
 ## Features
 
