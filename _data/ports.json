@@ -22,6 +22,8 @@
         "name": "ht-nxt-smux-port",
         "num_modes": 2,
         "prefix": "mux",
+        "source_file": "drivers/lego/sensors/ht_nxt_smux.c",
+        "source_line": 38,
         "url_name": "ht-nxt-smux-port"
     },
     {
@@ -81,6 +83,8 @@
         "name": "legoev3-input-port",
         "num_modes": 8,
         "prefix": "in",
+        "source_file": "drivers/lego/ev3/legoev3_ports_in.c",
+        "source_line": 289,
         "url_name": "legoev3-input-port"
     },
     {
@@ -127,6 +131,8 @@
         "name": "legoev3-output-port",
         "num_modes": 5,
         "prefix": "out",
+        "source_file": "drivers/lego/ev3/legoev3_ports_out.c",
+        "source_line": 138,
         "url_name": "legoev3-output-port"
     },
     {
@@ -152,6 +158,8 @@
         "name": "ms-ev3-smux-port",
         "num_modes": 2,
         "prefix": "mux",
+        "source_file": "drivers/lego/sensors/ms_ev3_smux.c",
+        "source_line": 40,
         "url_name": "ms-ev3-smux-port"
     },
     {
@@ -168,6 +176,8 @@
         "name": "wedo-port",
         "num_modes": 1,
         "prefix": "wedo",
+        "source_file": "drivers/lego/wedo/wedo_port.c",
+        "source_line": 331,
         "url_name": "wedo-port"
     }
 ]
