@@ -104,4 +104,4 @@ kernel.
 [LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [LEGO 8886]: http://www.bricklink.com/catalogItem.asp?S=8886-1
 [LEGO 8871]: http://www.bricklink.com/catalogItem.asp?S=8871-1
-[EV3 Output Port Driver]: /docs/drivers/ev3-output-port
+[EV3 Output Port Driver]: /docs/ports/legoev3-output-port
