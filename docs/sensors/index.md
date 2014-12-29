@@ -186,5 +186,5 @@ kernel.
 [opening an issue]: https://github.com/ev3dev/ev3dev/issues
 [contributing page]: http://www.ev3dev.org/contributing/
 [lego-sensor class]: /docs/drivers/lego-sensor-class
-[EV3 Input Port Driver]: /docs/drivers/ev3-input-port
+[EV3 Input Port Driver]: /docs/ports/legoev3-input-port
 [Supported Sensors]: #supported-sensors
