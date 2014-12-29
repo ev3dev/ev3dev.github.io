@@ -50,6 +50,7 @@ Possible values are:
     - `s16_be`: Signed 16-bit integer, big endian
     - `s32`: Signed 32-bit integer (int)
     - `float`: IEEE 754 32-bit floating point (float)
+
 `command` (write-only)
 : Sends a command to the sensor.
 
