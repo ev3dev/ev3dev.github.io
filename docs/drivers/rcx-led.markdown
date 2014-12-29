@@ -16,5 +16,5 @@ This device is loaded when an [ev3-output-port] is set to `rcx-led` mode.
 It is not automatically detected.
 
 [leds]: https://github.com/ev3dev/ev3dev/wiki/Using-the-LEDs
-[ev3-output-port]: ../ev3-output-port
+[ev3-output-port]: docs/ports/legoev3-output-port
 
