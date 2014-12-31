@@ -11,7 +11,7 @@ Would you like your project added to the list? We would!
 
 <ul id="projects-list">
     {% for post in site.posts %}
-        {% if post.categories.first == "projects" %}
+        {% if post.categories contains "projects" %}
             <li>
                 <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
                 {% if post.author %}

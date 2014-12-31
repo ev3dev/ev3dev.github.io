@@ -5,7 +5,7 @@
         if ($('#header').height() <= 50) {
 
             $('#header').removeClass('mobile-hidden');
-            $('#header').animate({ height: 396 }, 400, function () {
+            $('#header').animate({ height: 446 }, 400, function () {
                 $('#header').height('auto');
             });
         }
