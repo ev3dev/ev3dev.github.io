@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+<div class="breadcrumbs">
+    <a href="{{ site.github.url }}/news">&lt; Back to News</a>
+</div>
+<div class="content-wrapper-for-sidebar">
+    {{ content }}
+</div>
+<div class="page-sidebar">
+    <h3>
+        Post Info
+    </h3>
+    Posted on {{ page.date | date_to_long_string  }}
+    <br/>
+    {% if page.author %}
+        <br />Posted By:<br /><br />
+        {% assign author_card = page.author %}
+        {% include author-card.html %}
+    {% endif %}
+</div>

@@ -50,6 +50,12 @@ defaults:
       type: "posts"
     values:
       layout: "project"
+  -
+    scope:
+      path: "news"
+      type: "posts"
+    values:
+      layout: "news"
       
 kramdown:
     toc_levels: "2,3"

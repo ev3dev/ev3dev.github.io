@@ -1,0 +1,20 @@
+---
+layout: page
+title: News Archive
+subtitle: An archive of all news items on this site
+---
+
+
+{% for post in site.posts %}
+    {% if post.categories contains "news" %}
+    <div class="news-item">
+        <div class="news-item-header">
+            <h2><a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a></h2>
+            <ol class="news-item-info">
+                <li> <h5> Posted by {{ post.author }} </h5> </li>
+                <li> <h5> {{ post.date | date_to_long_string  }} </h5> </li>
+            </ol>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
