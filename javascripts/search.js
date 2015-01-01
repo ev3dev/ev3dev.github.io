@@ -6,10 +6,11 @@ var searchData;
 var dataLoading = false;
 var itemLoadTimer, searchKeystrokeEventTimer;
 
-var projectResultArea, docResultArea, miscResultArea;
+var projectResultArea, docResultArea, newsResultArea, miscResultArea;
 $(document).ready(function () {
     docResultArea = $('#search-results-docs > div');
     projectResultArea = $('#search-results-projects > div');
+    newsResultArea = $('#search-results-news > div');
     miscResultArea = $('#search-results-misc > div');
     
     var searchQuery = getQueryParam("search");
@@ -146,6 +147,7 @@ function doSearch(query) {
     //Clear existing results
     docResultArea.children('.search-result').remove();
     projectResultArea.children('.search-result').remove();
+    newsResultArea.children('.search-result').remove();
     miscResultArea.children('.search-result').remove();
 
     //Start the dropdown box's 'open' animation
@@ -164,6 +166,8 @@ function doSearch(query) {
             resultArea = docResultArea;
         else if(categoryTags.indexOf('projects') != -1)
             resultArea = projectResultArea;
+        else if(categoryTags.indexOf('news') != -1)
+            resultArea = newsResultArea;
 
         resultArea.loadTemplate($('#search-result-template'), results[i], { append: true} );
 

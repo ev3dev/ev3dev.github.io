@@ -7,11 +7,7 @@ layout:
       "title"    : "{{ post.title }}",
         "href": "{{ site.github.url }}{{ post.url }}",
         "author":  "{{ post.author | join: ', ' }}",
-        "date": {
-            "day": "{{ post.date | date: "%d" }}",
-            "month": "{{ post.date | date: "%B" }}",
-            "year": "{{ post.date | date: "%Y" }}"
-        },
+        "date": "{{ post.date | date_to_long_string }}",
         "loopid" : "post-{{ forloop.index }}",
         "category": "{{ post.categories }}"
     },
