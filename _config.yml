@@ -46,11 +46,16 @@ defaults:
       layout: "page"
   -
     scope:
-      path: ""
+      path: "projects"
       type: "posts"
     values:
       layout: "project"
-      category: "projects"
-
+  -
+    scope:
+      path: "news"
+      type: "posts"
+    values:
+      layout: "news"
+      
 kramdown:
     toc_levels: "2,3"

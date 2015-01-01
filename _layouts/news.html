@@ -1,0 +1,32 @@
+---
+layout: page
+---
+
+{% assign news_count = 0 %}
+{% for post in site.posts %}
+    {% if post.categories contains "news" %}
+        {% assign news_count = news_count | plus: 1 %}
+        {% if post.id == page.id and news_count > 5 %}
+            {% assign archive_extension = '/archive' %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<div class="breadcrumbs">
+    <a href="{{ site.github.url }}/news{{ archive_extension }}">&lt; Back to News</a>
+</div>
+<div class="content-wrapper-for-sidebar">
+    {{ content }}
+</div>
+<div class="page-sidebar">
+    <h3>
+        Post Info
+    </h3>
+    Posted on {{ page.date | date_to_long_string  }}
+    <br/>
+    {% if page.author %}
+        <br />Posted By:<br /><br />
+        {% assign author_card = page.author %}
+        {% include author-card.html %}
+    {% endif %}
+</div>
