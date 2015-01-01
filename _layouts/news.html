@@ -2,8 +2,18 @@
 layout: page
 ---
 
+{% assign news_count = 0 %}
+{% for post in site.posts %}
+    {% if post.categories contains "news" %}
+        {% assign news_count = news_count | plus: 1 %}
+        {% if post.id == page.id and news_count > 5 %}
+            {% assign archive_extension = '/archive' %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
 <div class="breadcrumbs">
-    <a href="{{ site.github.url }}/news">&lt; Back to News</a>
+    <a href="{{ site.github.url }}/news{{ archive_extension }}">&lt; Back to News</a>
 </div>
 <div class="content-wrapper-for-sidebar">
     {{ content }}
