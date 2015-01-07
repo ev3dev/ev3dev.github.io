@@ -132,7 +132,7 @@
         "num_modes": 5,
         "prefix": "out",
         "source_file": "drivers/lego/ev3/legoev3_ports_out.c",
-        "source_line": 138,
+        "source_line": 130,
         "url_name": "legoev3-output-port"
     },
     {
@@ -169,7 +169,7 @@
             {
                 "description": "Automatic",
                 "id": "0",
-                "name": "AUTO"
+                "name": "auto"
             }
         ],
         "module": "wedo",
@@ -177,7 +177,7 @@
         "num_modes": 1,
         "prefix": "wedo",
         "source_file": "drivers/lego/wedo/wedo_port.c",
-        "source_line": 331,
+        "source_line": 410,
         "url_name": "wedo-port"
     }
 ]
