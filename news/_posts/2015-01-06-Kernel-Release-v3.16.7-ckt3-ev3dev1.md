@@ -1,6 +1,6 @@
 ---
 author: "@dlech"
-title: "Kernel Release v3.16.7-ckt3-ev3dev1"
+title: "Kernel Release: v3.16.7-ckt3-ev3dev1"
 ---
 
 Kernel version 3.16.7-ckt3-ev3dev1 has been released. This release includes the
