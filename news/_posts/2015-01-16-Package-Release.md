@@ -10,6 +10,7 @@ I've pushed out two updated packages and one new package today.
 The package now installs a default `/etc/connman/main.conf` file.
 
 There are also a couple bug fixes related to bluetooth thethering.
+
 * Running `connmanctl tether bluetooth [on|off]` no longer returns an false error message.
 * Bluetooth tethering stays enabled across reboots if `PersistentTetheringMode` option is set.
 
