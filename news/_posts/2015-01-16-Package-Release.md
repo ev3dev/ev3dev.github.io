@@ -1,6 +1,6 @@
 ---
 author: "@dlech"
-title: "Package Release: connman (1.27-0ev3dev3), ev3dev-connman-config (1), grx (2.4.9-0ev3dev2)"
+title: "Package Release: connman, ev3dev-connman-config, grx"
 ---
 
 I've pushed out two updated packages and one new package today.
