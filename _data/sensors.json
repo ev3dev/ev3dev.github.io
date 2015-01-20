@@ -1315,7 +1315,8 @@
                 "name": "RGB-RAW",
                 "units_description": "color",
                 "value0": "Red??? (0 to 1020???)",
-                "value1": "Blue??? (0 to 1020???)"
+                "value1": "Green??? (0 to 1020???)",
+                "value2": "Blue??? (0 to 1020???)"
             },
             {
                 "data_sets": "4",
@@ -2594,7 +2595,7 @@
             {
                 "data_sets": "8",
                 "data_type": "LEGO_SENSOR_DATA_S16",
-                "description": "Raw values",
+                "description": "Uncalibrated values",
                 "id": "1",
                 "name": "RAW",
                 "raw_max": "USHRT_MAX",
@@ -2623,6 +2624,215 @@
         "vendor_part_name": "Light Sensor Array",
         "vendor_part_number": "LightSensorArray",
         "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=168"
+    },
+    {
+        "cmd_info": [
+            {
+                "description": "Calibrate white",
+                "id": "0",
+                "name": "CAL-WHITE"
+            },
+            {
+                "description": "Calibrate black",
+                "id": "1",
+                "name": "CAL-BLACK"
+            },
+            {
+                "description": "Put sensor to sleep",
+                "id": "2",
+                "name": "SLEEP",
+                "name_footnote": "[^sleep]",
+                "notes": "\n[^sleep]: `poll_ms` must be set to `0` in order for sensor to sleep.\n    \n    "
+            },
+            {
+                "description": "Wake up the sensor",
+                "id": "3",
+                "name": "WAKE",
+                "name_footnote": "[^wake]",
+                "notes": "\n[^wake]: Will return an error (-ENXIO) if sensor is actually asleep.\n    Completes successfully if sensor is already awake.\n    \n    "
+            },
+            {
+                "description": "Color inversion (White line on a black background)",
+                "id": "4",
+                "name": "INV-COL"
+            },
+            {
+                "description": "Reset Color inversion (black line on a white background).",
+                "id": "5",
+                "name": "RST-COL"
+            },
+            {
+                "description": "Take a snapshot.",
+                "id": "6",
+                "name": "SNAP",
+                "name_footnote": "[^snapshot-command]",
+                "notes": "\n[^snapshot-command]: The \"SNAP\" command looks at the line\n    under the sensor and stores the width and position of the\n    line in sensor\u2019s memory. Subsequently, sensor will use\n    these characteristics of line to track it. This command\n    inverts the colors if it sees a white line on black background.\n    (PID parameters are not affected).\n    \n    "
+            },
+            {
+                "description": "Configures sensor for 60Hz electrical mains",
+                "id": "7",
+                "name": "60HZ"
+            },
+            {
+                "description": "Configures sensor for 50Hz electrical mains",
+                "id": "8",
+                "name": "50HZ"
+            },
+            {
+                "description": "Configures sensor for any (50/60Hz) electrical mains",
+                "id": "9",
+                "name": "UNIVERSAL"
+            }
+        ],
+        "default_address": "0x01",
+        "default_address_footnote": "[^address]",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'W'",
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_data": "'B'",
+                "cmd_reg": "0",
+                "id": "1"
+            },
+            {
+                "cmd_data": "'D'",
+                "cmd_reg": "0",
+                "id": "2"
+            },
+            {
+                "cmd_data": "'P'",
+                "cmd_reg": "0",
+                "id": "3"
+            },
+            {
+                "cmd_data": "'I'",
+                "cmd_reg": "0",
+                "id": "4"
+            },
+            {
+                "cmd_data": "'R'",
+                "cmd_reg": "0",
+                "id": "5"
+            },
+            {
+                "cmd_data": "'S'",
+                "cmd_reg": "0",
+                "id": "6"
+            },
+            {
+                "cmd_data": "'A'",
+                "cmd_reg": "0",
+                "id": "7"
+            },
+            {
+                "cmd_data": "'E'",
+                "cmd_reg": "0",
+                "id": "8"
+            },
+            {
+                "cmd_data": "'U'",
+                "cmd_reg": "0",
+                "id": "9"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "2",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "3",
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MS_LINE_LEADER",
+        "mode_info": [
+            {
+                "data_type": "LEGO_SENSOR_DATA_S8",
+                "description": "Line Follower",
+                "id": "0",
+                "name": "PID",
+                "notes": "\n[^pid-mode-value0]: \"Steering\" is the power value\n    returned by the sensor to correct your course. Add\n    this value to your left motor and subtract from\n    right motor.\n    \n    ",
+                "units": "pct",
+                "units_description": "percent",
+                "value0": "Steering (-100 to 100)",
+                "value0_footnote": "[^pid-mode-value0]"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "LEGO_SENSOR_DATA_S8",
+                "description": "Line Follower - all values",
+                "id": "1",
+                "name": "PID-ALL",
+                "notes": "\n[^pid-mode-value1]: \"Average\" is the weighted average\n    of the sensor reading. The average is a weighted\n    average of the bits set to 1 based on the position.\n    i.e. left most bit has weight of 10, second bit has\n    weight of 20.\n    \n[^pid-mode-value2]: \"Result\" is a byte value of\n    the sensor reading. Each bit corresponding to the\n    sensor where the line is seen is set to 1, or else\n    the bit is zero.\n    \n    ",
+                "value0": "Steering (-100 to 100)",
+                "value0_footnote": "[^pid-mode-value0]",
+                "value1": "Average (0 to 80)",
+                "value1_footnote": "[^pid-mode-value1]",
+                "value2": "Result (as bits)",
+                "value2_footnote": "[^pid-mode-value2]"
+            },
+            {
+                "data_sets": "8",
+                "description": "Calibrated values",
+                "id": "2",
+                "name": "CAL",
+                "raw_max": "100",
+                "si_max": "100",
+                "units": "pct",
+                "units_description": "percent",
+                "value0": "LED 0 (0 to 100)",
+                "value1": "LED 1 (0 to 100)",
+                "value2": "LED 2 (0 to 100)",
+                "value3": "LED 3 (0 to 100)",
+                "value4": "LED 4 (0 to 100)",
+                "value5": "LED 5 (0 to 100)",
+                "value6": "LED 6 (0 to 100)",
+                "value7": "LED 7 (0 to 100)"
+            },
+            {
+                "data_sets": "8",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Uncalibrated values",
+                "id": "3",
+                "name": "RAW",
+                "raw_max": "USHRT_MAX",
+                "si_max": "USHRT_MAX",
+                "value0": "LED 0 (0 to ???)",
+                "value1": "LED 1 (0 to ???)",
+                "value2": "LED 2 (0 to ???)",
+                "value3": "LED 3 (0 to ???)",
+                "value4": "LED 4 (0 to ???)",
+                "value5": "LED 5 (0 to ???)",
+                "value6": "LED 6 (0 to ???)",
+                "value7": "LED 7 (0 to ???)"
+            }
+        ],
+        "name": "ms-line-leader",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
+        "num_commands": "10",
+        "num_modes": "4",
+        "product_id": "LineLdr",
+        "sensor_type": "nxt-i2c-sensor",
+        "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
+        "source_line": 299,
+        "url_name": "mindsensors.com-line-follower-sensor",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "Line Follower Sensor",
+        "vendor_part_number": "LineLeader",
+        "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=111"
     },
     {
         "default_address": "0x58",
