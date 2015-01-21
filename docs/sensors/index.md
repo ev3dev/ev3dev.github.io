@@ -165,7 +165,7 @@ kernel.
     You must run `modprobe lm75` for this to happen. You can also make the
     lm75 module load automatically on boot by adding it to `/etc/modules`.
 
-[^ev3-uart-driver]: When UART/EV3 sensors are connecte to an EV3 input port
+[^ev3-uart-driver]: When UART/EV3 sensors are connected to an EV3 input port
     (or any other tty device for that matter), they actually use the
     `ev3-uart-sensor-ld` driver, which is a tty line discipline. The
     `ev3-uart-sensor` module is currently only used with the mindsensors.com
