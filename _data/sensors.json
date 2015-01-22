@@ -2452,6 +2452,7 @@
     {
         "default_address": "0x50, 0x51, 0x52",
         "default_address_footnote": "[^addresses]",
+        "device_class_footnote": "[^port-and-sensor-devices]",
         "id": "MS_EV3_SENSOR_MUX",
         "mode_info": [
             {
@@ -2464,7 +2465,7 @@
             }
         ],
         "name": "ms-ev3-smux",
-        "notes": "\n[^addresses]: This sensor appears as three separate sensors,\n    one for each channel on the sensor mux.\n    \n    ",
+        "notes": "\n[^addresses]: This sensor appears as three separate sensors,\n    one for each channel on the sensor mux.\n    \n[^port-and-sensor-devices]: In addition to loading three\n    [lego-sensor] devices for the sensor mux itself, three\n    [lego-port] devices are added as well. These [ms-ev3-smux-port]\n    devices must be used to manually specify the type of sensor\n    that is attached to each port.\n    ^\n    [lego-port]: /docs/drivers/lego-port-class\n    [ms-ev3-smux-port]: /docs/ports/ms-ev3-smux-port\n    \n    ",
         "num_modes": "2",
         "num_read_only_modes": "1",
         "ops.poll_cb": "ms_ev3_smux_poll_cb",
@@ -2883,7 +2884,7 @@
             }
         ],
         "name": "ms-8ch-servo",
-        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    .\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/motors/servo-motor-class\n    \n    ",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    ^\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/motors/servo-motor-class\n    \n    ",
         "num_modes": "2",
         "ops.probe_cb": "ms_8ch_servo_probe_cb",
         "ops.remove_cb": "ms_8ch_servo_remove_cb",
