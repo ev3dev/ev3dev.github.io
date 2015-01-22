@@ -12,7 +12,7 @@ subject: Ethernet Over USB
 
     {% include screenshot.html source="/images/brickman/networking-technologies-gadget-selected.png" %}
 
-3.  On your host computer, open up *System Settings* and select *Network*
+3.  On your host computer, with the Ev3 connected via USB, open up *System Settings* and select *Network*
 
     {% include screenshot.html source="/images/Ubuntu-CDC/System-Settings-Network.png" %}
 
