@@ -14,7 +14,7 @@ First, here are the things you need before starting:
 * A LEGO MINDSTORMS EV3 Intelligent Brick (obviously).
 * A [microSD] or [microSDHC] card. [microSDXC] is not supported (you
   might be able to get it to work, but it will operate at reduced speed).
-  This means that cards larger thatn 32GB are not supported.
+  This means that cards larger than 32GB are not supported.
   Also look at the [speed class rating]. Class 10 is the fastest, but
   slower speeds will work just fine. Ultra High Speed (UHS) classes are not
   supported (again, they should work, but not at the rated speed).
