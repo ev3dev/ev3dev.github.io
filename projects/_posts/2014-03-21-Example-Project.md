@@ -8,7 +8,7 @@ youtube_video_id: rrNaLfE9PWA # The video ID of the YouTube video to be displaye
 
 project_homepage_url: "http://example.com/my-super-cool-project" # Homepage for this project
 source_code_url: "https://github.com/myuser/myrepo" # Provide a link to your code
-building_instructions_url: "http://example.com/building-instructions.pdf"
+building_instructions_url: "http://example.com/building-instructions.pdf" # how to build the model out of LEGO (*not* how to build the source code)
 ---
 
 Put your content here. It will be processed as markdown using the 
