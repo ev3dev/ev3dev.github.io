@@ -1,6 +1,6 @@
 ---
 # Fill out as many of these as you can, and delete the rest.
-author: [ "@donwojtallo", "Wojciech Ałaszewski" ] # The person(s) who created this project. 
+author: [ "@donwojtallo" ] # The person(s) who created this project. 
 # Any author that starts with "@" will pull information from github.
 programming_language: "JavaScript" # The programming language used in this project
 
@@ -8,7 +8,6 @@ youtube_video_id: kHUkGucSeU0 # The video ID of the YouTube video to be displaye
 
 project_homepage_url: "https://github.com/donwojtallo/ev3dev-snake-js" # Homepage for this project
 source_code_url: "https://github.com/donwojtallo/ev3dev-snake-js" # Provide a link to your code
-building_instructions_url: "https://github.com/donwojtallo/ev3dev-snake-js"
 ---
 
 A simple snake game for Lego EV3 running ev3dev firmware.
