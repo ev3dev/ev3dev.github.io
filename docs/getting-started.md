@@ -114,6 +114,12 @@ you want to use and on the OS of your host computer, so pick the one that applie
 * Bluetooth
     * For now, see instructions [here](https://github.com/ev3dev/ev3dev/issues/193#issuecomment-61431048). Bluetooth via brickman is comming sooner or later.
 
+## Step 4.5: Make sure the firstboot script ran correctly
+
+Recently, some users have reported problems that are releated to the firstboot script not running correctly.
+Please verify that the items in [this list](https://github.com/ev3dev/ev3dev/issues/267#issuecomment-73917167)
+are correct. If not, leave a comment to help us figure out what is going wrong.
+
 ## Step 5: First things to do with ev3dev
 
 Here are some suggestions of some things you should do to get your EV3 setup.
