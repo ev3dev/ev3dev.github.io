@@ -137,6 +137,9 @@ kernel.
             {% if connection == 'UART/EV3' %}
                 --><span markdown="1">[^ev3-uart-driver]</span><!--
             {% endif %}
+            {% if sensor.name == 'ev3-analog-XX' %}
+                --><span markdown="1">[^ev3-analog-driver]</span><!--
+            {% endif %}
             -->
             {% if sensor.module %}
             <span style="white-space:nowrap;">({{ sensor.module }})</span>
@@ -164,6 +167,10 @@ kernel.
 [^lm75]: Temperature sensors using the lm75 module can be auto-detected.
     You must run `modprobe lm75` for this to happen. You can also make the
     lm75 module load automatically on boot by adding it to `/etc/modules`.
+
+[^ev3-analog-driver]: The `XX` in `ev3-analog-XX` is replaced with the type id
+    of the sensor (`01` to `14`). Type id `02` is the LEGO EV3 Touch sensor,
+    so `ev3-analog-02` does not exist.
 
 [^ev3-uart-driver]: When UART/EV3 sensors are connected to an EV3 input port
     (or any other tty device for that matter), they actually use the
