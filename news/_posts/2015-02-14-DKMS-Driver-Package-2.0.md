@@ -1,5 +1,6 @@
 ---
 author: "@dlech"
+title: DKMS Driver Package 2.0
 ---
 
 In case you didn't know, you can actually use ev3dev drivers on anything
