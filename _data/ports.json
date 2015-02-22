@@ -23,7 +23,7 @@
         "num_modes": 2,
         "prefix": "mux",
         "source_file": "drivers/lego/sensors/ht_nxt_smux.c",
-        "source_line": 38,
+        "source_line": 39,
         "url_name": "ht-nxt-smux-port"
     },
     {
@@ -84,7 +84,7 @@
         "num_modes": 8,
         "prefix": "in",
         "source_file": "drivers/lego/ev3/legoev3_ports_in.c",
-        "source_line": 289,
+        "source_line": 291,
         "url_name": "legoev3-input-port"
     },
     {
@@ -159,7 +159,7 @@
         "num_modes": 2,
         "prefix": "mux",
         "source_file": "drivers/lego/sensors/ms_ev3_smux.c",
-        "source_line": 40,
+        "source_line": 42,
         "url_name": "ms-ev3-smux-port"
     },
     {

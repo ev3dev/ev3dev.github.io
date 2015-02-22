@@ -20,7 +20,7 @@
         "num_modes": "1",
         "sensor_type": "ev3-analog-sensor",
         "source_file": "drivers/lego/sensors/ev3_analog_sensor_defs.c",
-        "source_line": 45,
+        "source_line": 48,
         "url_name": "generic-ev3-analog-sensor",
         "vendor_part_name": "Generic EV3 Analog Sensor"
     },
@@ -743,7 +743,7 @@
                 "data_type": "LEGO_SENSOR_DATA_S8",
                 "description": "Compass Direction",
                 "id": "0",
-                "name": "COMAPASS",
+                "name": "COMPASS",
                 "raw_max": "180",
                 "si_max": "180",
                 "units": "deg",
@@ -758,7 +758,7 @@
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
         "source_line": 299,
         "url_name": "hitechnic-nxt-compass-sensor",
-        "vendor_id": "HiTechnc",
+        "vendor_id": "HITECHNC",
         "vendor_name": "HiTechnic",
         "vendor_part_name": "NXT Compass Sensor",
         "vendor_part_number": "NMC1034",
@@ -870,7 +870,7 @@
                 "value5_footnote": "[^values]"
             }
         ],
-        "name": "ht-nxt-ir-seeker-v2",
+        "name": "ht-nxt-ir-seek-v2",
         "num_modes": "4",
         "product_id": "NewIRDir",
         "sensor_type": "nxt-i2c-sensor",
@@ -981,34 +981,42 @@
         "i2c_mode_info": [
             {
                 "id": "0",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "1",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "2",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "3",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "4",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "5",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "6",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "7",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             }
         ],
@@ -1179,7 +1187,7 @@
                 "value0": "Distance (0-1003)"
             }
         ],
-        "name": "lego-ev3-uart-30",
+        "name": "ev3-uart-sensor-30",
         "num_modes": "5",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
@@ -1224,7 +1232,7 @@
                 "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Raw sensor value ???",
                 "id": "2",
-                "name": " GYRO-FAS",
+                "name": "GYRO-FAS",
                 "value0": "??? (-1464 to 1535)",
                 "value0_footnote": "[^direction]"
             },
@@ -1252,7 +1260,7 @@
                 "value3": "???"
             }
         ],
-        "name": "lego-ev3-uart-32",
+        "name": "ev3-uart-sensor-32",
         "num_modes": "5",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
@@ -1332,7 +1340,7 @@
                 "value3": "???"
             }
         ],
-        "name": "lego-ev3-uart-29",
+        "name": "ev3-uart-sensor-29",
         "num_modes": "6",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
@@ -1361,7 +1369,7 @@
         "num_modes": "1",
         "sensor_type": "ev3-analog-sensor",
         "source_file": "drivers/lego/sensors/ev3_analog_sensor_defs.c",
-        "source_line": 45,
+        "source_line": 48,
         "url_name": "lego-ev3-touch-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Touch Sensor",
@@ -1461,7 +1469,7 @@
                 "value1": "??? (0 to 1023)"
             }
         ],
-        "name": "lego-ev3-uart-33",
+        "name": "ev3-uart-sensor-33",
         "num_modes": "6",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
@@ -2742,18 +2750,22 @@
         "i2c_mode_info": [
             {
                 "id": "0",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "1",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "2",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "3",
+                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             }
         ],
@@ -2884,7 +2896,7 @@
             }
         ],
         "name": "ms-8ch-servo",
-        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    ^\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/motors/servo-motor-class\n    \n    ",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    ^\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/drivers/servo-motor-class\n    \n    ",
         "num_modes": "2",
         "ops.probe_cb": "ms_8ch_servo_probe_cb",
         "ops.remove_cb": "ms_8ch_servo_remove_cb",
