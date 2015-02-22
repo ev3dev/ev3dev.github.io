@@ -13,8 +13,9 @@ First, here are the things you need before starting:
 
 * A LEGO MINDSTORMS EV3 Intelligent Brick (obviously).
 * A [microSD] or [microSDHC] card. [microSDXC] is not supported (you
-  might be able to get it to work, but it will operate at reduced capacity and
-  speed). Also look at the [speed class rating]. Class 10 is the fastest, but
+  might be able to get it to work, but it will operate at reduced speed).
+  This means that cards larger than 32GB are not supported.
+  Also look at the [speed class rating]. Class 10 is the fastest, but
   slower speeds will work just fine. Ultra High Speed (UHS) classes are not
   supported (again, they should work, but not at the rated speed).
 * A computer with an adapter for the SD card. You will need administrator user
@@ -113,6 +114,12 @@ you want to use and on the OS of your host computer, so pick the one that applie
 * Bluetooth
     * For now, see instructions [here](https://github.com/ev3dev/ev3dev/issues/193#issuecomment-61431048). Bluetooth via brickman is comming sooner or later.
 
+## Step 4.5: Make sure the firstboot script ran correctly
+
+Recently, some users have reported problems that are releated to the firstboot script not running correctly.
+Please verify that the items in [this list](https://github.com/ev3dev/ev3dev/issues/267#issuecomment-73917167)
+are correct. If not, leave a comment to help us figure out what is going wrong.
+
 ## Step 5: First things to do with ev3dev
 
 Here are some suggestions of some things you should do to get your EV3 setup.
@@ -147,7 +154,7 @@ command to assign groups hiding at the end.
     	Home Phone []: 
     	Other []: 
     Is the information correct? [Y/n] y
-    root@ev3dev:~# usermod -a -G sudo,ev3dev,plugdev,audio,video user
+    root@ev3dev:~# usermod -a -G sudo,ev3dev,plugdev,audio,video,input,bluetooth user
 
 ### Set the time zone
 
