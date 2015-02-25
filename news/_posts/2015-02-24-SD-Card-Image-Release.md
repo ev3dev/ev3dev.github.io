@@ -1,6 +1,6 @@
 ---
-author: @dlech
-title: SD Card Image Release
+author: "@dlech"
+title: "SD Card Image Release"
 ---
 
 Yea! No more three hour apt-get upgrades for new installs!
