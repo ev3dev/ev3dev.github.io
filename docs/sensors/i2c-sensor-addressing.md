@@ -30,7 +30,7 @@ of the `i2c-tools` package to workaround this.
 | 0x00/0x01 | __0x00__ | *I2C spec: General call address / START byte* |
 | 0x02/0x03 | __0x01__ | LEGO NXT Ultrasonic and many 3rd party sensors <br /> *I2C spec: CBUS address* |
 | 0x04/0x05 | __0x02__ | LEGO Energy Storage <br /> *I2C spec: Reserved for different bus format* |
-| 0x06/0x07 | __0x03__ | *I2C spec: Reserved for future purposes* |
+| 0x06/0x07 | __0x03__ | mindsensors.com Motor Multiplexer <br /> *I2C spec: Reserved for future purposes* |
 | 0x08/0x09 | __0x04__ | *I2C spec: Hs-mode master code* |
 | 0x0A/0x0B | __0x05__ | *I2C spec: Hs-mode master code* |
 | 0x0C/0x0D | __0x06__ | *I2C spec: Hs-mode master code* |
