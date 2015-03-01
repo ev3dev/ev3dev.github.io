@@ -14,7 +14,7 @@ First, here are the things you need before starting:
 * A LEGO MINDSTORMS EV3 Intelligent Brick (obviously).
 * A [microSD] or [microSDHC] card. [microSDXC] is not supported (you
   might be able to get it to work, but it will operate at reduced speed).
-  This means that cards larger than 32GB are not supported.
+  Cards larger than 32GB will not work!
   Also look at the [speed class rating]. Class 10 is the fastest, but
   slower speeds will work just fine. Ultra High Speed (UHS) classes are not
   supported (again, they should work, but not at the rated speed).
@@ -28,8 +28,8 @@ First, here are the things you need before starting:
 
 ---
 
-**IMPORTANT:** The instructions on this page only apply to releases dated Oct.
-2014 or later. For earlier releases (i.e. wheesy "Latest Release"), see 
+**IMPORTANT:** The instructions on this page only apply to releases dated Feb.
+2015 or later. For earlier releases (i.e. wheesy "Latest Release"), see
 [Getting Started v2] on the old wiki. These older releases are no longer
 supported.
 
@@ -106,17 +106,19 @@ you want to use and on the OS of your host computer, so pick the one that applie
     * [Mac OS X](../tutorials/setting-up-ethernet-over-usb-on-mac)
     * [Windows](../tutorials/setting-up-ethernet-over-usb-on-windows)
 * USB Ethernet dongle (as in the kind with an RJ45 connector)
-    * If your network has a DHCP server, this will "just work". See brickman
+    * If your network has a DHCP server, this will "just work". See (non-existent) brickman
       docs for more info.
 * USB WiFi Dongle
     * Hopefully you can figure it out. I'm putting off writing detailed docs
       until brickman is a bit more stable.
 * Bluetooth
-    * For now, see instructions [here](https://github.com/ev3dev/ev3dev/issues/193#issuecomment-61431048). Bluetooth via brickman is comming sooner or later.
+    * [Linux (NetworkManager)](../tutorials/setting-up-ethernet-over-bluetooth-on-linux-networkmanager)
+    * [Mac OS X](../tutorials/setting-up-ethernet-over-bluetooth-on-mac)
+    * [Windows](../tutorials/setting-up-ethernet-over-bluetooth-on-windows)
 
 ## Step 4.5: Make sure the firstboot script ran correctly
 
-Recently, some users have reported problems that are releated to the firstboot script not running correctly.
+Recently, some users have reported problems that are related to the firstboot script not running correctly.
 Please verify that the items in [this list](https://github.com/ev3dev/ev3dev/issues/267#issuecomment-73917167)
 are correct. If not, leave a comment to help us figure out what is going wrong.
 
@@ -228,6 +230,7 @@ for some languages:
 
 - [Using brickstrap to cross compile and debug](https://github.com/ev3dev/ev3dev/wiki/Using-brickstrap-to-cross-compile-and-debug)
 - [C++, Lua and Vala language bindings/samples](https://github.com/ev3dev/ev3dev-lang)
+- [Closure](https://github.com/annapawlicka/clj-ev3dev)
 - [Google Go](https://github.com/ldmberman/GoEV3)
 - [Node.js](https://github.com/WasabiFan/ev3dev-NodeJS)
 - [Python](https://github.com/topikachu/python-ev3)
@@ -239,7 +242,9 @@ hang of it, you can even write your own interface library and have it listed her
 ## Step 7: Calling it a day
 
 When you are ready to wish your EV3 goodnight, turn if off by pressing the
-*back* button from the main menu in brickman and selecting *Power Off*.
+*back* button from the main menu in brickman or pressing and holding the *back*
+button from any screen in brickman. This will open a dialog where you can select
+*Power Off* to turn off the EV3.
 
 {% include screenshot.html source="/images/brickman/shutdown-menu.png" %}
 

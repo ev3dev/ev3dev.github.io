@@ -3,20 +3,20 @@ title: Setting Up Ethernet Over USB on Mac OS X
 subject: Ethernet Over USB
 ---
 
+These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
+If you are using an older version, please upgrade.
+
 1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
-    open the *USB* settings and make sure *CDC* is selected and active.
+    open the *Wireless and Networks* menu and select *USB*. Make sure *CDC* is
+    selected and active.
 
     {% include screenshot.html source="/images/brickman/usb-cdc-active.png" %}
 
-2.  Then, in *Networking*, make sure *Gadget* is enabled.
-
-    {% include screenshot.html source="/images/brickman/networking-technologies-gadget-selected.png" %}
-
-3.  On your Mac, open up *System Preferences* and select *Network*.
+2.  On your Mac, open up *System Preferences* and select *Network*.
 
     {% include screenshot.html source="/images/OSXRNDIS/SystemPreferencesNetwork.png" %}
 
-4.  Once you get the *Network* dialog, click on the `+` icon in the lower left
+3.  Once you get the *Network* dialog, click on the `+` icon in the lower left
     area to add a new network device. You'll need to select the CDC Composite
     Gadget in the drop down box. The name will be similar to what is shown
     below. I have renamed the service "ev3dev" so it's easier to keep track of
@@ -24,24 +24,24 @@ subject: Ethernet Over USB
 
     {% include screenshot.html source="/images/OSXRNDIS/AddNewDevice.png" %}
 
-5.  Click *Apply* to save your changes. After a short time, the ev3dev entry
+4.  Click *Apply* to save your changes. After a short time, the ev3dev entry
     (or whatever you named it) should show connected and have a Self-Assigned
     IP address
 
     {% include screenshot.html source="/images/OSXRNDIS/CDC-Connected.png" %}
 
-6. If you don't need to access the Internet from your EV3 over this
+5. If you don't need to access the Internet from your EV3 over this
     connection, manually configure the IP address to `192.168.2.1`. Note:
     you won't be able to update packages without an Internet connection.
 
     TODO: Need detailed description with screenshots.
 
-    Then skip to step 8.
+    Then skip to step 7.
 
     If you do want to be able to connect to the Internet from the EV3, continue
     with the next step.
 
-7.  To share our internet connection with the EV3. Go back to *System
+6.  To share our internet connection with the EV3. Go back to *System
     Preferences* and select *Sharing*.
 
     {% include screenshot.html source="/images/OSXRNDIS/SystemPreferencesSharing.png" %}
@@ -58,7 +58,7 @@ subject: Ethernet Over USB
 
     {% include screenshot.html source="/images/OSXRNDIS/Sharing-Internet-Connection-Warning.png" %}
 
-8.  Now, we need to assign an IP address to our EV3. In brickman, go to
+7.  Now, we need to assign an IP address to our EV3. In brickman, go to
     *Networking* and select *Manage connections...*, then select the *Wired*
     connection.
 
@@ -83,7 +83,7 @@ subject: Ethernet Over USB
 
     {% include screenshot.html source="/images/brickman/networking-ipv4-tab-with-mac-defaults.png" %}
 
-9.  For `ssh` access to the EV3 under OS X, you can use the good old `ssh`
+8.  For `ssh` access to the EV3 under OS X, you can use the good old `ssh`
     program from the terminal window. I'm sure there are other solutions, and
     if you send me your suggestions I'll add them to a list.
 

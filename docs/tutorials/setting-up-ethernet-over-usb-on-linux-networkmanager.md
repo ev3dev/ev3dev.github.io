@@ -3,25 +3,27 @@ title: Setting Up Ethernet Over USB on Linux with NetworkManager
 subject: Ethernet Over USB
 ---
 
+These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
+If you are using an older version, please upgrade.
+
 1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
-    open the *USB* settings and make sure *CDC* is selected and active.
+    open the *Wireless and Networks* menu and select *USB*. Make sure *CDC* is
+    selected and active.
 
     {% include screenshot.html source="/images/brickman/usb-cdc-active.png" %}
 
-2.  Then, in *Networking*, make sure *Gadget* is enabled.
-
-    {% include screenshot.html source="/images/brickman/networking-technologies-gadget-selected.png" %}
-
-3.  On your host computer, with the EV3 connected via USB, open up *System Settings* and select *Network*
+2.  On your host computer, with the EV3 connected via USB, open up *System Settings* and select *Network*
 
     {% include screenshot.html source="/images/Ubuntu-CDC/System-Settings-Network.png" %}
 
-4.  In the *Network* dialog, you should see a Wired connection that says
-    *Connecting*. Click the *Options...* button.
+3.  In the *Network* dialog, you should see a Wired connection that says
+    *Connecting*. It may say *Disconnected* instead if it has timed out already.
+    You can also idetentify the connection by the *Hardware Address* - it will
+    start with `12:16:53`. Click the *Options...* button for this connection.
 
     {% include screenshot.html source="/images/Ubuntu-CDC/Network-Connecting.png" %}
 
-5.  In the dialog that open, change the *Connection Name* to whatever you want
+4.  In the dialog that open, change the *Connection Name* to whatever you want
     (using *ev3dev* here). Select the *IPv4 Settings* tab and change the
     *Method* to *Shared to other computers*.
 
@@ -32,9 +34,9 @@ subject: Ethernet Over USB
 
     {% include screenshot.html source="/images/Ubuntu-CDC/Network-Connected.png" %}
 
-6.  Now, we need to assign an IP address to our EV3. In brickman, go to
-    *Networking* and select *Manage connections...*, then select the *Wired*
-    connection.
+5.  Now, we need to assign an IP address to our EV3. In brickman, go to
+    *Wireless and Networks* and select *All Network Connections*, then select
+    the *Wired* connection with the USB icon.
 
     {% include screenshot.html source="/images/brickman/networking-connections-wired-only.png" %}
 
@@ -57,7 +59,7 @@ subject: Ethernet Over USB
 
     {% include screenshot.html source="/images/brickman/networking-ipv4-tab-with-linux-defaults.png" %}
 
-7.  Now we are going to connect to the EV3 using ssh.
+6.  Now we are going to connect to the EV3 using ssh.
 
         user@host:~$ ssh root@10.42.0.3
 
