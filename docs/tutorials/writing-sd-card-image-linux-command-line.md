@@ -44,7 +44,7 @@ subject: SD Card Image
     `~/Download/` and our SD card is `/dev/sdb`. Adjust these values as
     needed. This will take a long time.
 
-        user@host ~ $ xzcat ~/Download/ev3dev.1900MB.img.xz | sudo dd bs=4M of=/dev/sdb
+        user@host ~ $ xzcat ~/Download/ev3dev-yyyy-mm-dd.img.xz | sudo dd bs=4M of=/dev/sdb
         [sudo] password for user:
 
     **TIP:** You can monitor the progress of this by running the following in
