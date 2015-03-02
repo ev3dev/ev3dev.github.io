@@ -3,6 +3,11 @@ title: Setting Up Ethernet Over Bluetooth on Mac OS X
 subject: Ethernet Over Bluetooth
 ---
 
+__Note:__ If you do not need to access the Internet from the EV3 brick, consider
+using [tethering] instead.
+
+---
+
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
@@ -43,7 +48,10 @@ If you are using an older version, please upgrade.
     {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Network-Add-PAN.png" %}
 
 8.  You should see your EV3 listed next to *Device:*. Click *Apply* to save your
-    changes, but don't connect yet.
+    changes, but don't connect yet. In fact, don't try to use the *Connect*
+    button you see here. It is for [tethering] and won't work for the connection
+    we are setting up here. Instead, we will initiate the connection from the
+    EV3 itself later.
 
     {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Network-Bluetooth-PAN.png" %}
 
@@ -123,3 +131,5 @@ If you are using an older version, please upgrade.
         Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
         permitted by applicable law.
         root@ev3dev:~# 
+
+[tethering]: /docs/tutorials/using-bluetooth-tethering-on-mac
