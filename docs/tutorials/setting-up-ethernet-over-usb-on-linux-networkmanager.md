@@ -96,3 +96,7 @@ If you are using an older version, please upgrade.
     If ssh fails, you can check connectivity by pinging the brick:
         
         user@host:~$ ping 10.42.0.3
+        
+    If you get a response, you are connected. Try using ssh again. Something may have gone wrong the first time.
+    
+    If nothing seems to be happening hit Ctrl-C to stop pinging. Something has gone wrong somewhere. Try looking here: https://github.com/ev3dev/ev3dev/issues/. If you cannot find your problem post about it.
