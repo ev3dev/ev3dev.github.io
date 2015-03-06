@@ -90,3 +90,9 @@ If you are using an older version, please upgrade.
         Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
         permitted by applicable law.
         root@ev3dev:~# 
+        
+7.  Troubleshooting
+
+    If ssh fails, you can check connectivity by pinging the brick:
+        
+        user@host:~$ ping 10.42.0.3
