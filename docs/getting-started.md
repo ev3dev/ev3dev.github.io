@@ -230,7 +230,7 @@ for some languages:
 
 - [Using brickstrap to cross compile and debug](https://github.com/ev3dev/ev3dev/wiki/Using-brickstrap-to-cross-compile-and-debug)
 - [C++, Lua and Vala language bindings/samples](https://github.com/ev3dev/ev3dev-lang)
-- [Closure](https://github.com/annapawlicka/clj-ev3dev)
+- [Clojure](https://github.com/annapawlicka/clj-ev3dev)
 - [Google Go](https://github.com/ldmberman/GoEV3)
 - [Node.js](https://github.com/WasabiFan/ev3dev-NodeJS)
 - [Python](https://github.com/topikachu/python-ev3)
