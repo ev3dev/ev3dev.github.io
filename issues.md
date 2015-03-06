@@ -22,7 +22,7 @@ Here is what you need to do:__
 
     <p>
         <form id="search-issue-form" onSubmit="window.open('https://github.com/ev3dev/ev3dev/issues?q=is%3Aissue+'
-                + document.getElementById('search-issues').value.replace(' ', '+'))">
+                + document.getElementById('search-issues').value.replace(' ', '+')); return false;">
             <input id="search-issues" type="search" placeholder="Example: hitechnic ir receiver" />
             <input type="submit" value="Search Issues" />
         </form>
