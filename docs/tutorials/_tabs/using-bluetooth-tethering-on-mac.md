@@ -1,16 +1,3 @@
----
-title: Using Bluetooth Tethering on Mac OS X
-subject: Ethernet Over Bluetooth
----
-
-__Note:__ You will not be able to access the Internet from your EV3 using this
-connection. If you need to access the Internet via Bluetooth, [do this instead].
-
----
-
-These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
-If you are using an older version, please upgrade.
-
 1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
     open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
     *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
@@ -103,5 +90,3 @@ If you are using an older version, please upgrade.
         Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
         permitted by applicable law.
         root@ev3dev:~# 
-
-[do this instead]: /docs/tutorials/setting-up-ethernet-over-bluetooth-on-mac

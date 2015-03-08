@@ -3,11 +3,12 @@
 $(document).ready(function () {
     $('div[tab-area]').each(function (i, element) {
         var $tabArea = $(element);
+        var id = $tabArea.attr ('tab-area');
+        var urlParam = $(document).getUrlParam ('tabs-' + id);
         var $visibleContent;
+        var initalTabIndex = 0;
         $tabArea.find('li[tab]').each(function (i, element) {
             var $tab = $(element);
-            if (i == 0)
-                $tab.addClass("tab-active");
             var id = $tab.attr('tab');
             $tab.on('click', function () {
                 $tabArea.find('li[tab]').removeClass("tab-active");
@@ -17,13 +18,17 @@ $(document).ready(function () {
                 $content.show ();
                 $visibleContent = $content;
             });
+            var name = $tab.attr('tab-name');
+            if (urlParam && urlParam == name)
+                initalTabIndex = i;
         });
+        $tabArea.find('li[tab="' + initalTabIndex + '"]').addClass("tab-active");
         $tabArea.find('div[tab-content]').each(function (i, element) {
             var $content = $(element);
-            if (i > 0)
-                $content.hide ();
-            else
+            if (i == initalTabIndex)
                 $visibleContent = $content;
+            else
+                $content.hide ();
         });
     });
 });

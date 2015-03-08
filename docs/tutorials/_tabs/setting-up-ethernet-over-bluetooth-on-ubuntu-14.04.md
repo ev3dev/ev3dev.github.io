@@ -1,8 +1,3 @@
----
-title: Setting Up Ethernet Over Bluetooth on Linux with NetworkManager
-subject: Ethernet Over Bluetooth
----
-
 NETWORK MANAGER IN UBUNTU 14.10 DOES NOT WORK WITH BLUETOOTH, SO THIS PAGE IS INCOMPLETE!
 USE TETHERING VIA BLUETOOH INSTEAD.
 

@@ -21,7 +21,7 @@ files: The names of the files that will be used for the contents of the tabs
         <ul tabs="{{ include.id }}">
         {% assign tabs = include.tabs | split: "|" %}
         {% for tab in tabs %}
-            <li tab="{{ forloop.index0 }}">
+            <li tab="{{ forloop.index0 }}" tab-name="{{ tab | slugify }}">
                 {{ tab }}
             </li>
         {% endfor %}

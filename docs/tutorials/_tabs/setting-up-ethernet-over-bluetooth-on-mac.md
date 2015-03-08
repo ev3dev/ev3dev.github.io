@@ -1,16 +1,3 @@
----
-title: Setting Up Ethernet Over Bluetooth on Mac OS X
-subject: Ethernet Over Bluetooth
----
-
-__Note:__ If you do not need to access the Internet from the EV3 brick, consider
-using [tethering] instead.
-
----
-
-These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
-If you are using an older version, please upgrade.
-
 1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
     open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
     *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
