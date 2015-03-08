@@ -6,6 +6,8 @@ subject: Networking
 __Note:__ If you do not need to access the Internet from the EV3 brick, consider
 using [tethering] instead.
 
+[tethering]: /docs/tutorials/using-bluetooth-tethering
+
 ---
 
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).

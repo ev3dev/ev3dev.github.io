@@ -118,5 +118,3 @@
         Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
         permitted by applicable law.
         root@ev3dev:~# 
-
-[tethering]: /docs/tutorials/using-bluetooth-tethering-on-mac

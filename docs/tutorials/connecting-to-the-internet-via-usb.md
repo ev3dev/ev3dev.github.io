@@ -3,6 +3,14 @@ title: Connecting to the Internet via USB
 subject: Networking
 ---
 
+
+__Note:__ If you do not need to access the Internet from the EV3 brick, consider
+using [tethering] instead.
+
+[tethering]: /docs/tutorials/using-usb-tethering
+
+---
+
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
