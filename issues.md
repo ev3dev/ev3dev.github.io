@@ -31,9 +31,10 @@ Here is what you need to do:__
     __Note:__ The [ev3dev-lang]{:target="_blank"} repository has its own
     [issues][ev3dev-lang-issues]{:target="_blank"} tracker.
 
-*   If you don't find anything helpful by searching, then create a [new issue]{:target="_blank"}.
+*   If you don't find anything helpful by searching, then create a [new issue]{:target="_blank"}
+    (only one problem, question or suggestion per issue please).
 
-    __Most importantly, we need to know the *exact* steps need to reproduce the
+    __Most importantly for problems, we need to know the *exact* steps need to reproduce the
     issue. If you are writing a program, post the code. If you are following
     a tutorial, which step failed? Be as detailed as possible.__
 
