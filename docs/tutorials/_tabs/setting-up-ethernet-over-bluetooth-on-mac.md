@@ -1,68 +1,68 @@
----
-title: Setting Up Ethernet Over USB on Mac OS X
-subject: Ethernet Over USB
----
+1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
+    open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
+    *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
+    status bar also indicates that Bluetooth is powered on.
 
-These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
-If you are using an older version, please upgrade.
+    {% include screenshot.html source="/images/brickman/bluetooth-powered-no-devices.png" %}
 
-1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
-    open the *Wireless and Networks* menu and select *USB*. Make sure *CDC* is
-    selected and active.
+2.  On your host computer, open *System Preferences* and go to *Bluetooth*. This
+    will make your host computer discoverable.
 
-    {% include screenshot.html source="/images/brickman/usb-cdc-active.png" %}
+    {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Bluetooth.png" %}
 
-2.  On your Mac, open up *System Preferences* and select *Network*.
+3.  On the EV3, select *Start Scan* on the *Bluetooth* menu. It should find your
+    computer.
+
+    {% include screenshot.html source="/images/brickman/bluetooth-powered-my-computer.png" %}
+
+4.  Select your computer from the menu and then select the *Pair* button.
+
+    {% include screenshot.html source="/images/brickman/bluetooth-my-computer-not-paired.png" %}
+
+5.  Confirm the passkey on both devices when requested.
+
+    {% include screenshot.html source="/images/brickman/bluetooth-confirm-passkey.png" %}
+    {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/Pairing-Request.png" %}
+
+6.  On your Mac, open up *System Preferences* and select *Network*.
 
     {% include screenshot.html source="/images/OSXRNDIS/SystemPreferencesNetwork.png" %}
 
-3.  Once you get the *Network* dialog, click on the `+` icon in the lower left
-    area to add a new network device. You'll need to select the CDC Composite
-    Gadget in the drop down box. The name will be similar to what is shown
-    below. I have renamed the service "ev3dev" so it's easier to keep track of
-    later. Click *Create* when you are done.
+7.  If you do not already have a Bluetooth PAN device, click on the `+`
+    icon in the lower left area to add a new network device. You'll need to
+    select *Bluetooth PAN* in the drop down box. Click *Create* when you are done.
 
-    {% include screenshot.html source="/images/OSXRNDIS/AddNewDevice.png" %}
+    {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Network-Add-PAN.png" %}
 
-4.  Click *Apply* to save your changes. After a short time, the ev3dev entry
-    (or whatever you named it) should show connected and have a Self-Assigned
-    IP address
+8.  You should see your EV3 listed next to *Device:*. Click *Apply* to save your
+    changes, but don't connect yet. In fact, don't try to use the *Connect*
+    button you see here. It is for [tethering] and won't work for the connection
+    we are setting up here. Instead, we will initiate the connection from the
+    EV3 itself later.
 
-    {% include screenshot.html source="/images/OSXRNDIS/CDC-Connected.png" %}
+    {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Network-Bluetooth-PAN.png" %}
 
-5. If you don't need to access the Internet from your EV3 over this
-    connection, manually configure the IP address to `192.168.2.1`. Note:
-    you won't be able to update packages without an Internet connection.
-
-    TODO: Need detailed description with screenshots.
-
-    Then skip to step 7.
-
-    If you do want to be able to connect to the Internet from the EV3, continue
-    with the next step.
-
-6.  To share our internet connection with the EV3. Go back to *System
+9.  To share our Internet connection with the EV3. Go back to *System
     Preferences* and select *Sharing*.
 
     {% include screenshot.html source="/images/OSXRNDIS/SystemPreferencesSharing.png" %}
 
     Click *Internet Connection* on the left, but don't check the box yet. On
     the right, *Share your connection from:* will be *Wi-Fi* (or *Ethernet* if
-    you have a wired connection). Also check the box next to *CDC Composite
-    Gadget*
+    you have a wired connection). Then check the box next to *Bluetooth PAN*
 
-    {% include screenshot.html source="/images/OSXRNDIS/Sharing-Internet-Connection.png" %}
+    {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Sharing-Bluetooth-PAN.png" %}
 
     Now check the box next to *Internet Connection* on the left to enable it.
     Read the warning and then click *Start*.
 
     {% include screenshot.html source="/images/OSXRNDIS/Sharing-Internet-Connection-Warning.png" %}
 
-7.  Now, we need to assign an IP address to our EV3. In brickman, go to
-    *Networking* and select *Manage connections...*, then select the *Wired*
-    connection.
+10. Back on the EV3, you should have a *Network Connection* button. Select it to
+    open the network connection settings. (You can also find the connection
+    in *Wireless and Networks > All Network Connections*.)
 
-    {% include screenshot.html source="/images/brickman/networking-connections-wired-only.png" %}
+    {% include screenshot.html source="/images/brickman/bluetooth-device-network-connection.png" %}
 
     On the *IPv4* tab, select *Change...*.
 
@@ -83,7 +83,7 @@ If you are using an older version, please upgrade.
 
     {% include screenshot.html source="/images/brickman/networking-ipv4-tab-with-mac-defaults.png" %}
 
-8.  For `ssh` access to the EV3 under OS X, you can use the good old `ssh`
+11. For `ssh` access to the EV3 under OS X, you can use the good old `ssh`
     program from the terminal window. I'm sure there are other solutions, and
     if you send me your suggestions I'll add them to a list.
 

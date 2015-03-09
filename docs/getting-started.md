@@ -102,9 +102,7 @@ There are lots of choices here. Your choice depends on what type of connection
 you want to use and on the OS of your host computer, so pick the one that applies:
 
 * Ethernet over USB (just requires the USB cable that comes with the EV3)
-    * [Linux (NetworkManager)](../tutorials/setting-up-ethernet-over-usb-on-linux-networkmanager)
-    * [Mac OS X](../tutorials/setting-up-ethernet-over-usb-on-mac)
-    * [Windows](../tutorials/setting-up-ethernet-over-usb-on-windows)
+    * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-usb) tutorial
 * USB Ethernet dongle (as in the kind with an RJ45 connector)
     * If your network has a DHCP server, this will "just work". See (non-existent) brickman
       docs for more info.
@@ -112,9 +110,7 @@ you want to use and on the OS of your host computer, so pick the one that applie
     * Hopefully you can figure it out. I'm putting off writing detailed docs
       until brickman is a bit more stable.
 * Bluetooth
-    * [Linux (NetworkManager)](../tutorials/setting-up-ethernet-over-bluetooth-on-linux-networkmanager)
-    * [Mac OS X](../tutorials/setting-up-ethernet-over-bluetooth-on-mac)
-    * [Windows](../tutorials/setting-up-ethernet-over-bluetooth-on-windows)
+    * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
 ## Step 4.5: Make sure the firstboot script ran correctly
 

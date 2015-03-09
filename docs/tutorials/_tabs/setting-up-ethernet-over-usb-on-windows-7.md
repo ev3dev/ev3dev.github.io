@@ -1,11 +1,3 @@
----
-title: Setting Up Ethernet Over USB on Windows
-subject: Ethernet Over USB
----
-
-These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
-If you are using an older version, please upgrade.
-
 1.  On the EV3, first verify that the RNDIS driver is enabled. In brickman,
     open the *Wireless and Networks* menu and select *USB*. Make sure *RNDIS*
     is selected and active.

@@ -1,0 +1,48 @@
+{% comment %}
+
+This uses `/javascripts/tabs.js` and css to provide a tabbed interface to hide
+and reveal content using tabs. Useful for things like code samples in multiple
+languages or tutorials for multiple OSes.
+
+Parameters:
+
+id: Can be anything.
+tabs: The labels that will be displayed on the tabs separated with a "|" character.
+files: The names of the files that will be used for the contents of the tabs
+    separated with a "|" character. These can be .html or .md files. The files
+    must be placed in the same directory as the calling file in a subdirectory
+    named `_tabs/`.
+
+{% endcomment %}
+
+<div tab-area="{{ include.id }}" class="tab-area">
+{% assign id = "0" %}
+    <div class="tabs">
+        <ul tabs="{{ include.id }}">
+        {% assign tabs = include.tabs | split: "|" %}
+        {% for tab in tabs %}
+            <li tab="{{ forloop.index0 }}" tab-name="{{ tab | slugify }}">
+                {{ tab }}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div tab-content-area="{{ include.id }}" class="tab-content-area">
+    {% assign tab_files = include.files | split: "|" %}
+    {% for tab in tab_files %}
+        {% assign ext = tab | split: "." | last %}
+        {% if ext == "md" %}
+            {% assign markdown = "markdown='1'" %}
+        {% else %}
+            {% assign markdown = "" %}
+        {% endif %}
+{% comment %} Since we can have markdown here, it is important that these lines are not indented {% endcomment %}
+<div tab-content="{{ forloop.index0 }}" class="tab-content" {{ markdown }}>
+
+{% include_relative _tabs/{{ tab }} %}
+
+</div>
+{% comment %} End markdown no-indent block {% endcomment %}
+    {% endfor %}
+    </div>
+</div>

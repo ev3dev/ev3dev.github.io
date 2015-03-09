@@ -817,6 +817,7 @@ dt {
     list-style: none;
 }
 
+#search-issues,
 #search-input {
     width: 116px;
 
@@ -842,6 +843,11 @@ dt {
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     -o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#search-issues {
+    width:80%;
+    margin-right:12px;
 }
 
 #search-dropdown {
@@ -916,6 +922,10 @@ dt {
     display: block;
 }
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 .button {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -927,6 +937,10 @@ dt {
   font-size: 14px;
 }
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 .button a {
   color: white;
   border: 1px solid #5d910b;
@@ -954,6 +968,11 @@ dt {
   display: inline-block;
   text-align: center;
 }
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
 .button a:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #749619), color-stop(100%, #527f0e));
   background: -webkit-linear-gradient(#749619, #527f0e);
@@ -1198,6 +1217,84 @@ section #title p {
 
 .news-item > p {
     margin-bottom: 5px;
+}
+
+.tab-area {
+    margin: 0px 0px 20px;
+}
+
+.tabs > ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tabs > ul > li {
+    cursor: pointer;
+    -webkit-appearance: button;
+    font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    list-style: none;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+
+    color: white;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #252525), color-stop(100%, #434343));
+    background: -webkit-linear-gradient(#252525, #434343);
+    background: -moz-linear-gradient(#252525, #434343);
+    background: -o-linear-gradient(#252525, #434343);
+    background: -ms-linear-gradient(#252525, #434343);
+    background: linear-gradient(#252525, #434343);
+    background-color: #252525;
+    line-height: 14px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+
+    border: 1px solid #434343;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 6px 10px;
+    margin: 0px;
+}
+
+.tabs > ul > li:hover {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b6b6b6), color-stop(100%, #434343));
+    background: -webkit-linear-gradient(#b6b6b6, #434343);
+    background: -moz-linear-gradient(#b6b6b6, #434343);
+    background: -o-linear-gradient(#b6b6b6, #434343);
+    background: -ms-linear-gradient(#b6b6b6, #434343);
+    background: linear-gradient(#b6b6b6, #434343);
+    background-color: #b6b6b6;
+}
+
+.tabs > ul > li.tab-active {
+    cursor: unset;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #696969), color-stop(100%, #434343));
+    background: -webkit-linear-gradient(#696969, #434343);
+    background: -moz-linear-gradient(#696969, #434343);
+    background: -o-linear-gradient(#696969, #434343);
+    background: -ms-linear-gradient(#696969, #434343);
+    background: linear-gradient(#696969, #434343);
+    background-color: #696969;
+}
+
+.tab-content-area {
+    margin: 0px;
+    padding: 12px;
+    background-color: #434343;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.tab-content {
+    margin: 0px;
+    padding: 12px;
+    background-color: #252525;
+    border-radius: 6px;
 }
 
 .user-card {

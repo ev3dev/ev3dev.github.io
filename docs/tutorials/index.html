@@ -10,7 +10,12 @@ title: Tutorials
         <li>{{ group.name }}</li>
         <ul>
         {% for item in group.items %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            <li>
+                <a href="{{ item.url }}">{{ item.title }}</a>
+                {% if item.subtitle %}
+                    ({{ item.subtitle }})
+                {% endif %}
+            </li>
         {% endfor %}
         </ul>
     {% endif %}
