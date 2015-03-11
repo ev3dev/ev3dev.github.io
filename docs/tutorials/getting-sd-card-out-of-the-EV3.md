@@ -11,6 +11,9 @@ Method 1: Tape
 
 Have a small bit of tape connected to the sd card. You can pull on this to easily remove the card.
 
+{% include screenshot.html source="/images/TapeSD.png" %}
+
+This is probably the best method for removal of the card.
 
 Method 2: Pliers
 
