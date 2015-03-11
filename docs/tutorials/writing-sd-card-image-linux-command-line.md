@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Linux Command Line Tools.
-subject: SD Card Image
+subject: SD Card 
 ---
 
 1.  Make sure that you SD card is **unplugged**. Then run `df`. You should see

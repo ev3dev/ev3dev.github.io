@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Mac OSX Command Line Tools.
-subject: SD Card Image
+subject: SD Card
 ---
 
 1.  If you have not already unzipped the ev3dev disk image, lets do that first.
