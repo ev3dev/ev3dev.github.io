@@ -40,6 +40,12 @@ defaults:
       category: "motors"
   -
     scope:
+      path: "docs/devtools"
+      type: "pages"
+    values:
+      category: "devtools"
+  -
+    scope:
       path: ""
       type: "pages"
     values:

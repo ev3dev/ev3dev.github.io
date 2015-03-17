@@ -12,7 +12,7 @@ We are in the process of moving documentation from the [wiki] to here.
 * [Supported Sensors and Other Input Devices][sensors]
 * [Supported Motors and Other Output Devices][motors]
 * [ev3dev kernel drivers][drivers]
-* ev3dev Developer Tools
+* [ev3dev Developer Tools][devtools]
 
 [Getting Started]: getting-started
 [Tutorials]: tutorials
@@ -22,3 +22,4 @@ We are in the process of moving documentation from the [wiki] to here.
 [sensors]: sensors
 [motors]: motors
 [drivers]: drivers
+[devtools]: devtools
