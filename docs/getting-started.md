@@ -124,6 +124,8 @@ Here are some suggestions of some things you should do to get your EV3 setup.
 
 ### Change your root password
 
+The default root password is r00tme - those are zeros, not "Ohs".
+
     root@ev3dev:~# passwd
     Enter new UNIX password: 
     Retype new UNIX password: 
