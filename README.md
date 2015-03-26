@@ -11,7 +11,7 @@ Installing Jekyll in Ubuntu 14.04
 ---
 
     sudo apt-get install git ruby1.9.1 ruby1.9.1-dev nodejs
-    sudo gem install bundle
+    sudo gem install bundler
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
     bundle install
@@ -26,7 +26,7 @@ Installing Jekyll in  Windows
 
 Then run:
 
-    gem install bundle
+    gem install bundler
     git clone https://github.com/<user>/ev3dev.github.io
     cd ev3dev.github.io
     bundle install
