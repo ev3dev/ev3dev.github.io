@@ -28,7 +28,7 @@ First, here are the things you need before starting:
 
 ---
 
-**IMPORTANT:** The instructions on this page only apply to releases dated Feb.
+**IMPORTANT:** The instructions on this page only apply to releases dated March
 2015 or later. For earlier releases (i.e. wheesy "Latest Release"), see
 [Getting Started v2] on the old wiki. These older releases are no longer
 supported.
