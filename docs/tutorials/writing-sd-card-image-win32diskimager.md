@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Win32DiskImager
-subject: SD Card Image
+subject: SD Card
 ---
 
 1. Open up the folder where you downloaded the image file from GitHub.

@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Ubuntu Disk Image Writer
-subject: SD Card Image
+subject: SD Card
 ---
 
 1.  Open up the folder where you downloaded the ev3dev image file
