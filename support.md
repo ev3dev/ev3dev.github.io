@@ -1,9 +1,23 @@
 ---
-title: Issues
+title: "Get Help"
+redirect_from: /issues/index.html
 ---
 
-__Have a problem or question? We are here to help - but you have to help us help you.
-Here is what you need to do:__
+* Table of Contents
+{:toc}
+
+<center>
+<strong>Have a problem or question?</strong>
+<br /><br />
+<strong>We are here to help - but you have to help us help you.</strong>
+</center>
+
+GitHub Issues
+-------------
+
+We keep track of problems, suggestions and questions about ev3dev using [GitHub
+Issues]. This lets us keep everything in one place. (So, please don't email the
+developers directly unless you have a personal question.)
 
 *   First, before submitting an issue, please make sure that you have the latest
     kernel and other packages:
@@ -32,7 +46,7 @@ Here is what you need to do:__
     [issues][ev3dev-lang-issues]{:target="_blank"} tracker.
 
 *   If you don't find anything helpful by searching, then create a [new issue]{:target="_blank"}
-    (only one problem, question or suggestion per issue please).
+    (only __one__ problem, question or suggestion per issue please).
 
     __Most importantly for problems, we need to know the *exact* steps need to reproduce the
     issue. If you are writing a program, post the code. If you are following
@@ -74,7 +88,31 @@ Here is what you need to do:__
 
     * Learn more about [writing on GitHub]{:target="_blank"}.
 
+IRC
+---
+
+IRC is [Internet Relay Chat]. You can find other ev3dev users in [#ev3dev on
+freenode.net]. It is a great way to ask quick questions or carry on a conversation.
+
+If you have never used IRC before, there are a some things you need to know:
+
+*   We are a global community - not everyone lives in the same time zone. If you
+    ask a question and no one answers, stay connected for a day or two and someone
+    may eventually answer (or leave a note that you will check the logs - see below).
+*   If no one ever answers you, do not be offended. The right person did not see
+    your message, or maybe no one knows the answer. Ask again later or open a GitHub issue.
+
+Also, #ev3dev is logged by `ev3devlogbot`. You can find the logs at <http://ev3dev.org/irclog>.
+
+If you don't already have an IRC client program, you can connect right in your
+browser. Just enter a nickname and click start below.
+
+<iframe src="https://kiwiirc.com/client/irc.freenode.net/?&theme=cli#ev3dev" style="border:0; width:100%; height:450px;"></iframe>
+
+[GitHub Issues]: https://help.github.com/articles/about-issues/
 [ev3dev-lang]: https://github.com/ev3dev/ev3dev-lang
 [ev3dev-lang-issues]: https://github.com/ev3dev/ev3dev-lang/issues
 [new issue]: https://github.com/ev3dev/ev3dev/issues/new
 [writing on GitHub]: https://help.github.com/categories/writing-on-github/
+[Internet Relay Chat]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
+[#ev3dev on freenode.net]: irc://irc.freenode.net/#ev3dev
