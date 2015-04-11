@@ -641,11 +641,11 @@ h4 {
 }
 
 a > code {
-    color: #f98818 !important;
+    color: #fe8a18 !important;
 }
 
 a {
-  color: #f98818;
+  color: #fe8a18;
   font-weight: 400;
   text-decoration: none;
 }
@@ -721,7 +721,7 @@ section img {
 }
 
 blockquote {
-  border-left: 3px solid #f98818;
+  border-left: 3px solid #fe8a18;
   margin: 0;
   padding: 0 0 0 20px;
   font-style: italic;
@@ -904,7 +904,7 @@ dt {
 }
 
 .search-result h4 {
-    color: #f98818;
+    color: #fe8a18;
     font-size:large;
     margin-bottom: 0;
 }
