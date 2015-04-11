@@ -1181,7 +1181,7 @@ section #title p {
 .project-tile-img {
     height: 140px;
     float: left;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .project-tile-excerpt p {
