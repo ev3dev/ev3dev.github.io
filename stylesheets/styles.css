@@ -1133,7 +1133,7 @@ section #title p {
 }
 
 #logoContainer {
-    position:relative;
+    position: relative;
 }
 
 #titleHeader {
@@ -1151,9 +1151,41 @@ section #title p {
     float: right;
 }
 
+#projects-list {
+    width: 100%;
+    
+    padding: 0;
+
+    list-style: none;
+    list-style-type: none;
+}
+
 #projects-list li {
-    margin-bottom: 10px;
+    margin: 10px;
     font-size: 110%;
+
+    width: calc(50% - 20px);
+    min-height: 160px;
+    max-height: 320px;
+
+    float: left;
+}
+
+.project-tile-title {
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 6px;
+}
+
+.project-tile-img {
+    height: 140px;
+    float: left;
+    margin-right: 10px;
+}
+
+.project-tile-excerpt p {
+    margin-bottom: 0;
 }
 
 #project-credit {
@@ -1513,6 +1545,10 @@ section #title p {
         -webkit-box-shadow: none;
         -o-box-shadow: none;
         box-shadow: none;
+    }
+
+    #projects-list li {
+        width: 100%;
     }
 }
 
