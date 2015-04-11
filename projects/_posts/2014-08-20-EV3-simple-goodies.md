@@ -9,6 +9,7 @@ programming_language: "Bourne shell script" # The programming language used in t
 #project_homepage_url: "none yet" # Homepage for this project
 source_code_url: "https://github.com/BertLindeman/bert-ev3dev-examples" # Provide a link to your code
 #building_instructions_url: "none"
+excerpt: "Helpful Bash scripts that test and demonstrate cool ev3dev functionality."
 ---
 
 ### Examples of bits and pieces running at Jessie level 
