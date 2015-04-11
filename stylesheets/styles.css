@@ -942,7 +942,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button a,
-iframe.button {
+iframe.button,
+img.button {
   color: white;
   border: 3px solid #9aa09c;
   -moz-border-radius: 10px;
@@ -968,6 +969,12 @@ iframe.button {
   font-size: 14px;
   display: inline-block;
   text-align: center;
+}
+
+iframe.button,
+img.button {
+  border-width: 5px;
+  padding: 0px;
 }
 
 button:hover,

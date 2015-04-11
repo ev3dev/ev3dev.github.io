@@ -5,59 +5,65 @@ title: ev3dev
 * Table of Contents
 {:toc}
 
-![bootsplash](images/logo_ev3dev_mono.png)
+![bootsplash](images/logo_ev3dev_mono.png){:class="button"}
 
-## What is is?
+## What is ev3dev?
 
 __LEGO MINDSTORMS EV3 is awesome... ev3dev is SUPER awesome!__
 
 ev3dev is many things...
 
-*   __ev3dev is EV3 software re-imagined__
+### ev3dev is EV3 software re-imagined
+{:.no_toc}
 
-    If you are like us, you have probably found that while the software that
-    comes with the EV3 is great, it just doesn't do quite everything you would
-    like it to.
+If you are like us, you have probably found that while the software that
+comes with the EV3 is great, it just doesn't do quite everything you would
+like it to.
+
+We have rebuilt much of the software for the EV3 from the ground up. We have
+created our own hardware drivers using sysfs so that you can easily program
+the EV3 using any [programming language]. It is as easy as reading from and
+writing to a file.
+
+This also means that ev3dev is NOT compatible with most other EV3 software
+and tools.
     
-    We have rebuilt much of the software for the EV3 from the ground up. We have
-    created our own hardware drivers using sysfs so that you can easily program
-    the EV3 using any [programming language]. It is as easy as reading from and
-    writing to a file.
+### ev3dev is NOT firmware
+{:.no_toc}
+
+Think of it as dual boot. ev3dev is installed and runs on a microSD card and
+does not touch the existing firmware in your EV3. To run ev3dev, just insert
+a microSD card with ev3dev installed and boot your EV3. To boot from the
+firmware, just power off and remove the microSD card.
+
+### ev3dev is a Linux kernel
+{:.no_toc}
+
+We have taken the Linux kernel from LEGO, updated it to v3.16 and enabled
+many hardware drivers. This means support for lots of Wi-Fi dongles,
+Bluetooth gamepads and keyboards, USB audio device and more. If your
+hardware works on Linux, it will probably work with ev3dev.
+
+### ev3dev is Debian Linux
+{:.no_toc}
+
+The ARM9 processor in the EV3 is one of the [Debian] supported architectures.
+This means most of the 37500+ Debian software packages will run on your EV3
+- no compiling necessary. Installing a package is as simple as
+`sudo apt-get install package-name`.
     
-    This also means that ev3dev is NOT compatible with most other EV3 software
-    and tools.
+### ev3dev is more than just EV3
+{:.no_toc}
+
+The [ev3dev drivers][DKMS] will run on any Linux. This means you can use
+LEGO MINDSTORMS and LEGO WEDO sensors and motors with anything that runs
+Linux, from your desktop to you Raspberry Pi.
     
-*   __ev3dev is NOT firmware__
+### ev3dev is a work in progress
+{:.no_toc}
 
-    Think of it as dual boot. ev3dev is installed and runs on a microSD card and
-    does not touch the existing firmware in your EV3. To run ev3dev, just insert
-    a microSD card with ev3dev installed and boot your EV3. To boot from the
-    firmware, just power off and remove the microSD card.
-
-*   ___ev3dev is a Linux kernel___
-
-    We have taken the Linux kernel from LEGO, updated it to v3.16 and enabled
-    many hardware drivers. This means support for lots of Wi-Fi dongles,
-    Bluetooth gamepads and keyboards, USB audio device and more. If your
-    hardware works on Linux, it will probably work with ev3dev.
-
-*   __ev3dev is Debian Linux__
-
-    The ARM9 processor in the EV3 is one of the [Debian] supported architectures.
-    This means most of the 37500+ Debian software packages will run on your EV3
-    - no compiling necessary. Installing a package is as simple as
-    `sudo apt-get install package-name`.
-    
-*   __ev3dev is more than just EV3__
-
-    The [ev3dev drivers][DKMS] will run on any Linux. This means you can use
-    LEGO MINDSTORMS and LEGO WEDO sensors and motors with anything that runs
-    Linux, from your desktop to you Raspberry Pi.
-    
-*   __ev3dev is a work in progress__
-
-    This is by no mean a polished product yet. But don't let that scare you away -
-    it is very usable. [You can help] make it better.
+This is by no mean a polished product yet. But don't let that scare you away -
+it is very usable. [You can help] make it better.
 
 
 ## What can it do?
