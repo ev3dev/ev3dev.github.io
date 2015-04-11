@@ -5,7 +5,7 @@ title: Share
 ev3dev.org Projects Page
 ------------------------
 
-We currently have a [projects page] where you can browse project that have been
+We currently have a [projects page] where you can browse projects that have been
 built using ev3dev. You can add your own too!
 
 {% assign project = site.categories.projects | first %}
