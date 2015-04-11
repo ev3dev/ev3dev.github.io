@@ -1546,6 +1546,10 @@ section #title p {
         -o-box-shadow: none;
         box-shadow: none;
     }
+
+    #projects-list li {
+        width: 100%;
+    }
 }
 
 :target {
