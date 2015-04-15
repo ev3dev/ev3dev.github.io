@@ -1,7 +1,7 @@
 [
     {
-        "name": "ev3-tacho-motor",
-        "device_type": "ev3-tacho-motor",
+        "name": "fi-l12-ev3",
+        "device_type": "legoev3-motor",
         "class": "tacho-motor-class",
         "autodetect": "Y[^ev3-large-motor]",
         "vendor_name": "Firgelli",
@@ -9,8 +9,8 @@
         "vendor_url": "http://store.firgelli.com/product_p/l12-ev3-50.htm"
     },
     {
-        "name": "ev3-tacho-motor",
-        "device_type": "ev3-tacho-motor",
+        "name": "fi-l12-ev3",
+        "device_type": "legoev3-motor",
         "class": "tacho-motor-class",
         "autodetect": "Y[^ev3-large-motor]",
         "vendor_name": "Firgelli",
@@ -87,8 +87,8 @@
         "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=9670-1"
     },
     {
-        "name": "ev3-tacho-motor",
-        "device_type": "ev3-tacho-motor",
+        "name": "lego-ev3-l-motor",
+        "device_type": "legoev3-motor",
         "class": "tacho-motor-class",
         "autodetect": "Y[^ev3-large-motor]",
         "vendor_name": "LEGO",
@@ -107,8 +107,8 @@
         "vendor_url": "http://www.bricklink.com/catalogItem.asp?P=43362c01"
     },
     {
-        "name": "ev3-tacho-motor",
-        "device_type": "ev3-tacho-motor",
+        "name": "lego-ev3-l-motor",
+        "device_type": "legoev3-motor",
         "class": "tacho-motor-class",
         "autodetect": "Y",
         "vendor_name": "LEGO",
@@ -117,8 +117,8 @@
         "vendor_url": "http://www.bricklink.com/catalogItem.asp?S=45502-1"
     },
     {
-        "name": "ev3-tacho-motor",
-        "device_type": "ev3-tacho-motor",
+        "name": "lego-ev3-m-motor",
+        "device_type": "legoev3-motor",
         "class": "tacho-motor-class",
         "autodetect": "Y",
         "vendor_name": "LEGO",

@@ -99,11 +99,11 @@
                 "notes": "\n[^auto-mode]: Only the EV3/NXT large motors and the EV3\n    medium motor can be automatically detected. All other devices\n    must be manually configured.\n    \n    "
             },
             {
-                "description": "Load the [ev3-tacho-motor] device.",
+                "description": "Load the [legoev3-motor] device.",
                 "id": "EV3_OUTPUT_PORT_MODE_TACHO_MOTOR",
-                "name": "ev3-tacho-motor",
-                "name_footnote": "[^ev3-tacho-motor-mode]",
-                "notes": "\n[^ev3-tacho-motor-mode]: Currently only supports loading the\n    driver with EV3/NXT Large Motor settings. In the future, you\n    will be able to change the driver using `set_device`.\n    ^\n    [ev3-tacho-motor]: /docs/drivers/ev3-tacho-motor\n    \n    "
+                "name": "legoev3-motor",
+                "name_footnote": "[^legoev3-motor-mode]",
+                "notes": "\n[^legoev3-motor-mode]: Configures the port to use the\n    [legoev3-motor] driver module. The default driver is the\n    EV3/NXT Large Motor (`lego-ev3-l-motor`). You can change\n    the driver using the `set_device` attribute.\n    ^\n    [legoev3-motor]: /docs/drivers/legoev3-motor\n    \n    "
             },
             {
                 "description": "Load the [rcx-motor] device.",
@@ -132,7 +132,7 @@
         "num_modes": 5,
         "prefix": "out",
         "source_file": "drivers/lego/ev3/legoev3_ports_out.c",
-        "source_line": 130,
+        "source_line": 110,
         "url_name": "legoev3-output-port"
     },
     {
