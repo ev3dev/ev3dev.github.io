@@ -1,128 +1,101 @@
 ---
 title: ev3dev
-subtitle: Debian on LEGO MINDSTORMS EV3!
 ---
 
 * Table of Contents
 {:toc}
 
-## Introduction
+![bootsplash](images/logo_ev3dev_mono.png){:class="button"}
 
-The ev3dev distribution is a full Debian (jessie) Linux distribution running
-on the 3.16.x kernel that has been customized for the LEGO MINDSTORMS EV3
-controller.
+## What is ev3dev?
 
-Rather than use custom language bindings that use direct access to mmap'ed
-files, this distribution aims to allow as many programming languages as
-possible to access the EV3 peripherals using simple Linux file access. If your
-favorite programming language is available as an ARM port, and it can read and
-write files, you can use it to program the EV3.
+__LEGO MINDSTORMS EV3 is awesome... ev3dev is SUPER awesome!__
 
-Currently the ev3dev distribution includes the following languages:
+ev3dev is many things...
 
-* bash/dash
-* awk/gawk
-* perl
-* Lua
-* guile
-* ruby
-* python
-* Google Go (golang)
-* Node.js
+### ev3dev is EV3 software re-imagined
+{:.no_toc}
 
-If your favorite language isn't listed, you can still program with the EV3.
-ev3dev supports standard `apt` tools, so once you get up-and-running
-you can install whatever language you like.
+If you are like us, you have probably found that while the software that
+comes with the EV3 is great, it just doesn't do quite everything you would
+like it to.
 
-And although you *can* directly access the APIs via file I/O if you want to,
-let's face it: that's tedious. It's much easier when you have a higher-level
-library to use. Learn more about our pre-made language bindings on the [documentation page](docs/libraries).
+We have rebuilt much of the software for the EV3 from the ground up. We have
+created our own hardware drivers using sysfs so that you can easily program
+the EV3 using any [programming language]. It is as easy as reading from and
+writing to a file.
 
-## Features
+This also means that ev3dev is NOT compatible with most other EV3 software
+and tools.
+    
+### ev3dev is NOT firmware
+{:.no_toc}
 
-Features above and beyond the official LEGO kernel include:
+Think of it as dual boot. ev3dev is installed and runs on a microSD card and
+does not touch the existing firmware in your EV3. To run ev3dev, just insert
+a microSD card with ev3dev installed and boot your EV3. To boot from the
+firmware, just power off and remove the microSD card.
 
-* Support for Atheros, Realtek, and other wifi chipsets so you're not stuck
-  with one specific wifi dongle
-* Support for SSH terminal sessions
-* Ethernet over USB functionality and a full network stack
-* Actual user accounts instead of passwordless root access
-* Fully upgradeable and customizable install using standard "apt" tools,
-  running on the brick
-* NFS file share / file transfer capability
-* Automatic NTP clock updates 
-* Access to device drivers through user-space filesystem
-* Built in text editors like vim and nano
-* Prebuilt support for programming languages like Lua, perl, gawk, Python,
-  guile, Ruby, and more
-* Support for all host operating systems including Windows, Mac, Linux,
-  Android, even Blackberry!
+### ev3dev is a Linux kernel
+{:.no_toc}
 
-Put more simply: ev3dev can do almost everything normal Linux can, while the
-stock LEGO kernel cannot.
+We have taken the Linux kernel from LEGO, updated it to v3.16 and enabled
+many hardware drivers. This means support for lots of Wi-Fi dongles,
+Bluetooth gamepads and keyboards, USB audio device and more. If your
+hardware works on Linux, it will probably work with ev3dev.
 
-#### Using the ev3dev Kernel:
+### ev3dev is Debian Linux
+{:.no_toc}
 
-Don't want to give up your official LEGO MINDSTORMS EV3 kernel and rootfs? You
-don't need to!
+The ARM9 processor in the EV3 is one of the [Debian] supported architectures.
+This means most of the 37500+ Debian software packages will run on your EV3
+- no compiling necessary. Installing a package is as simple as
+`sudo apt-get install package-name`.
+    
+### ev3dev is more than just EV3
+{:.no_toc}
 
-Just install  ev3dev  on any microSD card (min 1GB suggested, but can you even
-buy one that small anymore?) and plug it into the microSD slot on the EV3. The
-uboot loader will look on the card, find the ev3dev kernel and happily boot
-that instead!
+The [ev3dev drivers][DKMS] will run on any Linux. This means you can use
+LEGO MINDSTORMS and LEGO WEDO sensors and motors with anything that runs
+Linux, from your desktop to you Raspberry Pi.
+    
+### ev3dev is a work in progress
+{:.no_toc}
 
-When you want to use the official LEGO tools, just shutdown the EV3, unplug the
-ev3dev microSD card and restart the brick.
+This is by no mean a polished product yet. But don't let that scare you away -
+it is very usable. [You can help] make it better.
 
-This is still an early beta, so it's not as polished as the official LEGO
-offering, but it's getting better every week as we add support for more of the
-native EV3 drivers. Alongside the main kernel, work is also being done on
-[brickman], which adds a LEGO-like GUI.
 
-## The state of the project
+## What can it do?
 
-Currently, the project is being maintained by @dlech and @rhempel in their
-spare time. Active development is being done in the main [ev3dev-kernel] repo
-as well as in places like [brickman] and other related packages.
+ev3dev can...
 
-ev3dev supports many of the basic functions of the brick, including:
+* [Solve a Rubik's Cube](https://www.youtube.com/watch?v=HuKsfp19yF0)
+* [Catch a ball](https://www.youtube.com/watch?v=Y0w_cRt7RzI)
+* [Speak with an accent](https://www.youtube.com/watch?v=5otRPiJ6PYw)
+* [Draw a dinosaur](https://www.youtube.com/watch?v=9pjpQoZoW6E)
+* [Use WeDo sensors and motors](https://www.youtube.com/watch?v=NQ1PrJ2-yx8)
+* Do just about anything you can imagine...
 
-* Motors
-* Sensors
-* Sound
-* LEDs
-* The LCD
+## How do you use it?
 
-## Getting Started
-To start working with ev3dev, head over to the [Getting Started] page.
+First, you need to download and install the latest image file on a microSD card.
+Check out the [Getting Started] page for step-by-step instructions. Or, if you
+are not using ev3dev with an EV3, check out the [DKMS driver package][DKMS].
 
-## Assorted Info / FAQ
+Then, you can write a program however you like. You can use just about anything
+with a SSH client - Windows, Linux, Mac, Android, iOS, Blackberry, etc. The
+[docs] page has information about how to use the drivers and has links to
+libraries contributed by users for some programming languages.
 
-#### Does ev3dev replace the firmware on my EV3 programmable brick?
+If you need some ideas, check out the projects on our [Share] page. If you get
+stuck, check out the [Get Help] page.
 
-No. ev3dev runs completely off of an SD card, leaving the existing firmware
-intact. To restore the original functionality of your brick, just power it off
-and remove the SD card containing ev3dev. When you turn it back on, it will
-boot using the existing firmware.
-
-#### Can ev3dev do everything that the official firmware can?
-
-No. Although the goal is to support as much as we can, some things will
-probably never make it in to ev3dev for various reasons. Here are some things
-that ev3dev doesn't do (currently):
-
-* Offer a GUI on boot
-* Run programs from EV3-G
-* Automatically configure PC interaction (networking)
-
-#### What's a Linux?
-
-If you are at this section right now as a result of true inquiry, that probably
-means that ev3dev isn't something for you (yet). We're currently in a heavy
-development stage so ev3dev requires some more advanced knowledge and lots of
-time to use. We invite you to look here often, because some day we will have
-many more user-friendly features for you to take advantage of. Stay tuned!
-
-[Getting Started]: docs/getting-started
-[ev3dev-kernel]: https://github.com/ev3dev/ev3dev-kernel
-[brickman]: https://github.com/ev3dev/brickman
+[Debian]: https://www.debian.org/
+[programming language]: /docs/libraries
+[DKMS]: https://github.com/ev3dev/lego-linux-drivers-dkms
+[You can help]: /contribute
+[Getting Started]: /docs/getting-started
+[docs]: /docs
+[Share]: /share
+[Get Help]: /support
