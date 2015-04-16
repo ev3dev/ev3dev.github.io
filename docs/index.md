@@ -13,6 +13,7 @@ We are in the process of moving documentation from the [wiki] to here.
 * [Supported Motors and Other Output Devices][motors]
 * [ev3dev kernel drivers][drivers]
 * [ev3dev Developer Tools][devtools]
+* [The kernel hacker's notebook][kernel-hackers-notebook]
 
 [Getting Started]: getting-started
 [Tutorials]: tutorials
@@ -23,3 +24,4 @@ We are in the process of moving documentation from the [wiki] to here.
 [motors]: motors
 [drivers]: drivers
 [devtools]: devtools
+[kernel-hackers-notebook]: kernel-hackers-notebook
