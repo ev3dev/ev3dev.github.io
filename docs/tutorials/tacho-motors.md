@@ -1,5 +1,5 @@
 ---
-title: Tacho-Motor Tutorial
+title: Using the Tacho-Motor Class
 subject: Motors
 ---
 
