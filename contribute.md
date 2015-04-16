@@ -9,6 +9,12 @@ redirect_from: /contributing/index.html
 ev3dev is a **HUGE** project and we are always happy to receive help.
 Here are some of the many ways you can contribute to the project.
 
+## Have a look at the "HELP WANTED" issues
+
+We label some issues as [HELP WANTED](https://github.com/ev3dev/ev3dev/labels/HELP%20WANTED).
+The means that we could use your feedback, the task is very time consuming or we don't have
+the hardware needed. Click on the link to see the list of issues and contribute if you can.
+
 ## Write some documentation
 
 All of our documentation (including this entire website) is maintained through
@@ -22,9 +28,9 @@ Even if a page doesn't have the edit link, you can actually still make changes.
 Just find it [here][this-website].
 
 We are also in the process of migrating the [wiki] documentation to this site.
-It would be nice to get some help with this. Pick a page and figure out where
-it should go (probably under *docs* somewhere). But be sure to ask first,
-though, in case we don't actually want that particular page migrated.
+It would be nice to get some help with this. There are just a [few pages left](https://github.com/ev3dev/ev3dev/issues/153#issuecomment-93602107)
+that need to be migrated. Pick one, copy it and go through it to make sure
+links works and the information is still relevant.
 
 ## Write some software
 
