@@ -2,6 +2,10 @@
 title: Share
 ---
 
+Do you like ev3dev? Show your support by:
+* Giving us a star [on GitHub](https://github.com/ev3dev/ev3dev).
+* Voting for ev3dev in the [mindsensor.com] poll (it's about half way down the page).
+
 ev3dev.org Projects Page
 ------------------------
 
@@ -15,4 +19,5 @@ Here is the most recent project ([more about this project...]({{ site.github.url
 
 {{ project.content }}
 
+[mindsensor.com]: http://mindsensors.com/
 [projects page]: {{ site.github.url }}/projects
