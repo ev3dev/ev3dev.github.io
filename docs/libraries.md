@@ -24,7 +24,6 @@ enhanced regularly.
     * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
     * [Node.js](https://github.com/ev3dev/ev3dev-lang/tree/develop/js)
     * [R](https://github.com/ev3dev/ev3dev-lang/tree/develop/R)
-    * [Vala](https://github.com/ev3dev/ev3dev-lang/tree/develop/vala)
 
 ## Extra languages
 We also have many great contrubutors that are maintaining extra libraries for languages not included in our other repository. 
