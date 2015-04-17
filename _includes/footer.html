@@ -1,5 +1,24 @@
 <div id="footer">
     <hr class="clear">
+    <div class="cclicense">
+{% if page.categories contains "projects" %}
+        The contents of this page are property of the author(s) listed under "Created by:".
+        <br />
+        Please contact the author(s) before reusing any content on this page.
+{% else %}
+        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+            www.ev3dev.org (with the exception of the projects pages)
+        </span>
+        is licensed under
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+        </a>.
+        <br />
+        You are free to copy the text and images, but please be courteous and acknowledge the source.
+{% endif %}
+    </div>
+    <br />
+    <hr class="clear">
     <span class="credits left">
         Project maintained by <a href="https://github.com/rhempel">Ralph Hempel</a>
         and <a href="https://github.com/dlech">David Lechner</a>, with help from the community
@@ -8,4 +27,3 @@
         Hosted on GitHub Pages <!--&mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a>-->
     </span>
 </div>
-                

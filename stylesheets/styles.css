@@ -1568,3 +1568,8 @@ section #title p {
     70% { color: rgb(255, 204, 0); }
     100% { color: #e8e8e8 }
 }
+
+.cclicense {
+    text-align: center;
+    color: #696969;
+}
