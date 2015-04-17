@@ -73,6 +73,7 @@ ev3dev can...
 * [Solve a Rubik's Cube](https://www.youtube.com/watch?v=HuKsfp19yF0)
 * [Catch a ball](https://www.youtube.com/watch?v=Y0w_cRt7RzI)
 * [Speak with an accent](https://www.youtube.com/watch?v=5otRPiJ6PYw)
+* [Attend quarterly meetings](http://programmablebrick.blogspot.com/2014/11/seanbot-ev3-robot-controlled-via-web.html)
 * [Draw a dinosaur](https://www.youtube.com/watch?v=9pjpQoZoW6E)
 * [Use WeDo sensors and motors](https://www.youtube.com/watch?v=NQ1PrJ2-yx8)
 * Do just about anything you can imagine...
