@@ -101,7 +101,7 @@
          |  __/\ V / ___) | (_| |  __/\ V /
           \___| \_/ |____/ \__,_|\___| \_/
         
-        Debian GNU/Linux 7 on LEGO MINDSTORMS EV3!
+        Debian jessie on LEGO MINDSTORMS EV3!
         
         The programs included with the Debian GNU/Linux system are free software;
         the exact distribution terms for each program are described in the
