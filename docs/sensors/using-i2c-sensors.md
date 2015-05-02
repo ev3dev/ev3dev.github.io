@@ -49,22 +49,27 @@ setting the mode again. By default, I2C/NXT sensors are polled every 100
 milliseconds. The default value can be changed via a module parameter.
 See the [NXT I2C Sensor Driver][nxt-i2c-sensor] for details.
 
-### Writing to the Sensor
+### Direct Reading and Writing of the Sensor
 
-**WARNING!** Be very careful when writing to your sensors. It is theoretically
-possible to break them if you write to the wrong register.
+**WARNING!** Be very careful when reading from or writing to your sensors. It
+is theoretically possible to break them if you read or write to the wrong register.
 
 In most cases, setting the mode of a sensor will write the proper data if
 necessary, so you don't actually need to write data using this method. However,
-it is possible to write arbitrary data to I2C sensors using the `bin_data`
-attribute. The first byte is the address of the register you want to write to
-and the following bytes are the data that is written to that register.
+it is possible to write arbitrary data to I2C sensors using the `direct`
+attribute. Use `seek` to specify the register to read or write from and always
+specify the number of bytes to read or write.
+
+Example: Reading the white calibration data from the mindsensors.com Light Sensor
+Array. This reads 8 bytes from register 0x5A.
+
+    $ hd -s $(( 0x5A )) -n 8 direct
 
 Example: Sending a "calibrate white" command to the mindsensor.com Light
 Sensor Array. This just writes the ascii character `W` to register 0x41.
 
+    $ echo -e -n "W" | dd bs=1 of=direct seek=$(( 0x41 ))
 
-    $ echo -e -n "\x41W" > bin_data
 
 ### Manually Loading Devices
 

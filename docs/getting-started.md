@@ -12,7 +12,7 @@ to get ev3dev up and running on your EV3.
 First, here are the things you need before starting:
 
 * A LEGO MINDSTORMS EV3 Intelligent Brick (obviously).
-* A [microSD] or [microSDHC] card. [microSDXC] is not supported (you
+* A [microSD] or [microSDHC] card (2GB - 32GB). [microSDXC] is not supported (you
   might be able to get it to work, but it will operate at reduced speed).
   Cards larger than 32GB will not work!
   Also look at the [speed class rating]. Class 10 is the fastest, but
@@ -28,10 +28,8 @@ First, here are the things you need before starting:
 
 ---
 
-**IMPORTANT:** The instructions on this page only apply to releases dated March
-2015 or later. For earlier releases (i.e. wheesy "Latest Release"), see
-[Getting Started v2] on the old wiki. These older releases are no longer
-supported.
+**IMPORTANT:** The instructions on this page only apply to releases dated May
+2015 or later. Older releases are no longer supported.
 
 ---
 
@@ -74,12 +72,6 @@ MINDSTORMS boot splash and the red LEDs will be on. This is immediately
 followed by the ev3dev boot splash and the LEDs changing to orange. The left
 LED indicates CPU activity and the right LED indicates disk (SD card) activity.
 
-Shortly after the ev3dev boot splash, the screen will go blank <s>and then
-eventually say `"Debian GNU/Linux 7 (wheezy)"`. Any time after the screen goes
-blank, you can press any of the directional buttons (up, down, left, right)
-to toggle displaying boot messages.</s> (Plymouth is currently broken, so no
-boot messages for now.)
-
 The first boot will take a little longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
 items.
@@ -112,6 +104,8 @@ you want to use and on the OS of your host computer, so pick the one that applie
     * Hopefully you can figure it out. I'm putting off writing detailed docs
       until brickman is a bit more stable.
 * Bluetooth
+    * Note: Bluetooth may not work on the first boot. Please reboot if you see "???"
+       after you power on Bluetooth.
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
 ## Step 4.5: Make sure the firstboot script ran correctly
@@ -175,19 +169,6 @@ otherwise, you can manually set the date/time with the `date` command.
 You can skip this if en-US is OK.
 
     root@ev3dev:~# dpkg-reconfigure locales
-
-### Grow your root file system
-
-The ev3dev image is only ~900MB so that you don't have to wait so long while
-writing the image to the SD card (and also so it will fit on a 1GB card). This
-means that you have some unused space on your SD card that you can reclaim.
-This command will expand the root file system partition to use the rest of the
-free space on your SD card.
-
-    root@ev3dev:~# lvextend --extents +100%FREE --resizefs /dev/ev3devVG/root /dev/mmcblk0p3
-
-**IMPORTANT**: Don't wait until you get an error that your disk is full before
-doing this. You need some free disk space available in order to run this command.
 
 ### Update packages
 

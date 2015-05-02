@@ -35,12 +35,12 @@ can be used to monitor the battery voltage of the NxtMMX.
 
 There are two settings that are not changeable using the tacho-motor class,
 namely 0x86-Pass Count and 0x87-Tolerance. If you need to change these, you can
-do so by writing to the `bin_data` attribute of the lego-sensor class
+do so by writing to the `direct` attribute of the lego-sensor class
 [device][mindsensors.com NxtMMX].
 
 Example - set Pass Count to 10:
 
-    $ echo -e -n "\x86\x0A" > bin_data
+    $ echo -e -n "\x$(printf '%x' 10)" | dd bs=1 of=direct seek=0x86
 
 [mindsensors.com NxtMMX]: {{ site.github.url }}/docs/sensors/mindsensors.com-multiplexer-for-nxt-ev3-motors
 [tacho-motor class]: {{ site.github.url }}/docs/drivers/tacho-motor-class

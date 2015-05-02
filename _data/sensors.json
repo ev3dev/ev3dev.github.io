@@ -184,9 +184,16 @@
     {
         "cmd_info": [
             {
-                "description": "Reset angle values",
+                "description": "Reset accumulated angle",
                 "id": "0",
                 "name": "RESET"
+            },
+            {
+                "description": "Reset accumulated angle and save to EEPROM",
+                "id": "1",
+                "name": "CAL",
+                "name_footnote": "[^calibrate]",
+                "notes": "\n[^calibrate]: When Calibrating the sensor wait\n    least 25ms before further reads from the sensor.\n    That means disable polling by setting `poll_ms`\n    to 0 before sending this command.\n    \n    "
             }
         ],
         "default_address": "0x01",
@@ -195,6 +202,11 @@
                 "cmd_data": "0",
                 "cmd_reg": "0",
                 "id": "0"
+            },
+            {
+                "cmd_data": "0",
+                "cmd_reg": "0",
+                "id": "1"
             }
         ],
         "i2c_mode_info": [
@@ -228,7 +240,7 @@
                 "description": "Accumulated angle",
                 "figures": "9",
                 "id": "1",
-                "name": "ACCEL",
+                "name": "ANGLE-ACC",
                 "raw_max": "INT_MAX",
                 "raw_min": "INT_MIN",
                 "si_max": "INT_MAX",
@@ -252,7 +264,7 @@
             }
         ],
         "name": "ht-nxt-angle",
-        "num_commands": "1",
+        "num_commands": "2",
         "num_modes": "3",
         "product_id": "AnglSnsr",
         "sensor_type": "nxt-i2c-sensor",
@@ -2750,22 +2762,18 @@
         "i2c_mode_info": [
             {
                 "id": "0",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "1",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "2",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "3",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             }
         ],
