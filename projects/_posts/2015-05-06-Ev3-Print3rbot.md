@@ -10,6 +10,7 @@ excerpt: "An ev3 robot that draws with a pen"
 The ev3 Print3rbot can be built using the EV3 Home Edition set, plus a [3D printed pen holder](http://www.thingiverse.com/thing:409421), 2 [LEGO Gear Wheel 40T](http://www.thingiverse.com/thing:409421) (ref. 4285634) and an additional push button sensor (EV3 or NXT). The additional push button and the 2 gears are included in the EV3 education set.
 
 The robot can draw simple svg files (as long as it only contains non transformed paths). See images/template.svg.
+
 The python code is using the [Python API](https://github.com/ddemidov/ev3dev-lang-python) from @ddemidov. To install it:
 
 * Prerequisites:
