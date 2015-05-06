@@ -1,7 +1,7 @@
 ---
 author: "@cavenel"
 programming_language: Python
-youtube_video_id: 9pjpQoZoEW6E
+youtube_video_id: 9pjpQoZoW6E
 source_code_url: "https://github.com/cavenel/ev3-print3rbot/"
 building_instructions_url: "https://www.dropbox.com/s/5jtnpaf18ibalj0/ev3_Print3rbot.pdf?dl=1"
 excerpt: "An EV3 robot that draws with a pen"
