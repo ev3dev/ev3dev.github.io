@@ -24,4 +24,8 @@ apt-get install libboost-python-dev python-setuptools python-pil
 easy_install http://ddemidov.github.io/ev3dev-lang-python/python_ev3dev-latest.egg
 ```
 
-The ev3dev version must be at least ev3dev-jessie-2015-05-01.
+The ev3dev version must be at least [ev3dev-jessie-2015-05-01](https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-05-01).
+
+## Example of extension for the Ev3 Print3rbot:
+
+[![EV3 Print3rbot PlotClock ](http://img.youtube.com/vi/UwpghsdmDsE/0.jpg)](https://www.youtube.com/watch?v=UwpghsdmDsE)
