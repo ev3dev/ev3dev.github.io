@@ -1,13 +1,13 @@
 ---
 author: "@cavenel"
 programming_language: Python
-youtube_video_id: 9pjpQoZoW6E
+youtube_video_id: 9pjpQoZoEW6E
 source_code_url: "https://github.com/cavenel/ev3-print3rbot/"
 building_instructions_url: "https://www.dropbox.com/s/5jtnpaf18ibalj0/ev3_Print3rbot.pdf?dl=1"
-excerpt: "An ev3 robot that draws with a pen"
+excerpt: "An EV3 robot that draws with a pen"
 ---
 
-The ev3 Print3rbot can be built using the EV3 Home Edition set, plus a [3D printed pen holder](http://www.thingiverse.com/thing:409421), 2 [LEGO Gear Wheel 40T](http://www.thingiverse.com/thing:409421) (ref. 4285634) and an additional push button sensor (EV3 or NXT). The additional push button and the 2 gears are included in the EV3 education set.
+The EV3 Print3rbot can be built using the EV3 Home Edition set, plus a [3D printed pen holder](http://www.thingiverse.com/thing:409421), 2 [LEGO Gear Wheel 40T](http://www.thingiverse.com/thing:409421) (ref. 4285634) and an additional push button sensor (EV3 or NXT). The additional push button and the 2 gears are included in the EV3 education set.
 
 The robot can draw simple svg files (as long as it only contains non transformed paths). See images/template.svg.
 
@@ -27,6 +27,6 @@ easy_install http://ddemidov.github.io/ev3dev-lang-python/python_ev3dev-latest.e
 
 The ev3dev version must be at least [ev3dev-jessie-2015-05-01](https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-05-01).
 
-## Example of extension for the Ev3 Print3rbot:
+## Example of extension for the EV3 Print3rbot:
 
 [![EV3 Print3rbot PlotClock ](http://i.imgur.com/5W8exjz.jpg)](https://www.youtube.com/watch?v=UwpghsdmDsE)
