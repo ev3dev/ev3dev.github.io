@@ -28,6 +28,4 @@ The ev3dev version must be at least [ev3dev-jessie-2015-05-01](https://github.co
 
 ## Example of extension for the Ev3 Print3rbot:
 
-YT("UwpghsdmDsE", print = TRUE)
-
-[![EV3 Print3rbot PlotClock ](http://img.youtube.com/vi/UwpghsdmDsE/0.jpg)](https://www.youtube.com/watch?v=UwpghsdmDsE)
+[![EV3 Print3rbot PlotClock ](http://i.imgur.com/IwwpJvV.jpg?1)](https://www.youtube.com/watch?v=UwpghsdmDsE)
