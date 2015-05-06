@@ -13,11 +13,11 @@ The robot can draw simple svg files (as long as it only contains non transformed
 
 The python code is using the [Python API](https://github.com/ddemidov/ev3dev-lang-python) from @ddemidov. To install it:
 
-* Prerequisites:
+*   Prerequisites:
 
         apt-get install libboost-python-dev python-setuptools python-pil
 
-* Now, the actual module installation:
+*   Now, the actual module installation:
 
         easy_install http://ddemidov.github.io/ev3dev-lang-python/python_ev3dev-latest.egg
 
