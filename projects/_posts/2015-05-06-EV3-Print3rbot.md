@@ -15,15 +15,11 @@ The python code is using the [Python API](https://github.com/ddemidov/ev3dev-lan
 
 * Prerequisites:
 
-```
-apt-get install libboost-python-dev python-setuptools python-pil
-```
+    apt-get install libboost-python-dev python-setuptools python-pil
 
 * Now, the actual module installation:
 
-```
-easy_install http://ddemidov.github.io/ev3dev-lang-python/python_ev3dev-latest.egg
-```
+    easy_install http://ddemidov.github.io/ev3dev-lang-python/python_ev3dev-latest.egg
 
 The ev3dev version must be at least [ev3dev-jessie-2015-05-01](https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-05-01).
 
