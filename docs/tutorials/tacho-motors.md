@@ -14,8 +14,8 @@ A [tachometer] is a device that measures rotational speed. The LEGO MINDSTORMS
 NXT and EV3 motors have an optical encoder that sends electrical pulses to the
 EV3 when the motor rotates.
 
-We call any motor that can seen feedback like this a "tacho-motor". Using this
-feedback, you have have greater control over the speed and position of the motor
+We call any motor that can see feedback like this a "tacho-motor". Using this
+feedback, you have greater control over the speed and position of the motor
 compared to motors that do not provide feedback.
 
 ## Identifying the Motor
