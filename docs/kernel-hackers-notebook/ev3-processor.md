@@ -12,7 +12,7 @@ title: EV3 Processor
 ## Documentation
 
 * [Official Website](http://www.ti.com/product/am1808)
-* [AM1808 ARM® Microprocessor Datasheet (pdf)](http://www.ti.com/lit/ds/sprs653d/sprs653d.pdf)
+* [AM1808 ARM® Microprocessor Datasheet (pdf)](http://www.ti.com/lit/ds/symlink/am1808.pdf)
 * [AM1808 Technical Reference Manual (pdf)](http://www.ti.com/lit/ug/spruh82a/spruh82a.pdf)
 - [AM1808 Pinmux Utility (pdf)](http://www.ti.com/lit/an/spraba2a/spraba2a.pdf)
 
