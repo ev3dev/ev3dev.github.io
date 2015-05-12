@@ -32,4 +32,5 @@ We also have many great contrubutors that are maintaining extra libraries for la
     * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
+    * [C](https://github.com/theZiz/ev3c) by @Ziz
     * [Clojure](https://github.com/annapawlicka/clj-ev3dev) by @annapawlicka
