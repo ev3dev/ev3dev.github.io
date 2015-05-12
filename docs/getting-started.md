@@ -207,14 +207,7 @@ Here are some guides for using each of the major components.
 There are a number of programming languages available to use. The brick can
 run almost all languages that any other Linux distro can, so your favorite
 language is probably supported. Language bindings have already been written
-for some languages:
-
-- [Using brickstrap to cross compile and debug](https://github.com/ev3dev/ev3dev/wiki/Using-brickstrap-to-cross-compile-and-debug)
-- [C++, Lua and Vala language bindings/samples](https://github.com/ev3dev/ev3dev-lang)
-- [Clojure](https://github.com/annapawlicka/clj-ev3dev)
-- [Google Go](https://github.com/ldmberman/GoEV3)
-- [Node.js](https://github.com/WasabiFan/ev3dev-NodeJS)
-- [Python](https://github.com/topikachu/python-ev3)
+for many languages. You can learn more about the available libraries [here](/docs/libraries).
 
 If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
