@@ -215,6 +215,7 @@ for some languages:
 - [Google Go](https://github.com/ldmberman/GoEV3)
 - [Node.js](https://github.com/WasabiFan/ev3dev-NodeJS)
 - [Python](https://github.com/topikachu/python-ev3)
+- [C](https://github.com/theZiz/ev3c)
 
 If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
