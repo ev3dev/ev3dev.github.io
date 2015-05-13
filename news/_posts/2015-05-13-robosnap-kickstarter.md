@@ -8,7 +8,7 @@ As if today was not historic enough, while I was busy preparing the first ever
 launching a [KickStarter page] for [RoboSnap] - the first ever product built
 for ev3dev.
 
-[RoboSnap] is easy-to-use, kid-friendly USB camera made especially to work with
+[RoboSnap] is an easy-to-use, kid-friendly USB camera made especially to work with
 LEGO MINDSTORMS EV3 (using ev3dev of course) as well as Raspberry Pi and other
 platforms.
 
