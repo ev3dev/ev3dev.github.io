@@ -133,7 +133,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>16</td>
     <td>GPIO&nbsp;0-3</td>
     <td>MBIN0</td>
-    <td>Output Port B Pin 1 In</td>
+    <td>Output Port B Pin 2</td>
   </tr>
   <tr>
     <td>12</td>
@@ -366,7 +366,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>24</td>
     <td>GPIO&nbsp;2-1</td>
     <td>MBIN1</td>
-    <td>Output Port B Pin 2 In</td>
+    <td>Output Port B Pin 1</td>
   </tr>
   <tr>
     <td>20</td>
@@ -451,7 +451,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>0</td>
     <td>GPIO&nbsp;3-15</td>
     <td>MAIN0</td>
-    <td>Output Port A Pin 1 In</td>
+    <td>Output Port A Pin 1</td>
   </tr>
   <tr>
     <td rowspan="8">8</td>
@@ -494,7 +494,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>4</td>
     <td>GPIO&nbsp;3-6</td>
     <td>MAIN1</td>
-    <td>Output Port A Pin 2 In</td>
+    <td>Output Port A Pin 2</td>
   </tr>
   <tr>
     <td>0</td>
@@ -611,13 +611,13 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>24</td>
     <td>GPIO&nbsp;5-9</td>
     <td>MCIN1</td>
-    <td>Output Port C Pin 2 In</td>
+    <td>Output Port C Pin 2</td>
   </tr>
   <tr>
     <td>20</td>
     <td>GPIO&nbsp;5-10</td>
     <td>MDIN0</td>
-    <td>Output Port D Pin 1 In</td>
+    <td>Output Port D Pin 2</td>
   </tr>
   <tr>
     <td>16</td>
@@ -672,7 +672,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>16</td>
     <td>GPIO&nbsp;5-3</td>
     <td>MDIN1</td>
-    <td>Output Port D Pin 2 In</td>
+    <td>Output Port D Pin 1</td>
   </tr>
   <tr>
     <td>12</td>
@@ -703,7 +703,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>28</td>
     <td>GPIO&nbsp;6-8</td>
     <td>MCIN0</td>
-    <td>Output Port C Pin 1 In</td>
+    <td>Output Port C Pin 1</td>
   </tr>
   <tr>
     <td>24</td>
