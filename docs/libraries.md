@@ -13,17 +13,17 @@ We have a repository of officially maintained language bindings, as well as many
 ## Unified Libraries
 
 Our official "unified" [language binding repository](http://github.com/ev3dev/ev3dev-lang)
-currently has support for C++, Lua, Node.js, R and vala.
+currently has support for C++, Lua, Node.js, and Python.
 These libraries are all built around a single
 [API specification](https://github.com/ev3dev/ev3dev-lang/blob/develop/wrapper-specification.md)
 that ensures that interface is almost identical for each, and they are being updated and
 enhanced regularly.
 
 * Unified bindings:
-    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
     * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
-    * [Node.js](https://github.com/ev3dev/ev3dev-lang/tree/develop/js)
-    * [R](https://github.com/ev3dev/ev3dev-lang/tree/develop/R)
+    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
+    * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
+    * [Python](https://github.com/ddemidov/ev3dev-lang-python)
 
 ## Extra languages
 We also have many great contrubutors that are maintaining extra libraries for languages not included in our other repository. 
@@ -34,3 +34,4 @@ We also have many great contrubutors that are maintaining extra libraries for la
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @Ziz
     * [Clojure](https://github.com/annapawlicka/clj-ev3dev) by @annapawlicka
+    * [vala](https://github.com/dlech/ev3dev-lang-glib) by @dlech and @WasabiFan
