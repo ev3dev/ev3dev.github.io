@@ -25,6 +25,22 @@ enhanced regularly.
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
     * [Python](https://github.com/ddemidov/ev3dev-lang-python)
 
+## Programming toolkit for ev3dev
+
+There is also a [GLib]/[GObject] based [toolkit][ev3devKit] that provides a number of
+programming interfaces for ev3dev, including user interface and device driver
+interface.  It is written in vala, but since it uses GObjects, it can be used
+with many [languages] via [GObjectIntrospection]. The [Brick Manager][brickman]
+for ev3dev is written using this library.
+
+[ev3devKit]: https://github.com/ev3dev/ev3devKit
+[GLib]: https://developer.gnome.org/glib/stable/index.html
+[GObject]: https://developer.gnome.org/gobject/stable/index.html
+[languages]: https://wiki.gnome.org/Projects/GObjectIntrospection/Users
+[GObjectIntrospection]: https://wiki.gnome.org/Projects/GObjectIntrospection
+[brickman]: https://github.com/ev3dev/brickman
+
+
 ## Extra languages
 We also have many great contrubutors that are maintaining extra libraries for languages not included in our other repository. 
 
@@ -34,4 +50,3 @@ We also have many great contrubutors that are maintaining extra libraries for la
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @theZiz
     * [Clojure](https://github.com/annapawlicka/clj-ev3dev) by @annapawlicka
-    * [vala](https://github.com/dlech/ev3dev-lang-glib) by @dlech and @WasabiFan
