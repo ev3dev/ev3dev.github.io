@@ -42,7 +42,9 @@ for ev3dev is written using this library.
 
 
 ## Extra languages
-We also have many great contrubutors that are maintaining extra libraries for languages not included in our other repository. 
+We also have many great contrubutors that are maintaining extra libraries for
+languages not included in our other repository.  Note that some of these
+libraries may be outdated due to the fast development cycle of ev3dev.
 
 * Extra languages:
     * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
