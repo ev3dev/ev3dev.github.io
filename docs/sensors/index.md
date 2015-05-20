@@ -21,16 +21,16 @@ and UART.
 
 These are the simplest type of sensor. The measured value is converted to a
 voltage (0-5VDC) that is read by the EV3. There are actually two types of
-analog sensors. We call the first **Analog/EV3**. These are sensors that were
+analog sensors. We call the first **EV3/Analog**. These are sensors that were
 designed specifically for the EV3 and will not work on the NXT because the
 pinout is different. They contain an ID resistor so that the EV3 can tell
-different types of sensors apart. The second type is **Analog/NXT**. These
+different types of sensors apart. The second type is **NXT/Analog**. These
 sensors are designed for the NXT, but also work on the EV3. The EV3 cannot
 differentiate between most of these sensors though, so you have to tell it
 which one your have or just use the generic driver.
 
-WeDo sensors, referred to as **Analog/WeDo**, are also analog sensors. They are
-actually electrically similar to Analog/EV3 sensors (require 5V power and have
+WeDo sensors, referred to as **WeDo/Analog**, are also analog sensors. They are
+actually electrically similar to EV3/Analog sensors (require 5V power and have
 ID resistor). Currently, we only support WeDo sensors attached to a WeDo hub,
 but if someone would like to design a cable and modify the `wedo-sensor` and
 `lego-ports` drivers, we could easily make them work with the input ports on
@@ -56,8 +56,8 @@ I2C sensors are sensors that communicate with the intelligent brick via the
 sensors. These sensors can be sorted into two categories as well: those that
 were designed using LEGO's guidelines and those that use an off the shelf I2C
 chip. ev3dev supports both kind of sensors, but only the first type is
-auto-detected. We will refer to the former as **I2C/NXT** and the latter as
-**I2C/Other**
+auto-detected. We will refer to the former as **NXT/I2C** and the latter as
+**Other/I2C**
 
 ### UART Sensors
 
@@ -65,9 +65,9 @@ These is a new type of sensor that is designed specifically for the EV3 (they
 don't work with the NXT). They use an [UART] to send data to the brick. These
 sensors are a bit "smarter" in that in addition to sending the data of what
 they measure, they also send information about their capabilities. This means
-that any new **UART/EV3** sensors should "just work" without us having to write
+that any new **EV3/UART** sensors should "just work" without us having to write
 new drivers. Since the 'U' in UART means universal, this also means that
-[UART/EV3 sensors can connect to any UART device][using-uart-sensors-on-any-linux],
+[EV3/UART sensors can connect to any UART device][using-uart-sensors-on-any-linux],
 not just the input ports.
 
 ## Using Sensors
@@ -78,7 +78,7 @@ General resources:
 * [The LEGO Sensor (lego-sensor) Class][lego-sensor class]
 * [EV3 Input Port Driver]
 
-I2C sensor resources (applies to both I2C/NXT and I2C/Other):
+I2C sensor resources (applies to both NXT/I2C and Other/I2C):
 
 * [I2C Sensor Addressing]
 * [Using I2C Sensors]
@@ -134,7 +134,7 @@ kernel.
         <td markdown="span">{{ autodetect }}</td>
         <td>
             <span style="white-space:nowrap;">{{ sensor.name }}</span><!--
-            {% if connection == 'UART/EV3' %}
+            {% if connection == 'EV3/UART' %}
                 --><span markdown="1">[^ev3-uart-driver]</span><!--
             {% endif %}
             {% if sensor.name == 'ev3-analog-XX' %}
@@ -152,7 +152,7 @@ kernel.
 {% endfor %}
 </table>
 
-[^nxt-analog]: The auto-detection algorithm detects this sensor as an Analog/NXT
+[^nxt-analog]: The auto-detection algorithm detects this sensor as an NXT/Analog
     type sensor but it cannot determine the exact sensor type. The generic
     analog driver (nxt-analog) will be loaded by default for this sensor. See the
     [lego-port class] for information on how to manually load the
@@ -172,7 +172,7 @@ kernel.
     of the sensor (`01` to `14`). Type id `02` is the LEGO EV3 Touch sensor,
     so `ev3-analog-02` does not exist.
 
-[^ev3-uart-driver]: When UART/EV3 sensors are connected to an EV3 input port
+[^ev3-uart-driver]: When EV3/UART sensors are connected to an EV3 input port
     (or any other tty device for that matter), they actually use the
     `ev3-uart-sensor-ld` driver, which is a tty line discipline. The
     `ev3-uart-sensor` module is currently only used with the mindsensors.com

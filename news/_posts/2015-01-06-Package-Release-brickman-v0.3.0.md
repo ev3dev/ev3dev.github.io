@@ -7,7 +7,7 @@ A new version of brickman has been released. This version includes a "Device
 Browser" that allows you to view the ports and sensors connected to the EV3.
 
 The port browser can be used to monitor the state of auto-detection. In the
-case of Analog/NXT sensors, the port browser can also be used to specify the
+case of NXT/Analog sensors, the port browser can also be used to specify the
 exact type of sensor.
 
 The sensor browser can be used to see what types of sensors are attached and

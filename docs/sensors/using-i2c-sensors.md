@@ -10,12 +10,12 @@ not specify the layout of the registers of a device. LEGO, however, has
 guidelines for 3rd party manufactures so that they can provide sensors with
 a (fairly) uniform register layout.
 
-We call sensors that were designed following LEGO's guidelines **I2C/NXT**
+We call sensors that were designed following LEGO's guidelines **NXT/I2C**
 sensors. This common register layout lets us autodetect the type of sensor
 and proves access to the sensor via the [lego-sensor] class.
 
 We refer to sensors that do not conform to LEGO's specifications as
-**I2C/Other** sensors. There are so many types of I2C chips in the wild
+**Other/I2C** sensors. There are so many types of I2C chips in the wild
 that are already supported on Linux that we do not attempt to autodetect
 them. To use them, we just need to find a compatible driver and manually
 load it.
@@ -33,7 +33,7 @@ single port using a port splitter, you would need to know the address to
 make sure your are using the correct `sensor<N>` device node. NOTE: A
 [port splitter] is not the same as a [sensor MUX].
 
-## Using I2C/NXT Sensors
+## Using NXT/I2C Sensors
 
 See the page on [The MINDSTORMS Sensor Device Class][lego-sensor] for general usage.
 This page only covers the I2C specifics.
@@ -45,7 +45,7 @@ to read data from the sensor. The data that is read depends on the current
 mode that is selected. You can change the polling rate using the `poll_ms`
 attribute (of the `lego-sensor` device). You can also disable polling by setting
 `poll_ms` to `0`. When polling is disabled, you can initiate a data read by
-setting the mode again. By default, I2C/NXT sensors are polled every 100
+setting the mode again. By default, NXT/I2C sensors are polled every 100
 milliseconds. The default value can be changed via a module parameter.
 See the [NXT I2C Sensor Driver][nxt-i2c-sensor] for details.
 
@@ -88,11 +88,11 @@ Example:
 
     # echo nxt-i2c-sensor 0x0B > /sys/bus/i2c/devices/i2c-5/new_device
 
-## Using I2C/Other Sensors
+## Using Other/I2C Sensors
 
-As we already discussed, I2C/Other sensors generally have an existing Linux
+As we already discussed, Other/I2C sensors generally have an existing Linux
 driver that you can use. This means that each sensor will work a bit
-differently. You can load a device just like for manually loading an I2C/NXT
+differently. You can load a device just like for manually loading an NXT/I2C
 device, except we use a different driver name. You can find the names of
 drivers [here](../#supported-sensors).
 

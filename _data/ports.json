@@ -1,21 +1,100 @@
 [
     {
-        "connection_types": "I2C/NXT, Analog/NXT",
+        "connection_types": "NXT/Analog, NXT/I2C, EV3/Analog, EV3/UART",
+        "description": "Dexter Industries BrickPi Input Port",
+        "mode_info": [
+            {
+                "description": "No sensor",
+                "id": "BRICKPI_IN_PORT_MODE_NONE",
+                "name": "none"
+            },
+            {
+                "description": "NXT/Analog sensor",
+                "id": "BRICKPI_IN_PORT_MODE_NXT_ANALOG",
+                "name": "nxt-analog",
+                "name_footnote": "[^nxt-analog-mode]",
+                "notes": "\n[^nxt-analog-mode]: The [nxt-analog] driver will be loaded when\n    this mode is set. You must manually specify the correct\n    driver for your sensor using `set_device` if you want to use\n    another driver. Any driver with a connection type of\n    NXT/Analog is allowed.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
+            },
+            {
+                "description": "LEGO NXT Color sensor",
+                "id": "BRICKPI_IN_PORT_MODE_NXT_COLOR",
+                "name": "nxt-color"
+            },
+            {
+                "description": "NXT/I2C sensor",
+                "id": "BRICKPI_IN_PORT_MODE_NXT_I2C",
+                "name": "nxt-i2c",
+                "name_footnote": "[^nxt-i2c-mode]",
+                "notes": "\n[^nxt-i2c-mode]: No sensors are loaded by default. You must\n    manually specify the sensor that is connected by using the\n    `set_device` attribute.\n    \n    "
+            },
+            {
+                "description": "EV3/Analog sensor",
+                "id": "BRICKPI_IN_PORT_MODE_EV3_ANALOG",
+                "name": "ev3-analog",
+                "name_footnote": "[^ev3-analog-mode]",
+                "notes": "\n[^ev3-analog-mode]: Only the LEGO EV3 Touch sensor is supported.\n    The driver will load by default.\n    \n    "
+            },
+            {
+                "description": "EV3/UART sensor",
+                "id": "BRICKPI_IN_PORT_MODE_EV3_UART",
+                "name": "ev3-uart",
+                "name_footnote": "[^ev3-uart-mode]",
+                "notes": "\n[^ev3-uart-mode]: Only the LEGO EV3 Ultrasonic, Color, Gyro,\n    and Infrared sensors are supported. They cannot be automatically\n    detected, so you must specify the sensor manually using the\n    `set_device` attribute. No sensors are loaded by default.\n    \n    "
+            }
+        ],
+        "module": "brickpi-ports-in",
+        "name": "brickpi-in-port",
+        "num_modes": 6,
+        "prefix": "in",
+        "source_file": "drivers/lego/brickpi/brickpi_ports_in.c",
+        "source_line": 56,
+        "url_name": "brickpi-in-port"
+    },
+    {
+        "connection_types": "tacho-motor",
+        "description": "Dexter Industries BrickPi Input Port",
+        "mode_info": [
+            {
+                "description": "NXT/EV3 Large Motor",
+                "id": "BRICKPI_OUT_PORT_MODE_NXT_MOTOR",
+                "name": "nxt-motor"
+            },
+            {
+                "description": "RCX/Power Functions motor",
+                "id": "BRICKPI_OUT_PORT_MODE_RCX_MOTOR",
+                "name": "rcx-motor"
+            },
+            {
+                "description": "RCX/Power Functions LED",
+                "id": "BRICKPI_OUT_PORT_MODE_RCX_LED",
+                "name": "rcx-led"
+            }
+        ],
+        "module": "brickpi-ports-out",
+        "name": "brickpi-out-port",
+        "num_modes": 3,
+        "prefix": "out",
+        "source_file": "drivers/lego/brickpi/brickpi_ports_out.c",
+        "source_line": 47,
+        "url_name": "brickpi-out-port"
+    },
+    {
+        "connection_types": "NXT/I2C, NXT/Analog",
         "description": "HiTechnic NXT Sensor Multiplexer Input Port",
         "mode_info": [
             {
-                "description": "Analog/NXT sensor",
+                "description": "NXT/Analog sensor",
                 "id": "HT_NXT_SMUX_PORT_MODE_ANALOG",
                 "name": "analog",
                 "name_footnote": "[^analog-mode]",
-                "notes": "\n[^analog-mode]: The [nxt-analog] driver will be loaded when\n    this mode is set. You must manually specify the correct\n    driver for your sensor using `set_device` if you want to use\n    another driver. Any driver with a connection type of\n    Analog/NXT is allowed.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
+                "notes": "\n[^analog-mode]: The [nxt-analog] driver will be loaded when\n    this mode is set. You must manually specify the correct\n    driver for your sensor using `set_device` if you want to use\n    another driver. Any driver with a connection type of\n    NXT/Analog is allowed.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
             },
             {
-                "description": "I2C/NXT sensor",
+                "description": "NXT/I2C sensor",
                 "id": "HT_NXT_SMUX_PORT_MODE_I2C",
                 "name": "i2c",
                 "name_footnote": "[^i2c-mode]",
-                "notes": "\n[^i2c-mode]: If one of the supported sensors was detected\n    by invoking the `DETECT` command on the [ht-nxt-smux]\n    associated with this port, then the appropriate driver will\n    be automatically loaded. Otherwise, you can use `set_device`\n    to load the correct driver for your sensor. Any driver with\n    a connection type of I2C/NXT is allowed.\n    ^\n    [ht-nxt-smux]: /docs/sensors/hitechnic-nxt-sensor-multiplexer\n    \n    "
+                "notes": "\n[^i2c-mode]: If one of the supported sensors was detected\n    by invoking the `DETECT` command on the [ht-nxt-smux]\n    associated with this port, then the appropriate driver will\n    be automatically loaded. Otherwise, you can use `set_device`\n    to load the correct driver for your sensor. Any driver with\n    a connection type of NXT/I2C is allowed.\n    ^\n    [ht-nxt-smux]: /docs/sensors/hitechnic-nxt-sensor-multiplexer\n    \n    "
             }
         ],
         "module": "ht-nxt-smux",
@@ -27,7 +106,7 @@
         "url_name": "ht-nxt-smux-port"
     },
     {
-        "connection_types": "UART/EV3, UART/Other, I2C/NXT, I2C/Other, Analog/EV3, Analog/NXT",
+        "connection_types": "EV3/UART, Other/UART, NXT/I2C, Other/I2C, EV3/Analog, NXT/Analog",
         "description": "EV3 Input Port",
         "mode_info": [
             {
@@ -136,18 +215,18 @@
         "url_name": "legoev3-output-port"
     },
     {
-        "connection_types": "UART/EV3, Analog/EV3",
+        "connection_types": "EV3/UART, EV3/Analog",
         "description": "mindsensors.com EV3 Sensor Multiplexer Input Port",
         "mode_info": [
             {
-                "description": "UART/EV3 sensor",
+                "description": "EV3/UART sensor",
                 "id": "MS_EV3_SMUX_MODE_UART",
                 "name": "uart",
                 "name_footnote": "[^uart-mode]",
-                "notes": "\n[^uart-mode]: UART sensor types are not automatically\n    detected. By default, the `lego-ev3-uart-29` driver (LEGO\n    EV3 Color Sensor) will be loaded when this mode is set.\n    Use `set_device` to load other sensor devices/drivers.\n    \n    Supported sensors are:\n    \n    | Sensor Name         | Device/Driver Name |\n    |---------------------|--------------------|\n    | LEGO EV3 Color      | `lego-ev3-uart-29` |\n    | LEGO EV3 Ultrasonic | `lego-ev3-uart-30` |\n    | LEGO EV3 GYRO       | `lego-ev3-uart-32` |\n    | LEGO EV3 Infrared   | `lego-ev3-uart-33` |\n    \n    "
+                "notes": "\n[^uart-mode]: UART sensor types are not automatically\n    detected. By default, the `lego-ev3-color` driver\n    will be loaded when this mode is set.\n    Use `set_device` to load other sensor devices/drivers.\n    \n    Supported sensors are:\n    \n    | Sensor Name         | Device/Driver Name |\n    |---------------------|--------------------|\n    | LEGO EV3 Color      | `lego-ev3-color`   |\n    | LEGO EV3 Ultrasonic | `lego-ev3-us`      |\n    | LEGO EV3 GYRO       | `lego-ev3-gyro`    |\n    | LEGO EV3 Infrared   | `lego-ev3-ir`      |\n    \n    "
             },
             {
-                "description": "Analog/EV3 sensor",
+                "description": "EV3/Analog sensor",
                 "id": "MS_EV3_SMUX_MODE_ANALOG",
                 "name": "analog",
                 "name_footnote": "[^analog-mode]",
@@ -163,7 +242,7 @@
         "url_name": "ms-ev3-smux-port"
     },
     {
-        "connection_types": "Analog/WeDo, dc-motor, led",
+        "connection_types": "WeDo/Analog, dc-motor, led",
         "description": "LEGO WeDo Port",
         "mode_info": [
             {

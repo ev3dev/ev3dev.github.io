@@ -972,11 +972,7 @@
         "notes": "\n[^more-devices]: The `ht-nxt-smux` driver loads more devices\n    in addition to the [lego-sensor] class device. See\n    [ht-nxt-smux-port] for more information.\n    ^\n    [ht-nxt-smux-port]: /docs/ports/ht-nxt-smux-port\n    \n    ",
         "num_commands": "3",
         "num_modes": "1",
-        "ops.poll_cb": "ht_nxt_smux_poll_cb",
-        "ops.probe_cb": "ht_nxt_smux_probe_cb",
-        "ops.remove_cb": "ht_nxt_smux_remove_cb",
-        "ops.send_cmd_post_cb": "ht_nxt_smux_send_cmd_post_cb",
-        "ops.send_cmd_pre_cb": "ht_nxt_smux_send_cmd_pre_cb",
+        "ops": [],
         "product_id": "SensrMUX",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
@@ -993,42 +989,34 @@
         "i2c_mode_info": [
             {
                 "id": "0",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "1",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "2",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "3",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "4",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "5",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "6",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             },
             {
                 "id": "7",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0"
             }
         ],
@@ -1102,6 +1090,7 @@
         ],
         "name": "ht-super-pro",
         "num_modes": "5",
+        "pin1_state": "LEGO_PORT_GPIO_HIGH",
         "product_id": "SuperPro",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
@@ -1199,12 +1188,13 @@
                 "value0": "Distance (0-1003)"
             }
         ],
-        "name": "lego-ev3-uart-30",
-        "num_modes": "5",
+        "name": "lego-ev3-us",
+        "num_modes": "7",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
         "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
         "source_line": 25,
+        "type_id": "LEGO_EV3_ULTRASONIC_TYPE_ID",
         "url_name": "lego-ev3-ultrasonic-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Ultrasonic Sensor",
@@ -1272,12 +1262,13 @@
                 "value3": "???"
             }
         ],
-        "name": "lego-ev3-uart-32",
+        "name": "lego-ev3-gyro",
         "num_modes": "5",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
         "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
         "source_line": 25,
+        "type_id": "LEGO_EV3_GYRO_TYPE_ID",
         "url_name": "lego-ev3-gyro-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Gyro Sensor",
@@ -1289,7 +1280,7 @@
             {
                 "data_sets": "1",
                 "data_type": "LEGO_SENSOR_DATA_S8",
-                "description": "Reflected light<br />Red LED on",
+                "description": "Reflected light<br />LED color: red",
                 "id": "0",
                 "name": "COL-REFLECT",
                 "units": "pct",
@@ -1299,7 +1290,7 @@
             {
                 "data_sets": "1",
                 "data_type": "LEGO_SENSOR_DATA_S8",
-                "description": "Ambient light<br />Red LEDs off",
+                "description": "Ambient light<br />LED color: blue (dimly lit)",
                 "id": "1",
                 "name": "COL-AMBIENT",
                 "units": "pct",
@@ -1309,7 +1300,7 @@
             {
                 "data_sets": "1",
                 "data_type": "LEGO_SENSOR_DATA_S8",
-                "description": "Color<br />All LEDs rapidly cycling, appears white",
+                "description": "Color<br />LED color: white (all LEDs rapidly cycling)",
                 "id": "2",
                 "name": "COL-COLOR",
                 "notes": "\n[^color-values]: Color values:\n    \n    | Value | Color  |\n    |-------|--------|\n    | 0     | none   |\n    | 1     | black  |\n    | 2     | blue   |\n    | 3     | green  |\n    | 4     | yellow |\n    | 5     | red    |\n    | 6     | white  |\n    | 7     | brown  |\n    \n    ",
@@ -1321,7 +1312,7 @@
             {
                 "data_sets": "2",
                 "data_type": "LEGO_SENSOR_DATA_S16",
-                "description": "Raw Reflected<br />Red LED on",
+                "description": "Raw Reflected<br />LED color: red",
                 "id": "3",
                 "name": "REF-RAW",
                 "value0": "??? (0 to 1020???)",
@@ -1330,7 +1321,7 @@
             {
                 "data_sets": "3",
                 "data_type": "LEGO_SENSOR_DATA_S16",
-                "description": "Raw Color Components<br />All LEDs rapidly cycling, appears white",
+                "description": "Raw Color Components<br />LED color: white (all LEDs rapidly cycling)",
                 "id": "4",
                 "name": "RGB-RAW",
                 "units_description": "color",
@@ -1341,7 +1332,7 @@
             {
                 "data_sets": "4",
                 "data_type": "LEGO_SENSOR_DATA_S32",
-                "description": "Calibration ???<br />All LEDs rapidly cycling, appears white",
+                "description": "Calibration ???<br />LED color: red, flashing every 4 seconds, then goes continous",
                 "id": "5",
                 "name": "COL-CAL",
                 "name_footnote": "[^cal-mode]",
@@ -1352,12 +1343,13 @@
                 "value3": "???"
             }
         ],
-        "name": "lego-ev3-uart-29",
+        "name": "lego-ev3-color",
         "num_modes": "6",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
         "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
         "source_line": 25,
+        "type_id": "LEGO_EV3_COLOR_TYPE_ID",
         "url_name": "lego-ev3-color-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Color Sensor",
@@ -1481,12 +1473,13 @@
                 "value1": "??? (0 to 1023)"
             }
         ],
-        "name": "lego-ev3-uart-33",
+        "name": "lego-ev3-ir",
         "num_modes": "6",
         "num_view_modes": "3",
         "sensor_type": "ev3-uart-sensor",
         "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
         "source_line": 25,
+        "type_id": "LEGO_EV3_INFRARED_TYPE_ID",
         "url_name": "lego-ev3-infrared-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Infrared Sensor",
@@ -1932,35 +1925,30 @@
         "i2c_mode_info": [
             {
                 "id": "0",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "1",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "2",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "3",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
             },
             {
                 "id": "4",
-                "pin1_state": "LEGO_PORT_GPIO_HIGH",
                 "read_data_reg": "0",
                 "set_mode_data": "0",
                 "set_mode_reg": "0"
@@ -2021,6 +2009,7 @@
         "name": "lego-nxt-us",
         "num_modes": "5",
         "num_read_only_modes": "2",
+        "pin1_state": "LEGO_PORT_GPIO_HIGH",
         "product_id": "Sonar",
         "sensor_type": "nxt-i2c-sensor",
         "slow": "true",
@@ -2160,9 +2149,7 @@
         "num_commands": "4",
         "num_modes": "4",
         "num_read_only_modes": "4",
-        "ops.probe_cb": "mi_xg1300l_probe_cb",
-        "ops.remove_cb": "mi_xg1300l_remove_cb",
-        "ops.send_cmd_post_cb": "mi_xg1300l_send_cmd_post_cb",
+        "ops": [],
         "product_id": "XG1300L",
         "product_id_footnote": "[^ids]",
         "sensor_type": "nxt-i2c-sensor",
@@ -2330,7 +2317,7 @@
                 "data_sets": "3",
                 "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "1",
-                "description": "Gryo",
+                "description": "Gyro",
                 "id": "4",
                 "name": "GYRO",
                 "name_footnote": "[^gyro]",
@@ -2356,7 +2343,7 @@
         "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
         "num_commands": "6",
         "num_modes": "6",
-        "ops.send_cmd_post_cb": "ms_imu_send_cmd_post_cb",
+        "ops": [],
         "product_id": "AbsIMU",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
@@ -2473,6 +2460,11 @@
         "default_address": "0x50, 0x51, 0x52",
         "default_address_footnote": "[^addresses]",
         "device_class_footnote": "[^port-and-sensor-devices]",
+        "i2c_mode_info": [
+            {
+                "id": "0"
+            }
+        ],
         "id": "MS_EV3_SENSOR_MUX",
         "mode_info": [
             {
@@ -2488,9 +2480,7 @@
         "notes": "\n[^addresses]: This sensor appears as three separate sensors,\n    one for each channel on the sensor mux.\n    \n[^port-and-sensor-devices]: In addition to loading three\n    [lego-sensor] devices for the sensor mux itself, three\n    [lego-port] devices are added as well. These [ms-ev3-smux-port]\n    devices must be used to manually specify the type of sensor\n    that is attached to each port.\n    ^\n    [lego-port]: /docs/drivers/lego-port-class\n    [ms-ev3-smux-port]: /docs/ports/ms-ev3-smux-port\n    \n    ",
         "num_modes": "2",
         "num_read_only_modes": "1",
-        "ops.poll_cb": "ms_ev3_smux_poll_cb",
-        "ops.probe_cb": "ms_ev3_smux_probe_cb",
-        "ops.remove_cb": "ms_ev3_smux_remove_cb",
+        "ops": [],
         "product_id": "Ev3SMux",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
@@ -2901,8 +2891,7 @@
         "name": "ms-nxtmmx",
         "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^tacho-motor-devices]: The NxtMMX driver also loads two\n    [tacho-motor] class devices. Use the tacho-motor class devices\n    to actually control the motors. You can identify the motors\n    by the `port_name` attribute. It will be `in<X>:i2c<Y>:mux<Z>`\n    where `<X>` is A-D, `<Y>` is 3 (unless you changed the address)\n    and `<Z>` is 1 or 2 (matches M1 or M2 printed on the NxtMMX).\n    ^\n    [tacho-motor]: /docs/drivers/tacho-motor-class\n    \n    ",
         "num_modes": "2",
-        "ops.probe_cb": "ms_nxtmmx_probe_cb",
-        "ops.remove_cb": "ms_nxtmmx_remove_cb",
+        "ops": [],
         "product_id": "NxTMMX",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
@@ -2965,8 +2954,7 @@
         "name": "ms-8ch-servo",
         "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<N>:sv<M>` where `<N>` is the input port the servo\n    controller is connected to and `<M>` is the channel as indicated\n    on the servo controller itself.\n    ^\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/drivers/servo-motor-class\n    \n    ",
         "num_modes": "2",
-        "ops.probe_cb": "ms_8ch_servo_probe_cb",
-        "ops.remove_cb": "ms_8ch_servo_remove_cb",
+        "ops": [],
         "product_id": "NXTServo",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",

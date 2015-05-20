@@ -85,7 +85,7 @@ kernel.
         <td markdown="span">{{ device.autodetect }}</td>
         <td>
             <span style="white-space:nowrap;">{{ device.name }}</span><!--
-            {% if connection == 'UART/EV3' %}
+            {% if connection == 'EV3/UART' %}
                 --><span markdown="1">[^ev3-uart-driver]</span><!--
             {% endif %}
             -->
