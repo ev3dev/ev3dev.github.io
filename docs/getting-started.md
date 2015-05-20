@@ -195,7 +195,7 @@ considered experimental and subject to major changes.
 Here are some guides for using each of the major components.
 
 * [Sensors](/docs/sensors)
-* [Motors](https://github.com/ev3dev/ev3dev/wiki/Using-Motors)
+* [Motors](http://www.ev3dev.org/docs/tutorials/tacho-motors/)
 * [Sound](https://github.com/ev3dev/ev3dev/wiki/Using-Sound)
 * [LCD](https://github.com/ev3dev/ev3dev/wiki/Using-the-LCD)
 * [Buttons](https://github.com/ev3dev/ev3dev/wiki/Using-the-Buttons)
