@@ -17,11 +17,15 @@ is (hopefully) sufficient to get all of the changes.
 
 # Kernel release v3.16.7-ckt11-5-ev3dev-ev3
 
-There are a couple of breaking changes in this kernel release:
+There are a few breaking changes in this kernel release:
 
 * The `inverted` state of the motor `polarity` properties has been changed to
 `inversed` to match the mainline kernel PWM drivers.
 * The names of the LEDs have been changed. They now look like `ev3-left0:red:ev3dev`.
+* The names of UART sensors have changed. Well known sensors now have a more useful names,
+  namely `lego-ev3-color`, `lego-ev3-gyro`, `lego-ev3-us` and `lego-ev3-ir`. Unknown
+  UART sensors will have the name `ev3-uart-<type-id>` where `<type-id>` is an unique
+  identification number sent by the sensor.
 
 Another interesting change is that we have changed the kernel timer frequency
 (CONFIG_HZ) from 100Hz to 1000Hz. This may improve some low-latency applications.
