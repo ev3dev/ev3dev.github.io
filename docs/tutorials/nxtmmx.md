@@ -23,7 +23,7 @@ use `speed_sp` instead of `duty_cycle_sp`.
 
 ## Encoder Polarity
 
-The NxtMMX does not support motors with inverted encoder polarity. This means
+The NxtMMX does not support motors with `inversed` encoder polarity. This means
 the Firgelli linear actuators will not work with the NxtMMX.
 
 ## Battery Voltage
