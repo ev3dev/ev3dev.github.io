@@ -44,8 +44,8 @@ is 600. Valid values are 300 to 700. You must write to the position_sp
 attribute for changes to this attribute to take effect.
 
 `polarity` (read/write)
-: Sets the polarity of the servo. Valid values are `normal` and `inverted`.
-Setting the value to `inverted` will cause the position_sp value to be
+: Sets the polarity of the servo. Valid values are `normal` and `inversed`.
+Setting the value to `inversed` will cause the position_sp value to be
 inverted. i.e `-100` will correspond to `max_pulse_sp`, and `100` will
 correspond to `min_pulse_sp`.
 
