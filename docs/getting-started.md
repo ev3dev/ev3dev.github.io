@@ -7,24 +7,21 @@ categories: docs getting-started
 {:toc}
 
 So you are ready to try out ev3dev. Great!. Here are step-by-step instructions
-to get ev3dev up and running on your EV3.
+to get ev3dev up and running on your EV3 or Raspberry Pi.
 
 First, here are the things you need before starting:
 
-* A LEGO MINDSTORMS EV3 Intelligent Brick (obviously).
-* A [microSD] or [microSDHC] card (2GB - 32GB). [microSDXC] is not supported (you
-  might be able to get it to work, but it will operate at reduced speed).
-  Cards larger than 32GB will not work!
-  Also look at the [speed class rating]. Class 10 is the fastest, but
-  slower speeds will work just fine. Ultra High Speed (UHS) classes are not
-  supported (again, they should work, but not at the rated speed).
+* A LEGO MINDSTORMS EV3 Intelligent Brick or Raspberry Pi (any model).
+* A [microSD] or [microSDHC] card (2GB or larger). [microSDXC] is not supported
+  on the EV3. **All cards larger than 32GB will not work with the EV3!**
 * A computer with an adapter for the SD card. You will need administrator user
   permissions on this computer.
-* A way to communicate with the EV3. This can be one of the following:
+* A way to communicate. For the EV3, this can be one of the following:
     * USB cable (the one that comes with the EV3)
     * USB WiFi dongle
     * USB Ethernet (wired) dongle
     * Bluetooth
+  For Raspberry Pi you will need to use the wired Ethernet connection first.
 
 ---
 
@@ -36,7 +33,11 @@ First, here are the things you need before starting:
 ## Step 1: Download the latest ev3dev image file
 
 Releases are posted [on GitHub][releases]. Follow the link and download the latest
-**Test Release** image file. Downloading the `.zip` file is recommended for
+**Test Release** image file for your hardware. Releases for LEGO MINDSTORMS EV3
+start with `ev3-`, Raspberry Pi starts with `rpi-` and Raspberry Pi 2 starts
+with `rpi2-`.
+
+Downloading the `.zip` file is recommended for
 Windows/Mac and the `.xz` file is recommended for Linux. The `.xz` is smaller,
 but it requires that you have additional software installed on Windows/Mac to
 decompress it (such as [7-Zip] on Windows).
@@ -69,19 +70,28 @@ of the information there is applicable to ev3dev.
 
 Put the SD Card in your EV3 and power it on. At first, you will see the
 MINDSTORMS boot splash and the red LEDs will be on. This is immediately
-followed by the ev3dev boot splash and the LEDs changing to orange. The left
-LED indicates CPU activity and the right LED indicates disk (SD card) activity.
+followed by the ev3dev boot splash and the LEDs changing to orange. The
+LEDs indicate disk (SD card) activity.
 
-The first boot will take a little longer than subsequent boots because the EV3
+Note: If you are using Raspberry Pi hardware without a screen, just wait for
+the Activity LED to stop flashing, then go to the next step.
+
+After one or two minutes, the screen will go blank. This happens on the first boot
+only. The first boot takes a little longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
-items.
+items. After another minute or two, you will see the *brickman loading...* screen.
 
 When the boot is complete, the LEDs will turn green and you will see something
 like this on the screen:
 
 {% include screenshot.html source="/images/brickman/main-menu.png" %}
 
-You will notice the number in the battery in the upper right corner. This displays the remaining voltage of the power supply. It is not possible to calculate an accurate percent value of the remaining energy, so this value is choosen. If the voltage drops below 5V the brick will turn off. All not saved data may be lost. Keep in mind, that is may take a much longer time from 8V to 6.5V than from 6.5V down to 5V!
+You will notice the number in the battery in the upper right corner. This
+displays the remaining voltage of the power supply. It is not possible to
+calculate an accurate percent value of the remaining energy, so this value is
+chosen. If the voltage drops below 5V the brick will turn off. All not saved
+data may be lost. Keep in mind, that is may take a much longer time from 8V to
+6.5V than from 6.5V down to 5V!
 
 **Troubleshooting tips if your EV3 won't boot:**
 
@@ -108,15 +118,14 @@ you want to use and on the OS of your host computer, so pick the one that applie
        after you power on Bluetooth.
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
-## Step 4.5: Make sure the firstboot script ran correctly
-
-Recently, some users have reported problems that are related to the firstboot script not running correctly.
-Please verify that the items in [this list](https://github.com/ev3dev/ev3dev/issues/267#issuecomment-73917167)
-are correct. If not, leave a comment to help us figure out what is going wrong.
+Note: For Raspberry Pi you must use the wired Ethernet port to connect for the
+first time. The default host name is `ev3dev-rpi` or `ev3dev-rpi2` depending
+on which model you have. You can setup additional connections using the
+`connmanctl` command.
 
 ## Step 5: First things to do with ev3dev
 
-Here are some suggestions of some things you should do to get your EV3 setup.
+Here are some suggestions of some things you should do to get ev3dev setup.
 
 ### Change your root password
 
@@ -225,7 +234,5 @@ button from any screen in brickman. This will open a dialog where you can select
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
-[speed class rating]: https://en.wikipedia.org/wiki/Secure_Digital#Speed_class_rating
 [releases]:https://github.com/mindboards/ev3dev/releases
 [7-Zip]: http://www.7-zip.org/
-[Getting Started v2]: https://github.com/ev3dev/ev3dev/wiki/Getting-started-v2
