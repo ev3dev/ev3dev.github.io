@@ -1,1 +1,0 @@
-HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).

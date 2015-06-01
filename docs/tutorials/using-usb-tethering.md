@@ -15,4 +15,12 @@ to set up another connection instead of or in addition to a tethering connection
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
-{% include tabs.html id="0" tabs="Mac OS X|Ubuntu 14.04|Windows 7" files="using-usb-tethering-on-mac.md|using-usb-tethering-on-ubuntu-14-04.md|using-usb-tethering-on-windows-7.md" %}
+*   {: tab="Mac OSX"}
+    HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
+
+*   {: tab="Ubuntu"}
+    HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
+
+*   {: tab="Windows"}
+    HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
+{: tab-list="os"}

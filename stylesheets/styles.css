@@ -1237,17 +1237,17 @@ section #title p {
     margin-bottom: 5px;
 }
 
-.tab-area {
+[tab-area] {
     margin: 0px 0px 20px;
 }
 
-.tabs > ul {
+ul[tab-list] {
     list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
-.tabs > ul > li {
+ul[tab-list] > li {
     cursor: pointer;
     -webkit-appearance: button;
     font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1277,7 +1277,7 @@ section #title p {
     margin: 0px;
 }
 
-.tabs > ul > li:hover {
+ul[tab-list] > li:hover {
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b6b6b6), color-stop(100%, #434343));
     background: -webkit-linear-gradient(#b6b6b6, #434343);
     background: -moz-linear-gradient(#b6b6b6, #434343);
@@ -1287,7 +1287,7 @@ section #title p {
     background-color: #b6b6b6;
 }
 
-.tabs > ul > li.tab-active {
+ul[tab-list] > li.tab-active {
     cursor: unset;
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #696969), color-stop(100%, #434343));
     background: -webkit-linear-gradient(#696969, #434343);
@@ -1298,7 +1298,7 @@ section #title p {
     background-color: #696969;
 }
 
-.tab-content-area {
+[tab-content-area] {
     margin: 0px;
     padding: 12px;
     background-color: #434343;
@@ -1308,7 +1308,7 @@ section #title p {
     border-bottom-right-radius: 6px;
 }
 
-.tab-content {
+[tab-content] {
     margin: 0px;
     padding: 12px;
     background-color: #252525;
