@@ -3,7 +3,7 @@ title: Adding a new project
 subject: Projects
 ---
 
-We currently have a [projects page][] where you can browse projects that have
+We currently have a [projects page] where you can browse projects that have
 been built using ev3dev. You can add your own too!  Each project gets a
 dedicated page for the author to explain what they have been working on, as
 well as provide videos, pictures, build instructions, code, and any other media
@@ -12,12 +12,12 @@ project page to be hosted on the site.
 
 ##Overview
 
-All the projects on the website are stored in the [projects folder][].
+All the projects on the website are stored in the [projects folder].
 Each post is saved as a Markdown file, and is automagically converted to HTML
 when you publish your changes (read more about Markdown
 [here][markdown basics]). To submit a page,
 all you need to do is add a markdown file in that folder and submit a pull
-request. We recommend that you start with a copy of the [template project][].
+request. We recommend that you start with a copy of the [template project].
 You can see the example file live on [the website][template page].
 
 This guide will walk you through submitting a page without the need for any git
@@ -27,7 +27,7 @@ browser.
 ## Step 1: Making a Copy of the Website Source
 
 The first step to submitting your project is forking the source code on GitHub.
-To do this, open a browser and navigate to the [website repository][]. Make
+To do this, open a browser and navigate to the [website repository]. Make
 sure that you are signed in to your GitHub account, and then click the "fork"
 button in the upper-right corner.
 
@@ -60,8 +60,8 @@ If you complete this step, note that everywhere it says "`master`" in the
 screenshots below, it should say "`gh-pages`" instead.
 
 *WARNING*: If you complete this step, GitHub will send you emails warning you
-about the CNAME. You can ignore them; but if they get annoying, see [the readme][] on the official site repo
-for information on circumventing the problem.
+about the CNAME. You can ignore them; but if they get annoying, see [the readme]
+on the official site repo for information on circumventing the problem.
 
 ##Step 3: Adding Your Page
 
