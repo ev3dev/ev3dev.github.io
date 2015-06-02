@@ -83,24 +83,7 @@ that is meant to be copied to make new project creation easier. The part we
 want is everything between the "---"s. This is called "frontmatter," and it
 describes everything about a project, such as the author of the project. Select
 and copy the frontmatter out of the template file (make sure that you include
-the dashes). This is what you should have:
-
-    ---
-    # Fill out as many of these as you can, and delete the rest.
-    # Text on a line after a "#" is a comment and is ignored for the published page.
-
-    author: [ "@wasabifan", "The ev3dev Team" ] # The person(s) who created this project.
-    # Any author that starts with "@" will pull information from github.
-    programming_language: "JavaScript" # The programming language used in this project
-
-    youtube_video_id: rrNaLfE9PWA # The video ID of the YouTube video to be displayed with this post
-
-    project_homepage_url: "http://example.com/my-super-cool-project" # Homepage for this project
-    source_code_url: "https://github.com/myuser/myrepo" # Provide a link to your code
-    building_instructions_url: "http://example.com/building-instructions.pdf" # how to build the model out of LEGO (*not* how to build the source code)
-
-    excerpt: "An example/template project to make creating a new project page easier." # A short summary of your project. This can be a sentence or a paragraph, but it's recommended to keep it under 3 sentences.
-    ---
+the dashes). [This][raw template] is what you should have.
 
 Now use the "back" button of your browser to go back to the posts folder. Click
 the "+" button to create a new file.
@@ -155,5 +138,6 @@ edits, and will review and merge your changes when they get the chance.
 [kramdown basics]: http://kramdown.gettalong.org/quickref.html
 [template project]: https://github.com/ev3dev/ev3dev.github.io/blob/master/projects/_posts/2014-03-21-Example-Project.md
 [template page]: http://www.ev3dev.org/projects/2014/03/21/Example-Project/
+[raw template]: https://raw.githubusercontent.com/ev3dev/ev3dev.github.io/master/projects/_posts/2014-03-21-Example-Project.md
 [website repository]: http://github.com/ev3dev/ev3dev.github.io
 [the readme]: https://github.com/ev3dev/ev3dev.github.io
