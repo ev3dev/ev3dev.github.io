@@ -14,8 +14,8 @@ project page to be hosted on the site.
 
 All the projects on the website are stored in the [projects folder].
 Each post is saved as a Markdown file, and is automagically converted to HTML
-when you publish your changes (read more about Markdown
-[here][markdown basics]). To submit a page,
+when you publish your changes (read more about Kramdown
+[here][kramdown basics]). To submit a page,
 all you need to do is add a markdown file in that folder and submit a pull
 request. We recommend that you start with a copy of the [template project].
 You can see the example file live on [the website][template page].
@@ -113,8 +113,7 @@ Give it a name using the format "`YYYY-MM-DD-my-project-name.md`", where
 Then paste in the frontmatter that we copied earlier. Fill out as many of the
 properties as you can, and delete the lines of the ones you can't fill out.
 After the second set of dashes ('---'), you can type your description text,
-which is parsed as [Markdown](https://help.github.com/articles/markdown-basics)
-on the site.
+which is parsed as [Kramdown][kramdown basics] on the site.
 
 <img src="/images/Website/Creating-file-on-GitHub.png" style="max-width: 100%;" />
 
@@ -153,7 +152,7 @@ edits, and will review and merge your changes when they get the chance.
 [projects page]: {{ site.github.url }}/projects
 [mindsensor.com]: http://mindsensors.com/
 [projects folder]: https://github.com/ev3dev/ev3dev.github.io/tree/master/projects/_posts
-[markdown basics]: https://help.github.com/articles/markdown-basics
+[kramdown basics]: http://kramdown.gettalong.org/quickref.html
 [template project]: https://github.com/ev3dev/ev3dev.github.io/blob/master/projects/_posts/2014-03-21-Example-Project.md
 [template page]: http://www.ev3dev.org/projects/2014/03/21/Example-Project/
 [website repository]: http://github.com/ev3dev/ev3dev.github.io
