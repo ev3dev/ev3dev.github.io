@@ -7,7 +7,7 @@ on using ev3dev. We invite you to click through the links below to see what
 cool stuff ev3dev can do!
 
 Would you like your project added to the list? We would!
-[Create a page and send us a pull request.](https://github.com/ev3dev/ev3dev/wiki/Posting-A-Project)
+[Create a page and send us a pull request.]({{ site.github.url }}/docs/tutorials/adding-new-project/)
 
 <ul id="projects-list">
     {% for post in site.posts %}
