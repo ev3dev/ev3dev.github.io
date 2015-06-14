@@ -69,6 +69,10 @@ Don't have the time or interest in writing a driver? You can donate the
 hardware and we will make it work for you. See this
 [blog post][will-work-for-sensors] from @dlech for more info.
 
+## Financial contributions
+
+You can make financial contributions to ev3dev.org through our page at [bountysource.com].
+These contributions will be used to purchase additional hardware, like sensors and motors.
 
 [pull requests]: https://help.github.com/articles/using-pull-requests
 [wiki]: https://github.com/ev3dev/ev3dev/wiki
@@ -82,3 +86,4 @@ hardware and we will make it work for you. See this
 [Saleae referral]: http://go.referralcandy.com/share/8LP4Z9L
 [will-work-for-sensors]: http://lechnology.com/2014/08/will-work-for-sensors
 [ev3dev-github-org]: https://github.com/ev3dev
+[bountysource.com]: https://www.bountysource.com/teams/ev3dev
