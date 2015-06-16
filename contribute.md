@@ -59,8 +59,7 @@ Some things you will need:
   OK, but this is what we officially support.)
 * An EV3 serial port adapter like [mindsensors.com EV3 Console Adapter] or
   [make your own][ev3-creating-a-console-cable].
-* A logic analyzer.  \[ Advertisement: [Get 20% off of Logic or Logic16 from Saleae][Saleae referral]
-  (and @dlech gets $20 credit) \]
+* A logic analyzer. (We recommend [Saleae])
 
 
 ## Donate hardware
@@ -83,7 +82,7 @@ These contributions will be used to purchase additional hardware, like sensors a
 [issue]: https://github.com/ev3dev/ev3dev/issues
 [ms-angle-sensor-commit]: https://github.com/ev3dev/ev3dev-kernel/commit/0bb5e72135f8abf789db5d061a78a26f6281ed2f
 [ev3-creating-a-console-cable]: http://botbench.com/blog/2013/08/15/ev3-creating-console-cable
-[Saleae referral]: http://go.referralcandy.com/share/8LP4Z9L
 [will-work-for-sensors]: http://lechnology.com/2014/08/will-work-for-sensors
 [ev3dev-github-org]: https://github.com/ev3dev
 [bountysource.com]: https://www.bountysource.com/teams/ev3dev
+[Saleae]: https://www.saleae.com/
