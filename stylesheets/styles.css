@@ -1135,6 +1135,7 @@ section #title p {
 
 .edit-on-github {
     float: right;
+    margin-top: -30px;
 }
 
 #projects-list {
