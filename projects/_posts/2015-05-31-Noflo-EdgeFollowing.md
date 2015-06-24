@@ -1,7 +1,6 @@
 ---
 author: "@ensonic"
 programming_language: Javascript
-youtube_video_id: tLPgnlTXKpo
 source_code_url: "https://github.com/ensonic/noflo-legoev3"
 excerpt: "Visual programming of the EV3 using NoFlo.js."
 ---
