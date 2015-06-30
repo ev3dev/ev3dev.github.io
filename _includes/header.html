@@ -1,76 +1,78 @@
 <div id="header" class="mobile-hidden">
     <nav>
-        <li class="nav-menu">
-            <img src="{{ site.github.url }}/images/menu.png" />
-        </li>
+        <!--<ol>-->
+            <li class="nav-menu">
+                <img src="{{ site.github.url }}/images/menu.png" />
+            </li>
 
-        <li class="left button">
-            <a href="{{ site.github.url }}/" title="There's no place like Home...">Home</a>
-        </li>
-        <li class="left button">
-            <a href="{{ site.github.url }}/docs" title="Documentation on how to use ev3dev">Docs</a>
-        </li>
-        <li class="left button">
-            <a href="{{ site.github.url }}/news" title="News about ev3dev">News</a>
-        </li>
-        <li class="left button dropdown-button">
-            <a>
-                Community
-                <div class="nav-dropdown-arrow">
-                    
-                </div>
-            </a>
-            <ul class="button-dropdown">
-                <li>
-                    <a href="{{ site.github.url }}/projects" title="Discover projects that use ev3dev">Projects</a>
-                </li>
-                <li>
-                    <a href="{{ site.github.url }}/share" title="Share projects that use ev3dev">Share</a>
-                </li>
-                <li>
-                    <a href="{{ site.github.url }}/contribute" title="How to contribute to ev3dev">Contribute</a>
-                </li>
-                <li>
-                    <a href="/support" title="Found a bug? Have a question?">Get Help</a>
-                </li>
-            </ul>
-        </li>
-        <li class="left button">
-            <a href="https://github.com/ev3dev/ev3dev/releases" title="SD card image files">Download</a>
-        </li>
-        <!-- items below float right, so appear in reverse order -->
-        <li class="right header-box" id="search-li">
-            <input type="text" id="search-input" onfocus="searchFocus()" onkeyup="searchTextChanged()" placeholder="Quick Nav" onkeypress="this.onkeyup();" onpaste="this.onkeyup();" oninput="this.onkeyup();" />
-            <div id="search-dropdown">
-                <div class="search-results-container" id="search-results-docs">
-                    <h2>In docs</h2>
-                    <div data-content="docs-results">
-                        <div class="no-results-note">No results</div>
+            <li class="left button">
+                <a href="{{ site.github.url }}/" title="There's no place like Home...">Home</a>
+            </li>
+            <li class="left button">
+                <a href="{{ site.github.url }}/docs" title="Documentation on how to use ev3dev">Docs</a>
+            </li>
+            <li class="left button">
+                <a href="{{ site.github.url }}/news" title="News about ev3dev">News</a>
+            </li>
+            <li class="left button dropdown-button">
+                <a>
+                    Community
+                    <div class="nav-dropdown-arrow">
+
+                    </div>
+                </a>
+                <ul class="button-dropdown">
+                    <li>
+                        <a href="{{ site.github.url }}/projects" title="Discover projects that use ev3dev">Projects</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.github.url }}/share" title="Share projects that use ev3dev">Share</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.github.url }}/contribute" title="How to contribute to ev3dev">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="/support" title="Found a bug? Have a question?">Get Help</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="left button">
+                <a href="https://github.com/ev3dev/ev3dev/releases" title="SD card image files">Download</a>
+            </li>
+            <!-- items below float right, so appear in reverse order -->
+            <li class="right header-box" id="search-li">
+                <input type="text" id="search-input" onfocus="searchFocus()" onkeyup="searchTextChanged()" placeholder="Quick Nav" onkeypress="this.onkeyup();" onpaste="this.onkeyup();" oninput="this.onkeyup();" />
+                <div id="search-dropdown">
+                    <div class="search-results-container" id="search-results-docs">
+                        <h2>In docs</h2>
+                        <div data-content="docs-results">
+                            <div class="no-results-note">No results</div>
+                        </div>
+                    </div>
+
+                    <div class="search-results-container" id="search-results-projects">
+                        <h2>In projects</h2>
+                        <div data-content="project-results">
+                            <div class="no-results-note">No results</div>
+                        </div>
+                    </div>
+
+                    <div class="search-results-container" id="search-results-news">
+                        <h2>In news</h2>
+                        <div data-content="news-results">
+                            <div class="no-results-note">No results</div>
+                        </div>
+                    </div>
+
+                    <div class="search-results-container" id="search-results-misc">
+                        <h2>In other pages</h2>
+                        <div data-content="misc-results">
+                            <div class="no-results-note">No results</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="search-results-container" id="search-results-projects">
-                    <h2>In projects</h2>
-                    <div data-content="project-results">
-                        <div class="no-results-note">No results</div>
-                    </div>
-                </div>
-
-                <div class="search-results-container" id="search-results-news">
-                    <h2>In news</h2>
-                    <div data-content="news-results">
-                        <div class="no-results-note">No results</div>
-                    </div>
-                </div>
-
-                <div class="search-results-container" id="search-results-misc">
-                    <h2>In other pages</h2>
-                    <div data-content="misc-results">
-                        <div class="no-results-note">No results</div>
-                    </div>
-                </div>
-            </div>
-        </li>
+            </li>
+        <!--</ol>-->
     </nav>
 </div>
 
