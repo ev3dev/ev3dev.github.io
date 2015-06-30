@@ -21,15 +21,20 @@
     <!-- Specific styles for projects page -->
     {% include css-include.html name="projects" %}
 
+    <!-- 3rd-party libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     {% include js-include.html name="jquery.getUrlParam" %}
     {% include js-include.html name="jquery.loadTemplate-1.4.4.min" %}
     {% include js-include.html name="ua-parser.min" %}
     {% include js-include.html name="respond" %}
 
+    <!-- Loads user-cards from GH API -->
     {% include js-include.html name="cards" %}
+    <!-- Optimizes menu for mobile view -->
     {% include js-include.html name="menu" %}
+    <!-- Responds to queries typed into the "Quick nav" box -->
     {% include js-include.html name="search" %}
+    <!-- Converts static descriptors of tab target content into live text and links -->
     {% include js-include.html name="tabs" %}
 
     <!--[if lt IE 9]>
@@ -37,6 +42,7 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!-- Template for search results -->
     <script type="text/html" id="search-result-template">
         <div class="search-result">
             <a data-href="href"><h4 data-content="title"></h4></a>
