@@ -5,31 +5,32 @@
     <link rel="alternate" type="application/atom+xml" href="{{ site.github.url }}/news/atom.xml" title="Atom feed">
 
     <!-- IE8 & before fixes -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/normalize.css">
+    {% include css-include.html name="normalize" %}
     <!-- Pygments syntax highlighting -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/pygment_trac.css">
+    {% include css-include.html name="pygment_trac" %}
     <!-- Font-face loaders for Open Sans -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/fonts.css">
+    {% include css-include.html name="fonts" %}
     <!-- Core theme colors and positioning (includes original GitHub theme and custom fixes) -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/theme-core.css">
+    {% include css-include.html name="theme-core" %}
     <!-- Additional theme bits like dropdown menus, logo positioning, and TOC -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/theme-extensions.css">
+    {% include css-include.html name="theme-extensions" %}
     <!-- Nav infrastructure and misc utils (search, user cards, embeds, CC license) -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/infrastructure-utils.css">
+    {% include css-include.html name="infrastructure-utils" %}
     <!-- Specific styles for news page -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/news.css">
+    {% include css-include.html name="news" %}
     <!-- Specific styles for projects page -->
-    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/projects.css">
+    {% include css-include.html name="projects" %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="{{ site.github.url }}/javascripts/jquery.getUrlParam.js"></script>
-    <script src="{{ site.github.url }}/javascripts/jquery.loadTemplate-1.4.4.min.js"></script>
-    <script src="{{ site.github.url }}/javascripts/respond.js"></script>
-    <script src="{{ site.github.url }}/javascripts/cards.js"></script>
-    <script src="{{ site.github.url }}/javascripts/menu.js"></script>
-    <script src="{{ site.github.url }}/javascripts/search.js"></script>
-    <script src="{{ site.github.url }}/javascripts/tabs.js"></script>
-    <script src="{{ site.github.url }}/javascripts/ua-parser.min.js"></script>
+    {% include js-include.html name="jquery.getUrlParam" %}
+    {% include js-include.html name="jquery.loadTemplate-1.4.4.min" %}
+    {% include js-include.html name="ua-parser.min" %}
+    {% include js-include.html name="respond" %}
+
+    {% include js-include.html name="cards" %}
+    {% include js-include.html name="menu" %}
+    {% include js-include.html name="search" %}
+    {% include js-include.html name="tabs" %}
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
