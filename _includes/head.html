@@ -16,10 +16,15 @@
     {% include css-include.html name="theme-extensions" %}
     <!-- Nav infrastructure and misc utils (search, user cards, embeds, CC license) -->
     {% include css-include.html name="infrastructure-utils" %}
-    <!-- Specific styles for news page -->
-    {% include css-include.html name="news" %}
-    <!-- Specific styles for projects page -->
-    {% include css-include.html name="projects" %}
+    
+    <!-- Selectively load styles that are only needed for certain pages -->
+    {% if page.path contains 'news' %}
+        <!-- Specific styles for news page -->
+        {% include css-include.html name="news" %}
+    {% elsif page.path contains 'projects' %}
+        <!-- Specific styles for projects page -->
+        {% include css-include.html name="projects" %}
+    {% endif %}
 
     <!-- 3rd-party libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
