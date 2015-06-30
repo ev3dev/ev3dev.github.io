@@ -1454,6 +1454,10 @@ ul[tab-list] > li.tab-active {
         display: none;
     }
 
+    #github-link-li {
+        display: none;
+    }
+
 }
 
 @media print, screen and (min-width: 591px) {
