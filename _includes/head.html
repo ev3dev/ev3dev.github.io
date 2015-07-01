@@ -5,42 +5,40 @@
     <link rel="alternate" type="application/atom+xml" href="{{ site.github.url }}/news/atom.xml" title="Atom feed">
 
     <!-- IE8 & before fixes -->
-    {% include css-include.html name="normalize" %}
+    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/normalize.css">
     <!-- Pygments syntax highlighting -->
-    {% include css-include.html name="pygment_trac" %}
+    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/pygment_trac.css">
     <!-- Font-face loaders for Open Sans -->
-    {% include css-include.html name="fonts" %}
+    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/fonts.css">
     <!-- Core theme colors and positioning (includes original GitHub theme and custom fixes) -->
-    {% include css-include.html name="theme-core" %}
+    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/theme-core.css">
     <!-- Additional theme bits like dropdown menus, logo positioning, and TOC -->
-    {% include css-include.html name="theme-extensions" %}
+    <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/theme-extensions.css">
     <!-- Nav infrastructure and misc utils (search, user cards, embeds, CC license) -->
-    {% include css-include.html name="infrastructure-utils" %}
-    
     <!-- Selectively load styles that are only needed for certain pages -->
     {% if page.path contains 'news' %}
         <!-- Specific styles for news page -->
-        {% include css-include.html name="news" %}
+        <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/news.css">
     {% elsif page.path contains 'projects' %}
         <!-- Specific styles for projects page -->
-        {% include css-include.html name="projects" %}
+        <link rel="stylesheet" href="{{ site.github.url }}/stylesheets/projects.css">
     {% endif %}
 
     <!-- 3rd-party libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    {% include js-include.html name="jquery.getUrlParam" %}
-    {% include js-include.html name="jquery.loadTemplate-1.4.4.min" %}
-    {% include js-include.html name="ua-parser.min" %}
-    {% include js-include.html name="respond" %}
+    <script src="{{ site.github.url }}/javascripts/jquery.getUrlParam.js"></script>
+    <script src="{{ site.github.url }}/javascripts/jquery.loadTemplate-1.4.4.min.js"></script>
+    <script src="{{ site.github.url }}/javascripts/respond.js"></script>
+    <script src="{{ site.github.url }}/javascripts/ua-parser.min.js"></script>
 
     <!-- Loads user-cards from GH API -->
-    {% include js-include.html name="cards" %}
+    <script src="{{ site.github.url }}/javascripts/cards.js"></script>
     <!-- Optimizes menu for mobile view -->
-    {% include js-include.html name="menu" %}
+    <script src="{{ site.github.url }}/javascripts/menu.js"></script>
     <!-- Responds to queries typed into the "Quick nav" box -->
-    {% include js-include.html name="search" %}
+    <script src="{{ site.github.url }}/javascripts/search.js"></script>
     <!-- Converts static descriptors of tab target content into live text and links -->
-    {% include js-include.html name="tabs" %}
+    <script src="{{ site.github.url }}/javascripts/tabs.js"></script>
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
