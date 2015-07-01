@@ -215,7 +215,7 @@ dt {
         margin: 6px auto;
     }
 
-        #header nav > ol {
+        #header nav > ul {
             margin: 0;
             padding: 0;
             width: 100%;
