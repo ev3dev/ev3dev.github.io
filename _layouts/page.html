@@ -7,14 +7,17 @@
 {% include head.html %}
 <body>
     {% include header.html %}
-    <div class="wrapper">
-        <section>
-            {% include title.html %}
-            <div id="mainContent">
-                {{ content }}
-            </div>
-        </section>
-        {% include footer.html %}
+    {% if page.jumbotron-heading or page.jumbotron-content %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{ page.jumbotron-heading }}</h1>
+            {{ page.jumbotron-content }}
+        </div>
     </div>
+    {% endif %}
+    <div class="container">
+        {{ content }}
+    </div>
+    {% include footer.html %}
 </body>
 </html>
