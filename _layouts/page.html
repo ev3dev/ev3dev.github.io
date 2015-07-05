@@ -5,7 +5,11 @@
 <!doctype html>
 <html>
 {% include head.html %}
-<body>
+{% if page.jumbotron-heading or page.jumbotron-content %}
+<body class="has-jumbotron">
+{% else %}
+<body class="no-jumbotron">
+{% endif %}
     {% include header.html %}
     {% if page.jumbotron-heading or page.jumbotron-content %}
     <div class="jumbotron">
@@ -16,6 +20,7 @@
     </div>
     {% endif %}
     <div class="container">
+        {% include title.html %}
         {{ content }}
     </div>
     {% include footer.html %}

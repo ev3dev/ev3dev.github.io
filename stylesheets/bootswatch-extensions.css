@@ -41,11 +41,11 @@
     }
 }
 
-/*body {
-  padding-top: 60px;
+body.no-jumbotron {
+  padding-top: 40px;
 }
 @media (max-width: 979px) {
-  body {
+  body.no-jumbotron {
     padding-top: 0px;
   }
-}*/
+}
