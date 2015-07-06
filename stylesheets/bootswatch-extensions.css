@@ -29,6 +29,23 @@
     letter-spacing: -1px;
 }
 
+.projects-featurette {
+    background-image: url('../images/project-showcase.png');
+    background-position-y: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+
+    margin-top: -60px;
+    margin-bottom: -60px;
+}
+
+.projects-featurette-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    color: #fafafa;
+}
+
 @media all and (min-width:992px) {
     .featurette-heading {
         /*margin-top: 120px;*/

@@ -1,4 +1,5 @@
 ---
+no-wrapper: yes
 jumbotron-heading: |
   ev3dev is your EV3 <strong><i>re-imagined</i></strong>
 jumbotron-content: |
@@ -19,70 +20,89 @@ jumbotron-content: |
   </div>
 
 ---
+<div class="container">
 
-<div class="row">
-    <div class="col-lg-4">
-        <h2>
-            <span class="glyphicon glyphicon-console heading-icon"></span>
-            EV3 programming unlocked
-        </h2>
-        <p>
-            ev3dev gives you the power to program how <i>you</i> want to. It is as easy
-            as reading from and writing to a file, so every programming language that
-            supports Linux will work with your EV3 and its devices.
-        </p>
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>
+                <span class="glyphicon glyphicon-console heading-icon"></span>
+                EV3 programming unlocked
+            </h2>
+            <p>
+                ev3dev gives you the power to program how <i>you</i> want to. It is as easy
+                as reading from and writing to a file, so every programming language that
+                supports Linux will work with your EV3 and its devices.
+            </p>
+            <p>
+                ev3dev supports many popular scripting languages out-of-the-box, so you can
+                get started right away.
+            </p>
+        </div>
+
+        <div class="col-lg-4">
+            <h2>
+                <i class="fa fa-linux"></i>
+                Backed by the full power of Linux
+            </h2>
+            <p>
+                ev3dev is, at its core, Debian Linux. All Linux software and features work
+                flawlessly with ev3dev, allowing your apps to interact with USB peripherals
+                and EV3 gadgets seamlessly.
+            </p>
+            <p>
+                If the software that you want isn't preinstalled, use standard <code>apt</code>
+                tools to get what you need.
+            </p>
+        </div>
+
+        <div class="col-lg-4">
+            <h2>
+                <span class="glyphicon glyphicon-save heading-icon"></span>
+                No install required
+            </h2>
+            <p>
+                ev3dev runs from the microSD slot on the EV3. It doesn't touch the stock EV3
+                OS, so just unplug the SD card to get back to the LEGO environment. Getting
+                up-and-running takes only minutes, and we have guides to lead you along the
+                way.
+            </p>
+            <p>
+                Even if you decide not to keep using it, installing ev3dev can be an easy and
+                painless way to learn more about Linux. ev3dev is a small, sandboxed Linux
+                machine that you can do whatever you want with.
+            </p>
+        </div>
     </div>
 
-    <div class="col-lg-4">
-        <h2>
-            <i class="fa fa-linux"></i>
-            Backed by the full power of Linux
-        </h2>
-        <p>
-            ev3dev is, at its core, Debian Linux. All Linux software and features work
-            flawlessly with ev3dev, allowing your apps to interact with USB peripherals 
-            and EV3 gadgets seamlessly.
-        </p>
-    </div>
+    <hr class="featurette-divider" />
+</div>
 
-    <div class="col-lg-4">
-        <h2>
-            <span class="glyphicon glyphicon-save heading-icon"></span>
-            No install required
-        </h2>
-        <p>
-            ev3dev runs from the microSD slot on the EV3. It doesn't touch the stock EV3
-            OS, so just unplug the SD card to get back to the LEGO environment. Getting
-            up-and-running takes only minutes, and we have guides to lead you along the
-            way.
-        </p>
+<div class="projects-featurette">
+    <div class="container featurette projects-featurette-content">
+        <div class="col-md-5">
+            <div class="btn btn-lg btn-primary">See the projects <span class="glyphicon glyphicon-arrow-right"></span></div>
+        </div>
+
+        <div class="col-md-7">
+            <h2 class="featurette-heading">
+                See what you can do with ev3dev
+            </h2>
+        </div>
     </div>
 </div>
 
-<hr class="featurette-divider"/>
+<div class="container">
+    <hr class="featurette-divider" />
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">
+                Ready to jump in?
+                <span class="text-muted">It'll only take a minute</span>
+            </h2>
+        </div>
 
-<div class="row featurette">
-    <div class="col-md-7">
-        <h2 class="featurette-heading">
-            Ready to jump in?
-            <soan class="text-muted">It'll only take a minute.</soan>
-        </h2>
-        <p style="display: none">
-            First, you need to download and install the latest image file on a microSD card.
-            Check out the [Getting Started] page for step-by-step instructions. Or, if you
-            are not using ev3dev with an EV3, check out the [DKMS driver package][DKMS].
-
-            Then, you can write a program however you like. You can use just about anything
-            with a SSH client - Windows, Linux, Mac, Android, iOS, Blackberry, etc. The
-            [docs] page has information about how to use the drivers and has links to
-            libraries contributed by users for some programming languages.
-
-            If you need some ideas, check out the projects on our [Share] page. If you get
-            stuck, check out the [Get Help] page.
-        </p>
-    </div>
-
-    <div class="col-md-5">
-        <div class="btn btn-lg btn-success">Get started <span class="glyphicon glyphicon-arrow-right"></span></div>
+        <div class="col-md-5">
+            <div class="btn btn-lg btn-success">Get started <span class="glyphicon glyphicon-arrow-right"></span></div>
+        </div>
     </div>
 </div>

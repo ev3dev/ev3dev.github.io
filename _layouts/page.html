@@ -21,8 +21,14 @@
     {% endif %}
     <div class="container">
         {% include title.html %}
-        {{ content }}
     </div>
+    {% unless page.no-wrapper %}
+    <div class="container">
+    {% endunless %}
+        {{ content }}
+    {% unless page.no-wrapper %}
+    </div>
+    {% endunless %}
     {% include footer.html %}
 </body>
 </html>
