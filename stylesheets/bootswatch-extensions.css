@@ -50,6 +50,11 @@
     margin-top: 40px;
 }
 
+.navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 @media all and (min-width:992px) {
     .featurette-heading {
         /*margin-top: 120px;*/
