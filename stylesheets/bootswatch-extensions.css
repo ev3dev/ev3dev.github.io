@@ -54,7 +54,7 @@
     padding-top: 18px;
     padding-bottom: 18px;
 
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 @media all and (min-width:992px) {

@@ -1,10 +1,12 @@
 ﻿{% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
 {% assign link='/' %}
-{% for dir in parent_dirs %}
-    {% if forloop.last %}
-        {{ dir }}
-    {% else %}
-        {% assign link=link | append: dir | append: '/' %}
-        <a href="{{ link }}">{{ dir }}</a> &gt;
-    {% endif %}
-{% endfor %}
+<ol class="breadcrumb">
+    {% for dir in parent_dirs %}
+        {% if forloop.last %}
+            <li class="active">{{ dir }}</li>
+        {% else %}
+            {% assign link=link | append: dir | append: '/' %}
+            <li><a href="{{ link }}">{{ dir }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ol>
