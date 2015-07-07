@@ -2,42 +2,42 @@
 layout: page
 ---
 
-<div class="breadcrumbs">
-    <a href="{{ site.github.url }}/projects">&lt; Back to Projects Gallery</a>
-</div>
-<div class="content-wrapper-for-sidebar">
+<div class="col-lg-9">
     {% include youtube-embed.html %}
     {{ content }}
 </div>
-<div class="page-sidebar">
-    <h3>
-        Project Info
-    </h3>
-    {% if page.project_homepage_url %}
-        <div class="button">
-            <a href="{{ page.project_homepage_url }}">Project Homepage</a>
-        </div><br />
-    {% endif %}
-    {% if page.building_instructions_url %}
-        <div class="button">
-            <a href="{{ page.building_instructions_url }}">Building Instructions</a>
-        </div><br />
-    {% endif %}
-    {% if page.source_code_url %}
-        <div class="button">
-            <a href="{{ page.source_code_url }}">Source Code</a>
-        </div><br />
-    {% endif %}
-    {% if page.programming_language %}
-        <br />
-        Written In {{page.programming_language}}<br />
-    {% endif %}
-    {% if page.author %}
-        <br />Created By:<br /><br />
-        {% assign author_card = page.author %}
-        {% include author-card.html %}
-    {% endif %}
-</div>
-<div id="project-credit" class="clear">
-    Posted on {{ page.date | date_to_string }}
+<div class="col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Project Info</h3>
+        </div>
+        <ul class="list-group">
+            {% if page.programming_language %}
+            <li class="list-group-item">
+                Written with {% include language-logo.html language=page.programming_language %}<br />
+            </li>
+            {% endif %}
+            {% if page.project_homepage_url %}
+            <li class="list-group-item">
+                <a class="btn btn-primary" href="{{ page.project_homepage_url }}">Project homepage</a>
+            </li>
+            {% endif %}
+            {% if page.building_instructions_url %}
+            <li class="list-group-item">
+                <a class="btn btn-primary" href="{{ page.building_instructions_url }}">Building instructions</a>
+            </li>
+            {% endif %}
+            {% if page.source_code_url %}
+            <li class="list-group-item">
+                <a class="btn btn-primary" href="{{ page.source_code_url }}">Source code</a>
+            </li>
+            {% endif %}
+            {% if page.author %}
+            <li class="list-group-item">
+                {% assign author_card = page.author %}
+                {% include author-card.html %}
+            </li>
+            {% endif %}
+        </ul>
+    </div>
 </div>
