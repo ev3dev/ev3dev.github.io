@@ -4,8 +4,10 @@
         {% assign source_line = page.source_line | plus: 0 %}
         {% assign edit_path = edit_path | append: '#L' | append: source_line %}
     {% endif %}
-{% elsif page.path contains '/docs' %}
+{% elsif page.path contains 'docs/' %}
     {% assign edit_path = site.github.repository_url | append: '/edit/master/' | append: page.path %}
+{% elsif page.path contains 'news/' %}
+    {% assign show_news_link = 1 %}
 {% endif %}
 
 <div class="page-header">
@@ -14,6 +16,8 @@
         <small>{{ page.subtitle }}</small>
         {% if edit_path %}
             <a class="btn btn-warning pull-right" href="{{ edit_path }}">Edit on Github</a>
+        {% elsif show_news_link %}
+            <a class="btn btn-warning pull-right" href="atom.xml">Subscribe via Atom</a>
         {% endif %}
     </h1>
 </div>

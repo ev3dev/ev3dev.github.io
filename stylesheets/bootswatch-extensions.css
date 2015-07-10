@@ -77,3 +77,11 @@ body.no-jumbotron {
     padding-top: 0px;
   }
 }
+
+h1.panel-title {
+    font-size: 20px;
+}
+
+.font-light {
+    font-weight: lighter;
+}
