@@ -131,6 +131,7 @@
             vertical-align: middle;
             border: 1px solid #aaa;
             border-radius: 2px;
+            height: 40px;
         }
 
     .user-card .user-card-text {
@@ -178,4 +179,6 @@
 #footer {
     text-align: center;
     color: #696969;
+
+    margin-bottom: 50px;
 }

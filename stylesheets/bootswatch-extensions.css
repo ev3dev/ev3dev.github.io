@@ -85,3 +85,7 @@ h1.panel-title {
 .font-light {
     font-weight: lighter;
 }
+
+.language-icon {
+    height: 25px;
+}
