@@ -159,7 +159,7 @@ command to assign groups hiding at the end.
     	Home Phone []: 
     	Other []: 
     Is the information correct? [Y/n] y
-    root@ev3dev:~# usermod -a -G sudo,ev3dev,plugdev,audio,video,input,bluetooth,i2c user
+    root@ev3dev:~# usermod -a -G sudo,ev3dev,plugdev,audio,video,input,bluetooth user
 
 ### Set the time zone
 
