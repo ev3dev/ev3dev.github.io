@@ -1,54 +1,13 @@
-﻿#search-issues, #search-input {
-    width: 116px;
-    padding: 8px 12px 13px 12px;
-    margin-top: 7px;
-    height: 14px;
-    font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    color: #efefef;
-    background: #191919;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -khtml-border-radius: 2px;
-    border-radius: 2px;
-    border: 1px solid #121212;
-    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-#search-issues {
-    width: 80%;
-    margin-right: 12px;
+﻿#search-input {
+    width: 130px;
 }
 
 #search-dropdown {
-    position: relative;
-    left: -180px;
-    top: 8px;
     width: 320px;
     max-height: 500px;
     height: 500px;
     overflow-y: scroll;
     display: none;
-    line-height: 100%;
-    background-color: #191919;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -khtml-border-radius: 2px;
-    border-radius: 2px;
-    border: 1px solid #121212;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
     #search-dropdown h2 {
@@ -62,10 +21,6 @@
     margin-left: 20px;
 }
 
-#search-li {
-    width: 140px;
-}
-
 .search-result {
     display: none;
 }
@@ -75,7 +30,6 @@
     }
 
     .search-result h4 {
-        color: #fe8a18;
         font-size: large;
         margin-bottom: 0;
     }
@@ -91,11 +45,6 @@
     .no-results-note:only-child {
         display: block;
     }
-
-.edit-on-github {
-    float: right;
-    margin-top: -30px;
-}
 
 .user-card {
     position: relative;

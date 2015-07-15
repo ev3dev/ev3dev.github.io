@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.dropdown:hover .dropdown-menu {
+.navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
  }
@@ -74,7 +74,7 @@ body.no-jumbotron {
 }
 @media (max-width: 979px) {
   body.no-jumbotron {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 

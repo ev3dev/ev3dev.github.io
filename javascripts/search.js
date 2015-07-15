@@ -25,7 +25,7 @@ $(document).ready(function () {
     //Close the search results if the input and results lose focus
     $('body').click(function(event) {
         //Check if the click registered on a non search-related element 
-        if(!($(event.target).parents('#search-li').length)) {
+        if(!($(event.target).parents('#search-container').length)) {
             hideSearchDropdown();
         }
     });
@@ -175,7 +175,7 @@ function doSearch(query) {
         if(i < results.length - 1)
             itemLoadTimer = setTimeout(function() {
                 loadItem(i + 1)
-            }, 100);
+            }, 25);
     }
 
     if(results.length > 0)

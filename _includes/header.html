@@ -43,9 +43,9 @@
                     </li>
                 </ul>
                 <!-- items below float right, so appear in reverse order -->
-                <div>
+                <div id="search-container">
                     <form class="navbar-form navbar-right dropdown">
-                        <input type="text" id="search-input" class="form-control" onfocus="searchFocus()" onkeyup="searchTextChanged()" placeholder="Quick nav" onkeypress="this.onkeyup();" onpaste="this.onkeyup();" oninput="this.onkeyup();" />
+                        <input type="text" id="search-input" class="form-control" onfocus="searchFocus()" onkeyup="searchTextChanged()" placeholder="Quick nav" onkeypress="this.onkeyup();" onpaste="this.onkeyup();" oninput="this.onkeyup();" autocomplete="off" />
                         <div class="dropdown-menu" id="search-dropdown">
                             <div class="search-results-container" id="search-results-docs">
                                 <h2>In docs</h2>
