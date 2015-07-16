@@ -12,21 +12,24 @@ layout: page
     {% endif %}
 {% endfor %}
 
-<div class="breadcrumbs">
-    <a href="{{ site.github.url }}/news{{ archive_extension }}">&lt; Back to News</a>
-</div>
-<div class="content-wrapper-for-sidebar">
+<div class="col-lg-9">
     {{ content }}
 </div>
-<div class="page-sidebar">
-    <h3>
-        Post Info
-    </h3>
-    Posted on {{ page.date | date_to_long_string  }}
-    <br/>
-    {% if page.author %}
-        <br />Posted By:<br /><br />
-        {% assign author_card = page.author %}
-        {% include author-card.html %}
-    {% endif %}
+<div class="col-lg-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Post Info</h3>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Posted on {{ page.date | date_to_long_string  }}
+            </li>
+            {% if page.author %}
+            <li class="list-group-item">
+                {% assign author_card = page.author %}
+                {% include author-card.html %}
+            </li>
+            {% endif %}
+        </ul>
+    </div>
 </div>
