@@ -23,12 +23,11 @@ First, here are the things you need before starting:
     * Bluetooth
   For Raspberry Pi you will need to use the wired Ethernet connection first.
 
----
-
-**IMPORTANT:** The instructions on this page only apply to releases dated May
-2015 or later. Older releases are no longer supported.
-
----
+<div class="alert alert-warning">
+    <span class="glyphicon glyphicon-alert"></span>
+    The instructions on this page only apply to releases dated May
+    2015 or later. Older releases are no longer supported.
+</div>
 
 ## Step 1: Download the latest ev3dev image file
 
@@ -44,12 +43,11 @@ decompress it (such as [7-Zip] on Windows).
 
 ## Step 2: Copy the image on to the SD card
 
----
-
-**IMPORTANT:** THIS WILL ERASE EVERYTHING ON YOUR SD CARD! BACKUP YOUR FILES
-IF YOU DO NOT WANT TO LOOSE THEM!
-
----
+<div class="alert alert-danger">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+    This will erase everything on your SD card! Backup your files
+    If you do not want to lose them!
+</div>
 
 There are a vast number of ways to do this, so pick the one from the list that
 sounds the easiest to you:
@@ -62,9 +60,14 @@ sounds the easiest to you:
 * **Windows**
     * [Win32DiskImager (graphical interface)](../tutorials/writing-sd-card-image-win32diskimager)
 
-**TIP:** For more detailed information and more alternatives, check out
-[this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup). Much
-of the information there is applicable to ev3dev.
+<br/>
+
+<div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"></span>
+    For more detailed information and more alternatives, check out
+   <a href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
+    of the information there is applicable to ev3dev.
+</div>
 
 ## Step 3: Boot ev3dev
 
@@ -93,12 +96,19 @@ chosen. If the voltage drops below 5V the brick will turn off. All not saved
 data may be lost. Keep in mind, that is may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
 
-**Troubleshooting tips if your EV3 won't boot:**
-
-* Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)
-* Try writing the image to the SD card again.
-* You may have a bad/incompatible SD card - try a different SD card.
-* Check the condition of the EV3 batteries.
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Troubleshooting tips if your EV3 won't boot
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)</li>
+            <li>Try writing the image to the SD card again.</li>
+            <li>You may have a bad/incompatible SD card - try a different SD card.</li>
+            <li>Check the condition of the EV3 batteries.</li>
+        </ul>
+    </div>
+</div>
 
 ## Step 4: Setup a network connection
 
@@ -118,7 +128,7 @@ you want to use and on the OS of your host computer, so pick the one that applie
        after you power on Bluetooth.
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
-Note: For Raspberry Pi you must use the wired Ethernet port to connect for the
+**Note:** For Raspberry Pi you must use the wired Ethernet port to connect for the
 first time. The default host name is `ev3dev-rpi` or `ev3dev-rpi2` depending
 on which model you have. You can setup additional connections using the
 `connmanctl` command.

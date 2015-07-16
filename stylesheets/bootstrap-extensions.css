@@ -89,3 +89,11 @@ h1.panel-title {
 .language-icon {
     height: 25px;
 }
+
+#markdown-toc {
+    display: none;
+}
+
+.alert span.glyphicon {
+    margin-right: 8px;
+}
