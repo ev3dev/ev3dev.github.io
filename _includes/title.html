@@ -15,9 +15,9 @@
         {{ page.title }}
         <small>{{ page.subtitle }}</small>
         {% if edit_path %}
-            <a class="btn btn-warning pull-right" href="{{ edit_path }}">Edit on Github</a>
+            <a class="btn btn-primary pull-right" href="{{ edit_path }}">Edit on Github</a>
         {% elsif show_news_link %}
-            <a class="btn btn-warning pull-right" href="{{ site.github.url }}/news/atom.xml">Subscribe via Atom</a>
+            <a class="btn btn-primary pull-right" href="{{ site.github.url }}/news/atom.xml">Subscribe via Atom</a>
         {% endif %}
     </h1>
 </div>
