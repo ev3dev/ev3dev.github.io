@@ -1,1 +1,9 @@
-<span class="screenshot"><a href="{{ include.source }}"><img height="{{ include.scale }}%" width="{{ include.scale }}%" src="{{ include.source }}" /></a></span>
+<div class="screenshot pull-right">
+    <a href="{{ site.github.url }}{{ include.source }}">
+    <img src="{{ site.github.url }}{{ include.source }}" /></a>
+    <p>
+        <small>
+            {{ include.caption }}
+        </small>
+    </p>
+</div>

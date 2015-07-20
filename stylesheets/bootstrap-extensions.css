@@ -6,11 +6,6 @@
     cursor: pointer;
 }
 
-.navbar-nav .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
- }
-
 .jumbotron h1 {
     font-size: 54px;
 }
@@ -61,6 +56,17 @@
     .featurette-heading {
         /*margin-top: 120px;*/
     }
+
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+@media all and (max-width:991px) {
+    #search-container {
+        display: none;
+    }
 }
 
 @media all and (min-width:768px) {
@@ -96,4 +102,13 @@ h1.panel-title {
 
 .alert span.glyphicon {
     margin-right: 8px;
+}
+
+.screenshot {
+    margin: 20px;
+    max-width: 350px;
+}
+
+.screenshot img {
+    max-width: 350px;
 }

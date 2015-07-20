@@ -65,9 +65,11 @@ sounds the easiest to you:
 <div class="alert alert-info">
     <span class="glyphicon glyphicon-info-sign"></span>
     For more detailed information and more alternatives, check out
-   <a href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
+   <a class="alert-link" href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
     of the information there is applicable to ev3dev.
 </div>
+
+{% include screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
 
 ## Step 3: Boot ev3dev
 
@@ -84,10 +86,6 @@ only. The first boot takes a little longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
 items. After another minute or two, you will see the *brickman loading...* screen.
 
-When the boot is complete, the LEDs will turn green and you will see something
-like this on the screen:
-
-{% include screenshot.html source="/images/brickman/main-menu.png" %}
 
 You will notice the number in the battery in the upper right corner. This
 displays the remaining voltage of the power supply. It is not possible to
@@ -232,14 +230,14 @@ If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
+{% include screenshot.html source="/images/brickman/shutdown-menu.png" %}
+
 ## Step 7: Calling it a day
 
 When you are ready to wish your EV3 goodnight, turn if off by pressing the
 *back* button from the main menu in brickman or pressing and holding the *back*
 button from any screen in brickman. This will open a dialog where you can select
 *Power Off* to turn off the EV3.
-
-{% include screenshot.html source="/images/brickman/shutdown-menu.png" %}
 
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
