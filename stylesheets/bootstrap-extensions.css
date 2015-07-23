@@ -28,7 +28,7 @@
     background-image: url('../images/project-showcase.jpg');
     background-position-y: center;
     background-repeat: repeat-x;
-    background-size: contain;
+    background-size: cover;
 
     margin-top: 80px;
     margin-bottom: 80px;
