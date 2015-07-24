@@ -7,7 +7,7 @@ I was just brought to my attention on [IRC](http://www.ev3dev.org/support/#irc) 
 
 So, the long story is... when I first got my EV3, of course I took it apart. In the course of poking and prodding around,
 I cracked the LCD screen. So I began to look for a replacement. It seems that the LCD was custom manufactured for LEGO
-and there is nothing else with a 178x128 resolution. But Adafruit sells a [160x128 display](https://www.adafruit.com/products/358) that fits.
+and there is nothing else with a 178x128 resolution. But Adafruit sells a [1.8" display](https://www.adafruit.com/products/358) that fits.
 
 I've actually had a color LCD in one of my EV3s for almost a year now, but @rhempel just got around to modding his own
 and making a nice video about it.
