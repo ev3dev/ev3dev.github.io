@@ -106,9 +106,12 @@ h1.panel-title {
 
 .screenshot {
     margin: 20px;
+}
+
+.inline-screenshot {
     max-width: 350px;
 }
 
-.screenshot img {
+.inline-screenshot img {
     max-width: 350px;
 }
