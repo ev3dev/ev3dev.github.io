@@ -11,7 +11,7 @@ title: Tutorials
         <ul>
         {% for item in group.items %}
             <li>
-                <a href="{{ item.url }}">{{ item.title }}</a>
+                <a href="{{site.github.url}}{{ item.url }}">{{ item.title }}</a>
                 {% if item.subtitle %}
                     ({{ item.subtitle }})
                 {% endif %}
