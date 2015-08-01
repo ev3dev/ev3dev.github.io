@@ -1,9 +1,12 @@
 ---
-title: Developer Tools
+title: ev3dev Developer Tools
 ---
-
+<p>
+This page contains information about the tools we use for developing ev3dev
+itself. Most of the information is not applicable for those just interested
+in writing programs that run on the ev3dev distribution.
+</p>
 {% assign devtools=site.pages | where: "category", "devtools" | group_by: "subject" %}
-
 <ul>
 {% for group in devtools %}
     {% if group.name != "" %}
