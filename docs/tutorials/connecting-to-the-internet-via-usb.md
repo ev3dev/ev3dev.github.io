@@ -220,7 +220,8 @@ If you are using an older version, please upgrade.
 
 
 *   {: tab="Windows"}Note: These instructions were written using Windows 7, but
-    they will work for other versions too.
+    they will work for other versions too. UPDATE: Unfortunately, this does not work
+    with Windows 10. See [issue #376](https://github.com/ev3dev/ev3dev/issues/376).
 
     1.  On the EV3, first verify that the RNDIS driver is enabled. In brickman,
         open the *Wireless and Networks* menu and select *USB*. Make sure *RNDIS*
