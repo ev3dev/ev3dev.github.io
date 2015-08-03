@@ -104,7 +104,7 @@ or how to donate hardware to someone who will.
 This is a list of sensors that currently have drivers available in the ev3dev
 kernel.
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>

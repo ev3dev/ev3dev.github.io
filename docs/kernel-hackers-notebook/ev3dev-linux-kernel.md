@@ -16,7 +16,7 @@ Be sure to check out the [hardware](index.html#hardware) pages for specifics on 
 
 Most of the EV3 specific drivers are based on the source code for the official LEGO firmware (aka LMS2012). The following table shows the relation of ev3dev drivers to LMS2012 drivers. 
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
         <th>lms2012</th>
         <th>ev3dev</th>

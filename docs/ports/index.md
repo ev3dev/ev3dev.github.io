@@ -17,7 +17,7 @@ interacting with individual ports. Follow the link for more information.
 This is a list of port drivers that are currently available in the ev3dev
 kernel.
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
     <th>Name</th>
     <th>Description</th>

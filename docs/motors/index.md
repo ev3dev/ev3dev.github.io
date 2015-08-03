@@ -56,7 +56,7 @@ a [LEGO 8886] cable or [LEGO 8871] cable.
 This is a list of devices that currently have drivers available in the ev3dev
 kernel.
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>

@@ -10,7 +10,7 @@
 
 ### General Info
 
-<table id="sensor-info">
+<table id="sensor-info" class="table table-striped table-bordered">
     <tr class="{% cycle 'info': 'd0', 'd1' %}">
         <th><code>device_name</code></th>
         <td><code>{{ sensor.name }}</code></td>
@@ -87,7 +87,7 @@
 {%if sensor.device_class == null %}
 ### Modes
 
-<table id="sensor-modes">
+<table id="sensor-modes" class="table table-striped table-bordered">
     <tr class="{% cycle 'modes': 'd0', 'd1' %}">
         <th><code>mode</code></th>
         <th>Description</th>
@@ -182,7 +182,7 @@
 ### Commands
 {% assign num_commands = sensor.num_commands | plus: 0 %}
 {% if num_commands > 0 %}
-<table id="sensor-info">
+<table id="sensor-info" class="table table-striped table-bordered">
     <tr class="{% cycle 'commands': 'd0', 'd1' %}">
         <th><code>command</code></th>
         <th>Description</th>

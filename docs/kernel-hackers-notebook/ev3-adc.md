@@ -18,7 +18,7 @@ The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
 
 ## Channel Usage
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
         <th>Ch.</th>
         <th>Connection</th>

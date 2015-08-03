@@ -4,7 +4,7 @@ title: EV3 LEDs
 
 The 2 LEDs on the EV3 are connected via GPIOs (2 each). Each LED has 3 colors: red, amber and green. Turning on a single GPIO will change the LED to red or green. Turning on both GPIOs will change the LED to amber (orange).
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
         <th>LED</th>
         <th>GPIO</th>
