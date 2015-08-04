@@ -15,7 +15,7 @@ to set up another connection instead of or in addition to a tethering connection
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
-*   {: tab="Mac OSX"}
+*   {: data-tab-heading="Mac OSX"}
     1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
         open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
         *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
@@ -109,21 +109,21 @@ If you are using an older version, please upgrade.
             permitted by applicable law.
             root@ev3dev:~# 
 
-*   {: tab="Ubuntu"}
+*   {: data-tab-heading="Ubuntu"}
     HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
 
-*   {: tab="Windows"}
+*   {: data-tab-heading="Windows"}
 
-    *   {: tab="7"}
+    *   {: data-tab-heading="7"}
         HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
 
         This is mostly figured out for Windows 8 [here](https://github.com/ev3dev/ev3dev/issues/232#issuecomment-69801370).
         Windows 7 looks a bit different, so it needs its own instructions.
 
-    *   {: tab="8"}
+    *   {: data-tab-heading="8"}
         HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
 
         This is mostly figured out [here](https://github.com/ev3dev/ev3dev/issues/232#issuecomment-69801370).
         We just need someone to make it pretty.
-    {: tab-list="os-version"}
-{: tab-list="os"}
+    {: .tab-group data-tab-topic="os-version"}
+{: .tab-group data-tab-topic="os"}
