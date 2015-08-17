@@ -16,8 +16,22 @@
                     <li>
                         <a href="{{ site.github.url }}/" title="There's no place like Home...">Home</a>
                     </li>
-                    <li>
-                        <a href="{{ site.github.url }}/docs" title="Documentation on how to use ev3dev">Docs</a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" title="Documentation on how to use ev3dev">
+                            Docs
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ site.github.url }}/docs/getting-started">Getting Started</a>
+                            </li>
+                            <li>
+                                <a href="{{ site.github.url }}/docs/tutorials">Tutorials</a>
+                            </li>
+                            <li>
+                                <a href="{{ site.github.url }}/docs">More...</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="{{ site.github.url }}/news" title="News about ev3dev">News</a>
