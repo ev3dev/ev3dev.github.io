@@ -131,7 +131,7 @@ kernel.
         <td>{{ sensor.vendor_part_number }}</td>
         <td><a href="{{ sensor.url_name }}">{{ sensor.vendor_part_name }}</a></td>
         <td>{{ connection }}</td>
-        <td markdown="span">{{ autodetect }}</td>
+        <td><span style="white-space:nowrap;" markdown="span">{{ autodetect }}</span></td>
         <td>
             <span style="white-space:nowrap;">{{ sensor.name }}</span><!--
             {% if connection == 'EV3/UART' %}
@@ -151,6 +151,12 @@ kernel.
     {% assign prev_vendor_name = sensor.vendor_name %}
 {% endfor %}
 </table>
+
+
+[^lego-nxt-touch]: Only touch sensors that shipped with the NXT 2.0 set can be
+    automatically detected. Older touch sensors that shipped with the original
+    NXT sets are missing an electrical connection (pin 2 is not internally
+    connected to pin 3).
 
 [^nxt-analog]: The auto-detection algorithm detects this sensor as an NXT/Analog
     type sensor but it cannot determine the exact sensor type. The generic

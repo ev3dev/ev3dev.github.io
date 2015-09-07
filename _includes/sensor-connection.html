@@ -1,8 +1,10 @@
 {% case sensor.sensor_type %}
 {% when 'nxt-analog-sensor' %}
     {% assign connection = "Analog/NXT" %}
-    {% if sensor.name == 'lego-nxt-touch' or sensor.name == 'lego-nxt-light' or sensor.name == 'nxt-analog' %}
+    {% if sensor.name == 'lego-nxt-light' or sensor.name == 'nxt-analog' %}
         {% assign autodetect = "Y" %}
+    {% elsif sensor.name == 'lego-nxt-touch' %}
+        {% assign autodetect = "Y[^lego-nxt-touch]" %}
     {% else %}
         {% assign autodetect = "N[^nxt-analog]" %}
     {% endif %}
