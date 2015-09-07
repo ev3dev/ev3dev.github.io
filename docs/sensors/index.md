@@ -189,6 +189,11 @@ kernel.
     only partially follows the LEGO MINDSTORMS convention for I2C sensors, so the
     driver must be loaded manually. See the sensor's page for more information.
 
+[^di-dflex]: The Dexter Industries dFlex sensor cannot be automatically detected
+    (because pin 2 is not connected to pin 3). In order to use this sensor, you
+    must manually set the port to `nxt-analog` mode and then set the driver to
+    `di-dflex`.
+
 [LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [I2C protocol]: https://en.wikipedia.org/wiki/I2c
 [I2C Sensor Addressing]: i2c-sensor-addressing
