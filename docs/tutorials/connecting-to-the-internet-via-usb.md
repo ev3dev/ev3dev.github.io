@@ -428,6 +428,11 @@ If you are using an older version, please upgrade.
 
             {% include screenshot.html source="/images/screenshots/windows/10/rndis/device-manager-ethernet-usb-rndis-gadget.png" %}
 
+            For some people, this may appear as a COM port instead. Look under
+            *Ports (COM & LPT) > USB Serial Device (COM6)* (number in COM6 may be different).
+
+            {% include screenshot.html source="/images/screenshots/windows/10/rndis/device-manager-ethernet-usb-serial-device.png" %}
+
         13. Double-click it and select the *Drivers* tab. It says that it is using an
             Acer driver, which doesn't work properly with ev3dev. Click *Update
             driver...* to change the driver.
