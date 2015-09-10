@@ -429,7 +429,8 @@ If you are using an older version, please upgrade.
             {% include screenshot.html source="/images/screenshots/windows/10/rndis/device-manager-ethernet-usb-rndis-gadget.png" %}
 
             For some people, this may appear as a COM port instead. Look under
-            *Ports (COM & LPT) > USB Serial Device (COM6)* (number in COM6 may be different).
+            *Ports (COM & LPT) > USB Serial Device (COM6)*. **Note:** The number
+            in COM6 may be different.
 
             {% include screenshot.html source="/images/screenshots/windows/10/rndis/device-manager-ethernet-usb-serial-device.png" %}
 
