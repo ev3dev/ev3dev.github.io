@@ -416,7 +416,7 @@ If you are using an older version, please upgrade.
         10. After your computer reboots, you will be prompted with a menu. Press
             *7* to *Disable driver signature enforcement*.
 
-            {% include screenshot.html source="/images/screenshots/windows/10/rndis/startup-settings.png" scale="70" %}
+            {% include screenshot.html source="/images/screenshots/windows/10/rndis/startup-settings.png" scale="50" %}
 
         11. After Windows finishes booting and you have logged in, in the search
             bar, type in *Device Manager* and then click to open it.
