@@ -15,12 +15,12 @@ to set up another connection instead of or in addition to a tethering connection
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
-*   {: data-tab-heading="Mac OSX"}
+*   {: tab="Mac OSX"}
     HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
 
-*   {: data-tab-heading="Ubuntu"}
+*   {: tab="Ubuntu"}
     HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
 
-*   {: data-tab-heading="Windows"}
+*   {: tab="Windows"}
     HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
-{: .tab-group data-tab-topic="os"}
+{: tab-list="os"}

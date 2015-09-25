@@ -14,7 +14,7 @@ using [tethering] instead.
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
-*   {: data-tab-heading="Mac OSX"}Note: These instructions were written using OSX version 10.9,
+*   {: tab="Mac OSX"}Note: These instructions were written using OSX version 10.9,
     but should work for other versions as well.
 
     1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
@@ -130,7 +130,7 @@ If you are using an older version, please upgrade.
             permitted by applicable law.
             root@ev3dev:~# 
 
-*   {: data-tab-heading="Ubuntu"}Note: This instructions are written for Ubuntu 14.04 using
+*   {: tab="Ubuntu"}Note: This instructions are written for Ubuntu 14.04 using
     the default desktop (aka Unity).
 
     1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
@@ -219,7 +219,7 @@ If you are using an older version, please upgrade.
             root@ev3dev:~# 
 
 
-*   {: data-tab-heading="Windows"}Note: These instructions were written using Windows 7, but
+*   {: tab="Windows"}Note: These instructions were written using Windows 7, but
     they will work for other versions too.
 
     1.  On the EV3, first verify that the RNDIS driver is enabled. In brickman,
@@ -370,4 +370,4 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/WindowsRNDIS/WindowsRNDISPuttyConnected.png" %}
 
     [PuTTY]: http://www.chiark.greenend.org.uk/%7Esgtatham/putty/
-{: .tab-group data-tab-topic="os"}
+{: tab-list="os"}

@@ -13,7 +13,7 @@ using [tethering] instead.
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
-*   {: data-tab-heading="Android"}Note: These instructions were written using Android 4.1.2
+*   {: tab="Android"}Note: These instructions were written using Android 4.1.2
     but should work for other versions as well.
 
     1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
@@ -84,7 +84,7 @@ If you are using an older version, please upgrade.
 
     [ConnectBot]: https://connectbot.org/
 
-*   {: data-tab-heading="Mac OSX"}
+*   {: tab="Mac OSX"}
 
     1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
         open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
@@ -207,7 +207,7 @@ If you are using an older version, please upgrade.
             permitted by applicable law.
             root@ev3dev:~# 
 
-*   {: data-tab-heading="Ubuntu"}
+*   {: tab="Ubuntu"}
 
     1.  The default Bluetooth and network settings in Ubuntu do not have support for
         this, so first you need to install `blueman` on your host computer.
@@ -305,5 +305,5 @@ If you are using an older version, please upgrade.
             permitted by applicable law.
             root@ev3dev:~# 
 
-*   {: data-tab-heading="Windows"}__HELP WANTED!__ See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
-{: .tab-group data-tab-topic="os"}
+*   {: tab="Windows"}__HELP WANTED!__ See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
+{: tab-list="os"}
