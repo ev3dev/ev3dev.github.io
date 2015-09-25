@@ -230,7 +230,7 @@ If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
-{% include inline-screenshot.html source="/images/brickman/shutdown-menu.png" caption="The <i>Shutdown...<i> dialog in Brickman" %}
+{% include inline-screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
 
 ## Step 7: Calling it a day
 
