@@ -25,8 +25,8 @@ First, here are the things you need before starting:
 
 <div class="alert alert-warning">
     <span class="glyphicon glyphicon-alert"></span>
-    The instructions on this page only apply to releases dated May
-    2015 or later. Older releases are no longer supported.
+    The instructions on this page only apply to releases dated September
+2015 or later. Older releases are no longer supported.
 </div>
 
 ## Step 1: Download the latest ev3dev image file
@@ -66,7 +66,7 @@ sounds the easiest to you:
     <span class="glyphicon glyphicon-info-sign"></span>
     For more detailed information and more alternatives, check out
    <a class="alert-link" href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
-    of the information there is applicable to ev3dev.
+of the information there is applicable to ev3dev.
 </div>
 
 {% include inline-screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
@@ -167,7 +167,7 @@ command to assign groups hiding at the end.
     	Home Phone []: 
     	Other []: 
     Is the information correct? [Y/n] y
-    root@ev3dev:~# usermod -a -G sudo,ev3dev,plugdev,audio,video,input,bluetooth user
+    root@ev3dev:~# usermod -a -G sudo,ev3dev,plugdev,audio,video,input,bluetooth,i2c user
 
 ### Set the time zone
 

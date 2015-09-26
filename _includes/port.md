@@ -17,7 +17,7 @@
     <tr>
         <th>
             <code>port_name</code>
-            <span markdown="1" style="whitespace:no-break">prefix[^port-name-prefix]</span>
+            <span markdown="1" style="white-space:nowrap;">prefix[^port-name-prefix]</span>
         </th>
         <td><code>{{ port.prefix }}</code></td>
     </tr>
