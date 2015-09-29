@@ -19,7 +19,9 @@ The buttons on the EV3 are mapped as regular keyboard keys
 
 ## Polling Key States
 
-If you would rather poll the button states instead of using regular keyboard input methods, you can do that via the EVIOCGKEY ioctl on /dev/input/eventX.  Key codes and ioctl definitions are in linux/input.h.
+If you would rather poll the button states instead of using regular keyboard input
+methods, you can do that via the EVIOCGKEY ioctl on `/dev/input/eventX`.  Key codes
+and ioctl definitions are in linux/input.h.
 
 Here is an example using python:
 
@@ -71,9 +73,16 @@ Here is an example using python:
 
 ## Directly Reading the Event Device
 
-If you want your program to be event driven, you can read the /dev/input/by-path/platform-gpio-keys.0-event file. It will block until a key is pressed. The data is in 16 byte blocks. The first 8 bytes are the time stamp (2 unsigned 64-bit integers, seconds and microseconds), the next 2 bytes are the type (unsigned 16-bit integer), the next 2 bytes are the code (unsigned 16-bit integer) and the last 4 bytes are the value (unsigned 32-bit integer).
+If you want your program to be event driven, you can read the
+`/dev/input/by-path/platform-gpio-keys.0-event` file. It will block until a key
+is pressed. The data is in 16 byte blocks. The first 8 bytes are the time stamp
+(2 unsigned 64-bit integers, seconds and microseconds), the next 2 bytes are the
+type (unsigned 16-bit integer), the next 2 bytes are the code (unsigned 16-bit
+integer) and the last 4 bytes are the value (unsigned 32-bit integer).
 
-Here is an example. It prints out 2 lines each time you press a button on the EV3 and 2 more lines each time you release a button. And of course, press CTRL+C to end.
+Here is an example. It prints out 2 lines each time you press a button on the
+EV3 and 2 more lines each time you release a button. And of course, press CTRL+C
+to end.
 
     root@ev3dev:/sys/class/leds# hexdump -e \
     '"timestamp:%d.%6d""\t""" 1/2 "type:%i""\t"""  1/2 "code:%3i""\t"""  "value:%d\n"' \
