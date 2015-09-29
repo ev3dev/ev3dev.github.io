@@ -15,7 +15,7 @@ Installing Jekyll in Ubuntu 14.04
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
     bundle install
-    bundle exec jekyll serve --watch &
+    bundle exec jekyll serve &
     www-browser http://localhost:4000 &
     # work, work, work
 
@@ -30,7 +30,7 @@ Then run:
     git clone https://github.com/<user>/ev3dev.github.io
     cd ev3dev.github.io
     bundle install
-    bundle exec jekyll serve --watch
+    bundle exec jekyll serve
 
 Now you should be able to visit your page at: [http://localhost:4000](http://localhost:4000). It should auto-update when you change the source files, so all you have to do is refresh your browser.
 
