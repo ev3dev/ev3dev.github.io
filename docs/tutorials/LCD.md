@@ -19,9 +19,10 @@ Each byte in the buffer represents 8 pixels. Leftmost pixel is in the least
 significant bit. Value 0 is white and value 1 is black (`fb_fix_screeninfo#visual`
 is set to `FB_VISUAL_MONO01`).
 
-Each row need to be 4 bytes aligned. So it's (178+31)/324 = 24 bytes per row
-(same value as `fb_fix_screeninfo#line_length`). The total buffer length is
-24128 = 3072 bytes.
+Each row needs to be aligned on a 4-byte boundry. The closest 4-byte boundry to
+178 is 192. 192/8 = 24 bytes per row (same value as fb_fix_screeninfo#line_length`).
+That gives us a total buffer length of 128 * 24 = 3072 bytes.
+
 See the [ev3 video driver code](https://github.com/ev3dev/ev3-kernel/blob/ev3dev-jessie/drivers/video/st7586fb.c) for more details.
 
 Suppose below is the pixel buffer

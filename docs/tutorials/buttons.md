@@ -85,9 +85,9 @@ to end.
     root@ev3dev:/sys/class/leds# hexdump -e \
     '"timestamp:%d.%6d""\t""" 1/2 "type:%i""\t"""  1/2 "code:%3i""\t"""  "value:%d\n"' \
     < /dev/input/by-path/platform-gpio-keys.0-event 
-    timestamp:1391366282.119886 type:1  code:  1    value:0
+    timestamp:1391366282.119886 type:1  code: 14    value:0
     timestamp:1391366282.120100 type:0  code:  0    value:0
-    timestamp:1391366282.829942 type:1  code:  1    value:1
+    timestamp:1391366282.829942 type:1  code: 14    value:1
     timestamp:1391366282.830179 type:0  code:  0    value:0
     timestamp:1391366284.300099 type:1  code:105    value:0
     timestamp:1391366284.300319 type:0  code:  0    value:0
