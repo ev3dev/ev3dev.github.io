@@ -8,12 +8,14 @@ subject: Hardware - Buttons/Keys
 
 The buttons on the EV3 are mapped as regular keyboard keys
 
-* UP
-* DOWN
-* LEFT
-* RIGHT
-* ENTER
-* BACKSPACE
+* BACKSPACE (1)
+* UP (2)
+* LEFT (3)
+* ENTER (4)
+* RIGHT (5)
+* DOWN (6)
+
+{% include screenshot.html source="/images/ev3/labeled-buttons.png" %}
 
 ## Polling Key States
 
