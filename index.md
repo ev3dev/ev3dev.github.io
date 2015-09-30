@@ -7,13 +7,13 @@ jumbotron-content: |
   <div id="main-lead-content" class="col-lg-8">
       <p class="lead">
           ev3dev is a <a href="https://www.debian.org/">Debian Linux</a>-based
-          operating system that runs on several LEGO<sup>Ⓡ</sup> MINDSTORMS compatible
-          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3">LEGO<sup>Ⓡ</sup> MINDSTORMS EV3</a>
+          operating system that runs on several LEGO<sup>&reg;</sup> MINDSTORMS compatible
+          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3">LEGO<sup>&reg;</sup> MINDSTORMS EV3</a>
           and <a href="https://www.raspberrypi.org/">Raspberry Pi</a>-powered
           <a href="http://www.dexterindustries.com/BrickPi/">BrickPi</a>.
       </p>
       <p>
-          Just like you can take apart your LEGOⓇ models and build something
+          Just like you can take apart your LEGO<sup>&reg;</sup> models and build something
           completely different, we have reversed-engineered the EV3 and created
           a new software platform for programming your robots.
       </p>
