@@ -6,16 +6,14 @@ subject: Buttons
 * Table of Contents
 {:toc}
 
-![EV3 Buttons](/images/lego_ev3_buttons.jpg)
-
 The buttons on the EV3 are mapped as regular keyboard keys
 
-* UP (#5)
-* DOWN (#4)
-* LEFT (#2)
-* RIGHT (#3)
-* ENTER (#1)
-* BACKSPACE (#6)
+* UP
+* DOWN
+* LEFT
+* RIGHT
+* ENTER
+* BACKSPACE
 
 ## Polling Key States
 
