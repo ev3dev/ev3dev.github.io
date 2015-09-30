@@ -1,6 +1,6 @@
 ---
-title: Using the Buttons
-subject: Buttons
+title: Using the EV3 Buttons
+subject: Hardware - Buttons/Keys
 ---
 
 * Table of Contents

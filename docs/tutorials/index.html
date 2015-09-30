@@ -2,14 +2,15 @@
 title: Tutorials
 ---
 
-{% assign tutorials=site.pages | where: "category", "tutorials" | group_by: "subject" %}
+{% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
 
 <ul>
 {% for group in tutorials %}
     {% if group.name != "" %}
         <li>{{ group.name }}</li>
         <ul>
-        {% for item in group.items %}
+        {% assign items = group.items | sort: "title" %}
+        {% for item in items %}
             <li>
                 <a href="{{ item.url }}">{{ item.title }}</a>
                 {% if item.subtitle %}
