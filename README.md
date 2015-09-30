@@ -10,8 +10,19 @@ You can view your changes locally by installing [jekyll](https://help.github.com
 Installing Jekyll in Ubuntu 14.04
 ---
 
-    sudo apt-get install git ruby2.0 ruby2.0-dev nodejs
+### Install Ruby via apt-get
+    sudo apt-get install git ruby1.9.1 ruby1.9.1-dev nodejs
     sudo gem install bundler
+
+### Install Ruby via RVM (Ruby Version Manager)
+If you hit any snags with apt another option is to install via RVM. Note that
+you must do the 'source' line when you open a new xterm.
+
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby
+    source ~/.rvm/scripts/rvm
+    
+### Enabling Jekyll
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
     bundle install
