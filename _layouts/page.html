@@ -19,9 +19,11 @@
         </div>
     </div>
     {% endif %}
+    {% if page.title %}
     <div class="container">
         {% include title.html %}
     </div>
+    {% endif %}
     {% unless page.no-wrapper %}
     <div class="container">
     {% endunless %}
