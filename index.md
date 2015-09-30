@@ -60,6 +60,8 @@ and remove the microSD card - no flashing required.
 </div>
 </div>
 
+</div>
+
 <div class="projects-featurette">
     <div class="container featurette projects-featurette-content">
         <div class="col-md-5 text-center">
