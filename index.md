@@ -6,10 +6,10 @@ jumbotron-heading: |
 jumbotron-content: |
   <div id="main-lead-content" class="col-lg-8">
       <p class="lead">
-          ev3dev is a <a href="https://www.debian.org/">Debian Linux</a> based
-          operating system that runs on several LEGOⓇ MINDSTORMS compatible
-          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3">LEGOⓇ MINDSTORMS EV3</a>
-          and <a href="https://www.raspberrypi.org/">Raspberry Pi</a> +
+          ev3dev is a <a href="https://www.debian.org/">Debian Linux</a>-based
+          operating system that runs on several LEGO<sup>Ⓡ</sup> MINDSTORMS compatible
+          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3">LEGO<sup>Ⓡ</sup> MINDSTORMS EV3</a>
+          and <a href="https://www.raspberrypi.org/">Raspberry Pi</a>-powered
           <a href="http://www.dexterindustries.com/BrickPi/">BrickPi</a>.
       </p>
       <p>
@@ -31,21 +31,21 @@ jumbotron-content: |
 ## <span class="glyphicon glyphicon-console heading-icon"></span> EV3 programming unlocked
 
 ev3dev gives you the power to program how <i>you</i> want to. We have created
-a system of hardware drivers for sensors, motors and everything else. It's as 
-easy as reading from and writing to a file.
+a low-level driver framework for controlling sensors, motors and pretty much
+everything else. It's as easy as reading from and writing to a file.
 
 ev3dev supports many popular scripting languages out-of-the-box, so you can
-get started right away.
+get started right away with your favorite language and libraries.
 
 </div>
 <div class="col-lg-4" markdown="1">
 
 ## <i class="fa fa-linux"></i> Backed by the full power of Linux
 
-Since ev3dev is built on Debian Linux, this means there are over 43000 free 
+Since ev3dev is built on Debian Linux, there are over 43,000 free 
 software packages available for you to install.
 
-And with the Linux kernel at its core many USB and Bluetooth devices, like
+And with the Linux kernel at its core, many USB and Bluetooth devices, like
 Wi-Fi dongles, keyboards, keypads, joysticks and cameras work too.
 
 </div>
