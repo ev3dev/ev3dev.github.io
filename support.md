@@ -35,6 +35,8 @@ not already reported the same problem or asked the same question. Please only
 comment on an existing issue if you are fairly sure your problem/question is
 *exactly* the same. When in doubt, open a new issue instead.
 
+<br/>
+
 <form class="input-group" onSubmit="window.open('https://github.com/ev3dev/ev3dev/issues?q=is%3Aissue+'
         + document.getElementById('search-issues').value.replace(' ', '+')); return false;">
     <span class="input-group-addon glyphicon glyphicon-search" style="top: 0"></span>
@@ -48,6 +50,8 @@ comment on an existing issue if you are fairly sure your problem/question is
 __Note:__ The [ev3dev-lang]{:target="_blank"} repository has its own
 [issues][ev3dev-lang-issues]{:target="_blank"} tracker.
 </small>
+
+<br/>
 
 If you don't find anything helpful by searching, then create a [new issue]{:target="_blank"}
 (only __one__ problem, question or suggestion per issue please).
