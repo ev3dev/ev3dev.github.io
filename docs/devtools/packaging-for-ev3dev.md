@@ -23,7 +23,7 @@ Note: If you are the kind of person that doesn't install recommends, make sure
 you install *all* of the recommended packages. If you don't know what
 "recommends" means, don't worry about it.
 
-   sudo apt-get install ubuntu-dev-tools qemu-user-static git-buildpackage
+    sudo apt-get install ubuntu-dev-tools qemu-user-static git-buildpackage
 
 If you haven't already, you will also need to [add the ev3dev archive to apt][ev3dev-archive].
 Be sure to install the `ev3dev-archive-keyring` package. We will need it later.
