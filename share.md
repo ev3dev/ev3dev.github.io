@@ -19,6 +19,8 @@ the page).
 </div>
 </div>
 
+<hr/>
+
 Show us your ev3dev projects
 ------------------------
 
