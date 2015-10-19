@@ -122,7 +122,8 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/Mac-OS-X/Bluetooth/System-Preferences-Network-Add-PAN.png" %}
 
-    8.  You should see your EV3 listed next to *Device:*. Click *Apply* to save your
+    8.  You may or may not see your EV3 listed next to *Device:* as shown. If you don't
+        see it, don't worry, thats normal. Click *Apply* to save your
         changes, but don't connect yet. In fact, don't try to use the *Connect*
         button you see here. It is for [tethering] and won't work for the connection
         we are setting up here. Instead, we will initiate the connection from the

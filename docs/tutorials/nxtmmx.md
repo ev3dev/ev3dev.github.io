@@ -1,6 +1,6 @@
 ---
 title: Using the mindsensors.com NxtMMX Motor Controller
-subject: Motors
+subject: Hardware - Motors
 ---
 
 The [mindsensors.com NxtMMX] motor controller uses the [tacho-motor class], so
