@@ -384,3 +384,7 @@ section {
     height: 75px;
     visibility: hidden;
 }
+
+sup[id]:before {
+    display: inline-block;
+}
