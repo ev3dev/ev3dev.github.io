@@ -181,6 +181,10 @@ You can skip this if en-US is OK.
 
 ### Update packages
 
+**NOTE: If you are a beginner with Linux and/or Debian, you should skip updating packages
+for now. We are working on some major changes and things will be inconsisent with the
+documentation if you upgrade.**
+
 Make sure your EV3 is connected to the Internet first. 
 Updating the packages for the first time will take minutes.
 The duration depends on the speed class of the SD card and on the updates involved.
