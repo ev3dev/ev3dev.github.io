@@ -1,6 +1,6 @@
 ---
 title: Sensors
-subtitle: and everything else that plugs into input ports on the EV3
+subtitle: And everything else that plugs into input ports on the EV3
 ---
 
 * Table of Contents
