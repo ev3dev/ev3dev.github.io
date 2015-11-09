@@ -23,7 +23,7 @@ enhanced regularly.
     * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
     * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
-    * [Python](https://github.com/ddemidov/ev3dev-lang-python)
+    * [Python](https://github.com/rhempel/ev3dev-lang-python)
 
 ## Programming toolkit for ev3dev
 
