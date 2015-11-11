@@ -7141,3 +7141,23 @@ a.list-group-item-danger.active:focus {
 .panel-default > .panel-heading {
   background-color: #464545;
 }
+.panel {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.panel .panel-heading {
+  border-left-width: 9px;
+  border-left-style: solid;
+}
+.panel-success .panel-heading {
+  background-color: #005640;
+}
+.panel-info .panel-heading {
+  background-color: #196090;
+}
+.panel-warning .panel-heading {
+  background-color: #976008;
+}
+.panel-danger .panel-heading {
+  background-color: #97180b;
+}
