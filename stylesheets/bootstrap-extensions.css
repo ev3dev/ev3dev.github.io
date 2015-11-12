@@ -115,3 +115,7 @@ h1.panel-title {
 .inline-screenshot img {
     max-width: 350px;
 }
+
+sup[id]:before {
+    display: inline-block;
+}
