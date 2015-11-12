@@ -1,6 +1,6 @@
 ---
 title: Motors
-subtitle: and everything else that plugs into output ports on the EV3
+subtitle: And everything else that plugs into output ports on the EV3
 ---
 
 * Table of Contents
@@ -56,12 +56,13 @@ a [LEGO 8886] cable or [LEGO 8871] cable.
 This is a list of devices that currently have drivers available in the ev3dev
 kernel.
 
+### Motors
+
 <table class="table table-striped table-bordered">
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>
     <th>Name</th>
-    <th>Class</th>
     <th>Auto-<br />detected</th>
     <th>Driver (Module)</th>
     </tr>
@@ -80,23 +81,31 @@ kernel.
         <td rowspan="{{ vendor_name_rowspan }}">{{ device.vendor_name }}</td>
     {% endif %}
         <td>{{ device.vendor_part_number }}</td>
-        <td><a href="{{ device.vendor_url }}">{{ device.vendor_part_name }}</a></td>
-        <td><a href="/docs/drivers/{{ device.class }}">{{ device.class | replace: '-class','' }}</a></td>
-        <td markdown="span">{{ device.autodetect }}</td>
+        <td><a href="{{ device.url_name }}">{{ device.vendor_part_name }}</a></td>
         <td>
-            <span style="white-space:nowrap;">{{ device.name }}</span><!--
-            {% if connection == 'EV3/UART' %}
-                --><span markdown="1">[^ev3-uart-driver]</span><!--
+            {% if device.motor_type == "ev3" %}
+            <span style="white-space:nowrap;" markdown="1">{% if device.vendor_name == "LEGO" %}Y{% else %}N{% endif %}[^autodetect]</span>
+            {% else %}
+            N
             {% endif %}
-            -->
-            <span style="white-space:nowrap;">({{ device.device_type }})</span>
+        </td>
+        <td>
+            <span style="white-space:nowrap;">{{ device.name }}</span>
+            <span style="white-space:nowrap;">({{ device.motor_type }}-motor)</span>
         </td>
     </tr>
     {% assign prev_vendor_name = device.vendor_name %}
 {% endfor %}
 </table>
 
-[^ev3-large-motor]: Detected as EV3 Large Motor.
+### LEDs
+
+TODO: We need a list of LEGO MINDSTORMS compatible LED devices. Want to help make
+a list? See issue [#424](https://github.com/ev3dev/ev3dev/issues/424).
+
+[^autodetect]: Motors are only automatically detected on the LEGO MINDSTORMS EV3
+    platform. LEGO NXT Motors are detected as LEGO EV3 Large motors. 3rd party
+    motors will not be correctly detected and must be manually specified.
 
 [sensors]: /docs/sensors
 [tachometer]: https://en.wikipedia.org/wiki/Tachometer

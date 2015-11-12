@@ -20,7 +20,7 @@
         "num_modes": "1",
         "sensor_type": "ev3-analog-sensor",
         "source_file": "drivers/lego/sensors/ev3_analog_sensor_defs.c",
-        "source_line": 48,
+        "source_line": 46,
         "url_name": "generic-ev3-analog-sensor",
         "vendor_part_name": "Generic EV3 Analog Sensor"
     },
@@ -73,6 +73,204 @@
         "source_line": 117,
         "url_name": "generic-nxt-analog-sensor",
         "vendor_part_name": "Generic NXT Analog Sensor"
+    },
+    {
+        "default_address": "0x01",
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "2",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "3",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "4",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "5",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "6",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "7",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "8",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "9",
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "PX_PIXY",
+        "mode_info": [
+            {
+                "data_sets": "7",
+                "description": "All",
+                "id": "0",
+                "name": "ALL",
+                "notes": "\n[^angle]: Angle information is only available for color codes, otherwise the value is 0.\n    \n    ",
+                "value0": "Signature low byte",
+                "value1": "Signature high byte",
+                "value2": "X",
+                "value3": "Y",
+                "value4": "Width",
+                "value5": "Height",
+                "value6": "Angle",
+                "value6_footnote": "[^angle]"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #1",
+                "id": "1",
+                "name": "SIG1",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #2",
+                "id": "2",
+                "name": "SIG2",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #3",
+                "id": "3",
+                "name": "SIG3",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #4",
+                "id": "4",
+                "name": "SIG4",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #5",
+                "id": "5",
+                "name": "SIG5",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #6",
+                "id": "6",
+                "name": "SIG6",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "5",
+                "description": "Signature #7",
+                "id": "7",
+                "name": "SIG7",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height"
+            },
+            {
+                "data_sets": "6",
+                "description": "Color code",
+                "id": "8",
+                "name": "COL-CODE",
+                "value0": "Count",
+                "value1": "X",
+                "value2": "Y",
+                "value3": "Width",
+                "value4": "Height",
+                "value5": "Angle"
+            },
+            {
+                "data_sets": "1",
+                "description": "Angle",
+                "description_footnote": "[^angle]",
+                "id": "9",
+                "name": "ANGLE",
+                "value0": "Angle"
+            }
+        ],
+        "name": "pixy-lego",
+        "num_modes": "10",
+        "product_id": "Pixy",
+        "sensor_type": "nxt-i2c-sensor",
+        "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
+        "source_line": 300,
+        "url_name": "charmed-labs-pixy-cmucam5-for-lego",
+        "vendor_id": "Pixy",
+        "vendor_name": "Charmed Labs",
+        "vendor_part_name": "Pixy (CMUcam5) for LEGO",
+        "vendor_website": "http://charmedlabs.com/default/pixy-cmucam5-for-lego/"
+    },
+    {
+        "id": "DI_DFLEX_SENSOR",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "description": "Flex",
+                "id": "0",
+                "name": "FLEX",
+                "raw_max": "4510",
+                "raw_min": "4150",
+                "si_max": "100",
+                "si_min": "0",
+                "value0": "Flex (0-100)",
+                "value0_footnote": "[^adjusted-value]"
+            }
+        ],
+        "name": "di-dflex",
+        "num_modes": "1",
+        "sensor_type": "nxt-analog-sensor",
+        "source_file": "drivers/lego/sensors/nxt_analog_sensor_defs.c",
+        "source_line": 117,
+        "url_name": "dexter-industries-dflex",
+        "vendor_name": "Dexter Industries",
+        "vendor_part_name": "dFlex",
+        "vendor_website": "http://www.dexterindustries.com/shop/dflex-lego-mindstorms-nxt-flexible-sensor-for-mindstorms/"
     },
     {
         "default_address": "0x01",
@@ -1373,7 +1571,7 @@
         "num_modes": "1",
         "sensor_type": "ev3-analog-sensor",
         "source_file": "drivers/lego/sensors/ev3_analog_sensor_defs.c",
-        "source_line": 48,
+        "source_line": 46,
         "url_name": "lego-ev3-touch-sensor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Touch Sensor",
@@ -2354,7 +2552,7 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Gyro, MultiSensitivity Accelerometer and Compass",
         "vendor_part_number": "AbsoluteIMU(-A/C/G)",
-        "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=169&MMN_position=30:30"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/15-gyro-multisensitivity-accelerometer-and-compass-for-nxt-or-ev3"
     },
     {
         "cmd_info": [
@@ -2455,7 +2653,7 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "GlideWheel-AS",
         "vendor_part_number": "AngleSensor",
-        "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=173"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/17-glidewheel-as-angle-sensor-for-nxt-or-ev3"
     },
     {
         "default_address": "0x50, 0x51, 0x52",
@@ -2491,7 +2689,7 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "EV3 Sensor Multiplexer",
         "vendor_part_number": "EV3SensorMUX",
-        "vendor_website": "http://www.mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=207"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/23-ev3-sensor-multiplexer-for-ev3-or-nxt"
     },
     {
         "cmd_info": [
@@ -2635,7 +2833,7 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Light Sensor Array",
         "vendor_part_number": "LightSensorArray",
-        "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=168"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/47-light-sensor-array-for-nxt-or-ev3"
     },
     {
         "cmd_info": [
@@ -2844,7 +3042,112 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Line Follower Sensor",
         "vendor_part_number": "LineLeader",
-        "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=111"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/48-line-follower-sensor-for-nxt-or-ev3"
+    },
+    {
+        "cmd_info": [
+            {
+                "description": "Enable tracking",
+                "id": "0",
+                "name": "TRACK-ON"
+            },
+            {
+                "description": "Disable tracking",
+                "id": "1",
+                "name": "TRACK-OFF"
+            },
+            {
+                "description": "Set to object tracking mode",
+                "id": "2",
+                "name": "TRACK-OBJ"
+            },
+            {
+                "description": "Set to line tracking mode",
+                "id": "3",
+                "name": "TRACK-LINE"
+            },
+            {
+                "description": "Sort by size",
+                "id": "4",
+                "name": "SORT-SIZE"
+            },
+            {
+                "description": "Sort by color",
+                "id": "5",
+                "name": "SORT-COL"
+            }
+        ],
+        "default_address": "0x01",
+        "default_address_footnote": "[^address]",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'E'",
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_data": "'D'",
+                "cmd_reg": "0",
+                "id": "1"
+            },
+            {
+                "cmd_data": "'B'",
+                "cmd_reg": "0",
+                "id": "2"
+            },
+            {
+                "cmd_data": "'L'",
+                "cmd_reg": "0",
+                "id": "3"
+            },
+            {
+                "cmd_data": "'A'",
+                "cmd_reg": "0",
+                "id": "4"
+            },
+            {
+                "cmd_data": "'U'",
+                "cmd_reg": "0",
+                "id": "5"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MS_NXTCAM",
+        "mode_info": [
+            {
+                "data_sets": "6",
+                "description": "Tracking",
+                "id": "0",
+                "name": "TRACK",
+                "name_footnote": "[^advanced]",
+                "notes": "\n[^advanced]: This driver only allows for tracking a single\n    object. To track more than one object and for other more\n    advanced uses, you can disable this driver by setting `poll_ms`\n    to `0` and using the `direct` attribute to directly read and\n    write I2C messages. See the [Using I2C Sensors] page and the\n    manufacturers documentation for more information.\n    ^\n    [Using I2C Sensors]: /docs/sensors/using-i2c-sensors\n    \n    ",
+                "value0": "Object count",
+                "value1": "Color index",
+                "value2": "X upper left",
+                "value3": "Y upper left",
+                "value4": "X lower right",
+                "value5": "Y lower right"
+            }
+        ],
+        "name": "ms-nxtcam",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
+        "num_commands": "6",
+        "num_modes": "1",
+        "product_id": "NXTCAM",
+        "sensor_type": "nxt-i2c-sensor",
+        "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
+        "source_line": 300,
+        "url_name": "mindsensors.com-vision-subsystem-v4-for-nxt-or-ev3",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "Vision Subsystem v4 for NXT or EV3",
+        "vendor_part_number": "NXTCam-v4",
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/14-vision-subsystem-v4-for-nxt-or-ev3-nxtcam-v4"
     },
     {
         "default_address": "0x03",
@@ -2902,7 +3205,7 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Multiplexer for NXT/EV3 Motors",
         "vendor_part_number": "NXTMMX-v2",
-        "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=134"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/21-multiplexer-for-nxtev3-motors"
     },
     {
         "default_address": "0x58",
@@ -2965,7 +3268,7 @@
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "8-channel Servo Controller",
         "vendor_part_number": "NxtServo",
-        "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=93"
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/25-8-channel-servo-controller-for-nxt-or-ev3"
     },
     {
         "default_address": "0x38",
@@ -2998,6 +3301,71 @@
         "vendor_part_name": "Sensor building kit for NXT with PCF8591 IC",
         "vendor_part_number": "PCF8591-Nx",
         "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=92"
+    },
+    {
+        "cmd_info": [
+            {
+                "description": "Sort by size",
+                "id": "0",
+                "name": "SORT-SIZE"
+            },
+            {
+                "description": "Sort by color",
+                "id": "1",
+                "name": "SORT-COL"
+            }
+        ],
+        "default_address": "0x01",
+        "default_address_footnote": "[^address]",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'A'",
+                "cmd_reg": "0",
+                "id": "0"
+            },
+            {
+                "cmd_data": "'U'",
+                "cmd_reg": "0",
+                "id": "1"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            }
+        ],
+        "id": "MS_PIXYADAPTER",
+        "mode_info": [
+            {
+                "data_sets": "6",
+                "description": "Tracking",
+                "id": "0",
+                "name": "TRACK",
+                "name_footnote": "[^advanced]",
+                "notes": "\n[^advanced]: This driver only allows for tracking a single\n    object. To track more than one object and for other more\n    advanced uses, you can disable this driver by setting `poll_ms`\n    to `0` and using the `direct` attribute to directly read and\n    write I2C messages. See the [Using I2C Sensors] page and the\n    manufacturers documentation for more information.\n    ^\n    [Using I2C Sensors]: /docs/sensors/using-i2c-sensors\n    \n    ",
+                "value0": "Object count",
+                "value1": "Color index",
+                "value2": "X upper left",
+                "value3": "Y upper left",
+                "value4": "X lower right",
+                "value5": "Y lower right"
+            }
+        ],
+        "name": "ms-pixy-adapter",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n    ",
+        "num_commands": "2",
+        "num_modes": "1",
+        "product_id": "PixyAdpt",
+        "sensor_type": "nxt-i2c-sensor",
+        "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
+        "source_line": 300,
+        "url_name": "mindsensors.com-pixy-adapter-for-mindstorms-ev3-or-nxt",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "Pixy Adapter for MINDSTORMS EV3 or NXT",
+        "vendor_part_number": "PixyAdapter",
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/35-pixy-adapter"
     },
     {
         "default_address": "0x68",

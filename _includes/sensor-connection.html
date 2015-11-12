@@ -5,6 +5,8 @@
         {% assign autodetect = "Y" %}
     {% elsif sensor.name == 'lego-nxt-touch' %}
         {% assign autodetect = "Y[^lego-nxt-touch]" %}
+    {% elsif sensor.name == "di-dflex" %}
+        {% assign autodetect = "N[^di-dflex]" %}
     {% else %}
         {% assign autodetect = "N[^nxt-analog]" %}
     {% endif %}

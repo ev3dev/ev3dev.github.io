@@ -1,6 +1,6 @@
 ---
 title: Sensors
-subtitle: and everything else that plugs into input ports on the EV3
+subtitle: And everything else that plugs into input ports on the EV3
 ---
 
 * Table of Contents
@@ -188,6 +188,11 @@ kernel.
     sensor and the port is automatically put into I2C mode. However, this sensor
     only partially follows the LEGO MINDSTORMS convention for I2C sensors, so the
     driver must be loaded manually. See the sensor's page for more information.
+
+[^di-dflex]: The Dexter Industries dFlex sensor cannot be automatically detected
+    (because pin 2 is not connected to pin 3). In order to use this sensor, you
+    must manually set the port to `nxt-analog` mode and then set the driver to
+    `di-dflex`.
 
 [LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [I2C protocol]: https://en.wikipedia.org/wiki/I2c
