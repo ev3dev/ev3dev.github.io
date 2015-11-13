@@ -190,3 +190,7 @@ ul[tab-list] {
     background-color: #252525;
     border-radius: 6px;
 }
+
+.xl-button-text {
+    font-size: 22px;
+}
