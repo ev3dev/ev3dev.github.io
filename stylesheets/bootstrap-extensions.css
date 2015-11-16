@@ -1,5 +1,6 @@
 ﻿#brand-logo {
-    height: 100%;
+    height: calc(100% + 16px);
+    margin-top: -8px;
 }
 
 .dropdown-toggle {
