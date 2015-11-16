@@ -25,7 +25,7 @@
 }
 
 .projects-featurette {
-    background-image: url('../images/project-showcase.jpg');
+    background-image: url('../images/project-showcase-small.jpg');
     background-position-y: center;
     background-repeat: repeat-x;
     background-size: cover;
@@ -72,6 +72,12 @@
 @media all and (min-width:768px) {
     .featurette-heading {
         font-size: 50px;
+    }
+}
+
+@media all and (max-width:991px) {
+    .featurette {
+        text-align: center;
     }
 }
 
