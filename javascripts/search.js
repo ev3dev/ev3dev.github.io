@@ -29,6 +29,12 @@ $(document).ready(function () {
             hideSearchDropdown();
         }
     });
+
+    $('#search-input')
+        .focus(searchFocus)
+        .keyup(searchTextChanged);
+
+
 });
 
 Array.prototype.clean = function(deleteValue) {
@@ -171,11 +177,13 @@ function doSearch(query) {
 
         resultArea.loadTemplate($('#search-result-template'), results[i], { append: true} );
 
-        resultArea.children().last().show(400);
-        if(i < results.length - 1)
+        resultArea.children().last().show(20);
+
+        if(i < results.length - 1) {
             itemLoadTimer = setTimeout(function() {
                 loadItem(i + 1)
-            }, 25);
+            }, 5);
+        }
     }
 
     if(results.length > 0)
