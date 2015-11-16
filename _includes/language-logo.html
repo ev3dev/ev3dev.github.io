@@ -2,12 +2,16 @@
 
 {% if site.data.langs.js-opts contains sanitized_str %}
     {% assign language_icon = 'nodejs' %}
+    {% assign language_link = 'https://nodejs.org/' %}
 {% elsif site.data.langs.python-opts contains sanitized_str %}
     {% assign language_icon = 'python' %}
+    {% assign language_link = 'https://www.python.org/' %}
 {% endif %}
 
 {% if language_icon %}
-    <img class="language-icon" src="../../../../../images/lang-logos/{{ language_icon }}.png" alt="{{ include.language }}" />
+    <a href="{{ language_link }}">
+        <img class="language-icon" src="../../../../../images/lang-logos/{{ language_icon }}.png" alt="{{ include.language }}" />
+    </a>
 {% else %}
     {{ include.language }}
 {% endif %}
