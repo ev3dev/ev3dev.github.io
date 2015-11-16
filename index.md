@@ -81,6 +81,7 @@ and remove the microSD card - no flashing required.
         <div class="col-md-7">
             <h2 class="featurette-heading">
                 Ready to jump in?
+                <span class="text-muted">Grab your bot and let's go!</span>
             </h2>
         </div>
 
