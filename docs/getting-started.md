@@ -78,7 +78,7 @@ MINDSTORMS boot splash and the red LEDs will be on. This is immediately
 followed by the ev3dev boot splash and the LEDs changing to orange. The
 LEDs indicate disk (SD card) activity.
 
-Note: If you are using Raspberry Pi hardware without a screen, just wait for
+**Note:** If you are using Raspberry Pi hardware without a screen, just wait for
 the Activity LED to stop flashing, then go to the next step.
 
 After one or two minutes, the screen will go blank. This happens on the first boot
@@ -189,6 +189,13 @@ You can skip this if en-US is OK.
 
 ### Update packages
 
+<div class="alert alert-danger">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+    If you are a beginner with Linux and/or Debian, you should skip updating packages
+    for now. We are working on some major changes and things will be inconsisent with the
+    documentation if you upgrade.
+</div>
+
 Make sure your EV3 is connected to the Internet first. 
 Updating the packages for the first time will take minutes.
 The duration depends on the speed class of the SD card and on the updates involved.
@@ -212,10 +219,10 @@ considered experimental and subject to major changes.
 Here are some guides for using each of the major components.
 
 * [Sensors](/docs/sensors)
-* [Motors](http://www.ev3dev.org/docs/tutorials/tacho-motors/)
+* [Motors](/docs/tutorials/tacho-motors/)
 * [Sound](https://github.com/ev3dev/ev3dev/wiki/Using-Sound)
-* [LCD](https://github.com/ev3dev/ev3dev/wiki/Using-the-LCD)
-* [Buttons](https://github.com/ev3dev/ev3dev/wiki/Using-the-Buttons)
+* [LCD](/docs/tutorials/LCD/)
+* [Buttons](/docs/tutorials/buttons/)
 * [LEDs](https://github.com/ev3dev/ev3dev/wiki/Using-the-LEDs)
 * [Bluetooth](https://github.com/ev3dev/ev3dev/wiki/Using-Bluetooth)
 

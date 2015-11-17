@@ -372,3 +372,35 @@ a.list-group-item {
 .panel-default > .panel-heading {
   background-color: @panel-footer-bg;
 }
+
+.panel {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  .panel-heading {
+    border-left-width: 9px;
+    border-left-style: solid;
+  }
+}
+
+.panel-variant(@color) {
+  .panel-heading {
+    background-color: darken(@color, 20%);
+  }
+}
+
+.panel-success {
+    .panel-variant(@panel-success-heading-bg);
+}
+
+.panel-info {
+    .panel-variant(@panel-info-heading-bg);
+}
+
+.panel-warning {
+    .panel-variant(@panel-warning-heading-bg);
+}
+
+.panel-danger {
+    .panel-variant(@panel-danger-heading-bg);
+}

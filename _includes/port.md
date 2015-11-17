@@ -17,7 +17,12 @@
     <tr>
         <th>
             <code>port_name</code>
-            <span markdown="1" style="white-space:nowrap;">prefix[^port-name-prefix]</span>
+            <span markdown="1" style="white-space:nowrap;">prefix<!--
+            {% if port.prefix_footnote %}
+            -->{{ port.prefix_footnote }}<!--
+            {% endif %}
+            -->
+            </span>
         </th>
         <td><code>{{ port.prefix }}</code></td>
     </tr>
@@ -121,15 +126,10 @@
 </table>
 {% endif %}
 
+{% if footnotes != '' %}
 ### Notes
 
 {{ footnotes }}
-
-[^port-name-prefix]: The full `port_name` is in the formt:
-
-        [<parent-port-name>:]<prefix><n>
-
-    For example, if we are looking a port 1 of a sensor mux plugged into port 2
-    on the EV3, the port name might be `in2:mux1`.
+{% endif %}
 
 [lego-port]: ../../drivers/lego-port-class

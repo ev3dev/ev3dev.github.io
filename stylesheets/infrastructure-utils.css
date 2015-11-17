@@ -104,11 +104,6 @@
         vertical-align: middle;
     }
 
-.youtube-embed {
-    width: 100%;
-    height: 300px;
-}
-
 .screenshot {
     text-align: center;
     display: block;
@@ -189,4 +184,8 @@ ul[tab-list] {
     padding: 12px;
     background-color: #252525;
     border-radius: 6px;
+}
+
+.xl-button-text {
+    font-size: 22px;
 }

@@ -65,7 +65,7 @@ and remove the microSD card - no flashing required.
 <div class="projects-featurette">
     <div class="container featurette projects-featurette-content">
         <div class="col-md-5 text-center">
-            <a class="btn btn-lg btn-primary" href="projects">Projects <span class="glyphicon glyphicon-arrow-right"></span></a>
+            <a class="btn btn-lg btn-primary xl-button-text" href="projects">Projects <span class="glyphicon glyphicon-arrow-right"></span></a>
         </div>
 
         <div class="col-md-7">
@@ -81,12 +81,12 @@ and remove the microSD card - no flashing required.
         <div class="col-md-7">
             <h2 class="featurette-heading">
                 Ready to jump in?
-                <span class="text-muted">It'll only take a minute</span>
+                <span class="text-muted">Grab your bot and let's go!</span>
             </h2>
         </div>
 
         <div class="col-md-5 text-center">
-            <a class="btn btn-lg btn-primary" href="docs/getting-started">Get started <span class="glyphicon glyphicon-arrow-right"></span></a>
+            <a class="btn btn-lg btn-primary xl-button-text" href="docs/getting-started">Get started <span class="glyphicon glyphicon-arrow-right"></span></a>
         </div>
     </div>
 </div>

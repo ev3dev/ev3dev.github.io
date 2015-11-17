@@ -1,5 +1,6 @@
 ﻿#brand-logo {
-    height: 100%;
+    height: calc(100% + 8px);
+    margin-top: -4px;
 }
 
 .dropdown-toggle {
@@ -25,7 +26,7 @@
 }
 
 .projects-featurette {
-    background-image: url('../images/project-showcase.jpg');
+    background-image: url('../images/project-showcase-small.jpg');
     background-position-y: center;
     background-repeat: repeat-x;
     background-size: cover;
@@ -75,6 +76,12 @@
     }
 }
 
+@media all and (max-width:991px) {
+    .featurette {
+        text-align: center;
+    }
+}
+
 body.no-jumbotron {
   padding-top: 40px;
 }
@@ -114,4 +121,8 @@ h1.panel-title {
 
 .inline-screenshot img {
     max-width: 350px;
+}
+
+sup[id]:before {
+    display: inline-block;
 }

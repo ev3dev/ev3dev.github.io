@@ -1,6 +1,6 @@
 ---
 title: Using the Tacho-Motor Class
-subject: Motors
+subject: Hardware - Motors
 ---
 
 * Table of Contents

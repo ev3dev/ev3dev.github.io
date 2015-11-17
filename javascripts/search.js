@@ -12,10 +12,10 @@ $(document).ready(function () {
     projectResultArea = $('#search-results-projects > div');
     newsResultArea = $('#search-results-news > div');
     miscResultArea = $('#search-results-misc > div');
-    
+
     var searchQuery = getQueryParam("search");
     if (searchQuery != undefined && searchQuery != "") { //If a search query was provided in the query strings, execute the search
-        loadSearchData(function() {
+        loadSearchData(function () {
             searchUpdate();
         });
 
@@ -23,17 +23,23 @@ $(document).ready(function () {
     }
 
     //Close the search results if the input and results lose focus
-    $('body').click(function(event) {
+    $('body').click(function (event) {
         //Check if the click registered on a non search-related element 
-        if(!($(event.target).parents('#search-container').length)) {
+        if (!($(event.target).parents('#search-container').length)) {
             hideSearchDropdown();
         }
     });
+
+    $('#search-input')
+        .focus(searchFocus)
+        .keyup(searchTextChanged);
+
+
 });
 
-Array.prototype.clean = function(deleteValue) {
-    if(deleteValue == undefined)
-    deleteValue = '';
+Array.prototype.clean = function (deleteValue) {
+    if (deleteValue == undefined)
+        deleteValue = '';
     for (var i = 0; i < this.length; i++) {
         if (this[i] == deleteValue) {
             this.splice(i, 1);
@@ -47,7 +53,7 @@ Array.prototype.clean = function(deleteValue) {
 //If they have already entered text, open the suggestions
 function searchFocus() {
     if (!searchData)
-        loadSearchData(function() {
+        loadSearchData(function () {
             searchUpdate();
         });
     else
@@ -55,10 +61,10 @@ function searchFocus() {
 }
 
 function searchTextChanged() {
-    if(searchKeystrokeEventTimer != undefined)
+    if (searchKeystrokeEventTimer != undefined)
         clearTimeout(searchKeystrokeEventTimer);
 
-    searchKeystrokeEventTimer = setTimeout(function() {
+    searchKeystrokeEventTimer = setTimeout(function () {
         searchKeystrokeEventTimer = undefined;
         searchUpdate();
     }, 400);
@@ -74,7 +80,7 @@ function loadSearchData(callback) {
         dataLoading = false;
         searchData = e.slice(0, -1);
 
-        if(callback != undefined)
+        if (callback != undefined)
             callback();
     });
 }
@@ -87,28 +93,28 @@ function findResults(term) {
     //Split by word
     var terms = term.toLowerCase().split(/\W/g);
     terms = terms.clean();
-	
+
     var result = [];
-    if(terms.length <= 0)
+    if (terms.length <= 0)
         return result;
 
     //Iterate over the searchable data
     for (var i in searchData) {
         //Skip this item if there is no title
-        if(searchData[i].title == undefined)
+        if (searchData[i].title == undefined)
             continue;
 
         var numMatches = 0;
         var title = searchData[i].title.toLowerCase();
-        
+
         //Count the number of terms (words) that are present in the title
-        for(var termIndex = 0; termIndex < terms.length; termIndex++) {
+        for (var termIndex = 0; termIndex < terms.length; termIndex++) {
             if (title.search(terms[termIndex]) != -1)
-                numMatches++; 
+                numMatches++;
         }
 
         //If all terms match, this one is a hit
-        if(numMatches >= terms.length)
+        if (numMatches >= terms.length)
             result.push(searchData[i]);
     }
 
@@ -139,11 +145,11 @@ function searchUpdate() {
 function doSearch(query) {
 
     //Stop all animations
-    if(itemLoadTimer)
+    if (itemLoadTimer)
         clearTimeout(itemLoadTimer);
-    $( "#search-dropdown .search-result" ).stop(false, true);
-    $( "#search-dropdown .search-result" ).show();
-    
+    $("#search-dropdown .search-result").stop(false, true);
+    $("#search-dropdown .search-result").show();
+
     //Clear existing results
     docResultArea.children('.search-result').remove();
     projectResultArea.children('.search-result').remove();
@@ -152,7 +158,7 @@ function doSearch(query) {
 
     //Start the dropdown box's 'open' animation
     if (!$('#search-dropdown').is(":visible"))
-        $('#search-dropdown').slideDown(400, function() {
+        $('#search-dropdown').slideDown(400, function () {
         });
 
     var results = findResults(query);
@@ -162,36 +168,38 @@ function doSearch(query) {
         var resultArea = miscResultArea;
 
         var categoryTags = results[i].category.split(' ');
-        if(categoryTags.indexOf('docs') != -1)
+        if (categoryTags.indexOf('docs') != -1)
             resultArea = docResultArea;
-        else if(categoryTags.indexOf('projects') != -1)
+        else if (categoryTags.indexOf('projects') != -1)
             resultArea = projectResultArea;
-        else if(categoryTags.indexOf('news') != -1)
+        else if (categoryTags.indexOf('news') != -1)
             resultArea = newsResultArea;
 
-        resultArea.loadTemplate($('#search-result-template'), results[i], { append: true} );
+        resultArea.loadTemplate($('#search-result-template'), results[i], { append: true });
 
-        resultArea.children().last().show(400);
-        if(i < results.length - 1)
-            itemLoadTimer = setTimeout(function() {
+        resultArea.children().last().show(20);
+
+        if (i < results.length - 1) {
+            itemLoadTimer = setTimeout(function () {
                 loadItem(i + 1)
-            }, 25);
+            }, 5);
+        }
     }
 
-    if(results.length > 0)
+    if (results.length > 0)
         loadItem(0);
 }
 
 
 //Hides the search dropdown and ties up any loose animations
 function hideSearchDropdown() {
-    if(itemLoadTimer)
+    if (itemLoadTimer)
         clearTimeout(itemLoadTimer);
     $("#search-dropdown .search-result").stop(false, true);
     $("#search-dropdown .search-result").show();
 
     if ($('#search-dropdown').is(":visible")) {
-        $('#search-dropdown').slideUp(400, function() {
+        $('#search-dropdown').slideUp(400, function () {
         });
     }
 }

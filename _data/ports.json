@@ -51,23 +51,23 @@
         "url_name": "brickpi-in-port"
     },
     {
-        "connection_types": "tacho-motor",
-        "description": "Dexter Industries BrickPi Input Port",
+        "connection_types": "tacho-motor, dc-motor, led",
+        "description": "Dexter Industries BrickPi Output Port",
         "mode_info": [
             {
                 "description": "NXT/EV3 Large Motor",
-                "id": "BRICKPI_OUT_PORT_MODE_NXT_MOTOR",
-                "name": "nxt-motor"
+                "id": "BRICKPI_OUT_PORT_MODE_TACHO_MOTOR",
+                "name": "tacho-motor"
             },
             {
                 "description": "RCX/Power Functions motor",
-                "id": "BRICKPI_OUT_PORT_MODE_RCX_MOTOR",
-                "name": "rcx-motor"
+                "id": "BRICKPI_OUT_PORT_MODE_DC_MOTOR",
+                "name": "dc-motor"
             },
             {
                 "description": "RCX/Power Functions LED",
-                "id": "BRICKPI_OUT_PORT_MODE_RCX_LED",
-                "name": "rcx-led"
+                "id": "BRICKPI_OUT_PORT_MODE_LED",
+                "name": "led"
             }
         ],
         "module": "brickpi-ports-out",
@@ -75,7 +75,7 @@
         "num_modes": 3,
         "prefix": "out",
         "source_file": "drivers/lego/brickpi/brickpi_ports_out.c",
-        "source_line": 47,
+        "source_line": 53,
         "url_name": "brickpi-out-port"
     },
     {
@@ -99,14 +99,16 @@
         ],
         "module": "ht-nxt-smux",
         "name": "ht-nxt-smux-port",
+        "notes": "\n[^port-name-prefix]: The full `port_name` is in the format:\n    ^\n           [<parent-port-name>:]mux<n>\n    ^\n       For example, if we are looking at port 1 of this mux plugged into\n       input port 2 on the EV3, the port name will be `in2:i2c08:mux1`.\n    \n    ",
         "num_modes": 2,
         "prefix": "mux",
+        "prefix_footnote": "[^port-name-prefix]",
         "source_file": "drivers/lego/sensors/ht_nxt_smux.c",
         "source_line": 39,
         "url_name": "ht-nxt-smux-port"
     },
     {
-        "connection_types": "EV3/UART, Other/UART, NXT/I2C, Other/I2C, EV3/Analog, NXT/Analog",
+        "connection_types": "NXT/Analog, NXT/I2C, Other/I2C, EV3/Analog, EV3/UART, Other/UART",
         "description": "EV3 Input Port",
         "mode_info": [
             {
@@ -178,25 +180,25 @@
                 "notes": "\n[^auto-mode]: Only the EV3/NXT large motors and the EV3\n    medium motor can be automatically detected. All other devices\n    must be manually configured.\n    \n    "
             },
             {
-                "description": "Load the [legoev3-motor] device.",
+                "description": "Load the [tacho-motor] device.",
                 "id": "EV3_OUTPUT_PORT_MODE_TACHO_MOTOR",
-                "name": "legoev3-motor",
-                "name_footnote": "[^legoev3-motor-mode]",
-                "notes": "\n[^legoev3-motor-mode]: Configures the port to use the\n    [legoev3-motor] driver module. The default driver is the\n    EV3/NXT Large Motor (`lego-ev3-l-motor`). You can change\n    the driver using the `set_device` attribute.\n    ^\n    [legoev3-motor]: /docs/drivers/legoev3-motor\n    \n    "
+                "name": "tacho-motor",
+                "name_footnote": "[^tacho-motor-mode]",
+                "notes": "\n[^tacho-motor-mode]: Configures the port to use the\n    [tacho-motor] driver module. The default driver is the\n    EV3 Large Motor (`lego-ev3-l-motor`). You can change\n    the driver using the `set_device` attribute.\n    ^\n    [tacho-motor]: /docs/drivers/tacho-motor\n    \n    "
             },
             {
-                "description": "Load the [rcx-motor] device.",
+                "description": "Load the [dc-motor] device.",
                 "id": "EV3_OUTPUT_PORT_MODE_DC_MOTOR",
-                "name": "rcx-motor",
-                "name_footnote": "[^rcx-motor-mode]",
-                "notes": "\n[^rcx-motor-mode]: This can be use with MINDSTORMS RCX\n    motors, Power Functions motors and any other 'plain' DC\n    motor. By 'plain', we mean the motor is just a motor without\n    any feedback.\n    ^\n    [rcx-motor]: /docs/drivers/rcx-motor\n    \n    "
+                "name": "dc-motor",
+                "name_footnote": "[^dc-motor-mode]",
+                "notes": "\n[^dc-motor-mode]: This can be use with MINDSTORMS RCX\n    motors, Power Functions motors and any other 'plain' DC\n    motor. By 'plain', we mean the motor is just a motor without\n    any feedback.\n    ^\n    [dc-motor]: /docs/drivers/dc-motor\n    \n    "
             },
             {
-                "description": "Load the [rcx-led] device.",
+                "description": "Load the [led] device.",
                 "id": "EV3_OUTPUT_PORT_MODE_LED",
-                "name": "rcx-led",
-                "name_footnote": "[^rcx-led-mode]",
-                "notes": "\n[^rcx-led-mode]: This can be used with MINDSTORMS RCX LEDs,\n    Power Functions LEDs or any other LED connected to pins 1\n    and 2 of the output port.\n    ^\n    [rcx-led]: /docs/drivers/rcx-led\n    \n    "
+                "name": "led",
+                "name_footnote": "[^led-mode]",
+                "notes": "\n[^led-mode]: This can be used with MINDSTORMS RCX LEDs,\n    Power Functions LEDs or any other LED connected to pins 1\n    and 2 of the output port.\n    ^\n    [led]: /docs/drivers/led\n    \n    "
             },
             {
                 "description": "Provide access to low level drivers.",
@@ -235,28 +237,125 @@
         ],
         "module": "ms-ev3-smux",
         "name": "ms-ev3-smux-port",
+        "notes": "\n[^port-name-prefix]: The full `port_name` is in the format:\n    ^\n           [<parent-port-name>:]mux<n>\n    ^\n       For example, if we are looking at port 1 of this mux plugged into\n       input port 2 on the EV3, the port name will be `in2:i2c50:mux1`.\n    \n    ",
         "num_modes": 2,
         "prefix": "mux",
+        "prefix_footnote": "[^port-name-prefix]",
         "source_file": "drivers/lego/sensors/ms_ev3_smux.c",
         "source_line": 42,
         "url_name": "ms-ev3-smux-port"
+    },
+    {
+        "connection_types": "tacho-motor",
+        "description": "mindsensors.com NXTMMX Output Port",
+        "mode_info": [
+            {
+                "description": "NXT/EV3 Large Motor",
+                "id": "MS_NXTMMX_OUT_PORT_MODE_TACHO_MOTOR",
+                "name": "tacho-motor"
+            }
+        ],
+        "module": "ms-nxtmmx",
+        "name": "ms-nxtmmx-out-port",
+        "notes": "\n[^prefix]: The full port name will be something like `in2:i2c3:M1`\n    depending on what port the motor multiplexer is plugged into.\n    \n    ",
+        "num_modes": 1,
+        "prefix": "M",
+        "prefix_footnote": "[^prefix]",
+        "source_file": "drivers/lego/sensors/ms_nxtmmx.c",
+        "source_line": 142,
+        "url_name": "ms-nxtmmx-out-port"
+    },
+    {
+        "connection_types": "NXT/Analog, NXT/Color, NXT/I2C, Other/I2C, EV3/Analog, EV3/UART",
+        "description": "mindsensors.com PiStorms Input Port",
+        "mode_info": [
+            {
+                "description": "No sensor",
+                "id": "PS_IN_PORT_MODE_NONE",
+                "name": "none"
+            },
+            {
+                "description": "NXT/Analog sensor",
+                "id": "PS_IN_PORT_MODE_NXT_ANALOG",
+                "name": "nxt-analog",
+                "name_footnote": "[^nxt-analog-mode]",
+                "notes": "\n[^nxt-analog-mode]: The generic [nxt-analog] driver will be\n    loaded when this mode is set. You must manually specify the\n    correct driver for your sensor using `set_device` if you want\n    to use another driver. Any driver with a connection type of\n    NXT/Analog is allowed.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
+            },
+            {
+                "description": "NXT/Color sensor",
+                "id": "PS_IN_PORT_MODE_NXT_COLOR",
+                "name": "nxt-color"
+            },
+            {
+                "description": "I2C pass through",
+                "id": "PS_IN_PORT_MODE_I2C_THRU",
+                "name": "i2c-thru",
+                "name_footnote": "[^i2c-thru-mode]",
+                "notes": "\n[^i2c-thru-mode]: I2C signals are passed through the\n    input port to `i2c_arm` on the Raspberry Pi. This means that\n    all 4 input ports share the same I2C master and the devices\n    must have different addresses even if they are connected to\n    different ports on the PiStorms. Additionally, the LEGO NXT\n    Ultrasonic sensor is not supported on the PiStorms.\n    ^\n    NXT/I2C sensors will be automatically detected, otherwise\n    you must manually specify the sensor that is connected by\n    using the `set_device` attribute.\n    \n    "
+            },
+            {
+                "description": "EV3/Analog sensor",
+                "id": "PS_IN_PORT_MODE_EV3_ANALOG",
+                "name": "ev3-analog",
+                "name_footnote": "[^ev3-analog-mode]",
+                "notes": "\n[^ev3-analog-mode]: Only the LEGO EV3 Touch sensor is supported.\n    The driver will load by default.\n    \n    "
+            },
+            {
+                "description": "EV3/UART sensor",
+                "id": "PS_IN_PORT_MODE_EV3_UART",
+                "name": "ev3-uart",
+                "name_footnote": "[^ev3-uart-mode]",
+                "notes": "\n[^ev3-uart-mode]: Only the LEGO EV3 Ultrasonic, Color, Gyro,\n    and Infrared sensors are supported. When this mode is set,\n    a sensor device will be registered for the type of sensor\n    that is attached (or was most recently attached).\n    \n    "
+            }
+        ],
+        "module": "pistorms-ports-in",
+        "name": "pistorms-in-port",
+        "notes": "\n[^port-name-prefix]: The full `port_name` is in the format:\n    ^\n           pistorms:B<b>:<prefix><n>\n    ^\n       For example, if we are looking at the port labeled \"BBS2\" on the\n       PiStorms, the port name will be `pistorms:BB:S2`.\n    \n    ",
+        "num_modes": 6,
+        "prefix": "S",
+        "prefix_footnote": "[^port-name-prefix]",
+        "source_file": "drivers/lego/pistorms/pistorms_ports_in.c",
+        "source_line": 134,
+        "url_name": "pistorms-in-port"
+    },
+    {
+        "connection_types": "tacho-motor",
+        "description": "mindsensors.com PiStorms Output Port",
+        "mode_info": [
+            {
+                "description": "NXT/EV3 Large Motor",
+                "id": "PISTORMS_OUT_PORT_MODE_TACHO_MOTOR",
+                "name": "tacho-motor"
+            }
+        ],
+        "module": "pistorms-ports-out",
+        "name": "pistorms-out-port",
+        "notes": "\n[^prefix]: The full port name will be something like `pistorms:BAM1`\n    depending on what port the motor multiplexer is plugged into.\n    \n    ",
+        "num_modes": 1,
+        "prefix": "M",
+        "prefix_footnote": "[^prefix]",
+        "source_file": "drivers/lego/pistorms/pistorms_ports_out.c",
+        "source_line": 31,
+        "url_name": "pistorms-out-port"
     },
     {
         "connection_types": "WeDo/Analog, dc-motor, led",
         "description": "LEGO WeDo Port",
         "mode_info": [
             {
-                "description": "Automatic",
+                "description": "The attached device is automatically detected.",
                 "id": "0",
                 "name": "auto"
             }
         ],
         "module": "wedo",
         "name": "wedo-port",
+        "notes": "\n[^port-name-prefix]: The full `port_name` is in the format:\n    ^\n           usb<usb-path>:wedo<n>\n    ^\n       The USB path might be something like `1-1.3:1.0`. Read more about\n       it [here](http://gajjarpremal.blogspot.in/2015/04/sysfs-structures-for-linux-usb.html).\n       Run `lsusb -t` to help figure out the correct path for your WeDo hub.\n    ^\n       For example, this...\n    ^\n            /:  Bus 05.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/4p, 480M\n                |__ Port 4: Dev 5, If 0, Class=Hub, Driver=hub/4p, 480M\n                    |__ Port 2: Dev 6, If 0, Class=Human Interface Device, Driver=wedo, 1.5M\n    ^\n       ...translates to `usb5-4.2:1.0:wedo1`. You can see how `Bus 05`,\n       `Port 4` and `Port 2` result in `5-4.2`. The last bit (configuration\n       and interface) will always be `:1.0`.\n    \n    ",
         "num_modes": 1,
         "prefix": "wedo",
+        "prefix_footnote": "[^port-name-prefix]",
         "source_file": "drivers/lego/wedo/wedo_port.c",
-        "source_line": 410,
+        "source_line": 417,
         "url_name": "wedo-port"
     }
 ]
