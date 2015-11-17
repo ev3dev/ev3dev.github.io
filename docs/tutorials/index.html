@@ -4,21 +4,27 @@ title: Tutorials
 
 {% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
 
-<ul>
-{% for group in tutorials %}
-    {% if group.name != "" %}
-        <li>{{ group.name }}</li>
-        <ul>
-        {% assign items = group.items | sort: "title" %}
-        {% for item in items %}
-            <li>
-                <a href="{{site.github.url}}{{ item.url }}">{{ item.title }}</a>
-                {% if item.subtitle %}
-                    ({{ item.subtitle }})
-                {% endif %}
-            </li>
-        {% endfor %}
-        </ul>
-    {% endif %}
-{% endfor %}
-</ul>
+<div class="row">
+    {% for group in tutorials %}
+        {% if group.name != "" %}
+        <div class="col-lg-6" />
+            <div class="panel panel-default rounded-panel">
+                <div class="panel-heading">{{ group.name }}</div>
+                <div class="panel-body">
+                    <ul>
+                        {% assign items = group.items | sort: "title" %}
+                        {% for item in items %}
+                        <li>
+                            <a href="{{site.github.url}}{{ item.url }}">{{ item.title }}</a>
+                            {% if item.subtitle %}
+                                ({{ item.subtitle }})
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
