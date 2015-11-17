@@ -19,7 +19,7 @@
         </div>
     </div>
     {% endif %}
-    {% if page.title %}
+    {% if page.title and page.no-display-title != 1 %}
     <div class="container">
         {% include title.html %}
     </div>

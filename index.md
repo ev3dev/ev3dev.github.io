@@ -1,6 +1,9 @@
 ---
 no-wrapper: 1
 no-footer: 1
+no-display-title: 1
+title: ev3dev Home
+
 jumbotron-heading: |
   ev3dev is your EV3 <strong><i>re-imagined</i></strong>
 jumbotron-content: |
