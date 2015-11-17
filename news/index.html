@@ -18,6 +18,9 @@ subtitle: Announcements and updates
     </div>
     <div class="panel-body">
         {{ first_post.content | truncatewords: 200 }}
+        <br/>
+        <br />
+        <a href="{{ site.github.url }}{{ first_post.url }}">Continue reading...</a>
     </div>
 </div>
 
@@ -35,6 +38,9 @@ subtitle: Announcements and updates
                 </div>
                 <div class="panel-body">
                     {{ post.content | truncatewords: 50 }}
+                    <br />
+                    <br />
+                    <a href="{{ site.github.url }}{{ post.url }}">Continue reading...</a>
                 </div>
             </div>
         {% endif %}
