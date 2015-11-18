@@ -58,7 +58,7 @@ kernel.
 
 ### Motors
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>

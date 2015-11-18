@@ -54,7 +54,7 @@ There are 400 pins on the chip. The pins are multiplexed so that each pin can pe
 
 This is based on the lms2012 code and hardware schematic revision J. Both are not 100% reliable representations of the mass produced hardware, so there could be inaccurate information here. You have been warned.
 
-<table>
+<table class="table table-striped table-bordered">
   <tr>
     <th colspan="2">MUX</th>
     <th>Function</th>

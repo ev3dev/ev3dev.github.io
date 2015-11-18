@@ -1,13 +1,23 @@
-<div id="title">
-    <div id="logoContainer">
-        <a href="{{ site.github.url }}/">
-            <img id="logo" src="https://avatars3.githubusercontent.com/u/6878323?s=140" />
-        </a>
-        <div id="titleHeader" class="clear">
-            <h1 id="pageTitle">{{ page.title }}</h1>
-            <p id="pageSubtitle">{{ page.subtitle }}</p>
-        </div>
-    </div>
-    <hr class="clear">
-</div>
+{% if page.source_file %}
+    {% assign edit_path = page.source_file | replace: 'drivers/lego', 'https://github.com/ev3dev/lego-linux-drivers/edit/master' %}
+    {% if page.source_line > 0 %}
+        {% assign source_line = page.source_line | plus: 0 %}
+        {% assign edit_path = edit_path | append: '#L' | append: source_line %}
+    {% endif %}
+{% elsif page.path contains 'docs/' %}
+    {% assign edit_path = site.github.repository_url | append: '/edit/master/' | append: page.path %}
+{% elsif page.path contains 'news/' %}
+    {% assign show_news_link = 1 %}
+{% endif %}
 
+<div class="page-header">
+    <h1>
+        {{ page.title }}
+        <small>{{ page.subtitle }}</small>
+        {% if edit_path %}
+            <a class="btn btn-primary pull-right" href="{{ edit_path }}">Edit on Github</a>
+        {% elsif show_news_link %}
+            <a class="btn btn-primary pull-right" href="{{ site.github.url }}/news/atom.xml">Subscribe via Atom</a>
+        {% endif %}
+    </h1>
+</div>

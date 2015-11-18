@@ -5,16 +5,32 @@
 <!doctype html>
 <html>
 {% include head.html %}
-<body>
+{% if page.jumbotron-heading or page.jumbotron-content %}
+<body class="has-jumbotron">
+{% else %}
+<body class="no-jumbotron">
+{% endif %}
     {% include header.html %}
-    <div class="wrapper">
-        <section>
-            {% include title.html %}
-            <div id="mainContent">
-                {{ content }}
-            </div>
-        </section>
-        {% include footer.html %}
+    {% if page.jumbotron-heading or page.jumbotron-content %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{ page.jumbotron-heading }}</h1>
+            {{ page.jumbotron-content }}
+        </div>
     </div>
+    {% endif %}
+    {% if page.title and page.no-display-title != 1 %}
+    <div class="container">
+        {% include title.html %}
+    </div>
+    {% endif %}
+    {% unless page.no-wrapper %}
+    <div class="container">
+    {% endunless %}
+        {{ content }}
+    {% unless page.no-wrapper %}
+    </div>
+    {% endunless %}
+    {% include footer.html %}
 </body>
 </html>

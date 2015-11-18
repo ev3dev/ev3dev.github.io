@@ -1,4 +1,13 @@
 ﻿{% if page.youtube_video_id %}
-    <iframe src="//www.youtube.com/embed/{{page.youtube_video_id}}?rel=0" frameborder="0" allowfullscreen="1" class="youtube-embed"> </iframe>
-    <br /><br />
+    {% assign video_id = page.youtube_video_id %}
+{% elsif include.youtube_video_id %}
+    {% assign video_id = page.youtube_video_id %}
+{% endif %}
+
+{% if video_id %}
+<div class="embed-responsive embed-responsive-16by9" >
+    <iframe src="//www.youtube.com/embed/{{video_id}}?rel=0" allowfullscreen="1" class="embed-responsive-item"> </iframe>
+
+</div>
+<br /><br />
 {% endif %}

@@ -1,0 +1,8 @@
+js-opts:
+  - javascript
+  - js
+  - node
+  - nodejs
+  - node.js
+python-opts:
+  - python

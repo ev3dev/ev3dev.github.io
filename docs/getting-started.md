@@ -23,12 +23,11 @@ First, here are the things you need before starting:
     * Bluetooth
   For Raspberry Pi you will need to use the wired Ethernet connection first.
 
----
-
-**IMPORTANT:** The instructions on this page only apply to releases dated September
+<div class="alert alert-warning">
+    <span class="glyphicon glyphicon-alert"></span>
+    The instructions on this page only apply to releases dated September
 2015 or later. Older releases are no longer supported.
-
----
+</div>
 
 ## Step 1: Download the latest ev3dev image file
 
@@ -44,12 +43,11 @@ decompress it (such as [7-Zip] on Windows).
 
 ## Step 2: Copy the image on to the SD card
 
----
-
-**IMPORTANT:** THIS WILL ERASE EVERYTHING ON YOUR SD CARD! BACKUP YOUR FILES
-IF YOU DO NOT WANT TO LOOSE THEM!
-
----
+<div class="alert alert-danger">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+    This will erase everything on your SD card! Backup your files
+    If you do not want to lose them!
+</div>
 
 There are a vast number of ways to do this, so pick the one from the list that
 sounds the easiest to you:
@@ -62,9 +60,16 @@ sounds the easiest to you:
 * **Windows**
     * [Win32DiskImager (graphical interface)](../tutorials/writing-sd-card-image-win32diskimager)
 
-**TIP:** For more detailed information and more alternatives, check out
-[this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup). Much
+<br/>
+
+<div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"></span>
+    For more detailed information and more alternatives, check out
+   <a class="alert-link" href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
 of the information there is applicable to ev3dev.
+</div>
+
+{% include inline-screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
 
 ## Step 3: Boot ev3dev
 
@@ -73,7 +78,7 @@ MINDSTORMS boot splash and the red LEDs will be on. This is immediately
 followed by the ev3dev boot splash and the LEDs changing to orange. The
 LEDs indicate disk (SD card) activity.
 
-Note: If you are using Raspberry Pi hardware without a screen, just wait for
+**Note:** If you are using Raspberry Pi hardware without a screen, just wait for
 the Activity LED to stop flashing, then go to the next step.
 
 After one or two minutes, the screen will go blank. This happens on the first boot
@@ -81,10 +86,6 @@ only. The first boot takes a little longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
 items. After another minute or two, you will see the *brickman loading...* screen.
 
-When the boot is complete, the LEDs will turn green and you will see something
-like this on the screen:
-
-{% include screenshot.html source="/images/brickman/main-menu.png" %}
 
 You will notice the number in the battery in the upper right corner. This
 displays the remaining voltage of the power supply. It is not possible to
@@ -93,12 +94,19 @@ chosen. If the voltage drops below 5V the brick will turn off. All not saved
 data may be lost. Keep in mind, that is may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
 
-**Troubleshooting tips if your EV3 won't boot:**
-
-* Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)
-* Try writing the image to the SD card again.
-* You may have a bad/incompatible SD card - try a different SD card.
-* Check the condition of the EV3 batteries.
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Troubleshooting tips if your EV3 won't boot
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)</li>
+            <li>Try writing the image to the SD card again.</li>
+            <li>You may have a bad/incompatible SD card - try a different SD card.</li>
+            <li>Check the condition of the EV3 batteries.</li>
+        </ul>
+    </div>
+</div>
 
 ## Step 4: Setup a network connection
 
@@ -118,7 +126,7 @@ you want to use and on the OS of your host computer, so pick the one that applie
        after you power on Bluetooth.
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
-Note: For Raspberry Pi you must use the wired Ethernet port to connect for the
+**Note:** For Raspberry Pi you must use the wired Ethernet port to connect for the
 first time. The default host name is `ev3dev-rpi` or `ev3dev-rpi2` depending
 on which model you have. You can setup additional connections using the
 `connmanctl` command.
@@ -181,9 +189,12 @@ You can skip this if en-US is OK.
 
 ### Update packages
 
-**NOTE: If you are a beginner with Linux and/or Debian, you should skip updating packages
-for now. We are working on some major changes and things will be inconsisent with the
-documentation if you upgrade.**
+<div class="alert alert-danger">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+    If you are a beginner with Linux and/or Debian, you should skip updating packages
+    for now. We are working on some major changes and things will be inconsisent with the
+    documentation if you upgrade.
+</div>
 
 Make sure your EV3 is connected to the Internet first. 
 Updating the packages for the first time will take minutes.
@@ -226,14 +237,14 @@ If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
+{% include inline-screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
+
 ## Step 7: Calling it a day
 
 When you are ready to wish your EV3 goodnight, turn if off by pressing the
 *back* button from the main menu in brickman or pressing and holding the *back*
 button from any screen in brickman. This will open a dialog where you can select
 *Power Off* to turn off the EV3.
-
-{% include screenshot.html source="/images/brickman/shutdown-menu.png" %}
 
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC

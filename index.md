@@ -1,102 +1,95 @@
 ---
-title: ev3dev
+no-wrapper: 1
+no-footer: 1
+no-display-title: 1
+title: ev3dev Home
+
+jumbotron-heading: |
+  ev3dev is your EV3 <strong><i>re-imagined</i></strong>
+jumbotron-content: |
+  <div id="main-lead-content" class="col-lg-8">
+      <p class="lead">
+          ev3dev is a <a href="https://www.debian.org/">Debian Linux</a>-based
+          operating system that runs on several LEGO<sup>&reg;</sup> MINDSTORMS compatible
+          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3">LEGO<sup>&reg;</sup> MINDSTORMS EV3</a>
+          and <a href="https://www.raspberrypi.org/">Raspberry Pi</a>-powered
+          <a href="http://www.dexterindustries.com/BrickPi/">BrickPi</a>.
+      </p>
+      <p>
+          Just like you can take apart your LEGO<sup>&reg;</sup> models and build something
+          completely different, we have reversed-engineered the EV3 and created
+          a new software platform for programming your robots.
+      </p>
+  </div>
+  <div class="col-lg-4">
+      <img src="images/logo_ev3dev_mono.png" />
+  </div>
+
 ---
+<div class="container">
 
-* Table of Contents
-{:toc}
+<div class="row">
+<div class="col-lg-4" markdown="1">
 
-![bootsplash](images/logo_ev3dev_mono.png){:class="button"}
+## <span class="glyphicon glyphicon-console heading-icon"></span> EV3 programming unlocked
 
-## What is ev3dev?
+ev3dev gives you the power to program how <i>you</i> want to. We have created
+a low-level driver framework for controlling sensors, motors and pretty much
+everything else. It's as easy as reading from and writing to a file.
 
-__LEGO MINDSTORMS EV3 is awesome... ev3dev is SUPER awesome!__
+ev3dev supports many popular scripting languages out-of-the-box, so you can
+get started right away with your favorite language and libraries.
 
-ev3dev is many things...
+</div>
+<div class="col-lg-4" markdown="1">
 
-### ev3dev is EV3 software re-imagined
-{:.no_toc}
+## <i class="fa fa-linux"></i> Backed by the full power of Linux
 
-If you are like us, you have probably found that while the software that
-comes with the EV3 is great, it just doesn't do quite everything you would
-like it to.
+Since ev3dev is built on Debian Linux, there are over 43,000 free 
+software packages available for you to install.
 
-We have rebuilt much of the software for the EV3 from the ground up. We have
-created our own hardware drivers using sysfs so that you can easily program
-the EV3 using any [programming language]. It is as easy as reading from and
-writing to a file.
+And with the Linux kernel at its core, many USB and Bluetooth devices, like
+Wi-Fi dongles, keyboards, keypads, joysticks and cameras work too.
 
-This also means that ev3dev is NOT compatible with most other EV3 software
-and tools.
-    
-### ev3dev is NOT firmware
-{:.no_toc}
+</div>
+<div class="col-lg-4" markdown="1">
 
-Think of it as dual boot. ev3dev is installed and runs on a microSD card and
-does not touch the existing firmware in your EV3. To run ev3dev, just insert
-a microSD card with ev3dev installed and boot your EV3. To boot from the
-firmware, just power off and remove the microSD card.
+## <span class="glyphicon glyphicon-save heading-icon"></span> It's not firmware
 
-### ev3dev is a Linux kernel
-{:.no_toc}
+It's more like dual-boot. ev3dev runs from a microSD card and doesn't ever
+touch the firmware installed on the EV3. To switch back, you just shut down
+and remove the microSD card - no flashing required.
 
-We have taken the Linux kernel from LEGO, updated it to v3.16 and enabled
-many hardware drivers. This means support for lots of Wi-Fi dongles,
-Bluetooth gamepads and keyboards, USB audio device and more. If your
-hardware works on Linux, it will probably work with ev3dev.
+</div>
+</div>
 
-### ev3dev is Debian Linux
-{:.no_toc}
+</div>
 
-The ARM9 processor in the EV3 is one of the [Debian] supported architectures.
-This means most of the 37500+ Debian software packages will run on your EV3
-- no compiling necessary. Installing a package is as simple as
-`sudo apt-get install package-name`.
-    
-### ev3dev is more than just EV3
-{:.no_toc}
+<div class="projects-featurette">
+    <div class="container featurette projects-featurette-content">
+        <div class="col-md-5 text-center">
+            <a class="btn btn-lg btn-primary xl-button-text" href="projects">Projects <span class="glyphicon glyphicon-arrow-right"></span></a>
+        </div>
 
-The [ev3dev drivers][DKMS] will run on any Linux. This means you can use
-LEGO MINDSTORMS and LEGO WEDO sensors and motors with anything that runs
-Linux, from your desktop to you Raspberry Pi.
-    
-### ev3dev is a work in progress
-{:.no_toc}
+        <div class="col-md-7">
+            <h2 class="featurette-heading">
+                See what ev3dev can do
+            </h2>
+        </div>
+    </div>
+</div>
 
-This is by no mean a polished product yet. But don't let that scare you away -
-it is very usable. [You can help] make it better.
+<div class="container">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">
+                Ready to jump in?
+                <span class="text-muted">Grab your bot and let's go!</span>
+            </h2>
+        </div>
 
-
-## What can it do?
-
-ev3dev can...
-
-* [Solve a Rubik's Cube](https://www.youtube.com/watch?v=HuKsfp19yF0)
-* [Catch a ball](https://www.youtube.com/watch?v=Y0w_cRt7RzI)
-* [Speak with an accent](https://www.youtube.com/watch?v=5otRPiJ6PYw)
-* [Attend quarterly meetings](http://programmablebrick.blogspot.com/2014/11/seanbot-ev3-robot-controlled-via-web.html)
-* [Draw a dinosaur](https://www.youtube.com/watch?v=9pjpQoZoW6E)
-* [Use WeDo sensors and motors](https://www.youtube.com/watch?v=NQ1PrJ2-yx8)
-* Do just about anything you can imagine...
-
-## How do you use it?
-
-First, you need to download and install the latest image file on a microSD card.
-Check out the [Getting Started] page for step-by-step instructions. Or, if you
-are not using ev3dev with an EV3, check out the [DKMS driver package][DKMS].
-
-Then, you can write a program however you like. You can use just about anything
-with a SSH client - Windows, Linux, Mac, Android, iOS, Blackberry, etc. The
-[docs] page has information about how to use the drivers and has links to
-libraries contributed by users for some programming languages.
-
-If you need some ideas, check out the projects on our [Share] page. If you get
-stuck, check out the [Get Help] page.
-
-[Debian]: https://www.debian.org/
-[programming language]: /docs/libraries
-[DKMS]: https://github.com/ev3dev/lego-linux-drivers-dkms
-[You can help]: /contribute
-[Getting Started]: /docs/getting-started
-[docs]: /docs
-[Share]: /share
-[Get Help]: /support
+        <div class="col-md-5 text-center">
+            <a class="btn btn-lg btn-primary xl-button-text" href="docs/getting-started">Get started <span class="glyphicon glyphicon-arrow-right"></span></a>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,7 @@ title: EV3 Buttons
 
 The 6 buttons on the EV3 are connected to GPIOs.
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
         <th>Button</th>
         <th>GPIO</th>

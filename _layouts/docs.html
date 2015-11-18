@@ -2,23 +2,16 @@
 layout: page
 ---
 
-{% if page.source_file %}
-    {% assign edit_path = page.source_file | replace: 'drivers/lego', 'https://github.com/ev3dev/lego-linux-drivers/edit/master' %}
-    {% if page.source_line > 0 %}
-        {% assign source_line = page.source_line | plus: 0 %}
-        {% assign edit_path = edit_path | append: '#L' | append: source_line %}
+<div class="nav-dropdown-arrow">
+    <div>
+        {% include breadcrumbs.html %}
+    </div>
+    {% if page.kernel_version %}
+        <div class="alert alert-info">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            This docs page is for kernel version <code>{{ page.kernel_version }}</code>
+        </div>
     {% endif %}
-{% else %}
-    {% assign edit_path = site.github.repository_url | append: '/edit/master/' | append: page.path %}
-{% endif %}
-<div class="edit-on-github">
-<a href="{{ edit_path }}">Edit on Github</a>
-</div>
-<div class="breadcrumbs">
-{% include breadcrumbs.html %}
-{% if page.kernel_version %}
-    (kernel: {{ page.kernel_version }})
-{% endif %}
 </div>
 <hr />
 

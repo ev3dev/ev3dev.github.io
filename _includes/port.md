@@ -9,7 +9,7 @@
 
 ### General Info
 
-<table id="sensor-info">
+<table id="sensor-info" class="table table-striped table-bordered">
     <tr class="{% cycle 'info': 'd0', 'd1' %}">
         <th><code>device_name</code></th>
         <td><code>{{ port.name }}</code></td>
@@ -94,7 +94,7 @@
 {%if port.device_class == null %}
 ### Modes
 
-<table id="sensor-modes">
+<table id="sensor-modes" class="table table-striped table-bordered">
     <tr class="{% cycle 'modes': 'd0', 'd1' %}">
         <th><code>mode</code></th>
         <th>Description</th>
