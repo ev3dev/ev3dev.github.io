@@ -4,6 +4,29 @@ no-footer: 1
 no-display-title: 1
 title: ev3dev Home
 
+extra-head-content: |
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "http://www.ev3dev.org",
+    "logo": "http://www.ev3dev.org/images/logo_standard.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "ev3dev",
+    "url": "http://www.ev3dev.org/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "http://www.ev3dev.org/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
 jumbotron-heading: |
   ev3dev is your EV3 <strong><i>re-imagined</i></strong>
 jumbotron-content: |
