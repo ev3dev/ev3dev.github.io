@@ -1,12 +1,19 @@
 ﻿{% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
 {% assign link='/' %}
-<ol class="breadcrumb">
+<ol class="breadcrumb" vocab="http://schema.org" typeof="BreadcrumbList">
+    {% assign position = 1 %}
     {% for dir in parent_dirs %}
         {% if forloop.last %}
-            <li class="active">{{ dir }}</li>
-        {% else %}
-            {% assign link=link | append: dir | append: '/' %}
-            <li><a href="{{ link }}">{{ dir }}</a></li>
+            {% assign class = 'active' %}
         {% endif %}
+            
+        {% assign link=link | append: dir | append: '/' %}
+        <li property="itemListElement" typeof="ListItem">
+            <a href="{{ link }}" property="item" typeof="WebPage">
+                <span property="name">{{ dir }}</span>
+            </a>
+            <meta property="position" content="{{position}}">
+        </li>
+        {% assign position = position | plus: 1 %}
     {% endfor %}
 </ol>
