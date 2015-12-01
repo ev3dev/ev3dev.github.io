@@ -3,15 +3,19 @@
 <ol class="breadcrumb" vocab="http://schema.org" typeof="BreadcrumbList">
     {% assign position = 1 %}
     {% for dir in parent_dirs %}
-        {% if forloop.last %}
-            {% assign class = 'active' %}
-        {% endif %}
-            
         {% assign link=link | append: dir | append: '/' %}
-        <li property="itemListElement" typeof="ListItem">
-            <a href="{{ link }}" property="item" typeof="WebPage">
+        {% if forloop.last %}
+            {% assign itemElem = 'span' %}
+            {% assign liClass = 'active' %}
+        {% else %}
+            {% assign itemElem = 'a' %}
+            {% assign hrefAttrib = 'href="' | append: link | append: '"' %}
+        {% endif %}
+        
+        <li property="itemListElement" typeof="ListItem" class="{{liClass}}">
+            <{{itemElem}} {{ hrefAttrib }} property="item" typeof="WebPage">
                 <span property="name">{{ dir }}</span>
-            </a>
+            </{{itemElem}}>
             <meta property="position" content="{{position}}">
         </li>
         {% assign position = position | plus: 1 %}
