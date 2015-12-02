@@ -132,6 +132,6 @@ sup[id]:before {
     border-bottom-left-radius: 4px;
 }
 
-.table-indexed th {
+.table th {
     background-color: #3d3d3d;
 }
