@@ -10,24 +10,24 @@
 
 ### General Info
 
-<table id="sensor-info" class="table table-striped table-bordered">
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+<table class="table table-striped table-bordered">
+    <tr>
         <th><code>device_name</code></th>
         <td><code>{{ sensor.name }}</code></td>
     </tr>
     {%if sensor.vendor_website %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Website</th>
         {% assign split_website=sensor.vendor_website | split: '/' %}
         <td><span markdown="1">[{{ split_website[2] }}]({{ sensor.vendor_website }})</span></td>
     </tr>
     {% endif %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Connection</th>
         <td>{{ connection }}</td>
     </tr>
     {% if sensor.default_address %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Address</th>
         <td>
             {{ sensor.default_address }}<!--
@@ -38,7 +38,7 @@
         </td>
     </tr>
     {% endif %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>sysfs class</th>
         <td>
             {%if sensor.device_class %}
@@ -53,7 +53,7 @@
         </td>
     </tr>
     {% if sensor.vendor_id %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th><code>vendor_id</code></th>
         <td>
             {{ sensor.vendor_id }}<!--
@@ -65,7 +65,7 @@
     </tr>
     {% endif %}
     {% if sensor.product_id %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th><code>product_id</code></th>
         <td>
             {{ sensor.product_id }}<!--
@@ -77,7 +77,7 @@
     </tr>
     {% endif %}
     {%if sensor.device_class == null %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th># Modes</th>
         <td>{{ sensor.num_modes }}</td>
     </tr>
@@ -88,7 +88,7 @@
 ### Modes
 
 <table id="sensor-modes" class="table table-striped table-bordered">
-    <tr class="{% cycle 'modes': 'd0', 'd1' %}">
+    <tr>
         <th><code>mode</code></th>
         <th>Description</th>
         <th><code>units</code></th>
@@ -100,7 +100,7 @@
     {% if mode.notes %}
         {% assign footnotes=footnotes | append: mode.notes %}
     {% endif %}
-    <tr class="{% cycle 'modes': 'd0', 'd1' %}">
+    <tr>
         <td style="white-space:nowrap;">
             <code>{{ mode.name }}</code><!--
             {% if mode.name_footnote %}
@@ -182,8 +182,8 @@
 ### Commands
 {% assign num_commands = sensor.num_commands | plus: 0 %}
 {% if num_commands > 0 %}
-<table id="sensor-info" class="table table-striped table-bordered">
-    <tr class="{% cycle 'commands': 'd0', 'd1' %}">
+<table class="table table-striped table-bordered">
+    <tr">
         <th><code>command</code></th>
         <th>Description</th>
     </tr>
@@ -191,7 +191,7 @@
     {% if command.notes %}
         {% assign footnotes=footnotes | append: command.notes %}
     {% endif %}
-    <tr class="{% cycle 'commands': 'd0', 'd1' %}">
+    <tr>
         <td>
             <code>{{ command.name }}</code><!--
             {% if command.name_footnote %}

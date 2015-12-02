@@ -9,23 +9,23 @@
 
 ### General Info
 
-<table id="sensor-info">
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+<table class="table table-striped table-bordered">
+    <tr>
         <th><code>device_name</code></th>
         <td><code>{{ motor.name }}</code></td>
     </tr>
     {%if motor.vendor_website %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Website</th>
         {% assign split_website=motor.vendor_website | split: '/' %}
         <td><span markdown="1">[{{ split_website[2] }}]({{ motor.vendor_website }})</span></td>
     </tr>
     {% endif %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Connection</th>
         <td>{{ connection }}</td>
     </tr>
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>sysfs class</th>
         <td>
             {%if motor.device_class %}
@@ -40,7 +40,7 @@
         </td>
     </tr>
     {% if motor.vendor_id %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th><code>vendor_id</code></th>
         <td>
             {{ motor.vendor_id }}<!--
@@ -52,7 +52,7 @@
     </tr>
     {% endif %}
     {% if motor.product_id %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th><code>product_id</code></th>
         <td>
             {{ motor.product_id }}<!--
