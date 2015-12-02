@@ -126,7 +126,7 @@ kernel.
                 {% assign vendor_name_rowspan = vendor_name_rowspan | plus: 1 %}
             {% endif %}
         {% endfor %}
-        <td rowspan="{{ vendor_name_rowspan }}">{{ sensor.vendor_name }}</td>
+        <th rowspan="{{ vendor_name_rowspan }}">{{ sensor.vendor_name }}</th>
     {% endif %}
         <td>{{ sensor.vendor_part_number }}</td>
         <td><a href="{{ sensor.url_name }}">{{ sensor.vendor_part_name }}</a></td>
