@@ -40,7 +40,7 @@ jumbotron-content: |
       </p>
       <p>
           Just like you can take apart your LEGO<sup>&reg;</sup> models and build something
-          completely different, we have reversed-engineered the EV3 and created
+          completely different, we have reverse-engineered the EV3 and created
           a new software platform for programming your robots.
       </p>
   </div>

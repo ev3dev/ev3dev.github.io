@@ -162,4 +162,4 @@ of the `i2c-tools` package to workaround this.
 | 0xFA/0xFB | __0x7D__ (125) | *I2C spec: Reserved for future purposes* |
 | 0xFC/0xFD | __0x7E__ (126) | *I2C spec: Reserved for future purposes* |
 | 0xFE/0xFF | __0x7F__ (127) | *I2C spec: Reserved for future purposes* |
-{: .table .table-striped .table-bordered }
+{: .table .table-striped .table-bordered .table-condensed }
