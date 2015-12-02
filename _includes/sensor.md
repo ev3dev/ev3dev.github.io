@@ -173,7 +173,7 @@
 </table>
 
 [^decimals]: Decimal places. For example, if the range of a value is from 0 to 1000
-    and `decimals` is `1`, then the acutal range is 0.0 to 100.0 in the units specified.
+    and `decimals` is `1`, then the actual range is 0.0 to 100.0 in the units specified.
 
 [^not-read-only]: This mode is not availible when the sensor is connected to a
     read-only input port like the HiTechnic NXT Sensor MUX.
