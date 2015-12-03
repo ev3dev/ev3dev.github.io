@@ -18,7 +18,7 @@ To interface the LIDAR one has to:
 2. Solder the connector for LIDAR data and power
 3. Put the EV3 input port in other-uart mode
 4. Spin the LIDAR motor CCW between 200 and 300 RPM
-5. Read LIDAR data from UART 
+5. Read LIDAR data using UART 
 
 See <http://www.youtube.com/watch?v=G6uVg34VzHw> for video tutorial.
 
