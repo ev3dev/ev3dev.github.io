@@ -19,8 +19,7 @@ To interface the LIDAR one has to:
 
 For the details, follow video tutorial:
 
-{% include youtube-embed.html youtube_video_id=G6uVg34VzHw %}
-
+{% include youtube-embed.html youtube_video_id="G6uVg34VzHw" %}
 
 See <http://xv11hacking.wikispaces.com/LIDAR+Sensor> for more information on LIDAR.
 
