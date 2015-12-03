@@ -1,10 +1,7 @@
 ---
 title: Using the XV11 LIDAR
-subject: Hardware - UART
+subject: Hardware - Other
 ---
-
-* Table of Contents
-{:toc}
 
 ## Interfacing the LIDAR
 
@@ -20,7 +17,10 @@ To interface the LIDAR one has to:
 4. Spin the LIDAR motor CCW between 200 and 300 RPM
 5. Read LIDAR data using UART 
 
-See <http://www.youtube.com/watch?v=G6uVg34VzHw> for video tutorial.
+For the details, follow video tutorial:
+
+{% include youtube-embed.html youtube_video_id=G6uVg34VzHw %}
+
 
 See <http://xv11hacking.wikispaces.com/LIDAR+Sensor> for more information on LIDAR.
 
