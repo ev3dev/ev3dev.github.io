@@ -58,7 +58,8 @@ kernel.
 
 ### Motors
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered table-indexed">
+    <thead>
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>
@@ -66,6 +67,8 @@ kernel.
     <th>Auto-<br />detected</th>
     <th>Driver (Module)</th>
     </tr>
+    </thead>
+    <tbody>
 {% assign prev_vendor_name = 'dummy' %}
 {% for motor_data in site.data.motors %}
     {% assign device = motor_data %}
@@ -78,7 +81,7 @@ kernel.
                 {% assign vendor_name_rowspan = vendor_name_rowspan | plus: 1 %}
             {% endif %}
         {% endfor %}
-        <td rowspan="{{ vendor_name_rowspan }}">{{ device.vendor_name }}</td>
+        <th rowspan="{{ vendor_name_rowspan }}">{{ device.vendor_name }}</th>
     {% endif %}
         <td>{{ device.vendor_part_number }}</td>
         <td><a href="{{ device.url_name }}">{{ device.vendor_part_name }}</a></td>
@@ -96,6 +99,7 @@ kernel.
     </tr>
     {% assign prev_vendor_name = device.vendor_name %}
 {% endfor %}
+    </tbody>
 </table>
 
 ### LEDs

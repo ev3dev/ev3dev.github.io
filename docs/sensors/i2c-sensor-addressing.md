@@ -11,19 +11,20 @@ documentation. This shifted value is also used in most other NXT/EV3
 programming languages/environments.
 
 ev3dev uses the standard Linux kernel convention, which is to use the unshifted
-value as the I2C address. **This means the address in your sensors documentation
+value as the I2C address. **This means the address in your sensors' documentation
 is probably not the address that you need for ev3dev!** Also, depending on the
 tool, the address may need to be decimal instead of hexidecimal. This means you
 will have to convert the value to get the correct address. Shift to the right
 is the same as divide by 2, so get out your calculator and do some conversions!
 Or for the engineer type folks that prefer tables... see below.
 
-**IMPORTANT NOTE**: I2C addresses 0x01 through 0x07 (unshifted) are reserved
+
+I2C addresses 0x01 through 0x07 (unshifted) are reserved
 for special use by the I2C specifications. However, these addresses are used by
 some sensors anyway (most notably the NXT Ultrasonic sensor). The ev3dev kernel
 has been patched to allow these to work, but some userspace tools will not work
 with devices at these addresses. For example, we distribute a patched version
-of the `i2c-tools` package to workaround this.
+of the `i2c-tools` package to work around this.
 
 | Shifted Address<br />(write/read) | Unshifted Address<br />(hex (dec)) | Notes |
 |:-:|:-:|:-:|
@@ -155,3 +156,4 @@ of the `i2c-tools` package to workaround this.
 | 0xFA/0xFB | __0x7D__ (125) | *I2C spec: Reserved for future purposes* |
 | 0xFC/0xFD | __0x7E__ (126) | *I2C spec: Reserved for future purposes* |
 | 0xFE/0xFF | __0x7F__ (127) | *I2C spec: Reserved for future purposes* |
+{: .table .table-striped .table-bordered .table-condensed }

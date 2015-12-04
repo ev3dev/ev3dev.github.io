@@ -104,7 +104,8 @@ or how to donate hardware to someone who will.
 This is a list of sensors that currently have drivers available in the ev3dev
 kernel.
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered table-indexed">
+    <thead>
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>
@@ -113,6 +114,8 @@ kernel.
     <th>Auto-<br />detected</th>
     <th>Driver (Module)</th>
     </tr>
+    </thead>
+    <tbody>
 {% assign prev_vendor_name = 'dummy' %}
 {% for sensor_data in site.data.sensors %}
     {% assign sensor = sensor_data %}
@@ -126,7 +129,7 @@ kernel.
                 {% assign vendor_name_rowspan = vendor_name_rowspan | plus: 1 %}
             {% endif %}
         {% endfor %}
-        <td rowspan="{{ vendor_name_rowspan }}">{{ sensor.vendor_name }}</td>
+        <th rowspan="{{ vendor_name_rowspan }}">{{ sensor.vendor_name }}</th>
     {% endif %}
         <td>{{ sensor.vendor_part_number }}</td>
         <td><a href="{{ sensor.url_name }}">{{ sensor.vendor_part_name }}</a></td>
@@ -150,6 +153,7 @@ kernel.
     </tr>
     {% assign prev_vendor_name = sensor.vendor_name %}
 {% endfor %}
+    </tbody>
 </table>
 
 
