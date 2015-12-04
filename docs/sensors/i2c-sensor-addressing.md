@@ -2,12 +2,6 @@
 title: I2C Sensor Addressing
 ---
 
-<div class="alert alert-warning">
-    <span class="glyphicon glyphicon-alert"></span>
-    Due to design choices that are built in to the foundation of the LEGO ecosystem,
-    there are some nonstandard addressing schemes that you should be aware of.
-</div>
-
 I2C uses a 7-bit addressing scheme (there is also 10-bit addressing but it is
 not implemented in the ev3dev I2C driver). When sending an address over the bus,
 the address is shifted to the left 1 bit and the least significant bit is used
@@ -30,7 +24,7 @@ for special use by the I2C specifications. However, these addresses are used by
 some sensors anyway (most notably the NXT Ultrasonic sensor). The ev3dev kernel
 has been patched to allow these to work, but some userspace tools will not work
 with devices at these addresses. For example, we distribute a patched version
-of the `i2c-tools` package to workaround this.
+of the `i2c-tools` package to work around this.
 
 | Shifted Address<br />(write/read) | Unshifted Address<br />(hex (dec)) | Notes |
 |:-:|:-:|:-:|

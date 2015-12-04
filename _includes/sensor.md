@@ -183,7 +183,7 @@
 {% assign num_commands = sensor.num_commands | plus: 0 %}
 {% if num_commands > 0 %}
 <table class="table table-striped table-bordered">
-    <tr">
+    <tr>
         <th><code>command</code></th>
         <th>Description</th>
     </tr>
