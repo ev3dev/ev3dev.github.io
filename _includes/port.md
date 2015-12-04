@@ -9,8 +9,8 @@
 
 ### General Info
 
-<table id="sensor-info" class="table table-striped table-bordered">
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+<table class="table table-striped table-bordered">
+    <tr>
         <th><code>device_name</code></th>
         <td><code>{{ port.name }}</code></td>
     </tr>
@@ -27,14 +27,14 @@
         <td><code>{{ port.prefix }}</code></td>
     </tr>
     {%if port.vendor_website %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Website</th>
         {% assign split_website=port.vendor_website | split: '/' %}
         <td><span markdown="1">[{{ split_website[2] }}]({{ port.vendor_website }})</span></td>
     </tr>
     {% endif %}
     {% if port.default_address %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>Address</th>
         <td>
             {{ port.default_address }}<!--
@@ -45,7 +45,7 @@
         </td>
     </tr>
     {% endif %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th>sysfs class</th>
         <td>
             {%if port.device_class %}
@@ -60,7 +60,7 @@
         </td>
     </tr>
     {% if port.vendor_id %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th><code>vendor_id</code></th>
         <td>
             {{ port.vendor_id }}<!--
@@ -72,7 +72,7 @@
     </tr>
     {% endif %}
     {% if port.product_id %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th><code>product_id</code></th>
         <td>
             {{ port.product_id }}<!--
@@ -84,7 +84,7 @@
     </tr>
     {% endif %}
     {%if port.device_class == null %}
-    <tr class="{% cycle 'info': 'd0', 'd1' %}">
+    <tr>
         <th># Modes</th>
         <td>{{ port.num_modes }}</td>
     </tr>
@@ -95,7 +95,7 @@
 ### Modes
 
 <table id="sensor-modes" class="table table-striped table-bordered">
-    <tr class="{% cycle 'modes': 'd0', 'd1' %}">
+    <tr>
         <th><code>mode</code></th>
         <th>Description</th>
     </tr>
@@ -103,7 +103,7 @@
     {% if mode.notes %}
         {% assign footnotes=footnotes | append: mode.notes %}
     {% endif %}
-    <tr class="{% cycle 'modes': 'd0', 'd1' %}">
+    <tr>
         <td style="white-space:nowrap;">
             <code>{{ mode.name }}</code><!--
             {% if mode.name_footnote %}
