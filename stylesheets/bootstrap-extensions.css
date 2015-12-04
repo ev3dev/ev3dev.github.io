@@ -132,6 +132,15 @@ sup[id]:before {
     border-bottom-left-radius: 4px;
 }
 
-.table th {
+.table-indexed > tbody th {
     background-color: #2f2f2f;
+}
+
+.table-indexed > thead > tr,
+.table-indexed > tbody > tr:nth-of-type(2n+0) {
+    background-color: #3d3d3d;
+}
+
+.table-indexed > tbody > tr:nth-of-type(2n+1) {
+    background-color: transparent;
 }

@@ -58,7 +58,8 @@ kernel.
 
 ### Motors
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered table-indexed">
+    <thead>
     <tr>
     <th>Manufacturer</th>
     <th>P/N</th>
@@ -66,6 +67,8 @@ kernel.
     <th>Auto-<br />detected</th>
     <th>Driver (Module)</th>
     </tr>
+    </thead>
+    <tbody>
 {% assign prev_vendor_name = 'dummy' %}
 {% for motor_data in site.data.motors %}
     {% assign device = motor_data %}
@@ -96,6 +99,7 @@ kernel.
     </tr>
     {% assign prev_vendor_name = device.vendor_name %}
 {% endfor %}
+    </tbody>
 </table>
 
 ### LEDs
