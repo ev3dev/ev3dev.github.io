@@ -33,7 +33,7 @@ See <http://xv11hacking.wikispaces.com/LIDAR+Sensor> for more information on LID
 ## Motor Connector
 
 The part with resistors is optional. It allows EV3 to autodetect the motor but in ev3dev you can load the driver manually. 
-If you decide not to solder the resistors you only have to make two connections (PWM1 and PWM2).
+If you decide not to solder the resistors you only have to make two connections (PWM0 and PWM1).
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" %}
 
