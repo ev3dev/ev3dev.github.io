@@ -50,9 +50,9 @@ If you assume that XV11 LIDAR returns you the distance to the object you will ha
 ## Mechanical Integration
 
 At some point you will want to install the LIDAR on the robot. You can make inexpensive stand compatible with LEGO from polycarbonate, acrylic plastic or even wood.
-I choose polycarbonate. Make a plate 120 mm x 104 mm (this corresponds to 15 and 13 thick technic beams. I did it a bit too thick - 8 mm but if you connect it to your construction from only one side this doesn't matter.
-Order same spacers (25 mm high for M3 screws are ok). Drill the holes for spacers and technic pins. My XV11 plate below was meant as first experiment but ended in the robot. A lot of technic pin holes are out of place but there were just enough made right to fix the plate to the robot.
+I choose polycarbonate. Make a plate 120 mm x 104 mm (this corresponds to 15 and 13 thick technic beams). I did it a bit too thick - 8 mm but if you connect it to your construction from only one side this doesn't matter.
+Order same spacers (25 mm high for M3 screws are ok). Drill the holes for spacers and technic pins. My XV11 LIDAR plate below was meant as first experiment but ended right in the robot. A lot of technic pin holes are out of place but there were just enough made right to fix the plate to the robot.
 
-Everything for just a few € or $. 
+Everything for just a few € or $.
 
 {% include screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" %}
