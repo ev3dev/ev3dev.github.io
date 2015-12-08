@@ -326,7 +326,7 @@ discussed already, the units are tachometer counts per second. You can convert
 to RPM by dividing the value in `count_per_rot`. For the EV3 large motor, the
 maximum speed is about 900 counts per second and the EV3 medium motor is about
 1200 counts per second. To ensure that the motor runs at the same speed every
-time, event with low battery, use values less than these.
+time, even with low battery, use values less than these.
 
 First, let's see what happens when speed regulation is off...
 
