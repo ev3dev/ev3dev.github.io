@@ -74,6 +74,14 @@
     .featurette-heading {
         font-size: 50px;
     }
+
+    .dl-horizontal dd {
+        margin-left: 220px;
+    }
+
+    .dl-horizontal dt {
+        width: 200px;
+    }
 }
 
 @media all and (max-width:991px) {
