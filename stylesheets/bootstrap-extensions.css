@@ -152,3 +152,7 @@ sup[id]:before {
 .table-indexed > tbody > tr:nth-of-type(2n+1) {
     background-color: transparent;
 }
+
+dt {
+    margin-bottom: 10px;
+}
