@@ -153,6 +153,6 @@ sup[id]:before {
     background-color: transparent;
 }
 
-dt {
-    margin-bottom: 10px;
+dd {
+    margin-bottom: 20px;
 }
