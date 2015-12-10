@@ -74,6 +74,14 @@
     .featurette-heading {
         font-size: 50px;
     }
+
+    .dl-horizontal dd {
+        margin-left: 220px;
+    }
+
+    .dl-horizontal dt {
+        width: 200px;
+    }
 }
 
 @media all and (max-width:991px) {
@@ -143,4 +151,8 @@ sup[id]:before {
 
 .table-indexed > tbody > tr:nth-of-type(2n+1) {
     background-color: transparent;
+}
+
+dd {
+    margin-bottom: 20px;
 }
