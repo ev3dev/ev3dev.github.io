@@ -21,14 +21,12 @@ To interface the LIDAR one has to:
 1. Solder the connector for LIDAR motor
 2. Solder the connector for LIDAR data and power
 3. Put the EV3 input port in other-uart mode
-4. Spin the LIDAR motor CCW between 200 and 300 RPM
+4. Spin the LIDAR motor CCW with speed around 300 RPM
 5. Read LIDAR data using UART 
 
 For the details, follow video tutorial:
 
 {% include youtube-embed.html youtube_video_id="G6uVg34VzHw" %}
-
-See <http://xv11hacking.wikispaces.com/LIDAR+Sensor> for more information on LIDAR.
 
 ## Motor Connector
 
@@ -56,3 +54,11 @@ Order same spacers (25 mm high for M3 screws are ok). Drill the holes for spacer
 Everything for just a few € or $.
 
 {% include screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" %}
+
+## References
+
+[xv11hacking] for more information on LIDAR integration
+[Revo LDS Whitepaper] for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is either exaclty or almost exactly Revo LDS.
+
+[xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
+[Revo LDS Whitepaper]: http://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
