@@ -80,8 +80,6 @@ It should be somewhere close to the value returned by the `count_per_rot`
 
     $ cat $MC/count_per_rot
     360
-
-The range of `position` attribute is between -2,147,483,648 and +2,147,483,647. It is unlikely that you will ever reach the limit.
 	
 Speed is similar in that the units are in tachometer pulse counts per second.
 You can watch the speed by running...
@@ -93,6 +91,8 @@ numbers between +/-300 (unless you are not being nice to your motor and turning
 it very fast). Press `^C` when you are done. Note: `\033[0G` is an escape code
 that moves the cursor back to the beginning of the line so that we don't fill up
 the screen with numbers.
+
+The range of `position` attribute is between -2,147,483,648 and +2,147,483,647. It is unlikely that you will ever reach the limit.
 
 ## Running the Motor
 
