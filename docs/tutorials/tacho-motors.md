@@ -81,6 +81,8 @@ It should be somewhere close to the value returned by the `count_per_rot`
     $ cat $MC/count_per_rot
     360
 
+The range of `position` attribute is between -2,147,483,648 and +2,147,483,647. It is unlikely that you will ever reach the limit.
+	
 Speed is similar in that the units are in tachometer pulse counts per second.
 You can watch the speed by running...
 
@@ -151,6 +153,8 @@ change.
     $ echo run-to-abs-pos > $MC/command
     $ while true; do echo -en "\033[0G$(cat $MC/position)   "; done
 
+Note: For `run-to-abs-pos` command only the absolute value of `duty_cycle_sp` or `speed_sp` matters. The direction of movement is determined automatically.
+	
 ### run-to-rel-pos
 
 This means "run to relative position". Again, the position is specified by
@@ -167,7 +171,7 @@ if we run...
 ... again, the motor will turn an additional 1/2 turn.
 
 Note: Using a negative value for `position_sp` will cause the motor to rotate
-in the opposite direction.
+in the opposite direction. The sign of duty_cycle_sp or speed_sp is ignored like in `run-to-abs-pos` command.
 
 ### run-timed
 
