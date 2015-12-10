@@ -58,6 +58,7 @@ Everything for just a few € or $.
 ## References
 
 [xv11hacking] for more information on LIDAR integration
+
 [Revo LDS Whitepaper] for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is either exaclty or almost exactly Revo LDS.
 
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
