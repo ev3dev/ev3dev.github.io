@@ -92,6 +92,8 @@ it very fast). Press `^C` when you are done. Note: `\033[0G` is an escape code
 that moves the cursor back to the beginning of the line so that we don't fill up
 the screen with numbers.
 
+The range of `position` attribute is between -2,147,483,648 and +2,147,483,647 tachometer counts. It is unlikely that you will ever reach the limit.
+
 ## Running the Motor
 
 The most obvious thing to do with a motor is make it run, so let's do that first.
@@ -151,6 +153,8 @@ change.
     $ echo run-to-abs-pos > $MC/command
     $ while true; do echo -en "\033[0G$(cat $MC/position)   "; done
 
+Note: For `run-to-abs-pos` command only the absolute value of `duty_cycle_sp` or `speed_sp` matters. The direction of movement is determined automatically.
+	
 ### run-to-rel-pos
 
 This means "run to relative position". Again, the position is specified by
@@ -167,7 +171,7 @@ if we run...
 ... again, the motor will turn an additional 1/2 turn.
 
 Note: Using a negative value for `position_sp` will cause the motor to rotate
-in the opposite direction.
+in the opposite direction. The sign of `duty_cycle_sp` or `speed_sp` is ignored like in `run-to-abs-pos` command.
 
 ### run-timed
 
