@@ -171,7 +171,7 @@ if we run...
 ... again, the motor will turn an additional 1/2 turn.
 
 Note: Using a negative value for `position_sp` will cause the motor to rotate
-in the opposite direction. The sign of duty_cycle_sp or speed_sp is ignored like in `run-to-abs-pos` command.
+in the opposite direction. The sign of `duty_cycle_sp` or `speed_sp` is ignored like in `run-to-abs-pos` command.
 
 ### run-timed
 
