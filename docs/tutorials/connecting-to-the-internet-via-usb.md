@@ -26,6 +26,10 @@ If you are using an older version, please upgrade.
     to fix it.
     {:class="alert alert-warning"}
 
+    1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
+        open the *Wireless and Networks* menu and select *USB*. Make sure *CDC* is
+        selected and active.
+
         {% include screenshot.html source="/images/brickman/usb-cdc-active.png" %}
 
     2.  On your Mac, open up *System Preferences* and select *Network*.
