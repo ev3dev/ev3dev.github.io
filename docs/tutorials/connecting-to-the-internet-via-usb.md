@@ -14,12 +14,17 @@ using [tethering] instead.
 These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
 If you are using an older version, please upgrade.
 
-*   {: tab="Mac OSX"}Note: These instructions were written using OSX version 10.9,
+*   {: tab="OS X"}<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    These instructions were written using OS X version 10.9,
     but should work for other versions as well.
+    {:class="alert alert-info"}
 
-    1.  On the EV3, first verify that the CDC driver is enabled. In brickman,
-        open the *Wireless and Networks* menu and select *USB*. Make sure *CDC* is
-        selected and active.
+    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+    If you are using OS X version 10.11, this won't work. Apple broke the USB/CDC
+    gadget driver and has not fixed it yet (as of version 10.11.2). Please
+    [file a bug with Apple](https://bugreport.apple.com/) and politely ask them
+    to fix it.
+    {:class="alert alert-warning"}
 
         {% include screenshot.html source="/images/brickman/usb-cdc-active.png" %}
 
