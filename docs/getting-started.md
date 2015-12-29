@@ -16,18 +16,26 @@ First, here are the things you need before starting:
   on the EV3. **All cards larger than 32GB will not work with the EV3!**
 * A computer with an adapter for the SD card. You will need administrator user
   permissions on this computer.
-* A way to communicate. For the EV3, this can be one of the following:
-    * USB cable (the one that comes with the EV3)
-    * USB WiFi dongle
-    * USB Ethernet (wired) dongle
-    * Bluetooth
-  For Raspberry Pi you will need to use the wired Ethernet connection first.
+* A way to communicate.
 
-<div class="alert alert-warning">
-    <span class="glyphicon glyphicon-alert"></span>
-    The instructions on this page only apply to releases dated September
-2015 or later. Older releases are no longer supported.
-</div>
+  For the EV3, this can be one of the following:
+
+  * USB cable (the one that comes with the EV3)
+  * USB WiFi dongle
+  * USB Ethernet (wired) dongle
+  * Bluetooth
+
+  For Raspberry Pi you will need to use the wired Ethernet connection first.
+  With PiStorms the EV3 options will work too since you have a screen to configure
+  them on.
+
+
+<span class="glyphicon glyphicon-alert"></span>
+The instructions on this page only apply to releases dated December
+2015 or later. Older releases are no longer supported. There are many major changes
+in this release, so if something seems broken or the documentation seems incorrect,
+please [open an issue on GitHub](../../support).
+{:class="alert alert-warning"}
 
 ## Step 1: Download the latest ev3dev image file
 
@@ -55,8 +63,9 @@ sounds the easiest to you:
 * **Linux**
     * [Command Line](../tutorials/writing-sd-card-image-linux-command-line)
     * [Ubuntu (graphical interface)](../tutorials/writing-sd-card-image-ubuntu-disk-image-writer)
-* **Mac OS X**
-    * [Command Line](../tutorials/writing-sd-card-image-mac-command-line)
+* **OS X**
+    * [Command Line](../tutorials/writing-sd-card-image-osx-command-line)
+    * [Apple Pi Baker (graphical interface)](../tutorials/writing-sd-card-image-osx-apple-pi-baker)
 * **Windows**
     * [Win32DiskImager (graphical interface)](../tutorials/writing-sd-card-image-win32diskimager)
 
@@ -81,11 +90,12 @@ LEDs indicate disk (SD card) activity.
 **Note:** If you are using Raspberry Pi hardware without a screen, just wait for
 the Activity LED to stop flashing, then go to the next step.
 
-After one or two minutes, the screen will go blank. This happens on the first boot
-only. The first boot takes a little longer than subsequent boots because the EV3
+After about one minutes, the screen will go blank. This happens on the first boot
+only. The first boot takes longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
 items. After another minute or two, you will see the *brickman loading...* screen.
-
+If nothing has happened after five minutes, something is not right - check the
+troubleshooting tips below.
 
 You will notice the number in the battery in the upper right corner. This
 displays the remaining voltage of the power supply. It is not possible to

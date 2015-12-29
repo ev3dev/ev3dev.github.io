@@ -112,7 +112,12 @@ h1.panel-title {
 }
 
 .screenshot {
-    margin: 20px;
+    display: table !important;
+    margin: 20px auto;
+}
+
+.screenshot > a > img {
+    max-height: 480px;
 }
 
 .inline-screenshot {
@@ -151,4 +156,12 @@ dd {
 
 dd ol, dd ul {
     margin-top: 10px;
+}
+
+ul + p, ol + p {
+    margin-top: 10.5px;
+}
+
+.alert > pre {
+    margin-top: 10.5px;
 }
