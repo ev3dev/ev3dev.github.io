@@ -3,15 +3,17 @@ title: Connecting to the Internet via Bluetooth
 subject: Networking
 ---
 
-__Note:__ If you do not need to access the Internet from the EV3 brick, consider
+<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+If you do not need to access the Internet from the EV3 brick, consider
 using [tethering] instead.
+{: .alert .alert-info}
 
 [tethering]: /docs/tutorials/using-bluetooth-tethering
 
----
-
-These instructions are for [brickman v0.5.0](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
+<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/).
 If you are using an older version, please upgrade.
+{: .alert .alert-warning}
 
 *   {: tab="Android"}Note: These instructions were written using Android 4.1.2
     but should work for other versions as well.

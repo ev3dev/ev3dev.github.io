@@ -11,9 +11,9 @@ using [tethering] instead.
 [tethering]: /docs/tutorials/using-usb-tethering
 
 <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-These instructions are for [brickman v0.7.1](http://www.ev3dev.org/news/2015/02/24/Package-Release/).
+These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/).
 If you are using an older version, please upgrade.
-{: class="alert alert-warning"}
+{: .alert .alert-warning}
 
 *   {: tab="Mac OSX"}<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
     If you are using OS X version 10.11, this won't work. Apple broke the USB/CDC
@@ -42,11 +42,11 @@ If you are using an older version, please upgrade.
 
     3.  Click *Apply* to save your changes. After a short time, the ev3dev entry
         (or whatever you named it) should show connected and have a Self-Assigned
-        IP address
+        IP address.
 
         {% include screenshot.html source="/images/osx/10.9/CDC-Connected.png" %}
 
-    4.  To share our Internet connection with the EV3. Go back to *System
+    4.  To share our Internet connection with the EV3, go back to *System
         Preferences* and select *Sharing*.
 
         {% include screenshot.html source="/images/osx/10.9/SystemPreferencesSharing.png" %}
@@ -271,6 +271,13 @@ If you are using an older version, please upgrade.
         guide).
         {% include screenshot.html source="/images/windows/8/local-area-connection-properties-sharing-with-extra-selection.png" %}
         {: class="alert alert-info"}
+
+        <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+        Windows Internet Connection Sharing is temperamental. Sometimes it just
+        stops working for no reason. If this happens, just turn it off (by unchecking
+        *Allow other...* and clicking *OK*) and then turn it back on. It should
+        start working again.
+        {: class="alert alert-warning"}
 
     10. Click *OK* when you are done and close the status window as well. Windows
         will automatically reconfigure your other network connections.

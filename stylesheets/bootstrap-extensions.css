@@ -128,6 +128,14 @@ h1.panel-title {
     max-width: 350px;
 }
 
+.inline-screenshot.pull-right {
+    margin-left: 20px;
+}
+
+.inline-screenshot.pull-left {
+    margin-right: 20px;
+}
+
 sup[id]:before {
     display: inline-block;
 }
