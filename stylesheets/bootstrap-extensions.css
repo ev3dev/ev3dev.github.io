@@ -169,7 +169,3 @@ dd ol, dd ul {
 ul + p, ol + p {
     margin-top: 10.5px;
 }
-
-.alert > pre {
-    margin-top: 10.5px;
-}

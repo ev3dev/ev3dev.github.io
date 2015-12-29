@@ -1,0 +1,9 @@
+{% comment %}
+
+This template provides icons to match bootstrap alerts.
+
+Parameters:
+
+type: A name that matches an alert. Valid values are "success", info", "warning" and "danger".
+
+{% endcomment %}{% assign name = include.type %}{% if name == "success" %}{% assign name = "ok" %}{% endif %}{% if name == "info" %}{% assign name = "info-sign" %}{% endif %}{% if name == "warning" %}{% assign name = "alert" %}{% endif %}{% if name == "danger" %}{% assign name = "exclamation-sign" %}{% endif %}<span class="glyphicon glyphicon-{{ name }}" aria-hidden="true"></span>

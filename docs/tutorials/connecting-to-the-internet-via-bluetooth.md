@@ -3,15 +3,15 @@ title: Connecting to the Internet via Bluetooth
 subject: Networking
 ---
 
-<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+{% include icon.html type="info" %}
 If you do not need to access the Internet from the EV3 brick, consider
-using [tethering] instead.
+using [tethering]{: .alert-link} instead.
 {: .alert .alert-info}
 
 [tethering]: /docs/tutorials/using-bluetooth-tethering
 
-<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/).
+{% include icon.html type="warning" %}
+These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/){: .alert-link}.
 If you are using an older version, please upgrade.
 {: .alert .alert-warning}
 

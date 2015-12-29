@@ -30,12 +30,12 @@ First, here are the things you need before starting:
   them on.
 
 
-<span class="glyphicon glyphicon-alert"></span>
+{% include icon.html type="warning" %}
 The instructions on this page only apply to releases dated December
 2015 or later. Older releases are no longer supported. There are many major changes
 in the December release, so if something seems broken or the documentation seems incorrect,
-please [open an issue on GitHub]({{ site.github.url }}/support).
-{:class="alert alert-warning"}
+please [open an issue on GitHub]({{ site.github.url }}/support){: .alert-link}.
+{: .alert .alert-warning}
 
 ## Step 1: Download the latest ev3dev image file
 
@@ -52,7 +52,7 @@ decompress it (such as [7-Zip] on Windows).
 ## Step 2: Copy the image on to the SD card
 
 <div class="alert alert-danger">
-    <span class="glyphicon glyphicon-exclamation-sign"></span>
+    {% include icon.html type="danger" %}
     This will erase everything on your SD card! Backup your files
     If you do not want to lose them!
 </div>
@@ -72,7 +72,7 @@ sounds the easiest to you:
 <br/>
 
 <div class="alert alert-info">
-    <span class="glyphicon glyphicon-info-sign"></span>
+    {% include icon.html type="info" %}
     For more detailed information and more alternatives, check out
    <a class="alert-link" href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
 of the information there is applicable to ev3dev.
@@ -106,7 +106,7 @@ data may be lost. Keep in mind, that is may take a much longer time from 8V to
 
 <div class="panel panel-info">
 <div class="panel-heading">
-<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+{% include icon.html type="info" %}
 Troubleshooting tips if your EV3 won't boot
 </div>
 <div class="panel-body" markdown="1">
@@ -134,7 +134,7 @@ you want to use and on the OS of your host computer, so pick the one that applie
        after you power on Bluetooth.
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
-<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+{% include icon.html type="info" %}
 For Raspberry Pi with no display, you must use the wired Ethernet port
 to connect for the first time. You can setup additional connections using the
 `connmanctl` command.
@@ -161,7 +161,7 @@ The default password is `ev3dev`.
 
 Then just follow the instructions on the screen.
 
-<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+{% include icon.html type="info" %}
 The EV3 and Raspberry Pi do not have a battery backup for the realtime clock.
 Whenever you remove the batteries, the clock will be reset. If the EV3 is
 connected to the Internet, the clock will be automatically set via NTP,

@@ -3,26 +3,26 @@ title: Connecting to the Internet via USB
 subject: Networking
 ---
 
-<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+{% include icon.html type="info" %}
 If you do not need to access the Internet from the EV3 brick, consider
-using [tethering] instead.
+using [tethering]{: .alert-link} instead.
 {: class="alert alert-info"}
 
 [tethering]: /docs/tutorials/using-usb-tethering
 
-<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/).
+{% include icon.html type="warning" %}
+These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/){: .alert-link}.
 If you are using an older version, please upgrade.
 {: .alert .alert-warning}
 
-*   {: tab="Mac OSX"}<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+*   {: tab="Mac OSX"}{% include icon.html type="warning" %}
     If you are using OS X version 10.11, this won't work. Apple broke the USB/CDC
     gadget driver and has not fixed it yet (as of version 10.11.2). Please
-    [file a bug with Apple](https://bugreport.apple.com/) and politely ask them
+    [file a bug with Apple](https://bugreport.apple.com/){: .alert-link} and politely ask them
     to fix it.
     {: class="alert alert-warning"}
 
-    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    {% include icon.html type="info" %}
     These instructions were written using OS X version 10.9, but should work for
     other versions as well.
     {: class="alert alert-info"}
@@ -80,15 +80,20 @@ If you are using an older version, please upgrade.
 
             ssh robot@ev3dev.local
 
-        <div class="alert alert-info" markdown="1">
-        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-        If you have never connected before, you will prompted to confirm the
+        <div class="panel panel-info">
+        <div class="panel-heading">
+        {% include icon.html type="info" %}
+        If you have never connected before, you will be prompted to confirm the
         authenticity of the host, so type `yes` when prompted.
-
+        </div>
+        <div class="panel-body">
+        <pre>
             The authenticity of host 'ev3dev.local (192.168.2.3)' can't be established.
             RSA key fingerprint is xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
             Are you sure you want to continue connecting (yes/no)? yes
             Warning: Permanently added 'ev3dev.local' (RSA) to the list of known hosts.
+        </pre>
+        </div>
         </div>
 
     10. Enter your password when prompted. The default password is `ev3dev`.
@@ -110,9 +115,9 @@ If you are using an older version, please upgrade.
             permitted by applicable law.
             robot@ev3dev:~$ 
 
-*   {: tab="Ubuntu"}<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-    This instructions were written using Ubuntu 15.10 using the default desktop
-    (aka Unity) however, they should be similar for other versions of Ubuntu
+*   {: tab="Ubuntu"}{% include icon.html type="info" %}
+    These instructions were written using Ubuntu 15.10 and the default desktop
+    (aka Unity). However, the instructions should work for other versions of Ubuntu
     and its derivatives as well as other desktops like GNOME Shell, Cinnamon
     and MATE.
     {:class="alert alert-info"}
@@ -171,19 +176,24 @@ If you are using an older version, please upgrade.
 
             ssh robot@ev3dev.local
 
-        <div class="alert alert-info" markdown="1">
-        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-        If you have never connected before, you will prompted to confirm the
+        <div class="panel panel-info">
+        <div class="panel-heading">
+        {% include icon.html type="info" %}
+        If you have never connected before, you will be prompted to confirm the
         authenticity of the host, so type `yes` when prompted.
-
+        </div>
+        <div class="panel-body">
+        <pre>
             The authenticity of host 'ev3dev.local (10.42.0.228)' can't be established.
             ECDSA key fingerprint is SHA256:LjEw+uEG5x7kl9LwVeynjeybuBHT3VQB5simpcVqmu8.
             Are you sure you want to continue connecting (yes/no)? yes
             Warning: Permanently added 'ev3dev.local,10.42.0.228' (ECDSA) to the list of known hosts.
             Warning: Permanently added '10.42.0.228' (ECDSA) to the list of known hosts.
+        </pre>
+        </div>
         </div>
 
-    11. Enter you password when prompted. The default password is `ev3dev`.
+    11. Enter your password when prompted. The default password is `ev3dev`.
 
             robot@ev3dev.local's password: 
                          _____     _
@@ -203,8 +213,8 @@ If you are using an older version, please upgrade.
             robot@ev3dev:~$ 
 
 
-*   {: tab="Windows"}<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-    These instructions were written using Window 10, but should work Windows
+*   {: tab="Windows"}{% include icon.html type="info" %}
+    These instructions were written using Windows 10, but should work on Windows
     7 and 8 as well.
     {:class="alert alert-info"}
 
@@ -224,9 +234,9 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/devices-and-printers-rndis.png" %}
 
-        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        {% include icon.html type="info" %}
         PROTIP: You can get an icon that looks like an actual EV3 by installing
-        [Programmable Brick Icons](https://github.com/ev3dev/PBrickIcons).
+        [Programmable Brick Icons](https://github.com/ev3dev/PBrickIcons){: .alert-link}.
         Follow the link for more information.
         {% include screenshot.html source="https://raw.githubusercontent.com/ev3dev/PBrickIcons/master/demo1.png" %}
         {:class="alert alert-info"}
@@ -264,7 +274,7 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/local-area-connection-properties-sharing.png" %}
 
-        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        {% include icon.html type="info" %}
         If you have more than two network connections, it will ask for a "Home
         networking connection". If you see this, select your EV3's network adapter
         from the list (this will be called *EV3* if you renamed it earlier in the
@@ -272,7 +282,7 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/windows/8/local-area-connection-properties-sharing-with-extra-selection.png" %}
         {: class="alert alert-info"}
 
-        <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+        {% include icon.html type="warning" %}
         Windows Internet Connection Sharing is temperamental. Sometimes it just
         stops working for no reason. If this happens, just turn it off (by unchecking
         *Allow other...* and clicking *OK*) and then turn it back on. It should
@@ -314,7 +324,7 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/putty-configuration-ev3dev.png" %}
 
-        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        {% include icon.html type="info" %}
         The first time you connect, you'll get a warning about the new fingerprint.
         This is normal. Just click *Yes* to continue. You won't see this again
         unless you re-flash your SD card.
