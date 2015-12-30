@@ -1,3 +1,10 @@
+---
+
+---
+
+// Loaded from _data/platform-attributes.json
+var platformAttributes = {{ site.data.platform-attributes | jsonify }};
+
 function supportsHtml5Storage() {
     try {
         return 'localStorage' in window && window['localStorage'] !== null;
@@ -27,47 +34,49 @@ function getFilterByData(dataHash) {
 
 function switchSelectedPlatformAttribute(platformAttributeName, newAttributeValue) {
     // Containers of platform content should have .platform-content-item
-    // Containers of platform content should have data-platform-attribute-name and data-platform-attribute-value
+    // Containers of platform content should have data-platform-attribute-name and data-platform-attribute-value-id
     $('.platform-content-item')
         .filter(getFilterByData('platform-attribute-name', platformAttributeName))
         .hide()
-        .filter(getFilterByData('platform-attribute-value', newAttributeValue))
+        .filter(getFilterByData('platform-attribute-value-id', newAttributeValue))
         .show();
     
     $('.platform-attribute-select-group')
         .filter(getFilterByData('target-platform-attribute-name', platformAttributeName))
         .children()
         .removeClass('active')
-        .filter(getFilterByData('platform-attribute-value', newAttributeValue))
+        .filter(getFilterByData('platform-attribute-value-id', newAttributeValue))
         .addClass('active');
     
     // TODO: Save current option to local storage
 }
 
-function addPlatformNavItem(platformAttributeName, newAttributeValue) {    
+function addPlatformNavItem(platformAttributeId, newAttributeValueId) {    
     // Container for pills should have .platform-attribute-select-group and data-target-platform-attribute-name
     var $platNav = $('.platform-attribute-select-group')
-        .filter(getFilterByData('target-platform-attribute-name', platformAttributeName));
+        .filter(getFilterByData('target-platform-attribute-name', platformAttributeId));
 
     if ($platNav.length <= 0) {
         $platNav = $('<ul class="nav nav-pills platform-attribute-select-group"/>')
-            .data('target-platform-attribute-name', platformAttributeName);
+            .data('target-platform-attribute-name', platformAttributeId);
         $platNav.insertAfter($('.page-header'));
     }
-    else if($platNav.children().filter(getFilterByData('platform-attribute-value', newAttributeValue)).length > 0) {
+    else if($platNav.children().filter(getFilterByData('platform-attribute-value-id', newAttributeValueId)).length > 0) {
         // If there are any pills that have already been created for this value, we are done
         return;
     }
 
     var $pillItem = $('<li/>')
-        .data('platform-attribute-value', newAttributeValue)
+        .data('platform-attribute-value-id', newAttributeValueId)
         .addClass('platform-select-link');
         
-    // TODO: Use text lookup and data file
-    $('<a/>').text(newAttributeValue).appendTo($pillItem);
+    
+    var platformAttributeMetadata = platformAttributes[platformAttributeId];
+    var newAttributeValueMetadata = platformAttributeMetadata.values[newAttributeValueId];
+    $('<a/>').text(newAttributeValueMetadata.title).appendTo($pillItem);
 
     $pillItem.click(function () {
-        switchSelectedPlatformAttribute(platformAttributeName, newAttributeValue);
+        switchSelectedPlatformAttribute(platformAttributeId, newAttributeValueId);
     })
 
     $platNav.append($pillItem);
@@ -76,28 +85,28 @@ function addPlatformNavItem(platformAttributeName, newAttributeValue) {
 $(document).ready(function () {    
     $('ul[data-platform-select-list-attribute]').each(function (i, platformUl) {
         var $platformUl = $(platformUl);
-        var targetAttribute = $platformUl.data('platform-select-list-attribute');
+        var targetAttributeId = $platformUl.data('platform-select-list-attribute');
         
         var $platformContentContainer = $('<div/>');
         $platformContentContainer.insertBefore($platformUl);
 
         $platformUl.detach();
         
-        $platformUl.children('li[data-platform-attribute-value]').each(function (i, platformLi) {
+        $platformUl.children('li[data-platform-attribute-value-id]').each(function (i, platformLi) {
             var $platformLi = $(platformLi);
-            var currentPlatformAttributeValue = $platformLi.data('platform-attribute-value');
+            var currentPlatformAttributeValueId = $platformLi.data('platform-attribute-value-id');
 
             var $newPlatformContentItem = $('<div/>').addClass("platform-content-item");
-            $newPlatformContentItem.attr('id', 'plat-' + cleanTextForId(targetAttribute) + '-' + cleanTextForId(currentPlatformAttributeValue));
+            $newPlatformContentItem.attr('id', 'plat-' + cleanTextForId(targetAttributeId) + '-' + cleanTextForId(currentPlatformAttributeValueId));
             $newPlatformContentItem.data({
-                'platform-attribute-name': targetAttribute,
-                'platform-attribute-value': currentPlatformAttributeValue
+                'platform-attribute-name': targetAttributeId,
+                'platform-attribute-value-id': currentPlatformAttributeValueId
             });
 
             $newPlatformContentItem.append($platformLi.contents().detach());
             $newPlatformContentItem.appendTo($platformContentContainer);
 
-            addPlatformNavItem(targetAttribute, currentPlatformAttributeValue);
+            addPlatformNavItem(targetAttributeId, currentPlatformAttributeValueId);
         });
 
         // TODO: Add ability to nest options (as dropdown)
@@ -111,7 +120,7 @@ $(document).ready(function () {
         
         var defaultValue = $(this)
             .children(':first')
-            .data('platform-attribute-value');
+            .data('platform-attribute-value-id');
         
         switchSelectedPlatformAttribute(attributeName, defaultValue);
     })

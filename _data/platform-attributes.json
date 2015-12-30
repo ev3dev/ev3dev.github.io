@@ -1,0 +1,31 @@
+{
+    "client-platform": {
+        "values": {
+            "android": {
+                "title": "Android"
+            },
+            "osx": {
+                "title": "OS X"
+            },
+            "ubuntu": {
+                "title": "Ubuntu"
+            },
+            "windows": {
+                "title": "Windows"
+            }
+        }
+    },
+    "ev3dev-hardware-platform": {
+        "values": {
+            "ev3": {
+                "title": "EV3 Brick"
+            },
+            "brickpi": {
+                "title": "BrickPi"
+            },
+            "pistorms": {
+                "title": "PiStorms"
+            }
+        }
+    }
+}

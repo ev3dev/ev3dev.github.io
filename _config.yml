@@ -63,6 +63,12 @@ defaults:
       type: "posts"
     values:
       layout: "news"
+  -
+    scope:
+      path: "javascripts"
+      type: "pages"
+    values:
+      layout: "none"
       
 kramdown:
     toc_levels: "2,3"
