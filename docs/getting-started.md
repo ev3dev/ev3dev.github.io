@@ -148,7 +148,7 @@ tutorials above if you don't know how to open terminal window and connect via SS
 
 ### Change your password
 
-The default password is `ev3dev`.
+The default password is `maker`.
 
     robot@ev3dev:~$ passwd
     Enter new UNIX password: 

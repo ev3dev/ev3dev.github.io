@@ -84,7 +84,7 @@ Here is an example. It prints out 2 lines each time you press a button on the
 EV3 and 2 more lines each time you release a button. And of course, press CTRL+C
 to end.
 
-    root@ev3dev:/sys/class/leds# hexdump -e \
+    root@ev3dev:~# hexdump -e \
     '"timestamp:%d.%6d""\t""" 1/2 "type:%i""\t"""  1/2 "code:%3i""\t"""  "value:%d\n"' \
     < /dev/input/by-path/platform-gpio-keys.0-event 
     timestamp:1391366282.119886 type:1  code: 14    value:0

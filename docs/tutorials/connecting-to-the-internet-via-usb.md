@@ -96,7 +96,7 @@ If you are using an older version, please upgrade.
         </div>
         </div>
 
-    10. Enter your password when prompted. The default password is `ev3dev`.
+    10. Enter your password when prompted. The default password is `maker`.
 
             robot@ev3dev's password: 
                          _____     _
@@ -142,6 +142,11 @@ If you are using an older version, please upgrade.
         will always start with `12:16:53`, so choose that one.
 
         {% include screenshot.html source="/images/ubuntu/15.10/editing-ev3dev-ethernet.png" %}
+
+        {% include icon.html type="info" %}
+        If the MAC address starts with `32:16:53` instead of `12:16:53`, this means
+        it is using RNDIS instead of CDC. Unplug your USB cable and plug it back in.
+        {: .alert .alert-info}
 
     5.  Then click on the *IPv4 Settings* tab (1) and change the *Method* to
         *Shared to other computers* (2). Click *Save* (3) when you are done.
@@ -193,7 +198,7 @@ If you are using an older version, please upgrade.
         </div>
         </div>
 
-    11. Enter your password when prompted. The default password is `ev3dev`.
+    11. Enter your password when prompted. The default password is `maker`.
 
             robot@ev3dev.local's password: 
                          _____     _
@@ -246,7 +251,9 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/devices-and-printers-context-menu-network-settings.png" %}
 
-    5.  In the *Network and Sharing Center*, click on *Change adapter settings*.
+    5.  In the *Network and Sharing Center*, make a not of which connection is
+        your Internet connection (1) and then click on *Change adapter settings*
+        (2). In this example, our Internet connection is **Network 5**.
 
         {% include screenshot.html source="/images/windows/10/network-and-sharing-center-change-adapter-settings.png" %}
 
@@ -256,9 +263,9 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/network-connections-context-menu-rename.png" %}
 
-    7.  To share our Internet connection with the EV3, Double-click the other
-        network connection (**not** the one we just renamed). This will show the
-        connection status.
+    7.  To share our Internet connection with the EV3, Double-click the network
+        connection with the Internet connection that you noted earlier (**not**
+        the one we just renamed). This will show the connection status.
 
         {% include screenshot.html source="/images/windows/10/network-connections-internet-adapter.png" %}
 
@@ -298,7 +305,7 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/brickman/networking-connections-wired-only.png" %}
 
     12. Internet Connection Sharing on Windows is temperamental, so we are going
-        to use a static IP address to help thing out. Select *IPv4* on the menu.
+        to use a static IP address to make it a bit more reliable. Select *IPv4* on the menu.
 
         {% include screenshot.html source="/images/brickman/wired-status-disconnected-ipv4-selected.png" %}
 
@@ -331,8 +338,8 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/windows/10/putty-security-alert.png" %}
         {: class="alert alert-info"}
 
-        Once you're connected, type in the userid as `robot` and the password as
-        `ev3dev` and you should be connected.
+        Once you are connected, type in your username (`robot`) and your password
+        (`maker` if you haven't changed it yet) and then you should be logged in.
 
         {% include screenshot.html source="/images/windows/10/putty-robot-at-ev3dev.png" %}
 {: tab-list="os"}

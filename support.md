@@ -23,12 +23,11 @@ developers directly unless you have a personal question.)
 First, before submitting an issue, please make sure that you have the latest
 kernel and other packages:
 
-    # as root...
-    apt-get update
-    apt-get upgrade
-    apt-get dist-upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get dist-upgrade
     # if a new kernel package was installed
-    reboot
+    sudo reboot
 
 Then search the existing issues (open and closed) to make sure someone else has
 not already reported the same problem or asked the same question. Please only
