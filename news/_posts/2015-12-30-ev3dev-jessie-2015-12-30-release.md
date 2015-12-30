@@ -35,7 +35,7 @@ Don't forget to backup any important files before you re-flash!
 
 ### Raspberry Pi
 
-This is the first release that support mindsensors.com [PiStorms] out of the box.
+This is the first release that supports mindsensors.com [PiStorms] out of the box.
 **Note:** You will need a USB keyboard or (10-digit keypad with backspace) in
 order to use the Brickman user interface.
 
