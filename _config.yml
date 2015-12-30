@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: pretty
-exclude: [README.md, Gemfile, Gemfile.lock, repo-metadata.html]
+exclude: [README.md, Gemfile, Gemfile.lock, "repo-metadata.html", vendor, cibuild.sh, .travis.yml]
 
 gems:
   - jekyll-mentions
