@@ -103,10 +103,6 @@ h1.panel-title {
     height: 25px;
 }
 
-#markdown-toc {
-    display: none;
-}
-
 .alert span.glyphicon {
     margin-right: 8px;
 }
@@ -128,11 +124,11 @@ h1.panel-title {
     max-width: 350px;
 }
 
-.inline-screenshot.pull-right {
+.pull-right {
     margin-left: 20px;
 }
 
-.inline-screenshot.pull-left {
+.pull-left {
     margin-right: 20px;
 }
 
