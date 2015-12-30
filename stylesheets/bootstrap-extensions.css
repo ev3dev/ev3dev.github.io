@@ -103,16 +103,17 @@ h1.panel-title {
     height: 25px;
 }
 
-#markdown-toc {
-    display: none;
-}
-
 .alert span.glyphicon {
     margin-right: 8px;
 }
 
 .screenshot {
-    margin: 20px;
+    display: table !important;
+    margin: 20px auto;
+}
+
+.screenshot > a > img {
+    max-height: 480px;
 }
 
 .inline-screenshot {
@@ -121,6 +122,14 @@ h1.panel-title {
 
 .inline-screenshot img {
     max-width: 350px;
+}
+
+.pull-right {
+    margin-left: 20px;
+}
+
+.pull-left {
+    margin-right: 20px;
 }
 
 sup[id]:before {
@@ -151,4 +160,8 @@ dd {
 
 dd ol, dd ul {
     margin-top: 10px;
+}
+
+ul + p, ol + p {
+    margin-top: 10.5px;
 }

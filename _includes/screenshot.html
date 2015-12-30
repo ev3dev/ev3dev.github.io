@@ -1,1 +1,10 @@
-<span class="screenshot"><a href="{{ site.github.url }}{{ include.source }}"><img src="{{ site.github.url }}{{ include.source }}" /></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>
+{% comment %}
+
+Used to format a screenshot.
+
+Parameters:
+
+source: The url of the image
+caption: (optional) A caption that is displayed under the image.
+
+{% endcomment %}<span class="screenshot"><a href="{{ site.github.url }}{{ include.source }}"><img src="{{ site.github.url }}{{ include.source }}" class="img-responsive" /></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>
