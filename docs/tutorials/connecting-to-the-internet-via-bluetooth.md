@@ -16,14 +16,14 @@ If you are using an older version, please upgrade.
 {: .alert .alert-warning}
 
 *   {: tab="Android"}{% include icon.html type="info" %}
-    These instructions were written using Android 4.1.2
-    but should work for other versions as well.
+    These instructions were written using Android 4.1.2 but they should work for
+    other versions as well.
     {: .alert .alert-info}
 
     1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
         open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
         *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
-        status bar also indicates that Bluetooth is powered on. Also make sure
+        status bar also indicates that Bluetooth is powered on. Furthermore, make sure
         the *Visible* box is checked to make the EV3 discoverable.
 
         {% include screenshot.html source="/images/brickman/bluetooth-powered-visible-no-devices.png" %}
@@ -57,8 +57,9 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/brickman/bluetooth-droid4-network-connection-selected.png" %}
 
         {% include icon.html type="info" %}
-        The *Connect* button above is to connect other Bluetooth services. It
-        **will not** connect the network connection.
+        The *Connect* button pictured above is used to connect other Bluetooth
+        services. It **will not** connect the network connection. We need to use
+        *Connect* on the *Network Connection* screen below instead.
         {: .alert .alert-info}
 
     8.  Then select *Connect*.
@@ -71,7 +72,7 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/brickman/networking-droid4-connect-selected-online.png" %}
 
-    10. For `ssh` access to the EV3 on Android, you can use an app call [ConnectBot].
+    10. For `ssh` access to the EV3 on Android, you can use an app called [ConnectBot].
 
         Run ConnectBot and start a new connection. Do this by entering `robot@<ip-address>`
         where `<ip-address>` is the one seen on the EV3. Then press Enter on the keyboard
@@ -94,7 +95,7 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/android/4.1.2/connectbot-3.png" %}
 
-    12. And you are connected.
+    12. And you should be connected.
 
         {% include screenshot.html source="/images/android/4.1.2/connectbot-4.png" %}
 
@@ -174,8 +175,9 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/brickman/bluetooth-my-computer-0-network-connection-selected.png" %}
 
         {% include icon.html type="info" %}
-        The *Connect* button above is to connect other Bluetooth services. It
-        **will not** connect the network connection.
+        The *Connect* button pictured above is used to connect other Bluetooth
+        services. It **will not** connect the network connection. We need to use
+        *Connect* on the *Network Connection* screen below instead.
         {: .alert .alert-info}
 
     13. Select *Connect* here. You can also check the box for *Connect automatically*.
@@ -291,8 +293,9 @@ If you are using an older version, please upgrade.
         {% include screenshot.html source="/images/brickman/bluetooth-my-computer-0-network-connection-selected.png" %}
 
         {% include icon.html type="info" %}
-        The *Connect* button above is to connect other Bluetooth services. It
-        **will not** connect the network connection.
+        The *Connect* button pictured above is used to connect other Bluetooth
+        services. It **will not** connect the network connection. We need to use
+        *Connect* on the *Network Connection* screen below instead.
         {: .alert .alert-info}
 
     13. Select *Connect* here. You can also check the box for *Connect automatically*.

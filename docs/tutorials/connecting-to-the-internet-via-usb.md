@@ -145,7 +145,9 @@ If you are using an older version, please upgrade.
 
         {% include icon.html type="info" %}
         If the MAC address starts with `32:16:53` instead of `12:16:53`, this means
-        it is using RNDIS instead of CDC. Unplug your USB cable and plug it back in.
+        it is using the wrong USB configuration (technically speaking it is
+        trying to use RNDIS instead of CDC, which kind of works but is not as good).
+        Unplug your USB cable and plug it back in.
         {: .alert .alert-info}
 
     5.  Then click on the *IPv4 Settings* tab (1) and change the *Method* to
@@ -251,7 +253,7 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/devices-and-printers-context-menu-network-settings.png" %}
 
-    5.  In the *Network and Sharing Center*, make a not of which connection is
+    5.  In the *Network and Sharing Center*, make a note of which connection is
         your Internet connection (1) and then click on *Change adapter settings*
         (2). In this example, our Internet connection is **Network 5**.
 
@@ -263,9 +265,9 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/windows/10/network-connections-context-menu-rename.png" %}
 
-    7.  To share our Internet connection with the EV3, Double-click the network
-        connection with the Internet connection that you noted earlier (**not**
-        the one we just renamed). This will show the connection status.
+    7.  To share our Internet connection with the EV3, double-click the Internet
+        network connection that you noted earlier (**not** the one we just
+        renamed). This will show the connection status.
 
         {% include screenshot.html source="/images/windows/10/network-connections-internet-adapter.png" %}
 
