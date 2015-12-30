@@ -78,6 +78,23 @@ sounds the easiest to you:
 of the information there is applicable to ev3dev.
 </div>
 
+<div class="panel panel-warning">
+<div class="panel-heading">
+{% include icon.html type="warning" %}
+<strong>Raspberry Pi Only!</strong>
+</div>
+<div class="panel-body" markdown="1">
+You must make some changes to `config.txt` to enable support for BrickPi or
+PiStorms before you put your SD card in your Raspberry Pi.
+
+You may have to remove the SD card from your host computer and plug it back in
+after flashing it in order for it to be detected. In your file browser, open
+up `EV3DEV_BOOT`. This contains a file named `config.txt`. Open `config.txt`
+in your favorite text editor and follow the instructions in the file to enable
+either BrickPi or PiStorms.
+</div>
+</div>
+
 {% include inline-screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
 
 ## Step 3: Boot ev3dev
