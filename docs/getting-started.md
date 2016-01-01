@@ -118,7 +118,7 @@ You will notice the number in the battery in the upper right corner. This
 displays the remaining voltage of the power supply. It is not possible to
 calculate an accurate percent value of the remaining energy, so this value is
 chosen. If the voltage drops below 5V the brick will turn off. All not saved
-data may be lost. Keep in mind, that is may take a much longer time from 8V to
+data may be lost. Keep in mind, that it may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
 
 <div class="panel panel-info">
