@@ -7,4 +7,4 @@ Parameters:
 source: The url of the image
 caption: (optional) A caption that is displayed under the image.
 
-{% endcomment %}{% assign url = include.source %}{% assign first_char = url | first %}{%if first == '/' %}{% assign url = site.github.url | append: url %}{% endif %}<span class="screenshot"><a href="{{ site.github.url }}{{ include.source }}"><img src="{{ url }}" alt="screenshot" class="img-responsive" /></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>
+{% endcomment %}{% assign url = include.source %}{% assign first_char = url | first %}{%if first == '/' %}{% assign url = internal-link-base | append: url %}{% endif %}<span class="screenshot"><a href="{{ internal-link-base }}{{ include.source }}"><img src="{{ url }}" alt="screenshot" class="img-responsive" /></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>

@@ -132,7 +132,7 @@ to submit your changes.
 The project maintainers will be notified automatically that you have submitted
 edits, and will review and merge your changes when they get the chance.
 
-[projects page]: {{ site.github.url }}/projects
+[projects page]: {{ internal-link-base }}/projects
 [mindsensor.com]: http://mindsensors.com/
 [projects folder]: https://github.com/ev3dev/ev3dev.github.io/tree/master/projects/_posts
 [kramdown basics]: http://kramdown.gettalong.org/quickref.html

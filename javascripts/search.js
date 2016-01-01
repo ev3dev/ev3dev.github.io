@@ -76,7 +76,7 @@ function loadSearchData(callback) {
         return;
 
     dataLoading = true;
-    $.getJSON("{{ site.github.url }}/search-index.json", function (e) {
+    $.getJSON("../../search-index.json", function (e) {
         dataLoading = false;
         searchData = e.slice(0, -1);
 
@@ -175,6 +175,9 @@ function doSearch(query) {
         else if (categoryTags.indexOf('news') != -1)
             resultArea = newsResultArea;
 
+        // NOTE: Links are taken as-is from the search index. These links are relative to the
+        // website root, so they start with "/". This means that they won't resolve over file://
+        // or other protocols that don't use the site root as the URL root.
         resultArea.loadTemplate($('#search-result-template'), results[i], { append: true });
 
         resultArea.children().last().show(20);
