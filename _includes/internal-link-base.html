@@ -1,0 +1,13 @@
+{% capture throwaway-empty-whitespace %}
+{% assign internal-link-base = '' %}
+{% assign depth = page.url | prepend: '_' | append: '_' | split: '/' | size | minus: 1 %}
+{% if    depth == 1 %}{% assign internal-link-base = '.' %}
+{% elsif depth == 2 %}{% assign internal-link-base = '..' %}
+{% else %}
+    {% assign internal-link-base = '..' %}
+    {% assign depth = depth | minus: 2 %}
+    {% for i in (1..depth) %}
+        {% assign internal-link-base = internal-link-base | append: '/..' %}
+    {% endfor %}
+{% endif %}
+{% endcapture %}

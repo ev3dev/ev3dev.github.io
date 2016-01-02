@@ -4,9 +4,8 @@ layout:
 ---
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
   <title>ev3dev News Feed</title>
-  <link href="{{ site.github.url }}"/>
+  <link href="{{ internal-link-base }}"/>
   <link type="application/atom+xml" rel="self" href="{{ site.github.url }}/news/atom.xml"/>
   <updated>{{ site.time | date_to_rfc822 }}</updated>
   <id>{{ site.github.url }}/news/atom.xml</id>

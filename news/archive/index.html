@@ -2,13 +2,13 @@
 layout: page
 title: News Archive
 ---
-
+{% include internal-link-base.html %}
 
 {% for post in site.posts %}
     {% if post.categories contains "news" %}
     <div class="news-item">
         <div class="news-item-header">
-            <h2><a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a></h2>
+            <h2><a href="{{ internal-link-base }}{{ post.url }}">{{ post.title }}</a></h2>
             <hr/>
         </div>
     </div>

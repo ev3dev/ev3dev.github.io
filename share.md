@@ -1,6 +1,8 @@
 ---
 title: Share
 ---
+{% include internal-link-base.html %}
+
 <div class="lead">
     <center>
         Do you like ev3dev? Show your support!
@@ -31,7 +33,7 @@ well as provide videos, pictures, build instructions, code, and any other media
 that pertains to the project. If you have a project that you'd like to share,
 check out [the tutorial][Adding a new project].
 
-[projects page]: {{ site.github.url }}/projects
+[projects page]: {{ internal-link-base }}/projects
 [mindsensor.com]: http://mindsensors.com/
 [projects folder]: https://github.com/ev3dev/ev3dev.github.io/tree/master/projects/_posts
 [template project]: https://raw.githubusercontent.com/ev3dev/ev3dev.github.io/master/projects/_posts/2014-03-21-Example-Project.md

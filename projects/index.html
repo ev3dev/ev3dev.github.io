@@ -1,6 +1,7 @@
 ---
 title: Projects
 ---
+{% include internal-link-base.html %}
 
 <p class="lead">
     This is where we keep a collection of all the projects that people are working
@@ -11,7 +12,7 @@ title: Projects
 <div class="alert alert-info">
     {% include icon.html type="info" %}
     Would you like your project added to the list? We would!
-    <a class="alert-link" href="{{ site.github.url }}/docs/tutorials/adding-new-project/">Create a page and send us a pull request</a>.
+    <a class="alert-link" href="{{ internal-link-base }}/docs/tutorials/adding-new-project/">Create a page and send us a pull request</a>.
 </div>
 
 <div class="row">
@@ -23,14 +24,14 @@ title: Projects
                 <div class="thumbnail">
                     {% if post.youtube_video_id %}
 						{% assign num_words = 35 %}
-						<a href="{{ site.github.url }}{{ post.url }}">
+						<a href="{{ internal-link-base }}{{ post.url }}">
 							<img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" />
 						</a>
                     {% endif %}
                     <div class="caption">
                         <h3>{{ post.title }}</h3>
-						<p>{{ post.excerpt | truncatewords: num_words }}</p>
-						<p><a class="btn btn-primary" href="{{ site.github.url }}{{ post.url }}">Learn more</a></p>
+						<p>{{ post.excerpt | strip_html | truncatewords: num_words }}</p>
+						<p><a class="btn btn-primary" href="{{ internal-link-base }}{{ post.url }}">Learn more</a></p>
                     </div>
                 </div>
 			</div>

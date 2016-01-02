@@ -76,7 +76,7 @@ function loadSearchData(callback) {
         return;
 
     dataLoading = true;
-    $.getJSON("{{ site.github.url }}/search-index.json", function (e) {
+    $.getJSON(pageLinkBaseUrl + "/search-index.json", function (e) {
         dataLoading = false;
         searchData = e.slice(0, -1);
 
@@ -174,8 +174,11 @@ function doSearch(query) {
             resultArea = projectResultArea;
         else if (categoryTags.indexOf('news') != -1)
             resultArea = newsResultArea;
-
-        resultArea.loadTemplate($('#search-result-template'), results[i], { append: true });
+        
+        var searchResultObj = $.extend({}, results[i]);
+        searchResultObj.href = pageLinkBaseUrl + searchResultObj.href;
+        
+        resultArea.loadTemplate($('#search-result-template'), searchResultObj, { append: true });
 
         resultArea.children().last().show(20);
 

@@ -2,6 +2,7 @@
 title: Using the mindsensors.com NxtMMX Motor Controller
 subject: Hardware - Motors
 ---
+{% include internal-link-base.html %}
 
 The [mindsensors.com NxtMMX] motor controller uses the [tacho-motor class], so
 most of the information in the [tahco-motor tutorial] is applicable. However,
@@ -42,6 +43,6 @@ Example - set Pass Count to 10:
 
     $ echo -e -n "\x$(printf '%x' 10)" | dd bs=1 of=direct seek=0x86
 
-[mindsensors.com NxtMMX]: {{ site.github.url }}/docs/sensors/mindsensors.com-multiplexer-for-nxt-ev3-motors
-[tacho-motor class]: {{ site.github.url }}/docs/drivers/tacho-motor-class
+[mindsensors.com NxtMMX]: {{ internal-link-base }}/docs/sensors/mindsensors.com-multiplexer-for-nxt-ev3-motors
+[tacho-motor class]: {{ internal-link-base }}/docs/drivers/tacho-motor-class
 [tahco-motor tutorial]: ../tacho-motors
