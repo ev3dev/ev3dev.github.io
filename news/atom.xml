@@ -8,7 +8,7 @@ layout:
   <link href="{{ internal-link-base }}"/>
   <link type="application/atom+xml" rel="self" href="{{ site.github.url }}/news/atom.xml"/>
   <updated>{{ site.time | date_to_rfc822 }}</updated>
-  <id>{{ internal-link-base }}/news/atom.xml</id>
+  <id>{{ site.github.url }}/news/atom.xml</id>
   <author>
     <name>The ev3dev team</name>
   </author>
@@ -16,7 +16,7 @@ layout:
   {% for post in site.posts %}
   {% if post.categories contains "news" %}
   <entry>
-    <id>{{ internal-link-base }}{{ post.id }}</id>
+    <id>{{ site.github.url }}{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="{{ site.github.url }}{{ post.url }}"/>
     <title>{{ post.title | xml_escape }}</title>
     <updated>{{ post.date | date_to_rfc822 }}</updated>

@@ -2,6 +2,7 @@
 author: "@dlech"
 title: "Kernel Release: v3.16.7-ckt9-ev3dev1/dkms3.0"
 ---
+{% include internal-link-base.html %}
 
 Kernel version 3.16.7-ckt9-ev3dev1 has been released. This release contains a
 major overhaul of the tacho-motor class. There are lots of breaking changes,

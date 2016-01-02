@@ -2,6 +2,7 @@
 title: Using the mindsensors.com NxtMMX Motor Controller
 subject: Hardware - Motors
 ---
+{% include internal-link-base.html %}
 
 The [mindsensors.com NxtMMX] motor controller uses the [tacho-motor class], so
 most of the information in the [tahco-motor tutorial] is applicable. However,

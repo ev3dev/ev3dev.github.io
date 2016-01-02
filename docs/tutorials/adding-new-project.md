@@ -3,6 +3,8 @@ title: Adding a New Project
 subject: This Website
 ---
 
+{% include internal-link-base.html %}
+
 We currently have a [projects page] where you can browse projects that have
 been built using ev3dev. You can add your own too!  Each project gets a
 dedicated page for the author to explain what they have been working on, as

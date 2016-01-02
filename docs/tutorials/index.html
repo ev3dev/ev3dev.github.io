@@ -1,7 +1,7 @@
 ---
 title: Tutorials
 ---
-
+{% include internal-link-base.html %}
 {% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
 
 <div class="row">
@@ -15,7 +15,7 @@ title: Tutorials
                         {% assign items = group.items | sort: "title" %}
                         {% for item in items %}
                         <li>
-                            <a href="{{internal-link-base}}{{ item.url }}">{{ item.title }}</a>
+                            <a href="{{ internal-link-base }}{{ item.url }}">{{ item.title }}</a>
                             {% if item.subtitle %}
                                 ({{ item.subtitle }})
                             {% endif %}

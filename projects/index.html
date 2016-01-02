@@ -1,6 +1,7 @@
 ---
 title: Projects
 ---
+{% include internal-link-base.html %}
 
 <p class="lead">
     This is where we keep a collection of all the projects that people are working
@@ -29,7 +30,7 @@ title: Projects
                     {% endif %}
                     <div class="caption">
                         <h3>{{ post.title }}</h3>
-						<p>{{ post.excerpt | truncatewords: num_words }}</p>
+						<p>{{ post.excerpt | strip_html | truncatewords: num_words }}</p>
 						<p><a class="btn btn-primary" href="{{ internal-link-base }}{{ post.url }}">Learn more</a></p>
                     </div>
                 </div>

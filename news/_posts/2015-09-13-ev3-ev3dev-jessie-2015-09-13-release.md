@@ -2,6 +2,7 @@
 author: "@dlech"
 title: "Image release ev3-ev3dev-jessie-2015-09-13"
 ---
+{% include internal-link-base.html %}
 
 This image release contains updated packages from the previous
 ev3dev-jessie-2015-07-08 release, including packages from the Debian 8.2 point

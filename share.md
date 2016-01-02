@@ -1,6 +1,8 @@
 ---
 title: Share
 ---
+{% include internal-link-base.html %}
+
 <div class="lead">
     <center>
         Do you like ev3dev? Show your support!
