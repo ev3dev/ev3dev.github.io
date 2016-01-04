@@ -11,7 +11,7 @@ using [tethering]{: .alert-link} instead.
 [tethering]: /docs/tutorials/using-usb-tethering
 
 {% include icon.html type="warning" %}
-These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/){: .alert-link}.
+These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link}.
 If you are using an older version, please upgrade.
 {: .alert .alert-warning}
 

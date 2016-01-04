@@ -34,7 +34,7 @@ First, here are the things you need before starting:
 The instructions on this page only apply to releases dated December
 2015 or later. Older releases are no longer supported. There are many major changes
 in the December release, so if something seems broken or the documentation seems incorrect,
-please [open an issue on GitHub]({{ site.github.url }}/support){: .alert-link}.
+please [open an issue on GitHub](/support){: .alert-link}.
 {: .alert .alert-warning}
 
 ## Step 1: Download the latest ev3dev image file
