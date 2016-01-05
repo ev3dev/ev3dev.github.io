@@ -17,7 +17,7 @@ If you are using an older version, please upgrade.
 
 *   {: tab="Mac OSX"}{% include icon.html type="warning" %}
     If you are using OS X version 10.11, this may or may not work. Let us know about your
-    experience on [Issue #$471](https://github.com/ev3dev/ev3dev/issues/471){: .alert-link}.
+    experience on [Issue #471](https://github.com/ev3dev/ev3dev/issues/471){: .alert-link}.
     {: class="alert alert-warning"}
 
     {% include icon.html type="info" %}
