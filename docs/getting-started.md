@@ -218,8 +218,8 @@ Here are some guides for using each of the major components.
 * [Sensors](/docs/sensors)
 * [Motors](/docs/tutorials/tacho-motors/)
 * [Sound](https://github.com/ev3dev/ev3dev/wiki/Using-Sound)
-* [LCD](/docs/tutorials/LCD/)
-* [Buttons](/docs/tutorials/buttons/)
+* [LCD](/docs/tutorials/using-ev3-lcd/)
+* [Buttons](/docs/tutorials/using-ev3-buttons/)
 * [LEDs](https://github.com/ev3dev/ev3dev/wiki/Using-the-LEDs)
 * [Bluetooth](https://github.com/ev3dev/ev3dev/wiki/Using-Bluetooth)
 
