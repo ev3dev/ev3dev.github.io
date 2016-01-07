@@ -49,8 +49,9 @@ Previewing Your Changes Online
 ---
 
 We have a special script to use to publish your changes using the `gh-pages`
-branch of your fork of ev3dev.github.io. From the root directory of your local
-copy of ev3dev.github.io, run `./publish <github-user-name>` where
-*github-user-name* is your actual GitHub user name. This will copy the
-contents of `_site`, fix it up a bit and push it to your fork on GitHub. You
-can view the results at `http://<github-user-name>.github.io/ev3dev.github.io`.
+branch of your fork of ev3dev.github.io. If you have SSH setup for your GitHub
+account, simply run`./publish <gh-user>` where *gh-user* is your actual GitHub
+user name. If you don't have SSH setup, you can use https by running
+`./publish https://github.com/<gh-user>/ev3dev.github.io.git` instead.
+This will copy the contents of `_site`, fix it up a bit and push it to your
+fork on GitHub. You can view the results at `http://<gh-user>.github.io/ev3dev.github.io`.
