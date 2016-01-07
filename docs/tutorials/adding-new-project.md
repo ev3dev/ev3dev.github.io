@@ -39,29 +39,12 @@ looking at your own copy.
 
 ##Step 2: Setting Up A Preview (Optional)
 
-If you want to be able to preview your new page before you submit it, and are
-willing to add a bit of extra complexity, you have to create a new branch
-called `gh-pages`. Adding this branch will let you preview the whole site, so
-you can see how your page will look when it is published (which is different
-from the markdown preview that you will see on GitHub). To do this, click the
-box where it says "branch: master". It should expand to show you a text box.
-Type the text `gh-pages` in to the box that appears (make sure that it is
-exactly that text; this is important). It should give you the option to create
-a new branch; click that button.
+If you want to be able to preview your new page before you submit it, and you are
+willing to add a bit of extra complexity, you can do so by using the `./publish.rb`
+script. This involves cloning the ev3dev.github.io repository on your local
+computer and installing ruby. See the ev3dev.github.io [README] for more info.
 
-{% include screenshot.html source="/images/Website/Branching-on-GitHub.png" scale="50" %}
-
-Now, you should be able to navigate to
-`http://<username>.github.io/ev3dev.github.io` in a new tab to see your copy of
-the site. After you complete step 3, visit this preview URL again to make sure
-that your page looks as it should.
-
-If you complete this step, note that everywhere it says "`master`" in the
-screenshots below, it should say "`gh-pages`" instead.
-
-*WARNING*: If you complete this step, GitHub will send you emails warning you
-about the CNAME. You can ignore them; but if they get annoying, see [the readme]
-on the official site repo for information on circumventing the problem.
+[README]: https://github.com/ev3dev/ev3dev.github.io#readme
 
 ##Step 3: Adding Your Page
 
