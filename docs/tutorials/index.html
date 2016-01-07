@@ -15,7 +15,7 @@ title: Tutorials
                         {% assign items = group.items | sort: "title" %}
                         {% for item in items %}
                         <li>
-                            <a href="{{site.github.url}}{{ item.url }}">{{ item.title }}</a>
+                            <a href="{{ item.url }}">{{ item.title }}</a>
                             {% if item.subtitle %}
                                 ({{ item.subtitle }})
                             {% endif %}

@@ -201,12 +201,12 @@ kernel.
 [LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
 [I2C protocol]: https://en.wikipedia.org/wiki/I2c
 [I2C Sensor Addressing]: i2c-sensor-addressing
-[lego-port class]: http://www.ev3dev.org/docs/drivers/lego-port-class
+[lego-port class]: /docs/drivers/lego-port-class
 [Using I2C Sensors]: using-i2c-sensors
 [UART]: https://en.wikipedia.org/wiki/Uart
 [using-uart-sensors-on-any-linux]: http://lechnology.com/2014/09/using-uart-sensors-on-any-linux/
 [opening an issue]: https://github.com/ev3dev/ev3dev/issues
-[contributing page]: http://www.ev3dev.org/contributing/
+[contributing page]: /contributing/
 [lego-sensor class]: /docs/drivers/lego-sensor-class
 [EV3 Input Port Driver]: /docs/ports/legoev3-input-port
 [Supported Sensors]: #supported-sensors
