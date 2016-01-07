@@ -45,7 +45,7 @@ jumbotron-content: |
       </p>
   </div>
   <div class="col-lg-4">
-      <img src="images/logo_ev3dev_mono.png" />
+      <img class="img-responsive" src="images/logo_ev3dev_mono.png" alt="ev3dev boot logo" />
   </div>
 
 ---

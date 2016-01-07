@@ -34,7 +34,7 @@ First, here are the things you need before starting:
 The instructions on this page only apply to releases dated December
 2015 or later. Older releases are no longer supported. There are many major changes
 in the December release, so if something seems broken or the documentation seems incorrect,
-please [open an issue on GitHub]({{ site.github.url }}/support){: .alert-link}.
+please [open an issue on GitHub](/support){: .alert-link}.
 {: .alert .alert-warning}
 
 ## Step 1: Download the latest ev3dev image file
@@ -118,7 +118,7 @@ You will notice the number in the battery in the upper right corner. This
 displays the remaining voltage of the power supply. It is not possible to
 calculate an accurate percent value of the remaining energy, so this value is
 chosen. If the voltage drops below 5V the brick will turn off. All not saved
-data may be lost. Keep in mind, that is may take a much longer time from 8V to
+data may be lost. Keep in mind, that it may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
 
 <div class="panel panel-info">
@@ -157,55 +157,7 @@ to connect for the first time. You can setup additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
 
-## Step 5: First things to do with ev3dev
-
-Here are some suggestions of some things you should do to get ev3dev setup.
-These commands are run on the EV3 in a terminal window. See the networking
-tutorials above if you don't know how to open terminal window and connect via SSH.
-
-### Change your password
-
-The default password is `maker`.
-
-    robot@ev3dev:~$ passwd
-    Enter new UNIX password: 
-    Retype new UNIX password: 
-    passwd: password updated successfully
-
-### Set the time zone
-
-    robot@ev3dev:~$ sudo dpkg-reconfigure tzdata
-
-Then just follow the instructions on the screen.
-
-{% include icon.html type="info" %}
-The EV3 and Raspberry Pi do not have a battery backup for the realtime clock.
-Whenever you remove the batteries, the clock will be reset. If the EV3 is
-connected to the Internet, the clock will be automatically set via NTP,
-otherwise, you can manually set the date/time with the `date` command.
-{: class="alert alert-info"}
-
-### Set the locale
-
-You can skip this if en-US is OK.
-
-    robot@ev3dev:~$ sudo dpkg-reconfigure locales
-
-### Update packages
-
-Make sure your EV3 is connected to the Internet first. 
-Updating the packages for the first time will take minutes.
-The duration depends on the speed class of the SD card and on the updates involved.
-
-    robot@ev3dev:~$ sudo apt-get update
-    robot@ev3dev:~$ sudo apt-get upgrade
-    robot@ev3dev:~$ sudo apt-get dist-upgrade
-
-If a new kernel package is installed, you will need to reboot.
-
-    robot@ev3dev:~$ sudo reboot
-
-## Step 6: Do something awesome
+## Step 5: Do something awesome
 
 This will be where we tell you how to use the EV3's main functions, and how
 to write programs. We are still learning, so everything here should be
@@ -218,8 +170,8 @@ Here are some guides for using each of the major components.
 * [Sensors](/docs/sensors)
 * [Motors](/docs/tutorials/tacho-motors/)
 * [Sound](https://github.com/ev3dev/ev3dev/wiki/Using-Sound)
-* [LCD](/docs/tutorials/LCD/)
-* [Buttons](/docs/tutorials/buttons/)
+* [LCD](/docs/tutorials/using-ev3-lcd/)
+* [Buttons](/docs/tutorials/using-ev3-buttons/)
 * [LEDs](https://github.com/ev3dev/ev3dev/wiki/Using-the-LEDs)
 * [Bluetooth](https://github.com/ev3dev/ev3dev/wiki/Using-Bluetooth)
 
@@ -236,7 +188,7 @@ hang of it, you can even write your own interface library and have it listed her
 
 {% include inline-screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
 
-## Step 7: Calling it a day
+## Step 6: Calling it a day
 
 When you are ready to wish your EV3 goodnight, turn if off by pressing the
 *back* button from the main menu in brickman or pressing and holding the *back*

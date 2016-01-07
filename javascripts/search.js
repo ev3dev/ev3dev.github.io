@@ -1,7 +1,4 @@
----
-layout: 
----
-
+var searchData;
 var searchData;
 var dataLoading = false;
 var itemLoadTimer, searchKeystrokeEventTimer;
@@ -76,7 +73,7 @@ function loadSearchData(callback) {
         return;
 
     dataLoading = true;
-    $.getJSON("{{ site.github.url }}/search-index.json", function (e) {
+    $.getJSON("/search-index.json", function (e) {
         dataLoading = false;
         searchData = e.slice(0, -1);
 

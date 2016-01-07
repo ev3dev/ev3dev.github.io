@@ -11,15 +11,13 @@ using [tethering]{: .alert-link} instead.
 [tethering]: /docs/tutorials/using-usb-tethering
 
 {% include icon.html type="warning" %}
-These instructions are for [brickman v0.7.0](http://www.ev3dev.org/news/2015/12/15/Package-Release/){: .alert-link}.
+These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link}.
 If you are using an older version, please upgrade.
 {: .alert .alert-warning}
 
 *   {: tab="Mac OSX"}{% include icon.html type="warning" %}
-    If you are using OS X version 10.11, this won't work. Apple broke the USB/CDC
-    gadget driver and has not fixed it yet (as of version 10.11.2). Please
-    [file a bug with Apple](https://bugreport.apple.com/){: .alert-link} and politely ask them
-    to fix it.
+    If you are using OS X version 10.11, this may or may not work. Let us know about your
+    experience on [Issue #471](https://github.com/ev3dev/ev3dev/issues/471){: .alert-link}.
     {: class="alert alert-warning"}
 
     {% include icon.html type="info" %}

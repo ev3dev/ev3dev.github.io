@@ -18,4 +18,4 @@ Interesting features:
 TODO: Update for new motor ABI, make a video, building instructions,
 Wiimote control, smartphone control, and more...
 
-![ev3dev HTWay](https://dl.dropbox.com/s/gdrb1uk3uy20anu/Gyro_Bot5.png)
+![ev3dev HTWay](https://dl.dropbox.com/s/gdrb1uk3uy20anu/Gyro_Bot5.png){: .img-responsive}

@@ -93,9 +93,9 @@ a Raspberry Pi 2 to the cause, we can make an image for it too.
 [Debian Kernel Handbook]: http://kernel-handbook.alioth.debian.org/
 [Download]: https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-05-01
 [release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3dev-jessie-2015-05-01.img-release-notes.md
-[dc-motor class]: http://www.ev3dev.org/docs/drivers/dc-motor-class/
-[servo-motor class]: http://www.ev3dev.org/docs/drivers/servo-motor-class/
-[tacho-motor class]: http://www.ev3dev.org/docs/drivers/tacho-motor-class/
+[dc-motor class]: /docs/drivers/dc-motor-class/
+[servo-motor class]: /docs/drivers/servo-motor-class/
+[tacho-motor class]: /docs/drivers/tacho-motor-class/
 [ev3dev changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
 [ckt10 changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-April/056345.html
 [Dexter Industries BrickPi]: http://www.dexterindustries.com/BrickPi/

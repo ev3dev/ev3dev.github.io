@@ -35,7 +35,7 @@ Don't forget to backup any important files before you re-flash!
 
 ### Raspberry Pi
 
-This is the first release that support mindsensors.com [PiStorms] out of the box.
+This is the first release that supports mindsensors.com [PiStorms] out of the box.
 **Note:** You will need a USB keyboard or (10-digit keypad with backspace) in
 order to use the Brickman user interface.
 
@@ -100,7 +100,7 @@ do not have any swapfile enabled since they have plenty of RAM.
 
 So, you want to download this release? Of course you do! [Click here][download].
 
-[support]: http://www.ev3dev.org/support/
+[support]: /support/
 [2015-Q4]: https://github.com/ev3dev/ev3dev/milestones/ev3dev-jessie%202015-Q4
 [PiStorms]: http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit
 [zram]: https://en.wikipedia.org/wiki/Zram
