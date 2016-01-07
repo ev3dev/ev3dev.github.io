@@ -25,7 +25,8 @@ echo "Building site ------------------------------------"
 bundle exec jekyll build --trace
 
 echo "Validating HTML ----------------------------------"
-bundle exec htmlproof ./_site --disable-external
+BASENAME="_tmp-fixed-site"
+./publish.rb --test 'bundle exec htmlproof ./ --disable-external'
 
 # If the site build succeeded but we found BOMs, we want to fail the build
 if [ $FOUND_BOM == true ]
