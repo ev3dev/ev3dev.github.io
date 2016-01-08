@@ -10,7 +10,7 @@
     {% else %}
         {% assign repo_url = 'https://github.com/ev3dev/ev3dev.github.io' %}
     {% endif %}
-    {% assign edit_path = site.github.repository_url | append: '/edit/master/' | append: page.path %}
+    {% assign edit_path = repo_url | append: '/edit/master/' | append: page.path %}
 {% elsif page.path contains 'news/' %}
     {% assign show_news_link = 1 %}
 {% endif %}
