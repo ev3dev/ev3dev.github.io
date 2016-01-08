@@ -2,18 +2,23 @@
     "client-platform": {
         "values": {
             "android": {
-                "title": "Android"
+                "title": "Android",
+                "uaPlatform": "Android"
             },
             "osx": {
-                "title": "OS X"
+                "title": "OS X",
+                "uaPlatform": "Mac OS"
             },
             "ubuntu": {
-                "title": "Ubuntu"
+                "title": "Ubuntu",
+                "uaPlatform": "Ubuntu"
             },
             "windows": {
-                "title": "Windows"
+                "title": "Windows",
+                "uaPlatform": "Windows"
             }
-        }
+        },
+        "autodetectFunction": "autodetectClientPlatform"
     },
     "ev3dev-hardware-platform": {
         "values": {

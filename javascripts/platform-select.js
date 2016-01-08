@@ -5,6 +5,18 @@
 // Loaded from _data/platform-attributes.json
 var platformAttributes = {{ site.data.platform-attributes | jsonify }};
 
+var autodetectFunctions = {
+    autodetectClientPlatform: function () {
+        var clientPlatformValues = platformAttributes["client-platform"].values;
+        for(var platformId in clientPlatformValues) {
+            if(clientPlatformValues[platformId].uaPlatform === $.ua.os.name)
+                return platformId;
+        }
+        
+        return null;
+    }
+}
+
 function supportsHtml5Storage() {
     try {
         return 'localStorage' in window && window['localStorage'] !== null;
@@ -18,15 +30,15 @@ function cleanTextForId(text) {
 }
 
 function getFilterByData(dataHash) {
-    if(arguments.length == 2) {
+    if (arguments.length == 2) {
         var newHash = {};
         newHash[arguments[0]] = arguments[1];
         dataHash = newHash;
     }
-    
+
     return function () {
         var currentTarget = $(this);
-        return Object.keys(dataHash).every(function(property) {
+        return Object.keys(dataHash).every(function (property) {
             return currentTarget.data(property) == dataHash[property];
         });
     }
@@ -40,7 +52,7 @@ function switchSelectedPlatformAttribute(platformAttributeName, newAttributeValu
         .hide()
         .filter(getFilterByData('platform-attribute-value-id', newAttributeValue))
         .show();
-    
+
     $('.platform-attribute-select-group')
         .filter(getFilterByData('target-platform-attribute-name', platformAttributeName))
         .children()
@@ -61,7 +73,7 @@ function addPlatformNavItem(platformAttributeId, newAttributeValueId) {
             .data('target-platform-attribute-name', platformAttributeId);
         $platNav.insertAfter($('.page-header'));
     }
-    else if($platNav.children().filter(getFilterByData('platform-attribute-value-id', newAttributeValueId)).length > 0) {
+    else if ($platNav.children().filter(getFilterByData('platform-attribute-value-id', newAttributeValueId)).length > 0) {
         // If there are any pills that have already been created for this value, we are done
         return;
     }
@@ -69,8 +81,8 @@ function addPlatformNavItem(platformAttributeId, newAttributeValueId) {
     var $pillItem = $('<li/>')
         .data('platform-attribute-value-id', newAttributeValueId)
         .addClass('platform-select-link');
-        
-    
+
+
     var platformAttributeMetadata = platformAttributes[platformAttributeId];
     var newAttributeValueMetadata = platformAttributeMetadata.values[newAttributeValueId];
     $('<a/>').text(newAttributeValueMetadata.title).appendTo($pillItem);
@@ -82,16 +94,49 @@ function addPlatformNavItem(platformAttributeId, newAttributeValueId) {
     $platNav.append($pillItem);
 }
 
-$(document).ready(function () {    
+function getInitialValueId(attributeId) {
+    var messageBase = "Selected value for property " + attributeId + " from ";
+
+    var htmlStorageValue, autodetectFunctionName, autodetectValue;
+    var urlParamValue = $(document).getUrlParam(attributeId);
+
+    if (urlParamValue) {
+        console.log(messageBase + "URL param");
+
+        return urlParamValue;
+    }
+    else if (supportsHtml5Storage() && (htmlStorageValue = localStorage.getItem(attributeId))) {
+        console.log(messageBase + "HTML5 local storage");
+
+        return htmlStorageValue;
+    }
+    else if ((autodetectFunctionName = platformAttributes[attributeId].autodetectFunction)
+        && (autodetectValue = autodetectFunctions[autodetectFunctionName]())) {
+
+        console.log(messageBase + "autodetect function");
+
+        return autodetectValue;
+    }
+    else {
+        console.log(messageBase + "default first option");
+
+        return $('.platform-attribute-select-group')
+            .filter(getFilterByData('target-platform-attribute-name', attributeId))
+            .children(':first')
+            .data('platform-attribute-value-id');
+    }
+}
+
+$(document).ready(function () {
     $('ul[data-platform-select-list-attribute]').each(function (i, platformUl) {
         var $platformUl = $(platformUl);
         var targetAttributeId = $platformUl.data('platform-select-list-attribute');
-        
+
         var $platformContentContainer = $('<div/>');
         $platformContentContainer.insertBefore($platformUl);
 
         $platformUl.detach();
-        
+
         $platformUl.children('li[data-platform-attribute-value-id]').each(function (i, platformLi) {
             var $platformLi = $(platformLi);
             var currentPlatformAttributeValueId = $platformLi.data('platform-attribute-value-id');
@@ -111,17 +156,15 @@ $(document).ready(function () {
 
         // TODO: Add ability to nest options (as dropdown)
     });
-    
-    $('.platform-attribute-select-group').each(function() {
+
+    $('.platform-attribute-select-group').each(function () {
         var attributeName = $(this).data('target-platform-attribute-name');
         // TODO: URL param
         // TODO: lookup UA string
         // TODO: HTML storage
         
-        var defaultValue = $(this)
-            .children(':first')
-            .data('platform-attribute-value-id');
-        
-        switchSelectedPlatformAttribute(attributeName, defaultValue);
+        var initialValueId = getInitialValueId(attributeName);
+
+        switchSelectedPlatformAttribute(attributeName, initialValueId);
     })
 });
