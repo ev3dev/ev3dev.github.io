@@ -19,14 +19,16 @@ if [ $FOUND_BOM == true ]
 then
     # We still want to run the other validation checks even if we found BOMs
     echo "Checks failed! Jekyll can't handle BOMs. See above for list of problematic files."
+else
+    echo "Checks passed! No BOMs found."
 fi
 
 echo "Building site ------------------------------------"
 bundle exec jekyll build --trace
 
 echo "Validating HTML ----------------------------------"
-BASENAME="_tmp-fixed-site"
-./publish.rb --test 'bundle exec htmlproof ./ --disable-external'
+BASENAME="@TMP@"
+ruby publish.rb --test 'bundle exec htmlproof ./ --disable-external'
 
 # If the site build succeeded but we found BOMs, we want to fail the build
 if [ $FOUND_BOM == true ]
