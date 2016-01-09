@@ -24,20 +24,20 @@ Most of the EV3 specific drivers are based on the source code for the official L
     </tr>
     <tr>
         <td rowspan="3"><a href="https://github.com/mindboards/ev3sources/blob/fea79c0e219cd5e43193ce2987b496e04758f3e2/lms2012/d_analog/Linuxmod_AM1808/d_analog.c">d_analog.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/legoev3/legoev3_analog.c">legoev3-analog.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/legoev3/legoev3_analog.c">legoev3-analog.c</a></td>
         <td>Device1 portion of d_analog.c</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/legoev3/ev3_input_port.c">ev3_input_port.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/legoev3/ev3_input_port.c">ev3_input_port.c</a></td>
         <td>Input portion of Device3</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/legoev3/ev3_output_port.c">ev3_input_port.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/legoev3/ev3_output_port.c">ev3_input_port.c</a></td>
         <td>Output portion of Device3</td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_bt/Linuxmod_AM1808/d_bt.c">d_bt.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/ev3dev-kernel/blob/master/drivers/legoev3/legoev3_bluetooth.c">legoev3_bluetooth.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/legoev3/legoev3_bluetooth.c">legoev3_bluetooth.c</a></td>
         <td>
             d_bt.c Device1 is not implemented yet
             <hr>Device2 is for firmware update, so is not needed in ev3dev
@@ -46,22 +46,22 @@ Most of the EV3 specific drivers are based on the source code for the official L
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_iic/Linuxmod_AM1808/d_iic.c">d_iic.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/i2c/busses/i2c-legoev3.c">i2c-legoev3.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/i2c/busses/i2c-legoev3.c">i2c-legoev3.c</a></td>
         <td>Using standard linux kernel i2c</td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_power/Linuxmod_AM1808/d_power.c">d_power.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/power/legoev3_battery.c">legoev3_battery.c</a></td>
-        <td>ev3dev power off is done in <a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/arch/arm/mach-davinci/board-</td>legoev3.c">board-legoev3.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/power/legoev3_battery.c">legoev3_battery.c</a></td>
+        <td>ev3dev power off is done in <a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/board-</td>legoev3.c">board-legoev3.c</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_pwm/Linuxmod_AM1808/d_pwm.c">d_pwm.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/legoev3/ev3_tacho_motor.c">ev3_tacho_motor.c</a><br /><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/legoev3/tacho_motor_class.c">tacho_motor_class.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/legoev3/ev3_tacho_motor.c">ev3_tacho_motor.c</a><br /><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/legoev3/tacho_motor_class.c">tacho_motor_class.c</a></td>
         <td></td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_sound/Linuxmod_AM1808/d_sound.c">d_sound.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/sound/pwm/legoev3.c">legoev3.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/sound/pwm/legoev3.c">legoev3.c</a></td>
         <td>Implemented as a ALSA sound driver for PCM playback and an input device for tone playback</td>
     </tr>
     <tr>
@@ -90,17 +90,17 @@ https://github.com/mindboards/ev3dev-kernel/tree/master/drivers/tty/serial/omapl
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/arch/arm/mach-davinci/board-da850-evm.c">board-da850-evm.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/arch/arm/mach-davinci/board-legoev3.c">board-legoev3.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/board-legoev3.c">board-legoev3.c</a></td>
         <td></td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/arch/arm/mach-davinci/davinci-iic.c">davinci-iic.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/arch/arm/mach-davinci/legoev3-fiq.c">legoev3-fiq.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/legoev3-fiq.c">legoev3-fiq.c</a></td>
         <td>lsm2012 just uses this for i2c, ev3dev uses it for i2c and sound</td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/drivers/video/st7586fb.c">st7586fb.c</a></td>
-        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/video/st7586fb.c">st7586fb.c</a></td>
+        <td><a href="https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/video/st7586fb.c">st7586fb.c</a></td>
         <td></td>
     </tr>
 </table>
