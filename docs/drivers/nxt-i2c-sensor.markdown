@@ -28,6 +28,6 @@ You can find devices bound to this driver in the directory
 `/sys/bus/i2c/drivers/nxt-i2c-sensor/`. However, these drivers provide a
 [lego-sensor device], which is where all the really useful attributes are.
 
-[supported sensors]: /docs/sensors
+[supported sensors]: /docs/sensors#supported-sensors
 [lego-sensor device]: /docs/drivers/lego-sensor-class
 
