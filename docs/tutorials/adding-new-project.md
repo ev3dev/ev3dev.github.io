@@ -31,7 +31,7 @@ To do this, open a browser and navigate to the [website repository]. Make
 sure that you are signed in to your GitHub account, and then click the "fork"
 button in the upper-right corner.
 
-<img src="https://github-images.s3.amazonaws.com/help/repository/fork_button.jpg" style="max-width: 300px;" />
+<img src="https://github-images.s3.amazonaws.com/help/repository/fork_button.jpg" style="max-width: 300px;" alt="github screenshot" />
 
 It should take a second, but when GitHub finishes processing your request you
 should be at a page very similar to where you started, except now you are
@@ -104,7 +104,7 @@ select "gh-pages."
 
 Now click the green "Compare, review and pull request" button.
 
-<img src="https://github-images.s3.amazonaws.com/help/pull_requests/pull-request-start-review-button.png" style="max-width: 300px;" />
+<img src="https://github-images.s3.amazonaws.com/help/pull_requests/pull-request-start-review-button.png" style="max-width: 300px;" alt="github screenshot" />
 
 Then click "Create pull request," and enter a title and brief description of
 your new page before clicking the button that says "Create pull request" again

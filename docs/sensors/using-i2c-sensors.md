@@ -247,8 +247,8 @@ With the mindsensors.com Realtime Clock Sensor on input port 2.
     00:                         46 72 65 65 20 72 61 6d            Free ram
     10: 20 73 70 61 63 65 21                                space!
 
-[lego-sensor]: ../lego-sensor-class
+[lego-sensor]: /docs/drivers/lego-sensor-class
 [I2C Sensor Addressing]: ../i2c-sensor-addressing
 [port splitter]: http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=79
 [sensor MUX]: http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=179
-[nxt-i2c-sensor]: ../nxt-i2c-sensor
+[nxt-i2c-sensor]: /docs/drivers/nxt-i2c-sensor

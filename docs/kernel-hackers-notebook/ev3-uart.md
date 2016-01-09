@@ -2,7 +2,8 @@
 title: EV3 UART
 ---
 
-The [AM1808 SoC](../ev3-processor) has 3 hardware [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter) controllers. We are also using the [PRU](../ev3-pru) to provide 2 additional software UARTs.
+The [AM1808 SoC](../ev3-processor) has 3 hardware [UART] controllers. We are
+also using the [PRU](../ev3-pru) to provide 2 additional software UARTs.
 
 ## Usage
 
@@ -19,9 +20,22 @@ __PRU0/SUART1__ | Input port 3 UART sensors.
 
 See the [PRU](../ev3-pru) page for info on the PRU UART drivers.
 
-The SoC UARTs are standard UARTs and therefore use the [8250](https://github.com/ev3dev/ev3dev-kernel/tree/uart-sensors/drivers/tty/serial/8250) driver. Both types of UARTs (SoC and PRU) of course implement the [tty](https://github.com/ev3dev/ev3dev-kernel/tree/uart-sensors/drivers/tty) device class. The interesting part is the LEGOEV3 [line discipline](https://github.com/ev3dev/ev3dev-kernel/blob/uart-sensors/Documentation/serial/tty.txt) that runs on top of the tty driver.
+The SoC UARTs are standard UARTs and therefore use the
+[8250](https://github.com/ev3dev/ev3-kernel/tree/ev3dev-jessie/drivers/tty/serial/8250)
+driver. Both types of UARTs (SoC and PRU) of course implement the
+[tty](https://github.com/ev3dev/ev3-kernel/tree/ev3dev-jessie/drivers/tty)
+device class. The interesting part is the LEGOEV3 [line discipline] that runs
+on top of the tty driver.
 
 ### LEGOEV3 Line Discipline
-Source: [uart-sensors/drivers/legoev3/legoev3_uart.c](https://github.com/ev3dev/ev3dev-kernel/blob/uart-sensors/drivers/legoev3/legoev3_uart.c)
+Source: [ev3_uart_sensor_ld.c](https://github.com/ev3dev/lego-linux-drivers/blob/master/sensors/ev3_uart_sensor_ld.c)
 
-There are udev rules in place ([/lib/udev/rules.d/ev3dev-uart.rules](https://github.com/ev3dev/ev3dev-base/blob/master/debian/ev3dev-uart.udev) in conjunction with [/lib/ev3dev/uart.sh](https://github.com/ev3dev/ev3dev-base/blob/master/usr/lib/ev3dev/uart.sh)) that attach the line discipline to a tty (serial port) when a UART sensor is detected on a given input port. When the sensor is removed, the line discipline is detached (process killed). 
+There are udev rules in place ([ev3.rules] in conjunction with [ev3-uart@.service])
+that attach the line discipline to a tty (serial port) when a UART sensor is
+detected on a given input port. When the sensor is removed, the line discipline
+is detached (process killed).
+
+[UART]: https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter
+[line discipline]: https://github.com/ev3dev/ev3dev-kernel/blob/uart-sensors/Documentation/serial/tty.txt
+[ev3.rules]: https://github.com/ev3dev/ev3-systemd/blob/ev3dev-jessie/debian/ev3.udev#L19
+[ev3-uart@.service]: https://github.com/ev3dev/ev3-systemd/blob/ev3dev-jessie/systemd/ev3-uart%40.service
