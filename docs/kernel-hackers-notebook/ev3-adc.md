@@ -3,7 +3,7 @@ title: EV3 A/DC
 subtitle: Analog to Digital Converter
 ---
 
-The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an [SPI](./ev3-spi). 
+The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an [SPI](../ev3-spi). 
 
 ## Essentials
 

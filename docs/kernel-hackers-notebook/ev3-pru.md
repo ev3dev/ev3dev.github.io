@@ -3,7 +3,7 @@ title: EV3 PRU
 subtitle: Programmable Runtime Unit
 ---
 
-The [AM1808 SoC](../ev3-rocessor) has 2 [Independent Programmable Realtime
+The [AM1808 SoC](../ev3-processor) has 2 [Independent Programmable Realtime
 Unit](http://processors.wiki.ti.com/index.php/Programmable_Realtime_Unit_Subsystem) (PRU) Cores.
 
 ## Usage

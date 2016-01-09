@@ -10,7 +10,7 @@ The ev3dev kernel was originally based on [Davinci PSP 03.22.00.02](http://proce
 
 Most, if not all, of the customization of the ev3dev kernel is the addition and patching of hardware drivers for the EV3 specific hardware. TODO: add more about the ev3dev device driver philosophy - particularly in regard to attributes.
 
-Be sure to check out the [hardware](index.html#hardware) pages for specifics on how the drivers interface with the hardware.
+Be sure to check out the [hardware](../index.html#hardware) pages for specifics on how the drivers interface with the hardware.
 
 ## LMS2012 sources
 
