@@ -17,8 +17,8 @@
 # --test '<command>' will run <command> in a shell and return the result. The
 # working directory will be a temporary directory containing the fixed up files.
 #
-# Use BASENAME environment variable to override basename. Use "@TMP@" as a
-# placeholder for the temporary directory that is created.
+# Use BASENAME environment variable to override basename. Use "@FULL_PATH@" as a
+# placeholder for the full path to the temporary directory that is created.
 
 require 'tmpdir'
 
@@ -32,7 +32,7 @@ Dir.mktmpdir do |tmp|
     Dir.chdir tmp
     system "git init"
 
-    if ARGV[0] != "--test"
+    unless ARGV.include? "--test"
         git_url = ARGV[0]
         if not git_url.include? "/"
             git_url = "git@github.com:#{ARGV[0]}/ev3dev.github.io.git"
@@ -53,7 +53,7 @@ Dir.mktmpdir do |tmp|
 
     # prepend ev3dev.github.io to all root-relative urls
     basename = ENV['BASENAME'] || "/ev3dev.github.io"
-    basename = basename.gsub(/@TMP@/, tmp)
+    basename = basename.gsub(/@FULL_PATH@/, tmp)
     system "git add ."
     file_names = `git ls-files | grep '.html$'`
     file_names.each_line do |file_name|
