@@ -28,7 +28,7 @@ bundle exec jekyll build --trace
 
 echo "Validating HTML ----------------------------------"
 # We want to use the publish script so that we can implement other transformations in the future
-ruby publish.rb --no-fix-links --test 'htmlproof ./ --href-ignore ".*example\.com.*"'
+ruby publish.rb --no-fix-links --test 'htmlproof ./ --href-ignore /.*example\.com.*/'
 
 # If the site build succeeded but we found BOMs, we want to fail the build
 if [ $FOUND_BOM == true ]
