@@ -38,22 +38,17 @@ the ev3dev kernel. It is mostly information about the hardware and device driver
 
 ### Sensors (Input Devices)
 
-* [Sensor Driver Model](ev3-sensor-driver-model)
-* [List of Sensors](list-of-sensors)
+* [Sensor Driver Model](/docs/drivers/lego-sensor-class)
+* [List of Sensors](/docs/sensors/#supported-sensors)
 
 ### Motors (Output Devices)
 
-* [Motor Driver Model](ev3-motor-driver-model)
-* [List of Motors](list-of-motors)
+* [Motor Driver Model](/docs/drivers/tacho-motor-class)
+* [List of Motors](/docs/motors/#motors)
 
 
 ## Software
 
 ### Operating System
 
-* [Kernel v3.16](ev3dev-linux-kernel)
-* [Debian 8 Jessie](ev3dev-debian-distro)
-
-### Applications
-
-* [fbcat (screen capture)](fbcat)
+* [Kernel v3.16](../ev3dev-linux-kernel)

@@ -6,8 +6,8 @@ categories: docs getting-started
 * Table of Contents
 {:toc}
 
-So you are ready to try out ev3dev. Great!. Here are step-by-step instructions
-to get ev3dev up and running on your EV3 or Raspberry Pi.
+So you're ready to try out ev3dev. Great! Here are step-by-step instructions
+to help you get ev3dev up and running on your EV3 or Raspberry Pi.
 
 First, here are the things you need before starting:
 

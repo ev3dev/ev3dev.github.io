@@ -184,21 +184,21 @@
                 "id": "EV3_OUTPUT_PORT_MODE_TACHO_MOTOR",
                 "name": "tacho-motor",
                 "name_footnote": "[^tacho-motor-mode]",
-                "notes": "\n[^tacho-motor-mode]: Configures the port to use the\n    [tacho-motor] driver module. The default driver is the\n    EV3 Large Motor (`lego-ev3-l-motor`). You can change\n    the driver using the `set_device` attribute.\n    ^\n    [tacho-motor]: /docs/drivers/tacho-motor\n    \n    "
+                "notes": "\n[^tacho-motor-mode]: Configures the port to use the\n    [tacho-motor] driver module. The default driver is the\n    EV3 Large Motor (`lego-ev3-l-motor`). You can change\n    the driver using the `set_device` attribute.\n    ^\n    [tacho-motor]: /docs/drivers/tacho-motor-class\n    \n    "
             },
             {
                 "description": "Load the [dc-motor] device.",
                 "id": "EV3_OUTPUT_PORT_MODE_DC_MOTOR",
                 "name": "dc-motor",
                 "name_footnote": "[^dc-motor-mode]",
-                "notes": "\n[^dc-motor-mode]: This can be use with MINDSTORMS RCX\n    motors, Power Functions motors and any other 'plain' DC\n    motor. By 'plain', we mean the motor is just a motor without\n    any feedback.\n    ^\n    [dc-motor]: /docs/drivers/dc-motor\n    \n    "
+                "notes": "\n[^dc-motor-mode]: This can be use with MINDSTORMS RCX\n    motors, Power Functions motors and any other 'plain' DC\n    motor. By 'plain', we mean the motor is just a motor without\n    any feedback.\n    ^\n    [dc-motor]: /docs/drivers/dc-motor-class\n    \n    "
             },
             {
                 "description": "Load the [led] device.",
                 "id": "EV3_OUTPUT_PORT_MODE_LED",
                 "name": "led",
                 "name_footnote": "[^led-mode]",
-                "notes": "\n[^led-mode]: This can be used with MINDSTORMS RCX LEDs,\n    Power Functions LEDs or any other LED connected to pins 1\n    and 2 of the output port.\n    ^\n    [led]: /docs/drivers/led\n    \n    "
+                "notes": "\n[^led-mode]: This can be used with MINDSTORMS RCX LEDs,\n    Power Functions LEDs or any other LED connected to pins 1\n    and 2 of the output port.\n    ^\n    [led]: /docs/drivers/rcx-led\n    \n    "
             },
             {
                 "description": "Provide access to low level drivers.",
