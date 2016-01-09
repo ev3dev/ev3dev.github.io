@@ -5,7 +5,7 @@
 # This script publishes the ev3dev website to the gh-pages branch of your
 # personal fork. This allows you to share a preview of your changes with others.
 #
-# Usage: ./publish.rb { <gh-user> | <gh-url> | --test '<command>' }
+# Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ] 
 #
 # <gh-user> is your github user name. This is short for
 # "git@github.com:<gh-user>/ev3dev.github.io.git"
@@ -16,6 +16,8 @@
 #
 # --test '<command>' will run <command> in a shell and return the result. The
 # working directory will be a temporary directory containing the fixed up files.
+#
+# --no-fix-links will prevent modification of links in anchor and img elements.
 #
 # Use BASENAME environment variable to override basename. Use "@FULL_PATH@" as a
 # placeholder for the full path to the temporary directory that is created.
@@ -79,13 +81,13 @@ Dir.mktmpdir do |tmp|
         File.open(file_name, "w") { |file| file.puts new_contents }
     end
     
-    if git_url
+    if ARGV.include? '--test'
+        # run test command
+        exit(system ARGV[ARGV.index ('--test') + 1])
+    elsif git_url
         system "git add ."
         message = "Site updated at #{Time.now.utc}"
         system "git commit -m #{message.inspect}"
-        system "git push origin master:refs/heads/gh-pages --force"
-    else
-        # run test command
-        exit(system ARGV[1])
+        system "git push origin master:refs/heads/gh-pages --force"        
     end
 end
