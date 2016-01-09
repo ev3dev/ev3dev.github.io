@@ -25,7 +25,7 @@
 require 'tmpdir'
 
 # TODO: We shou;d use a real parser library. This has many ways it could go wrong.
-if ARGV.count < 1 or ARGV.include? '--test' && ARGV[ARGV.index ('--test') + 1].nil?
+if ARGV.count < 1 or ARGV.include? '--test' && ARGV[ARGV.index('--test') + 1].nil?
     STDERR.puts "Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ]"
     exit(1)
 end
@@ -84,7 +84,7 @@ Dir.mktmpdir do |tmp|
     
     if ARGV.include? '--test'
         # run test command
-        exit(system ARGV[ARGV.index ('--test') + 1])
+        exit(system ARGV[ARGV.index('--test') + 1])
     elsif git_url
         system "git add ."
         message = "Site updated at #{Time.now.utc}"
