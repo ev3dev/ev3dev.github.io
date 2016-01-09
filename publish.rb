@@ -51,29 +51,34 @@ Dir.mktmpdir do |tmp|
     # having cname sends you annoying email
     FileUtils.rm 'CNAME'
 
-    # prepend ev3dev.github.io to all root-relative urls
-    basename = ENV['BASENAME'] || "/ev3dev.github.io"
-    basename = basename.gsub(/@FULL_PATH@/, tmp)
     system "git add ."
-    file_names = `git ls-files | grep '.html$'`
-    file_names.each_line do |file_name|
-        file_name = file_name.strip
+
+    unless ARGV.include? "--no-fix-links"
+
+        # prepend ev3dev.github.io to all root-relative urls
+        basename = ENV['BASENAME'] || "/ev3dev.github.io"
+        basename = basename.gsub(/@FULL_PATH@/, tmp)
+        
+        file_names = `git ls-files | grep '.html$'`
+        file_names.each_line do |file_name|
+            file_name = file_name.strip
+            text = File.read(file_name)
+            new_contents = text.gsub(/(href|src)="\//, "\\1=\"#{basename}/")
+            File.open(file_name, "w") { |file| file.puts new_contents }
+        end
+
+        # Do the same thing for seach files
+        file_name = 'javascripts/search.js'
         text = File.read(file_name)
-        new_contents = text.gsub(/(href|src)="\//, "\\1=\"#{basename}/")
+        new_contents = text.gsub(/(\/search-index.json)/, "#{basename}\\1")
+        File.open(file_name, "w") { |file| file.puts new_contents }
+
+        file_name = 'search-index.json'
+        text = File.read(file_name)
+        new_contents = text.gsub(/("href"\s*:\s*")\//, "\\1#{basename}/")
         File.open(file_name, "w") { |file| file.puts new_contents }
     end
-
-    # Do the same thing for seach files
-    file_name = 'javascripts/search.js'
-    text = File.read(file_name)
-    new_contents = text.gsub(/(\/search-index.json)/, "#{basename}\\1")
-    File.open(file_name, "w") { |file| file.puts new_contents }
-
-    file_name = 'search-index.json'
-    text = File.read(file_name)
-    new_contents = text.gsub(/("href"\s*:\s*")\//, "\\1#{basename}/")
-    File.open(file_name, "w") { |file| file.puts new_contents }
-
+    
     if git_url
         system "git add ."
         message = "Site updated at #{Time.now.utc}"
