@@ -30,33 +30,6 @@ Scroll down and uncomment the appropriate lines for your hardware.
 
 Finally do `sudo reboot`.
 
-## Set up wifi ##
-Next I like to setup wireless networking. Robots should go untethered! Here is how. It's easy in an interactive tool call `connmanctl`. You connect once, and next time you boot, it's all configured. On my ev3dev machine it went like this:
-
-    anton@ev3dev:~$ connmanctl
-    Error getting VPN connections: The name net.connman.vpn was not provided by any
-    connmanctl> enable wifi
-    Enabled wifi
-    connmanctl> scan wifi
-    Scan completed for wifi
-    connmanctl> services
-    *AO Wired                ethernet_b827ebbde13c_cable
-                             wifi_e8de27077de3_hidden_managed_none
-        AH04044914           wifi_e8de27077de3_41483034303434393134_managed_psk
-        Frissie              wifi_e8de27077de3_46726973736965_managed_psk
-        ruijgt gast          wifi_e8de27077de3_7275696a67742067617374_managed_psk
-        schuur               wifi_e8de27077de3_736368757572_managed_psk
-    connmanctl> agent on
-    Agent registered
-    connmanctl> connect wifi_e8de27077de3_41      # You can use the TAB key at this point to autocomplete the name
-    connmanctl> connect wifi_e8de27077de3_41483034303434393134_managed_psk
-    Agent RequestInput wifi_e8de27077de3_41483034303434393134_managed_psk
-      Passphrase = [ Type=psk, Requirement=mandatory ]
-    Passphrase? *************
-    Connected wifi_e8de27077de3_41483034303434393134_managed_psk
-    connmanctl> quit
-
-
 ## Set up development environment ##
 I prefer to have a passwordless ssh to the robot. For this I [add a user with the same login name as on my development computer.](https://www.raspberrypi.org/documentation/linux/usage/users.md) Remember to give yourself sudo rights as explained on that same page.
 After adding that user, you can [set up passwordless ssh](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md).
@@ -105,7 +78,7 @@ Now type the hostname of the ev3dev machine, followed by a semicolon the project
 ## Installing ev3dev-python on the development machine ##
 Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. 
 
-![Curly lines]({{ site.github.url }}/images/osx/PyCharm/missing-lib.png")
+![Curly lines]({{ site.github.url }}/images/osx/PyCharm/missing-lib.png =435)
 
 And that's logical, because the ev3dev library is missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
 
@@ -114,3 +87,8 @@ And that's logical, because the ev3dev library is missing on the development mac
     python setup.py install
     cd ..                     # Optional
     rm -r ev3dev-lang-python/ # Optional to remove the downloaded files. It's installed now anyway.
+
+## Using the power of the IDE ##
+
+With the IDE (PyCharm) set up and the library installed you can code much faster. PyCharm will highlight most coding errors and typos. It will also suggest to autocomplete your code and show documentation. Let's try.
+
