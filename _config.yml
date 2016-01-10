@@ -66,5 +66,3 @@ defaults:
       
 kramdown:
     toc_levels: "2,3"
-    input: GFM
-    syntax_highlighter: rouge
