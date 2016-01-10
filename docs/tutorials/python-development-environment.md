@@ -82,29 +82,30 @@ Yay! We have a new project. It's empty though. So let's add some code. Start a t
 
 
 Now add the following code:
-~~~ python
-from ev3dev.brickpi import OUTPUT_A, Motor #Replace brickpi with ev3 if you use that.
+
+{% highlight python %}
+from ev3dev.auto import OUTPUT_A, Motor 
 import time
 
 m = Motor(OUTPUT_A)
 m.run_forever(duty_cycle_sp = 100)
 time.sleep(1)
 m.stop()
-~~~
+{% endhighlight %}
 
 Press ctrl-X and `y` to save. It's time to let the first motor run. Plug it into port A on your brick and go: `python run_motor.py`. Tataaa! The motor is running full power for a second.
 
 Now typing code in nano is fine, but it's much nicer to do it inside a real IDE (Integrated Development Environment). There are many, like Visual Studio, Eclipse and PyCharm. My Favourite is PyCharm Community Edition. So go grab a copy of that one and start it on your development machine.
 
+{% include inline-screenshot.html source="/images/osx/PyCharm/welcome.png" caption="The 'Welcome' dialog in PyCharm"%}
+
 What we are going to do now is make a clone of our project on the ev3dev machine to start working on it on the development machine.
 In the Welcome dialog choose: 'Checkout from version control' > 'Git'
 Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory.
 
-{% include inline-screenshot.html source="/images/osx/PyCharm/welcome.png" caption="The 'Welcome' dialog in PyCharm"%}
-
 Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. 
 
-{% include inline-screenshot.html source="/images/osx/PyCharm/missing-lib.png" caption="Grrr. Those curly red lines. Fix them!" %} 
+![Curly red lines](/images/osx/PyCharm/missing-lib.png")
 
 And that's logical, because the ev3dev library is missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
 
