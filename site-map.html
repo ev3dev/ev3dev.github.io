@@ -19,7 +19,7 @@ title: Site Map
     {% endif %}
     {% assign page_name=paths | last %}
     {% if depth > 0 and page_name != 'site-map' %}
-        <li><a href="{{page.url}}">{{ page.title }}</a> ({{ page_name }})</li>
+        <li><a href="{{page.url}}">{{ page.title | xml_escape }}</a> ({{ page_name }})</li>
     {% endif %}
     {% assign last_depth=depth %}
 {% endfor %}

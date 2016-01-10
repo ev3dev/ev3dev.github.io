@@ -16,7 +16,7 @@ Most, if not all, of the customization of the ev3dev kernel is the addition and
 patching of hardware drivers for the EV3 specific hardware. TODO: add more about
 the ev3dev device driver philosophy - particularly in regard to attributes.
 
-Be sure to check out the [hardware](index.html#hardware) pages for specifics on
+Be sure to check out the [hardware](../index.html#hardware) pages for specifics on
 how the drivers interface with the hardware.
 
 ## LMS2012 sources
@@ -50,7 +50,7 @@ drivers to LMS2012 drivers.
         <td>
             d_bt.c Device1 is not implemented yet
             <hr>Device2 is for firmware update, so is not needed in ev3dev
-            <hr>"slow clock" comes from <a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/arch/arm/mach-davinci/board-da850-evm.c">board-da850-evm.c</a> in the lsm2012 kernel
+            <hr>"slow clock" comes from <a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/arch/arm/mach-davinci/board-da850-evm.c">board-da850-evm.c</a> in the lms2012 kernel
         </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ drivers to LMS2012 drivers.
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_power/Linuxmod_AM1808/d_power.c">d_power.c</a></td>
         <td markdown="span">[legoev3_battery.c]</td>
-        <td>ev3dev power off is done in <a href="https://github.com/ev3dev/ev3dev-kernel/blob/master/arch/arm/mach-davinci/board-</td>legoev3.c">board-legoev3.c</a></td>
+        <td markdown="span">ev3dev power off is done in [board-legoev3.c]</td>
     </tr>
     <tr>
         <td rowspan="2"><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/lms2012/d_pwm/Linuxmod_AM1808/d_pwm.c">d_pwm.c</a></td>
@@ -108,7 +108,7 @@ drivers to LMS2012 drivers.
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/arch/arm/mach-davinci/davinci-iic.c">davinci-iic.c</a></td>
         <td>[legoev3-fiq.c]</td>
-        <td>lsm2012 just uses this for i2c, ev3dev uses it for i2c and sound</td>
+        <td>lms2012 just uses this for i2c, ev3dev uses it for i2c and sound</td>
     </tr>
     <tr>
         <td><a href="https://github.com/mindboards/ev3sources/blob/7357369b6ebae4ee62001f3964f0f5fd0cce3c32/extra/linux-03.20.00.13/drivers/video/st7586fb.c">st7586fb.c</a></td>

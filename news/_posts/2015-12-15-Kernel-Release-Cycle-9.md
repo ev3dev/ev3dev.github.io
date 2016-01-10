@@ -48,6 +48,6 @@ This EV3 kernel also includes the latest upstream patches. See [ckt20-changelog]
 
 [ckt20-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-November/065769.html
 [ckt21-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-December/066818.html
-[ev3-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
-[rpi-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-rpi/changelog
-[rpi2-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-rpi2/changelog
+[ev3-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/c72b03100a3aa8e332b410074e74572b35df2324/ev3dev-ev3/changelog
+[rpi-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/c72b03100a3aa8e332b410074e74572b35df2324/ev3dev-rpi/changelog
+[rpi2-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/c72b03100a3aa8e332b410074e74572b35df2324/ev3dev-rpi2/changelog

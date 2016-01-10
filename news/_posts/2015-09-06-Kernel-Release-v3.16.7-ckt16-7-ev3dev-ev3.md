@@ -24,4 +24,4 @@ and [ckt16-changelog].
 
 [ckt15-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-July/060734.html
 [ckt16-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-August/061821.html
-[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
+[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ca79dfae4abdb4740b3053b72ca6667d24b5e6c0/ev3dev-ev3/changelog
