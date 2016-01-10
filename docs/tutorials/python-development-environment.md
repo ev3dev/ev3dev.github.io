@@ -53,7 +53,6 @@ Next I like to setup wireless networking. Robots should go untethered! Here is h
     Agent RequestInput wifi_e8de27077de3_41483034303434393134_managed_psk
       Passphrase = [ Type=psk, Requirement=mandatory ]
     Passphrase? *************
-
     Connected wifi_e8de27077de3_41483034303434393134_managed_psk
     connmanctl> quit
 
@@ -66,26 +65,16 @@ With passwordless ssh and the same username on the ev3dev machine, you can go `s
 
 Next we need a versioning system. That's a tool for tracking changes you made to your code. Coincidentally the same tool is also very handy for transferring code between computers or sharing it on the web. There are several, but I prefer git. It's not installed by default so you have to do:
 
-``` bash
-sudo apt-get update
-sudo apt-get install git
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-```
+    sudo apt-get update
+    sudo apt-get install git
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
 
 Now let's make a new project using our versioning system. Just type:
-<<<<<<< HEAD
 
     mkdir myproject
     cd myproject/
     git init
-=======
-``` bash
-mkdir myproject
-cd myproject/
-git init
-```
->>>>>>> parent of d05dc7d... Improved code highlighting
 
 Yay! We have a new project. It's empty though. So let's add some code. Start a text editor like this:
 `nano run_motor.py`
@@ -113,13 +102,7 @@ What we are going to do now is make a clone of our project on the ev3dev machine
 In the Welcome dialog choose: 'Checkout from version control' > 'Git'
 Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory.
 
-<<<<<<< HEAD
 Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. 
-=======
-{% include screenshot.html source="/images/Mac-OS-X/PyCharm/welcome.png" %}
-
-Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. {% include screenshot.html source="/images/Mac-OS-X/PyCharm/missing-lib.png" %} It doesn't recognise it. And that's logical, because it's missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
->>>>>>> parent of d05dc7d... Improved code highlighting
 
 ![Curly red lines](/images/osx/PyCharm/missing-lib.png)
 
