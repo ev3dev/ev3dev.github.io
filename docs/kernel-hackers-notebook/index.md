@@ -51,4 +51,4 @@ the ev3dev kernel. It is mostly information about the hardware and device driver
 
 ### Operating System
 
-* [Kernel v3.16](../ev3dev-linux-kernel)
+* [Kernel v3.16](ev3dev-linux-kernel)

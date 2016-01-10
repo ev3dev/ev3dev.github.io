@@ -30,7 +30,7 @@ This kernel also includes the latest upstream patches. See [ckt7-changelog],
 [tacho-motor tutorial]: /docs/tutorials/tacho-motors
 [tacho-motor-class]: /docs/drivers/tacho-motor-class
 [issue #282]: https://github.com/ev3dev/ev3dev/issues/282
-[ckt7-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/054674.html
-[ckt8-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-March/055191.html
-[ckt9-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-March/055905.html
-[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/debian/changelog
+[ckt7-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/053954.html
+[ckt8-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-March/054471.html
+[ckt9-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-March/055185.html
+[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/b39e9f938be16ac555f54720bbc6b26a9afd2f14/debian/changelog

@@ -101,12 +101,23 @@ The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
     </tr>
     <tr>
         <td>15</td>
-        <td>N/C<td>Was motor current on pre-release hardware</td>
-        <td></td>
+        <td>N/C<td>
+        <td>Was motor current on pre-release hardware</td>
     </tr>
 </table>
 
 ## Notes
 
-* In lsm2012, you will see scaling of the value read from the ADC by 4096 (12-bits) instead of by 1024 (10-bits). This is because they are not shifting the value read to the right 2 bits. Since this is a 10-bit chip, the 2 least significant bits read will always be 0.
-* A TI employee wrote a [hwmon](https://www.kernel.org/doc/Documentation/hwmon/) driver for the ADS7957 ([source](https://github.com/nmenon/linux-2.6-playground/blob/devel/beaglebone/base/drivers/hwmon/ads79xx.c)) which is used by [lm-sensors](http://www.lm-sensors.org/). This interface is generally for low-speed (on the order of 1Hz) polling of fan speeds, temperatures, voltages, etc. This does not really fit our needs for ev3dev, so we borrowed some code and wrote our own driver.
+* In lsm2012, you will see scaling of the value read from the ADC by 4096
+  (12-bits) instead of by 1024 (10-bits). This is because they are not shifting
+  the value read to the right 2 bits. Since this is a 10-bit chip, the 2 least
+  significant bits read will always be 0.
+* A TI employee wrote a [hwmon] driver for the ADS7957 ([source][ads79xx.c])
+  which is used by [lm-sensors]. This interface is generally for low-speed
+  (on the order of 1Hz) polling of fan speeds, temperatures, voltages, etc.
+  This does not really fit our needs for ev3dev, so we borrowed some code and
+  wrote our own driver.
+
+[hwmon]: https://www.kernel.org/doc/Documentation/hwmon/
+[ads79xx.c]: https://github.com/nmenon/linux-2.6-playground/blob/devel/beaglebone/base/drivers/hwmon/ads79xx.c
+[lm-sensors]: http://www.lm-sensors.org/
