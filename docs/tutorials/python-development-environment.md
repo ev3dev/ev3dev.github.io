@@ -26,14 +26,14 @@ You're logged in to the command line. Cool! This step will activate the BrickPi.
 `sudo nano /boot/flash/config.txt` (the password is still `maker`)
 Scroll down and uncomment the appropriate lines for your hardware.
 
-     Optional: I have multiple Raspberry Pis and Mindstorms brains. I like to keep them apart on the network by giving them separate names. I renamed mine like this: `sudo hostnamectl set-hostname ev3dev-rpi`
+**TIP:** I have multiple Raspberry Pis and Mindstorms brains. I like to keep them apart on the network by giving them separate names. I renamed mine like this: `sudo hostnamectl set-hostname ev3dev-rpi`
 
 Finally do `sudo reboot`.
 
-## Set up networking ##
+## Set up wifi ##
 Next I like to setup wireless networking. Robots should go untethered! Here is how. It's easy in an interactive tool call `connmanctl`. You connect once, and next time you boot, it's all configured. On my ev3dev machine it went like this:
 
-~~~ sh
+```
 anton@ev3dev:~$ connmanctl
 Error getting VPN connections: The name net.connman.vpn was not provided by any
 connmanctl> enable wifi
@@ -57,7 +57,7 @@ Passphrase? *************
 
 Connected wifi_e8de27077de3_41483034303434393134_managed_psk
 connmanctl> quit
-~~~
+```
 
 
 ## Set up development environment ##
@@ -67,26 +67,27 @@ After adding that user, you can [set up passwordless ssh](https://www.raspberryp
 With passwordless ssh and the same username on the ev3dev machine, you can go `ssh ev3dev` and you're in!
 
 Next we need a versioning system. That's a tool for tracking changes you made to your code. Coincidentally the same tool is also very handy for transferring code between computers or sharing it on the web. There are several, but I prefer git. It's not installed by default so you have to do:
-~~~ sh
+
+``` bash
 sudo apt-get update
 sudo apt-get install git
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-~~~
+```
 
 Now let's make a new project using our versioning system. Just type:
-~~~ sh
+``` bash
 mkdir myproject
 cd myproject/
 git init
-~~~
+```
 
 Yay! We have a new project. It's empty though. So let's add some code. Start a text editor like this:
 `nano run_motor.py`
 
 
 Now add the following code:
-~~~ python
+``` py
 from ev3dev.brickpi import OUTPUT_A, Motor #Replace brickpi with ev3 if you use that.
 import time
 
@@ -94,7 +95,7 @@ m = Motor(OUTPUT_A)
 m.run_forever(duty_cycle_sp = 100)
 time.sleep(1)
 m.stop()
-~~~
+```
 
 Press ctrl-X and `y` to save. It's time to let the first motor run. Plug it into port A on your brick and go: `python run_motor.py`. Tataaa! The motor is running full power for a second.
 
@@ -104,9 +105,11 @@ What we are going to do now is make a clone of our project on the ev3dev machine
 In the Welcome dialog choose: 'Checkout from version control' > 'Git'
 Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory.
 
-Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. It doesn't recognise it. And that's logical, because it's missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
+{% include screenshot.html source="/images/Mac-OS-X/PyCharm/welcome.png" %}
 
-~~~ bash
+Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. {% include screenshot.html source="/images/Mac-OS-X/PyCharm/missing-lib.png" %} It doesn't recognise it. And that's logical, because it's missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
+
+``` bash
 git clone https://github.com/rhempel/ev3dev-lang-python.git
 cd ev3dev-lang-python/
 
@@ -114,4 +117,4 @@ python setup.py install
 cd ..                     # Optional
 rm -r ev3dev-lang-python/ # Optional to remove the downloaded files. It's installed now anyway.
 
-~~~
+```
