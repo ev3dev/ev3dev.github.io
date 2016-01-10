@@ -16,25 +16,25 @@ title: Projects
 
 <div class="row">
     {% for post in site.posts %}
-		{% if post.categories contains "projects" %}
-			{% unless post.id == '/projects/2014/03/21/Example-Project' %}
-	            {% assign num_words = 60 %}
-			<div class="col-sm-6 col-md-4">
+        {% if post.categories contains "projects" %}
+            {% unless post.id == '/projects/2014/03/21/Example-Project' %}
+                {% assign num_words = 60 %}
+            <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     {% if post.youtube_video_id %}
-						{% assign num_words = 35 %}
-						<a href="{{ post.url }}">
-							<img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" alt="project thumbnail image" />
-						</a>
+                        {% assign num_words = 35 %}
+                        <a href="{{ post.url }}">
+                            <img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" alt="project thumbnail image" />
+                        </a>
                     {% endif %}
                     <div class="caption">
                         <h3>{{ post.title }}</h3>
-						<p>{{ post.excerpt | truncatewords: num_words }}</p>
-						<p><a class="btn btn-primary" href="{{ post.url }}">Learn more</a></p>
+                        <p>{{ post.excerpt | truncatewords: num_words }}</p>
+                        <p><a class="btn btn-primary" href="{{ post.url }}">Learn more</a></p>
                     </div>
                 </div>
-			</div>
-			{% endunless %}
-		{% endif %}
+            </div>
+            {% endunless %}
+        {% endif %}
     {% endfor %}
 </div>
