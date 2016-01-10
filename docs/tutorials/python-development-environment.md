@@ -102,9 +102,10 @@ What we are going to do now is make a clone of our project on the ev3dev machine
 In the Welcome dialog choose: 'Checkout from version control' > 'Git'
 Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory.
 
+## Installing ev3dev-python on the development machine ##
 Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. 
 
-![Curly red lines](/images/osx/PyCharm/missing-lib.png)
+{% include inline-screenshot.html source="/images/osx/PyCharm/missing-lib.png" caption="Darn those curly red lines"%}
 
 And that's logical, because the ev3dev library is missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
 
