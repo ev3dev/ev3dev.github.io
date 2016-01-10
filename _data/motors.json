@@ -95,7 +95,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Motor 9V Micromotor",
         "vendor_part_number": "70823",
-        "vendor_website": "http://www.bricklink.com/catalogItem.asp?P=2986"
+        "vendor_website": "https://rebrickable.com/parts/2986"
     },
     {
         "id": "LEGO_9V_MINI_MOTOR_OLDER",
@@ -131,7 +131,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Power Functions Train Motor",
         "vendor_part_number": "88002",
-        "vendor_website": "http://shop.lego.com/en-US/Power-Functions-Train-Motor-88002"
+        "vendor_website": "http://shop.lego.com/en-US/LEGO-Power-Functions-Train-Motor-88002"
     },
     {
         "id": "LEGO_PF_L_MOTOR",

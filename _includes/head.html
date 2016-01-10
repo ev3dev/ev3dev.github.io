@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{{ page.title }}</title>
+    <title>{{ page.title | xml_escape }}</title>
     <link rel="alternate" type="application/atom+xml" href="/news/atom.xml" title="Atom feed">
     <link rel="icon" href="/favicon.ico" />
 

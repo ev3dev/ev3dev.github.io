@@ -19,6 +19,6 @@ So, if you want to use the WeDo USB hub or UART sensors with something besides
 the EV3, you can!
 
 [ckt5-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/053889.html
-[ckt6-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/054254.html
+[ckt6-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/053534.html
 [ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/debian/changelog
 [DKMS package]: https://github.com/ev3dev/lego-linux-drivers-dkms
