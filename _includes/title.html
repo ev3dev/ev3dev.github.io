@@ -17,7 +17,7 @@
 
 <div class="page-header">
     <h1>
-        {{ page.title }}
+        {{ page.title | xml_escape }}
         <small>{{ page.subtitle }}</small>
         {% if edit_path %}
             <a class="btn btn-primary pull-right" href="{{ edit_path }}">Edit on Github</a>

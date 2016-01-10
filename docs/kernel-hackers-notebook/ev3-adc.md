@@ -3,7 +3,8 @@ title: EV3 A/DC
 subtitle: Analog to Digital Converter
 ---
 
-The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an [SPI](../ev3-spi). 
+The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
+[SPI](../ev3-spi).
 
 ## Essentials
 
@@ -119,5 +120,5 @@ The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
   wrote our own driver.
 
 [hwmon]: https://www.kernel.org/doc/Documentation/hwmon/
-[ads79xx.c]: https://github.com/nmenon/linux-2.6-playground/blob/devel/beaglebone/base/drivers/hwmon/ads79xx.c
+[ads79xx.c]: https://github.com/ev3dev/ev3-kernel/blob/ea696f7f9f757e6af613dcdc523dd1ce72e7c7d1/drivers/hwmon/ads79xx.c
 [lm-sensors]: http://www.lm-sensors.org/

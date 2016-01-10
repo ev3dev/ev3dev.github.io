@@ -20,5 +20,5 @@ the EV3, you can!
 
 [ckt5-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/053889.html
 [ckt6-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-February/053534.html
-[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/debian/changelog
+[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/f808f9d1fd8d60b222c92ccfa2d6d2554f2285f7/debian/changelog
 [DKMS package]: https://github.com/ev3dev/lego-linux-drivers-dkms
