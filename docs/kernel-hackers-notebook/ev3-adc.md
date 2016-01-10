@@ -101,8 +101,8 @@ The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
     </tr>
     <tr>
         <td>15</td>
-        <td>N/C<td>Was motor current on pre-release hardware</td>
-        <td></td>
+        <td>N/C<td/>
+        <td>Was motor current on pre-release hardware</td>
     </tr>
 </table>
 
