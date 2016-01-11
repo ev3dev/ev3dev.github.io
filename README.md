@@ -1,4 +1,4 @@
-Pretty website for ev3dev ![Build Status Images](https://travis-ci.org/ev3dev/ev3dev.github.io.svg)
+Pretty website for ev3dev [![Build Status](https://travis-ci.org/ev3dev/ev3dev.github.io.svg?branch=master)](https://travis-ci.org/ev3dev/ev3dev.github.io)
 ================
 
 This is the web page at <http://www.ev3dev.org> and also <http://ev3dev.github.io>.
