@@ -1,7 +1,7 @@
 ---
 author: "@dlech"
 title: "Kernel Release: v3.16.7-ckt14-6-ev3dev-ev3"
-redirect-from: /news/2015/07/08/Kernel-Release-v3.16.7-ckt11-5-ev3dev-ev3
+redirect_from: /news/2015/07/08/Kernel-Release-v3.16.7-ckt11-5-ev3dev-ev3
 ---
 
 Kernel version 3.16.7-ckt14-6-ev3dev-ev3 has been released. The most noticeable
