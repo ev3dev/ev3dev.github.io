@@ -20,8 +20,7 @@ that ensures that interface is almost identical for each, and they are being upd
 enhanced regularly.
 
 * Unified bindings:
-    * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
-    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
+    * [C++](https://github.com/ddemidov/ev3dev-lang-cpp)
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
     * [Python](https://github.com/rhempel/ev3dev-lang-python)
 

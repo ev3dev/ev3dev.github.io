@@ -6,6 +6,9 @@ exclude:
   - Gemfile.lock
   - repo-metadata.html
   - publish.rb
+  - vendor
+  - cibuild.sh
+  - .travis.yml
 
 gems:
   - jekyll-mentions

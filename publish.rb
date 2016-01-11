@@ -5,7 +5,7 @@
 # This script publishes the ev3dev website to the gh-pages branch of your
 # personal fork. This allows you to share a preview of your changes with others.
 #
-# Usage: ./publish.rb { <gh-user> | <gh-url> | --test '<command>' }
+# Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ] 
 #
 # <gh-user> is your github user name. This is short for
 # "git@github.com:<gh-user>/ev3dev.github.io.git"
@@ -17,13 +17,16 @@
 # --test '<command>' will run <command> in a shell and return the result. The
 # working directory will be a temporary directory containing the fixed up files.
 #
-# Use BASENAME environment variable to override basename. Use "@TMP@" as a
-# placeholder for the temporary directory that is created.
+# --no-fix-links will prevent modification of links in anchor and img elements.
+#
+# Use BASENAME environment variable to override basename. Use "@FULL_PATH@" as a
+# placeholder for the full path to the temporary directory that is created.
 
 require 'tmpdir'
 
-if ARGV.count != 1 or ARGV[0] == "--test" and ARGV.count != 2
-    STDERR.puts "Usage: ./publish.rb { <gh-user-name> | --test '<command>' }"
+# TODO: We shou;d use a real parser library. This has many ways it could go wrong.
+if ARGV.count < 1 or ARGV.include? '--test' && ARGV[ARGV.index('--test') + 1].nil?
+    STDERR.puts "Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ]"
     exit(1)
 end
 
@@ -32,7 +35,7 @@ Dir.mktmpdir do |tmp|
     Dir.chdir tmp
     system "git init"
 
-    if ARGV[0] != "--test"
+    unless ARGV.include? "--test"
         git_url = ARGV[0]
         if not git_url.include? "/"
             git_url = "git@github.com:#{ARGV[0]}/ev3dev.github.io.git"
@@ -51,36 +54,41 @@ Dir.mktmpdir do |tmp|
     # having cname sends you annoying email
     FileUtils.rm 'CNAME'
 
-    # prepend ev3dev.github.io to all root-relative urls
-    basename = ENV['BASENAME'] || "/ev3dev.github.io"
-    basename = basename.gsub(/@TMP@/, tmp)
     system "git add ."
-    file_names = `git ls-files | grep '.html$'`
-    file_names.each_line do |file_name|
-        file_name = file_name.strip
+
+    unless ARGV.include? "--no-fix-links"
+
+        # prepend ev3dev.github.io to all root-relative urls
+        basename = ENV['BASENAME'] || "/ev3dev.github.io"
+        basename = basename.gsub(/@FULL_PATH@/, tmp)
+        
+        file_names = `git ls-files | grep '.html$'`
+        file_names.each_line do |file_name|
+            file_name = file_name.strip
+            text = File.read(file_name)
+            new_contents = text.gsub(/(href|src)="\//, "\\1=\"#{basename}/")
+            File.open(file_name, "w") { |file| file.puts new_contents }
+        end
+
+        # Do the same thing for seach files
+        file_name = 'javascripts/search.js'
         text = File.read(file_name)
-        new_contents = text.gsub(/(href|src)="\//, "\\1=\"#{basename}/")
+        new_contents = text.gsub(/(\/search-index.json)/, "#{basename}\\1")
+        File.open(file_name, "w") { |file| file.puts new_contents }
+
+        file_name = 'search-index.json'
+        text = File.read(file_name)
+        new_contents = text.gsub(/("href"\s*:\s*")\//, "\\1#{basename}/")
         File.open(file_name, "w") { |file| file.puts new_contents }
     end
-
-    # Do the same thing for seach files
-    file_name = 'javascripts/search.js'
-    text = File.read(file_name)
-    new_contents = text.gsub(/(\/search-index.json)/, "#{basename}\\1")
-    File.open(file_name, "w") { |file| file.puts new_contents }
-
-    file_name = 'search-index.json'
-    text = File.read(file_name)
-    new_contents = text.gsub(/("href"\s*:\s*")\//, "\\1#{basename}/")
-    File.open(file_name, "w") { |file| file.puts new_contents }
-
-    if git_url
+    
+    if ARGV.include? '--test'
+        # run test command
+        exit(system ARGV[ARGV.index('--test') + 1])
+    elsif git_url
         system "git add ."
         message = "Site updated at #{Time.now.utc}"
         system "git commit -m #{message.inspect}"
-        system "git push origin master:refs/heads/gh-pages --force"
-    else
-        # run test command
-        exit(system ARGV[1])
+        system "git push origin master:refs/heads/gh-pages --force"        
     end
 end

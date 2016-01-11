@@ -5,7 +5,12 @@
         {% assign edit_path = edit_path | append: '#L' | append: source_line %}
     {% endif %}
 {% elsif page.path contains 'docs/' %}
-    {% assign edit_path = site.github.repository_url | append: '/edit/master/' | append: page.path %}
+    {% if site.github.repository_url %}
+        {% assign repo_url = site.github.repository_url %}
+    {% else %}
+        {% assign repo_url = 'https://github.com/ev3dev/ev3dev.github.io' %}
+    {% endif %}
+    {% assign edit_path = repo_url | append: '/edit/master/' | append: page.path %}
 {% elsif page.path contains 'news/' %}
     {% assign show_news_link = 1 %}
 {% endif %}

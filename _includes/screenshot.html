@@ -7,4 +7,4 @@ Parameters:
 source: The url of the image
 caption: (optional) A caption that is displayed under the image.
 
-{% endcomment %}<span class="screenshot"><a href="{{ include.source }}"><img src="{{ include.source }}" alt="screenshot" class="img-responsive" /></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>
+{% endcomment %}<span class="screenshot"><a href="{{ include.source }}"><img src="{{ include.source }}" class="img-responsive" alt="screenshot"/></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>

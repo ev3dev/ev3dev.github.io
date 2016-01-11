@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+$(document).ready(function () {
     $('div[data-card-user]').each(function (i, element) {
         var $cardDiv = $(element);
         $.ajax('https://api.github.com/users/' + $cardDiv.data('card-user')).done(function (userData) {

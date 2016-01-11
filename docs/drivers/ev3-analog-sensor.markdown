@@ -15,6 +15,6 @@ You can find all of the the devices bound to this driver in the directory
 [lego-sensor class] device, which is where all the really useful attributes
 are.
 
-[lego-sensor class]: ../lego-sensor-class
-[supported sensors]: ../#supported-sensors
+[lego-sensor class]: /docs/drivers/lego-sensor-class
+[supported sensors]: /docs/sensors#supported-sensors
 
