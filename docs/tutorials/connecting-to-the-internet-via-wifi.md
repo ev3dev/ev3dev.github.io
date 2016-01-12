@@ -5,7 +5,7 @@ subject: Networking
 
 I like to setup wireless networking on my robots. Robots should go untethered! Here is how. It's easy in an interactive tool call `connmanctl`. You connect once, and next time you boot, it's all configured. On my ev3dev machine it went like this:
 
-    anton@ev3dev:~$ connmanctl
+    anton@ev3dev:~$ sudo connmanctl
     Error getting VPN connections: The name net.connman.vpn was not provided by any
     connmanctl> enable wifi
     Enabled wifi

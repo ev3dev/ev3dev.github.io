@@ -45,13 +45,35 @@ Next we need a versioning system. That's a tool for tracking changes you made to
 
 Now let's make a new project using our versioning system. Just type:
 
-    mkdir myproject
-    cd myproject/
-    git init
+    mkdir pyproject.git
+    git init --bare myproject.git
 
-Yay! We have a new project. It's empty though. So let's add some code. Start a text editor like this:
-`nano run_motor.py`
+Yay! Git is initialised in the new folder we created. We have a new project repository. Now we can clone this repository on our development machine, but first we need to do a little more configuring, to automatically deploy our code when we push it back to the ev3dev brick.
 
+    nano myproject.git/hooks/post-receive
+
+add these lines:
+
+    #!/bin/sh
+    git --work-tree=/home/anton/myproject --git-dir=/home/anton/myproject.git checkout -f
+    
+and finally do:
+
+    chmod +x myproject.git/hooks/post-receive
+
+## On to PyCharm ##
+
+Now typing code in nano is fine, but it's much nicer to do it inside a real IDE (Integrated Development Environment). There are many, like Visual Studio, Eclipse and PyCharm. My Favourite is PyCharm Community Edition. So go grab a copy of that one and start it on your development machine.
+
+{% include inline-screenshot.html source="/images/osx/PyCharm/welcome.png" caption="The 'Welcome' dialog in PyCharm"%}
+
+What we are going to do now is make a clone of our project on the ev3dev machine to start working on it on the development machine.
+In the Welcome dialog choose: 'Checkout from version control' > 'Git'
+Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory.
+
+When all goes wel you get a new window with your fresh empty project. If the 'testing' dialog stays on screen for a long time, it might be that your PyCharm master password is needed for your PyCharm password storage. Cancel the checkout, type the master password and try again.
+
+So let's add some code. Right click on the 'myproject' folder in the left column and choose new > python file. Name it `run-motor`. PyCharm will ask if you want to add it to Git. That's nice! Of course we want that.
 
 Now add the following code:
 
@@ -65,30 +87,35 @@ time.sleep(1)
 m.stop()
 {% endhighlight %}
 
-Press ctrl-X and `y` to save. It's time to let the first motor run. Plug it into port A on your brick and go: `python run_motor.py`. Tataaa! The motor is running full power for a second.
+When you're done press cmd-k or choose VCS > Commit Changes...
 
-Now typing code in nano is fine, but it's much nicer to do it inside a real IDE (Integrated Development Environment). There are many, like Visual Studio, Eclipse and PyCharm. My Favourite is PyCharm Community Edition. So go grab a copy of that one and start it on your development machine.
+The commit message is box describing the changes you made to your code. That's handy later on when you do a lot of changes. For now type: `first commit`. Then go over the commit button and choose "commit and push" from the dropdown. In the next dialog click make sure to select the "alternative branch checkbox" and click "Push". Voila! Our code has arrived on the ev3dev brick. Let's take a look.
 
-{% include inline-screenshot.html source="/images/osx/PyCharm/welcome.png" caption="The 'Welcome' dialog in PyCharm"%}
+## running the code ##
 
-What we are going to do now is make a clone of our project on the ev3dev machine to start working on it on the development machine.
-In the Welcome dialog choose: 'Checkout from version control' > 'Git'
-Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory.
+It's time to let the first motor run. Plug it into port A on your brick and ssh to your ev3dev brick. Maybe you have the terminal still open. 
+Now go
+
+    cd myproject
+    python run_motor.py
+
+Tataaa! The motor is running full power for a second.
 
 ## Installing ev3dev-python on the development machine ##
-Now you can continue where you left of on the ev3dev machine, but with a larger screen, better keyboard and more tools! There is one problem, though: PyCharm puts red curly lines under the ev3dev library. 
+Back to the development machine. Maybe you noticed a problem: PyCharm puts red curly lines under the ev3dev library. 
 
 ![Curly lines]({{ site.github.url }}/images/osx/PyCharm/missing-lib.png =435)
 
 And that's logical, because the ev3dev library is missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
 
     git clone https://github.com/rhempel/ev3dev-lang-python.git
-    cd ev3dev-lang-python/
-    python setup.py install
-    cd ..                     # Optional
+    python ev3dev-lang-python/setup.py install
     rm -r ev3dev-lang-python/ # Optional to remove the downloaded files. It's installed now anyway.
+
 
 ## Using the power of the IDE ##
 
-With the IDE (PyCharm) set up and the library installed you can code much faster. PyCharm will highlight most coding errors and typos. It will also suggest to autocomplete your code and show documentation. Let's try.
+With the IDE (PyCharm) set up and the library installed you can code much faster. PyCharm will highlight most coding errors and typos. It will also suggest to autocomplete your code and show documentation. You can start typing `m.` and pycharm will suggest all possible methods and properties. Choose one. Now you can put your cursor inside the property and press F1 to see the docs. Or press cmd-down arrow to look inside the library where this property is defined. Neat huh? Happy coding.
+
+
 
