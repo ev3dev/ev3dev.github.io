@@ -18,7 +18,7 @@ GitHub Issues
 
 We keep track of problems, suggestions and questions about ev3dev using [GitHub
 Issues]. This lets us keep everything in one place. (So, please don't email the
-developers directly unless you have a personal question.)
+developers directly unless you have a personal question.) [bad link]().
 
 First, before submitting an issue, please make sure that you have the latest
 kernel and other packages:
