@@ -15,7 +15,7 @@ We have a repository of officially maintained language bindings, as well as many
 Our official "unified" [language binding repository](http://github.com/ev3dev/ev3dev-lang)
 currently has support for C++, Lua, Node.js, and Python.
 These libraries are all built around a single
-[API specification](https://github.com/ev3dev/ev3dev-lang/blob/develop/wrapper-specification.md)
+[API specification](http://ev3dev-lang.readthedocs.org/en/latest/spec.html)
 that ensures that interface is almost identical for each, and they are being updated and
 enhanced regularly.
 
