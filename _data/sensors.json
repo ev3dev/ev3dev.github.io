@@ -2008,7 +2008,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Touch Sensor",
         "vendor_part_number": "9843",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Ultrasonic-Sensor-9846"
     },
     {
         "analog_mode_info": [
@@ -2063,7 +2063,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Light Sensor",
         "vendor_part_number": "9844",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Light-Sensor-9844"
     },
     {
         "analog_mode_info": [
@@ -2116,7 +2116,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Sound Sensor",
         "vendor_part_number": "9845",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Sound-Sensor-9845"
     },
     {
         "default_address": "0x01",
@@ -2218,7 +2218,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Ultrasonic Sensor",
         "vendor_part_number": "9846",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Ultrasonic-Sensor-9846"
     },
     {
         "cmd_info": [

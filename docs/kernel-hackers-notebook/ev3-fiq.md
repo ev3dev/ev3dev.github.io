@@ -17,7 +17,7 @@ You read the required reading, right? So you understand that the Linux kernel ha
 
 To debug the code in the FIQ service routines, we need to change them to regular interrupts. On the AM1808 processor, interrupt channels 0 an 1 are reserved for the FIQs. The rest of the channels are for regular interrupts.
 
-The first step is to change the channels the interrupts are assigned to. This is done in [arch/arm/mach-davinci/da850.c](https://github.com/ev3dev/ev3dev-kernel/blob/master/arch/arm/mach-davinci/da850.c). Search for `FIQ` to find the relevant interrupts and change the priority to 2 or higher.
+The first step is to change the channels the interrupts are assigned to. This is done in [arch/arm/mach-davinci/da850.c](https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/da850.c). Search for `FIQ` to find the relevant interrupts and change the priority to 2 or higher.
 
 Now, when you recompile the kernel, they will operate as regular interrupts. There is code in place so that the `fiq_c_handler` routine is called back from the appropriate interrupts.
 

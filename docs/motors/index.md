@@ -114,7 +114,7 @@ a list? See issue [#424](https://github.com/ev3dev/ev3dev/issues/424).
 [sensors]: /docs/sensors
 [tachometer]: https://en.wikipedia.org/wiki/Tachometer
 [incremental rotary encoder]: https://en.wikipedia.org/wiki/Rotary_encoder#Incremental_rotary_encoder
-[LEGO 8528]: http://www.bricklink.com/catalogItem.asp?S=8528-1
-[LEGO 8886]: http://www.bricklink.com/catalogItem.asp?S=8886-1
-[LEGO 8871]: http://www.bricklink.com/catalogItem.asp?S=8871-1
+[LEGO 8528]: http://shop.lego.com/en-US/Converter-Cables-for-LEGO-MINDSTORMS-NXT-8528
+[LEGO 8886]: http://shop.lego.com/en-US/LEGO-Power-Functions-Extension-Wire-8886
+[LEGO 8871]: http://shop.lego.com/en-US/LEGO-Power-Functions-Extension-Wire-20-8871
 [EV3 Output Port Driver]: /docs/ports/legoev3-output-port

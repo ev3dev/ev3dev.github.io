@@ -12,7 +12,7 @@ subtitle: Announcements and updates
 <div class="panel panel-default">
     <div class="panel-heading">
         <h1 class="panel-title">
-            <a href="{{ site.github.url }}{{ first_post.url }}"> {{ first_post.title }}</a>
+            <a href="{{ first_post.url }}"> {{ first_post.title }}</a>
             <span class="pull-right label font-light">{{ first_post.date | date_to_string }}</span>
         </h1>
     </div>
@@ -20,7 +20,7 @@ subtitle: Announcements and updates
         {{ first_post.content | truncatewords: 200 }}
         <br/>
         <br />
-        <a href="{{ site.github.url }}{{ first_post.url }}">Continue reading...</a>
+        <a href="{{ first_post.url }}">Continue reading...</a>
     </div>
 </div>
 
@@ -32,7 +32,7 @@ subtitle: Announcements and updates
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h1 class="panel-title">
-                        <a href="{{ site.github.url }}{{ post.url }}"> {{ post.title }}</a>
+                        <a href="{{ post.url }}"> {{ post.title }}</a>
                         <span class="pull-right label font-light">{{ post.date | date_to_string }}</span>
                     </h1>
                 </div>
@@ -40,7 +40,7 @@ subtitle: Announcements and updates
                     {{ post.content | truncatewords: 50 }}
                     <br />
                     <br />
-                    <a href="{{ site.github.url }}{{ post.url }}">Continue reading...</a>
+                    <a href="{{ post.url }}">Continue reading...</a>
                 </div>
             </div>
         {% endif %}
@@ -48,5 +48,5 @@ subtitle: Announcements and updates
 {% endfor %}
 
 <div class="row text-center">
-    <a class="btn btn-primary" href="{{ site.github.url }}/news/archive">See news archive for older posts</a>
+    <a class="btn btn-primary" href="/news/archive">See news archive for older posts</a>
 </div>

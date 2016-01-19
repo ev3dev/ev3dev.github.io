@@ -5,7 +5,7 @@ layout:
     {% for post in site.posts %}
     {
       "title"    : "{{ post.title }}",
-        "href": "{{ site.github.url }}{{ post.url }}",
+        "href": "{{ post.url }}",
         "author":  "{{ post.author | join: ', ' }}",
         "date": "{{ post.date | date_to_long_string }}",
         "loopid" : "post-{{ forloop.index }}",
@@ -15,7 +15,7 @@ layout:
     {% for page in site.pages %}
     {
       "title"    : "{{ page.title }}",
-      "href"     : "{{ site.github.url }}{{ page.url }}",
+      "href"     : "{{ page.url }}",
       "loopid": "page-{{ forloop.index }}",
       "category": "{{ page.categories }}",
       {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}

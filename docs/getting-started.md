@@ -6,8 +6,8 @@ categories: docs getting-started
 * Table of Contents
 {:toc}
 
-So you are ready to try out ev3dev. Great!. Here are step-by-step instructions
-to get ev3dev up and running on your EV3 or Raspberry Pi.
+So you're ready to try out ev3dev. Great! Here are step-by-step instructions
+to help you get ev3dev up and running on your EV3 or Raspberry Pi.
 
 First, here are the things you need before starting:
 
@@ -34,7 +34,7 @@ First, here are the things you need before starting:
 The instructions on this page only apply to releases dated December
 2015 or later. Older releases are no longer supported. There are many major changes
 in the December release, so if something seems broken or the documentation seems incorrect,
-please [open an issue on GitHub]({{ site.github.url }}/support){: .alert-link}.
+please [open an issue on GitHub](/support){: .alert-link}.
 {: .alert .alert-warning}
 
 ## Step 1: Download the latest ev3dev image file

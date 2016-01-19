@@ -33,5 +33,5 @@ See the [changelog] for a more technical list of changes.
 
 
 [kernel.org]: https://www.kernel.org
-[changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/debian/changelog
-[88004]: http://shop.lego.com/en-US/Power-Functions-Servo-Motor-88004/?domainredir=www.shop.lego.com
+[changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ac3001ff292fdd72768e031db5ac1676428f90ed/debian/changelog
+[88004]: http://shop.lego.com/en-US/Power-Functions-Servo-Motor-88004

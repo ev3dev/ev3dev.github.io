@@ -1,6 +1,7 @@
 ---
 author: "@dlech"
 title: "Kernel Release: v3.16.7-ckt14-6-ev3dev-ev3"
+redirect_from: /news/2015/07/08/Kernel-Release-v3.16.7-ckt11-5-ev3dev-ev3
 ---
 
 Kernel version 3.16.7-ckt14-6-ev3dev-ev3 has been released. The most noticeable
@@ -26,4 +27,4 @@ This kernel also includes the latest upstream patches. See [ckt12-changelog],
 [ckt12-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-May/057956.html
 [ckt13-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-June/058406.html
 [ckt14-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-June/059280.html
-[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
+[ev3dev-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ca79dfae4abdb4740b3053b72ca6667d24b5e6c0/ev3dev-ev3/changelog

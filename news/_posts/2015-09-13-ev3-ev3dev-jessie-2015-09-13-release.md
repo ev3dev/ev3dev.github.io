@@ -17,5 +17,5 @@ you need to install a new image because of some [major changes].
 
 [Download]: https://github.com/ev3dev/ev3dev/releases/tag/ev3-ev3dev-jessie-2015-09-13
 [release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3-ev3dev-jessie-2015-09-13.img-release-notes.md
-[ev3dev kernel]: {{ site.github.url }}/news/2015/09/06/Kernel-Release-v3.16.7-ckt16-7-ev3dev-ev3
-[major changes]: {{ site.github.url }}/news/2015/05/01/Major-Release
+[ev3dev kernel]: /news/2015/09/06/Kernel-Release-v3.16.7-ckt16-7-ev3dev-ev3
+[major changes]: /news/2015/05/01/Major-Release

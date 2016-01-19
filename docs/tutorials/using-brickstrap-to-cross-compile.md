@@ -145,7 +145,7 @@ filesystem of your host computer on the EV3.
 You have a couple of options to do this:
 
 * [Use nfs](https://github.com/mindboards/ev3dev/wiki/Set-Up-An-nfs-FileShare)
-* [Use sshfs]()
+* [Use sshfs] TOTO: find link or write tutorial.
 
 Both of these options essentially do the same thing, just using a different
 network protocol. They make files that physically exist on your host computer

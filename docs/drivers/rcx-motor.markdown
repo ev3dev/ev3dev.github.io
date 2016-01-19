@@ -15,5 +15,5 @@ This device is loaded when an [legoev3-output-port] is set to `rcx-motor`
 mode. It is not automatically detected.
 
 [dc-motor]: ../dc-motor-class
-[legoev3-output-port]: docs/ports/legoev3-output-port
+[legoev3-output-port]: /docs/ports/legoev3-output-port
 
