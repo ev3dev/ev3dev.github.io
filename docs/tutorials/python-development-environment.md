@@ -11,7 +11,7 @@ This tutorial shows how to set up a nice working environment for developing Pyth
 
 Ev3dev is a lean and modern system to run on the raspberry pi that powers the brickpi. It's got multiple languages that work in a pretty similar way and make switching easy. Moreover, if you code in ev3dev on the brickpi, people with a regular Ev3 and Ev3dev will be able to run your code! Alas, it doesn't work the other way around as the BrickPi has a more limited set of motor commands.
 
-For this tutorial, I will suppose you have burned an SD disk, connected your RPi and BrickPi to an ethernet cable and booted it. If you have an Ev3 brick without ethernet, [set up another networking connection first](setting-up-wifi-on-ev3).
+For this tutorial, I will suppose you have burned an SD disk, connected your RPi and BrickPi to an ethernet cable and booted it. If you have an Ev3 brick without ethernet, [set up another networking connection first](/docs/tutorials/setting-up-wifi-on-ev3).
 
 ## Log in to ev3dev ##
 Now you can either attach a screen and keyboard to it for the setup, or connect to it via ssh. I prefer the latter. My router has a dns that registers hostnames. It allows me to start a Terminal (on Mac) or Putty (on Windows) and simply do:
