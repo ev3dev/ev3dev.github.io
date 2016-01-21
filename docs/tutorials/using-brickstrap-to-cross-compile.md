@@ -1,6 +1,7 @@
 ---
-title: Using Brickstrap to Cross-Compile
-subject: Cross-Compiling
+title: "Using Brickstrap to Cross-Compile"
+subject: "Cross-Compiling"
+author: "@dlech"
 ---
 
 * Table of Contents
@@ -85,7 +86,7 @@ command tells brickstrap to build a file system but to not actually create an
 image file. This will take 20 to 30 minutes or longer depending on the speed of
 your machine and Internet connection.
 
-    brickstrap -b ev3-ev3dev-jessie -d ev3-dev-env create-rootfs
+    brickstrap -b ev3-ev3dev-jessie -d ev3-rootfs create-rootfs
 
 ## Working in the Brickstrap Shell
 
@@ -94,7 +95,7 @@ shell inside of the directory that was created. This is almost like working in
 a virtual machine except that qemu is used to run individual commands instead
 of the whole thing being run inside of a virtual environment.
 
-    brickstrap -b ev3-ev3dev-jessie -d ev3-dev-env shell
+    brickstrap -b ev3-ev3dev-jessie -d ev3-rootfs shell
 
 Now, you can install packages and run programs almost just as if you were on the
 actual EV3. Don't forget to run `apt-get update` first! For starters, you will
@@ -215,3 +216,172 @@ on each line that starts with `(gdb)`.
 Since gdb is running in an emulated environment using qemu, you will
 occasionally see errors like the unsupported syscall above. Most errors don't
 seem to cause any problems, but it may limit the use of some features of gdb.
+
+## Using a "Real" Cross-Compiler
+
+If you are compiling a larger project, you will quickly notice that while the
+methods above are faster than compiling on the EV3 itself, they are still slow
+compared to compiling on your host computer. This is because inside of the
+brickstrap shell, it is actually running ARM machine code using an emulator
+instead of running a native binary.
+
+So, we can actually use a "real" cross-compiling toolchain to compile much
+faster but still use the root file system created by brickstrap as the source
+of header files and libraries.
+
+I haven't done this yet with a regular makefile, but I'll use [brickman]
+as an example, which uses CMake for the build system.
+
+[brickman]: https://github.com/ev3dev/brickman
+
+### Example using Vala and CMake
+
+First, we will assume that you ran brickstrap as described above to create a
+root file system on your host computer at `/home/user/work/ev3-rootfs`.
+While we are talking about the root files system, let's get is setup. Do this
+in the brickstrap shell (see above if you don't remember how to start the
+brickstrap shell).
+
+    nano /etc/apt/sources.list
+
+We need to edit source package repositories. Edit the file so that it looks like
+this...
+
+    deb http://cdn.debian.net/debian jessie main contrib non-free
+    deb-src http://cdn.debian.net/debian jessie main contrib non-free
+
+    deb http://ev3dev.org/debian jessie main
+    deb-src http://ev3dev.test/debian jessie main
+
+Save the changes, then run...
+
+    apt-get update
+    apt-get build-dep brickman
+    apt-get install symlinks
+
+This will install all of the package that are needed when building brickman.
+Now, for a very important part. Some libraries use absoloute symlinks, which is
+bad for us when we are cross compiling because we are accessing files in the
+root file system created by brickstrap from outside of the brickstrap shell.
+This is why we installed the `symlinks` package. Simply run...
+
+    symlinks -c /usr/lib/arm-linux-gnueabi
+
+This will change any absolute links to relative links and save us a bunch of
+trouble later. This should be all that we need to do inside of the brickstrap
+shell.
+
+You will also need to install a cross compiler toolchain and and some other build
+tools on your host computer (not in brickstrap shell)...
+
+    sudo apt-get install gcc-arm-linux-gnueabi g++-arm-linux-gnueabi cmake valac pkg-config
+
+{% include icon.html type="warning" %}
+These cross-compiler packages are only available on Ubuntu. Sorry Debian users.
+{:.alert .alert-warning}
+
+And we need to download the brickman source code...
+
+    cd ~/work
+    git clone https://github.com/ev3dev/brickman.git
+
+The source code will be downloaded to `/home/user/work/brickman`, but don't
+switch to that directory. We are going to build "out of tree" (that means in
+another directory that is not the source code directory). Let's make that
+directory now - and a couple more files too.
+
+    mkdir build-area
+    touch arm-linux-gnueabi.cmake
+    touch ev3-rootfs-cross.env
+
+Use your favorite text editor to edit the two empty files we just created with
+`touch`. First, `arm-linux-gnueabi.cmake` should look like this...
+
+    set(SYSROOT_PATH /home/user/work/ev3-rootfs)
+
+    set(CMAKE_SYSTEM_NAME Linux)
+
+    set(CMAKE_C_COMPILER arm-linux-gnueabi-gcc)
+    set(CMAKE_CXX_COMPILER arm-linux-gnueabi-g++)
+
+    set(CMAKE_FIND_ROOT_PATH ${SYSROOT_PATH})
+    set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+    set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+    set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+This will tell CMake to use programs on our host computer (which is why we had
+to install `valac` and `pkg-config` on the host computer). But, it will look
+for header files and libraries inside of the root file system we created with
+brickstrap. And, of course, it tells us to use the cross-compiler too.
+
+The `ev3-rootfs-cross.env` file needs to look like this...
+
+    SYSROOT_PATH=/home/user/work/ev3-rootfs
+
+    export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
+    export PKG_CONFIG_ALLOW_SYSTEM_LIBS=1
+    export PKG_CONFIG_SYSROOT_DIR=${SYSROOT_PATH}
+    export PKG_CONFIG_LIBDIR=${SYSROOT_PATH}/usr/lib/arm-linux-gnueabi/pkgconfig
+    export PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR}:${SYSROOT_PATH}/usr/lib/pkgconfig
+    export PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR}:${SYSROOT_PATH}/usr/share/pkgconfig
+    export PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR}:${SYSROOT_PATH}/usr/local/lib/arm-linux-gnueabi/pkgconfig
+    export PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR}:${SYSROOT_PATH}/usr/local/lib/pkgconfig
+    export PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR}:${SYSROOT_PATH}/usr/local/share/pkgconfig
+
+    export XDG_DATA_DIRS=${SYSROOT_PATH}/usr/local/share:${SYSROOT_PATH}/usr/share
+
+These set environment variables so that pkg-config and vala will search for
+files inside of our root file system instead of the usual places on the host
+computer. To make these actually take effect, run...
+
+    source ev3-rootfs-cross.env
+
+Now, lets actually try to build something...
+
+    cd build-area
+    cmake ../brickman -DCMAKE_TOOLCHAIN_FILE=../arm-linux-gnueabi.cmake
+    make
+
+If all went well, you should end up with a `brickman` binary that you can
+copy to your EV3 and run.
+
+### Example using Makefiles
+
+I haven't actually done this yet, so feel free to edit this page and add more
+info. The basic gist is that you need to have something like this...
+
+    PROGRAM = my-program
+    CROSS_COMPILE = arm-linux-gnueabi-
+    SYSROOT = /home/user/work/ev3-rootfs
+
+    CC=$(CROSS_COMPILE)gcc
+    LD=$(CROSS_COMPILE)ld
+    CFLAGS= --sysroot=$(SYSROOT) -g -I$(SYSROOT)/usr/include
+
+    all: $(PROGRAM)
+
+    LIBDIR = -L=/usr/lib/arm-linux-gnueabi
+    #LIBDIR = -L$(SYSROOT)/usr/lib/arm-linux-gnueabi
+
+    LIBS = -lpthread
+
+    LDFLAGS= $(LIBDIR) $(LIBS)
+    SOURCE = my_program.c
+
+    OBJS = $(SOURCE:.c=.o)
+
+    $(PROGRAM): $(OBJS)
+        $(CC) -o $@ $(OBJS) $(LDFLAGS)
+
+    clean:
+        -rm -f $(OBJS) $(PROGRAM)
+
+The important points are that you:
+
+* Use `arm-linux-gnueabi-gcc` for the compiler and `arm-linux-gnueabi-ld` for
+  the linker.
+* Pass the `--sysroot=$(SYSROOT)` option to the compiler and point it to the
+  root file system created by brickstrap.
+* The `=` in `-L=` means search for libraries relative to `$(SYSROOT)`. You could
+  optionally specify the full path.
+* The path to include files need to include `$(SYSROOT)` as well.
