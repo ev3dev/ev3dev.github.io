@@ -11,7 +11,7 @@ This tutorial shows how to set up a nice working environment for developing Pyth
 
 Ev3dev is a lean and modern system to run on the raspberry pi that powers the brickpi. It's got multiple languages that work in a pretty similar way and make switching easy. Moreover, if you code in ev3dev on the brickpi, people with a regular Ev3 and Ev3dev will be able to run your code! Alas, it doesn't work the other way around as the BrickPi has a more limited set of motor commands.
 
-For this tutorial, I will suppose you have burned an SD disk, connected your RPi and BrickPi to an ethernet cable and booted it. If you have an Ev3 brick without ethernet, [set up another networking connection first](connecting-to-the-internet-via-usb).
+For this tutorial, I will suppose you have burned an SD disk, connected your RPi and BrickPi to an ethernet cable and booted it. If you have an Ev3 brick without ethernet, [set up another networking connection first](setting-up-wifi-on-ev3).
 
 ## Log in to ev3dev ##
 Now you can either attach a screen and keyboard to it for the setup, or connect to it via ssh. I prefer the latter. My router has a dns that registers hostnames. It allows me to start a Terminal (on Mac) or Putty (on Windows) and simply do:
@@ -68,13 +68,13 @@ and finally do:
 
 Now typing code in nano is fine, but it's much nicer to do it inside a real IDE (Integrated Development Environment). There are many, like Visual Studio, Eclipse and PyCharm. My Favourite is PyCharm Community Edition. So go grab a copy of that one and start it on your development machine.
 
-{% include inline-screenshot.html source="/images/osx/PyCharm/welcome.png" caption="The 'Welcome' dialog in PyCharm"%}
+{% include screenshot.html source="/images/osx/PyCharm/welcome.png" %}
 
 What we are going to do now is make a clone of our project on the ev3dev machine to start working on it on the development machine.
 In the Welcome dialog choose: 'Checkout from version control' > 'Git'
 Now type the hostname of the ev3dev machine, followed by a semicolon the projectname. In the other fields choose a nice parent and project directory. (I left the `robot@` bit away because I created passwordless ssh with my own username. You might also have to add `.local` after `ev3dev` depending on your DNS setup.)
 
-![Checkout dialog](../../images/osx/PyCharm/clone-repo.png)
+{% include screenshot.html source="/images/osx/PyCharm/clone-repo.png" %}
 
 When all goes wel you get a new window with your fresh empty project. If the 'testing' dialog stays on screen for a long time, it might be that your PyCharm master password is needed for your PyCharm password storage. Cancel the checkout, type the master password and try again.
 
@@ -109,7 +109,7 @@ Tataaa! The motor is running full power for a second.
 ## Installing ev3dev-python on the development machine ##
 Back to the development machine. Maybe you noticed a problem: PyCharm puts red curly lines under the ev3dev library. 
 
-![Curly lines](/images/osx/PyCharm/missing-lib.png =435)
+{% include screenshot.html source="/images/osx/PyCharm/missing-lib.png" %}
 
 And that's logical, because the ev3dev library is missing on the development machine. If we install it we won't be able to run motors, but the documentation and autocomplete will be active. So on your development machine start a terminal and do:
 
