@@ -21,7 +21,7 @@ First, here are the things you need before starting:
   For the EV3, this can be one of the following:
 
   * USB cable (the one that comes with the EV3)
-  * USB WiFi dongle
+  * USB Wi-Fi dongle
   * USB Ethernet (wired) dongle
   * Bluetooth
 
@@ -143,12 +143,15 @@ you want to use and on the OS of your host computer, so pick the one that applie
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-usb) tutorial
 * __USB Ethernet dongle__ (as in the kind with an RJ45 connector)
     * If your network has a DHCP server, this will "just work".
-* __USB WiFi Dongle__
-    * Hopefully you can figure it out. I'm putting off writing detailed docs
-      until brickman is a bit more stable.
+* __USB Wi-Fi Dongle__
+    * Setting up Wi-Fi Via the Brickman User Interface (hopefully you can figure
+      this out, but it would be nice if someone made a tutorial)
+    * [Setting Up Wi-Fi Using the Command Line](../tutorials/setting-up-wifi-using-the-command-line)
+      (requires another connection type first to get to the command line, but way
+      easier to enter you passphrase this way)
 * __Bluetooth__
     * Note: Bluetooth may not work on the first boot. Please reboot if you see "???"
-       after you power on Bluetooth.
+      after you power on Bluetooth.
     * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
 
 {% include icon.html type="info" %}

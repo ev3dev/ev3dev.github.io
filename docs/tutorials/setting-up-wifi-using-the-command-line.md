@@ -1,11 +1,21 @@
 ---
-title: Setting up wifi on ev3
+title: Setting Up Wi-Fi Using the Command Line
 subject: Networking
 ---
 
-I like to setup wireless networking on my robots. Robots should go untethered! Here is how. It's easy in an interactive tool call `connmanctl`. You connect once, and next time you boot, it's all configured. On my ev3dev machine it went like this:
+{% include icon.html type="danger" %}
+You must have another way to connect to your robot first before following this
+tutorial. On the EV3, that means USB or Bluetooth. If you have a Raspberry Pi,
+you can plug in a monitor and keyboard to the Raspberry Pi. The instructions
+below are run on your robot itself.
+{:.alert .alert-danger}
 
-    anton@ev3dev:~$ sudo connmanctl
+I like to setup wireless networking on my robots. Robots should go untethered!
+Here is how. It's easy in an interactive tool call `connmanctl`. You connect
+once, and next time you boot, it's all configured. On my ev3dev machine it went
+like this:
+
+    robot@ev3dev:~$ sudo connmanctl
     Error getting VPN connections: The name net.connman.vpn was not provided by any
     connmanctl> enable wifi
     Enabled wifi
@@ -28,4 +38,5 @@ I like to setup wireless networking on my robots. Robots should go untethered! H
     Connected wifi_e8de27077de3_41483034303434393134_managed_psk
     connmanctl> quit
 
-You're all set up now! After reboot connman automatically finds your local wifi again.
+You're all set up now! After reboot connman automatically finds your local
+Wi-Fi again.
