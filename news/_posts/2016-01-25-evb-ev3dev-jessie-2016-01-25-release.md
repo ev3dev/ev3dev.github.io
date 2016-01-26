@@ -14,7 +14,7 @@ ev3dev on BeagleBone with [FatcatLab's EVB cape][EVB].
 Here are some things about the EVB you might like to know:
 
 * Should work with BeagleBone [White], [Black] and [Green]. Has only been tested
-  On BeagleBone Black.
+  on BeagleBone Black.
 * Ev3dev must be installed on a microSD card. It cannot be installed to the
   on-board eMMC because the eMMC pins are used by the EVB cape for other things.
 * Auto-detection of NXT sensors does not always work correctly. This is a
