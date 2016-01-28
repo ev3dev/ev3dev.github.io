@@ -31,8 +31,10 @@ kernel and other packages:
 
 Then search the existing issues (open and closed) to make sure someone else has
 not already reported the same problem or asked the same question. Please only
-comment on an existing issue if you are fairly sure your problem/question is
-*exactly* the same. When in doubt, open a new issue instead.
+comment on an existing **open** issue if you are fairly sure your problem/question is
+*exactly* the same. If the issue is closed or you are not sure your problem is the same,
+open a new issue instead. Be sure to mention any related issue by number and GitHub will
+magically create a link to it (e.g `#100`).
 
 <br/>
 
