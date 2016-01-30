@@ -90,7 +90,7 @@ prefer git. It's not installed by default so you have to do:
 
 Now let's make a new project using our versioning system. Just type:
 
-    mkdir pyproject.git
+    mkdir myproject.git
     git init --bare myproject.git
 
 Yay! Git is initialised in the new folder we created. We have a new project
