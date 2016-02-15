@@ -7,7 +7,7 @@ title: Using I2C Sensors
 
 The I2C standards only specify how data is sent from device to device. It does
 not specify the layout of the registers of a device. LEGO, however, has
-guidelines for 3rd party manufactures so that they can provide sensors with
+guidelines for 3rd party manufactures so that they can providpe sensors with
 a (fairly) uniform register layout.
 
 We call sensors that were designed following LEGO's guidelines **NXT/I2C**
@@ -80,7 +80,7 @@ tell the I2C adapter which driver to use and the address of the device. (You
 read the [addressing](./#addressing) section didn't you?)
 
 The I2C adapter device nodes are at `/sys/bus/i2c/devices/i2c-N` where N is the
-number of the input port plus 2. To load a device, we write to the `new_device`
+number of the input port plus 1. To load a device, we write to the `new_device`
 attribute. NOTE: These nodes only exist when you have an I2C sensor plugged
 into an input port.
 
