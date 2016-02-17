@@ -53,7 +53,7 @@ And we need to configure [quilt] as well. Save the following to `~/.quiltrc`.
     QUILT_REFRESH_ARGS="-p ab"
     QUILT_DIFF_ARGS="--color=auto"
 
-And one more config file. Save the following to `~/.pbuilerrc`.
+And one more config file. Save the following to `~/.pbuilderrc`.
 
     APTKEYRINGS="/usr/share/keyrings/ev3dev-archive-keyring.gpg"
     # OTHERMIRROR is ignored when using pbuilder-dist. :-(
