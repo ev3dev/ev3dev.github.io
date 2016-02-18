@@ -80,7 +80,7 @@ tell the I2C adapter which driver to use and the address of the device. (You
 read the [addressing](./#addressing) section didn't you?)
 
 The I2C adapter device nodes are at `/sys/bus/i2c/devices/i2c-N` where N is the
-number of the input port plus 1. To load a device, we write to the `new_device`
+number of the input port plus 2. To load a device, we write to the `new_device`
 attribute. NOTE: These nodes only exist when you have an I2C sensor plugged
 into an input port.
 
