@@ -14,8 +14,11 @@ the EV3!
 
 ## Getting Brickstrap
 
-<div class="alert alert-info" markdown="1">
-{% include icon.html type="info" %}
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h2 class="panel-title">Official OS Support</h2>
+    </div>
+<div class="panel-body" markdown="1">
 To help preserve our sanity, we are only going to officially
 support using brickstrap on one OS, namely Ubuntu trusty. Also, we only
 support 64-bit host machines (there are some unresolved issues that prevent
@@ -34,6 +37,7 @@ Also, you will find it easier to ssh into the VM so that you can have multiple
 terminals open at once rather than trying to use the console in VirtualBox.
 To do this, you will want to change the network adapter from NAT (default)
 to bridged in the VirtualBox settings before starting the VM.
+</div>
 </div>
 
 Brickstrap is available as a .deb package from the ev3dev.org package repository.
