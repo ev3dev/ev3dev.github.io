@@ -26,9 +26,25 @@ fi
 echo "Building site ------------------------------------"
 bundle exec jekyll build --trace
 
+# credit: code snippet borrowed from jekyllrb.com website source
+IGNORE_HREFS=$(ruby -e 'puts %w{
+    example.com
+    https:\/\/github\.com\/myuser\/myrepo
+    .*revolds-whitepaper\.pdf
+    https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
+    warmcat.com
+}.map{|h| "/#{h}/"}.join(",")')
+
+# Explanation of ignored sites:
+# - example.com and github.com/myuser/myrepo are fake/example links
+# - The edit on github pages don't exist when you create a page, so ignoring them.
+#   They are automatically generated anyway.
+#  -revolds-whitepaper.pdf causes problems on travis but is really a good link (for now)
+# - warmcat.com works locally but fails on travis for some reason related to ssl
+
 echo "Validating HTML ----------------------------------"
 # We want to use the publish script so that we can implement other transformations in the future
-ruby publish.rb --no-fix-links --test 'htmlproof ./ --href-ignore /.*example\.com.*/,/https:\/\/github\.com\/myuser\/myrepo/,/.*revolds-whitepaper\.pdf/,/https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*/ --check-html --ignore-script-embeds --allow-hash-href'
+ruby publish.rb --no-fix-links --test "htmlproof ./ --href-ignore $IGNORE_HREFS --check-html --ignore-script-embeds --allow-hash-href"
 
 # If the site build succeeded but we found BOMs, we want to fail the build
 if [ $FOUND_BOM == true ]
