@@ -1,13 +1,13 @@
 ---
 author: "@jabrena"
-title: "Announcing EV3Dev lang Java v0.2.0"
+title: "Announcing ev3dev-lang-java v0.2.0"
 ---
 
-If you like Linux features from EV3Dev and you enjoy with Java, this library is the solution to develop Java software for robots on EV3Dev. [EV3Dev-lang-java](https://jabrena.github.io/ev3dev-lang-java/#/) is a Java library designed to interact with the hardware managed by EV3Dev using the LeJOS way.
+If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://jabrena.github.io/ev3dev-lang-java/#/) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
 
-**What features are included in last release?**
+##What features are included in last release?
 
-Current version includes this features:
+Current version includes these features:
 
 * Regulated Motor Support
 * Unregulated Motor Support
@@ -16,19 +16,17 @@ Current version includes this features:
 * LeJOS Sensor filter Support
 * eSpeak TTS (Text to speech) Support
 
-JavaDocs: https://jabrena.github.io/ev3dev-lang-java/docs/api/
+##How to extend the features of this library?
 
-**How to extend the features of this library?**
+If you have experience with Robotics, you could explore other possibilities as Computer Vision. In this case, [OpenCV](http://opencv.org/) has a Java port and the way to install is very easy on ev3dev:
 
-If you have experience with Robotics, you could explore other possibilities as Computer Vision. In this case, OpenCV has a Java port and the way to install is very easy on EV3Dev:
-
-``` bash
+{% highlight bash %}
 sudo apt-get install libopencv2.4-java
-```
+{% endhighlight %}
 
-Using EV3Dev with Java, you have the opportunity to build on your brick directly so you only have to install your favorite Java build system and test your software or the sofware of your friend in the same way that you do on your laptop.
+Using ev3dev with Java, you have the opportunity to build on your Brick directly so you only have to install your favorite Java build system and test your software or the sofware of your friend in the same way that you do on your laptop.
 
-``` bash
+{% highlight bash %}
 sudo apt-get install git
 git clone https://github.com/jabrena/ev3dev-lang-java.git
 sudo apt-get install gradle
@@ -36,16 +34,18 @@ sudo apt-get install maven
 sudo apt-get install ant
 cd ev3dev-lang-java/library
 mvn package
-```
+{% endhighlight %}
 
-**What is the support for Lego Mindstorms boards?**
+One advantage of the usage of ev3dev with Java is the option to study some solution from another technology and later, try to port to Java. Ev3dev is polyglot, a common feature in nowdays.
+
+##What is the support for Lego Mindstorms boards?
 
 In this release, the library has implemented the support for the EV3 Brick and their sensors & actuators included in the following kits:
 
 * [45544 LEGO MINDSTORMS Education EV3 Core Set](https://education.lego.com/es-es/lego-education-product-database/mindstorms-ev3/45544-lego-mindstorms-education-ev3-core-set)
 * [31313 LEGO MINDSTORMS EV3](http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3)
 
-But in the next releases, the library will add support for [Raspberry Pi](https://www.raspberrypi.org/) hats as [Mindsensors PiStorms](http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit-raspberry-pi-brain-for-lego-robot) & [Dexter Industries BrickPi+](http://www.dexterindustries.com/brickpi/) in order to use the power of Raspberry Pi boards. 
+In the next releases, the library will add support for [Raspberry Pi](https://www.raspberrypi.org/) boards as [Mindsensors PiStorms](http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit-raspberry-pi-brain-for-lego-robot) & [Dexter Industries BrickPi+](http://www.dexterindustries.com/brickpi/) in order to use the power of Raspberry Pi. 
 
 Take a look the following table to observe the differences:
 
@@ -55,13 +55,15 @@ Take a look the following table to observe the differences:
 | Frequency:      | 300 MHz                              | 700 MHz                    | 900 MHz                   |
 | Main Memory:    | 64 MB RAM 16 MB Flashmicro SDHC Slot | 512 MB (shared with GPU)   | 1 GB (shared with GPU)    |
 | USB Ports:      | 1                                    | 2                          | 4                         |
+{: .table .table-striped .table-bordered}
 
+This numbers explains the reason to develop this library for ev3dev.
 
-**What kind of software is possible to use with this library?**
+##What kind of software is possible to use with this library?
 
 At the moment, the library will help you to learn coding with Java and experiment with basic robotics concepts. Try to run this example on your EV3 Brick:
 
-``` java
+{% highlight java linenos%}
 package ev3dev.examples.misc;
 
 import ev3dev.hardware.Battery;
@@ -75,7 +77,7 @@ import lejos.utility.Delay;
 //java -cp ev3-lang-java-0.2-SNAPSHOT.jar ev3dev.examples.misc.BumperCar
 public class BumperCar {
 	
-	//Robot Definition
+    //Robot Definition
     private final static EV3LargeRegulatedMotor mA = new EV3LargeRegulatedMotor(MotorPort.A);
     private final static EV3LargeRegulatedMotor mB = new EV3LargeRegulatedMotor(MotorPort.B);
     private final static EV3IRSensor ir1 = new EV3IRSensor(SensorPort.S1);
@@ -133,33 +135,38 @@ public class BumperCar {
         mB.stop();
     }
 }
-```
+{% endhighlight %}
 
-**Roadmap**
+Explore [JavaDocs](https://jabrena.github.io/ev3dev-lang-java/docs/api/) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
+
+##Roadmap
 
 The current roadmap for this project is:
 
 [v0.3.0](https://github.com/jabrena/ev3dev-lang-java/milestones/0.3.0)
 
+* Migrate project to Gradle
+* Install Java 8 on Lego Mindstorms EV3
 * Add support for Mindsensors PiStorms
 * Add support for RPLidar, 2D Lidar 
 * Add support for Mindsensors Absolute IMU
 
 ![RPLidar](https://pbs.twimg.com/media/Cb6yExKWwAANKJ4.jpg)
+{: .img-responsive}
 
 [v0.4.0](https://github.com/jabrena/ev3dev-lang-java/milestones/0.4.0)
 
 * Add support for Dexter Industries BrickPi+
 * Add support for Microinfinity XG1300L
 
-**Support**
+##Support
 
 If you have some doubt about this library, please create a issue:
-https://github.com/jabrena/ev3dev-lang-java/issues
+[https://github.com/jabrena/ev3dev-lang-java/issues](https://github.com/jabrena/ev3dev-lang-java/issues)
 
-**References**
+##References
 
-* [EV3Dev-lang-java](https://jabrena.github.io/ev3dev-lang-java/#/)
+* [ev3dev-lang-java](https://jabrena.github.io/ev3dev-lang-java/#/)
 * [Tiobe](http://www.tiobe.com/index.php/tiobe_index)
 * [Githut](http://githut.info/)
 * [IEEE Spectrum](http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages)
