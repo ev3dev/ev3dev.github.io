@@ -2,7 +2,9 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
+
+@import url($web-font-path);
 
 // Navbar =====================================================================
 
@@ -13,7 +15,7 @@
 
     .badge {
       background-color: #fff;
-      color: @navbar-default-bg;
+      color: $navbar-default-bg;
     }
   }
 
@@ -21,7 +23,7 @@
 
     .badge {
       background-color: #fff;
-      color: @navbar-inverse-bg;
+      color: $navbar-inverse-bg;
     }
   }
 
@@ -47,38 +49,38 @@
 }
 
 .btn:active {
-  .box-shadow(none);
+  @include box-shadow(none);
 }
 
 .btn-group.open .dropdown-toggle {
-  .box-shadow(none);
+  @include box-shadow(none);
 }
 
 // Typography =================================================================
 
 .text-primary,
 .text-primary:hover {
-  color: lighten(@brand-primary, 10%);
+  color: lighten($brand-primary, 10%);
 }
 
 .text-success,
 .text-success:hover {
-  color: @brand-success;
+  color: $brand-success;
 }
 
 .text-danger,
 .text-danger:hover {
-  color: @brand-danger;
+  color: $brand-danger;
 }
 
 .text-warning,
 .text-warning:hover {
-  color: @brand-warning;
+  color: $brand-warning;
 }
 
 .text-info,
 .text-info:hover {
-  color: @brand-info;
+  color: $brand-info;
 }
 
 // Tables =====================================================================
@@ -122,7 +124,7 @@ table,
   &-bordered > thead > tr > td,
   &-bordered > tbody > tr > td,
   &-bordered > tfoot > tr > td {
-    border: 1px solid @table-border-color;
+    border: 1px solid $table-border-color;
   }
 }
 
@@ -130,17 +132,17 @@ table,
 
 input,
 textarea {
-  color: @input-color;
+  color: $input-color;
 }
 
 .form-control,
 input,
 textarea {
   border: 2px hidden transparent;
-  .box-shadow(none);
+  @include box-shadow(none);
 
   &:focus {
-    .box-shadow(none);
+    @include box-shadow(none);
   }
 }
 
@@ -156,16 +158,16 @@ textarea {
   &.radio-inline label,
   &.checkbox-inline label,
   .form-control-feedback {
-    color: @brand-warning;
+    color: $brand-warning;
   }
 
   .form-control,
   .form-control:focus {
-    .box-shadow(none);
+    @include box-shadow(none);
   }
 
   .input-group-addon {
-    border-color: @brand-warning;
+    border-color: $brand-warning;
   }
 }
 
@@ -181,16 +183,16 @@ textarea {
   &.radio-inline label,
   &.checkbox-inline label,
   .form-control-feedback {
-    color: @brand-danger;
+    color: $brand-danger;
   }
 
   .form-control,
   .form-control:focus {
-    .box-shadow(none);
+    @include box-shadow(none);
   }
 
   .input-group-addon {
-    border-color: @brand-danger;
+    border-color: $brand-danger;
   }
 }
 
@@ -206,21 +208,21 @@ textarea {
   &.radio-inline label,
   &.checkbox-inline label,
   .form-control-feedback {
-    color: @brand-success;
+    color: $brand-success;
   }
 
   .form-control,
   .form-control:focus {
-    .box-shadow(none);
+    @include box-shadow(none);
   }
 
   .input-group-addon {
-    border-color: @brand-success;
+    border-color: $brand-success;
   }
 }
 
 .input-group-addon {
-  color: @text-color;
+  color: $text-color;
 }
 
 // Navs =======================================================================
@@ -229,7 +231,7 @@ textarea {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: @nav-tabs-border-color;
+    border-color: $nav-tabs-border-color;
   }
 }
 
@@ -249,7 +251,7 @@ textarea {
     &>a:hover,
     &>a:focus,
     &>span {
-      background-color: @pagination-disabled-bg;
+      background-color: $pagination-disabled-bg;
     }
   }
 }
@@ -271,46 +273,18 @@ textarea {
   }
 }
 
-.alert-variant(@color; @border; @text-color) {
-  background-color: darken(@color, 20%);
-  border-color: @border;
-  color: @text-color;
-}
-
-
 .alert {
-  border-left-width: 10px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-
   .alert-link {
     color: #fff;
     text-decoration: underline;
   }
 }
 
-.alert-success {
-  .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
-}
-
-.alert-info {
-  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
-}
-
-.alert-warning {
-  .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
-}
-
-.alert-danger {
-  .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
-}
-
-
 // Progress bars ==============================================================
 
 .progress {
   height: 10px;
-  .box-shadow(none);
+  @include box-shadow(none);
   .progress-bar {
     font-size: 10px;
     line-height: 10px;
@@ -320,7 +294,7 @@ textarea {
 // Containers =================================================================
 
 .well {
-  .box-shadow(none);
+  @include box-shadow(none);
 }
 
 a.list-group-item {
@@ -328,79 +302,47 @@ a.list-group-item {
   &.active,
   &.active:hover,
   &.active:focus {
-    border-color: @list-group-border;
+    border-color: $list-group-border;
   }
 
   &-success {
     &.active {
-      background-color: @state-success-bg;
+      background-color: $state-success-bg;
     }
 
     &.active:hover,
     &.active:focus {
-      background-color: darken(@state-success-bg, 5%);
+      background-color: darken($state-success-bg, 5%);
     }
   }
 
   &-warning {
     &.active {
-      background-color: @state-warning-bg;
+      background-color: $state-warning-bg;
     }
     
     &.active:hover,
     &.active:focus {
-      background-color: darken(@state-warning-bg, 5%);
+      background-color: darken($state-warning-bg, 5%);
     }
   }
 
   &-danger {
     &.active {
-      background-color: @state-danger-bg;
+      background-color: $state-danger-bg;
     }
     
     &.active:hover,
     &.active:focus {
-      background-color: darken(@state-danger-bg, 5%);
+      background-color: darken($state-danger-bg, 5%);
     }
   }
 }
 
 .popover {
-  color: @text-color;
+  color: $text-color;
 }
 
 .panel-default > .panel-heading {
-  background-color: @panel-footer-bg;
-}
-
-.panel {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-
-  .panel-heading {
-    border-left-width: 9px;
-    border-left-style: solid;
-  }
-}
-
-.panel-variant(@color) {
-  .panel-heading {
-    background-color: darken(@color, 20%);
-  }
-}
-
-.panel-success {
-    .panel-variant(@panel-success-heading-bg);
-}
-
-.panel-info {
-    .panel-variant(@panel-info-heading-bg);
-}
-
-.panel-warning {
-    .panel-variant(@panel-warning-heading-bg);
-}
-
-.panel-danger {
-    .panel-variant(@panel-danger-heading-bg);
+  background-color: $panel-footer-bg;
 }
