@@ -1,6 +1,81 @@
 ---
 ---
 
+// Variable overrides
+$brand-primary: #da5e25;
+$brand-danger: #ef2d19;
+$link-color: #ff9b1a;
+$navbar-default-link-hover-color: $link-color;
+$code-color: #cccccc;
+$code-bg: #111111;
+$pre-bg: #111111;
+$pre-color: #cccccc;
+$pre-border-color: transparent;
+
+// Bootstrap + bootswatch imports
 @import "variables";
 @import "bootstrap/bootstrap";
 @import "bootswatch";
+
+// Custom alert styles
+.alert {
+    border-left-width: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@mixin alert-variant($color, $border, $text-color) {
+    background-color: darken($color, 20%);
+    border-color: $border;
+    color: $text-color;
+}
+
+.alert-success {
+    @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+}
+
+.alert-info {
+    @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+}
+
+.alert-warning {
+    @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
+
+.alert-danger {
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+
+// Custom panel styles
+.panel {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .panel-heading {
+        border-left-width: 9px;
+        border-left-style: solid;
+    }
+}
+
+
+@mixin panel-variant($color) {
+    .panel-heading {
+        background-color: darken($color, 20%);
+    }
+}
+
+.panel-success {
+    @include panel-variant($panel-success-heading-bg);
+}
+
+.panel-info {
+    @include panel-variant($panel-info-heading-bg);
+}
+
+.panel-warning {
+    @include panel-variant($panel-warning-heading-bg);
+}
+
+.panel-danger {
+    @include panel-variant($panel-danger-heading-bg);
+}
