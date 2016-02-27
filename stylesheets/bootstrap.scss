@@ -1,20 +1,8 @@
 ---
 ---
 
-// Variable overrides
-$brand-primary: #da5e25;
-$brand-danger: #ef2d19;
-$link-color: #ff9b1a;
-$navbar-default-link-hover-color: $link-color;
-$code-color: #cccccc;
-$code-bg: #111111;
-$pre-bg: #111111;
-$pre-color: #cccccc;
-$pre-border-color: transparent;
-$icon-font-path: "/fonts/bootstrap/";
-
 // Bootstrap + bootswatch imports
-@import "variables";
+@import "custom-variables";
 @import "bootstrap/bootstrap";
 @import "bootswatch";
 

@@ -7,7 +7,7 @@ Bootstrap, Bootswatch, and styling
 ---
 - Build on Twitter Bootstrap
 - Styling based on Bootswatch's "Darkly" theme
-- Custom modifications to defaults from Bootstrap and Bootswatch are stored in `/stylesheets/bootstrap.scss`
+- Custom modifications to defaults from Bootstrap and Bootswatch are stored in `/_sass/_custom-variables.scss` and `/stylesheets/bootstrap.scss`
 - Jekyll builds Bootstrap, Bootswatchm and custom modifications manually on every build. We don't use a pre-build release CSS file.
 - Bootstrap and Bootswatch files are spread across 3 different directories. In all cases, the files are unmodified from the versions found in official releases.
   - `/_sass/`
