@@ -3,7 +3,7 @@ author: "@jabrena"
 title: "Announcing ev3dev-lang-java v0.2.0"
 ---
 
-If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://jabrena.github.io/ev3dev-lang-java/#/) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
+If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
 
 ##What features are included in last release?
 
@@ -28,7 +28,7 @@ Using ev3dev with Java, you have the opportunity to build on your Brick directly
 
 {% highlight bash %}
 sudo apt-get install git
-git clone https://github.com/jabrena/ev3dev-lang-java.git
+git clone https://github.com/ev3dev-lang-java/ev3dev-lang-java.git
 sudo apt-get install gradle
 sudo apt-get install maven
 sudo apt-get install ant
@@ -137,13 +137,13 @@ public class BumperCar {
 }
 {% endhighlight %}
 
-Explore [JavaDocs](https://jabrena.github.io/ev3dev-lang-java/docs/api/) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
+Explore [JavaDocs](https://ev3dev-lang-java.github.io/ev3dev-lang-java/docs/api/) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
 
 ##Roadmap
 
 The current roadmap for this project is:
 
-[v0.3.0](https://github.com/jabrena/ev3dev-lang-java/milestones/0.3.0)
+[v0.3.0](https://github.com/ev3dev-lang-java/ev3dev-lang-java/milestones/0.3.0)
 
 * Migrate project to Gradle
 * Install Java 8 on Lego Mindstorms EV3
@@ -154,7 +154,7 @@ The current roadmap for this project is:
 ![RPLidar](https://pbs.twimg.com/media/Cb6yExKWwAANKJ4.jpg)
 {: .img-responsive}
 
-[v0.4.0](https://github.com/jabrena/ev3dev-lang-java/milestones/0.4.0)
+[v0.4.0](https://github.com/ev3dev-lang-java/ev3dev-lang-java/milestones/0.4.0)
 
 * Add support for Dexter Industries BrickPi+
 * Add support for Microinfinity XG1300L
@@ -162,11 +162,11 @@ The current roadmap for this project is:
 ##Support
 
 If you have some doubt about this library, please create a issue:
-[https://github.com/jabrena/ev3dev-lang-java/issues](https://github.com/jabrena/ev3dev-lang-java/issues)
+[https://github.com/ev3dev-lang-java/ev3dev-lang-java/issues](https://github.com/ev3dev-lang-java/ev3dev-lang-java/issues)
 
 ##References
 
-* [ev3dev-lang-java](https://jabrena.github.io/ev3dev-lang-java/#/)
+* [ev3dev-lang-java](https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/)
 * [Tiobe](http://www.tiobe.com/index.php/tiobe_index)
 * [Githut](http://githut.info/)
 * [IEEE Spectrum](http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages)
