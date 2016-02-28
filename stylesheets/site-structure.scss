@@ -1,0 +1,147 @@
+---
+---
+
+@import "custom-variables";
+
+// Margin on floating elements
+.pull-right {
+    margin-left: 20px;
+}
+
+.pull-left {
+    margin-right: 20px;
+}
+
+// Vertical logo positioning and style
+#brand-logo {
+    height: calc(100% + 8px);
+    margin-top: -4px;
+}
+
+.navbar-brand {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+// Cursor on dropdowns
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+// Icons in headings
+.heading-icon {
+    margin-right: 8px;
+}
+
+// Alert icons
+.alert span.glyphicon {
+    margin-right: 8px;
+}
+
+// Footer spacing
+#footer {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    
+    text-align: center;
+    color: #696969;
+}
+
+// Navbar dropdown behavior
+@media all and (min-width:$screen-md-min) {
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+// Body spacing
+body.no-jumbotron {
+    padding-top: 40px;
+}
+
+@media (max-width: $screen-md-max) {
+    body.no-jumbotron {
+        padding-top: 0;
+    }
+}
+
+// Panel title size
+h1.panel-title {
+    font-size: 20px;
+}
+
+// Half-rounded panel
+.rounded-panel {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+// Custom font thickness
+.font-light {
+    font-weight: lighter;
+}
+
+// Screenshot formatting
+.screenshot {
+    display: table;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.screenshot > a > img {
+    max-height: 480px;
+}
+
+.inline-screenshot {
+    max-width: 350px;
+}
+
+.inline-screenshot img {
+    max-width: 350px;
+}
+
+// <sup> formatting
+sup[id]:before {
+    display: inline-block;
+}
+
+// Table formatting (stripes)
+.table-indexed > tbody th {
+    background-color: #2f2f2f;
+}
+
+.table-indexed > thead > tr,
+.table-indexed > tbody > tr:nth-of-type(2n+0) {
+    background-color: #3d3d3d;
+}
+
+.table-indexed > tbody > tr:nth-of-type(2n+1) {
+    background-color: transparent;
+}
+
+// Table-like key-value pair formatting
+dd {
+    margin-bottom: 20px;
+}
+
+dd ol, dd ul {
+    margin-top: 10px;
+}
+
+// List formatting
+ul + p, ol + p {
+    margin-top: 10.5px;
+}
+
+// Creative Commons license badge
+.cclicense {
+    text-align: center;
+    color: #696969;
+}
+
+// Font size on large buttons
+.xl-button-text {
+    font-size: 22px;
+}

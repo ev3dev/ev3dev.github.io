@@ -1,0 +1,52 @@
+---
+---
+
+@import "custom-variables";
+
+// Jumbotron title size
+.jumbotron h1 {
+    font-size: 54px;
+}
+
+// Featurette flow margin
+.featurette-divider {
+    margin: 80px 0;
+}
+
+// Featurette headings
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+// Background for "projects" featurette
+.projects-featurette {
+    background-image: url('../images/project-showcase-small.jpg');
+    background-position-y: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+// Spacing and coloring for content in front of "projects" image
+.projects-featurette-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: #fafafa;
+}
+
+// Featurette scaling on smaller displays
+@media all and (min-width: $screen-sm-min) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+// Horizontal flow of featurette content on larger displays
+@media all and (max-width: $screen-md-max) {
+    .featurette {
+        text-align: center;
+    }
+}

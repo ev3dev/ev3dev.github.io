@@ -9,6 +9,7 @@ exclude:
   - vendor
   - cibuild.sh
   - .travis.yml
+  - maintainer-notes.md
 
 gems:
   - jekyll-mentions
