@@ -3,7 +3,7 @@ title: Writing an SD Card Image Using Win32DiskImager
 subject: SD Card Image
 ---
 
-1. Open up the folder where you downloaded the image file from GitHub.
+1. Open up the folder where you downloaded the image file from [GitHub](https://github.com/ev3dev/ev3dev/releases).
 
 2. Right-click it, click "Extract All",
 and choose a location to extract the image to.

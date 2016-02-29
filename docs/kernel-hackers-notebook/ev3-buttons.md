@@ -44,4 +44,4 @@ The 6 buttons on the EV3 are connected to GPIOs.
 
 ## Device Driver
 
-We are using the existing [gpio-keys](https://github.com/ev3dev/ev3dev-kernel/blob/master/drivers/input/keyboard/gpio_keys.c) driver. This causes the buttons to function as regular keyboard keys. Key mapping is defined in [board-legoev3.c](https://github.com/ev3dev/ev3dev-kernel/blob/master/arch/arm/mach-davinci/board-legoev3.c).
+We are using the existing [gpio-keys](https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/drivers/input/keyboard/gpio_keys.c) driver. This causes the buttons to function as regular keyboard keys. Key mapping is defined in [board-legoev3.c](https://github.com/ev3dev/ev3dev-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/board-legoev3.c).

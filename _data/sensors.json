@@ -243,7 +243,7 @@
         "vendor_id": "Pixy",
         "vendor_name": "Charmed Labs",
         "vendor_part_name": "Pixy (CMUcam5) for LEGO",
-        "vendor_website": "http://charmedlabs.com/default/pixy-cmucam5-for-lego/"
+        "vendor_website": "http://charmedlabs.com/default/pixy-lego/"
     },
     {
         "id": "DI_DFLEX_SENSOR",
@@ -2008,7 +2008,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Touch Sensor",
         "vendor_part_number": "9843",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Ultrasonic-Sensor-9846"
     },
     {
         "analog_mode_info": [
@@ -2036,7 +2036,7 @@
                 "si_max": "1000",
                 "units": "pct",
                 "units_description": "percent",
-                "value0": "Reflected light intensity (0 to 100)"
+                "value0": "Reflected light intensity (0 to 1000)"
             },
             {
                 "data_sets": "1",
@@ -2051,7 +2051,7 @@
                 "si_max": "1000",
                 "units": "pct",
                 "units_description": "percent",
-                "value0": "Ambient light intensity (0 to 100)"
+                "value0": "Ambient light intensity (0 to 1000)"
             }
         ],
         "name": "lego-nxt-light",
@@ -2063,7 +2063,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Light Sensor",
         "vendor_part_number": "9844",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Light-Sensor-9844"
     },
     {
         "analog_mode_info": [
@@ -2116,7 +2116,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Sound Sensor",
         "vendor_part_number": "9845",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Sound-Sensor-9845"
     },
     {
         "default_address": "0x01",
@@ -2218,7 +2218,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Ultrasonic Sensor",
         "vendor_part_number": "9846",
-        "vendor_website": "http://www.lego.com/en-us/mindstorms/downloads/software/nxt-hdk/"
+        "vendor_website": "http://shop.lego.com/en-US/Ultrasonic-Sensor-9846"
     },
     {
         "cmd_info": [
@@ -2472,7 +2472,7 @@
                 "units_description": "degrees",
                 "value0": "X-axis angle (0 to 180)",
                 "value1": "Y-axis angle (0 to 180)",
-                "value2": "Y-axis angle (0 to 180)"
+                "value2": "Z-axis angle (0 to 180)"
             },
             {
                 "data_sets": "3",
@@ -3193,7 +3193,7 @@
             }
         ],
         "name": "ms-nxtmmx",
-        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^tacho-motor-devices]: The NxtMMX driver also loads two\n    [tacho-motor] class devices. Use the tacho-motor class devices\n    to actually control the motors. You can identify the motors\n    by the `port_name` attribute. It will be `in<X>:i2c<Y>:mux<Z>`\n    where `<X>` is 1-4, `<Y>` is 3 (unless you changed the address)\n    and `<Z>` is 1 or 2 (matches M1 or M2 printed on the NxtMMX).\n    ^\n    [tacho-motor]: /docs/drivers/tacho-motor-class\n    \n    ",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^tacho-motor-devices]: The NxtMMX driver also loads two\n    [tacho-motor] class devices. Use the tacho-motor class devices\n    to actually control the motors. You can identify the motors\n    by the `address` attribute. It will be `in<X>:i2c<Y>:mux<Z>`\n    where `<X>` is 1-4, `<Y>` is 3 (unless you changed the address)\n    and `<Z>` is 1 or 2 (matches M1 or M2 printed on the NxtMMX).\n    ^\n    [tacho-motor]: /docs/drivers/tacho-motor-class\n    \n    ",
         "num_modes": "2",
         "ops": [],
         "product_id": "NxTMMX",
@@ -3256,7 +3256,7 @@
             }
         ],
         "name": "ms-8ch-servo",
-        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `port_name` attribute\n    will return `in<X>:i2c<Y>:sv<Z>` where `<X>` is the input port\n    the servo controller is connected to, `<Y>` is the address and\n    `<Z>` is the channel as indicated on the servo controller itself.\n    ^\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/drivers/servo-motor-class\n    \n    ",
+        "notes": "\n[^address]: The address is programmable. See manufacturer\n    documentation for more information.\n    \n[^servo-motor-devices]: The `ms-8ch-servo` driver loads separate\n    servo motor devices (one for each of the 8 channels) in addition\n    to the [lego-sensor class] device. See the [servo-motor class]\n    for more information. The `servo-motor` class `address` attribute\n    will return `in<X>:i2c<Y>:sv<Z>` where `<X>` is the input port\n    the servo controller is connected to, `<Y>` is the address and\n    `<Z>` is the channel as indicated on the servo controller itself.\n    ^\n    [lego-sensor class]: /docs/drivers/lego-sensor-class\n    [servo-motor class]: /docs/drivers/servo-motor-class\n    \n    ",
         "num_modes": "2",
         "ops": [],
         "product_id": "NXTServo",

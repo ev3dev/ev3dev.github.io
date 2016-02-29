@@ -9,12 +9,13 @@ XV11 LIDAR communicates using UART, 8N1 at 3.3V with baud rate 115200.
 
 EV3 has all the required hardware to communicate with the LIDAR and ev3dev has the software.
 
-<div class="alert alert-warning">
-    <span class="glyphicon glyphicon-alert"></span>
-    The instructions on this page apply to EV3.
-	You can also get it working with Raspberry PI and BrickPI but BrickPI doesn't support other-uart mode for sensor port and dedicated Raspberry Pi UART GPIO pins are already taken by BrickPI.
-	You have to figure out some other way to get the UART. USB to UART bridge could be one option. 
-</div>
+
+{% include icon.html type="warning" %}
+The instructions on this page apply to EV3.
+You can also get it working with Raspberry PI and BrickPI but BrickPI doesn't support
+other-uart mode for sensor port and dedicated Raspberry Pi UART GPIO pins are already taken by BrickPI.
+You have to figure out some other way to get the UART. USB to UART bridge could be one option.
+{: .alert .alert-warning}
 
 To interface the LIDAR one has to:
 
