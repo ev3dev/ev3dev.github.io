@@ -48,7 +48,7 @@ If you assume that XV11 LIDAR returns you the distance to the object you will ha
 
 ## Testing the LIDAR
 
-You can use xv11test from github repository [xv11test] to:
+You can use [xv11test] from the github repository to:
 
 - test the LIDAR
 - plot the LIDAR scan 
@@ -72,7 +72,7 @@ Everything for just a few € or $.
 
 [xv11hacking] - for more information on LIDAR integration
 
-[Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is not exactly Revo LDS but shares a lot of design.
+[Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is not exactly Revo LDS but they share a lot of design
 
 [xv11test]: https://github.com/bmegli/ev3dev-mapping
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
