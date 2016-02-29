@@ -46,6 +46,18 @@ If you assume that XV11 LIDAR returns you the distance to the object you will ha
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" %}
 
+## Testing the LIDAR
+
+You can use [xv11test] from the github repository to:
+
+- test the LIDAR
+- plot the LIDAR scan 
+- get idea how to communicate with the LIDAR
+- get idea how to interpret the LIDAR output and apply geometric correction
+- or use `xv11lidar.h` and `xv11lidar.c` as a simple C library to communicate with the LIDAR
+
+Go to repository and follow readme.md instructions.
+
 ## Mechanical Integration
 
 At some point you will want to install the LIDAR on the robot. You can make inexpensive stand compatible with LEGO from polycarbonate, acrylic plastic or even wood.
@@ -60,7 +72,8 @@ Everything for just a few € or $.
 
 [xv11hacking] - for more information on LIDAR integration
 
-[Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is either exactly or almost exactly Revo LDS
+[Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is not exactly Revo LDS but they share a lot of design
 
+[xv11test]: https://github.com/bmegli/ev3dev-mapping
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
 [Revo LDS Whitepaper]: http://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
