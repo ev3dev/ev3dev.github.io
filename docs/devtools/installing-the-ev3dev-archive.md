@@ -11,8 +11,8 @@ If you just want to write programs for the EV3 itself, you don't need this.
 
 Adding it is quite simple. Save the following as `/etc/apt/sources.list.d/ev3dev.list`.
 
-    deb http://ev3dev.org/debian trusty main
-    #deb-src http://ev3dev.org/debian trusty main
+    deb http://archive.ev3dev.org/ubuntu trusty main
+    #deb-src http://archive.ev3dev.org/ubuntu trusty main
 
 Then trust the keyring by running...
 
