@@ -1,42 +1,41 @@
 ---
-title: Using the EV3 Buttons
-subject: Hardware - PS3 Sixaxis bluetooth gamepad
+title: PS3 gamepad via Bluetooth & Python on the Ev3
+subject: Hardware - Gamepads and remote controls
 author: Anton Vanhoucke
 ---
 
 * Table of Contents
 {:toc}
 
+The cool thing about the PS3 gamepad is that it's a normal Bluetooth device and connects directly to the Ev3. You can easily run programs in brickman and use the pad without another computer or laptop.
+
 # What you need
-A PS3 gamepad (also known as Sixaxis controller or Dualshock 3)
-A mini-usb / usb cable
-A working ssh and internet connection to the Ev3 (or other ev3dev device).
+- A PS3 gamepad (also known as Sixaxis controller or Dualshock 3)
+- A mini-usb / usb cable
+- A working ssh and internet connection to the Ev3 (or other ev3dev device)
+- ev3-ev3dev-jessie-2015-12-30.img or later
 
 # Connection
-The PS3 controller pairs more or less like a normal bluetooth device in brickman. First make sure bluetooth is on in Ev3dev and the brick is visible. Next you have to connect the gamepad via a mini usb cable to the Ev3. Next press the PS3 button on the gamepad. The controller should now show up in brickman under wireless > bluetooth. Connect, pair and remove the USB cable. Whenever you press the PS3 button on the gamepad now, it will try to connect to the ev3 brick. Nice!
+The PS3 pairing process in Brickman is a little strange, but works fine. Stick exactly to these steps: 
 
-If brickman doesn't work or if you don't have a display, like on a BrickPi, bluetoothectl is the way to go. A nice tutorial is here: https://wiki.gentoo.org/wiki/Sony_DualShock
+1. On the Ev3 brick go to 'Wireless and Networks' > 'Bluetooth'
+2. Make sure Bluetooth is Powered and the brick is Visible. 
+3. Connect the gamepad via a mini usb cable to the Ev3. I used the large usb port next to the micro SD slot.
+4. Under Devices a 'PLAYSTATION(R) 3 controller' should show up. But don't pair!
+4. Remove the USB cable again.
+5. Press the PS3 button on the gamepad.
+6. The brick now asks "Authorize service HID?" Press "Accept" 
 
+You're done! Whenever you press the PS3 button on the gamepad now, it will try to connect to the ev3 brick. Nice!
 
-# Installing the necessary python libraries
-To read gamepad values into our python program we need to the evdev library. (This is not a typo. There is no 3 in evdev) Depending on your ev3dev image it might already be installed. Try this to check that:
+If brickman doesn't work or if you don't have a display, like on a BrickPi, `bluetoothctl` is the way to go. The gentoo linux guys wrote [a nice tutorial](https://wiki.gentoo.org/wiki/Sony_DualShock)
 
-    python
-    >>> import evdev
-
-If that doesn't return an error, you're fine. Otherwise install it like so:
-
-    sudo apt-get update
-    sudo apt-get install python-dev python-pip gcc
-    sudo apt-get install linux-headers-$(uname -r)
-    sudo pip install evdev
-
-The last command will take a long time and won't show much response. Be patient!
 
 # Running motors with a PS3 sixaxis controller
-Here's a quick program that will take the right stick Y axis and use it to set the speed of a motor in port A. Note that motor control is in a separate thread. That's because controlling the motors is much slower than reading the gamepad. Multithreading synchronizes both.
+Now on to Python. In python we need the evdev (without a 3) to read gamepad events. Here's a quick program that will take the right stick Y axis and use it to set the speed of a motor in port A. Note that motor control is in a separate thread. That's because controlling the motors is much slower than reading the gamepad. Multithreading synchronizes both.
 
 {% highlight python %}
+#!/usr/bin/env python
 __author__ = 'Anton Vanhoucke'
 
 import evdev
@@ -99,11 +98,13 @@ for event in gamepad.read_loop():   #this loops infinitely
         break
 {% endhighlight %}
 
+Copy this code into a file on the Ev3 brick to run it. If you do `sudo chmod +x your_file_name.py`, you can even run it from the brickman interface!
+
 # The complete event type and code mapping of the ps3 controller
 I mapped out all codes for you! Here they are:
 {% include screenshot.html source="/images/Website/sixaxis_event_codes.png" %}
 
-# The result: a remote controle robot. 
+# The result: a remote controlled robot
 How cool! No computer needed. Just a gamepad and the ev3 brick. 
 
 {% include youtube-embed.html youtube_video_id="brfgF3D5c4k" %}
