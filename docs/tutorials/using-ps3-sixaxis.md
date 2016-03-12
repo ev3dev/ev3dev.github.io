@@ -1,5 +1,5 @@
 ---
-title: PS3 gamepad via Bluetooth & Python on the Ev3
+title: Bluetooth PS3 gamepad in Python
 subject: Hardware - Gamepads and remote controls
 author: Anton Vanhoucke
 ---
