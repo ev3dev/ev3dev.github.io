@@ -32,19 +32,57 @@ For the details, follow video tutorial:
 ## Motor Connector
 
 The part with resistors is optional. It allows EV3 to autodetect the motor but in ev3dev you can load the driver manually. 
-If you decide not to solder the resistors you only have to make two connections (PWM0 and PWM1).
+If you decide not to solder the resistors you only have to make two connections (PWM0-PWR and PWM1-Ground).
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" %}
 
+In both cases (w/o resistors) you are limited to unregulated motor control.
+	
 ## Data and Power Connector
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" %}
 
+## Sensor Port Mode
+
+I am assuming your data connector is connected to `port 1` (adjust commands otherwise).
+
+You will have to put the sensor port in `other-uart` mode:
+
+    echo other-uart > /sys/class/lego-port/port0/mode
+	
+You can read and write to or from LIDAR at:
+
+    /dev/tty_in1
+	
+It is binary tty communication. More information in `Testing the LIDAR` section.
+	
+## Motor Port Mode
+	
+I am assuming your motor connector is connected to `port A` and it is the only motor.	
+
+With auto-detection (resistors) your motor interface is available at:
+
+    /sys/class/tacho-motor/motor0
+	
+If you decided to not solder the resistors in motor connector, you have to put the motor port in `dc-motor` mode:
+
+    echo dc-motor > /sys/class/lego-port/port4/mode
+	
+Then your motor interface will be available at:
+
+    /sys/class/dc-motor/motor0
+	
+In both cases (w/o resistors) you are limited to unregulated motor control.	
+   
 ## LIDAR Rotational Geometry
 
 If you assume that XV11 LIDAR returns you the distance to the object you will have it *almost* right. To do it correctly take into account the rotational geometry of the LIDAR.
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" %}
+
+You may ignore the above and the reported distance will still be approximately correct. 
+You will introduce systematic error, dependent on angle, bounded by 25 mm on x and y.
+Regardless, the LIDAR has also random error with variance dependent on distance, surface and reflection angle.
 
 ## Testing the LIDAR
 
@@ -54,7 +92,8 @@ You can use [xv11test] from the github repository to:
 - plot the LIDAR scan 
 - get idea how to communicate with the LIDAR
 - get idea how to interpret the LIDAR output and apply geometric correction
-- or use `xv11lidar.h` and `xv11lidar.c` as a simple C library to communicate with the LIDAR
+- use `xv11lidar.h` and `xv11lidar.c` as a simple C library to communicate with the LIDAR
+- run `xv11test` with `-raw` argument and pipe LIDAR data to your program (C, C# and Java examples)
 
 Go to repository and follow readme.md instructions.
 
