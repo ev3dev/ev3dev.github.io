@@ -93,7 +93,7 @@ You can use [xv11test] from the github repository to:
 - get idea how to communicate with the LIDAR
 - get idea how to interpret the LIDAR output and apply geometric correction
 - use `xv11lidar.h` and `xv11lidar.c` as a simple C library to communicate with the LIDAR
-- run `xv11test` with `-raw` argument and pipe LIDAR data to your program (C, C# and Java examples)
+- run `xv11test` with `-raw` argument and pipe LIDAR data to your program (C, C# and Java examples included)
 
 Go to repository and follow readme.md instructions.
 
