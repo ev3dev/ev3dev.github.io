@@ -44,7 +44,7 @@ IGNORE_HREFS=$(ruby -e 'puts %w{
 
 echo "Validating HTML ----------------------------------"
 # We want to use the publish script so that we can implement other transformations in the future
-ruby publish.rb --no-fix-links --test "htmlproof ./ --href-ignore $IGNORE_HREFS --check-html --ignore-script-embeds --allow-hash-href"
+ruby publish.rb --no-fix-links --test "htmlproofer ./ --url-ignore $IGNORE_HREFS --check-html --allow-hash-href"
 
 # If the site build succeeded but we found BOMs, we want to fail the build
 if [ $FOUND_BOM == true ]

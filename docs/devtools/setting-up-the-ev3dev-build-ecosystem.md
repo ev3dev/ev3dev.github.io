@@ -335,7 +335,7 @@ Then we'll set up the ev3dev repository `conf` files:
 
     cat <<EOF > "$HOME/ev3dev.ev3dev.jessie.armel/conf/updates"
     Name:  ev3dev-jessie-update
-    Method: http://ev3dev.org/debian
+    Method: http://archive.ev3dev.org/debian
     VerifyRelease: 93178A7C
     Suite: jessie
     Components: main

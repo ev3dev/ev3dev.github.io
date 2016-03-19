@@ -45,7 +45,7 @@ Once you have trusty up and running, run the following commands to install the
 `brickstrap` package.
 
     sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 2B210565
-    sudo apt-add-repository "deb http://ev3dev.org/debian trusty main"
+    sudo apt-add-repository "deb http://archive.ev3dev.org/ubuntu trusty main"
     sudo apt-get update
     sudo apt-get install brickstrap
 
@@ -254,8 +254,8 @@ this...
     deb http://cdn.debian.net/debian jessie main contrib non-free
     deb-src http://cdn.debian.net/debian jessie main contrib non-free
 
-    deb http://ev3dev.org/debian jessie main
-    deb-src http://ev3dev.test/debian jessie main
+    deb http://archive.ev3dev.org/debian jessie main
+    deb-src http://archive.ev3dev.org/debian jessie main
 
 Save the changes, then run...
 
