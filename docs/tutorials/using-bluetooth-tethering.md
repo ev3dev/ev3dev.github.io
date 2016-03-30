@@ -135,11 +135,26 @@ If you are using an older version, please upgrade.
         Windows 7 looks a bit different, so it needs its own instructions.
 
     *   {: tab="8"}
-        {% include icon.html type="warning" %}
-        HELP WANTED! See [issue #287](https://github.com/ev3dev/ev3dev/issues/287){: .alert-link}.
-        {: .alert .alert-warning}
-
-        This is mostly figured out [here](https://github.com/ev3dev/ev3dev/issues/232#issuecomment-69801370).
-        We just need someone to make it pretty.
+        1.  On the EV3, first verify that Bluetooth is powered on. In brickman,
+            open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
+            *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
+            status bar also indicates that Bluetooth is powered on.
+    
+            {% include screenshot.html source="/images/brickman/bluetooth-powered-visible-no-devices.png" %}
+    
+        2.  Go back to *Wireless and Networks* and select *Tethering*. Enable tethering
+            via Bluetooth by checking the box next to *Bluetooth*.
+    
+            {% include screenshot.html source="/images/brickman/tethering-bluetooth-enabled.png" %}
+        
+        3.  Go to the charms menu and search for *Bluetooth Settings*. Click on the one that will take you to PC Settings.
+        
+        4.  Your PC will search for Bluetooth devices. Connect to the device called *ev3dev*. Hit *Pair* on both your PC and the EV3                after verifying that the passcode is the same on both machines. It may take a while to connect.
+        
+        5.  Once the *ev3dev* device is connected, go back to your desktop and look in your tray (bottom right, near the clock) for               the Bluetooth icon. It might be hidden under the little up arrow. Right click on the icon and select *Join a Personal Area             Network* 
+        
+        6.  In the window that appears, select the *ev3dev* icon and click *Connect Using > Access Point*. A pop-up will appear,                  saying that the connection was sucessful
+        
+        7.  Your ev3 is now connected! Use PuTTY or your favourite ssh tool to connect to the ev3 using hostname *ev3dev*. The default             username is *robot* and the password is *maker*
     {: tab-list="os-version"}
 {: tab-list="os"}
