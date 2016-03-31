@@ -149,7 +149,7 @@ If you are using an older version, please upgrade.
         
         3.  Go to the charms menu and search for *Bluetooth Settings*. Click on the one that will take you to PC Settings.
         
-        4.  Your PC will search for Bluetooth devices. Connect to the device called *ev3dev*. Hit *Pair* on both your PC and the EV3                after verifying that the passcode is the same on both machines. It may take a while to connect.
+        4.  Your PC will search for Bluetooth devices. Connect to the device called *ev3dev*. Hit *Pair* on either your PC or the EV3                after verifying that the passcode is the same on both machines. It may take a while to connect.
         
         5.  Once the *ev3dev* device is connected, go back to your desktop and look in your tray (bottom right, near the clock) for               the Bluetooth icon. It might be hidden under the little up arrow. Right click on the icon and select *Join a Personal Area             Network* 
         
