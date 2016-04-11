@@ -24,8 +24,8 @@
 
 require 'tmpdir'
 
-# TODO: We shou;d use a real parser library. This has many ways it could go wrong.
-if ARGV.count < 1 or ARGV.include? '--test' and ARGV[ARGV.index('--test') + 1].nil?
+# TODO: We should use a real parser library. This has many ways it could go wrong.
+if ARGV.count < 1 || ARGV.include?('--test') && ARGV[ARGV.index('--test') + 1].nil?
     STDERR.puts "Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ]"
     exit(1)
 end
