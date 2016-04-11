@@ -47,7 +47,7 @@
         "num_modes": 6,
         "prefix": "in",
         "source_file": "drivers/lego/brickpi/brickpi_ports_in.c",
-        "source_line": 56,
+        "source_line": 57,
         "url_name": "brickpi-in-port"
     },
     {
@@ -75,7 +75,7 @@
         "num_modes": 3,
         "prefix": "out",
         "source_file": "drivers/lego/brickpi/brickpi_ports_out.c",
-        "source_line": 53,
+        "source_line": 54,
         "url_name": "brickpi-out-port"
     },
     {
@@ -262,7 +262,7 @@
         "prefix": "M",
         "prefix_footnote": "[^prefix]",
         "source_file": "drivers/lego/sensors/ms_nxtmmx.c",
-        "source_line": 142,
+        "source_line": 139,
         "url_name": "ms-nxtmmx-out-port"
     },
     {
