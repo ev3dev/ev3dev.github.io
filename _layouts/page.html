@@ -1,7 +1,9 @@
 ---
 
 ---
-
+{% if page.name == "redirect.html" %}
+{{ content }}
+{% else %}
 <!doctype html>
 <html>
 {% include head.html %}
@@ -34,3 +36,4 @@
     {% include footer.html %}
 </body>
 </html>
+{% endif %}
