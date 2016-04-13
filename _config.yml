@@ -36,6 +36,7 @@ defaults:
       type: "pages"
     values:
       category: "tutorials"
+      layout: "tutorial"
   -
     scope:
       path: "docs/sensors"

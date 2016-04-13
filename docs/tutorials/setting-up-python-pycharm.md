@@ -1,7 +1,7 @@
 ---
 title: Setting Up a Python Development Environment with PyCharm
 subject: Software - Python
-author: Anton Vanhoucke
+author_cards: {antonvh}
 ---
 
 * Table of Contents

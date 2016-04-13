@@ -1,0 +1,31 @@
+---
+layout: page
+---
+
+<hr />
+<div class="nav-dropdown-arrow">
+    <div>
+        {% include breadcrumbs.html %}
+    </div>
+    {% if page.kernel_version %}
+        <div class="alert alert-info">
+            {% include icon.html type="info" %}
+            This docs page is for kernel version <code>{{ page.kernel_version }}</code>
+        </div>
+    {% endif %}
+</div>
+<hr />
+
+{{ content }}
+
+{% if page.author_cards %}
+{% if author_cards.length > 1 %}
+<h2> Authors </h2>
+{% else %}
+<h2> Author </h2>
+{% endif %}
+{% for author in page.author_cards %}
+<div class="github-card" data-user="{{ author }}"></div>
+{% endfor %}
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+{% endif %}
