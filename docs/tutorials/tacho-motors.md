@@ -6,6 +6,13 @@ subject: Hardware - Motors
 * Table of Contents
 {:toc}
 
+{% include icon.html type="danger" %}
+This tutorial has been updated to kernel release 10. This is different from the
+version that comes pre-installed on the current image files. Check your kernel
+version by running `uname -r`. If it does not contain `-10-ev3dev-` in the version,
+upgrade your kernel and try again before filing a bug.
+{: .alert .alert-danger}
+
 This tutorial uses a command line shell to demonstrate how to use the [tacho-motor] class.
 
 ## About tachometers
@@ -116,9 +123,9 @@ motor will run until we send another command. So, let's run it...
     $ echo run-forever > $MC/command
 
 ... and nothing happens. We forgot to tell it how fast to go. We do this by
-setting the `duty_cycle_sp` to a value between 0 and 100...
+setting the `speed_sp` to a value between 0 and `max_speed`...
 
-    $ echo 50 > $MC/duty_cycle_sp
+    $ echo 500 > $MC/speed_sp
 
 ... and still nothing happens. This is because parameters only take effect when
 we send a command. If we change a parameter, we have to send the command again
@@ -129,7 +136,7 @@ in order to apply the changes.
 ... now the motor is running. Let's make the motor turn in the opposite
 direction, but a little slower. Using a negative value changes the direction...
 
-    $ echo -20 > $MC/duty_cycle_sp
+    $ echo -300 > $MC/speed_sp
     $ echo run-forever > $MC/command
 
 ... and stop it...
@@ -153,8 +160,9 @@ change.
     $ echo run-to-abs-pos > $MC/command
     $ while true; do echo -en "\033[0G$(cat $MC/position)   "; done
 
-Note: For `run-to-abs-pos` command only the absolute value of `duty_cycle_sp` or `speed_sp` matters. The direction of movement is determined automatically.
-	
+Note: For `run-to-abs-pos` command only the absolute value of `speed_sp` matters.
+The direction of movement is determined automatically.
+
 ### run-to-rel-pos
 
 This means "run to relative position". Again, the position is specified by
@@ -171,7 +179,7 @@ if we run...
 ... again, the motor will turn an additional 1/2 turn.
 
 Note: Using a negative value for `position_sp` will cause the motor to rotate
-in the opposite direction. The sign of `duty_cycle_sp` or `speed_sp` is ignored like in `run-to-abs-pos` command.
+in the opposite direction. The sign of `speed_sp` is ignored like in `run-to-abs-pos` command.
 
 ### run-timed
 
@@ -204,7 +212,8 @@ javascript.
 
 ### run-direct
 
-This command works just like `run-forever` except that changes to `duty_cycle_sp`
+This command works just like `run-forever` except that it uses `duty_cycle_sp`
+instead of `speed_sp` *and* changes to `duty_cycle_sp`
 take effect immediately instead of having to send a new command. This is useful
 for implementing your own PID or something similar that needs to update the
 motor output very quickly.
@@ -225,9 +234,9 @@ But, this time when we change the duty cycle, the motor speed changes...
 As we have already seen, with the `run-to-*-pos` and `run-timed` commands, the
 motor will stop automatically. For the other run commands, you have to send a
 `stop` command to make the motor stop. The motor actually has three possible
-behaviors when it stops. We can list them by reading the `stop_commands` attribute...
+behaviors when it stops. We can list them by reading the `stop_actions` attribute...
 
-    $ cat $MC/stop_commands
+    $ cat $MC/stop_actions
     coast brake hold
 
 Note: Some motor controllers may not support all of these, so it is a good idea
@@ -238,9 +247,9 @@ to always check this attribute.
 `coast` means that power will be removed from the motor and it will coast to a
 stop. Let's try it...
 
-    $ echo 100 > $MC/duty_cycle_sp
+    $ echo 1000 > $MC/speed_sp
     $ echo 1000 > $MC/time_sp
-    $ echo coast > $MC/stop_command
+    $ echo coast > $MC/stop_action
     $ echo run-timed > $MC/command
 
 Notice how it takes the motor about 1 additional second to actually stop. Also,
@@ -254,7 +263,7 @@ wires of the motor together. When a motor is manually rotated, it acts as an
 electrical generator, so shorting the power wires creates a load that absorbs
 the energy.
 
-    $ echo brake > $MC/stop_command
+    $ echo brake > $MC/stop_action
     $ echo run-timed > $MC/command
 
 Notice how much faster the motor stops this time. Also try turning it by hand.
@@ -268,7 +277,7 @@ the motor from being turned any farther. This stop command is really intended
 for use with the `run-to-*-pos` commands. It will work with other run commands,
 but may result in unexpected behavior.
 
-    $ echo hold > $MC/stop_command
+    $ echo hold > $MC/stop_action
     $ echo 180 > $MC/position_sp
     $ echo run-to-rel-pos > $MC/command
 
@@ -293,7 +302,7 @@ Normally, the polarity is `normal`...
 
 Run the motor and see which way it rotates...
 
-    $ echo 30 > $MC/duty_cycle_sp
+    $ echo 300 > $MC/speed_sp
     $ echo run-forever > $MC/command
     $ while true; do echo -en "\033[0G$(cat $MC/position) $(cat $MC/speed)   "; done
 
@@ -305,62 +314,29 @@ to `inversed`...
 Like before, nothing happens. We have to send a command again...
 
     $ echo run-forever > $MC/command
+
+...but still nothing happens. This is because changing the polarity inverted
+all of the existing parameters.
+
+    $ cat $MC/speed_sp
+    -300
+
+So we have to set `speed_sp` to positive again to see the effect of the inverted
+polarity.
+
+    $ echo 300 > $MC/speed_sp
+    $ echo run-forever > $MC/command
     $ while true; do echo -en "\033[0G$(cat $MC/position) $(cat $MC/speed)   "; done
 
-Now, the motor runs in the opposite direction, however the position is still
-increasing and the speed is still positive. Be sure to change to polarity back
+Now, the motor runs in the opposite direction. Be sure to change to polarity back
 to `normal` before continuing...
 
     $ echo stop > $MC/command
     $ echo normal > $MC/polarity
 
-
-## Speed Regulation
-
-So far, we have just specified a duty cycle to control the speed of the motor.
-This is OK, but the actual speed of the motor will depend on battery voltage
-and the load on the motor. If you have an application where you need repeatable
-results, it might be better to run the motor at a fixed speed. You can do this
-by turning on speed regulation...
-
-    $ echo on > $MC/speed_regulation
-
-Now, instead of using the `duty_cycle_sp`, the driver will use `speed_sp`. As
-discussed already, the units are tachometer counts per second. You can convert
-to RPM by dividing the value in `count_per_rot`. For the EV3 large motor, the
-maximum speed is about 900 counts per second and the EV3 medium motor is about
-1200 counts per second. To ensure that the motor runs at the same speed every
-time, even with low battery, use values less than these.
-
-First, let's see what happens when speed regulation is off...
-
-    $ echo off > $MC/speed_regulation
-    $ echo 30 > $MC/duty_cycle_sp
-    $ echo run-forever > $MC/command
-    $ while true; do echo -en "\033[0G$(cat $MC/duty_cycle) $(cat $MC/speed)   "; done
-
-The motor runs somewhere around 275 counts per second. Use your fingers to slow
-down the motor. Notice that the duty cycle remains constant and the speed
-decreases when you place a load on the motor. Now, let's try speed regulation...
-
-    $ echo stop > $MC/command
-    $ echo on > $MC/speed_regulation
-    $ echo 275 > $MC/speed_sp
-    $ echo run-forever > $MC/command
-    $ while true; do echo -en "\033[0G$(cat $MC/duty_cycle) $(cat $MC/speed)   "; done
-
-With no load, the duty cycle should be about the same as before (30%). Now, use
-your fingers to slow down the motor again. This time, the driver increases the
-duty cycle to make up for the load on the motor. As long as the load on the
-motor remains constant, the speed should remain fairly constant. It may
-overcompensate a bit though if the load changes rapidly.
-
-Speed regulation works with all of the run commands. Just remember, you need to
-set `speed_sp` instead of `duty_cycle_sp` when speed regulation is on.
-
 ## Ramping
 
-Ramping needs some work in the drivers, so nothing here yet...
+TODO
 
 ## State Flags
 
