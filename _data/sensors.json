@@ -4,7 +4,7 @@
         "mode_info": [
             {
                 "data_sets": "1",
-                "data_type": "LEGO_SENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32",lsm
                 "decimals": "3",
                 "description": "Raw analog value",
                 "id": "0",
@@ -3290,7 +3290,7 @@
     {
         "default_address": "0x48",
         "default_address_footnote": "[^addresses]",
-        "device_class": "[hwmon](http://www.lm-sensors.org/) [^usage]",
+        "device_class": "[hwmon](https://wiki.archlinux.org/index.php/Lm_sensors) [^usage]",
         "id": "MS_SENSOR_KIT_PCF8591",
         "name": "pcf8591",
         "notes": "\n[^addresses]: Valid addresses are 0x48..0x4F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo pcf8591 0x48 > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/hwmon -name hwmon*)\n    do\n        if [[ \"$(cat $chip/device/name)\" == \"pcf8591\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
