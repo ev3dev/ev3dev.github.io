@@ -46,7 +46,8 @@ languages not included in our other repository.  Note that some of these
 libraries may be outdated due to the fast development cycle of ev3dev.
 
 * Extra languages:
-    * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Go](https://github.com/ev3go/ev3) closely following the ev3dev API specification by the @ev3go project.
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @theZiz
