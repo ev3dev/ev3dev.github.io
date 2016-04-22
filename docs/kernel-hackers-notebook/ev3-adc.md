@@ -121,4 +121,4 @@ The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
 
 [hwmon]: https://www.kernel.org/doc/Documentation/hwmon/
 [ads79xx.c]: https://github.com/ev3dev/ev3-kernel/blob/ea696f7f9f757e6af613dcdc523dd1ce72e7c7d1/drivers/hwmon/ads79xx.c
-[lm-sensors]: http://www.lm-sensors.org/
+[lm-sensors]: https://github.com/groeck/lm-sensors
