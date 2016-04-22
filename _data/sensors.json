@@ -1973,7 +1973,7 @@
     {
         "default_address": "0x4C",
         "default_address_footnote": "[^addresses]",
-        "device_class": "[hwmon](http://www.lm-sensors.org/) [^usage]",
+        "device_class": "[hwmon](https://wiki.archlinux.org/index.php/Lm_sensors) [^usage]",
         "id": "LEGO_NXT_TEMPERATURE_SENSOR",
         "name": "tmp275",
         "notes": "\n[^addresses]: Valid addresses are 0x48..0x4F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo tmp275 0x4C > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/hwmon -name hwmon*)\n    do\n        if [[ \"$(cat $chip/device/name)\" == \"tmp275\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
