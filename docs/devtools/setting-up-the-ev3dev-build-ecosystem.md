@@ -494,7 +494,7 @@ SD card image for `ev3dev`.
 [ev3dev]: <http://www.ev3dev.org>
 [ev3dev-buildscripts]: <https://github.com/ev3dev/ev3dev-buildscripts>
 [brickstrap]: <https://github.com/ev3dev/brickstrap>
-[germinate]: <http://manpages.ubuntu.com/manpages/utopic/en/man1/germinate.1.html>
+[germinate]: <http://manpages.ubuntu.com/manpages/xenial/en/man1/germinate.1.html>
 [growrepo]: <https://github.com/rhempel/growrepo>
 [reprepro]: <http://mirrorer.alioth.debian.org>
 
