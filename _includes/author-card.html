@@ -1,16 +1,13 @@
-<!-- Provides unofficial GitHub card function for author_card variable -->
+<!-- Provides unofficial GitHub card function for include.author variable -->
 
-{% assign authors = author_card %}
-{% for author in authors %}
-    {% assign author_no_at_sign = author | strip_html | remove_first: "@" %}
-    {% assign at_sign = author | strip_html | replace: author_no_at_sign %}
-    <!-- first function does not work and truncate function returns trailing "..." -->
-    {% assign test_at_sign_is_first = author | truncate: 4 | replace: "@" | size %}
-    <!-- this looks weird, but it was the only way I could figure out how to test
-         that the first character of author is "@" -->
-    {% if at_sign.size > 0 and test_at_sign_is_first == 3 %}
-        <div data-card-user="{{author_no_at_sign}}"></div><br/>
-    {% else %}
-        <div class="user-card"><div class="user-card-name">{{ author }}</div></div>
-    {% endif %}
-{% endfor %}
+{% assign author_no_at_sign = include.author | strip_html | remove_first: "@" %}
+{% assign at_sign = include.author | strip_html | replace: author_no_at_sign %}
+<!-- first function does not work and truncate function returns trailing "..." -->
+{% assign test_at_sign_is_first = include.author | truncate: 4 | replace: "@" | size %}
+<!-- this looks weird, but it was the only way I could figure out how to test
+     that the first character of include.author is "@" -->
+{% if at_sign.size > 0 and test_at_sign_is_first == 3 %}
+    <div data-card-user="{{author_no_at_sign}}"></div><br/>
+{% else %}
+    <div class="user-card"><div class="user-card-name">{{ include.author }}</div></div>
+{% endif %}

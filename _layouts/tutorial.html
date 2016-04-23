@@ -18,14 +18,14 @@ layout: page
 
 {{ content }}
 
-{% if page.author_cards %}
-{% if author_cards.length > 1 %}
+{% if page.author %}
+{% assign count = page.author | size %}
+{% if count > 1 %}
 <h2> Authors </h2>
 {% else %}
 <h2> Author </h2>
 {% endif %}
-{% for author in page.author_cards %}
-<div class="github-card" data-user="{{ author }}"></div>
+{% for author in page.author %}
+<div style="float: left; margin-right: 20px;">{% include author-card.html author = author %}</div>
 {% endfor %}
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 {% endif %}

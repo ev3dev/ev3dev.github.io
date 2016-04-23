@@ -1,7 +1,7 @@
 ---
 title: Setting Up a Python Development Environment with PyCharm
 subject: Software - Python
-author_cards: {antonvh}
+author: "@antonvh"
 ---
 
 * Table of Contents
