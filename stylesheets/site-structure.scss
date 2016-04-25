@@ -57,14 +57,12 @@
 }
 
 // Body spacing
-body.no-jumbotron {
+body {
     padding-top: 40px;
 }
 
 @media (max-width: $screen-md-max) {
-    body.no-jumbotron {
         padding-top: 0;
-    }
 }
 
 // Panel title size
