@@ -1,0 +1,84 @@
+---
+---
+
+@import "custom-variables";
+
+@keyframes card-hover {
+    from { border-left-width: 4px; }
+    to { border-left-width: 8px; }
+}
+
+@keyframes card-hover-out {
+    from { border-left-width: 8px; }
+    to { border-left-width: 4px; }
+}
+
+.user-card {
+    position: relative;
+    min-height: 40px;
+    min-width: 218px;
+    background-color: #252525;
+    font-family: "Helvetica", Arial, sans-serif;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 100;
+    padding: 5px 5px 5px 0;
+    border-left: 4px solid $brand-primary;
+    
+    animation: card-hover-out;
+    animation-duration: 0.1s;
+
+    &:hover {
+        border-left-color: darken($brand-primary, 10%);
+        animation: card-hover;
+        animation-duration: 0.1s;
+        animation-fill-mode: forwards;
+    }
+
+    a {
+        color: #eeeeee;
+    }
+
+    .user-card-avatar {
+        position: absolute;
+        float: left;
+        height: 100%;
+        width: auto;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        img {
+            vertical-align: middle;
+            height: 100%;
+        }
+    }
+
+    .user-card-text {
+        clear: both;
+        margin-left: auto;
+        margin-right: 0;
+        width: 75%;
+        vertical-align: middle;
+    }
+
+    .user-card-name {
+        font-size: 1.1em;
+        font-weight: normal;
+        vertical-align: middle;
+    }
+
+    .user-card-login {
+        font-size: 0.9em;
+        font-weight: 100;
+        vertical-align: middle;
+    }
+}
+
+.user-card-light {
+    background-color: #303030;
+}

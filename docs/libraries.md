@@ -15,13 +15,12 @@ We have a repository of officially maintained language bindings, as well as many
 Our official "unified" [language binding repository](http://github.com/ev3dev/ev3dev-lang)
 currently has support for C++, Lua, Node.js, and Python.
 These libraries are all built around a single
-[API specification](https://github.com/ev3dev/ev3dev-lang/blob/develop/wrapper-specification.md)
+[API specification](http://ev3dev-lang.readthedocs.org/en/latest/spec.html)
 that ensures that interface is almost identical for each, and they are being updated and
 enhanced regularly.
 
 * Unified bindings:
-    * [C++](https://github.com/ev3dev/ev3dev-lang/tree/develop/cpp)
-    * [Lua](https://github.com/ev3dev/ev3dev-lang/tree/develop/lua)
+    * [C++](https://github.com/ddemidov/ev3dev-lang-cpp)
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
     * [Python](https://github.com/rhempel/ev3dev-lang-python)
 
@@ -47,7 +46,8 @@ languages not included in our other repository.  Note that some of these
 libraries may be outdated due to the fast development cycle of ev3dev.
 
 * Extra languages:
-    * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Go](https://github.com/ev3go/ev3) closely following the ev3dev API specification by the @ev3go project.
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @theZiz

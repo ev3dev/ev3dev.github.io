@@ -9,32 +9,40 @@ title: Projects
 </p>
 
 <div class="alert alert-info">
-    <span class="glyphicon glyphicon-info-sign"></span>
+    {% include icon.html type="info" %}
     Would you like your project added to the list? We would!
-    <a class="alert-link" href="{{ site.github.url }}/docs/tutorials/adding-new-project/">Create a page and send us a pull request</a>.
+    <a class="alert-link" href="/docs/tutorials/adding-new-project/">Create a page and send us a pull request</a>.
 </div>
 
 <div class="row">
+    {% assign col = 0 %}
     {% for post in site.posts %}
-		{% if post.categories contains "projects" %}
-			{% unless post.id == '/projects/2014/03/21/Example-Project' %}
-	            {% assign num_words = 60 %}
-			<div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    {% if post.youtube_video_id %}
-						{% assign num_words = 35 %}
-						<a href="{{ site.github.url }}{{ post.url }}">
-							<img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" />
-						</a>
-                    {% endif %}
-                    <div class="caption">
-                        <h3>{{ post.title }}</h3>
-						<p>{{ post.excerpt | truncatewords: num_words }}</p>
-						<p><a class="btn btn-primary" href="{{ site.github.url }}{{ post.url }}">Learn more</a></p>
+        {% if post.categories contains "projects" %}
+            {% unless post.id == '/projects/2014/03/21/Example-Project' %}
+                {% if col == 3 %}
+                    </div>
+                    <div class="row">
+                    {% assign col = 0 %}
+                {% endif %}
+                {% assign col = col | plus: 1 %}
+                
+                {% assign num_words = 60 %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        {% if post.youtube_video_id %}
+                            {% assign num_words = 35 %}
+                            <a href="{{ post.url }}">
+                                <img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" alt="project thumbnail image" />
+                            </a>
+                        {% endif %}
+                        <div class="caption">
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.excerpt | strip_html | truncatewords: num_words }}</p>
+                            <p><a class="btn btn-primary" href="{{ post.url }}">Learn more</a></p>
+                        </div>
                     </div>
                 </div>
-			</div>
-			{% endunless %}
-		{% endif %}
+            {% endunless %}
+        {% endif %}
     {% endfor %}
 </div>

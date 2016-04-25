@@ -335,7 +335,7 @@ Then we'll set up the ev3dev repository `conf` files:
 
     cat <<EOF > "$HOME/ev3dev.ev3dev.jessie.armel/conf/updates"
     Name:  ev3dev-jessie-update
-    Method: http://ev3dev.org/debian
+    Method: http://archive.ev3dev.org/debian
     VerifyRelease: 93178A7C
     Suite: jessie
     Components: main
@@ -494,7 +494,7 @@ SD card image for `ev3dev`.
 [ev3dev]: <http://www.ev3dev.org>
 [ev3dev-buildscripts]: <https://github.com/ev3dev/ev3dev-buildscripts>
 [brickstrap]: <https://github.com/ev3dev/brickstrap>
-[germinate]: <http://manpages.ubuntu.com/manpages/utopic/en/man1/germinate.1.html>
+[germinate]: <http://manpages.ubuntu.com/manpages/xenial/en/man1/germinate.1.html>
 [growrepo]: <https://github.com/rhempel/growrepo>
 [reprepro]: <http://mirrorer.alioth.debian.org>
 

@@ -1,14 +1,16 @@
 [
     {
-        "count_per_rot": "360",
+        "count_per_m": "2000",
         "encoder_polarity": "DC_MOTOR_POLARITY_INVERSED",
+        "full_travel_count": "200",
         "id": "FIRGELLI_L12_EV3_100",
         "legoev3_info": [],
-        "max_speed": "1200",
+        "max_speed": "24",
+        "motion_type": "TM_MOTION_LINEAR",
         "motor_type": "ev3",
         "name": "fi-l12-ev3-100",
         "source_file": "drivers/lego/motors/ev3_motor_defs.c",
-        "source_line": 27,
+        "source_line": 39,
         "url_name": "firgelli-l12-ev3-100mm",
         "vendor_name": "Firgelli",
         "vendor_part_name": "L12 EV3 100mm",
@@ -16,15 +18,17 @@
         "vendor_website": "http://store.firgelli.com/product_p/l12-ev3-100.htm"
     },
     {
-        "count_per_rot": "360",
+        "count_per_m": "2000",
         "encoder_polarity": "DC_MOTOR_POLARITY_INVERSED",
+        "full_travel_count": "100",
         "id": "FIRGELLI_L12_EV3_50",
         "legoev3_info": [],
-        "max_speed": "1200",
+        "max_speed": "24",
+        "motion_type": "TM_MOTION_LINEAR",
         "motor_type": "ev3",
         "name": "fi-l12-ev3-50",
         "source_file": "drivers/lego/motors/ev3_motor_defs.c",
-        "source_line": 27,
+        "source_line": 39,
         "url_name": "firgelli-l12-ev3-50mm",
         "vendor_name": "Firgelli",
         "vendor_part_name": "L12 EV3 50mm",
@@ -41,17 +45,18 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Motor 9V Mini-motor, newer lighter weight",
         "vendor_part_number": "43362",
-        "vendor_website": "http://www.bricklink.com/catalogItem.asp?P=43362c01"
+        "vendor_website": "http://rebrickable.com/parts/43362c01"
     },
     {
         "count_per_rot": "360",
         "id": "LEGO_EV3_LARGE_MOTOR",
         "legoev3_info": [],
-        "max_speed": "1200",
+        "max_speed": "1050",
+        "motion_type": "TM_MOTION_ROTATION",
         "motor_type": "ev3",
         "name": "lego-ev3-l-motor",
         "source_file": "drivers/lego/motors/ev3_motor_defs.c",
-        "source_line": 27,
+        "source_line": 39,
         "url_name": "lego-ev3-large-servo-motor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Large Servo Motor",
@@ -62,11 +67,12 @@
         "count_per_rot": "360",
         "id": "LEGO_EV3_MEDIUM_MOTOR",
         "legoev3_info": [],
-        "max_speed": "900",
+        "max_speed": "1560",
+        "motion_type": "TM_MOTION_ROTATION",
         "motor_type": "ev3",
         "name": "lego-ev3-m-motor",
         "source_file": "drivers/lego/motors/ev3_motor_defs.c",
-        "source_line": 27,
+        "source_line": 39,
         "url_name": "lego-ev3-medium-servo-motor",
         "vendor_name": "LEGO",
         "vendor_part_name": "EV3 Medium Servo Motor",
@@ -83,7 +89,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Technic Motor 9V Geared ",
         "vendor_part_number": "47154",
-        "vendor_website": "http://alpha.bricklink.com/pages/clone/catalogitem.page?P=47154c01"
+        "vendor_website": "http://rebrickable.com/parts/44486c02"
     },
     {
         "id": "LEGO_9V_MICROMOTOR",
@@ -95,7 +101,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Motor 9V Micromotor",
         "vendor_part_number": "70823",
-        "vendor_website": "http://www.bricklink.com/catalogItem.asp?P=2986"
+        "vendor_website": "https://rebrickable.com/parts/2986"
     },
     {
         "id": "LEGO_9V_MINI_MOTOR_OLDER",
@@ -107,7 +113,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Motor 9V Mini-motor, older heavier weight",
         "vendor_part_number": "71427",
-        "vendor_website": "http://www.bricklink.com/catalogItem.asp?P=71427c01"
+        "vendor_website": "http://rebrickable.com/parts/71427c01"
     },
     {
         "id": "LEGO_TECHNIC_MOTOR_9V",
@@ -119,7 +125,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Technic Motor 9V",
         "vendor_part_number": "74569",
-        "vendor_website": "http://www.bricklink.com/catalogItem.asp?P=2838c01"
+        "vendor_website": "http://rebrickable.com/parts/2838c01"
     },
     {
         "id": "LEGO_PF_TRAIN_MOTOR",
@@ -131,7 +137,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "Power Functions Train Motor",
         "vendor_part_number": "88002",
-        "vendor_website": "http://shop.lego.com/en-US/Power-Functions-Train-Motor-88002"
+        "vendor_website": "http://shop.lego.com/en-US/LEGO-Power-Functions-Train-Motor-88002"
     },
     {
         "id": "LEGO_PF_L_MOTOR",
@@ -197,11 +203,12 @@
         "count_per_rot": "360",
         "id": "LEGO_NXT_MOTOR",
         "legoev3_info": [],
-        "max_speed": "1200",
+        "max_speed": "1020",
+        "motion_type": "TM_MOTION_ROTATION",
         "motor_type": "ev3",
         "name": "lego-nxt-motor",
         "source_file": "drivers/lego/motors/ev3_motor_defs.c",
-        "source_line": 27,
+        "source_line": 39,
         "url_name": "lego-interactive-servo-motor-nxt",
         "vendor_name": "LEGO",
         "vendor_part_name": "Interactive Servo Motor (NXT)",

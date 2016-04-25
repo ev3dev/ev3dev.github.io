@@ -53,18 +53,18 @@ And we need to configure [quilt] as well. Save the following to `~/.quiltrc`.
     QUILT_REFRESH_ARGS="-p ab"
     QUILT_DIFF_ARGS="--color=auto"
 
-And one more config file. Save the following to `~/.pbuilerrc`.
+And one more config file. Save the following to `~/.pbuilderrc`.
 
     APTKEYRINGS="/usr/share/keyrings/ev3dev-archive-keyring.gpg"
     # OTHERMIRROR is ignored when using pbuilder-dist. :-(
     # LP bug #1004579
-    OTHERMIRROR="deb http://ev3dev.org/debian jessie main"
+    OTHERMIRROR="deb http://archive.ev3dev.org/debian jessie main"
 
 Finally, we need to setup `pbuilder-dist` to create a clean environment where
 the packages will actually be built. Run the following in a terminal...
 
     # we have to work around a bug in pbuilder-dist.
-    export OTHERMIRROR="deb http://ev3dev.org/debian jessie main"
+    export OTHERMIRROR="deb http://archive.ev3dev.org/debian jessie main"
     # For the EV3
     pbuilder-dist jessie armel create
     # For Raspberry Pi 1 (raspbian) - see "(Optional)" note above.
@@ -98,7 +98,7 @@ you have the most recent package list. Replace `armel` with other architectures
 as needed.
 
     # Don't forget our workaround.
-    export OTHERMIRROR="deb http://ev3dev.org/debian jessie main"
+    export OTHERMIRROR="deb http://archive.ev3dev.org/debian jessie main"
     pbuilder-dist jessie armel update
 
 Now, we can actually build the package.

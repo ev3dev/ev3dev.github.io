@@ -1,0 +1,31 @@
+---
+layout: page
+---
+
+<hr />
+<div class="nav-dropdown-arrow">
+    <div>
+        {% include breadcrumbs.html %}
+    </div>
+    {% if page.kernel_version %}
+        <div class="alert alert-info">
+            {% include icon.html type="info" %}
+            This docs page is for kernel version <code>{{ page.kernel_version }}</code>
+        </div>
+    {% endif %}
+</div>
+<hr />
+
+{{ content }}
+
+{% if page.author %}
+{% assign count = page.author | size %}
+{% if count > 1 %}
+<h2> Authors </h2>
+{% else %}
+<h2> Author </h2>
+{% endif %}
+{% for author in page.author %}
+<div style="float: left; margin-right: 20px;">{% include author-card.html author=author theme='light' %}</div>
+{% endfor %}
+{% endif %}

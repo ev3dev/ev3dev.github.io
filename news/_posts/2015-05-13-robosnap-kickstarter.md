@@ -16,6 +16,6 @@ Beyond the camera itself, the project is bringing Snap! and Scratch (visual
 programming languages) to ev3dev, so this is a project worth supporting even
 if you are not interested in the camera.
 
-[ev3dev Raspberry Pi release]: http://www.ev3dev.org/news/2015/05/13/raspberry-pi-image-release/
+[ev3dev Raspberry Pi release]: /news/2015/05/13/raspberry-pi-image-release/
 [KickStarter page]: https://www.kickstarter.com/projects/robosnap/robosnap-vision-for-your-robot
 [RoboSnap]: http://www.robosnap.net/

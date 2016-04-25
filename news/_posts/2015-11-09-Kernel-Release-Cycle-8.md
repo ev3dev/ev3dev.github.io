@@ -32,7 +32,7 @@ Lots of new hardware support this go around.
 * [mindsensors.com PiStorms](http://www.mindsensors.com/stem-education/13-pistorms-base-kit)
 * [mindsensors.com NxtCam](http://www.mindsensors.com/ev3-and-nxt/14-vision-subsystem-v4-for-nxt-or-ev3-nxtcam-v4)
 * [mindsensors.com PixyAdapt](http://www.mindsensors.com/ev3-and-nxt/36-pixy-adapter-with-pixy-camera-for-mindstorms-ev3)
-* [Charmed Labs Pixy for LEGO MINDSTORMS](http://charmedlabs.com/default/pixy-cmucam5-for-lego/)
+* [Charmed Labs Pixy for LEGO MINDSTORMS](http://charmedlabs.com/default/pixy-for-lego-mindstorms/)
 
 ### Changelogs
 
@@ -46,6 +46,6 @@ to kernel v4.1.12.
 [ckt17-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-September/062693.html
 [ckt18-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-October/063582.html
 [ckt19-changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-October/064868.html
-[ev3-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
-[rpi-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-rpi/changelog
-[rpi2-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-rpi2/changelog
+[ev3-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/d7a25712d3f56cc4351e399a9b69e3493b739a02/ev3dev-ev3/changelog
+[rpi-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/162ae6365660dc50fa1fd1cf30185e9240858312/ev3dev-rpi/changelog
+[rpi2-changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/bc248a3abb784ace049a47ccbfed6153ec5b6b9f/ev3dev-rpi2/changelog
