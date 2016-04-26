@@ -22,7 +22,13 @@ This is a test page.
 
     2.  Steps continued.
 
-*   {: data-platform-attribute-value-id="windows"} I give up. Just imagine there are steps here.
+*   {: data-platform-attribute-value-id="windows"} 
+    * {: data-platform-attribute-value-id="win7"} This is for Windows 7!
+    
+    * {: data-platform-attribute-value-id="win8"} This is for Windows 8!
+    
+    * {: data-platform-attribute-value-id="win10"} This is for Windows 10! 
+    {: data-platform-select-list-attribute="client-windows-version"}
 {: data-platform-select-list-attribute="client-platform" }
 
 *   {: data-platform-attribute-value-id="ev3"}

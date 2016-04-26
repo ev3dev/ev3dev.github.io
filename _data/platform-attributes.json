@@ -20,6 +20,19 @@
         },
         "autodetectFunction": "autodetectClientPlatform"
     },
+    "client-windows-version": {
+        "values": {
+            "win7": {
+                "title": "7"
+            },
+            "win8": {
+                "title": "8"
+            },
+            "win10": {
+                "title": "10"
+            }
+        }
+    },
     "ev3dev-hardware-platform": {
         "values": {
             "ev3": {
