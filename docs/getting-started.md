@@ -1,6 +1,7 @@
 ---
 title: Getting Started with ev3dev
 categories: docs getting-started
+excerpt: "So you're ready to try out ev3dev. Great! Here are step-by-step instructions to help you get ev3dev up and running on your EV3 or Raspberry Pi."
 ---
 
 * Table of Contents

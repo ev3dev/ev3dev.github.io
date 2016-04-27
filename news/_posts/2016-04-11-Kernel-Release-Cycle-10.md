@@ -1,6 +1,7 @@
 ---
 author: "@dlech"
 title: "Kernel Release Cycle 10"
+excerpt: "Kernel release cycle 10 is now available! In this release, we have included our newly-updated motor drivers as well as bug fixes for a few sensor and platform quirks."
 ---
 
 In this round of releases, we have:

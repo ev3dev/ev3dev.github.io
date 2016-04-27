@@ -1,6 +1,7 @@
 ---
 title: Motors
 subtitle: And everything else that plugs into output ports on the EV3
+excerpt: "The EV3 has four output ports for connecting motors and other devices (like LEDs). If you are trying to use something that plugs into one of the output ports, read this guide."
 ---
 
 * Table of Contents
