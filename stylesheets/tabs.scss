@@ -59,3 +59,8 @@ ul[tab-list] > li.tab-active {
     background-color: #252525;
     border-radius: 6px;
 }
+
+// New platform selection -------------------------------------------
+.platform-select-link, .nested-platform-select-link {
+    cursor: pointer;
+}

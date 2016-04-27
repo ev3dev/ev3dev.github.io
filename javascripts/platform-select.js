@@ -57,13 +57,16 @@ function createObjectTree(objectRef) {
 function switchSelectedPlatformAttribute(platformAttributeName, newAttributeValue) {
     // Containers of platform content should have .platform-content-item
     // Containers of platform content should have data-platform-attribute-name and data-platform-attribute-value-id
+    
+    // Show only the content for the new value and hide the rest
     $('.platform-content-item')
         .filter(getFilterByData('platform-attribute-name', platformAttributeName))
         .hide()
         .filter(getFilterByData('platform-attribute-value-id', newAttributeValue))
         .show();
 
-    $('.platform-attribute-select-group')
+    // Mark any selection UI objects that represent this value as active and unmark the others
+    $('.platform-attribute-select-group, .platform-nested-select-group')
         .filter(getFilterByData('target-platform-attribute-name', platformAttributeName))
         .children()
         .removeClass('active')
@@ -145,6 +148,10 @@ function addNestedPlatformNavItem(platformAttributeId, newAttributeValueId, pare
     var newAttributeValueMetadata = platformAttributeMetadata.values[newAttributeValueId];
     
     $('<a/>').text(newAttributeValueMetadata.title).appendTo($newDropdownItem);
+    
+    $newDropdownItem.click(function () {
+        switchSelectedPlatformAttribute(platformAttributeId, newAttributeValueId);
+    })
 }
 
 function getInitialValueId(attributeId) {
@@ -173,7 +180,7 @@ function getInitialValueId(attributeId) {
     else {
         console.log(messageBase + "default first option");
 
-        return $('.platform-attribute-select-group')
+        return $('.platform-attribute-select-group, .platform-nested-select-group')
             .filter(getFilterByData('target-platform-attribute-name', attributeId))
             .children(':first')
             .data('platform-attribute-value-id');
@@ -217,10 +224,13 @@ function expandPlatformSelectList($platformUl, parentInfo) {
 $(document).ready(function () {
     
     var platformAttributeMapping = {};
+    var usedPlatformAttributes = [];
     
     $('ul[data-platform-select-list-attribute]').each(function (i, platformUl) {
         var $platformUl = $(platformUl);
         var targetAttributeId = $platformUl.data('platform-select-list-attribute');
+
+        usedPlatformAttributes.push(targetAttributeId);
 
         var $parentPlatformValueLi = $platformUl.parents('[data-platform-attribute-value-id]');
         var $parentPlatformUl = $parentPlatformValueLi.parents('[data-platform-select-list-attribute]');
@@ -279,16 +289,14 @@ $(document).ready(function () {
         }
     }
 
-    $('.platform-attribute-select-group').each(function () {
-        var attributeName = $(this).data('target-platform-attribute-name');
+    for(var i = 0; i < usedPlatformAttributes.length; i++) {
+        var attributeName = usedPlatformAttributes[i];
         // TODO: URL param
         // TODO: lookup UA string
         // TODO: HTML storage
         
-        // TODO: Make this work for nested attributes (not sure why it isn't already working)
-        
         var initialValueId = getInitialValueId(attributeName);
 
         switchSelectedPlatformAttribute(attributeName, initialValueId);
-    })
+    }
 });
