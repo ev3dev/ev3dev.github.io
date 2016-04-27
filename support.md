@@ -1,6 +1,7 @@
 ---
 title: "Get Help"
 redirect_from: /issues/index.html
+excerpt: "Have a problem or question? We are here to help - but you have to help us help you. We keep track of problems, suggestions and questions about ev3dev using GitHub Issues. This lets us keep everything in one place."
 ---
 
 * Table of Contents

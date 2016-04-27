@@ -1,5 +1,6 @@
 ---
 title: Share
+excerpt: "Do you like ev3dev? Show your support! We invite you to star the repo on GitHub and submit your cool projects to our projects page."
 ---
 <div class="lead">
     <center>
