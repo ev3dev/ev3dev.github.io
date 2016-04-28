@@ -23,15 +23,19 @@
     "client-windows-version": {
         "values": {
             "win7": {
-                "title": "7"
+                "title": "Windows 7",
+                "uaVersion": "7"
             },
             "win8": {
-                "title": "8"
+                "title": "Windows 8",
+                "uaVersion": "8"
             },
             "win10": {
-                "title": "10"
+                "title": "Windows 10",
+                "uaVersion": "10"
             }
-        }
+        },
+        "autodetectFunction": "autodetectClientWindowsVersion"
     },
     "ev3dev-hardware-platform": {
         "values": {

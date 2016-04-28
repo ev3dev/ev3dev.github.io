@@ -14,6 +14,15 @@ var autodetectFunctions = {
         }
 
         return null;
+    },
+    autodetectClientWindowsVersion: function () {
+        var clientPlatformValues = platformAttributes["client-windows-version"].values;
+        for (var platformId in clientPlatformValues) {
+            if (clientPlatformValues[platformId].uaVersion === $.ua.os.version)
+                return platformId;
+        }
+
+        return null;
     }
 }
 
