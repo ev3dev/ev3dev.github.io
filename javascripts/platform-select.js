@@ -1,5 +1,5 @@
 ---
-
+layout: none
 ---
 
 // Loaded from _data/platform-attributes.json
@@ -73,7 +73,9 @@ function switchSelectedPlatformAttribute(platformAttributeName, newAttributeValu
         .filter(getFilterByData('platform-attribute-value-id', newAttributeValue))
         .addClass('active');
     
-    // TODO: Save current option to local storage
+    if(supportsHtml5Storage()) {
+        localStorage.setItem('platform-' + cleanTextForId(platformAttributeName), newAttributeValue);
+    }
 }
 
 function addPlatformNavItem(platformAttributeId, newAttributeValueId) {    
@@ -158,14 +160,14 @@ function getInitialValueId(attributeId) {
     var messageBase = "Selected value for property " + attributeId + " from ";
 
     var htmlStorageValue, autodetectFunctionName, autodetectValue;
-    var urlParamValue = $(document).getUrlParam(attributeId);
+    var urlParamValue = $(document).getUrlParam(cleanTextForId(attributeId));
 
-    if (urlParamValue) {
+    if (urlParamValue && urlParamValue in platformAttributes[attributeId].values) {
         console.log(messageBase + "URL param");
 
         return urlParamValue;
     }
-    else if (supportsHtml5Storage() && (htmlStorageValue = localStorage.getItem(attributeId))) {
+    else if (supportsHtml5Storage() && (htmlStorageValue = localStorage.getItem('platform-' + cleanTextForId(attributeId)))) {
         console.log(messageBase + "HTML5 local storage");
 
         return htmlStorageValue;
@@ -291,10 +293,6 @@ $(document).ready(function () {
 
     for(var i = 0; i < usedPlatformAttributes.length; i++) {
         var attributeName = usedPlatformAttributes[i];
-        // TODO: URL param
-        // TODO: lookup UA string
-        // TODO: HTML storage
-        
         var initialValueId = getInitialValueId(attributeName);
 
         switchSelectedPlatformAttribute(attributeName, initialValueId);
