@@ -1,6 +1,6 @@
 ---
 title: Share
-excerpt: "Do you like ev3dev? Show your support! We invite you to star the repo on GitHub and submit your cool projects to our projects page."
+excerpt: "We have a projects page where users can browse projects that have been built using ev3dev. You can add your own too! Each project gets a dedicated page for the author to explain what they have been working on, as well as provide videos, pictures, build instructions, code, and any other media that pertains to the project."
 ---
 <div class="lead">
     <center>
