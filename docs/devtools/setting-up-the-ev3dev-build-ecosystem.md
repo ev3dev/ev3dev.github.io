@@ -1,5 +1,5 @@
 ---
-title: Setting Up The `ev3dev` Build Ecosystem
+title: Setting Up The ev3dev Build Ecosystem
 subject: Development Setup
 ---
 

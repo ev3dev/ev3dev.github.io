@@ -1,5 +1,6 @@
 ---
 title: Input and Output Ports
+excerpt: "Documentation reference for the input (sensor) and output (motor) port device drivers."
 ---
 
 This page is about the kind of ports that you plug [sensors] and [motors] into.

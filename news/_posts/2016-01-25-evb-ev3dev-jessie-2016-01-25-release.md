@@ -1,6 +1,7 @@
 ---
 author: "@dlech"
 title: "Announcing Support for FatcatLab's EVB"
+excerpt: "Welcome to the family, BeagleBone! Starting today, we now support ev3dev on the BeagleBone with FatcatLab's EVB cape."
 ---
 
 Welcome to the family!

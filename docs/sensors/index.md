@@ -1,6 +1,7 @@
 ---
 title: Sensors
 subtitle: And everything else that plugs into input ports on the EV3
+excerpt: "The EV3 has four input ports for connecting sensors and other devices (like sensor multiplexers or motor controllers). If you are trying to use something that plugs into one of the input ports, read this guide."
 ---
 
 * Table of Contents

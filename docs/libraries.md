@@ -1,6 +1,7 @@
 ---
 title: Libraries
 subtitle: Pre-made language bindings that make accessing the EV3 device drivers easy
+excerpt: "If you are looking to write a program that takes advantage of the EV3's motors, sensors, or other native devices, using a language binding is the way to go."
 ---
 
 * Table of Contents

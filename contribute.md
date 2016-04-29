@@ -1,6 +1,7 @@
 ---
 title: Contribute
 redirect_from: /contributing/index.html
+excerpt: "ev3dev is a **HUGE** project and we are always happy to receive help. Here are some of the many ways you can contribute to the project."
 ---
 
 * Table of Contents
