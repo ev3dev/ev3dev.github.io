@@ -162,6 +162,6 @@ And then you should be able to see the files on your host computer when you do `
 [BarryODonavanNFS]: http://www.barryodonovan.com/index.php/2012/12/12/apple-os-x-as-an-nfs-server-with-linux-clients
 [linuxexports5]:  http://linux.die.net/man/5/exports
 [linuxexportfs8]: http://linux.die.net/man/8/exportfs
-[OSXexports5]: https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man5/exports.5.html
-[OSXnfsd]: https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/nfsd.8.html 
-[OSXshowmount]: https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man8/showmount.8.html
+[OSXexports5]: http://www.manpages.info/macosx/exports.5.html
+[OSXnfsd]: http://www.manpages.info/macosx/nfsd.8.html 
+[OSXshowmount]: http://www.manpages.info/macosx/showmount.8.html
