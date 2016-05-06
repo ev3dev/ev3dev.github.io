@@ -14,11 +14,11 @@ $(document).ready(function () {
             $textDiv.append('<div class="user-card-name">' + (userData.name || userData.login) + '</div>');
             $textDiv.append('<div class="user-card-login">@' + userData.login + '</div>');
             
-            // Give the text a margin to make sure it does not go below the avatar
+            // Give the text a margin to make sure it does not overlap the avatar
             $avatarDiv.resize(function() {
                 $textDiv.css({
                     width: 'auto',
-                    "margin-left": $avatarDiv.width()
+                    "margin-left": $avatarDiv.height()
                 });
             });
             
