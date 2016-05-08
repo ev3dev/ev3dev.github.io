@@ -56,7 +56,7 @@ Some things you will need:
 * The actual hardware (sensor or other device).
 * Technical documentation on the hardware that explains the low level
   communications (or circuit diagram for analog sensors).
-* A computer or virtual machine running Ubuntu 14.04. (Other Linux distros are
+* A computer or virtual machine running Ubuntu 16.04. (Other Linux distros are
   OK, but this is what we officially support.)
 * An EV3 serial port adapter like [mindsensors.com EV3 Console Adapter] or
   [make your own][ev3-creating-a-console-cable].

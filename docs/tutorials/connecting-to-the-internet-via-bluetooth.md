@@ -231,7 +231,7 @@ If you are using an older version, please upgrade.
             robot@ev3dev:~$ 
 
 *   {: tab="Ubuntu"}{% include icon.html type="info" %}
-    These instructions were written using Ubuntu 14.04 and the default desktop.
+    These instructions were written using Ubuntu 16.04 and the default desktop.
     It should work for other versions of Ubuntu, derivatives of Ubuntu and
     desktop environments as well.
     {: .alert .alert-info}
@@ -241,52 +241,46 @@ If you are using an older version, please upgrade.
 
             sudo apt-get install blueman
 
-        {% include icon.html type="info" %}
-        The default Ubuntu Unity desktop does not show the `blueman-applet`
-        icon in the notification tray. If you would like to enable this, please see
-        [this](http://askubuntu.com/questions/574460/blueman-indicator-missing){: .alert-link}.
-        {: .alert .alert-info}
+    2.  Run the Blueman *Bluetooth Manager*.
 
-    2.  Run `blueman-services` from a terminal. (Or if you have the tray icon,
-        right-click on it and choose "Local Services...")
+        {% include screenshot.html source="/images/ubuntu/16.04/blueman-manager-icon.png" %}
 
-    3.  Go to network. Ensure you activated *Network Access Point (NAP)* and
-        *dnsmasq*. For *PAN support* choose *NetworkManager* but for *DUN-support*
-        choose *Blueman*. Then click *Close*.
+    3.  On the *View* menu, select *Local Services...*.
 
-        {% include screenshot.html source="/images/ubuntu/15.10/blueman-services-network.png" %}
+        {% include screenshot.html source="/images/ubuntu/16.04/blueman-manager-view-local-services.png" %}
 
-        {% include icon.html type="info" %}
-         If your EV3 is already paired, you will need to remove it and pair it
-        again so that it will see the new network service.
-        {: .alert .alert-info}
+    4.  Go to *Network*. Check *Network Access Point (NAP)* and *dnsmasq*. Change
+        the IP address to `10.42.0.1` (this matches the old default from Ubuntu
+        14.04). For *PAN support* choose *NetworkManager*. *DUN-support* does not
+        matter, we are not using it. Then click *Apply* and *Close*.
 
-    4.  On the EV3, first verify that Bluetooth is powered on. In brickman,
+        {% include screenshot.html source="/images/ubuntu/16.04/blueman-services-network.png" %}
+
+
+    5.  On the EV3, first verify that Bluetooth is powered on. In brickman,
         open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
         *Powered* checkbox is checked. The Bluetooth icon next to the battery in the
         status bar also indicates that Bluetooth is powered on.
 
         {% include screenshot.html source="/images/brickman/bluetooth-powered-visible-no-devices.png" %}
 
-    5.  On your host computer, make sure Bluetooth is powered on and visible.
+    5.  Back on your host computer, Click *Search* (1) to search for your EV3. Once
+        it appears, click the pair icon (2) to pair it. You will be asked to confirm
+        on both the EV3 and the host computer. Finally, after you have paired,
+        click the trust icon (3) to allow the EV3 to automatically connect.
 
-        {% include screenshot.html source="/images/ubuntu/15.10/bluetooth-app-indicator-powered-visible.png" %}
+        {% include screenshot.html source="/images/ubuntu/16.04/blueman-manager-search-pair-trust.png" %}
 
-    6.  On the EV3, select *Start Scan* on the *Bluetooth* menu. It should find your
-        computer.
-
-        {% include screenshot.html source="/images/brickman/bluetooth-powered-my-computer.png" %}
-
-    7.  Select your computer from the menu and then select the *Pair* button.
-
-        {% include screenshot.html source="/images/brickman/bluetooth-my-computer-not-paired.png" %}
-
-    8.  Confirm or enter the passkey if requested. The exact behavior here will
-        depend on the Bluetooth adapter on your host computer.
+        {% include screenshot.html source="/images/ubuntu/16.04/bluetooth-pairing-request.png" %}
 
         {% include screenshot.html source="/images/brickman/bluetooth-confirm-passkey.png" %}
 
-    12. You should have a *Network Connection* button. Select it to
+        {% include icon.html type="info" %}
+        If your EV3 is already paired, you will need to remove it and pair it
+        again so that it will see the new network service.
+        {: .alert .alert-info}
+
+    6.  You should now have a *Network Connection* button. Select it to
         open the network connection settings. (You can also find the connection
         in *Wireless and Networks > All Network Connections*.)
 
@@ -298,17 +292,17 @@ If you are using an older version, please upgrade.
         *Connect* on the *Network Connection* screen below instead.
         {: .alert .alert-info}
 
-    13. Select *Connect* here. You can also check the box for *Connect automatically*.
+    7.  Select *Connect* here. You can also check the box for *Connect automatically*.
         This way you don't have to connect manually after you reboot.
 
         {% include screenshot.html source="/images/brickman/networking-my-computer-0-connect-selected.png" %}
 
-    14. *State* should change to *Online* to indicate that the EV3 has an Internet
+    8.  *State* should change to *Online* to indicate that the EV3 has an Internet
         connection.
 
         {% include screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
 
-    11. Now we are going to connect to the EV3 using ssh. In a terminal, run the
+    9.  Now we are going to connect to the EV3 using ssh. In a terminal, run the
         following command.
 
             ssh robot@ev3dev.local
@@ -329,7 +323,7 @@ If you are using an older version, please upgrade.
         </div>
         </div>
 
-    12. Enter your password when prompted. The default password is `maker`.
+    10. Enter your password when prompted. The default password is `maker`.
 
             robot@ev3dev's password: 
                          _____     _
