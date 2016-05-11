@@ -33,6 +33,7 @@ IGNORE_HREFS=$(ruby -e 'puts %w{
     .*revolds-whitepaper\.pdf
     https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
     warmcat.com
+    robosnap.net
 }.map{|h| "/#{h}/"}.join(",")')
 
 # Explanation of ignored sites:
