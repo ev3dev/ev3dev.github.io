@@ -197,11 +197,6 @@ kernel.
     exact type of sensor cannot be determined. See [Using I2C Sensors]
     for information on how to manually load the correct driver.
 
-[^lm75]: <s>Temperature sensors using the lm75 module can be auto-detected.
-    You must run `modprobe lm75` for this to happen. You can also make the
-    lm75 module load automatically on boot by adding it to `/etc/modules`.</s>
-    Automatic detection not working. See <https://github.com/ev3dev/ev3dev/issues/622>.
-
 [^ev3-analog-driver]: The `XX` in `ev3-analog-XX` is replaced with the type id
     of the sensor (`01` to `14`). Type id `02` is the LEGO EV3 Touch sensor,
     so `ev3-analog-02` does not exist.
