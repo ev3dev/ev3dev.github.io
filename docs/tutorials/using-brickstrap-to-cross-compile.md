@@ -238,7 +238,7 @@ as an example, which uses CMake for the build system.
 
 [brickman]: https://github.com/ev3dev/brickman
 
-### Example using Vala and CMake
+### Example using Vala and CMake 3.x
 
 First, we will assume that you ran brickstrap as described above to create a
 root file system on your host computer at `/home/user/work/ev3-rootfs`.
@@ -301,17 +301,17 @@ directory now - and a couple more files too.
 Use your favorite text editor to edit the two empty files we just created with
 `touch`. First, `arm-linux-gnueabi.cmake` should look like this...
 
-    set(SYSROOT_PATH /home/user/work/ev3-rootfs)
+    set(CMAKE_SYSROOT /home/user/work/ev3-rootfs)
 
     set(CMAKE_SYSTEM_NAME Linux)
 
     set(CMAKE_C_COMPILER arm-linux-gnueabi-gcc)
-    set(CMAKE_CXX_COMPILER arm-linux-gnueabi-g++)
+    #set(CMAKE_CXX_COMPILER arm-linux-gnueabi-g++)
 
-    set(CMAKE_FIND_ROOT_PATH ${SYSROOT_PATH})
     set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
     set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
     set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+    set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
 This will tell CMake to use programs on our host computer (which is why we had
 to install `valac` and `pkg-config` on the host computer). But, it will look
