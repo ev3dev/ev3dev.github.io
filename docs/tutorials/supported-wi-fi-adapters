@@ -5,7 +5,7 @@ subject: Networking
 
 LEGO officially suports the NETGEAR N150 Wireless Adapter (WNA1100)
 with the native EV3 firmware. Of course, it also works with ev3dev.
-But ev3dev supports many other Wi-Fi adpters - if your Wi-Fi
+But ev3dev supports many other Wi-Fi adapters - if your Wi-Fi
 USB dongle works in your Linux system there is a good chance it
 will also works with ev3dev.
 
@@ -14,13 +14,15 @@ ev3dev. Even if your device is not in this list it may use the same
 chipset, so you should use lsub and dmesg commands to proper identify
 it after you connect it to your system:
 
-```
-~$ lsusb
-...
-Bus 001 Device 004: ID 050d:1102 Belkin Components F7D1102 N150/Surf Micro Wireless Adapter v1000 [Realtek RTL8188CUS]
-...
-```
+    ~^$ lsusb
+    ...
+    Bus 001 Device 004: ID 050d:1102 Belkin Components F7D1102 N150/Surf Micro Wireless Adapter v1000 [Realtek RTL8188CUS]
+    ...
 
+Adapters:
 * ThePiHut [Ralink RT5370, ID 148f:5370]
-* Belkin Components F7D1102 N150/Surf Micro Wireless Adapter v1000 [Realtek RTL8188CUS, ID 050d:1102]
+* Belkin Components F7D1102 N150/Surf Micro Wireless Adapter v1000 [Realtek RTL8188CUS, ID 050d:1102] (1)
+
+Notes:
+ 1 - The RTL8188CUS might have support problems in future distributions
 
