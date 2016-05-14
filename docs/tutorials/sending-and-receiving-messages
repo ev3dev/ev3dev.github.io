@@ -2,6 +2,12 @@
 title: Sending and receiving messages with MQTT
 subject: Networking
 ---
+
+* Table of Contents
+{:toc}
+
+## Intro
+
 «MQTT (Message Queue Telemetry Transport) is an ISO standard (ISO/IEC PRF 20922)
 publish-subscribe based "light weight" messaging protocol for use on top of the
 TCP/IP protocol. It is designed for connections with remote locations where a
@@ -10,12 +16,30 @@ TCP/IP protocol. It is designed for connections with remote locations where a
 It's very easy to use the MQTT protocol to exchange small messages between several
 devices.
 
-We need a broker that can be running outside the EV3 (like a laptop or a Raspberry
-Pi) but for light usages can also run on the EV3:
+## Basics
+
+A `message` has a `topic` and a `payload`, like the subject and the content of an
+e-mail.
+
+The `Publisher` sends a message to the network.
+
+The `Subscriber` listens for messages with a particular topic.
+
+The `Broker` is responsible for coordinating the communication between publishers and
+subscribers. It can also store messages while subscribers are offline (a feature not
+used in this tutorial).
+
+
+## Requirements
+
+We need a broker that is always available. Just one for the whole network.
+It can be a PC, a Raspberry Pi or even an EV3. If it is a Debian-based linux
+system we can use `mosquitto`
 
     sudo apt-get install mosquitto
 
-This installs and then starts the mosquitto daemon, you can check with
+This installs and also starts the mosquitto daemon. You can check if it is
+working:
 
     robot@ev3dev:~# service mosquitto status
     ● mosquitto.service - LSB: mosquitto MQTT v3.1 message broker
@@ -25,11 +49,19 @@ This installs and then starts the mosquitto daemon, you can check with
                └─685 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
            
 Now we are able to send and receive messages through the broker (by default
-mosquitto uses port 1883). We just need to install a python library:
+mosquitto uses port 1883). 
+
+This tutorial uses python scripts so we need to install one python library:
 
     sudo easy_install paho-mqtt
 
-Now a very simple script to test sending messages ("publishing"):
+All scripts were tested successully on a EV3 running the latest ev3dev version
+(as of 12 May 2016) and also on a Raspberry Pi 3 with a BrickPi running the same
+ev3dev version and a laptop running Ubuntu 16.04.
+
+## Publisher example
+
+A very simple script to publish a message:
 
     #!/usr/bin/env python
 
@@ -42,8 +74,11 @@ Now a very simple script to test sending messages ("publishing"):
     client.publish("topic/test", "Hello world!");
     client.disconnect();
 
-Note: if using an external broker (i.e. not the mosquitto deamon running in the
-EV3) replace "localhost" with the IP address of the device that hosts the broker.
+Note: if using an external broker (i.e. the mosquitto deamon is not running in the
+EV3 that publishes messages) replace `localhost` with the IP address of the device
+that hosts the broker.
+
+## Subscriber example
 
 Any MQTT client that is connected to our broker and has subscribed for "topic/test"
 will receive a MQTT message with "Hello world!" as the payload. We can test it with
@@ -76,9 +111,11 @@ test it on our PC or on another EV3:
 Note: the second EV3 (the "Subscriber") just needs the "paho-mqtt" library,
 there is no need to install the "mosquitto" daemon.
 
-This is just a very basic example - one Publisher and one Subscriber, but it
-is very easy to extend (and don't forget that the same device can play both
-roles).
+## Final notes
+
+This is just a very basic example - one Publisher (probably also the Broker) and
+one Subscriber, but it is very easy to extend (and don't forget that the same
+device can play all roles).
 
 Since we can connect several clients to the same broker we can also send
 messages to the EV3 "Subscriber" not just from the EV3 "Publisher" but also
@@ -90,4 +127,3 @@ built-in MQTT nodes ("mqtt in" and "mqtt out"). With just a few clicks we can
 create a flow that connects our EV3's to the internet.
 
 A more advanced example is being prepared.
-
