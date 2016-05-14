@@ -4,3 +4,17 @@
 .language-icon {
     height: 25px;
 }
+
+.project-thumbnail-container {
+    img {
+        margin-top: 15px;
+    }
+    
+    .caption {
+        padding-bottom: 0;
+    }
+    
+    .btn-primary {
+        width: 100%;
+    }
+}

@@ -29,11 +29,11 @@ excerpt: "This is where we keep a collection of some of the projects that people
                 
                 {% assign num_words = 60 %}
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
+                    <div class="thumbnail project-thumbnail-container">
                         {% if post.youtube_video_id %}
                             {% assign num_words = 35 %}
                             <a href="{{ post.url }}">
-                                <img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" alt="project thumbnail image" />
+                                <img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" alt="{{ post.title }}" />
                             </a>
                         {% endif %}
                         <div class="caption">
