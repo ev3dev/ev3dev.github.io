@@ -114,7 +114,7 @@ there is no need to install the "mosquitto" daemon.
 ## A more practical example
 
 We will use MQTT messages to control the speed of an EV3 motor on port A.
-We will do this by changing just one motor attribute: `duty_cycle_sp attribute`
+We will do this by changing just one motor attribute: `duty_cycle_sp`
 so we define a topic for this purpose and susbcribe to it: `topic/motor-A/dt`
 
     #!/usr/bin/env python
