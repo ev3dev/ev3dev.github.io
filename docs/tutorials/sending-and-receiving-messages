@@ -138,7 +138,7 @@ so we define a topic for this purpose and susbcribe to it: `topic/motor-A/dt`
           m.duty_cycle_sp=msg.payload
     
     client = mqtt.Client()
-    client.connect("192.168.1.64",1883,60)
+    client.connect("THE_IP_ADDRESS_OF_OUR_BROKER",1883,60)
     
     client.on_connect = on_connect
     client.on_message = on_message
@@ -169,6 +169,6 @@ One interesting possibility is running `node-red` on our PC as it offers two
 built-in MQTT nodes ("mqtt in" and "mqtt out"). With just a few clicks we can
 create a flow that connects our EV3's to the internet. Of course, we can also run
 `node-red` on our EV3 but will probably exceed our little fellow resources (but
-a Raspberry Pi and a BrickPi can run `node-red` and `mosquitto` easyly).
+a Raspberry Pi and a BrickPi can run `node-red` and `mosquitto` easily).
 
 A more advanced example is being prepared.
