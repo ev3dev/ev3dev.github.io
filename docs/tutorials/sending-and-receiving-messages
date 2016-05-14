@@ -111,6 +111,49 @@ test it on our PC or on another EV3:
 Note: the second EV3 (the "Subscriber") just needs the "paho-mqtt" library,
 there is no need to install the "mosquitto" daemon.
 
+## A more practical example
+
+We will use MQTT messages to control the speed of an EV3 motor on port A.
+We will do this by changing just one motor attribute: `duty_cycle_sp attribute`
+so we define a topic for this purpose and susbcribe to it: `topic/motor-A/dt`
+
+    #!/usr/bin/env python
+    
+    import paho.mqtt.client as mqtt
+    from ev3dev.auto import *
+    
+    # This is the Subscriber
+
+    m = MediumMotor(OUTPUT_A)
+
+    def on_connect(client, userdata, flags, rc):
+        print("Connected with result code "+str(rc))
+        client.subscribe("topic/motor-A/dt")
+    
+    def on_message(client, userdata, msg):
+        if (msg.payload == 'Q'):
+          m.stop()
+          client.disconnect()
+        elif (-100 <= int(msg.payload) <= 100):
+          m.duty_cycle_sp=msg.payload
+    
+    client = mqtt.Client()
+    client.connect("192.168.1.64",1883,60)
+    
+    client.on_connect = on_connect
+    client.on_message = on_message
+    
+    m.run_direct()
+    m.duty_cycle_sp=0
+    
+    client.loop_forever()
+
+
+So whenever a device on our network publishes a message with topic `topic/motor-A/dt`
+our Subscriber will receive it and if the payload is a proper integer value it will
+change the motor speed. If will also stop the motor and quit if the payload is just
+`Q`.
+
 ## Final notes
 
 This is just a very basic example - one Publisher (probably also the Broker) and
@@ -119,11 +162,13 @@ device can play all roles).
 
 Since we can connect several clients to the same broker we can also send
 messages to the EV3 "Subscriber" not just from the EV3 "Publisher" but also
-from anything that can publish MQTT messages, like a PC, a mobile phone, a
+from anything that can publish MQTT messages like a PC, a mobile phone, a
 Raspberry Pi or an Arduino. Welcome to the Internet of Things!
 
-One interesting possibility is running "node-red" on our PC as it offers two
+One interesting possibility is running `node-red` on our PC as it offers two
 built-in MQTT nodes ("mqtt in" and "mqtt out"). With just a few clicks we can
-create a flow that connects our EV3's to the internet.
+create a flow that connects our EV3's to the internet. Of course, we can also run
+`node-red` on our EV3 but will probably exceed our little fellow resources (but
+a Raspberry Pi and a BrickPi can run `node-red` and `mosquitto` easyly).
 
 A more advanced example is being prepared.
