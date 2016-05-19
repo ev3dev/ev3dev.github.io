@@ -1,6 +1,7 @@
 ---
-title: Sending and receiving messages with MQTT
+title: Sending and Receiving Messages with MQTT
 subject: Networking
+author: "@JorgePe"
 ---
 
 * Table of Contents
@@ -8,7 +9,7 @@ subject: Networking
 
 ## Intro
 
-«MQTT (Message Queue Telemetry Transport) is an ISO standard (ISO/IEC PRF 20922)
+[MQTT](https://en.wikipedia.org/wiki/MQTT) (Message Queue Telemetry Transport) is an ISO standard (ISO/IEC PRF 20922)
 publish-subscribe based "light weight" messaging protocol for use on top of the
 TCP/IP protocol. It is designed for connections with remote locations where a
 "small code footprint" is required or the network bandwidth is limited.»
@@ -171,4 +172,3 @@ create a flow that connects our EV3's to the internet. Of course, we can also ru
 `node-red` on our EV3 but will probably exceed our little fellow resources (but
 a Raspberry Pi and a BrickPi can run `node-red` and `mosquitto` easily).
 
-A more advanced example is being prepared.
