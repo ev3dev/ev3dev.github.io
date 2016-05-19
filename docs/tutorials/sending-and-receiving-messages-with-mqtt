@@ -152,7 +152,7 @@ so we define a topic for this purpose and susbcribe to it: `topic/motor-A/dt`
 
 So whenever a device on our network publishes a message with topic `topic/motor-A/dt`
 our Subscriber will receive it and if the payload is a proper integer value it will
-change the motor speed. If will also stop the motor and quit if the payload is just
+change the motor speed. It will also stop the motor and quit if the payload is just
 `Q`.
 
 ## Final notes
