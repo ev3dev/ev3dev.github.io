@@ -19,16 +19,13 @@ devices.
 
 ## Basics
 
-A `message` has a `topic` and a `payload`, like the subject and the content of an
+* A `message` has a `topic` and a `payload`, like the subject and the content of an
 e-mail.
-
-The `Publisher` sends a message to the network.
-
-The `Subscriber` listens for messages with a particular topic.
-
-The `Broker` is responsible for coordinating the communication between publishers and
-subscribers. It can also store messages while subscribers are offline (a feature not
-used in this tutorial).
+* The `Publisher` sends a message to the network.
+* The `Subscriber` listens for messages with a particular topic.
+* The `Broker` is responsible for coordinating the communication between publishers and
+  subscribers. It can also store messages while subscribers are offline (a feature not
+  used in this tutorial).
 
 
 ## Requirements
