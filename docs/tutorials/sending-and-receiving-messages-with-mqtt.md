@@ -152,6 +152,10 @@ our Subscriber will receive it and if the payload is a proper integer value it w
 change the motor speed. It will also stop the motor and quit if the payload is just
 `Q`.
 
+This video shows a demonstration of both Publisher and Suscriber scripts running,
+with just a few improvements on the Publisher side to allow using EV3 buttons:
+{% include youtube-embed.html youtube_video_id="RmoC-vybW10" %}
+
 ## Final notes
 
 This is just a very basic example - one Publisher (probably also the Broker) and
