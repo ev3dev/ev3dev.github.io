@@ -60,12 +60,20 @@ Dir.mktmpdir do |tmp|
         # prepend ev3dev.github.io to all root-relative urls
         basename = ENV['BASENAME'] || "/ev3dev.github.io"
         basename = basename.gsub(/@FULL_PATH@/, tmp)
-        
-        file_names = `git ls-files | grep '.html$'`
-        file_names.each_line do |file_name|
+
+        html_file_names = `git ls-files | grep '.html$'`
+        html_file_names.each_line do |file_name|
             file_name = file_name.strip
             text = File.read(file_name)
             new_contents = text.gsub(/(href|src)="\//, "\\1=\"#{basename}/")
+            File.open(file_name, "w") { |file| file.puts new_contents }
+        end
+
+        css_file_names = `git ls-files | grep '.css$'`
+        css_file_names.each_line do |file_name|
+            file_name = file_name.strip
+            text = File.read(file_name)
+            new_contents = text.gsub(/(url\(\s*)"\//, "\\1\"#{basename}/")
             File.open(file_name, "w") { |file| file.puts new_contents }
         end
 
@@ -80,7 +88,7 @@ Dir.mktmpdir do |tmp|
         new_contents = text.gsub(/("href"\s*:\s*")\//, "\\1#{basename}/")
         File.open(file_name, "w") { |file| file.puts new_contents }
     end
-    
+
     if ARGV.include? '--test'
         # run test command
         exit(system ARGV[ARGV.index('--test') + 1])
