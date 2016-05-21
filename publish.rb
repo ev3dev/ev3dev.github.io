@@ -52,6 +52,9 @@ Dir.mktmpdir do |tmp|
 
     # having cname sends you annoying email
     FileUtils.rm 'CNAME'
+    
+    # adding a .nojekyll file disables unnecessary build job on GH Pages
+    FileUtils.touch '.nojekyll'
 
     system "git add ."
 
