@@ -1,6 +1,7 @@
 ---
 title: "Get Help"
 redirect_from: /issues/index.html
+excerpt: "Have a problem or question? We are here to help - but you have to help us help you. We keep track of problems, suggestions and questions about ev3dev using GitHub Issues. This lets us keep everything in one place."
 ---
 
 * Table of Contents
@@ -20,16 +21,7 @@ We keep track of problems, suggestions and questions about ev3dev using [GitHub
 Issues]. This lets us keep everything in one place. (So, please don't email the
 developers directly unless you have a personal question.)
 
-First, before submitting an issue, please make sure that you have the latest
-kernel and other packages:
-
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get dist-upgrade
-    # if a new kernel package was installed
-    sudo reboot
-
-Then search the existing issues (open and closed) to make sure someone else has
+First, before submitting an issue, search the existing issues (open and closed) to make sure someone else has
 not already reported the same problem or asked the same question. Please only
 comment on an existing **open** issue if you are fairly sure your problem/question is
 *exactly* the same. If the issue is closed or you are not sure your problem is the same,

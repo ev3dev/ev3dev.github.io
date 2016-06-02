@@ -3,3 +3,4 @@ _site/
 *~
 *.lock
 .sass-cache
+.jekyll-metadata

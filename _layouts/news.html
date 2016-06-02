@@ -26,8 +26,9 @@ layout: page
             </li>
             {% if page.author %}
             <li class="list-group-item">
-                {% assign author_card = page.author %}
-                {% include author-card.html %}
+                {% for author in page.author %}
+                {% include author-card.html author=author %}
+                {% endfor %}
             </li>
             {% endif %}
         </ul>

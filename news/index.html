@@ -1,32 +1,12 @@
 ---
 title: News
 subtitle: Announcements and updates
+excerpt: "ev3dev release announcements, community updates, and other posts on noteworthy events. Check here or monitor our Atom feed to stay up-to-date on ev3dev news."
 ---
-
-{% for post in site.posts reversed %}
-    {% if post.categories contains "news" %}
-        {% assign first_post = post %}
-    {% endif %}
-{% endfor %}
-
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h1 class="panel-title">
-            <a href="{{ first_post.url }}"> {{ first_post.title }}</a>
-            <span class="pull-right label font-light">{{ first_post.date | date_to_string }}</span>
-        </h1>
-    </div>
-    <div class="panel-body">
-        {{ first_post.content | truncatewords: 200 }}
-        <br/>
-        <br />
-        <a href="{{ first_post.url }}">Continue reading...</a>
-    </div>
-</div>
 
 {% assign num_items = 5 %}
 {% for post in site.posts %}
-    {% if post.categories contains "news" and post.url != first_post.url %}
+    {% if post.categories contains "news" %}
         {% assign num_items = num_items | minus:1 %}
         {% if num_items >= 0 %}
             <div class="panel panel-default">
@@ -37,7 +17,7 @@ subtitle: Announcements and updates
                     </h1>
                 </div>
                 <div class="panel-body">
-                    {{ post.content | truncatewords: 50 }}
+                    {{ post.content | split: "<h" | first }}
                     <br />
                     <br />
                     <a href="{{ post.url }}">Continue reading...</a>

@@ -14,18 +14,6 @@ the `duty_cycle` attribute will return `-EOPNOTSUPP`. Additionally, you cannot
 specify the duty cycle to use (see Speed Regulation below), so writing to
 `duty_cycle_sp` will also return `-EOPNOTSUPP` as well.
 
-## Speed Regulation
-
-The NxtMMX does not support `speed_regulation` of `off`. If you try to change
-the `speed_regulation` attribute, it will return `-EINVAL`. This means that
-`duty_cycle_sp` is never used. When following the [tahco-motor tutorial] you must
-use `speed_sp` instead of `duty_cycle_sp`.
-
-## Encoder Polarity
-
-The NxtMMX does not support motors with `inversed` encoder polarity. This means
-the Firgelli linear actuators will not work with the NxtMMX.
-
 ## Battery Voltage
 
 The NxtMMX creates a lego-sensor class [device][mindsensors.com NxtMMX] that

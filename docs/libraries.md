@@ -1,6 +1,7 @@
 ---
 title: Libraries
 subtitle: Pre-made language bindings that make accessing the EV3 device drivers easy
+excerpt: "If you are looking to write a program that takes advantage of the EV3's motors, sensors, or other native devices, using a language binding is the way to go."
 ---
 
 * Table of Contents
@@ -46,7 +47,8 @@ languages not included in our other repository.  Note that some of these
 libraries may be outdated due to the fast development cycle of ev3dev.
 
 * Extra languages:
-    * [Google Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
+    * [Go](https://github.com/ev3go/ev3dev) closely following the ev3dev API specification by the @ev3go project.
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @theZiz

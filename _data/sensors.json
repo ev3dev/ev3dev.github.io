@@ -238,7 +238,7 @@
         "product_id": "Pixy",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "charmed-labs-pixy-cmucam5-for-lego",
         "vendor_id": "Pixy",
         "vendor_name": "Charmed Labs",
@@ -373,7 +373,7 @@
         "product_id": "Color",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-color-sensor",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -387,7 +387,7 @@
                 "name": "RESET"
             },
             {
-                "description": "Reset accumulated angle and save to EEPROM",
+                "description": "Reset angle and accumulated angle and save to EEPROM",
                 "id": "1",
                 "name": "CAL",
                 "name_footnote": "[^calibrate]",
@@ -424,17 +424,18 @@
         "id": "HT_NXT_ANGLE_SENSOR",
         "mode_info": [
             {
+                "data_type": "LEGO_SENSOR_DATA_U16",
                 "description": "Angle",
                 "id": "0",
                 "name": "ANGLE",
-                "raw_max": "180",
-                "si_max": "180",
+                "scale": "ht_angle_scale",
+                "si_max": "359",
                 "units": "deg",
                 "units_description": "degrees",
-                "value0": "Angle (0 to 180)"
+                "value0": "Angle (0 to 359)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S32",
+                "data_type": "LEGO_SENSOR_DATA_S32_BE",
                 "description": "Accumulated angle",
                 "figures": "9",
                 "id": "1",
@@ -448,7 +449,7 @@
                 "value0": "Angle (-2147483648 to 2147483647)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16",
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
                 "description": "Rotational speed",
                 "id": "2",
                 "name": "SPEED",
@@ -467,7 +468,7 @@
         "product_id": "AnglSnsr",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-angle-sensor",
         "vendor_id": "HITECHNC",
         "vendor_name": "HiTechnic",
@@ -519,7 +520,7 @@
         "product_id": "Accel.",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-acceleration-tilt-sensor",
         "vendor_id": "HITECHNC",
         "vendor_name": "HiTechnic",
@@ -570,7 +571,7 @@
         "product_id": "Barometr",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-barometric-sensor",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -700,7 +701,7 @@
         "product_id": "ColorPD",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-color-sensor-v2",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -831,7 +832,7 @@
         "product_id": "IRLink",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-irlink-sensor",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -896,7 +897,7 @@
         "product_id": "IRRecv",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-irreceiver-sensor",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -931,7 +932,7 @@
         "product_id": "PIR",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-pir-sensor",
         "vendor_id": "HITECHNC",
         "vendor_name": "HiTechnic",
@@ -950,15 +951,15 @@
         "id": "HT_NXT_COMPASS_SENSOR",
         "mode_info": [
             {
-                "data_type": "LEGO_SENSOR_DATA_S8",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Compass Direction",
                 "id": "0",
                 "name": "COMPASS",
-                "raw_max": "180",
-                "si_max": "180",
+                "raw_max": "359",
+                "si_max": "359",
                 "units": "deg",
                 "units_description": "degrees",
-                "value0": "Direction (-180 to 180)"
+                "value0": "Direction (0 to 359)"
             }
         ],
         "name": "ht-nxt-compass",
@@ -966,7 +967,7 @@
         "product_id": "Compass",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-compass-sensor",
         "vendor_id": "HITECHNC",
         "vendor_name": "HiTechnic",
@@ -1085,7 +1086,7 @@
         "product_id": "NewIRDir",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-irseeker-v2",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -1174,7 +1175,7 @@
         "product_id": "SensrMUX",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-sensor-multiplexer",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -1292,7 +1293,7 @@
         "product_id": "SuperPro",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "hitechnic-nxt-superpro-prototype-board",
         "vendor_id": "HiTechnc",
         "vendor_name": "HiTechnic",
@@ -1961,18 +1962,18 @@
         "product_id": "",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "lego-energy-display",
         "vendor_id": "LEGO",
         "vendor_name": "LEGO",
         "vendor_part_name": "Energy Display",
         "vendor_part_number": "9668",
-        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/machines-and-mechanisms/9668-energy-display"
+        "vendor_website": "https://education.lego.com/en-us/products/energy-display/9668"
     },
     {
         "default_address": "0x4C",
         "default_address_footnote": "[^addresses]",
-        "device_class": "[hwmon](http://www.lm-sensors.org/) [^usage]",
+        "device_class": "[hwmon](https://wiki.archlinux.org/index.php/Lm_sensors) [^usage]",
         "id": "LEGO_NXT_TEMPERATURE_SENSOR",
         "name": "tmp275",
         "notes": "\n[^addresses]: Valid addresses are 0x48..0x4F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo tmp275 0x4C > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/hwmon -name hwmon*)\n    do\n        if [[ \"$(cat $chip/device/name)\" == \"tmp275\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
@@ -2008,7 +2009,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Touch Sensor",
         "vendor_part_number": "9843",
-        "vendor_website": "http://shop.lego.com/en-US/Ultrasonic-Sensor-9846"
+        "vendor_website": "http://shop.lego.com/en-US/Touch-Sensor-9843"
     },
     {
         "analog_mode_info": [
@@ -2212,7 +2213,7 @@
         "sensor_type": "nxt-i2c-sensor",
         "slow": "true",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "lego-nxt-ultrasonic-sensor",
         "vendor_id": "LEGO",
         "vendor_name": "LEGO",
@@ -2352,7 +2353,7 @@
         "product_id_footnote": "[^ids]",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "microinfinity-digital-gyroscope-and-accelerometer",
         "vendor_id": "mnfinity",
         "vendor_id_footnote": "[^ids]",
@@ -2546,7 +2547,7 @@
         "product_id": "AbsIMU",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-gyro-multisensitivity-accelerometer-and-compass",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -2647,7 +2648,7 @@
         "product_id": "AngSens",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-glidewheel-as",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -2683,7 +2684,7 @@
         "product_id": "Ev3SMux",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-ev3-sensor-multiplexer",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -2827,7 +2828,7 @@
         "product_id": "LSArray",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-light-sensor-array",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -3036,7 +3037,7 @@
         "product_id": "LineLdr",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-line-follower-sensor",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -3141,7 +3142,7 @@
         "product_id": "NXTCAM",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-vision-subsystem-v4-for-nxt-or-ev3",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -3199,7 +3200,7 @@
         "product_id": "NxTMMX",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-multiplexer-for-nxt-ev3-motors",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -3262,7 +3263,7 @@
         "product_id": "NXTServo",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-8-channel-servo-controller",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",
@@ -3289,7 +3290,7 @@
     {
         "default_address": "0x48",
         "default_address_footnote": "[^addresses]",
-        "device_class": "[hwmon](http://www.lm-sensors.org/) [^usage]",
+        "device_class": "[hwmon](https://wiki.archlinux.org/index.php/Lm_sensors) [^usage]",
         "id": "MS_SENSOR_KIT_PCF8591",
         "name": "pcf8591",
         "notes": "\n[^addresses]: Valid addresses are 0x48..0x4F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo pcf8591 0x48 > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/hwmon -name hwmon*)\n    do\n        if [[ \"$(cat $chip/device/name)\" == \"pcf8591\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
@@ -3301,6 +3302,148 @@
         "vendor_part_name": "Sensor building kit for NXT with PCF8591 IC",
         "vendor_part_number": "PCF8591-Nx",
         "vendor_website": "http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=92"
+    },
+    {
+        "cmd_info": [
+            {
+                "description": "Change Reference pressure to current absolute pressure.",
+                "id": "0",
+                "name": "ZERO",
+                "name_footnote": "[^zero]",
+                "notes": "\n[^zero]: The reference pressure is used to calculate the gauge pressure.\n    Therefore, this command only affects the `REL-*` modes.\n    \n    "
+            }
+        ],
+        "default_address": "0x0C",
+        "i2c_cmd_info": [
+            {
+                "cmd_data": "'d'",
+                "cmd_reg": "0",
+                "id": "0"
+            }
+        ],
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0",
+                "set_mode_data": "'p'",
+                "set_mode_reg": "0"
+            },
+            {
+                "id": "2",
+                "read_data_reg": "0",
+                "set_mode_data": "'b'",
+                "set_mode_reg": "0"
+            },
+            {
+                "id": "3",
+                "read_data_reg": "0",
+                "set_mode_data": "'k'",
+                "set_mode_reg": "0"
+            },
+            {
+                "id": "4",
+                "read_data_reg": "0",
+                "set_mode_data": "'p'",
+                "set_mode_reg": "0"
+            },
+            {
+                "id": "5",
+                "read_data_reg": "0",
+                "set_mode_data": "'b'",
+                "set_mode_reg": "0"
+            },
+            {
+                "id": "6",
+                "read_data_reg": "0",
+                "set_mode_data": "'k'",
+                "set_mode_reg": "0"
+            }
+        ],
+        "id": "MS_PPS58_NX",
+        "mode_info": [
+            {
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "description": "Raw sensor value",
+                "id": "0",
+                "name": "RAW",
+                "unit_description": "Pascals",
+                "units": "Pa",
+                "value0": "Pressure"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Absolute pressure (PSI)",
+                "id": "1",
+                "name": "ABS-PSI",
+                "units": "PSI",
+                "units_description": "Pounds per square inch",
+                "value0": "Pressure"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Absolute pressure (millibar)",
+                "id": "2",
+                "name": "ABS-MBAR",
+                "units": "mbar",
+                "units_description": "millibar",
+                "value0": "Pressure"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Absolute pressure (kPa)",
+                "id": "3",
+                "name": "ABS-KPA",
+                "units": "kPa",
+                "units_description": "kilopascals",
+                "value0": "Pressure"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Gauge pressure (PSI)",
+                "id": "4",
+                "name": "REL-PSI",
+                "units": "PSI",
+                "units_description": "Pounds per square inch",
+                "value0": "Pressure"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Gauge pressure (millibar)",
+                "id": "5",
+                "name": "REL-MBAR",
+                "units": "mbar",
+                "units_description": "millibar",
+                "value0": "Pressure"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Gauge pressure (kPa)",
+                "id": "6",
+                "name": "REL-KPA",
+                "units": "kPa",
+                "units_description": "kilopascals",
+                "value0": "Pressure"
+            }
+        ],
+        "name": "ms-pps58-nx",
+        "num_commands": "1",
+        "num_modes": "7",
+        "num_read_only_modes": "2",
+        "ops": [],
+        "product_id": "PPS58",
+        "sensor_type": "nxt-i2c-sensor",
+        "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
+        "source_line": 343,
+        "url_name": "mindsensors.com-digital-pneumatic-pressure-sensor",
+        "vendor_id": "mndsnsrs",
+        "vendor_name": "mindsensors.com",
+        "vendor_part_name": "Digital Pneumatic Pressure Sensor",
+        "vendor_part_number": "PPS58-Nx",
+        "vendor_website": "http://www.mindsensors.com/ev3-and-nxt/127-digital-pneumatic-pressure-sensor-for-nxt-or-ev3"
     },
     {
         "cmd_info": [
@@ -3359,7 +3502,7 @@
         "product_id": "PixyAdpt",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
-        "source_line": 300,
+        "source_line": 343,
         "url_name": "mindsensors.com-pixy-adapter-for-mindstorms-ev3-or-nxt",
         "vendor_id": "mndsnsrs",
         "vendor_name": "mindsensors.com",

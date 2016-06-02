@@ -5,14 +5,11 @@
 # This script publishes the ev3dev website to the gh-pages branch of your
 # personal fork. This allows you to share a preview of your changes with others.
 #
-# Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ] 
+# Usage: ./publish.rb { <gh-user> } [ --ssh ] [ --test '<command>' ] [ --no-fix-links ]
 #
-# <gh-user> is your github user name. This is short for
-# "git@github.com:<gh-user>/ev3dev.github.io.git"
+# <gh-user> is your github user name.
 #
-# <gh-url> is the url for your fork on GitHub. For example, if you don't want
-# to use ssh, then pass "https://github.com/<gh-user>/ev3dev.github.io.git"
-# as the argument.
+# --ssh will use SSH instead of HTTPS when connecting to GitHub.
 #
 # --test '<command>' will run <command> in a shell and return the result. The
 # working directory will be a temporary directory containing the fixed up files.
@@ -24,8 +21,8 @@
 
 require 'tmpdir'
 
-# TODO: We shou;d use a real parser library. This has many ways it could go wrong.
-if ARGV.count < 1 or ARGV.include? '--test' and ARGV[ARGV.index('--test') + 1].nil?
+# TODO: We should use a real parser library. This has many ways it could go wrong.
+if ARGV.count < 1 || ARGV.include?('--test') && ARGV[ARGV.index('--test') + 1].nil?
     STDERR.puts "Usage: ./publish.rb { <gh-user> | <gh-url> } [ --test '<command>' ] [ --no-fix-links ]"
     exit(1)
 end
@@ -36,9 +33,11 @@ Dir.mktmpdir do |tmp|
     system "git init"
 
     unless ARGV.include? "--test"
-        git_url = ARGV[0]
-        if not git_url.include? "/"
-            git_url = "git@github.com:#{ARGV[0]}/ev3dev.github.io.git"
+        gh_user = ARGV[0]
+        if ARGV.include?("--ssh")
+            git_url = "git@github.com:#{gh_user}/ev3dev.github.io.git"
+        else
+            git_url = "https://github.com/#{gh_user}/ev3dev.github.io.git"
         end
         system "git remote add origin #{git_url}"
 
@@ -53,6 +52,9 @@ Dir.mktmpdir do |tmp|
 
     # having cname sends you annoying email
     FileUtils.rm 'CNAME'
+    
+    # adding a .nojekyll file disables unnecessary build job on GH Pages
+    FileUtils.touch '.nojekyll'
 
     system "git add ."
 
@@ -61,12 +63,20 @@ Dir.mktmpdir do |tmp|
         # prepend ev3dev.github.io to all root-relative urls
         basename = ENV['BASENAME'] || "/ev3dev.github.io"
         basename = basename.gsub(/@FULL_PATH@/, tmp)
-        
-        file_names = `git ls-files | grep '.html$'`
-        file_names.each_line do |file_name|
+
+        html_file_names = `git ls-files | grep '.html$'`
+        html_file_names.each_line do |file_name|
             file_name = file_name.strip
             text = File.read(file_name)
             new_contents = text.gsub(/(href|src)="\//, "\\1=\"#{basename}/")
+            File.open(file_name, "w") { |file| file.puts new_contents }
+        end
+
+        css_file_names = `git ls-files | grep '.css$'`
+        css_file_names.each_line do |file_name|
+            file_name = file_name.strip
+            text = File.read(file_name)
+            new_contents = text.gsub(/(url\(\s*)"\//, "\\1\"#{basename}/")
             File.open(file_name, "w") { |file| file.puts new_contents }
         end
 
@@ -81,7 +91,7 @@ Dir.mktmpdir do |tmp|
         new_contents = text.gsub(/("href"\s*:\s*")\//, "\\1#{basename}/")
         File.open(file_name, "w") { |file| file.puts new_contents }
     end
-    
+
     if ARGV.include? '--test'
         # run test command
         exit(system ARGV[ARGV.index('--test') + 1])

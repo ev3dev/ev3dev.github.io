@@ -1,5 +1,6 @@
 ---
 title: The Kernel Hacker's Notebook
+excerpt: "A technical reference about the things we have learned from working on the ev3dev kernel. It is mostly information about the hardware and device drivers."
 ---
 
 * Table of Contents

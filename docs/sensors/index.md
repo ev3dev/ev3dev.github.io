@@ -1,6 +1,7 @@
 ---
 title: Sensors
 subtitle: And everything else that plugs into input ports on the EV3
+excerpt: "The EV3 has four input ports for connecting sensors and other devices (like sensor multiplexers or motor controllers). If you are trying to use something that plugs into one of the input ports, read this guide."
 ---
 
 * Table of Contents
@@ -72,18 +73,40 @@ not just the input ports.
 
 ## Using Sensors
 
-General resources:
+### Automatic Detection
+
+The EV3 has "smart" sensor ports that can identify most sensors. Beware!
+Full automatic detection works on EV3 only. And even on EV3, some sensors cannot
+be automatically detected. See notes below in the table of supported sensors.
+
+For sensors that cannot be automatically detected, you can manually control
+the input port mode. Read more about it on [the lego-port class page][lego-port-class].
+
+On FatcatLab's EVB, only EV3 sensors can be automatically detected. For *all* NXT
+sensors, you must manually set the mode. (I2C sensors currently do not work on
+the EVB platform).
+
+On BrickPi, sensors cannot be automatically detected at all. You must manually
+configure the input ports for all sensors.
+
+On PiStorms, detection of EV3/UART, EV3/Analog and NXT/I2C sensors is semi-automatic. If you
+put the input port into `ev3-uart`, `ev3-analog`, or `i2c-thru` mode, the specific
+type of sensor will be automatically detected (assuming it is a LEGO compatible
+sensor). So you don't have to write to the `set_mode` attribute of the port for
+these sensors.
+
+### General resources
 
 * [Sensor Tutorial]
 * [The LEGO Sensor (lego-sensor) Class][lego-sensor class]
 * [EV3 Input Port Driver]
 
-I2C sensor resources (applies to both NXT/I2C and Other/I2C):
+### I2C sensor resources (applies to both NXT/I2C and Other/I2C)
 
 * [I2C Sensor Addressing]
 * [Using I2C Sensors]
 
-Sensor-specific resources:
+### Sensor-specific resources
 
 * Follow the links in the [Supported Sensors] table below
 
@@ -174,9 +197,10 @@ kernel.
     exact type of sensor cannot be determined. See [Using I2C Sensors]
     for information on how to manually load the correct driver.
 
-[^lm75]: Temperature sensors using the lm75 module can be auto-detected.
+[^lm75]: <s>Temperature sensors using the lm75 module can be auto-detected.
     You must run `modprobe lm75` for this to happen. You can also make the
-    lm75 module load automatically on boot by adding it to `/etc/modules`.
+    lm75 module load automatically on boot by adding it to `/etc/modules`.</s>
+    Automatic detection not working. See <https://github.com/ev3dev/ev3dev/issues/622>.
 
 [^ev3-analog-driver]: The `XX` in `ev3-analog-XX` is replaced with the type id
     of the sensor (`01` to `14`). Type id `02` is the LEGO EV3 Touch sensor,

@@ -1,8 +1,9 @@
 ---
 title: Drivers
+excerpt: "Documentation for all of the device drivers included in the ev3dev kernel for EV3-specific hardware."
 ---
 
-These are all of the (documented) devices drivers included in the ev3dev
+These are all of the (documented) device drivers included in the ev3dev
 kernel for EV3-specific hardware. For mainline or other drivers, check out
 the [tutorials] or if nothing related is there, try searching the web.
 

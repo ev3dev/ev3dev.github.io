@@ -5,7 +5,7 @@ title: "Announcing ev3dev-lang-java v0.2.0"
 
 If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
 
-##What features are included in last release?
+## What features are included in last release?
 
 Current version includes these features:
 
@@ -16,7 +16,7 @@ Current version includes these features:
 * LeJOS Sensor filter Support
 * eSpeak TTS (Text to speech) Support
 
-##How to extend the features of this library?
+## How to extend the features of this library?
 
 If you have experience with Robotics, you could explore other possibilities as Computer Vision. In this case, [OpenCV](http://opencv.org/) has a Java port and the way to install is very easy on ev3dev:
 
@@ -38,11 +38,11 @@ mvn package
 
 One advantage of the usage of ev3dev with Java is the option to study some solution from another technology and later, try to port to Java. Ev3dev is polyglot, a common feature in nowdays.
 
-##What is the support for Lego Mindstorms boards?
+## What is the support for Lego Mindstorms boards?
 
 In this release, the library has implemented the support for the EV3 Brick and their sensors & actuators included in the following kits:
 
-* [45544 LEGO MINDSTORMS Education EV3 Core Set](https://education.lego.com/es-es/lego-education-product-database/mindstorms-ev3/45544-lego-mindstorms-education-ev3-core-set)
+* [45544 LEGO MINDSTORMS Education EV3 Core Set](https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set-/5003400)
 * [31313 LEGO MINDSTORMS EV3](http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3)
 
 In the next releases, the library will add support for [Raspberry Pi](https://www.raspberrypi.org/) boards as [Mindsensors PiStorms](http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit-raspberry-pi-brain-for-lego-robot) & [Dexter Industries BrickPi+](http://www.dexterindustries.com/brickpi/) in order to use the power of Raspberry Pi. 
@@ -59,7 +59,7 @@ Take a look the following table to observe the differences:
 
 This numbers explains the reason to develop this library for ev3dev.
 
-##What kind of software is possible to use with this library?
+## What kind of software is possible to use with this library?
 
 At the moment, the library will help you to learn coding with Java and experiment with basic robotics concepts. Try to run this example on your EV3 Brick:
 
@@ -139,7 +139,7 @@ public class BumperCar {
 
 Explore [JavaDocs](https://ev3dev-lang-java.github.io/ev3dev-lang-java/docs/api/) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
 
-##Roadmap
+## Roadmap
 
 The current roadmap for this project is:
 
@@ -159,12 +159,12 @@ The current roadmap for this project is:
 * Add support for Dexter Industries BrickPi+
 * Add support for Microinfinity XG1300L
 
-##Support
+## Support
 
 If you have some doubt about this library, please create a issue:
 [https://github.com/ev3dev-lang-java/ev3dev-lang-java/issues](https://github.com/ev3dev-lang-java/ev3dev-lang-java/issues)
 
-##References
+## References
 
 * [ev3dev-lang-java](https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/)
 * [Tiobe](http://www.tiobe.com/index.php/tiobe_index)
