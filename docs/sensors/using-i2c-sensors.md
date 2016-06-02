@@ -7,7 +7,7 @@ title: Using I2C Sensors
 
 The I2C standards only specify how data is sent from device to device. It does
 not specify the layout of the registers of a device. LEGO, however, has
-guidelines for 3rd party manufactures so that they can providpe sensors with
+guidelines for 3rd party manufactures so that they can provide sensors with
 a (fairly) uniform register layout.
 
 We call sensors that were designed following LEGO's guidelines **NXT/I2C**
