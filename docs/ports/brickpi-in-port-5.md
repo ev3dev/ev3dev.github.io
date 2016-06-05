@@ -10,6 +10,8 @@ in [supported-sensors] to determine if particular sensor will work.
 
 ## Using Sensors 
 
+For detailed I2C information see [using-i2c-sensors]. 
+
 For Input Port 5 you have to make sure that correct baudrate for the sensor is set 
 and load the driver manually. I2C/NXT sensors should work with slow 9600 baudrate 
 used originally in Mindstorms NXT.
