@@ -1,6 +1,6 @@
 ---
 title: Controlling a WeDo 2.0 motor
-subject: Networking
+subject: Hardware - Motors
 author: "@JorgePe"
 ---
 
@@ -13,9 +13,9 @@ LEGO Education released the second version of WeDO in the beginning of 2016.
 We'll show how to use the bluez, the linux bluetooth stack, to wireless control a
 WeDo 2.0 motor.
 
-The first WeDO version uses USB so every robot needs to be tethered to a «host»
+The first WeDO version uses USB so every robot needs to be tethered to a *host*
 (usually a computer but can also be a Mindstorms EV3 running ev3dev)
-The second WeDO version uses BLE (Bluetooth Low Energy, a sub-set of the Bluetooth
+The second WeDO version uses [link](https://en.wikipedia.org/wiki/Bluetooth_low_energy) BLE (Bluetooth Low Energy, a sub-set of the Bluetooth
 4.0 standard) so robots can now be totally autonomous.
 
 ## Requirements
@@ -114,17 +114,17 @@ then stop:
 
 We see that it uses the gatttool command to send a sequence of 4 bytes to one specific
 handler (0x003d). The WeDO 2.0 has several handlers but until LEGO Education releases
-the promised SDK this is the only handler we «know» how to use:
+the promised SDK this is the only handler we "know" how to use:
 
 This is meaning of those 4 bytes:
-* the firt byte defines the port (01 or 02)
+* the first byte defines the port (01 or 02)
 * the second byte defines the command (01 = motor speed)
-* the third byte defines the lenght of the following argument(s) (01)
+* the third byte defines the length of the following argument(s) (01)
 * the fouth byte is the argument, in this case the speed percentage
 
 To spin in one direction we send a positive value from 1 to 100 (or 01 to 64 in
 hexadecimal).
-To spin in the opposite direction we send a «negative» value from
+To spin in the opposite direction we send a "negative" value from
 255 to 156 (or FF to 9C in hexadecimal).
 To stop the motor we set the speed as zero (00).
 Please note that for small speed values (less than 20%) the motor will not respond.
@@ -133,37 +133,54 @@ Please note that for small speed values (less than 20%) the motor will not respo
 ## Python example
 
 To use pyhton with the WeDO 2.0 we need a BLE library. Unfortunately BLE
-support in python is still quite imature but at least pybluez offers an extension
-for BLE:
-
-    pip install pybluez
-    pip install pybluez[ble]
-
-This didn't work in my EV3 but since the ble extension is in fact gattlib I went for
-it:
+support in python is still quite imature but there is at least one library that
+works in ev3dev - [link](https://bitbucket.org/OscarAcena/pygattlib) gattlib
 
     sudo apt-get install pkg-config libboost-python-dev libboost-thread-dev \
      libbluetooth-dev libglib2.0-dev python-dev
 
     pip install gattlib
 
-Please note that it takes A LOT of memory and around 2 hours time to install gattlib.
+This library is also used as an extension for a more known library, [link](https://pypi.python.org/pypi/PyBluez) pybluez
+so if you want a library for both bluetooth "Classic" and BLE this would be better:
+
+    pip install pybluez
+    pip install pybluez[ble]
+
+Unfortunately I couldn't make it work in my ev3dev system.
+
+Please note that it takes **a lot** of memory and around 2 hours to install gattlib.
 After some failures ("virtual memory exhausted: Cannot allocate memory") I finally
-succeeded extending my ev3dev swapfile to 1024 MB.
+succeeded extending my ev3dev swapfile to 1024 MB (please first check if you have
+enough free space in your SD card):
+
+    sudo nano /etc/dphys-swapfile
+    ...
+    CONF_SWAPSIZE=1024
+    ...
+    
+and restarting the swapfile service after:
+
+    /etc/init.d/dphys-swapfile stop
+    /etc/init.d/dphys-swapfile start
+
+It will take longer to start because the service needs to allocate all that space first.
+You can then check the size of your swapfile with "top".
 
 This short python script makes the motor spin 2 second in each direction then stop:
 
-    #!/usr/bin/python
-    from gattlib import GATTRequester
-    from time import sleep
+{% highlight python %}
+#!/usr/bin/python
+from gattlib import GATTRequester
+from time import sleep
 
-    req = GATTRequester("A0:E6:F8:1E:58:57",True,"hci0")
-    req.write_by_handle(0x3d, "\x01\x01\x01\x64")
-    sleep(2)
-    req.write_by_handle(0x3d, "\x01\x01\x01\x9C")
-    sleep(2)
-    req.write_by_handle(0x3d, "\x01\x01\x01\x00")
-
+req = GATTRequester("A0:E6:F8:1E:58:57",True,"hci0")
+req.write_by_handle(0x3d, "\x01\x01\x01\x64")
+sleep(2)
+req.write_by_handle(0x3d, "\x01\x01\x01\x9C")
+sleep(2)
+req.write_by_handle(0x3d, "\x01\x01\x01\x00")
+{% endhighlight %}
 
 ## A more practical example
 
@@ -174,54 +191,54 @@ to assure this never happens.
 We will use an EV3 touch sensor to control the direction of the WeDO 2.0 motor and
 periodically refresh the connection.
 
-    #!/usr/bin/python
+{% highlight python %}
+#!/usr/bin/python
     
-    from ev3dev.auto import *
-    from gattlib import GATTRequester
-    from time import sleep
+from ev3dev.auto import *
+from gattlib import GATTRequester
+from time import sleep
     
-    address    = "A0:E6:F8:1E:58:57"
-    HANDLE     = 0x3d
-    SPIN_LEFT  = "\x01\x01\x01\x64"
-    SPIN_RIGHT = "\x01\x01\x01\x9C"
-    SPIN_STOP  = "\x01\x01\x01\x00"
-    DELAY      = 0.3   # this is empiric - the WeDO
-                       # seems to need this delay
-                       # between each command
+address    = "A0:E6:F8:1E:58:57"
+HANDLE     = 0x3d
+SPIN_LEFT  = "\x01\x01\x01\x64"
+SPIN_RIGHT = "\x01\x01\x01\x9C"
+SPIN_STOP  = "\x01\x01\x01\x00"
+DELAY      = 0.3   # this is empiric - the WeDO seems to need this delay
+                   # between each command
 
-    ts = TouchSensor();
+ts = TouchSensor();
     
-    req = GATTRequester(address,True,"hci0")
+req = GATTRequester(address,True,"hci0")
+sleep(DELAY)
+    
+command = SPIN_LEFT
+while True:
+  if ts.value():
+    if(req.is_connected() == True):
+      print("Already connected")
+      sleep(DELAY)
+    else:
+      print("Connecting...")
+      req.connect(True)
+      print("OK")
+      sleep(DELAY)
+    
+    req.write_by_handle(HANDLE, command)
+    
+    if (command == SPIN_LEFT):
+      command = SPIN_RIGHT
+    else:
+      command = SPIN_LEFT
     sleep(DELAY)
     
-    command = SPIN_LEFT
-    while True:
-      if ts.value():
-        if(req.is_connected() == True):
-          print("Already connected")
-          sleep(DELAY)
-        else:
-          print("Connecting...")
-          req.connect(True)
-          print("OK")
-          sleep(DELAY)
-    
-        req.write_by_handle(HANDLE, command)
-    
-        if (command == SPIN_LEFT):
-          command = SPIN_RIGHT
-        else:
-          command = SPIN_LEFT
-        sleep(DELAY)
-    
-      if(req.is_connected() == True):
-        print("Still connected")
-      else:
-        print("Reconnecting...")
-        req.connect(True)
-        print("OK")
-        sleep(DELAY)
-
+  if(req.is_connected() == True):
+    print("Still connected")
+  else:
+    print("Reconnecting...")
+    req.connect(True)
+    print("OK")
+    sleep(DELAY)
+{% endhighlight %}
 
 This video shows the script in action:
 {% include youtube-embed.html youtube_video_id="0d3MdZuDOTc" %}
