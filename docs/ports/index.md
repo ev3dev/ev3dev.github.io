@@ -10,7 +10,8 @@ sensor multiplexers fall into this category (see list below). Simple
 multiplexers that only support one connection type will not have a separate
 driver for the port.
 
-BrickPi Input Port 5 is RaspberryPi I2C physically wired to the port pins. See <a href="brickpi-in-port-5">brickpi-in-port-5</a> for the details. 
+Input Port 5 on the BrickPi is physically wired to the I2C pins on the RaspberryPi.
+See [brickpi-in-port-5] for the details.
 
 Port drivers use the [lego-port class] to provide a common interface for
 interacting with individual ports. Follow the link for more information.
@@ -26,7 +27,7 @@ kernel.
     <th>Description</th>
     <th>Connection Types</th>
     <th>Module</th>
-    </tr>	
+    </tr>
 {% for port_data in site.data.ports %}
     {% assign port = port_data %}
     <tr>
@@ -46,4 +47,5 @@ kernel.
 
 [sensors]: ../sensors
 [motors]: ../motors
+[brickpi-in-port-5]: /docs/ports/brickpi-in-port-5
 [lego-port class]: /docs/drivers/lego-port-class
