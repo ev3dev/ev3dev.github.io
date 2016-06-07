@@ -45,10 +45,10 @@ Releases are posted [on GitHub][releases]. Follow the link and download the late
 start with `ev3-`, Raspberry Pi starts with `rpi-` and Raspberry Pi 2 starts
 with `rpi2-`.
 
-Downloading the `.zip` file is recommended for
-Windows/Mac and the `.xz` file is recommended for Linux. The `.xz` is smaller,
-but it requires that you have additional software installed on Windows/Mac to
-decompress it (such as [7-Zip] on Windows).
+For most users, downloading the `.xz` file will be the best option, but the `.zip`
+will work as well. If you are planning to image your card manually instead of
+following the recommended steps, you will need to choose based on your OS and
+imaging program.
 
 ## Step 2: Copy the image on to the SD card
 
@@ -58,17 +58,12 @@ decompress it (such as [7-Zip] on Windows).
     If you do not want to lose them!
 </div>
 
-There are a vast number of ways to do this, so pick the one from the list that
-sounds the easiest to you:
+Now it's time to write the image to the card. The easiest way is to follow our
+guide to using the cross-platform tool Etcher [here](/docs/tutorials/writing-sd-card-image-etcher).
 
-* **Linux**
-    * [Command Line](../tutorials/writing-sd-card-image-linux-command-line)
-    * [Ubuntu (graphical interface)](../tutorials/writing-sd-card-image-ubuntu-disk-image-writer)
-* **OS X**
-    * [Command Line](../tutorials/writing-sd-card-image-osx-command-line)
-    * [Apple Pi Baker (graphical interface)](../tutorials/writing-sd-card-image-osx-apple-pi-baker)
-* **Windows**
-    * [Win32DiskImager (graphical interface)](../tutorials/writing-sd-card-image-win32diskimager)
+If you would prefer to do it manually or the recommended option does not work
+for you, you can look through the [other tutorials](/docs/tutorials/#group-sd-card-image)
+that walk you through alternate steps.
 
 <br/>
 
@@ -203,4 +198,3 @@ button from any screen in brickman. This will open a dialog where you can select
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
 [releases]:https://github.com/mindboards/ev3dev/releases
-[7-Zip]: http://www.7-zip.org/
