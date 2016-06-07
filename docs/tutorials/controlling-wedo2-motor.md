@@ -147,7 +147,7 @@ enough free space in your SD card):
     917504+0 records out
     939524096 bytes (940 MB) copied, 442.332 s, 2.1 MB/s
 
-it will take 5 to 110 minutes to allocate space for such a big file
+it will take 5 to 10 minutes to allocate space for such a big file
 
     robot@ev3dev:~$ sudo mkswap /swapfile1
     Setting up swapspace version 1, size = 917500 KiB
