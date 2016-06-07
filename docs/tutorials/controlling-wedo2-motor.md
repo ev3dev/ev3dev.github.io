@@ -66,7 +66,9 @@ internal bluetooth and the new USB one:
 	    Manufacturer: Broadcom Corporation (15)
 
 In the above situation, `hci0` is our Bluetooth 4.0 BLE device (note "BUS: USB" and
-"HCI version: 4.0").
+"HCI version: 4.0"). If you don't see status "UP RUNNING" you need to activate
+Bluetooth first (one easy way is using the Brickman User Interface: choose "Wireless
+and Networks" at the main screen then "Bluetooth")
 
 We also need a recent bluez version for BLE support. Most recent builds of ev3dev
 will have it already (checked with "ev3-ev3dev-jessie-2015-12-30.img.xz").
