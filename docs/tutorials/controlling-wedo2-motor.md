@@ -15,7 +15,7 @@ WeDo 2.0 motor.
 
 The first WeDO version uses USB so every robot needs to be tethered to a *host*
 (usually a computer but can also be a Mindstorms EV3 running ev3dev)
-The second WeDO version uses [link](https://en.wikipedia.org/wiki/Bluetooth_low_energy) BLE (Bluetooth Low Energy, a sub-set of the Bluetooth
+The second WeDO version uses [BLE](https://en.wikipedia.org/wiki/Bluetooth_low_energy) (Bluetooth Low Energy, a sub-set of the Bluetooth
 4.0 standard) so robots can now be totally autonomous.
 
 ## Requirements
@@ -68,22 +68,8 @@ internal bluetooth and the new USB one:
 In the above situation, `hci0` is our Bluetooth 4.0 BLE device (note "BUS: USB" and
 "HCI version: 4.0").
 
-We also need a recent bluez version, so please update your ev3dev to the latest
-version and check for the existence of the bluez package:
-
-    robot@ev3dev:~# sudo apt-get install bluez
-    Reading package lists... Done
-    Building dependency tree       
-    Reading state information... Done
-    bluez is already the newest version.
-
-For shell scripts we need one command from bluez - the gatttool command:
-
-    robot@ev3dev:~# gatttool
-    Usage:
-      gatttool [OPTION...]
-    ...
-
+We also need a recent bluez version for BLE support. Most recent builds of ev3dev
+will have it already (checked with "ev3-ev3dev-jessie-2015-12-30.img.xz").
 
 Now we need to find the bluetooth address of our WeDO 2.0 hub.
 For that we press it's button to put it in descovery mode and run this
@@ -151,21 +137,36 @@ Unfortunately I couldn't make it work in my ev3dev system.
 
 Please note that it takes **a lot** of memory and around 2 hours to install gattlib.
 After some failures ("virtual memory exhausted: Cannot allocate memory") I finally
-succeeded extending my ev3dev swapfile to 1024 MB (please first check if you have
+succeeded extending my ev3dev swapfile to almost 1 GB (please first check if you have
 enough free space in your SD card):
 
-    sudo nano /etc/dphys-swapfile
-    ...
-    CONF_SWAPSIZE=1024
-    ...
-    
-and restarting the swapfile service after:
+    robot@ev3dev:~$ sudo dd if=/dev/zero of=/swapfile1 bs=1024 count=917504
+    917504+0 records in
+    917504+0 records out
+    939524096 bytes (940 MB) copied, 442.332 s, 2.1 MB/s
 
-    /etc/init.d/dphys-swapfile stop
-    /etc/init.d/dphys-swapfile start
+it will take 5 to 110 minutes to allocate space for such a big file
 
-It will take longer to start because the service needs to allocate all that space first.
-You can then check the size of your swapfile with "top".
+    robot@ev3dev:~$ sudo mkswap /swapfile1
+    Setting up swapspace version 1, size = 917500 KiB
+    no label, UUID=55fcb430-451b-4699-955c-5754bf65999b
+
+    robot@ev3dev:~$ sudo swapon /swapfile1
+    swapon: /swapfile1: insecure permissions 0644, 0600 suggested.
+
+this is a temporary measure so we'll skip security warning
+
+    robot@ev3dev:~$ sudo swapon -s
+    Filename				Type		Size	Used	Priority
+    /dev/zram0                             	partition	98300	8188	16383
+    /swapfile1                             	file    	917500	0	-1
+
+We don't want to use the swapfile in memory (it will overflow) so we disable it:
+
+    sudo swapoff /dev/zram0
+
+After installation please reboot your EV3 to reset the swapfile configuration then
+delete the big file as it is no longer needed.
 
 This short python script makes the motor spin 2 second in each direction then stop:
 
