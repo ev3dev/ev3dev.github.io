@@ -127,7 +127,7 @@ works in ev3dev - [link](https://bitbucket.org/OscarAcena/pygattlib) gattlib
     sudo apt-get install pkg-config libboost-python-dev libboost-thread-dev \
      libbluetooth-dev libglib2.0-dev python-dev
 
-    pip install gattlib
+    sudo pip install gattlib
 
 This library is also used as an extension for a more known library, [link](https://pypi.python.org/pypi/PyBluez) pybluez
 so if you want a library for both bluetooth "Classic" and BLE this would be better:
@@ -167,8 +167,11 @@ We don't want to use the swapfile in memory (it will overflow) so we disable it:
 
     sudo swapoff /dev/zram0
 
-After installation please reboot your EV3 to reset the swapfile configuration then
-delete the big file as it is no longer needed.
+After installation completes we reset the swapfile configuration:
+
+    sudo swapon /dev/zram0
+    sudo swapoff /swapfile1
+    sudo rm /swapfile1
 
 This short python script makes the motor spin 2 second in each direction then stop:
 
