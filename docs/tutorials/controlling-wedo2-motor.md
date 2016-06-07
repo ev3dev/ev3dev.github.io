@@ -1,6 +1,6 @@
 ---
 title: Controlling a WeDo 2.0 motor
-subject: Hardware - Motors
+subject: Hardware - WeDO
 author: "@JorgePe"
 ---
 
