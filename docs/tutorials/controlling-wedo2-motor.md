@@ -165,11 +165,11 @@ this is a temporary measure so we'll skip security warning
 
 We don't want to use the swapfile in memory (it will overflow) so we disable it:
 
-    sudo swapoff /dev/zram0
+    sudo systemctl stop zram_swap.service
 
 After installation completes we reset the swapfile configuration:
 
-    sudo swapon /dev/zram0
+    sudo systemctl start zram_swap.service
     sudo swapoff /swapfile1
     sudo rm /swapfile1
 
