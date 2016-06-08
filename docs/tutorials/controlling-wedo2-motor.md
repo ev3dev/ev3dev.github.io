@@ -122,14 +122,14 @@ Please note that for small speed values (less than 20%) the motor will not respo
 
 To use pyhton with the WeDO 2.0 we need a BLE library. Unfortunately BLE
 support in python is still quite imature but there is at least one library that
-works in ev3dev - [link](https://bitbucket.org/OscarAcena/pygattlib) gattlib
+works in ev3dev - [gattlib](https://bitbucket.org/OscarAcena/pygattlib)
 
     sudo apt-get install pkg-config libboost-python-dev libboost-thread-dev \
      libbluetooth-dev libglib2.0-dev python-dev
 
     sudo pip install gattlib
 
-This library is also used as an extension for a more known library, [link](https://pypi.python.org/pypi/PyBluez) pybluez
+This library is also used as an extension for a more known library, [pybluez](https://pypi.python.org/pypi/PyBluez)
 so if you want a library for both bluetooth "Classic" and BLE this would be better:
 
     pip install pybluez
