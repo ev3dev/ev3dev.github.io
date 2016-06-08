@@ -20,7 +20,7 @@ The second WeDO version uses [BLE](https://en.wikipedia.org/wiki/Bluetooth_low_e
 
 ## Requirements
 
-The EV3 internal bluetooth is to old, just 2.1 compliant. To use BLE we need an
+The EV3 internal bluetooth isn't compliant with the BT 4.0 BLE subset so we need an
 USB Bluetooth 4.0 dongle supported by ev3dev. If it works with Ubuntu or with a
 Raspberry Pi then most probably will also work with ev3dev.
 
@@ -251,8 +251,8 @@ This video shows the script in action:
 
 ## Final notes
 
-We still need to find how to read WeDO 2.0 sensors. But at least for now there
-is a "purist" way to extend the number of motors available to the EV3. And if
-rumours are true, the next generation of LEGO Power Functions and Mindstorms
+We still need to know all motor commands and option. But until LEGO releases
+its SDK there is at list this way to extend the number of motors available to the EV3.
+And if rumours are true, the next generation of LEGO Power Functions and Mindstorms
 will both share some components with the WeDO 2.0 (the Hub is already announcing
 itself as "LEGO Power Functions 2" device) so this might be just the start.
