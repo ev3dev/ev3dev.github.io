@@ -14,7 +14,7 @@ ev3dev. Even if your device is not in this list it may use the same
 chipset, so you should use lsub and dmesg commands to proper identify
 it after you connect it to your system:
 
-    ~^$ lsusb
+    ~$ lsusb
     ...
     Bus 001 Device 004: ID 050d:1102 Belkin Components F7D1102 N150/Surf Micro Wireless Adapter v1000 [Realtek RTL8188CUS]
     ...
