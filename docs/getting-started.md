@@ -58,20 +58,42 @@ imaging program.
     If you do not want to lose them!
 </div>
 
-Now it's time to write the image to the card. The easiest way is to follow our
-guide to using the cross-platform tool Etcher [here](/docs/tutorials/writing-sd-card-image-etcher).
+Now it's time to write the image to the card.
 
-If you would prefer to do it manually or the recommended option does not work
-for you, you can look through the [other tutorials](/docs/tutorials/#group-sd-card-image)
-that walk you through alternate steps.
+1. Download and install Etcher from [their website](http://etcher.io).
+2. Launch Etcher after it has finished installing.
+
+   {% include screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="300px" %}
+
+3. Click the "Select image" button and browse to the folder where you
+   downloaded an ev3dev release. Select the file that you downloaded.
+   The release can be a `.img.zip` or `.img.xz`; whichever
+   you have will work with Etcher.
+
+   {% include screenshot.html source="/images/etcher/image-selected.png" caption="Image chosen in Etcher" width="300px" %}
+
+4. Plug the SD card into your PC (if your PC doesn't have a micro SD
+   slot, you can use an adapter or external reader). Etcher should
+   detect the new device and display its information under the "Select
+   drive" step. Confirm that the selected drive is correct.
+   - If you have multiple removable drives available, you may need to
+     use the "Change" button to select the proper device.
+
+   {% include screenshot.html source="/images/etcher/drive-selected.png" caption="Drive selected in Etcher" width="300px" %}
+
+5. When you are confident that you have selected the correct drive,
+   click "Flash!" and wait for the operation to complete.
+   
+   {% include screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="300px" %}
 
 <br/>
 
-<div class="alert alert-info">
-    {% include icon.html type="info" %}
-    For more detailed information and more alternatives, check out
-   <a class="alert-link" href="http://elinux.org/RPi_Easy_SD_Card_Setup">this page for RaspberryPi</a>. Much
-of the information there is applicable to ev3dev.
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+For more detailed information and more alternatives, check out
+[our other tutorials](/docs/tutorials/#group-sd-card-image){: .alert-link }.
+You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
+Much of the information there is applicable to ev3dev.
 </div>
 
 <div class="panel panel-warning">
