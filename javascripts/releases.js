@@ -1,5 +1,6 @@
 var ev3devRepoReleaseCacheKey = 'ev3dev-repo-release-cache';
-var releaseCacheTimeMillis = 1 * 24 * 60 * 60 * 1000;
+// Cache will time out after 20 minutes
+var releaseCacheTimeMillis = 20 * 60 * 1000;
 
 var releasePlatformRegexes = {
     ev3: "ev3-[\\w\\d-]*\\.img\\.xz",

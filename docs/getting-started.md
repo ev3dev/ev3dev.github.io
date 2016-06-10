@@ -2,6 +2,7 @@
 title: Getting Started with ev3dev
 categories: docs getting-started
 excerpt: "So you're ready to try out ev3dev. Great! Here are step-by-step instructions to help you get ev3dev up and running on your EV3 or Raspberry Pi."
+extra-body-classes: "spaced-headings"
 ---
 
 * Table of Contents
@@ -40,15 +41,20 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 ## Step 1: Download the latest ev3dev image file
 
+<br/>
+<div class="text-center">
+<a data-release-link-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
+<br/><br/>
+<h2 class="centered-light-heading"> Other platforms </h2>
+<a data-release-link-platform="rpi" class="btn btn-md btn-primary">Raspberry Pi 1</a>
+<a data-release-link-platform="rpi2" class="btn btn-md btn-primary">Raspberry Pi 2</a>
+<a data-release-link-platform="evb" class="btn btn-md btn-primary">BeagleBone</a>
+</div>
+
+<br/>
 To get started, you will need to download the release corresponding to the platform
 you are using. If you are looking for older releases or other file types, you can
 check out the [GitHub releases page][releases].
-
-Download for:
-<a data-release-link-platform="ev3" class="btn btn-sm btn-primary">LEGO EV3 brick</a>
-<a data-release-link-platform="rpi" class="btn btn-sm btn-primary">Raspberry Pi 1</a>
-<a data-release-link-platform="rpi2" class="btn btn-sm btn-primary">Raspberry Pi 2</a>
-<a data-release-link-platform="evb" class="btn btn-sm btn-primary">Fatcat Lab EVB</a>
 
 ## Step 2: Copy the image on to the SD card
 
@@ -63,28 +69,29 @@ Now it's time to write the image to the card.
 1. Download and install Etcher from [their website](http://etcher.io).
 2. Launch Etcher after it has finished installing.
 
-   {% include screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="300px" %}
+   {% include screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="600px" %}
 
 3. Click the "Select image" button and browse to the folder where you
    downloaded an ev3dev release. Select the file that you downloaded.
    The release can be a `.img.zip` or `.img.xz`; whichever
    you have will work with Etcher.
 
-   {% include screenshot.html source="/images/etcher/image-selected.png" caption="Image chosen in Etcher" width="300px" %}
+   {% include screenshot.html source="/images/etcher/image-selected.png" caption="Image chosen in Etcher" width="600px" %}
 
 4. Plug the SD card into your PC (if your PC doesn't have a micro SD
    slot, you can use an adapter or external reader). Etcher should
    detect the new device and display its information under the "Select
    drive" step. Confirm that the selected drive is correct.
-   - If you have multiple removable drives available, you may need to
+
+   {% include screenshot.html source="/images/etcher/drive-selected.png" caption="Drive selected in Etcher" width="600px" %}
+   
+5. If you have multiple removable drives available, you may need to
      use the "Change" button to select the proper device.
 
-   {% include screenshot.html source="/images/etcher/drive-selected.png" caption="Drive selected in Etcher" width="300px" %}
-
-5. When you are confident that you have selected the correct drive,
+6. When you are confident that you have selected the correct drive,
    click "Flash!" and wait for the operation to complete.
    
-   {% include screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="300px" %}
+   {% include screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="600px" %}
 
 <br/>
 
