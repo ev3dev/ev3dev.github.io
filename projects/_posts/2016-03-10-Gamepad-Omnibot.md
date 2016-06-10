@@ -1,5 +1,5 @@
 ---
-author: [ "@antonvh", "Anton Vanhoucke" ]
+author: [ "@antonvh" ]
 programming_language: "Python" 
 
 youtube_video_id: AReDOM4fdA0
