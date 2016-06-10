@@ -40,15 +40,15 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 ## Step 1: Download the latest ev3dev image file
 
-Releases are posted [on GitHub][releases]. Follow the link and download the latest
-**Test Release** image file for your hardware. Releases for LEGO MINDSTORMS EV3
-start with `ev3-`, Raspberry Pi starts with `rpi-` and Raspberry Pi 2 starts
-with `rpi2-`.
+To get started, you will need to download the release corresponding to the platform
+you are using. If you are looking for older releases or other file types, you can
+check out the [GitHub releases page][releases].
 
-For most users, downloading the `.xz` file will be the best option, but the `.zip`
-will work as well. If you are planning to image your card manually instead of
-following the recommended steps, you will need to choose based on your OS and
-imaging program.
+Download for:
+<a data-release-link-platform="ev3" class="btn btn-sm btn-primary">LEGO EV3 brick</a>
+<a data-release-link-platform="rpi" class="btn btn-sm btn-primary">Raspberry Pi 1</a>
+<a data-release-link-platform="rpi2" class="btn btn-sm btn-primary">Raspberry Pi 2</a>
+<a data-release-link-platform="evb" class="btn btn-sm btn-primary">Fatcat Lab EVB</a>
 
 ## Step 2: Copy the image on to the SD card
 
