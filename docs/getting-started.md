@@ -219,4 +219,4 @@ button from any screen in brickman. This will open a dialog where you can select
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
-[releases]:https://github.com/mindboards/ev3dev/releases
+[releases]:https://github.com/ev3dev/ev3dev/releases
