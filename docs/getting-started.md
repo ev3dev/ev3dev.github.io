@@ -113,7 +113,7 @@ either BrickPi or PiStorms.
 </div>
 </div>
 
-{% include inline-screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
+{% include screenshot.html source="/images/brickman/main-menu.png" float="true" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
 
 ## Step 3: Boot ev3dev
 
@@ -207,7 +207,7 @@ If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
-{% include inline-screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
+{% include screenshot.html source="/images/brickman/shutdown-menu.png" float="true" caption="The 'Shutdown...' dialog in Brickman" %}
 
 ## Step 6: Calling it a day
 
