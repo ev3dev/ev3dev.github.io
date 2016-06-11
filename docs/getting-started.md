@@ -46,9 +46,9 @@ please [open an issue on GitHub](/support){: .alert-link}.
 <a data-release-link-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
 <br/><br/>
 <h2 class="centered-light-heading"> Other platforms </h2>
-<a data-release-link-platform="rpi" class="btn btn-md btn-primary">Raspberry Pi 1</a>
-<a data-release-link-platform="rpi2" class="btn btn-md btn-primary">Raspberry Pi 2</a>
-<a data-release-link-platform="evb" class="btn btn-md btn-primary">BeagleBone</a>
+<a data-release-link-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
+<a data-release-link-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
+<a data-release-link-platform="evb" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
 </div>
 
 <br/>
@@ -120,8 +120,9 @@ either BrickPi or PiStorms.
 </div>
 </div>
 
-{% include screenshot.html source="/images/brickman/main-menu.png" float="true" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
 
+<div class="row top-heading-margin">
+<div class="col-md-8 suppress-spaced-headings" markdown="1">
 ## Step 3: Boot ev3dev
 
 Put the SD Card in your EV3 and power it on. At first, you will see the
@@ -145,6 +146,13 @@ calculate an accurate percent value of the remaining energy, so this value is
 chosen. If the voltage drops below 5V the brick will turn off. All not saved
 data may be lost. Keep in mind, that it may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
+</div>
+
+<div class="col-md-4">
+{% include screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
+</div>
+</div>
+
 
 <div class="panel panel-info">
 <div class="panel-heading">
@@ -214,14 +222,20 @@ If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
-{% include screenshot.html source="/images/brickman/shutdown-menu.png" float="true" caption="The 'Shutdown...' dialog in Brickman" %}
-
+<div class="row top-heading-margin">
+<div class="col-md-8 suppress-spaced-headings" markdown="1">
 ## Step 6: Calling it a day
 
 When you are ready to wish your EV3 goodnight, turn if off by pressing the
 *back* button from the main menu in brickman or pressing and holding the *back*
 button from any screen in brickman. This will open a dialog where you can select
 *Power Off* to turn off the EV3. (Running `sudo poweroff` in a terminal works too.)
+</div>
+
+<div class="col-md-4">
+{% include screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
+</div>
+</div>
 
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC

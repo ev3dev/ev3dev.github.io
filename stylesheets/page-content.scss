@@ -26,6 +26,11 @@
     margin: 5px 0 5px !important;
 }
 
-.spaced-headings h2 {
-    margin-top: 35px;
+.spaced-headings *:not(.suppress-spaced-headings) > h2,
+.top-heading-margin {
+    margin-top: 100px;
+}
+
+.download-button-small {
+    margin: 0 6px;
 }
