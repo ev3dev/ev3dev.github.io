@@ -231,7 +231,7 @@ to connect for the first time. You can setup additional connections using the
 
 ## Step 6: Do something awesome
 
-The brick can run almost all languages that any other Linux distro can, so your
+The brick can run almost all programming languages that any other Linux distro can, so your
 favorite language is probably supported. Language bindings have already been
 written for many languages. **You can learn more about the available libraries
 [here](/docs/libraries).**
