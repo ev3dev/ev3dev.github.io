@@ -9,13 +9,13 @@ author: "@JorgePe"
 
 ## Intro
 
-LEGO Education released the second version of WeDO in the beginning of 2016.
+LEGO Education released the second version of WeDo in the beginning of 2016.
 We'll show how to use the bluez, the linux bluetooth stack, to wireless control a
 WeDo 2.0 motor.
 
-The first WeDO version uses USB so every robot needs to be tethered to a *host*
+The first WeDo version uses USB so every robot needs to be tethered to a *host*
 (usually a computer but can also be a Mindstorms EV3 running ev3dev)
-The second WeDO version uses [BLE](https://en.wikipedia.org/wiki/Bluetooth_low_energy) (Bluetooth Low Energy, a sub-set of the Bluetooth
+The second WeDo version uses [BLE](https://en.wikipedia.org/wiki/Bluetooth_low_energy) (Bluetooth Low Energy, a sub-set of the Bluetooth
 4.0 standard) so robots can now be totally autonomous.
 
 ## Requirements
@@ -73,7 +73,7 @@ and Networks" at the main screen then "Bluetooth")
 We also need a recent bluez version for BLE support. Most recent builds of ev3dev
 will have it already (checked with "ev3-ev3dev-jessie-2015-12-30.img.xz").
 
-Now we need to find the bluetooth address of our WeDO 2.0 hub.
+Now we need to find the bluetooth address of our WeDo 2.0 hub.
 For that we press it's button to put it in descovery mode and run this
 command:
 
@@ -82,8 +82,8 @@ command:
     A0:E6:F8:1E:58:57 (unknown)
     A0:E6:F8:1E:58:57 	
 
-In the example above, `A0:E6:F8:1E:58:57` is the bluetooth address of our WeDO 2.0
-hub. We can use other tools, including a smartphone with BLE support - the WeDO 2.0
+In the example above, `A0:E6:F8:1E:58:57` is the bluetooth address of our WeDo 2.0
+hub. We can use other tools, including a smartphone with BLE support - the WeDo 2.0
 will probably show up as `LPF2 Smart Hub 2 I/O`, just look for the address in its
 properties.
 
@@ -101,7 +101,7 @@ then stop:
 (You need to run this script with sudo, unless you already have root previleges)
 
 We see that it uses the gatttool command to send a sequence of 4 bytes to one specific
-handler (0x003d). The WeDO 2.0 has several handlers but until LEGO Education releases
+handler (0x003d). The WeDo 2.0 has several handlers but until LEGO Education releases
 the promised SDK this is the only handler we "know" how to use:
 
 This is meaning of those 4 bytes:
@@ -120,7 +120,7 @@ Please note that for small speed values (less than 20%) the motor will not respo
 
 ## Python example
 
-To use pyhton with the WeDO 2.0 we need a BLE library. Unfortunately BLE
+To use pyhton with the WeDo 2.0 we need a BLE library. Unfortunately BLE
 support in python is still quite imature but there is at least one library that
 works in ev3dev - [gattlib](https://bitbucket.org/OscarAcena/pygattlib)
 
@@ -194,7 +194,7 @@ A BLE connection is not permanent - it drops after a few seconds. And the WeDO 2
 hub also enters in sleep mode a few seconds after the connection drops so we need
 to assure this never happens.
 
-We will use an EV3 touch sensor to control the direction of the WeDO 2.0 motor and
+We will use an EV3 touch sensor to control the direction of the WeDo 2.0 motor and
 periodically refresh the connection.
 
 {% highlight python %}
@@ -209,7 +209,7 @@ HANDLE     = 0x3d
 SPIN_LEFT  = "\x01\x01\x01\x64"
 SPIN_RIGHT = "\x01\x01\x01\x9C"
 SPIN_STOP  = "\x01\x01\x01\x00"
-DELAY      = 0.3   # this is empiric - the WeDO seems to need this delay
+DELAY      = 0.3   # this is empiric - the WeDo seems to need this delay
                    # between each command
 
 ts = TouchSensor();
@@ -254,5 +254,5 @@ This video shows the script in action:
 We still need to know all motor commands and option. But until LEGO releases
 its SDK there is at list this way to extend the number of motors available to the EV3.
 And if rumours are true, the next generation of LEGO Power Functions and Mindstorms
-will both share some components with the WeDO 2.0 (the Hub is already announcing
+will both share some components with the WeDo 2.0 (the Hub is already announcing
 itself as "LEGO Power Functions 2" device) so this might be just the start.
