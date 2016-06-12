@@ -17,7 +17,7 @@ excerpt: "Tutorials on a wide range of ev3dev functionality, including networkin
             {% assign col = col | plus: 1 %}
             
             <div class="col-lg-6">
-                <div class="panel panel-default rounded-panel">
+                <div class="panel panel-default rounded-panel" id="group-{{ group.name | downcase | replace: ' ','-' }}">
                     <div class="panel-heading">{{ group.name }}</div>
                     <div class="panel-body">
                         <ul>

@@ -2,6 +2,10 @@
 layout: page
 ---
 
+{% if page.no-wrapper %}
+<div class="container">
+{% endif %}
+
 <hr />
 <div class="nav-dropdown-arrow">
     <div>
@@ -15,5 +19,9 @@ layout: page
     {% endif %}
 </div>
 <hr />
+
+{% if page.no-wrapper %}
+</div>
+{% endif %}
 
 {{ content }}
