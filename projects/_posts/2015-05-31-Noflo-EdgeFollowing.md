@@ -1,5 +1,5 @@
 ---
-author: "@ensonic"
+authors: [ "@ensonic" ]
 programming_language: Javascript
 youtube_video_id: tLPgnlTXKpo
 source_code_url: "https://github.com/ensonic/noflo-legoev3"

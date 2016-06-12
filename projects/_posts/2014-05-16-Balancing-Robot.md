@@ -1,5 +1,5 @@
 ---
-author: [ "@G33kDude", "@dlech" ]
+authors: [ "@G33kDude", "@dlech" ]
 source_code_url: "https://gist.github.com/dlech/11098915"
 ---
 

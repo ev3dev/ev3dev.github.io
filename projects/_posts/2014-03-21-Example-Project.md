@@ -2,7 +2,7 @@
 # Fill out as many of these as you can, and delete the rest.
 # Text on a line after a "#" is a comment and is ignored for the published page.
 
-author: [ "@wasabifan", "@ev3dev" ] # The person(s) who created this project. You can remove the second name if there is only one author.
+authors: [ "@wasabifan", "@ev3dev" ] # The person(s) who created this project. You can remove the second name if there is only one author.
 # Any author that starts with "@" is a GitHub username.
 programming_language: "JavaScript" # The programming language used in this project
 

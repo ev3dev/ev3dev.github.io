@@ -1,5 +1,5 @@
 ---
-author: "@cavenel"
+authors: [ "@cavenel" ]
 programming_language: Python
 youtube_video_id: 9pjpQoZoW6E
 source_code_url: "https://github.com/cavenel/ev3-print3rbot/"

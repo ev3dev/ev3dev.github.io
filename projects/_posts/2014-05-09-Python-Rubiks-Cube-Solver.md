@@ -1,5 +1,5 @@
 ---
-author: "@cavenel"
+authors: "@cavenel"
 programming_language: Python
 source_code_url: "https://github.com/cavenel/ev3dev_examples"
 youtube_video_id: HuKsfp19yF0
