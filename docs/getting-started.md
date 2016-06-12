@@ -124,7 +124,7 @@ Much of the information there is applicable to ev3dev.
 <div class="dark-bg colored-section">
 <div class="container" markdown="1">
 
-## Step 3 (Raspberry Pi only): Update options in `config.txt`
+## Step 3 (Raspberry Pi only): Update options in config.txt
 
 <div class="alert alert-warning" markdown="1">
 {% include icon.html type="warning" %}
