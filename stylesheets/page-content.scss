@@ -26,11 +26,14 @@
     margin: 5px 0 5px !important;
 }
 
-.spaced-headings *:not(.suppress-spaced-headings) > h2,
-.top-heading-margin {
-    margin-top: 100px;
-}
-
 .download-button-small {
     margin: 0 6px;
+}
+
+.dark-bg {
+    background-color: #1a1a1a;
+}
+
+.colored-section {
+    padding-bottom: 10.5px;
 }

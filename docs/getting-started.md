@@ -2,8 +2,11 @@
 title: Getting Started with ev3dev
 categories: docs getting-started
 excerpt: "So you're ready to try out ev3dev. Great! Here are step-by-step instructions to help you get ev3dev up and running on your EV3 or Raspberry Pi."
-extra-body-classes: "spaced-headings"
+no-wrapper: true
 ---
+
+<div class="colored-section">
+<div class="container" markdown="1">
 
 * Table of Contents
 {:toc}
@@ -39,6 +42,12 @@ in the December release, so if something seems broken or the documentation seems
 please [open an issue on GitHub](/support){: .alert-link}.
 {: .alert .alert-warning}
 
+</div>
+</div>
+
+<div class="dark-bg colored-section">
+<div class="container" markdown="1">
+
 ## Step 1: Download the latest ev3dev image file
 
 <br/>
@@ -55,6 +64,12 @@ please [open an issue on GitHub](/support){: .alert-link}.
 To get started, you will need to download the release corresponding to the platform
 you are using. If you are looking for older releases or other file types, you can
 check out the [GitHub releases page][releases].
+
+</div>
+</div>
+
+<div class="colored-section">
+<div class="container" markdown="1">
 
 ## Step 2: Copy the image on to the SD card
 
@@ -103,12 +118,19 @@ You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD
 Much of the information there is applicable to ev3dev.
 </div>
 
-<div class="panel panel-warning">
-<div class="panel-heading">
-{% include icon.html type="warning" %}
-<strong>Raspberry Pi Only!</strong>
 </div>
-<div class="panel-body" markdown="1">
+</div>
+
+<div class="dark-bg colored-section">
+<div class="container" markdown="1">
+
+## Step 3 (Raspberry Pi only): Update options in `config.txt`
+
+<div class="alert alert-warning" markdown="1">
+{% include icon.html type="warning" %}
+This is for Raspberry Pi only! Users of other platforms can skip this step.
+</div>
+
 You must make some changes to `config.txt` to enable support for BrickPi or
 PiStorms before you put your SD card in your Raspberry Pi.
 
@@ -117,13 +139,16 @@ after flashing it in order for it to be detected. In your file browser, open
 up `EV3DEV_BOOT`. This contains a file named `config.txt`. Open `config.txt`
 in your favorite text editor and follow the instructions in the file to enable
 either BrickPi or PiStorms.
+
 </div>
 </div>
 
+<div class="colored-section">
+<div class="container" markdown="1">
 
-<div class="row top-heading-margin">
-<div class="col-md-8 suppress-spaced-headings" markdown="1">
-## Step 3: Boot ev3dev
+<div class="row">
+<div class="col-md-8" markdown="1">
+## Step 4: Boot ev3dev
 
 Put the SD Card in your EV3 and power it on. At first, you will see the
 MINDSTORMS boot splash and the red LEDs will be on. This is immediately
@@ -153,7 +178,6 @@ data may be lost. Keep in mind, that it may take a much longer time from 8V to
 </div>
 </div>
 
-
 <div class="panel panel-info">
 <div class="panel-heading">
 {% include icon.html type="info" %}
@@ -167,7 +191,13 @@ Troubleshooting tips if your EV3 won't boot
 </div>
 </div>
 
-## Step 4: Setup a network connection
+</div>
+</div>
+
+<div class="dark-bg colored-section">
+<div class="container" markdown="1">
+
+## Step 5: Setup a network connection
 
 There are lots of choices here. Your choice depends on what type of connection
 you want to use and on the OS of your host computer, so pick the one that applies:
@@ -193,7 +223,13 @@ to connect for the first time. You can setup additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
 
-## Step 5: Do something awesome
+</div>
+</div>
+
+<div class="colored-section">
+<div class="container" markdown="1">
+
+## Step 6: Do something awesome
 
 This will be where we tell you how to use the EV3's main functions, and how
 to write programs. We are still learning, so everything here should be
@@ -222,9 +258,15 @@ If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself using the guides above. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
-<div class="row top-heading-margin">
-<div class="col-md-8 suppress-spaced-headings" markdown="1">
-## Step 6: Calling it a day
+</div>
+</div>
+
+<div class="dark-bg colored-section">
+<div class="container" markdown="1">
+
+<div class="row">
+<div class="col-md-8" markdown="1">
+## Step 7: Calling it a day
 
 When you are ready to wish your EV3 goodnight, turn if off by pressing the
 *back* button from the main menu in brickman or pressing and holding the *back*
@@ -237,6 +279,8 @@ button from any screen in brickman. This will open a dialog where you can select
 </div>
 </div>
 
+</div>
+</div>
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
