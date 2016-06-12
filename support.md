@@ -97,6 +97,15 @@ Learn more about [writing on GitHub]{:target="_blank"}.
 </div>
 </div>
 
+Gitter
+------
+
+[gitter.im] is an online chat service that works in conjunction with GitHub.
+
+If you have a GitHub or Twitter account, come say hello at <https://gitter.im/ev3dev/chat>.
+
+[gitter.im]: https://gitter.im
+
 IRC
 ---
 
