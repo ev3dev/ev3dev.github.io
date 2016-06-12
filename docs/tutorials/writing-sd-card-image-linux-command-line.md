@@ -3,6 +3,8 @@ title: Writing an SD Card Image Using Linux Command Line Tools.
 subject: SD Card Image
 ---
 
+{% include imaging-tutorial-etcher-banner.html %}
+
 1.  Make sure that you SD card is **unplugged**. Then run `df`. You should see
     something like this:
 

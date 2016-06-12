@@ -8,9 +8,9 @@
 <html>
 {% include head.html %}
 {% if page.jumbotron-heading or page.jumbotron-content %}
-<body class="has-jumbotron">
+<body class="has-jumbotron {{page.extra-body-classes}}">
 {% else %}
-<body class="no-jumbotron">
+<body class="no-jumbotron {{page.extra-body-classes}}">
 {% endif %}
     {% include header.html %}
     {% if page.jumbotron-heading or page.jumbotron-content %}

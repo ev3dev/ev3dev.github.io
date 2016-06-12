@@ -3,6 +3,8 @@ title: Writing an SD Card Image Using Ubuntu Disk Image Writer
 subject: SD Card Image
 ---
 
+{% include imaging-tutorial-etcher-banner.html %}
+
 1.  Open up the folder where you downloaded the ev3dev image file
 
 2.  Right-click and select *Extract Here* to uncompress the file
