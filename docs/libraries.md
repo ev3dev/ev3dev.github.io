@@ -20,9 +20,7 @@ supports multiple implementations of the ev3dev API in a variety of languages.
     * [C++](https://github.com/ddemidov/ev3dev-lang-cpp)
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
     * [Python](https://github.com/rhempel/ev3dev-lang-python)
-    * Java
-      * [@mob41's ev3dev-lang-java](https://github.com/mob41/ev3dev-lang-java), which follows closely to the format of the other libraries.
-      * [@jabrena's ev3dev-lang-java](https://github.com/ev3dev-lang-java/ev3dev-lang-java), an interface more similar to that of LeJOS.
+    * [@mob41's ev3dev-lang-java](https://github.com/mob41/ev3dev-lang-java)
 
 ## Programming toolkit for ev3dev
 
@@ -47,6 +45,7 @@ libraries may be outdated due to the fast development pace of ev3dev.
 * Extra languages:
     * [Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
     * [Go](https://github.com/ev3go/ev3dev) closely following the ev3dev API specification by the @ev3go project.
+    * [Java](https://github.com/ev3dev-lang-java/ev3dev-lang-java) an interface similar to that of LeJOS by @jabrena
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @theZiz
