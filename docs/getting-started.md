@@ -76,7 +76,7 @@ check out the [GitHub releases page][releases].
 <div class="alert alert-danger">
     {% include icon.html type="danger" %}
     This will erase everything on your SD card! Backup your files
-    If you do not want to lose them!
+    if you do not want to lose them!
 </div>
 
 Now it's time to write the image to the card.
