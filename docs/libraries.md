@@ -20,7 +20,7 @@ supports multiple implementations of the ev3dev API in a variety of languages.
     * [C++](https://github.com/ddemidov/ev3dev-lang-cpp)
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
     * [Python](https://github.com/rhempel/ev3dev-lang-python)
-    * [@mob41's ev3dev-lang-java](https://github.com/mob41/ev3dev-lang-java)
+    * [Java](https://github.com/mob41/ev3dev-lang-java)
 
 ## Programming toolkit for ev3dev
 
