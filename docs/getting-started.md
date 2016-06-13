@@ -231,31 +231,14 @@ to connect for the first time. You can setup additional connections using the
 
 ## Step 6: Do something awesome
 
-This will be where we tell you how to use the EV3's main functions, and how
-to write programs. We are still learning, so everything here should be
-considered experimental and subject to major changes.
-
-### Using the EV3 hardware drivers
-
-Here are some guides for using each of the major components.
-
-* [Sensors](/docs/sensors)
-* [Motors](/docs/tutorials/tacho-motors/)
-* [Sound](https://github.com/ev3dev/ev3dev/wiki/Using-Sound)
-* [LCD](/docs/tutorials/using-ev3-lcd/)
-* [Buttons](/docs/tutorials/using-ev3-buttons/)
-* [LEDs](https://github.com/ev3dev/ev3dev/wiki/Using-the-LEDs)
-* [Bluetooth](https://github.com/ev3dev/ev3dev/wiki/Using-Bluetooth)
-
-### Writing programs
-
-There are a number of programming languages available to use. The brick can
-run almost all languages that any other Linux distro can, so your favorite
-language is probably supported. Language bindings have already been written
-for many languages. You can learn more about the available libraries [here](/docs/libraries).
+The brick can run almost all programming languages that any other Linux distro can, so your
+favorite language is probably supported. Language bindings have already been
+written for many languages. **You can learn more about the available libraries
+[here](/docs/libraries).**
 
 If the language you want isn't listed, you still can use it, but you'll have to
-do more of the heavy lifting yourself using the guides above. Once you get the
+do more of the heavy lifting yourself. You can look at the [driver index page](/docs/drivers/)
+for information on the interfaces you need to use to control devices. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
 </div>
