@@ -2,8 +2,10 @@
 # Fill out as many of these as you can, and delete the rest.
 # Text on a line after a "#" is a comment and is ignored for the published page.
 
-author: [ "@wasabifan", "@ev3dev" ] # The person(s) who created this project. You can remove the second name if there is only one author.
-# Any author that starts with "@" is a GitHub username.
+author: [ "@wasabifan" ] # your GitHub user name
+# or make a list if there is more than one author
+# author: [ "@person1", "@person2", "person without GitHub account" ]
+
 programming_language: "JavaScript" # The programming language used in this project
 
 youtube_video_id: rrNaLfE9PWA # The video ID of the YouTube video to be displayed with this post
