@@ -6,7 +6,7 @@ layout:
     {
       "title"    : "{{ post.title }}",
         "href": "{{ post.url }}",
-        "author": {% if post.authors %} "{{ post.authors | join: ', ' }}" {% else %} "{{ post.author | join: ', ' }}" {% endif %} ,
+        "author":  "{{ post.author | join: ', ' }}",
         "date": "{{ post.date | date_to_long_string }}",
         "loopid" : "post-{{ forloop.index }}",
         "category": "{{ post.categories }}"

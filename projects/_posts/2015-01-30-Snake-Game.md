@@ -1,6 +1,6 @@
 ---
 # Fill out as many of these as you can, and delete the rest.
-authors: [ "@donwojtallo" ] # The person(s) who created this project. 
+author: [ "@donwojtallo" ] # The person(s) who created this project. 
 # Any author that starts with "@" will pull information from github.
 programming_language: "JavaScript" # The programming language used in this project
 

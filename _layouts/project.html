@@ -32,9 +32,9 @@ layout: page
                 <a class="btn btn-primary" href="{{ page.source_code_url }}">Source code</a>
             </li>
             {% endif %}
-            {% if page.authors %}
+            {% if page.author %}
             <li class="list-group-item">
-                {% for author in page.authors %}
+                {% for author in page.author %}
                 {% include author-card.html author = author %}
                 {% endfor %}
             </li>

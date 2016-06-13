@@ -1,6 +1,6 @@
 ---
 # Fill out as many of these as you can, and delete the rest.
-authors: [ "@BertLindeman" ] # The person(s) who created this project. 
+author: [ "@BertLindeman" ] # The person(s) who created this project. 
 # Any author that starts with "@" will pull information from github.
 programming_language: "Bourne shell script" # The programming language used in this project
 
