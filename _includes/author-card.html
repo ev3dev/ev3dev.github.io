@@ -10,7 +10,7 @@
 <!-- this looks weird, but it was the only way I could figure out how to test
      that the first character of include.author is "@" -->
 {% if at_sign.size > 0 and test_at_sign_is_first == 3 %}
-    <div data-card-user="{{author_no_at_sign}}" class="{{ extra_classes }}"></div><br/>
+    <div class="user-card {{ extra_classes }}" data-card-user="{{author_no_at_sign}}"><div class="user-card-name">{{ include.author }}</div></div></br>
 {% else %}
     <div class="user-card {{ extra_classes }}"><div class="user-card-name">{{ include.author }}</div></div>
 {% endif %}
