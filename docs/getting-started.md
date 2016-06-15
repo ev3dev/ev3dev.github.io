@@ -50,6 +50,8 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 ## Step 1: Download the latest ev3dev image file
 
+<div class="release-link-container" markdown="1">
+
 <br/>
 <div class="text-center">
 <a data-release-link-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
@@ -65,6 +67,17 @@ To get started, you will need to download the release corresponding to the platf
 you are using. If you are looking for older releases or other file types, you can
 check out the [GitHub releases page][releases].
 
+</div>
+<div class="release-link-alt" markdown="1">
+To get started, you will need to download the release corresponding to the platform
+you are using. Visit the [GitHub releases page][releases] and find the image that
+corresponds to your platform:
+
+- Releases for the LEGO MINDSTORMS EV3 start with `ev3- `
+- Releases for the Raspberry Pi 1 start with `rpi-`
+- Releases for the Raspberry Pi 2 and 3 start with `rpi2-`
+- Releases for the BeagleBone start with `evb-`
+</div>
 </div>
 </div>
 
