@@ -51,6 +51,11 @@ function initDownloadLinks() {
 }
 
 $(document).ready(function () {
+    // If JS is disabled, this code will never run and the alt content will be left as-is.
+    // We do this as soon as the document loads so that the page flash is minimal.
+    $('.release-link-alt').hide();
+    $('.release-link-container').show();
+    
     if ($('a[data-release-link-platform]').length > 0) {
         initDownloadLinks();
     }
