@@ -50,6 +50,8 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 ## Step 1: Download the latest ev3dev image file
 
+<div class="release-link-container" markdown="1">
+
 <br/>
 <div class="text-center">
 <a data-release-link-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
@@ -66,6 +68,17 @@ you are using. If you are looking for older releases or other file types, you ca
 check out the [GitHub releases page][releases].
 
 </div>
+<div class="release-link-alt" markdown="1">
+To get started, you will need to download the release corresponding to the platform
+you are using. Visit the [GitHub releases page][releases] and find the image that
+corresponds to your platform:
+
+- Releases for the LEGO MINDSTORMS EV3 start with `ev3- `
+- Releases for the Raspberry Pi 1 start with `rpi-`
+- Releases for the Raspberry Pi 2 and 3 start with `rpi2-`
+- Releases for the BeagleBone start with `evb-`
+</div>
+</div>
 </div>
 
 <div class="colored-section">
@@ -76,7 +89,7 @@ check out the [GitHub releases page][releases].
 <div class="alert alert-danger">
     {% include icon.html type="danger" %}
     This will erase everything on your SD card! Backup your files
-    If you do not want to lose them!
+    if you do not want to lose them!
 </div>
 
 Now it's time to write the image to the card.
@@ -231,31 +244,14 @@ to connect for the first time. You can setup additional connections using the
 
 ## Step 6: Do something awesome
 
-This will be where we tell you how to use the EV3's main functions, and how
-to write programs. We are still learning, so everything here should be
-considered experimental and subject to major changes.
-
-### Using the EV3 hardware drivers
-
-Here are some guides for using each of the major components.
-
-* [Sensors](/docs/sensors)
-* [Motors](/docs/tutorials/tacho-motors/)
-* [Sound](https://github.com/ev3dev/ev3dev/wiki/Using-Sound)
-* [LCD](/docs/tutorials/using-ev3-lcd/)
-* [Buttons](/docs/tutorials/using-ev3-buttons/)
-* [LEDs](https://github.com/ev3dev/ev3dev/wiki/Using-the-LEDs)
-* [Bluetooth](https://github.com/ev3dev/ev3dev/wiki/Using-Bluetooth)
-
-### Writing programs
-
-There are a number of programming languages available to use. The brick can
-run almost all languages that any other Linux distro can, so your favorite
-language is probably supported. Language bindings have already been written
-for many languages. You can learn more about the available libraries [here](/docs/libraries).
+The brick can run almost all programming languages that any other Linux distro can, so your
+favorite language is probably supported. Language bindings have already been
+written for many languages. **You can learn more about the available libraries
+[here](/docs/libraries).**
 
 If the language you want isn't listed, you still can use it, but you'll have to
-do more of the heavy lifting yourself using the guides above. Once you get the
+do more of the heavy lifting yourself. You can look at the [driver index page](/docs/drivers/)
+for information on the interfaces you need to use to control devices. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
 </div>

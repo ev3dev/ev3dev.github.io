@@ -14,16 +14,13 @@ We have a repository of officially maintained language bindings, as well as many
 ## Unified Libraries
 
 Our official "unified" [language binding repository](http://github.com/ev3dev/ev3dev-lang)
-currently has support for C++, Lua, Node.js, and Python.
-These libraries are all built around a single
-[API specification](http://ev3dev-lang.readthedocs.org/en/latest/spec.html)
-that ensures that interface is almost identical for each, and they are being updated and
-enhanced regularly.
+supports multiple implementations of the ev3dev API in a variety of languages.
 
 * Unified bindings:
     * [C++](https://github.com/ddemidov/ev3dev-lang-cpp)
     * [Node.js](https://github.com/wasabifan/ev3dev-lang-js)
     * [Python](https://github.com/rhempel/ev3dev-lang-python)
+    * [Java](https://github.com/mob41/ev3dev-lang-java)
 
 ## Programming toolkit for ev3dev
 
@@ -40,15 +37,15 @@ for ev3dev is written using this library.
 [GObjectIntrospection]: https://wiki.gnome.org/Projects/GObjectIntrospection
 [brickman]: https://github.com/ev3dev/brickman
 
-
 ## Extra languages
 We also have many great contrubutors that are maintaining extra libraries for
 languages not included in our other repository.  Note that some of these
-libraries may be outdated due to the fast development cycle of ev3dev.
+libraries may be outdated due to the fast development pace of ev3dev.
 
 * Extra languages:
     * [Go](https://github.com/ldmberman/GoEV3) updated for ev3dev-jessie by @ldmberman, [original](https://github.com/mattrajca/GoEV3) by @mattrajca
     * [Go](https://github.com/ev3go/ev3dev) closely following the ev3dev API specification by the @ev3go project.
+    * [Java](https://github.com/ev3dev-lang-java/ev3dev-lang-java) an interface similar to that of LeJOS by @jabrena
     * [Python](https://github.com/topikachu/python-ev3) by @topikachu
     * [C (with optional Perl, Python and Ruby bindings)](https://github.com/in4lio/ev3dev-c) by @in4lio
     * [C](https://github.com/theZiz/ev3c) by @theZiz
