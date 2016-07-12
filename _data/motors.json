@@ -15,7 +15,7 @@
         "vendor_name": "Firgelli",
         "vendor_part_name": "L12 EV3 100mm",
         "vendor_part_number": "L12-EV3-100",
-        "vendor_website": "http://store.firgelli.com/product_p/l12-ev3-100.htm"
+        "vendor_website": "http://www.actuonix.com/product_p/l12-ev3-100.htm"
     },
     {
         "count_per_m": "2000",
@@ -33,7 +33,7 @@
         "vendor_name": "Firgelli",
         "vendor_part_name": "L12 EV3 50mm",
         "vendor_part_number": "L12-EV3-50",
-        "vendor_website": "http://store.firgelli.com/product_p/l12-ev3-50.htm"
+        "vendor_website": "http://www.actuonix.com/product_p/l12-ev3-50.htm"
     },
     {
         "id": "LEGO_9V_MINI_MOTOR_NEWER",
@@ -197,7 +197,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "E-Motor",
         "vendor_part_number": "9670",
-        "vendor_website": "https://education.lego.com/en-us/lego-education-product-database/machines-and-mechanisms/9670-e-motor"
+        "vendor_website": "https://education.lego.com/en-us/products/e-motor/9670"
     },
     {
         "count_per_rot": "360",

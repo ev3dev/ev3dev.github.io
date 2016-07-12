@@ -8,11 +8,11 @@ The [AM1808 SoC](../ev3-processor) has 2 hardware [Inter-Integrated Circuit][i2c
 
 ## Usage
 
-__I2C0__: [Boot EEPROM](../ev3-eeprom) &#64;400kHz
+__I2C0__: [Boot EEPROM](../ev3-eeprom) at 400kHz
 
 __I2C1__: Not used/connected
 
-__[FIQ](../ev3-fiq) I2C__: Input ports 1-4 &#64;10kHz
+__[FIQ](../ev3-fiq) I2C__: Input ports 1-4 at 10kHz
 
 ## Device Drivers
 
