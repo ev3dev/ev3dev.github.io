@@ -5,7 +5,7 @@ var releasePlatformRegexes = {
     ev3: "ev3-[\\w\\d-]*\\.img\\.xz",
     rpi: "rpi-[\\w\\d-]*\\.img\\.xz",
     rpi2: "rpi2-[\\w\\d-]*\\.img\\.xz",
-    evb: "evb-[\\w\\d-]*\\.img\\.xz",
+    bone: "(evb|bone)-[\\w\\d-]*\\.img\\.xz",
 }
 
 function initDownloadLinks() {
