@@ -35,6 +35,7 @@ IGNORE_HREFS=$(ruby -e 'puts %w{
     warmcat.com
     robosnap.net
     01.org
+    alldatasheet.com
 }.map{|h| "/#{h}/"}.join(",")')
 
 # Explanation of ignored sites:
