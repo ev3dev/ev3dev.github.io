@@ -59,7 +59,7 @@ please [open an issue on GitHub](/support){: .alert-link}.
 <h2 class="centered-light-heading"> Other platforms </h2>
 <a data-release-link-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
 <a data-release-link-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
-<a data-release-link-platform="evb" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
+<a data-release-link-platform="bone" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
 </div>
 
 <br/>
