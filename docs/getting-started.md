@@ -64,7 +64,8 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 <br/>
 To get started, you will need to download the release corresponding to the platform
-you are using. If you are looking for older releases or other file types, you can
+you are using. If you want the latest and greatest, check out the ["nightly"][nightly]
+image builds. If you are looking for older releases or other file types, you can
 check out the [GitHub releases page][releases].
 
 </div>
@@ -281,3 +282,4 @@ button from any screen in brickman. This will open a dialog where you can select
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
 [releases]:https://github.com/ev3dev/ev3dev/releases
+[nightly]:https://bintray.com/ev3dev/nightly/ev3dev-jessie
