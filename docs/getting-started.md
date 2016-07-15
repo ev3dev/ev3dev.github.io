@@ -122,6 +122,9 @@ Now it's time to write the image to the card.
    
    {% include screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="600px" %}
 
+7. If you arrive at this screen, you have successfully flashed your SD card and are ready to move on to the next step.
+   
+   {% include screenshot.html source="/images/etcher/success.png" caption="Etcher success screen" width="600px" %}
 <br/>
 
 <div class="alert alert-info" markdown="1">
