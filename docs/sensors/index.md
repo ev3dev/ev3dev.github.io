@@ -97,7 +97,6 @@ these sensors.
 
 ### General resources
 
-* [Sensor Tutorial]
 * [The LEGO Sensor (lego-sensor) Class][lego-sensor class]
 * [EV3 Input Port Driver]
 
