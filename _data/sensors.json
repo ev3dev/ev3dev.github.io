@@ -108,32 +108,21 @@
             {
                 "id": "7",
                 "read_data_reg": "0"
-            },
-            {
-                "id": "8",
-                "read_data_reg": "0"
-            },
-            {
-                "id": "9",
-                "read_data_reg": "0"
             }
         ],
         "id": "PX_PIXY",
         "mode_info": [
             {
-                "data_sets": "7",
+                "data_sets": "6",
                 "description": "All",
                 "id": "0",
                 "name": "ALL",
-                "notes": "\n[^angle]: Angle information is only available for color codes, otherwise the value is 0.\n    \n    ",
                 "value0": "Signature low byte",
                 "value1": "Signature high byte",
                 "value2": "X",
                 "value3": "Y",
                 "value4": "Width",
-                "value5": "Height",
-                "value6": "Angle",
-                "value6_footnote": "[^angle]"
+                "value5": "Height"
             },
             {
                 "data_sets": "5",
@@ -211,30 +200,10 @@
                 "value2": "Y",
                 "value3": "Width",
                 "value4": "Height"
-            },
-            {
-                "data_sets": "6",
-                "description": "Color code",
-                "id": "8",
-                "name": "COL-CODE",
-                "value0": "Count",
-                "value1": "X",
-                "value2": "Y",
-                "value3": "Width",
-                "value4": "Height",
-                "value5": "Angle"
-            },
-            {
-                "data_sets": "1",
-                "description": "Angle",
-                "description_footnote": "[^angle]",
-                "id": "9",
-                "name": "ANGLE",
-                "value0": "Angle"
             }
         ],
         "name": "pixy-lego",
-        "num_modes": "10",
+        "num_modes": "8",
         "product_id": "Pixy",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
