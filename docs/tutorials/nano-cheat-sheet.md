@@ -11,7 +11,8 @@ It comes with ev3dev and can be used from a remote SSH session.
 
 ## Quick-start
 
-Open the editor by typing `nano <file name>` into the terminal.
+Open the editor by typing `nano <file name>` into the terminal. You can navigate
+an open file using the arrow keys. 
 
 ## Useful keystrokes
 
