@@ -78,7 +78,7 @@ class MotorThread(threading.Thread):
     def run(self):
         print "Engine running!"
         while running:
-            self.motor.run_forever(duty_cycle_sp=speed)
+            self.motor.run_direct(duty_cycle_sp=speed)
 
         self.motor.stop()
 
