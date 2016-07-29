@@ -78,7 +78,10 @@ class MotorThread(threading.Thread):
     def run(self):
         print "Engine running!"
         while running:
+            # Use run_forever on current release, 2015-12-30.
             self.motor.run_forever(duty_cycle_sp=speed)
+            # Use run_direct if you dist-upgrade or use a current nightly.
+            #self.motor.run_direct(duty_cycle_sp=speed)
 
         self.motor.stop()
 
