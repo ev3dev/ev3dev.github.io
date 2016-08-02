@@ -10,7 +10,7 @@ $(document).ready(function () {
     newsResultArea = $('#search-results-news > div');
     miscResultArea = $('#search-results-misc > div');
 
-    var searchQuery = getQueryParam("search");
+    var searchQuery = $(document).getUrlParam("search");
     if (searchQuery != undefined && searchQuery != "") { //If a search query was provided in the query strings, execute the search
         loadSearchData(function () {
             searchUpdate();
@@ -116,14 +116,6 @@ function findResults(term) {
     }
 
     return result;
-}
-
-//Function to read query parameters
-function getQueryParam(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 //Updates the search function as a whole, and manages the visuals as necessary

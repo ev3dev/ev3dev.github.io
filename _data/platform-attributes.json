@@ -1,0 +1,53 @@
+{
+    "client-platform": {
+        "values": {
+            "android": {
+                "title": "Android",
+                "uaPlatform": "Android"
+            },
+            "osx": {
+                "title": "OS X",
+                "uaPlatform": "Mac OS"
+            },
+            "ubuntu": {
+                "title": "Ubuntu",
+                "uaPlatform": "Ubuntu"
+            },
+            "windows": {
+                "title": "Windows",
+                "uaPlatform": "Windows"
+            }
+        },
+        "autodetectFunction": "autodetectClientPlatform"
+    },
+    "client-windows-version": {
+        "values": {
+            "win7": {
+                "title": "Windows 7",
+                "uaVersion": "7"
+            },
+            "win8": {
+                "title": "Windows 8",
+                "uaVersion": "8"
+            },
+            "win10": {
+                "title": "Windows 10",
+                "uaVersion": "10"
+            }
+        },
+        "autodetectFunction": "autodetectClientWindowsVersion"
+    },
+    "ev3dev-hardware-platform": {
+        "values": {
+            "ev3": {
+                "title": "EV3 Brick"
+            },
+            "brickpi": {
+                "title": "BrickPi"
+            },
+            "pistorms": {
+                "title": "PiStorms"
+            }
+        }
+    }
+}
