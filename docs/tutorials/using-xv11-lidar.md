@@ -81,6 +81,8 @@ Then your motor interface will be available at:
 
 If you assume that XV11 LIDAR returns you the distance to the object you will have it *almost* right. To do it correctly take into account the rotational geometry of the LIDAR.
 
+The scheme below is for Revo LDS. For XV11 it is enough to change some sings. See [xv11test] for detailed formulas.
+
 {% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" %}
 
 You may ignore the above and the reported distance will still be approximately correct. 
@@ -110,12 +112,27 @@ Everything for just a few € or $.
 
 {% include screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" %}
 
+## Laser Specs and Safety
+
+You can find laser technical parameters on Neato website - see [laser specs], the `Compliance information` section.
+According to this documentation the laser is class 1 device. It means that it is safe under all conditions of normal use.
+Whether our use is normal is disputable. See wikipedia entry on [laser safety class 1] if you are concerned.
+
+Despite some contrary information on the internet the XV11 laser is in the visible range of light.
+It is possible to see the laser dot if looking at exactly correct angle.
+The laser pulse duration is only 200 microseconds so you would see a blinking dot on every revolution.
+
+Quite obviously I am not encouraging you to do that and if you do, you're doing it at own risk. 
+
 ## References
 
 [xv11hacking] - for more information on LIDAR integration
-
 [Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is not exactly Revo LDS but they share a lot of design
+[laser specs] - for laser specification from official Neato site
+[laser safety class 1] - for wikipedia entry on laser safety classes
 
 [xv11test]: https://github.com/bmegli/ev3dev-mapping
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
 [Revo LDS Whitepaper]: http://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
+[laser specs]: https://22eccb839e35374fb256-2040e42aee01271224a32cb55734f01b.ssl.cf2.rackcdn.com/wp-content/uploads/2015/04/Important_Information_XV_Series_3-language_EN-FR-ES_low1.pdf
+[laser safety class 1]: https://en.wikipedia.org/wiki/Laser_safety#Class_1
