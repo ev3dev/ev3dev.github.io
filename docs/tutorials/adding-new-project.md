@@ -37,7 +37,7 @@ It should take a second, but when GitHub finishes processing your request you
 should be at a page very similar to where you started, except now you are
 looking at your own copy.
 
-##Step 2: Setting Up A Preview (Optional)
+## Step 2: Setting Up A Preview (Optional)
 
 If you want to be able to preview your new page before you submit it, and you are
 willing to add a bit of extra complexity, you can do so by using the `./publish.rb`
@@ -46,7 +46,7 @@ computer and installing ruby. See the ev3dev.github.io [README] for more info.
 
 [README]: https://github.com/ev3dev/ev3dev.github.io#readme
 
-##Step 3: Adding Your Page
+## Step 3: Adding Your Page
 
 Now that you have your own copy the site, it's time to create your page. To
 start, use the file list and choose the `projects/_posts` folder. Select the
@@ -88,7 +88,7 @@ file" button to save your changes. This is when you should go and preview your
 page if you created a `gh-pages` branch earlier.
 
 
-##Step 4: Submitting Your Changes
+## Step 4: Submitting Your Changes
 
 Now that you have made your changes to your copy of the site, you need to
 submit your changes for review.

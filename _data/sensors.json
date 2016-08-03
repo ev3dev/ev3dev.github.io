@@ -108,32 +108,21 @@
             {
                 "id": "7",
                 "read_data_reg": "0"
-            },
-            {
-                "id": "8",
-                "read_data_reg": "0"
-            },
-            {
-                "id": "9",
-                "read_data_reg": "0"
             }
         ],
         "id": "PX_PIXY",
         "mode_info": [
             {
-                "data_sets": "7",
+                "data_sets": "6",
                 "description": "All",
                 "id": "0",
                 "name": "ALL",
-                "notes": "\n[^angle]: Angle information is only available for color codes, otherwise the value is 0.\n    \n    ",
                 "value0": "Signature low byte",
                 "value1": "Signature high byte",
                 "value2": "X",
                 "value3": "Y",
                 "value4": "Width",
-                "value5": "Height",
-                "value6": "Angle",
-                "value6_footnote": "[^angle]"
+                "value5": "Height"
             },
             {
                 "data_sets": "5",
@@ -211,30 +200,10 @@
                 "value2": "Y",
                 "value3": "Width",
                 "value4": "Height"
-            },
-            {
-                "data_sets": "6",
-                "description": "Color code",
-                "id": "8",
-                "name": "COL-CODE",
-                "value0": "Count",
-                "value1": "X",
-                "value2": "Y",
-                "value3": "Width",
-                "value4": "Height",
-                "value5": "Angle"
-            },
-            {
-                "data_sets": "1",
-                "description": "Angle",
-                "description_footnote": "[^angle]",
-                "id": "9",
-                "name": "ANGLE",
-                "value0": "Angle"
             }
         ],
         "name": "pixy-lego",
-        "num_modes": "10",
+        "num_modes": "8",
         "product_id": "Pixy",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
@@ -1409,7 +1378,7 @@
                 "id": "0",
                 "name": "GYRO-ANG",
                 "name_footnote": "[^angle-reset]",
-                "notes": "\n[^angle-reset]: The angle in GYRO-ANG or GYRO-G&A modes can\n    be reset by changing to a different mode and changing back.\n    \n    \n[^angle-overflow]: If you spin around too many times\n    in GYRO-ANG or GYRO-G&A mode, it will get stuck at 32767.\n    \n    \n[^direction]: Clockwise is positive when looking at the side\n    of the sensor with the arrows.\n    \n    ",
+                "notes": "\n[^angle-reset]: The angle in GYRO-ANG or GYRO-G&A modes can\n    be reset by changing to a different mode and changing back.\n    \n    \n[^angle-overflow]: If you spin around too many times\n    in GYRO-ANG or GYRO-G&A mode, it will get stuck at 32767\n    or overflow through -32768 depending on version.\n    \n    \n[^direction]: Clockwise is positive when looking at the side\n    of the sensor with the arrows.\n    \n    ",
                 "units": "deg",
                 "units_description": "degrees",
                 "value0": "Angle (-32768 to 32767)",
@@ -1727,7 +1696,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "WeDo USB Hub",
         "vendor_part_number": "9581",
-        "vendor_website": "https://education.lego.com/en-us/lego-education-product-database/wedo/9581-lego-usb-hub"
+        "vendor_website": "https://education.lego.com/en-us/products/wedo-usb-hub/9581"
     },
     {
         "id": "WEDO_MOTION_SENSOR",
@@ -1764,7 +1733,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "WeDo Motion Sensor",
         "vendor_part_number": "9583",
-        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9583-motion-sensor"
+        "vendor_website": "https://education.lego.com/en-us/products/wedo-motion-sensor/9583"
     },
     {
         "id": "WEDO_TILT_SENSOR",
@@ -1816,7 +1785,7 @@
         "vendor_name": "LEGO",
         "vendor_part_name": "WeDo Tilt Sensor",
         "vendor_part_number": "9584",
-        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/wedo/9584-tilt-sensor"
+        "vendor_website": "https://education.lego.com/en-us/products/wedo-tilt-sensor/9584"
     },
     {
         "default_address": "0x02",
@@ -1857,7 +1826,7 @@
         "id": "LEGO_POWER_STORAGE_SENSOR",
         "mode_info": [
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Input Voltage",
                 "id": "0",
@@ -1869,7 +1838,7 @@
                 "value0": "Voltage (0 to 10000)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Input Current",
                 "id": "1",
@@ -1881,7 +1850,7 @@
                 "value0": "Current (0 to 10000)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Output Voltage",
                 "id": "2",
@@ -1893,7 +1862,7 @@
                 "value0": "Voltage (0 to 10000)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Output Current",
                 "id": "3",
@@ -1905,7 +1874,7 @@
                 "value0": "Current (0 to 10000)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "description": "Energy",
                 "id": "4",
                 "name": "JOULE",
@@ -1916,7 +1885,7 @@
                 "value0": "Energy (0 to 100)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Input Power",
                 "id": "5",
@@ -1928,7 +1897,7 @@
                 "value0": "Power (0 to 10000)"
             },
             {
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "Output Power",
                 "id": "6",
@@ -1941,7 +1910,7 @@
             },
             {
                 "data_sets": "7",
-                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "data_type": "LEGO_SENSOR_DATA_S16",
                 "decimals": "3",
                 "description": "All",
                 "id": "7",
@@ -1959,7 +1928,7 @@
         ],
         "name": "lego-power-storage",
         "num_modes": "8",
-        "product_id": "",
+        "product_id": "Store",
         "sensor_type": "nxt-i2c-sensor",
         "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
         "source_line": 343,
@@ -1972,19 +1941,63 @@
     },
     {
         "default_address": "0x4C",
-        "default_address_footnote": "[^addresses]",
-        "device_class": "[hwmon](https://wiki.archlinux.org/index.php/Lm_sensors) [^usage]",
+        "i2c_mode_info": [
+            {
+                "id": "0",
+                "read_data_reg": "0",
+                "set_mode_data": "0",
+                "set_mode_reg": "0"
+            },
+            {
+                "id": "1",
+                "read_data_reg": "0",
+                "set_mode_data": "0",
+                "set_mode_reg": "0"
+            }
+        ],
         "id": "LEGO_NXT_TEMPERATURE_SENSOR",
-        "name": "tmp275",
-        "notes": "\n[^addresses]: Valid addresses are 0x48..0x4F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo tmp275 0x4C > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/hwmon -name hwmon*)\n    do\n        if [[ \"$(cat $chip/device/name)\" == \"tmp275\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
-        "sensor_type": "lm75",
-        "source_file": "drivers/lego/sensors/other_sensor_defs.c",
-        "source_line": 28,
+        "mode_info": [
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "decimals": "1",
+                "description": "Continuous measurement",
+                "id": "0",
+                "name": "NXT-TEMP-C",
+                "raw_max": "32767",
+                "raw_min": "-14080",
+                "si_max": "1280",
+                "si_min": "-550",
+                "units": "C",
+                "units_description": "\u00b0C",
+                "value0": "Temperature (-550 to 1280)"
+            },
+            {
+                "data_type": "LEGO_SENSOR_DATA_S16_BE",
+                "decimals": "1",
+                "description": "Continuous measurement",
+                "id": "1",
+                "name": "NXT-TEMP-F",
+                "raw_max": "32767",
+                "raw_min": "-14080",
+                "si_max": "2624",
+                "si_min": "-670",
+                "units": "F",
+                "units_description": "\u00b0F",
+                "value0": "Temperature (-670 to 2624)"
+            }
+        ],
+        "name": "lego-nxt-temp",
+        "num_modes": "2",
+        "product_id": "Temp.",
+        "sensor_type": "nxt-i2c-sensor",
+        "source_file": "drivers/lego/sensors/nxt_i2c_sensor_defs.c",
+        "source_line": 343,
         "url_name": "lego-nxt-temperature-sensor",
+        "vendor_id": "LEGO",
         "vendor_name": "LEGO",
         "vendor_part_name": "NXT Temperature Sensor",
         "vendor_part_number": "9749",
-        "vendor_website": "http://education.lego.com/en-us/lego-education-product-database/mindstorms/9749-nxt-temperature-sensor/"
+        "vendor_website": "https://education.lego.com/en-us/products/mindstorms-temperature-sensor/9749"
     },
     {
         "id": "LEGO_NXT_TOUCH_SENSOR",
@@ -3280,7 +3293,7 @@
         "notes": "\n[^addresses]: Valid addresses are 0x38..0x3F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo pcf8574 0x38 > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node and initializing:\n    \n    <pre><code>for chip in $(find /sys/class/gpio -name gpiochip*)\n    do\n        if [[ \"$(cat $chip/label)\" == \"pcf8547\" ]]\n        then\n            base=$(cat $chip/base)\n            # Pins are active low\n            for i in {0..7}\n            do\n                gpio=$(($base + $i))\n                echo $gpio > /sys/class/gpio/export\n                # gpios on this chip are active low\n                echo 1 > /sys/class/gpio/gpio$gpio/active_low\n                # initialize direction here\n            done\n            # do whatever with the gpios\n        fi\n    done\n    </code></pre>\n    \n    ",
         "sensor_type": "gpio-pcf857xr",
         "source_file": "drivers/lego/sensors/other_sensor_defs.c",
-        "source_line": 62,
+        "source_line": 28,
         "url_name": "mindsensors.com-sensor-building-kit-for-nxt-with-pcf8574-ic",
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Sensor building kit for NXT with PCF8574 IC",
@@ -3296,7 +3309,7 @@
         "notes": "\n[^addresses]: Valid addresses are 0x48..0x4F (configurable via input pins)\n    \n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo pcf8591 0x48 > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/hwmon -name hwmon*)\n    do\n        if [[ \"$(cat $chip/device/name)\" == \"pcf8591\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
         "sensor_type": "pcf8591",
         "source_file": "drivers/lego/sensors/other_sensor_defs.c",
-        "source_line": 106,
+        "source_line": 72,
         "url_name": "mindsensors.com-sensor-building-kit-for-nxt-with-pcf8591-ic",
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Sensor building kit for NXT with PCF8591 IC",
@@ -3372,7 +3385,7 @@
                 "name": "RAW",
                 "unit_description": "Pascals",
                 "units": "Pa",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 400,000 Pa)"
             },
             {
                 "data_type": "LEGO_SENSOR_DATA_S16",
@@ -3381,7 +3394,7 @@
                 "name": "ABS-PSI",
                 "units": "PSI",
                 "units_description": "Pounds per square inch",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 58 PSI)"
             },
             {
                 "data_type": "LEGO_SENSOR_DATA_S16",
@@ -3390,7 +3403,7 @@
                 "name": "ABS-MBAR",
                 "units": "mbar",
                 "units_description": "millibar",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 4000 millibar)"
             },
             {
                 "data_type": "LEGO_SENSOR_DATA_S16",
@@ -3399,7 +3412,7 @@
                 "name": "ABS-KPA",
                 "units": "kPa",
                 "units_description": "kilopascals",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 400 kPa)"
             },
             {
                 "data_type": "LEGO_SENSOR_DATA_S16",
@@ -3408,7 +3421,7 @@
                 "name": "REL-PSI",
                 "units": "PSI",
                 "units_description": "Pounds per square inch",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 58 PSI minus the reference pressure)"
             },
             {
                 "data_type": "LEGO_SENSOR_DATA_S16",
@@ -3417,7 +3430,7 @@
                 "name": "REL-MBAR",
                 "units": "mbar",
                 "units_description": "millibar",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 4000 millibar minus the reference pressure)"
             },
             {
                 "data_type": "LEGO_SENSOR_DATA_S16",
@@ -3426,7 +3439,7 @@
                 "name": "REL-KPA",
                 "units": "kPa",
                 "units_description": "kilopascals",
-                "value0": "Pressure"
+                "value0": "Pressure (0 to 400 kPa minus the reference pressure)"
             }
         ],
         "name": "ms-pps58-nx",
@@ -3518,7 +3531,7 @@
         "notes": "\n[^usage]: Sample usage:\n    \n    Register I2C device:\n    \n    <pre><code>echo ds1307 0x68 > /sys/bus/i2c/devices/i2c-<port+2>/new_device\n    </code></pre>\n    \n    Finding device class node:\n    \n    <pre><code>for chip in $(find /sys/class/rtc -name rtc*)\n    do\n        if [[ \"$(cat $chip/name)\" == \"ds1307\" ]]\n        then\n            # do whatever\n        fi\n    done\n    </code></pre>\n    \n    ",
         "sensor_type": "rtc-ds1307",
         "source_file": "drivers/lego/sensors/other_sensor_defs.c",
-        "source_line": 140,
+        "source_line": 106,
         "url_name": "mindsensors.com-realtime-clock-for-nxt",
         "vendor_name": "mindsensors.com",
         "vendor_part_name": "Realtime Clock for NXT",

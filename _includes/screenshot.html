@@ -6,5 +6,7 @@ Parameters:
 
 source: The url of the image
 caption: (optional) A caption that is displayed under the image.
+width: (optional) The width property of the image, including units.
+float: (optional) whether to float the image to the right or not. Default is false.
 
-{% endcomment %}<span class="screenshot"><a href="{{ include.source }}"><img src="{{ include.source }}" class="img-responsive" alt="screenshot"/></a>{% if include.caption %}<p><small>{{ include.caption }}</small></p>{% endif %}</span>
+{% endcomment %}<span class="screenshot{% if include.float %} inline-screenshot pull-right {% endif %}"><a href="{{ include.source }}"><img src="{{ include.source }}" class="img-responsive" {% if include.width %}style="width: {{include.width}}"{% endif %} alt="{% if include.caption %}{{ include.caption }}{% else %}screenshot{% endif %}"/></a>{% if include.caption %}<small>{{ include.caption }}</small>{% endif %}</span>
