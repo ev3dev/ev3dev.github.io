@@ -49,7 +49,7 @@ To save some typing, I'm going to define a variable for the motor path...
 
 Now we can just type `$MC` for the motor path.
 
-## Reseting the Motor
+## Resetting the Motor
 
 The tacho-motor class has a `reset` command that resets all of the parameters
 back to the default values and stops the motor. It is a good idea to send this
