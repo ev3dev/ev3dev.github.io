@@ -22,6 +22,7 @@ To interface the LIDAR one has to:
 1. Solder the connector for LIDAR motor
 2. Solder the connector for LIDAR data and power
 3. Put the EV3 input port in other-uart mode
+4. Put the EV3 output port in dc-motor mode
 4. Spin the LIDAR motor CCW with speed around 300 RPM
 5. Read LIDAR data using UART 
 
@@ -31,8 +32,12 @@ For the details, follow video tutorial:
 
 ## Motor Connector
 
-The part with resistors is optional. It allows EV3 to autodetect the motor but in ev3dev you can load the driver manually. 
-If you decide not to solder the resistors you only have to make two connections (PWM0-PWR and PWM1-Ground).
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+In previous versions of this tutorial there was a scheme with resistors for auto-detection.
+Currently the recommended way is to just solder the two wires and load the dc-motor driver manually.
+It is recommended to load the dc-motor driver manually also if you have soldered the resistors. 
+</div>
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" %}
 
@@ -60,20 +65,14 @@ It is binary tty communication. More information in `Testing the LIDAR` section.
 	
 I am assuming your motor connector is connected to `port A` and it is the only motor.	
 
-With auto-detection (resistors) your motor interface is available at:
-
-    /sys/class/tacho-motor/motor0
-	
-If you decided to not solder the resistors in motor connector, you have to put the motor port in `dc-motor` mode:
+First, you have to put the motor port in `dc-motor` mode:
 
     echo dc-motor > /sys/class/lego-port/port4/mode
 	
 Then your motor interface will be available at:
 
     /sys/class/dc-motor/motor0
-	
-In both cases (w/o resistors) you are limited to unregulated motor control.	
-   
+		 
 ## LIDAR Rotational Geometry
 
 If you assume that XV11 LIDAR returns you the distance to the object you will have it *almost* right. To do it correctly take into account the rotational geometry of the LIDAR.
