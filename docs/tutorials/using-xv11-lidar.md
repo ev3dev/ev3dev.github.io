@@ -9,7 +9,6 @@ XV11 LIDAR communicates using UART, 8N1 at 3.3V with baud rate 115200.
 
 EV3 has all the required hardware to communicate with the LIDAR and ev3dev has the software.
 
-
 {% include icon.html type="warning" %}
 The instructions on this page apply to EV3.
 You can also get it working with Raspberry PI and BrickPI but BrickPI doesn't support
@@ -27,6 +26,11 @@ To interface the LIDAR one has to:
 5. Read LIDAR data using UART 
 
 For the details, follow video tutorial:
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+Use the simplified 2-wire way of soldering the motor connector. No resistor needed. See below.
+</div>
+
 
 {% include youtube-embed.html youtube_video_id="G6uVg34VzHw" %}
 
@@ -36,7 +40,7 @@ For the details, follow video tutorial:
 {% include icon.html type="info" %}
 In previous versions of this tutorial there was a scheme with resistors for auto-detection.
 Currently the recommended way is to just solder the two wires and load the dc-motor driver manually.
-It is recommended to load the dc-motor driver manually also if you have soldered the resistors. 
+In fact you should load the dc-motor driver manually also if you have soldered the resistors. 
 </div>
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" %}
