@@ -81,7 +81,7 @@ Then your motor interface will be available at:
 
 If you assume that XV11 LIDAR returns you the distance to the object you will have it *almost* right. To do it correctly take into account the rotational geometry of the LIDAR.
 
-The scheme below is for Revo LDS. For XV11 it is enough to change some sings. See [xv11test] for detailed formulas.
+The scheme below is for Revo LDS. For XV11 it is enough to change some signs. See [xv11test] for detailed formulas.
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" %}
 
