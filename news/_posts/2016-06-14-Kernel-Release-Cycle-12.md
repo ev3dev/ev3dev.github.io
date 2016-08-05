@@ -7,7 +7,7 @@ excerpt: "Kernel release cycle 12 is now available!"
 In this round of releases, we have:
 
 * `v4.4.13-12-ev3dev-ev3` for EV3.
-* `v4.4.12-12-rt-r25-11-ev3dev-bb.org` for BeagleBone.
+* `v4.4.12-ti-rt-r30-13-ev3dev-bb.org` for BeagleBone.
 * `v4.4.13-12-ev3dev-rpi` for Raspberry Pi 0/1.
 * `v4.4.13-12-ev3dev-rpi2` for Raspberry Pi 2/3.
 
