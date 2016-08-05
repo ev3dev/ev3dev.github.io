@@ -7,7 +7,7 @@ author: "@dlech"
 * Table of Contents
 {:toc}
 
-[Docker] is a light-weight virtual machine with excellent cross platform support.
+[Docker] is a light-weight virtual machine with excellent cross-platform support.
 This allows us to run something very close to the ev3dev OS on any desktop or
 notebook computer. This means that we get the same versions of all of the libraries
 running on the EV3 but compile with the power of a desktop processor.
@@ -29,21 +29,8 @@ This will only work on 64-bit operating systems. We do not maintain images for
 
 Docker has excellent documentation, so we will just send you to their
 [download](http://www.docker.com/products/docker) page. Come back when you have
-Docker installed.
+Docker installed for Windows, Mac or Linux.
 {: .well}
-
-<div class="panel panel-info" markdown="1">
-{% include icon.html type="info" %}
-Windows
-{:.panel-heading}
-
-<div class="panel-body" markdown="1">
-There are a couple of things to keep in mind when using Windows.
-
-* We are using Power Shell, not the traditional command prompt (`cmd.exe`).
-* You must explicitly allow file sharing in the Docker control panel.
-</div>
-</div>
 
 <div class="panel panel-info" markdown="1">
 {% include icon.html type="info" %}
@@ -104,6 +91,13 @@ wherever you like. In your favorite text editor, paste this and save it as
         return 0;
     }
 
+{% include icon.html type="warning" %}
+If you are using Windows, you must explicitly allow [shared drives in the Docker
+control panel first][shared-drives]{: .alert-link}!
+{: .alert .alert-warning}
+
+[shared-drives]: https://docs.docker.com/docker-for-windows/#/shared-drives
+
 Now, we compile using the docker image. First we run a new docker container...
 
     docker run --rm -it -v C:\Users\myname\example\:/home/compiler/example ev3cc
@@ -117,8 +111,7 @@ Let's break down the command:
 * `-it` is two options, it means "interactive" and "tty". This will let us use
   the command prompt inside of the container.
 * `-v <host-path>:<container-path>` lets us use a directory from our host computer
-  inside of the container. Remember, on Windows, this won't work unless you have
-  explicitly turned on the option in the Docker Control Panel.
+  inside of the container.
 * `ev3cc` is the name of the docker image we are using.
 
 In the docker container, we are logged in as a user named `compiler` and start
@@ -283,6 +276,7 @@ at `/build`. In the container, we build...
     DESTDIR=install make install
     exit
 
-The `CMAKE_TOOLCHAIN_FILE` option tells cmake to use our cross-compiler to speed
-things up. We also created a new `install` directory. This will contain the files
-that need to be copied to the EV3 to actually run the program.
+The `CMAKE_TOOLCHAIN_FILE` option sets the appropriate options in `cmake` to
+make use of the cross-compiler to speed things up. We also created a new
+`install` directory. This will contain the files that need to be copied to
+the EV3 to actually run the program.
