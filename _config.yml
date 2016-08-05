@@ -67,12 +67,14 @@ defaults:
       type: "posts"
     values:
       layout: "project"
+      excerpt_separator: <!--more-->
   -
     scope:
       path: "news"
       type: "posts"
     values:
       layout: "news"
+      excerpt_separator: <!--more-->
       
 kramdown:
     toc_levels: "2,3"
