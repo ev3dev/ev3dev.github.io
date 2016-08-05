@@ -4,6 +4,14 @@ subject: Software - C
 author: "@wasabifan"
 ---
 
+{% include icon.html type="info" %}
+If you're looking to write programs that are more than simple test apps
+or demos and are willing to try something a bit more involved, we
+recommend following the
+[Using Docker to Cross-Compile](/docs/tutorials/using-docker-to-cross-compile/)
+tutorial instead of this one.
+{: .alert .alert-info}
+
 This tutorial walks you through writing a simple C program, compiling it on
 your ev3dev device, and running it. We will assume that you have already
 configured a means of connecting to your device from a PC.
