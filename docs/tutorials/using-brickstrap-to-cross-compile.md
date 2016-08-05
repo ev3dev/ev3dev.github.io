@@ -12,6 +12,13 @@ it turns out that it is super-useful for working with compiled languages on
 the EV3!
 {: .lead .clearfix}
 
+{% include icon.html type="danger" %}
+This method of cross-compiling is being phased out. Please try [Docker]{: .alert-link}
+instead.
+{: .alert .alert-danger}
+
+[Docker]: /docs/tutorials/using-docker-to-cross-compile
+
 ## Getting Brickstrap
 
 <div class="panel panel-info">
