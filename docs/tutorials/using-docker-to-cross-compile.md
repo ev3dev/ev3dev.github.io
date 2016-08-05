@@ -9,7 +9,7 @@ author: "@dlech"
 
 [Docker] is a light-weight virtual machine with excellent cross platform support.
 This allows us to run something very close to the ev3dev OS on any desktop or
-notebook computer. This lets us get the same versions of all of the libraries
+notebook computer. This means that we get the same versions of all of the libraries
 running on the EV3 but compile with the power of a desktop processor.
 {: .lead .clearfix}
 
@@ -64,11 +64,11 @@ through it. The most important parts are:
 ## Download the ev3dev cross-compiler image
 
 We provide images with developer tools already installed. Grab the one appropriate
-for for your hardware...
+for your hardware...
 
     docker pull ev3dev-docker-docker.bintray.io/debian-jessie-armel-cross
 
-This will take some time. The download is 100s of megabytes.
+This will take some time. The download is hundreds of megabytes.
 
 
 When it is finished, we can give it a shorter name...
@@ -111,12 +111,12 @@ Now, we compile using the docker image. First we run a new docker container...
 Let's break down the command:
 
 * `run` means we are running a new container.
-* `--rm` mean to throw away the container when we are done. If you don't do this,
-  docker saves a new container from each `run` command, which takes up space on
-  your hard drive.
+* `--rm` indicates that we want to throw away the container when we are done.
+  If you don't do this, docker saves a new container from each `run` command,
+  which takes up space on your hard drive.
 * `-it` is two options, it means "interactive" and "tty". This will let us use
   the command prompt inside of the container.
-* `-v <host-path>:<container-path>` let's us use a directory from our host computer
+* `-v <host-path>:<container-path>` lets us use a directory from our host computer
   inside of the container. Remember, on Windows, this won't work unless you have
   explicitly turned on the option in the Docker Control Panel.
 * `ev3cc` is the name of the docker image we are using.
@@ -140,8 +140,8 @@ This will output:
 
     Hello World!
 
-Also, `hello` will now exist in `C:\Users\myname\example` on your host computer.
-You can copy this file to your EV3 and run it!
+Also, a binary file called `hello` will now exist in `C:\Users\myname\example`
+on your host computer. You can copy this file to your EV3 and run it!
 
 To exit the docker container, simply type...
 
@@ -165,7 +165,7 @@ a very long path name.
     export CC=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-gcc
 
 Now we can compile using the cross-compiler. It is important to add the `--sysroot`
-option because by default the cross-compiler looks in it's own system root directory
+option because by default the cross-compiler looks in its own system root directory
 instead.
 
     $CC --sysroot=/ hello.c -o hello
@@ -173,7 +173,7 @@ instead.
 
 ## Using GDB
 
-`gdb` is the GNU debugger. TODO: need to find a good link for intro to gdb.
+`gdb` is the GNU debugger. _TODO: need to find a good link for intro to gdb._
 
 Although it is possible to run gdb directly on the EV3, you will quickly run
 out of memory. To get around this, we will do remote debugging.
@@ -183,12 +183,12 @@ On your EV3, install `gdbserver`.
     sudo apt-get install gdbserver
 
 And in your docker container, install `gdb` (or use `arm-linux-gnueabi-gdb` in
-the cross-compiler directory in `/opt`)
+the cross-compiler directory in `/opt`):
 
     sudo apt-get install gdb
 
-Now, let's debug our hello program. First, we need to make sure we compile with
-debugging symbols (thats the `-g` flag). You will need to copy the new
+Now, let's debug our "hello world" program. First, we need to make sure we compile
+with debugging symbols (thats the `-g` flag). You will need to copy the new
 executable to the EV3 too if you haven't done the *mounting a remote file system*
 thing yet.
 
@@ -208,7 +208,8 @@ gdbserver.
     gdb hello
 
 This starts an interactive gdb session. You have to type in the commands
-on each line that starts with `(gdb)`.
+on each line that starts with `(gdb)`; the other lines are output and
+you should not type them.
 
     ...
     Reading symbols from /host-rootfs/home/david/work/brickdm/build/hello...done.
