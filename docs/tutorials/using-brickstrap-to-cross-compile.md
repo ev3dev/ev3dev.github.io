@@ -81,16 +81,16 @@ I am calling it `brickstrap`.
     mkdir brickstrap
     cd brickstrap
 
-Then, build an image. Right now there are 3 *flavors* of ev3dev.
-The `-b` option is the "board" definition that is used to build the image
-It should either be `ev3-ev3dev-jessie` if you are using the EV3,
-`rpi-ev3dev-jessie` for Raspberry Pi 0/1 or `rpi2-ev3dev-jessie` for Raspberry Pi 2.
-The `-d` option is the name of the directory that will be created. The `create-rootfs`
+Then, build an image. Right now there are 4 *flavors* of ev3dev.
+The `-c` option is the "component" definition that is used to build the image
+It should either be `ev3` if you are using the EV3, `bone` if you are using BeagleBone,
+`rpi1` for Raspberry Pi 0/1 or `rpi2` for Raspberry Pi 2.
+The `-p` option is the name of the project and must be `ev3dev-jessie`. The `create-rootfs`
 command tells brickstrap to build a file system but to not actually create an
 image file. This will take 20 to 30 minutes or longer depending on the speed of
 your machine and Internet connection.
 
-    brickstrap -b ev3-ev3dev-jessie -d ev3-rootfs create-rootfs
+    brickstrap -p ev3dev-jessie -c ev3 create-rootfs
 
 ## Working in the Brickstrap Shell
 
@@ -99,7 +99,7 @@ shell inside of the directory that was created. This is almost like working in
 a virtual machine except that qemu is used to run individual commands instead
 of the whole thing being run inside of a virtual environment.
 
-    brickstrap -b ev3-ev3dev-jessie -d ev3-rootfs shell
+    brickstrap -p ev3dev-jessie -c ev3 shell
 
 Now, you can install packages and run programs almost just as if you were on the
 actual EV3. Don't forget to run `apt-get update` first! For starters, you will
@@ -115,7 +115,7 @@ work there so that you can access the files that create from outside of the
 brickstrap shell. This is important because some things, like ssh, will not
 work inside the brickstrap shell.
 
-    cd /host-rootfs/home/user
+    cd /brickstrap/host-rootfs/home/user
 
 ## Sample Program
 
