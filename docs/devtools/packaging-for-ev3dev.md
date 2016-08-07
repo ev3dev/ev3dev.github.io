@@ -6,7 +6,7 @@ subject: Packaging
 * Table of Contents
 {:toc}
 
-Being a Debian distribution, debian packaging is an important part of ev3dev.
+Being a Debian distribution, Debian packaging is an important part of ev3dev.
 We maintain quite a few packages of our own and also modify some upstream
 packages.
 
@@ -16,7 +16,7 @@ Whether you are creating a new package or modifying an existing one, there are
 some tools that you are going to need. We currently use Ubuntu trusty as the
 development environment. (We will only support trusty, but any thing newer should
 work - same goes for jessie or newer on Debian). If you are using Windows or Mac
-you can use [VirtualBox] to run trusty in a virtual machine.
+you can use [VirtualBox] or [Docker] to run trusty in a virtual machine.
 
 On your Ubuntu machine, you will need to install some packages.
 Note: If you are the kind of person that doesn't install recommends, make sure
@@ -27,10 +27,6 @@ you install *all* of the recommended packages. If you don't know what
 
 If you haven't already, you will also need to [add the ev3dev archive to apt][ev3dev-archive].
 Be sure to install the `ev3dev-archive-keyring` package. We will need it later.
-
-(Optional) If you want to build packages for Raspberry Pi (1 - not 2), then you
-need to grab the patched [pbuilder-dist] script from [ev3dev-buildscripts].
-Save it somewhere in your `$PATH` (`/usr/local/bin` is a good choice).
 
 If you have never used `git` before, you need to configure your name and email.
 In a terminal, run...
@@ -53,60 +49,47 @@ And we need to configure [quilt] as well. Save the following to `~/.quiltrc`.
     QUILT_REFRESH_ARGS="-p ab"
     QUILT_DIFF_ARGS="--color=auto"
 
-And one more config file. Save the following to `~/.pbuilderrc`.
+Finally, we need to get the `pbuilder-ev3dev` script.
 
-    APTKEYRINGS="/usr/share/keyrings/ev3dev-archive-keyring.gpg"
-    # OTHERMIRROR is ignored when using pbuilder-dist. :-(
-    # LP bug #1004579
-    OTHERMIRROR="deb http://archive.ev3dev.org/debian jessie main"
+    wget https://raw.githubusercontent.com/ev3dev/ev3dev-buildscripts/master/pbuilder-ev3dev
+    chmod +x pbuilder-ev3dev
+    sudo mv pbuilder-ev3dev /usr/local/bin
 
-Finally, we need to setup `pbuilder-dist` to create a clean environment where
-the packages will actually be built. Run the following in a terminal...
+## Initializing/Updating pbuilder-ev3dev
 
-    # we have to work around a bug in pbuilder-dist.
-    export OTHERMIRROR="deb http://archive.ev3dev.org/debian jessie main"
-    # For the EV3
-    pbuilder-dist jessie armel create
-    # For Raspberry Pi 1 (raspbian) - see "(Optional)" note above.
-    pbuilder-dist jessie rpi create
-    # For Raspberry Pi 2
-    pbuilder-dist jessie armhf create
+You need to initialize a base image for each distribution and architecture that
+you are building for. These base images also need to be periodically updated,
+otherwise packages may fail to install during build because they are no longer
+available (as in the case with security updates).
+
+The same command is used for both creating and updating:
+
+    OS=debian DIST=jessie ARCH=armel pbuilder-ev3deb base
+
+Replace the variables as needed. `OS` can be `debian` or `rasbian`. `DIST` can
+be any Debian distribution supported by ev3dev (currently only `jessie`). `ARCH`
+is any valid Debian architecture (`armel`, `armhf`, etc.). The images are stored
+in `~/pbuilder-ev3dev`.
 
 ## Building an Existing Package
 
-All ev3dev debian packages are hosted at <https://github.com/ev3dev>. To get the
-package source code, you need to clone it using `git`. If you are planning
-on making changes, you should [fork] the repository on GitHub first and then
-clone your repository so that you can push the changes back to GitHub. After you
-have forked the repository on GitHub, run...
+All ev3dev Debian package source code is hosted at <https://github.com/ev3dev>.
+To get the package source code, you need to clone it using `git`. If you are
+planning on making changes, you should [fork] the repository on GitHub first
+and then clone your repository so that you can push the changes back to GitHub.
+After you have forked the repository on GitHub, run...
 
     # if you have ssh setup...
     git clone git@github.com:yourname/packagename
     # or if you don't have ssh...
     git clone https://github.com/yourname/packagename
 
-We use [git-buildpackage] to manage packages, so to build a source package (.dsc),
-run...
+To build a package, simply run `pbuilder-ev3dev` from the source code directory.
 
-    git buildpackage -S -us -uc
+    OS=debian DIST=jessie ARCH=armel pbuilder-ev3dev build
 
-The `-S` means to just build a source package and `-us -uc` means don't sign it.
-This creates several files in the parent directory.
-
-If you have not run `pbuilder-dist` in a while, you should update it to make sure
-you have the most recent package list. Replace `armel` with other architectures
-as needed.
-
-    # Don't forget our workaround.
-    export OTHERMIRROR="deb http://archive.ev3dev.org/debian jessie main"
-    pbuilder-dist jessie armel update
-
-Now, we can actually build the package.
-
-    pbuilder-dist jessie armel build ../packagename_version.dsc
-
-The .deb package(s) will be placed in `~/pbuilder/jessie-armel_result`. You can
-copy these files to your EV3 and install them.
+The .deb package(s) will be placed in `~/pbuilder-ev3dev/debian/jessie-armel`.
+You can copy these files to your EV3 and install them.
 
 ## Modifying a Package
 
@@ -129,7 +112,7 @@ for changes. It will look something like this...
 
       *
 
-     -- Your Name <youremail@example.com>  Fri, 31 Jul 2015 17:34:04 -0500
+     -- Your Name <youremail@example.com>  Fri, 31 Jul 2016 17:34:04 -0500
 
      ...
 
@@ -139,12 +122,10 @@ you install this package somewhere, you should bump the version number by runnin
 
 Now, you can make any changes you want to the source code. When you are done
 making changes, you can try them out by building the package as described above
-with one difference. You need to add an option so that it will not fail because
-of your changes.
+with one difference. You need to use the `dev-build` command so that it will
+not fail because of your changes.
 
-    git buildpackage -S -us -uc --git-ignore-new
-
-Then use `pbuilder-dist` to build the binary package as describe above.
+    OS=debian DIST=jessie ARCH=armel pbuilder-ev3dev dev-build
 
 Once you are happy with your changes, commit them and push them back to GitHub.
 **Note:** Some packages use [quilt] for managing patches. If you want to figure
@@ -174,7 +155,7 @@ building packages for yourself.
 6.  Run `git-dch -R --commit` to create a `debian/changelog` entry. Edit it by
     hand if necessary.
 7.  Run `git-buildpackage -S -us -uc --git-tag` to create the source package.
-8.  Build the release packages using `pbuilder-dist`.
+8.  Build the release packages using `pbuilder-ev3dev`.
 9.  Sign the `.changes` file in `~/pbuilder/<release>-<arch>_result/` using `debsign`.
 10. Push the new release to the ev3dev archive using `dput`.
 11. Push the git branch and tag to GitHub.
@@ -185,13 +166,14 @@ building packages for yourself.
 ## Additional Resources
 
 * [Debian Policy Manual] - make sure your package conforms to this
-* [Debian New Maintainers Guide] - good intro to debian packaging
+* [Debian New Maintainers Guide] - good intro to Debian packaging
 * [git-buildpackage] - useful info that is not in the man pages
 
 
 [VirtualBox]: https://www.virtualbox.org
+[Docker]: http://www.docker.com
 [ev3dev-archive]: {{ github.site.url }}/docs/devtools/installing-the-ev3dev-archive
-[pbuilder-dist]: https://raw.githubusercontent.com/ev3dev/ev3dev-buildscripts/master/pbuilder-dist
+[pbuilder-ev3dev]: https://raw.githubusercontent.com/ev3dev/ev3dev-buildscripts/master/pbuilder-ev3dev
 [ev3dev-buildscripts]: https://github.com/ev3dev/ev3dev-buildscripts
 [quilt]: https://wiki.debian.org/UsingQuilt
 [fork]: https://help.github.com/articles/fork-a-repo/
