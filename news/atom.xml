@@ -14,8 +14,11 @@ layout:
     <name>The ev3dev team</name>
   </author>
 
+  {% assign count = 0 %}
   {% for post in site.posts %}
   {% if post.categories contains "news" %}
+  {% assign count = count | plus: 1 %}
+  {% if count > 10 %}{% break %}{% endif %}
   <entry>
     <id>{{ site.github.url }}{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="{{ site.github.url }}{{ post.url }}"/>
