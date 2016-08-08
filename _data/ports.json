@@ -138,7 +138,7 @@
                 "name": "nxt-i2c"
             },
             {
-                "description": "Configure for I2C communications but do probe for NXT sensors.",
+                "description": "Configure for I2C communications but do not probe for NXT sensors.",
                 "id": "EV3_INPUT_PORT_MODE_OTHER_I2C",
                 "name": "other-i2c"
             },
