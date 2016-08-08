@@ -1,0 +1,10 @@
+{% comment %}
+
+Used to format x3d model
+
+Parameters:
+
+source: The url of the x3d model
+caption: (optional) A caption that is displayed under the image.
+
+{% endcomment %}<span class="screenshot"><x3d><scene><inline url="{{ include.source }}"></inline></scene></x3d> {% if include.caption %}<small>{{ include.caption }}</small>{% endif %}</span>
