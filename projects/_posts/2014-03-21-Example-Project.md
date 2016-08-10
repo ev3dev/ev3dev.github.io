@@ -9,6 +9,7 @@ author: [ "@wasabifan" ] # your GitHub user name
 programming_language: "JavaScript" # The programming language used in this project
 
 youtube_video_id: rrNaLfE9PWA # The video ID of the YouTube video to be displayed with this post
+# thumbnail_override: "/images/logo_ev3dev_mono.png" # If you don't have a YouTube video (or the video thumbnail isn't good) you can uncomment this line to set your own image for the project.
 
 project_homepage_url: "http://example.com/my-super-cool-project" # Homepage for this project
 source_code_url: "https://github.com/myuser/myrepo" # Provide a link to your code
