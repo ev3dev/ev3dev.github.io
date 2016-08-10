@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <Scene>
+    <Viewpoint orientation='-0.17891 0.96316 0.20077 1.52241' position='1.44546 0.56506 0.13511'/>
+    <Shape bboxCenter='0.526495 0.990452 -0.26578' bboxSize='5.00249 2.08094 6.57008'>
+      <ExternalGeometry url='"/images/projects/2016-08-07-Mapping/csi-body.src"'/>
+    </Shape>
+  </Scene>
+</X3D>

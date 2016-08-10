@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <Scene>
+    <Viewpoint orientation='0.01456 -0.99921 -0.03698 1.21364' position='-0.62626 0.00695 0.23438'/>
+    <Shape bboxCenter='0.00370035 0.00162201 0.00104901' bboxSize='0.182297 0.32304 0.26827'>
+      <Appearance>
+        <Material diffuseColor='0.7 0.79 0.76'/>
+      </Appearance>
+      <ExternalGeometry url='"/images/projects/2016-08-07-Mapping/face-reconstruction.src"'/>
+    </Shape>
+  </Scene>
+</X3D>
