@@ -16,6 +16,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
     
+    <!-- X3D styles and scripts -->
+	<!-- x3dom.js is nearly 1 MB of data so we only include it if necessary  -->
+    {% if page.enable_x3d_support %}
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'>
+    <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'></script>
+    {% endif %}
+	
     <!-- Custom styles -->
     <link rel="stylesheet" href="/stylesheets/site-structure.css">
     <link rel="stylesheet" href="/stylesheets/search.css">
@@ -26,7 +33,7 @@
 
     <!-- Python code highlighting -->
     <link rel="stylesheet" href="/stylesheets/pygments/monokai.css" />
-    
+
     <!-- 3rd-party libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="/javascripts/bootstrap/bootstrap.min.js"></script>
