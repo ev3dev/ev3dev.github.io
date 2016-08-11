@@ -24,7 +24,13 @@ include_masonry: "true"
                 {% assign num_words = 60 %}
                 <div class="col-xs-12 col-sm-6 col-md-4 project-thumbnail-container">
                     <div class="thumbnail">
-                        {% if post.youtube_video_id %}
+                        {% if post.thumbnail_override %}
+                            {% assign num_words = 35 %}
+                            <a href="{{ post.url }}">
+                                <img src="{{post.thumbnail_override}}" alt="{{ post.title }}" />
+                            </a>
+                        {% elsif post.youtube_video_id %}
+
                             {% assign num_words = 35 %}
                             <a href="{{ post.url }}">
                                 <img src="http://img.youtube.com/vi/{{post.youtube_video_id}}/mqdefault.jpg" alt="{{ post.title }}" />
