@@ -41,6 +41,10 @@
     <script src="/javascripts/jquery.loadTemplate-1.4.4.min.js"></script>
     <script src="/javascripts/respond.js"></script>
     <script src="/javascripts/ua-parser.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    {% if page.include_masonry %}
+    <script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    {% endif %}
 
     <!-- Caches data from requests to API endpoints -->
     <script src="/javascripts/api-cache.js"></script>
