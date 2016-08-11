@@ -1,6 +1,7 @@
 ---
 title: Projects
 excerpt: "This is where we keep a collection of some of the projects that people are working on using ev3dev. We invite you to click through the links below to see what cool stuff ev3dev can do!"
+include_masonry: "true"
 ---
 
 <p class="lead">
@@ -15,21 +16,14 @@ excerpt: "This is where we keep a collection of some of the projects that people
     <a class="alert-link" href="/docs/tutorials/adding-new-project/">Create a page and send us a pull request</a>.
 </div>
 
-<div class="row">
-    {% assign col = 0 %}
+<div class="row" id="project-thumbnail-grid" data-masonry='{ "itemSelector": ".project-thumbnail-container", "columnWidth": ".grid-sizer", "percentPosition": true }'>
+    <div class="grid-sizer col-xs-12 col-sm-6 col-md-4"></div>
     {% for post in site.posts %}
         {% if post.categories contains "projects" %}
             {% unless post.id == '/projects/2014/03/21/Example-Project' %}
-                {% if col == 3 %}
-                    </div>
-                    <div class="row">
-                    {% assign col = 0 %}
-                {% endif %}
-                {% assign col = col | plus: 1 %}
-                
                 {% assign num_words = 60 %}
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail project-thumbnail-container">
+                <div class="col-xs-12 col-sm-6 col-md-4 project-thumbnail-container">
+                    <div class="thumbnail">
                         {% if post.youtube_video_id %}
                             {% assign num_words = 35 %}
                             <a href="{{ post.url }}">
