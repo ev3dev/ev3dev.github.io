@@ -53,14 +53,14 @@ through it. The most important parts are:
 We provide images with developer tools already installed. Grab the one appropriate
 for your hardware...
 
-    docker pull ev3dev-docker-docker.bintray.io/debian-jessie-armel-cross
+    docker pull ev3dev/debian-jessie-armel-cross
 
 This will take some time. The download is hundreds of megabytes.
 
 
 When it is finished, we can give it a shorter name...
 
-    docker tag ev3dev-docker-docker.bintray.io/debian-jessie-armel-cross ev3cc
+    docker tag ev3dev/debian-jessie-armel-cross ev3cc
 
 {% include icon.html type="info" %}
 Docker images are immutable. You can always revert back to this image after making
