@@ -1,5 +1,5 @@
 ---
-title: "Using Brickstrap to Cross-Compile"
+title: "Using Brickstrap to Cross-Compile (obsolete)"
 subject: "Cross-Compiling"
 author: "@dlech"
 ---
@@ -13,72 +13,17 @@ the EV3!
 {: .lead .clearfix}
 
 {% include icon.html type="danger" %}
-This method of cross-compiling is being phased out. Please try [Docker]{: .alert-link}
-instead.
+This method of cross-compiling is no longer supported. Please use [Docker]{: .alert-link}
+instead. Brickstrap still exists, but starting with v0.6.0, it only creates
+disk images from Docker images. If you *really* want to keep using the old
+brickstrap, you can use the [0.5.x branch][legacy branch]{: .alert-link}
+or download the [legacy Debian package][legacy package]{: .alert-link}
+and install it manually.
 {: .alert .alert-danger}
 
 [Docker]: /docs/tutorials/using-docker-to-cross-compile
-
-## Getting Brickstrap
-
-<div class="panel panel-info">
-    <div class="panel-heading">
-        <h2 class="panel-title">Official OS Support</h2>
-    </div>
-<div class="panel-body" markdown="1">
-To help preserve our sanity, we are only going to officially
-support using brickstrap on one OS, namely Ubuntu trusty. Also, we only
-support 64-bit host machines (there are some unresolved issues that prevent
-brickstrap from working correctly on 32-bit). So, if you are not already
-running [trusty](http://www.ubuntu.com/download/server){: .alert-link},
-you will need to install it in a
-[virtual machine](https://www.virtualbox.org/wiki/Downloads){: .alert-link}.
-We recommend installing the server version because it requires less memory
-and you don't need a graphical desktop for what we are doing.
-
-TODO: Need to create a page for setting up a VM and move this info there
-because it applies to more than just brickstrap. For now, there is plenty
-of documentation on setting up a VM floating around the web - just do a search.
-
-Also, you will find it easier to ssh into the VM so that you can have multiple
-terminals open at once rather than trying to use the console in VirtualBox.
-To do this, you will want to change the network adapter from NAT (default)
-to bridged in the VirtualBox settings before starting the VM.
-</div>
-</div>
-
-Brickstrap is available as a .deb package from the ev3dev.org package repository.
-Once you have trusty up and running, run the following commands to install the
-`brickstrap` package.
-
-    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 2B210565
-    sudo apt-add-repository "deb http://archive.ev3dev.org/ubuntu trusty main"
-    sudo apt-get update
-    sudo apt-get install brickstrap
-
-Next, there are a few things we need to take care of. `brickstrap` uses a
-library called `libguestfs` to build the disk image. There is some setup
-required to use this.
-
-    # create a supermin appliance
-    sudo update-guestfs-appliance
-    # add yourself to the kvm group
-    # need to log out and back in for this to take effect
-    sudo usermod -a -G kvm <username>
-    # fix permissions on /boot/vmlinuz*
-    sudo chmod +r /boot/vmlinuz*
-
-And you need to add yourself to `/etc/subuid` and `/etc/subgid` to be able to
-use uid/gid mapping.
-
-    sudo usermod --add-subuids 200000-265534 --add-subgids 200000-265534 $USER
-
-{% include icon.html type="info" %}
-Check out the [brickstrap Github page]{: .alert-link}
-for the most up-to-date information on brickstrap.
-{: .alert .alert-info}
-
-[brickstrap Github page]: https://github.com/ev3dev/brickstrap
+[legacy branch]: https://github.com/ev3dev/brickstrap/tree/0.5.x
+[legacy package]: https://github.com/ev3dev/brickstrap/releases/tag/0.5.1
 
 ## Creating a Virtual Environment
 
