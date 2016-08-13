@@ -14,9 +14,10 @@ In this round of releases, we have:
 This is mainly a bug fix release.
 
 You can also find this kernel in our latest nightly build:
-[ ![Download](https://api.bintray.com/packages/ev3dev/nightly/ev3dev-jessie/images/download.svg) ][download]
 
-[download]: https://bintray.com/ev3dev/nightly/ev3dev-jessie/_latestVersion
+2016-08-13 update: Image build snapshots are now hosted [here][download].
+
+[download]: https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
 
 ### Fixes
 

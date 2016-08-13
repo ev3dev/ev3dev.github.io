@@ -285,4 +285,4 @@ button from any screen in brickman. This will open a dialog where you can select
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
 [releases]:https://github.com/ev3dev/ev3dev/releases
-[nightly]:https://bintray.com/ev3dev/nightly/ev3dev-jessie
+[nightly]:https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
