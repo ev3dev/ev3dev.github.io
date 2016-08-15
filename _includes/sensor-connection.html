@@ -30,9 +30,6 @@
 {% when 'gpio-pcf857xr' or 'pcf8591' or 'rtc-ds1307' %}
     {% assign connection = "I2C/Other" %}
     {% assign autodetect = "N[^standard-i2c]" %}
-{% when 'lm75' %}
-    {% assign connection = "I2C/Other" %}
-    {% assign autodetect = "Y[^lm75]" %}
 {% when 'ev3-uart-sensor' %}
     {% assign connection = "UART/EV3" %}
     {% assign autodetect = "Y" %}

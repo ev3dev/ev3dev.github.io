@@ -1,7 +1,12 @@
 ---
-title: Setting Up The ev3dev Build Ecosystem
+title: Setting Up The ev3dev Build Ecosystem (obsolete)
 subject: Development Setup
 ---
+
+{% include icon.html type="danger" %}
+This page is obsolete. We now use [Docker](https://www.docker.com){: .alert-link}
+for managing ev3dev image builds.
+{:.alert .alert-danger}
 
 * Table of Contents
 {:toc}

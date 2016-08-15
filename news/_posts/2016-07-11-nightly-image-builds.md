@@ -15,10 +15,10 @@ create new images every night, but just on demand whenever there are significant
 updates to packages.
 
 These images are totally untested, so we could use a few folks to try them out
-and see if they actually work. Click the nifty little badge below to find the
-downloads.
+and see if they actually work. <s>Click the nifty little badge below to find the
+downloads.</s>
 
-[ ![Download](https://api.bintray.com/packages/ev3dev/nightly/ev3dev-jessie/images/download.svg) ][download]
+2016-08-13 update: Image build snapshots are now hosted [here][download].
 
 [bintray]: https://bintray.com/
-[download]: https://bintray.com/ev3dev/nightly/ev3dev-jessie/_latestVersion
+[download]: https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
