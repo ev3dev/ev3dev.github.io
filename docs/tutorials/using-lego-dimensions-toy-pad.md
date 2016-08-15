@@ -22,7 +22,7 @@ associated to each reader.
 
 Since the beginning of 2015 several people have been reverse engineering the
 LEGO Toy Pad.
-This tutorial is strongly based on **woodenphone** [work](https://github.com/woodenphone/lego_dimensions_protocol) available at GitHub.
+This tutorial is strongly based on @woodenphone [work](https://github.com/woodenphone/lego_dimensions_protocol) available at GitHub.
 
 
 ## Requirements
