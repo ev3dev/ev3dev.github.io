@@ -1,6 +1,7 @@
 ---
 title: Using the XV11 LIDAR
 subject: Hardware - Other
+author: "@bmegli"
 ---
 
 ## Interfacing the LIDAR
