@@ -83,15 +83,12 @@ with the following rule inside:
 
     SUBSYSTEM=="usb", ATTR{idVendor}=="0e6f", ATTR{idProduct}=="0241", MODE="0666"
 
-then restart udev service:
-
-    sudo service udev restart
+then unplug and replug the LEGO Toy Pad again.
 
 ## Initializing
 
 The following script will check for the presence of a LEGO Toy Pad and initializes
-it, turning the middle (round) pad red for one second. It should be invoked with
-`sudo` or root privileges.
+it, turning the middle (round) pad red for one second:
 
 {% highlight python %}
 
