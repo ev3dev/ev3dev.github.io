@@ -77,7 +77,7 @@ with:
 To allow python script to access USB without running with root privileges we need
 to add an udev rule:
 
-    sudo nano /lib/udev/rules.d/99-dimensions.rules
+    sudo nano /etc/udev/rules.d/99-dimensions.rules
 
 with the following rule inside:
 
