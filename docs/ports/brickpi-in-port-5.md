@@ -1,5 +1,6 @@
 ---
 title: Dexter Industries BrickPi Input Port 5
+author: "@bmegli"
 ---
 
 Input Port 5 on the BrickPi is physically wired to the I2C pins on the Raspberry Pi 
