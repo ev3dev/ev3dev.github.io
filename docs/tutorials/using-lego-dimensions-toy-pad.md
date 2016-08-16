@@ -33,6 +33,7 @@ You will need:
 * a Mindstorms EV3
 * an available USB port
 * python and pysub
+* udev rule
  
 Several people reported a difference between PS3/PS4/Wii devices and Xbox so
 this tutorial most probaly will not work with the Xbox type.
@@ -70,14 +71,21 @@ You also need **python** and **pyusb**. Most linux distributions already
 include python as default so you probably only need to install the pyusb library
 with:
 
-    sudo pip install pyusb
-
-but you may need to install pip first:
-
     sudo apt-get update
-    sudo apt-get install python-pip
+    sudo apt-get install python-usb
 
+To allow python script to access USB without running with root privileges we need
+to add an udev rule:
 
+    sudo nano /lib/udev/rules.d/99-dimensions.rules
+
+with the following rule inside:
+
+    SUBSYSTEM=="usb", ATTR{idVendor}=="0e6f", ATTR{idProduct}=="0241", MODE="0666"
+
+then restart udev service:
+
+    sudo service udev restart
 
 ## Initializing
 
@@ -100,29 +108,29 @@ PAD1_RED = [0x55, 0x0e, 0xc8, 0x06, 0x01, 0xff, 0x00, 0x00, 0x01, 0x00, 0x00, 0x
 PADS_OFF = [0x55, 0x06, 0xc0, 0x02, 0x00, 0x00, 0x00, 0x00, 29, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 
 def init_usb():
-  global dev
+    global dev
 
-  dev = usb.core.find(idVendor=0x0e6f, idProduct=0x0241)
+    dev = usb.core.find(idVendor=0x0e6f, idProduct=0x0241)
 
-  if dev is None:
-    print 'Device not found'
-  else:
-      if dev.is_kernel_driver_active(0):
-        dev.detach_kernel_driver(0)
+    if dev is None:
+        print 'Device not found'
+    else:
+        if dev.is_kernel_driver_active(0):
+            dev.detach_kernel_driver(0)
 
-      print usb.util.get_string(dev, dev.iProduct)
+        print usb.util.get_string(dev, dev.iProduct)
 
-      dev.set_configuration()
-      dev.write(1,TOYPAD_INIT)
+        dev.set_configuration()
+        dev.write(1,TOYPAD_INIT)
 
-  return dev
+    return dev
 
 def main():
-  init_usb()
-  dev.write(1,PAD1_RED)
-  sleep(1)
-  dev.write(1,PADS_OFF)
-  return
+    init_usb()
+    dev.write(1,PAD1_RED)
+    sleep(1)
+    dev.write(1,PADS_OFF)
+    return
 
 {% endhighlight %}
 
@@ -165,59 +173,59 @@ LEFT_PAD   = 2
 RIGHT_PAD  = 3
 
 def init_usb():
-  global dev
+    global dev
 
-  dev = usb.core.find(idVendor=0x0e6f, idProduct=0x0241)
+    dev = usb.core.find(idVendor=0x0e6f, idProduct=0x0241)
 
-  if dev is None:
-    print 'Device not found'
-  else:
-      if dev.is_kernel_driver_active(0):
-        dev.detach_kernel_driver(0)
+    if dev is None:
+        print 'Device not found'
+    else:
+        if dev.is_kernel_driver_active(0):
+            dev.detach_kernel_driver(0)
 
-      print usb.util.get_string(dev, dev.iProduct)
+        print usb.util.get_string(dev, dev.iProduct)
 
-      dev.set_configuration()
-      dev.write(1,TOYPAD_INIT)
+        dev.set_configuration()
+        dev.write(1,TOYPAD_INIT)
 
-  return dev
+    return dev
 
 def send_command(dev,command):
 
-  # calculate checksum
-  checksum = 0
-  for word in command:
-    checksum = checksum + word
-    if checksum >= 256:
-      checksum -= 256
-  message = command+[checksum]
+    # calculate checksum
+    checksum = 0
+    for word in command:
+        checksum = checksum + word
+        if checksum >= 256:
+            checksum -= 256
+    message = command+[checksum]
 
-  # pad message
-  while(len(message) < 32):
-    message.append(0x00)
+    # pad message
+    while(len(message) < 32):
+        message.append(0x00)
 
-  # send message
-  dev.write(1, message)
+    # send message
+    dev.write(1, message)
 
-  return
+    return
 
 def switch_pad(pad, colour):
-  send_command(dev,[0x55, 0x06, 0xc0, 0x02, pad, colour[0], colour[1], colour[2],])
-  return
+    send_command(dev,[0x55, 0x06, 0xc0, 0x02, pad, colour[0], colour[1], colour[2],])
+    return
 
 def main():
-  init_usb()
-  switch_pad(ALL_PADS,RED)
-  sleep(1)
-  switch_pad(ALL_PADS,GREEN)
-  sleep(1)
-  switch_pad(ALL_PADS,BLUE)
-  sleep(1)
-  switch_pad(ALL_PADS,OFF)
-  return
+    init_usb()
+    switch_pad(ALL_PADS,RED)
+    sleep(1)
+    switch_pad(ALL_PADS,GREEN)
+    sleep(1)
+    switch_pad(ALL_PADS,BLUE)
+    sleep(1)
+    switch_pad(ALL_PADS,OFF)
+    return
 
 if __name__ == '__main__':
-  main()
+    main()
   
 {% endhighlight %}
 
@@ -271,93 +279,93 @@ uidDarthVader = (4, 161, 158, 210, 227, 64 , 128) # Darth Vader from Disney Infi
 
 
 def init_usb():
-  global dev
+    global dev
 
-  dev = usb.core.find(idVendor=0x0e6f, idProduct=0x0241)
+    dev = usb.core.find(idVendor=0x0e6f, idProduct=0x0241)
 
-  if dev is None:
-    print 'Device not found'
-  else:
-      if dev.is_kernel_driver_active(0):
-        dev.detach_kernel_driver(0)
+    if dev is None:
+        print 'Device not found'
+    else:
+        if dev.is_kernel_driver_active(0):
+            dev.detach_kernel_driver(0)
 
-      print usb.util.get_string(dev, dev.iProduct)
+        print usb.util.get_string(dev, dev.iProduct)
 
-      dev.set_configuration()
-      dev.write(1,TOYPAD_INIT)
+        dev.set_configuration()
+        dev.write(1,TOYPAD_INIT)
 
-  return dev
+    return dev
 
 
 def send_command(dev,command):
 
-  # calculate checksum
-  checksum = 0
-  for word in command:
-    checksum = checksum + word
-    if checksum >= 256:
-      checksum -= 256
-  message = command+[checksum]
+    # calculate checksum
+    checksum = 0
+    for word in command:
+        checksum = checksum + word
+        if checksum >= 256:
+            checksum -= 256
+        message = command+[checksum]
 
-  # pad message
-  while(len(message) < 32):
-    message.append(0x00)
+    # pad message
+    while(len(message) < 32):
+        message.append(0x00)
 
-  # send message
-  dev.write(1, message)
+    # send message
+    dev.write(1, message)
 
-  return
+    return
 
 
 def switch_pad(pad, colour):
-  send_command(dev,[0x55, 0x06, 0xc0, 0x02, pad, colour[0], colour[1], colour[2],])
-  return
+    send_command(dev,[0x55, 0x06, 0xc0, 0x02, pad, colour[0], colour[1], colour[2],])
+    return
 
 
 def uid_compare(uid1, uid2):
-  match = True
-  for i in range(0,7):
-    if (uid1[i] != uid2[i]) :
-       match = False
-  return match 
+    match = True
+    for i in range(0,7):
+        if (uid1[i] != uid2[i]) :
+            match = False
+    return match 
 
 
 def main():
-  init_usb()
-  if dev != None :
-    while True:
-      try:
-        in_packet = dev.read(0x81, 32, timeout = 10)
-        bytelist = list(in_packet)
+    init_usb()
+    if dev != None :
+        while True:
+            try:
+                in_packet = dev.read(0x81, 32, timeout = 10)
+                bytelist = list(in_packet)
 
-        if not bytelist:
-          pass
-        elif bytelist[0] != 0x56: # NFC packets start with 0x56
-          pass
-        else:
-          pad_num = bytelist[2]
-          uid_bytes = bytelist[6:13]
-          match = uid_compare(uid_bytes, uidDarthVader)
-          action = bytelist[5]
-          if action == TAG_INSERTED :
-            if match:
-              # Darth Vader
-              switch_pad(pad_num, RED)
-            else:
-            # some other tag
-              switch_pad(pad_num, GREEN)
-          else:
-            # some tag removed
-            switch_pad(pad_num, OFF)
+                if not bytelist:
+                    pass
+                elif bytelist[0] != 0x56: # NFC packets start with 0x56
+                    pass
+                else:
+                    pad_num = bytelist[2]
+                    uid_bytes = bytelist[6:13]
+                    match = uid_compare(uid_bytes, uidDarthVader)
+                    action = bytelist[5]
+                    if action == TAG_INSERTED :
+                        if match:
+                            # Darth Vader
+                            switch_pad(pad_num, RED)
+                        else:
+                            # some other tag
+                            switch_pad(pad_num, GREEN)
+                    else:
+                        # some tag removed
+                        switch_pad(pad_num, OFF)
 
-      except usb.USBError, err:
-        pass
+            except usb.USBError, err:
+                pass
 
-    switch_pad(ALL_PADS,OFF)
+        switch_pad(ALL_PADS,OFF)
     return
 
 if __name__ == '__main__':
-  main()
+    main()
   
 {% endhighlight %}
 
