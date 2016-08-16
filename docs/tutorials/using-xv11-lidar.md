@@ -29,7 +29,7 @@ To interface the LIDAR one has to:
 For the details, follow video tutorial:
 <div class="alert alert-info" markdown="1">
 {% include icon.html type="info" %}
-Use the simplified 2-wire way of soldering the motor connector. No resistor needed. See below.
+Use the simplified 2-wire way of soldering the motor connector. No resistors needed. See below.
 </div>
 
 
@@ -128,8 +128,11 @@ Quite obviously I am not encouraging you to do that and if you do, you're doing 
 ## References
 
 [xv11hacking] - for more information on LIDAR integration
+
 [Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is not exactly Revo LDS but they share a lot of design
+
 [laser specs] - for laser specification from official Neato site
+
 [laser safety class 1] - for wikipedia entry on laser safety classes
 
 [xv11test]: https://github.com/bmegli/ev3dev-mapping
