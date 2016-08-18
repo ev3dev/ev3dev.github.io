@@ -44,6 +44,9 @@ through it. The most important parts are:
 * Add the Docker package repository
 * Install the `docker-engine` package
 * Add your user to the `docker` group
+ 
+Also, you will need to install `qemu-user-static` on your host computer, otherwise
+you will get an error: `exec user process caused "exec format error"`.
 </div>
 </div>
 
