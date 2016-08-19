@@ -10,7 +10,7 @@ author: "@JorgePe"
 ## Intro
 
 The [LEGO Dimensions game](http://www.lego.com/en-us/dimensions/support) makes
-use of NFC technology to allow some iteraction between physical LEGO creations
+use of NFC technology to allow some interaction between physical LEGO creations
 (characters, vehicles and gadgets) and the videogame.
 
 The LEGO Toy Pad is in fact just a custom USB triple NFC reader that can read
@@ -131,7 +131,7 @@ def main():
 
 {% endhighlight %}
 
-If everything OK the output should be:
+If everything was OK the output should be:
 
     LEGO READER V2.10
 
@@ -143,7 +143,7 @@ In the above script we've seen that all commands sent to the LEGO Toy Pad have
 the same size: 32 bytes.
 
 The first bytes define the command, some other bytes the arguments and the
-remaing bytes are just for assure proper communication (checksum).
+remaing bytes are just to assure proper communication (checksum).
 
 I'll show just how to change the color of each pad but there are some other
 commands available (switch on/off, fade, flash...). You can see these commands
@@ -244,7 +244,7 @@ Ultralight (but not C, so NTAG215).
 The script also tracks unknown UIDs. So:
 - if it recognizes Darth Vader, it turns the corresponding pad RED;
 - if it doesn't recognize the tag, it turns the pad GREEN;
-- whenever a tag is removed it turns the pad OFF;
+- whenever a tag is removed it turns the pad OFF:
 
 
 {% highlight python %}
