@@ -143,7 +143,7 @@ In the above script we've seen that all commands sent to the LEGO Toy Pad have
 the same size: 32 bytes.
 
 The first bytes define the command, some other bytes the arguments and the
-remaing bytes are just for assure proper communication (checksum).
+remaing bytes are just to assure proper communication (checksum).
 
 I'll show just how to change the color of each pad but there are some other
 commands available (switch on/off, fade, flash...). You can see these commands
