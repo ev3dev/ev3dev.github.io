@@ -36,7 +36,7 @@ You will need:
 * udev rule
  
 Several people reported a difference between PS3/PS4/Wii devices and Xbox so
-this tutorial most probaly will not work with the Xbox type.
+this tutorial most probably will not work with the Xbox type.
 
 You don't really need a Mindstorms EV3 as this tutorial can be used on almost any
 recent linux system (like my Ubuntu laptop or my Raspberry Pi). If using ev3dev,
@@ -67,7 +67,7 @@ You can also check with lsusb:
     ...
 
 
-You also need **python** and **pyusb**. Most linux distributions already
+You also need **python** and **pyusb**. Most Linux distributions already
 include python as default so you probably only need to install the pyusb library
 with:
 
@@ -143,11 +143,11 @@ In the above script we've seen that all commands sent to the LEGO Toy Pad have
 the same size: 32 bytes.
 
 The first bytes define the command, some other bytes the arguments and the
-remaing bytes are just to assure proper communication (checksum).
+remaining bytes are just to assure proper communication (checksum).
 
 I'll show just how to change the color of each pad but there are some other
 commands available (switch on/off, fade, flash...). You can see these commands
-in woodenphone's [lego_dimensions_gateway.py](https://github.com/woodenphone/lego_dimensions_protocol/blob/master/lego_dimensions_gateway.py) script.
+in @woodenphone's [lego_dimensions_gateway.py](https://github.com/woodenphone/lego_dimensions_protocol/blob/master/lego_dimensions_gateway.py) script.
 
 {% highlight python %}
 
