@@ -244,7 +244,7 @@ Ultralight (but not C, so NTAG215).
 The script also tracks unknown UIDs. So:
 - if it recognizes Darth Vader, it turns the corresponding pad RED;
 - if it doesn't recognize the tag, it turns the pad GREEN;
-- whenever a tag is removed it turns the pad OFF;
+- whenever a tag is removed it turns the pad OFF:
 
 
 {% highlight python %}
