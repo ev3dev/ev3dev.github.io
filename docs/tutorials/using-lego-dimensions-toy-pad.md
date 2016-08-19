@@ -131,7 +131,7 @@ def main():
 
 {% endhighlight %}
 
-If everything OK the output should be:
+If everything was OK the output should be:
 
     LEGO READER V2.10
 
