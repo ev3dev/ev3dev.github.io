@@ -10,7 +10,7 @@ author: "@JorgePe"
 ## Intro
 
 The [LEGO Dimensions game](http://www.lego.com/en-us/dimensions/support) makes
-use of NFC technology to allow some iteraction between physical LEGO creations
+use of NFC technology to allow some interaction between physical LEGO creations
 (characters, vehicles and gadgets) and the videogame.
 
 The LEGO Toy Pad is in fact just a custom USB triple NFC reader that can read
