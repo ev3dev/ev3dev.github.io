@@ -164,8 +164,14 @@ Now we can compile using the cross-compiler. It is important to add the `--sysro
 option because by default the cross-compiler looks in its own system root directory
 instead.
 
-    $CC --sysroot=/ hello.c -o hello
+    $CC --sysroot=/ -marm -march=armv4t -mfloat-abi=soft -o hello hello.c
 
+{% include icon.html type="info" %}
+Why all of the extra `-m` options? The CPU in the EV3 is so outdated that no
+one ships a cross-compiler for it anymore. If someone would like to compile a
+cross-compiler for us, that would be super. Until then, we are using an older
+toolchain that works but just requires some extra typing.
+{: .alert .alert-info}
 
 ## Using GDB
 
