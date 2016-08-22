@@ -43,7 +43,7 @@ One advantage of the usage of ev3dev with Java is the option to study some solut
 In this release, the library has implemented the support for the EV3 Brick and their sensors & actuators included in the following kits:
 
 * [45544 LEGO MINDSTORMS Education EV3 Core Set](https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set-/5003400)
-* [31313 LEGO MINDSTORMS EV3](http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3)
+* [31313 LEGO MINDSTORMS EV3](http://www.lego.com/en-us/mindstorms/products/mindstorms-ev3-31313)
 
 In the next releases, the library will add support for [Raspberry Pi](https://www.raspberrypi.org/) boards as [Mindsensors PiStorms](http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit-raspberry-pi-brain-for-lego-robot) & [Dexter Industries BrickPi+](http://www.dexterindustries.com/brickpi/) in order to use the power of Raspberry Pi. 
 
