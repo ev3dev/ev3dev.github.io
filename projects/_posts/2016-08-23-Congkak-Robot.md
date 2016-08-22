@@ -9,7 +9,7 @@ project_homepage_url: "https://github.com/jimmyasyraf/congkak-robot/" # Homepage
 source_code_url: "https://github.com/jimmyasyraf/congkak-robot/" # Provide a link to your code
 ---
 
-![Congkak robot](https://github.com/jimmyasyraf/congkak-robot/raw/master/CqNqS9HUAAAI-Qq.jpg){: style="width: 100%" }
+![Congkak robot](https://github.com/jimmyasyraf/congkak-robot/raw/master/CqNqS9HUAAAI-Qq.jpg){: .img-responsive }
 
 Congkak robot is a robot that plays Congkak, a South-East Asian board game. There are two sets of seven holes plus an additional big hole at the end of each side called house. Players start by scooping balls from one of the hole from their side and distributing one ball at each consecutive hole except for the opponent’s house hole, in a clockwise manner. Players with the most number of balls in their house hole wins.
 
