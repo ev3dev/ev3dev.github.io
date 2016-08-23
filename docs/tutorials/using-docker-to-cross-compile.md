@@ -158,7 +158,7 @@ To use this version of `gcc` instead, there are a couple things we need to do.
 First, let's make a variable to save some typing because the cross-compiler has
 a very long path name.
 
-    export CC=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-gcc
+    export CC=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-gcc
 
 Now we can compile using the cross-compiler. It is important to add the `--sysroot`
 option because by default the cross-compiler looks in its own system root directory
@@ -279,7 +279,7 @@ This runs a new container with our source code at `/src` and our empty directory
 at `/build`. In the container, we build...
 
     cd /build
-    cmake /src -DCMAKE_TOOLCHAIN_FILE=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabi/toolchain.cmake
+    cmake /src -DCMAKE_TOOLCHAIN_FILE=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/toolchain.cmake
     make
     mkdir install
     DESTDIR=install make install
