@@ -1,7 +1,3 @@
 User-agent: *
 Disallow: /issues/
-Disallow: /fonts/
-Disallow: /images/
-Disallow: /javascripts/
-Disallow: /stylesheets/
 Disallow: /contributing/
