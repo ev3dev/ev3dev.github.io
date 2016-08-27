@@ -1,0 +1,24 @@
+---
+title: Upgrading ev3dev Using Shell
+subject: Upgrading
+---
+
+Once you've written the ev3dev image to the SD card, booted, and setup a network 
+connection, you may want to update to the latest kernel.  To do so:
+
+1. Connect to the EV3 using SSH.  (Wireless or USB.)  The default login is 
+username=robot, password=maker.
+
+2. Execute these commands in sequence:
+
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get dist-upgrade
+    sudo reboot
+
+3. Wait for each command to complete before typing the next.  Some steps require 
+confirmation to proceed.  Press 'y' when asked.  The `upgrade` step may take up 
+to a couple hours to complete.
+
+4. After the brick has rebooted, press `About` on the brick's menu to confirm it
+has a current kernel.
