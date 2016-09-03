@@ -20,7 +20,7 @@
         {{ page.title | xml_escape }}
         <small>{{ page.subtitle }}</small>
         {% if edit_path %}
-            <a class="btn btn-primary pull-right" href="{{ edit_path }}">Edit on Github</a>
+            <a class="btn btn-primary pull-right" href="{{ edit_path }}"><span class="glyphicon glyphicon-pencil"></span> Edit on Github</a>
         {% elsif show_news_link %}
             <a class="btn btn-primary pull-right" href="/news/atom.xml">Subscribe via Atom</a>
         {% endif %}
