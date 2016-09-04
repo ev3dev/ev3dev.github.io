@@ -39,8 +39,9 @@ to learn.
 
 Go is a compiled, statically-typed language created at Google. It aims to be
 simple and light while still providing modern language features. While it is a
-compiled language, cross-compilation is _not_ required to run code on ev3dev,
-unlike other compiled languages; this makes Go much simpler to work with.
+compiled language, it has its own built-in cross-compiler, which means that you
+don't need to spend time setting up special tooling like you do with most other
+compiled languages.
 
 [Get started with Go](https://github.com/ev3go/ev3dev){: .btn .btn-default }
 
@@ -113,7 +114,7 @@ Python [here](https://github.com/ev3dev/ev3devKit/tree/ev3dev-jessie/demo/python
 </div>
 </div>
 
-## C#
+## C\#
 <https://github.com/pgrudzien12/ev3dev-lang-csharp>
 
 ## Pure Java
