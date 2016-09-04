@@ -6,7 +6,7 @@ excerpt: "If you are looking to write a program that takes advantage of motors, 
 
 Before you can start writing code that runs on ev3dev, you need to choose a
 programming language. Community members have built libraries that let you use
-featuressuch as motors and sensors from your code. Choose the language you want
+features such as motors and sensors from your code. Choose the language you want
 from below and follow the link to the library's homepage get started.
 
 ## Python
