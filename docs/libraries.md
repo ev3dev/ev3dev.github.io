@@ -1,5 +1,5 @@
 ---
-title: Interface libraries
+title: Libraries
 subtitle: Control ev3dev devices from code
 excerpt: "If you are looking to write a program that takes advantage of motors, sensors, or other native devices, using a language binding is the way to go. These are the best options for each language."
 ---
@@ -13,7 +13,7 @@ such as motors and sensors from your code. Choose the language you want from bel
 Python is a high-level, general-purpose, interpreted scripting language. It is great for beginners, while also powerful for experienced coders.
 If you are new to programming and unsure which language to choose, Python is a great choice!
 
-**Warning!** There is another Python library created by @topikachu which is _not_ the same as this one. When searching for documentation online, make sure that you are reading about @rhempel's `ev3dev-lang-python`.
+**Warning!** There is another Python library named `python-ev3` created by @topikachu which is _not_ the same as this one. When searching for documentation online, make sure that you are reading about @rhempel's `ev3dev-lang-python`.
 
 [Get started with Python](https://github.com/rhempel/ev3dev-lang-python){: .btn .btn-default }
 
@@ -29,7 +29,8 @@ languages, and is relatively easy to learn.
 ## Go
 <https://github.com/ev3go/ev3dev>
 
-Go is a compiled, statically-typed language created by at Google. It aims to be simple and light while still providing modern language features.
+Go is a compiled, statically-typed language created at Google. It aims to be simple and light while still providing modern language features. While it is a compiled language, cross-compilation is _not_ required to run code on ev3dev,
+unlike other compiled languages; this makes Go much simpler to work with.
 
 [Get started with Go](https://github.com/ev3go/ev3dev){: .btn .btn-default }
 
@@ -58,17 +59,54 @@ for ev3dev is written using this library.
 
 [Get started with ev3devKit](https://github.com/ev3dev/ev3devKit){: .btn .btn-default }
 
---------
+<br>
+<br>
 
-{% include icon.html type="danger" %}
-Listings below this point are for libraries that are either not up-to-date or have been abandoned. Use them with caution, as functionality will likely be broken.
-{: .alert .alert-danger}
+# Alternative implementations and wrappers
+
+Some of the libraries above also implement interfaces for other languages. If you're looking for an alternative implementation for any reason, try out the options below.
+
+## Python, Ruby and Perl with ev3dev-c
+<https://github.com/in4lio/ev3dev-c>
+
+ev3dev-c also has wrappers for [Python](https://github.com/in4lio/ev3dev-c/tree/master/python), [Ruby](https://github.com/in4lio/ev3dev-c/tree/master/ruby) and [Perl](https://github.com/in4lio/ev3dev-c/tree/master/perl). 
+
+## Python with ev3devKit
+<https://github.com/ev3dev/ev3devKit>
+
+Ev3devKit also has a Python wrapper. You can find demos of using ev3devKit from Python [here](https://github.com/ev3dev/ev3devKit/tree/ev3dev-jessie/demo/python).
+
+# Out-of-date, abandoned and unfinished implementations
+
+<div class="panel panel-danger">
+<div class="panel-heading">
+    {% include icon.html type="danger" %}
+    Listings below this point are for libraries that are not up-to-date, have been abandoned, or are unfinished.
+</div>
+<div class="panel-body">
+<p>
+    Use them with caution, as some functionality will likely be broken. If you see a library below that you'd like to see in a better state, consider contributing to it to get it updated and ready to use.
+</p>
+</div>
+</div>
+
+## C#
+<https://github.com/pgrudzien12/ev3dev-lang-csharp>
 
 ## Pure Java
 <https://github.com/mob41/ev3dev-lang-java>
 
 ## Java LeJOS compatibility layer
 <https://github.com/ev3dev-lang-java/ev3dev-lang-java>
+
+## R
+<https://github.com/ev3dev/ev3dev-lang/tree/R-legacy/R>
+
+## Lua
+<https://github.com/rhempel/ev3dev-lang-lua>
+
+## Ruby
+<https://github.com/noanoa07/ev3dev_ruby>
 
 ## Clojure
 <https://github.com/annapawlicka/clj-ev3dev>
