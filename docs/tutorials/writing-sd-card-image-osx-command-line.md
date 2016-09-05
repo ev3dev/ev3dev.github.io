@@ -1,5 +1,5 @@
 ---
-title: Writing an SD Card Image Using Command Line Tools on OS X.
+title: Writing an SD Card Image Using Command Line Tools on OS X
 subject: SD Card Image
 redirect_from:
   - /docs/tutorials/writing-sd-card-image-mac-command-line/
