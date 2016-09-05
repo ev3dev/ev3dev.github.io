@@ -3,15 +3,8 @@ title: Connecting to the Internet via USB
 subject: Networking
 ---
 
-{% include icon.html type="info" %}
-If you do not need to access the Internet from the EV3 brick, consider
-using [tethering]{: .alert-link} instead.
-{: class="alert alert-info"}
-
-[tethering]: /docs/tutorials/using-usb-tethering
-
 {% include icon.html type="warning" %}
-These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link}.
+These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link} and later.
 If you are using an older version, please upgrade.
 {: .alert .alert-warning}
 
@@ -72,46 +65,6 @@ If you are using an older version, please upgrade.
         in the future.
 
         {% include screenshot.html source="/images/brickman/wired-status-online-connect-automatically-selected.png" %}
-
-    9.  For `ssh` access to the EV3 under OS X, you can use the good old `ssh`
-        program from the terminal window. In a terminal, run the following command.
-
-            ssh robot@ev3dev.local
-
-        <div class="panel panel-info">
-        <div class="panel-heading">
-        {% include icon.html type="info" %}
-        If you have never connected before, you will be prompted to confirm the
-        authenticity of the host, so type `yes` when prompted.
-        </div>
-        <div class="panel-body">
-        <pre>
-            The authenticity of host 'ev3dev.local (192.168.2.3)' can't be established.
-            RSA key fingerprint is xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
-            Are you sure you want to continue connecting (yes/no)? yes
-            Warning: Permanently added 'ev3dev.local' (RSA) to the list of known hosts.
-        </pre>
-        </div>
-        </div>
-
-    10. Enter your password when prompted. The default password is `maker`.
-
-            robot@ev3dev's password: 
-                         _____     _
-               _____   _|___ /  __| | _____   __
-              / _ \ \ / / |_ \ / _` |/ _ \ \ / /
-             |  __/\ V / ___) | (_| |  __/\ V /
-              \___| \_/ |____/ \__,_|\___| \_/
-            
-            Debian jessie on LEGO MINDSTORMS EV3!
-            
-            The programs included with the Debian GNU/Linux system are free software;
-            the exact distribution terms for each program are described in the
-            individual files in /usr/share/doc/*/copyright.
-            
-            Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-            permitted by applicable law.
-            robot@ev3dev:~$ 
 
 *   {: tab="Ubuntu"}{% include icon.html type="info" %}
     These instructions were written using Ubuntu 15.10 and the default desktop
@@ -175,48 +128,6 @@ If you are using an older version, please upgrade.
         in the future.
 
         {% include screenshot.html source="/images/brickman/wired-status-online-connect-automatically-selected.png" %}
-
-    10. Now we are going to connect to the EV3 using ssh. Type the following
-        command in a terminal window.
-
-            ssh robot@ev3dev.local
-
-        <div class="panel panel-info">
-        <div class="panel-heading">
-        {% include icon.html type="info" %}
-        If you have never connected before, you will be prompted to confirm the
-        authenticity of the host, so type `yes` when prompted.
-        </div>
-        <div class="panel-body">
-        <pre>
-            The authenticity of host 'ev3dev.local (10.42.0.228)' can't be established.
-            ECDSA key fingerprint is SHA256:LjEw+uEG5x7kl9LwVeynjeybuBHT3VQB5simpcVqmu8.
-            Are you sure you want to continue connecting (yes/no)? yes
-            Warning: Permanently added 'ev3dev.local,10.42.0.228' (ECDSA) to the list of known hosts.
-            Warning: Permanently added '10.42.0.228' (ECDSA) to the list of known hosts.
-        </pre>
-        </div>
-        </div>
-
-    11. Enter your password when prompted. The default password is `maker`.
-
-            robot@ev3dev.local's password: 
-                         _____     _
-               _____   _|___ /  __| | _____   __
-              / _ \ \ / / |_ \ / _` |/ _ \ \ / /
-             |  __/\ V / ___) | (_| |  __/\ V /
-              \___| \_/ |____/ \__,_|\___| \_/
-
-            Debian jessie on LEGO MINDSTORMS EV3!
-
-            The programs included with the Debian GNU/Linux system are free software;
-            the exact distribution terms for each program are described in the
-            individual files in /usr/share/doc/*/copyright.
-
-            Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-            permitted by applicable law.
-            robot@ev3dev:~$ 
-
 
 *   {: tab="Windows"}{% include icon.html type="info" %}
     These instructions were written using Windows 10, but should work on Windows
@@ -324,26 +235,6 @@ If you are using an older version, please upgrade.
         *Online* to indicate that your EV3 is connected to the Internet.
 
         {% include screenshot.html source="/images/brickman/wired-status-online-connect-selected.png" %}
-
-    16. Now we are going to connect to the EV3 using ssh. To do this, you need a
-        program called [PuTTY]. Start PuTTY. In the *PuTTY Configuration* window,
-        type in `ev3dev`. Then click the *Open* button to connect.
-
-        {% include screenshot.html source="/images/windows/10/putty-configuration-ev3dev.png" %}
-
-        {% include icon.html type="info" %}
-        The first time you connect, you'll get a warning about the new fingerprint.
-        This is normal. Just click *Yes* to continue. You won't see this again
-        unless you re-flash your SD card.
-        {% include screenshot.html source="/images/windows/10/putty-security-alert.png" %}
-        {: class="alert alert-info"}
-
-        Once you are connected, type in your username (`robot`) and your password
-        (`maker` if you haven't changed it yet) and then you should be logged in.
-
-        {% include screenshot.html source="/images/windows/10/putty-robot-at-ev3dev.png" %}
 {: tab-list="os"}
 
-
-[PuTTY]: http://www.chiark.greenend.org.uk/%7Esgtatham/putty/
 [linux.inf]: https://raw.githubusercontent.com/ev3dev/ev3-kernel/ev3dev-jessie/Documentation/usb/linux.inf
