@@ -3,13 +3,6 @@ title: Connecting to the Internet via Bluetooth
 subject: Networking
 ---
 
-{% include icon.html type="info" %}
-If you do not need to access the Internet from the EV3 brick, consider
-using [tethering]{: .alert-link} instead.
-{: .alert .alert-info}
-
-[tethering]: /docs/tutorials/using-bluetooth-tethering
-
 {% include icon.html type="warning" %}
 These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link}.
 If you are using an older version, please upgrade.
@@ -190,46 +183,6 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
 
-    15. For `ssh` access to the EV3 under OS X, you can use the good old `ssh`
-        program in Terminal. In a terminal, run the following command.
-
-            ssh robot@ev3dev.local
-
-        <div class="panel panel-info">
-        <div class="panel-heading">
-        {% include icon.html type="info" %}
-        If you have never connected before, you will prompted to confirm the
-        authenticity of the host, so type `yes` when prompted.
-        </div>
-        <div class="panel-body">
-        <pre>
-            The authenticity of host 'ev3dev.local (192.168.2.3)' can't be established.
-            RSA key fingerprint is xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
-            Are you sure you want to continue connecting (yes/no)? yes
-            Warning: Permanently added '192.168.2.3' (RSA) to the list of known hosts.
-        </pre>
-        </div>
-        </div>
-
-    16. Enter your password. The default password is `maker`.
-
-            robot@ev3dev's password: 
-                         _____     _
-               _____   _|___ /  __| | _____   __
-              / _ \ \ / / |_ \ / _` |/ _ \ \ / /
-             |  __/\ V / ___) | (_| |  __/\ V /
-              \___| \_/ |____/ \__,_|\___| \_/
-            
-            Debian jessie on LEGO MINDSTORMS EV3!
-            
-            The programs included with the Debian GNU/Linux system are free software;
-            the exact distribution terms for each program are described in the
-            individual files in /usr/share/doc/*/copyright.
-            
-            Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-            permitted by applicable law.
-            robot@ev3dev:~$ 
-
 *   {: tab="Ubuntu"}{% include icon.html type="info" %}
     These instructions were written using Ubuntu 16.04 and the default desktop.
     It should work for other versions of Ubuntu, derivatives of Ubuntu and
@@ -302,45 +255,9 @@ If you are using an older version, please upgrade.
 
         {% include screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
 
-    9.  Now we are going to connect to the EV3 using ssh. In a terminal, run the
-        following command.
-
-            ssh robot@ev3dev.local
-
-        <div class="panel panel-info">
-        <div class="panel-heading">
-        {% include icon.html type="info" %}
-        If you have never connected before, you will prompted to confirm the
-        authenticity of the host, so type `yes` when prompted.
-        </div>
-        <div class="panel-body">
-        <pre>
-            The authenticity of host '10.25.9.98 (10.25.9.98)' can't be established.
-            ECDSA key fingerprint is be:9e:66:8b:d1:14:b8:8a:ea:4c:6e:07:2d:d9:68:05.
-            Are you sure you want to continue connecting (yes/no)? yes
-            Warning: Permanently added '10.25.9.98' (ECDSA) to the list of known hosts.
-        </pre>
-        </div>
-        </div>
-
-    10. Enter your password when prompted. The default password is `maker`.
-
-            robot@ev3dev's password: 
-                         _____     _
-               _____   _|___ /  __| | _____   __
-              / _ \ \ / / |_ \ / _` |/ _ \ \ / /
-             |  __/\ V / ___) | (_| |  __/\ V /
-              \___| \_/ |____/ \__,_|\___| \_/
-            
-            Debian jessie on LEGO MINDSTORMS EV3!
-            
-            The programs included with the Debian GNU/Linux system are free software;
-            the exact distribution terms for each program are described in the
-            individual files in /usr/share/doc/*/copyright.
-            
-            Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-            permitted by applicable law.
-            robot@ev3dev:~$ 
-
 *   {: tab="Windows"}__HELP WANTED!__ See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
 {: tab-list="os"}
+
+Now that you have a network connection, you should
+[connect to your EV3 with SSH](/docs/tutorials/connecting-to-ev3dev-with-ssh)
+if you haven't done so already.

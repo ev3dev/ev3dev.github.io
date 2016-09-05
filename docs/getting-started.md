@@ -240,6 +240,10 @@ to connect for the first time. You can setup additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
 
+Now that you have a network connection, you should
+[connect to your EV3 with SSH](/docs/tutorials/connecting-to-ev3dev-with-ssh)
+if you haven't done so already.
+
 </div>
 </div>
 

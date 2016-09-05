@@ -238,3 +238,7 @@ If you are using an older version, please upgrade.
 {: tab-list="os"}
 
 [linux.inf]: https://raw.githubusercontent.com/ev3dev/ev3-kernel/ev3dev-jessie/Documentation/usb/linux.inf
+
+Now that you have a network connection, you should
+[connect to your EV3 with SSH](/docs/tutorials/connecting-to-ev3dev-with-ssh)
+if you haven't done so already.
