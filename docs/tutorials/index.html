@@ -1,22 +1,16 @@
 ---
 title: Tutorials
 excerpt: "Tutorials on a wide range of ev3dev functionality, including networking, motor control, and usage of extra hardware."
+include_masonry: "true"
 ---
 
 {% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
 
-{% assign col = 0 %}
-<div class="row">
+<div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-panel", "columnWidth": ".grid-sizer", "percentPosition": true }'>
+    <div class="grid-sizer col-xs-12 col-sm-6 col-md-6"/>
     {% for group in tutorials %}
-        {% if group.name != "" %}
-            {% if col == 2 %}
-                </div>
-                <div class="row">
-                {% assign col = 0 %}
-            {% endif %}
-            {% assign col = col | plus: 1 %}
-            
-            <div class="col-lg-6">
+        {% unless group.name == "" %}
+            <div class="col-xs-12 col-sm-6 col-md-6 tutorial-panel">
                 <div class="panel panel-default rounded-panel" id="group-{{ group.name | downcase | replace: ' ','-' }}">
                     <div class="panel-heading">{{ group.name }}</div>
                     <div class="panel-body">
@@ -34,6 +28,6 @@ excerpt: "Tutorials on a wide range of ev3dev functionality, including networkin
                     </div>
                 </div>
             </div>
-        {% endif %}
+        {% endunless %}
     {% endfor %}
 </div>
