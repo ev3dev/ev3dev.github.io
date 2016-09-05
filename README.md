@@ -7,21 +7,27 @@ Feel free to fork and make a pull request.
 
 You can view your changes locally by installing [jekyll](https://help.github.com/articles/using-jekyll-with-pages).
 
-Installing Jekyll in Ubuntu 14.04
+Installing Jekyll in Ubuntu 16.04
 ---
 
 ### Install Ruby via apt-get
-    sudo apt-get install git ruby2.0 ruby2.0-dev nodejs
+    sudo apt-get install git ruby ruby-dev zlib1g-dev nodejs
     sudo gem install bundler
 
 ### Install Ruby via RVM (Ruby Version Manager)
-If you hit any snags with apt another option is to install via RVM. Note that
-you must do the 'source' line when you open a new xterm.
+If you use ruby for other things and don't want to mess up you system ruby
+installation, you can install ruby via `rvm` instead. Note that you must do the
+'source' line when you open a new xterm or add it to `~/.bashrc`.
 
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     \curl -sSL https://get.rvm.io | bash -s stable --ruby
     source ~/.rvm/scripts/rvm
     
+You will still need to run the following too...
+
+    sudo apt-get install git zlib1g-dev nodejs
+    sudo gem install bundler
+
 ### Checkout Code and Run Jekyll
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
