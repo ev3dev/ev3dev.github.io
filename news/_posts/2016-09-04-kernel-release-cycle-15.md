@@ -16,7 +16,7 @@ it is detected.
 
 <!--more-->
 
-We also enable some MIDI drivers in the EV3 kernel, so you can try hooking it up
+We also enabled some MIDI drivers in the EV3 kernel, so you can try hooking it up
 to your MIDI keyboard or see what happens with @JorgePe's [laser harp].
 
 [laser harp]: http://ofalcao.pt/blog/series/lego-laser-harp
