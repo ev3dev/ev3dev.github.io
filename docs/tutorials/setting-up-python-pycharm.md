@@ -92,6 +92,7 @@ Now let's make a new project using our versioning system. Just type:
 
     mkdir myproject.git
     git init --bare myproject.git
+    mkdir myproject
 
 Yay! Git is initialised in the new folder we created. We have a new project
 repository. Now we can clone this repository on our development machine, but
@@ -136,7 +137,7 @@ PyCharm master password is needed for your PyCharm password storage. Cancel
 the checkout, type the master password and try again.
 
 So let's add some code. Right click on the 'myproject' folder in the left
-column and choose new > python file. Name it `run-motor`. PyCharm will ask
+column and choose new > python file. Name it `run_motor`. PyCharm will ask
 if you want to add it to Git. That's nice! Of course we want that.
 
 Now add the following code:
