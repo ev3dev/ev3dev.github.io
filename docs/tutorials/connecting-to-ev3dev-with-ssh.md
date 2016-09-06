@@ -3,6 +3,10 @@ title: Connecting to Ev3dev Using SSH
 subject: Networking
 ---
 
+Connecting with SSH will allow you to run commands on the EV3 over the network
+so that you can deploy code, change settings, and install tools. Make sure that
+you have configured a network connection before continuing.
+
 *   {: tab="Mac OSX"}
     OS X supports the good old `ssh` program. In a terminal, run the following command
     to use it to connect to your EV3 or other ev3dev device.
