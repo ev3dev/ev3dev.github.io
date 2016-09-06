@@ -17,4 +17,5 @@ source: The url of the x3d model
 caption: (optional) A caption that is displayed under the model.
 
 {% endcomment %}
+<span class="screenshot" style="width: 100%;"> {% if page.enable_x3d_support %} <x3d style="width: 100%; height: 40vh;"> <scene> <inline url="{{ include.source }}"></inline> </scene> </x3d> {% if include.caption %} <br/> <small>{{ include.caption }}</small> {% endif %} {% else %} X3D support was not enabled. Add enable_x3d_support: true to your YAML front matter https://jekyllrb.com/docs/frontmatter/	 {% endif %} </span>
 
