@@ -170,7 +170,7 @@
         "num_modes": 9,
         "prefix": "in",
         "source_file": "drivers/lego/ev3/legoev3_ports_in.c",
-        "source_line": 293,
+        "source_line": 297,
         "url_name": "legoev3-input-port"
     },
     {

@@ -16,7 +16,7 @@ include_masonry: "true"
     <a class="alert-link" href="/docs/tutorials/adding-new-project/">Create a page and send us a pull request</a>.
 </div>
 
-<div class="row" id="project-thumbnail-grid" data-masonry='{ "itemSelector": ".project-thumbnail-container", "columnWidth": ".grid-sizer", "percentPosition": true }'>
+<div class="row masonry-container" id="project-thumbnail-grid" data-masonry='{ "itemSelector": ".project-thumbnail-container", "columnWidth": ".grid-sizer", "percentPosition": true }'>
     <div class="grid-sizer col-xs-12 col-sm-6 col-md-4"></div>
     {% for post in site.posts %}
         {% if post.categories contains "projects" %}

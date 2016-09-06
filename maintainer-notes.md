@@ -1,14 +1,14 @@
 Notes for site maintenance
 ===
 
-_tl;dr_ document that summarizes notes on the structure and maintenance of this site.
+Document with notes on the structure and maintenance of this site.
 
 Bootstrap, Bootswatch, and styling
 ---
-- Build on Twitter Bootstrap
+- Built on Twitter Bootstrap
 - Styling based on Bootswatch's "Darkly" theme
 - Custom modifications to defaults from Bootstrap and Bootswatch are stored in `/_sass/_custom-variables.scss` and `/stylesheets/bootstrap.scss`
-- Jekyll builds Bootstrap, Bootswatchm and custom modifications manually on every build. We don't use a pre-build release CSS file.
+- Jekyll builds Bootstrap, Bootswatch and custom modifications manually on every build. We don't use a pre-built release CSS file.
 - Bootstrap and Bootswatch files are spread across 3 different directories. In all cases, the files are unmodified from the versions found in official releases.
   - `/_sass/`
     - `/_sass/bootstrap/`: Core Bootstrap Sass styles. New copies can be found in official releases under `bootstrap-sass-<version>.zip/bootstrap-sass-<version>/assets/stylesheets/`.

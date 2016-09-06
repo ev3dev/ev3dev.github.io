@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#markdown-toc').wrap('<div class="well pull-right" />');
     $('#markdown-toc').addClass('list-unstyled');
 
-    $('#project-thumbnail-grid').imagesLoaded().progress(function() {
-        $('#project-thumbnail-grid').masonry('layout');
+    $('.masonry-container').imagesLoaded().progress(function() {
+        $('.masonry-container').masonry('layout');
     })
 })

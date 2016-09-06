@@ -12,7 +12,7 @@ source_code_url: "https://github.com/donwojtallo/ev3dev-snake-js" # Provide a li
 
 A simple snake game for Lego EV3 running ev3dev firmware.
 
-![alt tag](https://raw.github.com/donwojtallo/ev3dev-snake-js/master/photo.jpg){. img-responsive}
+![alt tag](https://raw.github.com/donwojtallo/ev3dev-snake-js/master/photo.jpg){: .img-responsive}
 
 You can download the source from Github page.
 Got trouble with running this game? Ask for help [here](https://github.com/donwojtallo/ev3dev-snake-js/issues).

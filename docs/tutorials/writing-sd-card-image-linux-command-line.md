@@ -1,5 +1,5 @@
 ---
-title: Writing an SD Card Image Using Linux Command Line Tools.
+title: Writing an SD Card Image Using Linux Command Line Tools
 subject: SD Card Image
 ---
 

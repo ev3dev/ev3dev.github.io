@@ -44,6 +44,9 @@ through it. The most important parts are:
 * Add the Docker package repository
 * Install the `docker-engine` package
 * Add your user to the `docker` group
+ 
+Also, you will need to install `qemu-user-static` on your host computer, otherwise
+you will get an error: `exec user process caused "exec format error"`.
 </div>
 </div>
 
@@ -155,14 +158,20 @@ To use this version of `gcc` instead, there are a couple things we need to do.
 First, let's make a variable to save some typing because the cross-compiler has
 a very long path name.
 
-    export CC=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-gcc
+    export CC=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-gcc
 
 Now we can compile using the cross-compiler. It is important to add the `--sysroot`
 option because by default the cross-compiler looks in its own system root directory
 instead.
 
-    $CC --sysroot=/ hello.c -o hello
+    $CC --sysroot=/ -marm -march=armv4t -mfloat-abi=soft -o hello hello.c
 
+{% include icon.html type="info" %}
+Why all of the extra `-m` options? The CPU in the EV3 is so outdated that no
+one ships a cross-compiler for it anymore. If someone would like to compile a
+cross-compiler for us, that would be super. Until then, we are using an older
+toolchain that works but just requires some extra typing.
+{: .alert .alert-info}
 
 ## Using GDB
 
@@ -270,7 +279,7 @@ This runs a new container with our source code at `/src` and our empty directory
 at `/build`. In the container, we build...
 
     cd /build
-    cmake /src -DCMAKE_TOOLCHAIN_FILE=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabi/toolchain.cmake
+    cmake /src -DCMAKE_TOOLCHAIN_FILE=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/toolchain.cmake
     make
     mkdir install
     DESTDIR=install make install
