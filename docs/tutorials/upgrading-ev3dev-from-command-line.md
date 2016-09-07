@@ -1,5 +1,5 @@
 ---
-title: Upgrading ev3dev From the Command Line
+title: Upgrading Ev3dev from the Command Line
 subject: System
 ---
 
