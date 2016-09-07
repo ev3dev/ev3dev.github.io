@@ -7,7 +7,7 @@ include_masonry: "true"
 {% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
 
 <div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-panel", "columnWidth": ".grid-sizer", "percentPosition": true }'>
-    <div class="grid-sizer col-xs-12 col-sm-6 col-md-6"/>
+    <div class="grid-sizer col-xs-12 col-sm-6 col-md-6"></div>
     {% for group in tutorials %}
         {% unless group.name == "" %}
             <div class="col-xs-12 col-sm-6 col-md-6 tutorial-panel">
