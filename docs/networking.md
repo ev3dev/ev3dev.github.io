@@ -13,6 +13,10 @@ You have a few options for connecting to the internet.
 
 The simplest route is to purchase a Wi-Fi dongle and plug it into the EV3's USB port. Almost any USB Wi-Fi dongle which supports Linux will work, including the one that is supported by the official LEGO software. Once you have plugged in a dongle, you can use Brickman's "**_Wireless and Networks_ > _Wi-Fi_**" menu to connect to a network.
 
+### With a USB Ethernet adapter
+
+If you have a USB Ethernet adapter (or can buy one) which supports Linux, you can use it to access the network from your EV3. Just plug it into the brick and connect the adapter to an ethernet cable; no configuration is related.
+
 ### With USB through a PC
 
 You can use a PC to connect to the EV3 through its mini USB port and share an internet connection. To try out connecting via USB, see our [Connecting to the Internet via USB](/docs/tutorials/connecting-to-the-internet-via-usb/) tutorial.
