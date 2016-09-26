@@ -28,15 +28,11 @@
     <tr>
         <th>sysfs class</th>
         <td>
-            {%if motor.device_class %}
-                <span markdown="1">{{ motor.device_class }}</span><!--
-            {% else %}
-                <span markdown="1">[lego-motor]</span><!--
+            {%if motor.motor_type == "ev3" %}
+                <span markdown="1">[tacho-motor](/docs/drivers/tacho-motor-class)</span>
+            {% elsif motor.motor_type == "rcx" %}
+                <span markdown="1">[dc-motor](/docs/drivers/dc-motor-class)</span>
             {% endif %}
-            {%if motor.device_class_footnote %}
-                --><span markdown="1">{{ motor.device_class_footnote }}</span><!--
-            {% endif %}
-            -->
         </td>
     </tr>
     {% if motor.vendor_id %}
