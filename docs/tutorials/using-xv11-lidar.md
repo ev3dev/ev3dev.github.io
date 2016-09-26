@@ -52,6 +52,8 @@ In both cases (w/o resistors) you are limited to unregulated motor control.
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" %}
 
+{% include screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" %}
+
 ## Sensor Port Mode
 
 I am assuming your data connector is connected to `port 1` (adjust commands otherwise).
