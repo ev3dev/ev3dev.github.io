@@ -44,15 +44,13 @@ Currently the recommended way is to just solder the two wires and load the dc-mo
 In fact you should load the dc-motor driver manually also if you have soldered the resistors. 
 </div>
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" %}
-
-In both cases (w/o resistors) you are limited to unregulated motor control.
+{% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" caption="LIDAR motor connector scheme" %}
 	
 ## Data and Power Connector
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" %}
+{% include screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" caption="LIDAR data connector scheme" %}
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" %}
+{% include screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" caption="1 - materials 2 - cut the cables 3 - strip wire 4 - solder grounds 5 - solder connector 6 - heat shrink tubing 7 - the connector 8 - connected" %}
 
 ## Sensor Port Mode
 
@@ -86,7 +84,7 @@ If you assume that XV11 LIDAR returns you the distance to the object you will ha
 
 The scheme below is for Revo LDS. For XV11 it is enough to change some signs. See [xv11test] for detailed formulas.
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" %}
+{% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" caption="Revo LDS rotational geometry"%}
 
 You may ignore the above and the reported distance will still be approximately correct. 
 You will introduce systematic error, dependent on angle, bounded by 25 mm on x and y.
@@ -113,7 +111,7 @@ Order same spacers (25 mm high for M3 screws are ok). Drill the holes for spacer
 
 Everything for just a few € or $.
 
-{% include screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" %}
+{% include screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" caption="LIDAR stand from polycarbonate with M3 screws spacers" %}
 
 ## Laser Specs and Safety
 
