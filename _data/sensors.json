@@ -1,30 +1,5 @@
 [
     {
-        "id": "GENERIC_EV3_ANALOG_SENSOR",
-        "mode_info": [
-            {
-                "data_sets": "1",
-                "data_type": "LEGO_SENSOR_DATA_S32",
-                "decimals": "3",
-                "description": "Raw analog value",
-                "id": "0",
-                "name": "ANALOG",
-                "raw_max": "5000",
-                "si_max": "5000",
-                "units": "V",
-                "units_description": "volts",
-                "value0": "Voltage (0 - 5000)"
-            }
-        ],
-        "name": "ev3-analog-XX",
-        "num_modes": "1",
-        "sensor_type": "ev3-analog-sensor",
-        "source_file": "drivers/lego/sensors/ev3_analog_sensor_defs.c",
-        "source_line": 46,
-        "url_name": "generic-ev3-analog-sensor",
-        "vendor_part_name": "Generic EV3 Analog Sensor"
-    },
-    {
         "analog_mode_info": [
             {
                 "id": "0",
@@ -73,6 +48,31 @@
         "source_line": 117,
         "url_name": "generic-nxt-analog-sensor",
         "vendor_part_name": "Generic NXT Analog Sensor"
+    },
+    {
+        "id": "GENERIC_EV3_ANALOG_SENSOR",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "decimals": "3",
+                "description": "Raw analog value",
+                "id": "0",
+                "name": "ANALOG",
+                "raw_max": "5000",
+                "si_max": "5000",
+                "units": "V",
+                "units_description": "volts",
+                "value0": "Voltage (0 - 5000)"
+            }
+        ],
+        "name": "ev3-analog-XX",
+        "num_modes": "1",
+        "sensor_type": "ev3-analog-sensor",
+        "source_file": "drivers/lego/sensors/ev3_analog_sensor_defs.c",
+        "source_line": 46,
+        "url_name": "generic-ev3-analog-sensor",
+        "vendor_part_name": "Generic EV3 Analog Sensor"
     },
     {
         "default_address": "0x01",

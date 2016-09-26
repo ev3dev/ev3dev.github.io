@@ -34,7 +34,7 @@ jumbotron-content: |
       <p class="lead">
           ev3dev is a <a href="https://www.debian.org/">Debian Linux</a>-based
           operating system that runs on several LEGO<sup>&reg;</sup> MINDSTORMS compatible
-          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3">LEGO<sup>&reg;</sup> MINDSTORMS EV3</a>
+          platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/mindstorms-ev3-31313">LEGO<sup>&reg;</sup> MINDSTORMS EV3</a>
           and <a href="https://www.raspberrypi.org/">Raspberry Pi</a>-powered
           <a href="http://www.dexterindustries.com/BrickPi/">BrickPi</a>.
       </p>

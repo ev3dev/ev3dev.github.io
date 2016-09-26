@@ -27,10 +27,10 @@ compared to motors that do not provide feedback.
 
 ## Identifying the Motor
 
-Always be sure to check the `port_name` attribute to identify a motor (same with
-sensors). Here is a command that lists the `port_name` of all tacho motors...
+Always be sure to check the `address` attribute to identify a motor (same with
+sensors). Here is a command that lists the `address` of all tacho motors...
 
-    $ for f in /sys/class/tacho-motor/*; do echo -n "$f: "; cat $f/port_name; done
+    $ for f in /sys/class/tacho-motor/*; do echo -n "$f: "; cat $f/address; done
     /sys/class/tacho-motor/motor0: outA
     /sys/class/tacho-motor/motor1: outB
     /sys/class/tacho-motor/motor2: outC
