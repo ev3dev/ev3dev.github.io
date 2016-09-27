@@ -92,16 +92,40 @@ Regardless, the LIDAR has also random error with variance dependent on distance,
 
 ## Testing the LIDAR
 
-You can use [xv11test] from the github repository to:
+Interested to see LIDAR output in realtime? Follow `ev3dev-mapping`
+
+Interested in LIDAR geometry and internals? Follow `xv11test`
+
+### xv11test
+
+You can use xv11test from the github repository to:
 
 - test the LIDAR
 - plot the LIDAR scan 
-- get idea how to communicate with the LIDAR
 - get idea how to interpret the LIDAR output and apply geometric correction
-- use `xv11lidar.h` and `xv11lidar.c` as a simple C library to communicate with the LIDAR
-- run `xv11test` with `-raw` argument and pipe LIDAR data to your program (C, C# and Java examples included)
 
-Go to repository and follow readme.md instructions.
+Follow readme.md in [xv11lidar-test] repository.
+
+### ev3dev-mapping
+
+Plot the readings in real-time with [ev3dev-mapping]
+
+Get [Unity] on your PC. While it's installing:
+
+- on EV3 follow Building Instructions at [ev3dev-mapping-modules]
+- on PC follow Installation Instructions at [ev3dev-mapping-ui]
+
+On EV3 plug LIDAR data connector to `port 1`, motor connector to `port C` and:
+
+``` bash
+cd ev3dev-mapping-modules/bin
+./TestingTheLIDAR.sh # put in/out ports to other-uart/dc-motor modes
+./ev3control 8004 500 # start ev3control with UDP port and timeout
+``` 
+
+On PC open ev3dev-mapping-ui in Unity and follow the steps below:
+
+{% include screenshot.html source="/images/xv11-tutorial/testing_lidar_with_mapping.png" caption="ev3dev-mapping-ui - 1 - open the scene 2 - select Robot object 3 - set IP addresses 4 - hit play"%}
 
 ## Mechanical Integration
 
@@ -135,8 +159,23 @@ Quite obviously I am not encouraging you to do that and if you do, you're doing 
 
 [laser safety class 1] - for wikipedia entry on laser safety classes
 
-[xv11test]: https://github.com/bmegli/ev3dev-mapping
+[xv11lidar-test] - repository for testing and learning how to work with the LIDAR
+
+[ev3dev-mapping] - meta-repository grouping ev3dev-mapping subprojects
+
+[ev3dev-mapping-modules] - EV3 side modules of ev3dev-mapping
+
+[ev3dev-mapping-ui] - PC side visualization/control of ev3dev-mapping
+
+[Unity] - the Unity engine 
+
+[xv11lidar-test]: https://github.com/bmegli/xv11lidar-test
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
 [Revo LDS Whitepaper]: http://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
 [laser specs]: https://22eccb839e35374fb256-2040e42aee01271224a32cb55734f01b.ssl.cf2.rackcdn.com/wp-content/uploads/2015/04/Important_Information_XV_Series_3-language_EN-FR-ES_low1.pdf
 [laser safety class 1]: https://en.wikipedia.org/wiki/Laser_safety#Class_1
+
+[ev3dev-mapping]: https://github.com/bmegli/ev3dev-mapping
+[ev3dev-mapping-modules]: https://github.com/bmegli/ev3dev-mapping-modules
+[ev3dev-mapping-ui]: https://github.com/bmegli/ev3dev-mapping-ui
+[Unity]: https://unity3d.com/
