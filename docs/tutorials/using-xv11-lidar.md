@@ -4,6 +4,10 @@ subject: Hardware - Other
 author: "@bmegli"
 ---
 
+* Table of Contents
+{:toc}
+
+
 ## Interfacing the LIDAR
 
 XV11 LIDAR communicates using UART, 8N1 at 3.3V with baud rate 115200.
@@ -21,10 +25,10 @@ To interface the LIDAR one has to:
 
 1. Solder the connector for LIDAR motor
 2. Solder the connector for LIDAR data and power
-3. Put the EV3 input port in other-uart mode
-4. Put the EV3 output port in dc-motor mode
-4. Spin the LIDAR motor CCW with speed around 300 RPM
-5. Read LIDAR data using UART 
+3. Put the EV3 output port in dc-motor mode
+4. Put the EV3 input port in other-uart mode
+5. Spin the LIDAR motor CCW with speed around 300 RPM
+6. Read LIDAR data using UART 
 
 For the details, follow video tutorial:
 <div class="alert alert-info" markdown="1">
@@ -32,25 +36,46 @@ For the details, follow video tutorial:
 Use the simplified 2-wire way of soldering the motor connector. No resistors needed. See below.
 </div>
 
-
 {% include youtube-embed.html youtube_video_id="G6uVg34VzHw" %}
 
 ## Motor Connector
 
-<div class="alert alert-info" markdown="1">
-{% include icon.html type="info" %}
-In previous versions of this tutorial there was a scheme with resistors for auto-detection.
-Currently the recommended way is to just solder the two wires and load the dc-motor driver manually.
-In fact you should load the dc-motor driver manually also if you have soldered the resistors. 
-</div>
+You will need half of EV3 cable, header mating [JST PH 2.0mm pitch] connector with 2 pins and heat shrink tubes.
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" caption="LIDAR motor connector scheme" %}
+
+{% include screenshot.html source="/images/xv11-tutorial/lidar_motor_photo.jpg" caption="1 - materials 2 - strip wire 3 - solder connector 4 - heat shrink tubing 5 - the connector 6 - connected" %}
+
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+With the above scheme use positive duty cycle to drive the motor counterclockwise.
+</div>
 	
 ## Data and Power Connector
+
+You will need half of EV3 cable, half of USB cable, header mating [JST PH 2.0mm pitch] connector with 4 pins and heat shrink tubes.
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" caption="LIDAR data connector scheme" %}
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" caption="1 - materials 2 - cut the cables 3 - strip wire 4 - solder grounds 5 - solder connector 6 - heat shrink tubing 7 - the connector 8 - connected" %}
+
+## Motor Port Mode
+
+<div class="alert alert-warning" markdown="1">
+{% include icon.html type="warning" %}
+LIDAR should be spinning counterclockwise at around 200-300 RPM. With the wiring from this tutorial use positive duty cycle around 45 to spin counterclockwise at around 300 RPM.
+</div>
+	
+I am assuming your motor connector is connected to `port A` and it is the only motor.	
+
+First, you have to put the motor port in `dc-motor` mode:
+
+    echo dc-motor > /sys/class/lego-port/port4/mode
+	
+Then your motor interface will be available at:
+
+    /sys/class/dc-motor/motor0
+
 
 ## Sensor Port Mode
 
@@ -65,24 +90,12 @@ You can read and write to or from LIDAR at:
     /dev/tty_in1
 	
 It is binary tty communication. More information in `Testing the LIDAR` section.
-	
-## Motor Port Mode
-	
-I am assuming your motor connector is connected to `port A` and it is the only motor.	
-
-First, you have to put the motor port in `dc-motor` mode:
-
-    echo dc-motor > /sys/class/lego-port/port4/mode
-	
-Then your motor interface will be available at:
-
-    /sys/class/dc-motor/motor0
-		 
+			 
 ## LIDAR Rotational Geometry
 
 If you assume that XV11 LIDAR returns you the distance to the object you will have it *almost* right. To do it correctly take into account the rotational geometry of the LIDAR.
 
-The scheme below is for Revo LDS. For XV11 it is enough to change some signs. See [xv11test] for detailed formulas.
+The scheme below is for Revo LDS. For XV11 it is enough to change some signs. See [xv11lidar-test] for detailed formulas.
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" caption="Revo LDS rotational geometry"%}
 
@@ -91,6 +104,12 @@ You will introduce systematic error, dependent on angle, bounded by 25 mm on x a
 Regardless, the LIDAR has also random error with variance dependent on distance, surface and reflection angle.
 
 ## Testing the LIDAR
+
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+If your EV3 connects using Wi-Fi you need USB hub to power the laser. LIDAR consumes around 135 mA at 5V. 
+You can use passive (non-powered) USB hub for the laser and reasonable Wi-Fi dongle. 
+</div>
 
 Interested to see LIDAR output in realtime? Follow `ev3dev-mapping`
 
@@ -115,7 +134,7 @@ Get [Unity] on your PC. While it's installing:
 - on EV3 follow Building Instructions at [ev3dev-mapping-modules]
 - on PC follow Installation Instructions at [ev3dev-mapping-ui]
 
-On EV3 plug LIDAR data connector to `port 1`, motor connector to `port C` and:
+On EV3 plug LIDAR data connector to `port 1`, LIDAR power connector to USB, motor connector to `port C` and:
 
 ``` bash
 cd ev3dev-mapping-modules/bin
@@ -151,13 +170,15 @@ Quite obviously I am not encouraging you to do that and if you do, you're doing 
 
 ## References
 
-[xv11hacking] - for more information on LIDAR integration
+[xv11hacking] - for even more information on LIDAR integration
 
 [Revo LDS Whitepaper] - for an article describing Revo LDS, written by the engineers from Neato Robotics. XV11 LIDAR is not exactly Revo LDS but they share a lot of design
 
 [laser specs] - for laser specification from official Neato site
 
 [laser safety class 1] - for wikipedia entry on laser safety classes
+
+[JST PH 2.0mm pitch] - the LIDAR connector, 4 pins for data, 2 pins for motor
 
 [xv11lidar-test] - repository for testing and learning how to work with the LIDAR
 
@@ -169,6 +190,7 @@ Quite obviously I am not encouraging you to do that and if you do, you're doing 
 
 [Unity] - the Unity engine 
 
+[JST PH 2.0mm pitch]: http://www.jst-mfg.com/product/detail_e.php?series=199
 [xv11lidar-test]: https://github.com/bmegli/xv11lidar-test
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
 [Revo LDS Whitepaper]: http://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
