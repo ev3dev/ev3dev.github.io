@@ -61,8 +61,9 @@ tutorial.
 
 Once you have a connection between your PC and ev3dev, you will almost certainly
 want to establish an SSH connection to the EV3. This allows you to install
-software, run code, and edit files. Read more in [Our nonexistent guide](#todo).
+software, run code, and edit files. Read more in [Our nonexistent guide](/docs/tutorials/connecting-to-ev3dev-with-ssh/).
 
 ### File sharing with NFS
 
-One option to transfer code, configuration, and other files is NFS. You can learn more in [Setting Up an NFS Fileshare](/docs/tutorials/setting-up-an-nfs-file-share/).
+One option to transfer code, configuration, and other files is NFS. You can learn
+more in [Setting Up an NFS Fileshare](/docs/tutorials/setting-up-an-nfs-file-share/).
