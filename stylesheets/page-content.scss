@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "custom-variables";
+
 .language-icon {
     height: 25px;
 }
@@ -42,4 +44,24 @@
 
 .release-link-container {
     display: none;
+}
+
+:target.tutorial-panel {
+    animation: target-tutorial-panel-fade 5s 1;
+
+    .panel-heading {
+        animation: target-tutorial-panel-header-fade 5s 1;
+    }
+}
+
+@keyframes target-tutorial-panel-fade {
+    0% { border-color: $brand-primary; }
+    80% { border-color: $brand-primary; }
+    100% { border-color: $panel-default-border; }
+}
+
+@keyframes target-tutorial-panel-header-fade {
+    0% { border-left-color: $brand-primary; }
+    80% { border-left-color: $brand-primary; }
+    100% { border-left-color: $panel-default-border; }
 }
