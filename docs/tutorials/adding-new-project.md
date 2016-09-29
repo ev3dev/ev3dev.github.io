@@ -1,6 +1,6 @@
 ---
 title: Adding a New Project
-subject: This Website
+subject: website
 ---
 
 We currently have a [projects page] where you can browse projects that have

@@ -1,6 +1,6 @@
 ---
 title: Connecting to the Internet via USB
-subject: Networking
+subject: networking
 ---
 
 {% include icon.html type="warning" %}

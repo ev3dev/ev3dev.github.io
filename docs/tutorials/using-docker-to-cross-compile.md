@@ -1,6 +1,6 @@
 ---
 title: "Using Docker to Cross-Compile"
-subject: "Cross-Compiling"
+subject: cross-compiling
 author: "@dlech"
 ---
 

@@ -1,0 +1,27 @@
+- id: networking
+  title: Networking
+  description: "Connecting ev3dev to a local network or the internet, and connecting to an ev3dev device from a PC."
+- id: system
+  title: "Ev3dev System"
+  description: "Configuring, updating and modifying an ev3dev installation."
+- id: website
+  title: This Website
+  description: "Using this website and contributing content."
+- id: hardware-motors
+  title: "Using Motors"
+  description: "Configuring and using motors on ev3dev, from the basic tacho motors to more complex third-party ones."
+- id: hardware-extras
+  title: Extra Hardware
+  description: "Configuration and usage of specialty and otherwise nonstandard hardware."
+- id: software-languages
+  title: Programming Languages and Tooling
+  description: "Configuring a development environment, installing new languages, and using advanced language tools."
+- id: software-editors
+  title: "Text Editors"
+  description: "Tips on using text editors which ship with ev3dev out-of-the-box."
+- id: cross-compiling
+  title: Cross-Compiling Code
+  description: "Compiling code to run on an EV3 or other ev3dev device from a host PC."
+- id: sd-card-image
+  title: SD Card Imaging
+  description: "Deprecated guides on flashing an SD card with ev3dev images."

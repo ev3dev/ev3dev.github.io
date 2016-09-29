@@ -4,30 +4,33 @@ excerpt: "Tutorials on a wide range of ev3dev functionality, including networkin
 include_masonry: "true"
 ---
 
-{% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
+These tutorials will walk you through working with a wide range of hardware and
+software. If you're looking for help with a specific goal, this is the place to
+look!
 
 <div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-panel", "columnWidth": ".grid-sizer", "percentPosition": true }'>
     <div class="grid-sizer col-xs-12 col-sm-6 col-md-6"></div>
-    {% for group in tutorials %}
-        {% unless group.name == "" %}
-            <div class="col-xs-12 col-sm-6 col-md-6 tutorial-panel">
-                <div class="panel panel-default rounded-panel" id="group-{{ group.name | downcase | replace: ' ','-' }}">
-                    <div class="panel-heading">{{ group.name }}</div>
-                    <div class="panel-body">
-                        <ul>
-                            {% assign items = group.items | sort: "title" %}
-                            {% for item in items %}
-                            <li>
-                                <a href="{{ item.url }}">{{ item.title }}</a>
-                                {% if item.subtitle %}
-                                    ({{ item.subtitle }})
-                                {% endif %}
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+    {% for group in site.data.tutorial-groups %}
+        <div class="col-xs-12 col-sm-6 col-md-6 tutorial-panel">
+            <div class="panel panel-default rounded-panel" id="group-{{ group.name | downcase | replace: ' ','-' }}">
+                <div class="panel-heading">{{ group.title }}</div>
+                <div class="panel-body">
+                    <p>
+                        {{ group.description }}
+                    </p>
+                    <ul>
+                        {% assign items = site.pages | where: "category", "tutorials" | where: "subject",group.id %}
+                        {% for item in items %}
+                        <li>
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                            {% if item.subtitle %}
+                                ({{ item.subtitle }})
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
-        {% endunless %}
+        </div>
     {% endfor %}
 </div>

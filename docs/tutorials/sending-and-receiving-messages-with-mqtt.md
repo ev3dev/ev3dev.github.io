@@ -1,6 +1,6 @@
 ---
 title: Sending and Receiving Messages with MQTT
-subject: Networking
+subject: networking
 author: "@JorgePe"
 ---
 

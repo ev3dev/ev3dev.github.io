@@ -1,6 +1,6 @@
 ---
 title: Upgrading Ev3dev
-subject: System
+subject: system
 ---
 
 {% include icon.html type="warning" %}

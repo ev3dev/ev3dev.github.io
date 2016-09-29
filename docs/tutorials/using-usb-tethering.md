@@ -1,6 +1,6 @@
 ---
 title: Using USB Tethering
-subject: Networking
+subject: networking
 ---
 
 {% include icon.html type="info" %}
