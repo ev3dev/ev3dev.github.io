@@ -158,72 +158,73 @@ building packages for yourself.
 
     You can do this automatically:
 
-        1.  Delete any `debian/changelog` entries since the last release (you
-            should have at least one for doing a test build).
-        2.  Make sure there are not any uncommited changes in git. If there are
-            changes, commit them.
-        3.  Run `gbp dch -R --commit` to create a `debian/changelog` entry.
-            Edit it by hand if necessary.
+    1.  Delete any `debian/changelog` entries since the last release (you
+        should have at least one for doing a test build).
+    2.  Make sure there are not any uncommited changes in git. If there are
+        changes, commit them.
+    3.  Run `gbp dch -R --commit` to create a `debian/changelog` entry.
+        Edit it by hand if necessary.
 
     Or if you have been maintaining it by hand:
 
-        1.  Run `dch -r`.
-        2.  Run `git commit -a -m "Update changelog for release"`.
+    1.  Run `dch -r`.
+    2.  Run `git commit -a -m "Update changelog for release"`.
 
 5.  Tag the commit:
 
-            gbp buildpackage --git-tag-only
+        gbp buildpackage --git-tag-only
 
 6.  Build the release packages using `pbuilder-ev3dev`. If you have run the `base`
     command recently, you can omit those lines.
 
-            # build for EV3
-            OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev base
-            OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev build
-            # build for RPi 2/3 and BeagleBone
-            OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev base
-            DEBUILD_OPTIONS="--binary-only" OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev build
-            # build for RPi 0/1
-            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
+        # build for EV3
+        OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev base
+        OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev build
+        # build for RPi 2/3 and BeagleBone
+        OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev base
+        DEBUILD_OPTIONS="--binary-only" OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+        # build for RPi 0/1
+        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
             OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
 
     If your package does not have any binary components (like a pure python
     package), you can do this instead:
 
-            # build for EV3, RPi 2/3 and BeagleBone
-            OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev base
-            OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev build
-            # build for RPi 0/1
-            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
-            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+        # build for EV3, RPi 2/3 and BeagleBone
+        OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev base
+        OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev build
+        # build for RPi 0/1
+        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
+        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
 
 7.  Sign the `.changes` files in `~/pbuilder-ev3dev/$OS/$DIST-$ARCH/` using `debsign`.
 
         debsign ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
         debsign ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
         debsign ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
+
 8.  Upload the new release to the ev3dev archive using `dput`.
 
     If you have never uploaded before, you will need to send your SSH public key
     to @dlech and save the following as `~/.dput.cf`:
 
-            [ev3dev-deb]
-            login           = ev3dev-upload
-            fqdn            = reprepro.ev3dev.org
-            method          = sftp
-            incoming        = ~/debian
+        [ev3dev-deb]
+        login           = ev3dev-upload
+        fqdn            = reprepro.ev3dev.org
+        method          = sftp
+        incoming        = ~/debian
 
-            [ev3dev-rpi]
-            login           = ev3dev-upload
-            fqdn            = reprepro.ev3dev.org
-            method          = sftp
-            incoming        = ~/raspbian
+        [ev3dev-rpi]
+        login           = ev3dev-upload
+        fqdn            = reprepro.ev3dev.org
+        method          = sftp
+        incoming        = ~/raspbian
 
-            [ev3dev-ubuntu]
-            login           = ev3dev-upload
-            fqdn            = reprepro.ev3dev.org
-            method          = sftp
-            incoming        = ~/ubuntu
+        [ev3dev-ubuntu]
+        login           = ev3dev-upload
+        fqdn            = reprepro.ev3dev.org
+        method          = sftp
+        incoming        = ~/ubuntu
 
     Then upload:
 
@@ -232,7 +233,6 @@ building packages for yourself.
         dput ev3dev-rpi ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
 
     Please be careful about `armhf` and `ev3dev-deb` vs. `ev3dev-rpi`!
-
     You should receive an email after each upload. If not, let @dlech know about it.
 
 9.  Push the git branch and tag to GitHub.
