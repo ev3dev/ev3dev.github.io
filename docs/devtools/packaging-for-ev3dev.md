@@ -185,7 +185,7 @@ building packages for yourself.
         DEBUILD_OPTIONS="--binary-only" OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev build
         # build for RPi 0/1
         OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
-            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
 
     If your package does not have any binary components (like a pure python
     package), you can do this instead:
