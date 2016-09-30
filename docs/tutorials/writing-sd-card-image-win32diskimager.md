@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Win32DiskImager
-subject: sd-card-image
+group: sd-card-image
 ---
 
 {% include imaging-tutorial-etcher-banner.html %}

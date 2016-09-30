@@ -9,30 +9,32 @@ include_masonry: "true"
     software. If you're looking for help with a specific goal, this is the place to
     look!
 </p>
-
-<div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-group-item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
-    <div class="grid-sizer col-xs-12 col-sm-6 col-md-6"></div>
-    {% for group in site.data.tutorial-groups %}
-        <div class="col-xs-12 col-sm-6 col-md-6 tutorial-group-item">
-            <div class="panel panel-default rounded-panel tutorial-panel" id="group-{{ group.id }}">
-                <div class="panel-heading">{{ group.title }}</div>
-                <div class="panel-body">
-                    <p>
-                        {{ group.description }}
-                    </p>
-                    <ul>
-                        {% assign items = site.pages | where: "category", "tutorials" | where: "subject",group.id %}
-                        {% for item in items %}
-                        <li>
-                            <a href="{{ item.url }}">{{ item.title }}</a>
-                            {% if item.subtitle %}
-                                ({{ item.subtitle }})
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
+{% for section in site.data.tutorial-groups %}
+    <h2>{{ section.title }}</h2>
+    <div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-group-item-{{ section.id }}", "columnWidth": ".tutorial-grid-sizer-{{section.id}}", "percentPosition": true }'>
+        <div class="tutorial-grid-sizer-{{ section.id }} col-xs-12 col-sm-6 col-md-6"></div>
+        {% for group in section.items %}
+            <div class="col-xs-12 col-sm-6 col-md-6 tutorial-group-item-{{ section.id }}">
+                <div class="panel panel-default rounded-panel tutorial-panel" id="group-{{section.id}}-{{ group.id }}">
+                    <div class="panel-heading">{{ group.title }}</div>
+                    <div class="panel-body">
+                        <p>
+                            {{ group.description }}
+                        </p>
+                        <ul>
+                            {% assign items = site.pages | where: "category", "tutorials" | where: "group",group.id %}
+                            {% for item in items %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                                {% if item.subtitle %}
+                                    ({{ item.subtitle }})
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
+{% endfor %}

@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Ubuntu Disk Image Writer
-subject: sd-card-image
+group: sd-card-image
 ---
 
 {% include imaging-tutorial-etcher-banner.html %}

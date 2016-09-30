@@ -1,6 +1,6 @@
 ---
 title: Connecting to the Internet via USB
-subject: networking
+group: basic-networking
 ---
 
 {% include icon.html type="warning" %}

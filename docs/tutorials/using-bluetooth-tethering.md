@@ -1,6 +1,6 @@
 ---
 title: Using Bluetooth Tethering
-subject: networking
+group: basic-networking
 ---
 
 {% include icon.html type="info" %}

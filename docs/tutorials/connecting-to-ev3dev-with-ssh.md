@@ -1,6 +1,6 @@
 ---
 title: Connecting to Ev3dev Using SSH
-subject: networking
+group: basic-networking
 ---
 
 Connecting with SSH will allow you to run commands on the EV3 over the network

@@ -1,6 +1,6 @@
 ---
 title: Using the XV11 LIDAR
-subject: hardware-extras
+group: hardware-extras
 author: "@bmegli"
 ---
 

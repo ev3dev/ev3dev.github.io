@@ -1,6 +1,6 @@
 ---
 title: Bluetooth PS3 gamepad in Python
-subject: hardware-extras
+group: hardware-extras
 author: Anton Vanhoucke
 ---
 

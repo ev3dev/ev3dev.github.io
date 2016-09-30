@@ -1,6 +1,6 @@
 ---
 title: Setting Up Wi-Fi Using the Command Line
-subject: networking
+group: basic-networking
 ---
 
 {% include icon.html type="danger" %}

@@ -1,6 +1,6 @@
 ---
 title: Nano cheat sheet
-subject: software-editors
+group: software-editors
 author: "@wasabifan"
 ---
 

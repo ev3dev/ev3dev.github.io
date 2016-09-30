@@ -1,6 +1,6 @@
 ---
 title: Setting Up an NFS Fileshare
-subject: networking
+group: advanced-networking
 author: [ "@antonvh","@rhempel","JNFitzgerald" ]
 ---
 

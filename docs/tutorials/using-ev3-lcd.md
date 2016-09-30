@@ -1,6 +1,6 @@
 ---
 title: Using the EV3 LCD
-subject: hardware-extras
+group: hardware-standard
 ---
 
 * Table of Contents

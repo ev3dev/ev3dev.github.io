@@ -1,6 +1,6 @@
 ---
 title: Getting Started with C
-subject: software-languages
+group: software-languages
 author: "@wasabifan"
 ---
 
