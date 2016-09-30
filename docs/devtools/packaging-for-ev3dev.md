@@ -64,7 +64,7 @@ available (as in the case with security updates).
 
 The same command is used for both creating and updating:
 
-    OS=debian DIST=jessie ARCH=armel pbuilder-ev3deb base
+    OS=debian DIST=jessie ARCH=armel pbuilder-ev3dev base
 
 Replace the variables as needed. `OS` can be `debian` or `rasbian`. `DIST` can
 be any Debian distribution supported by ev3dev (currently only `jessie`). `ARCH`
