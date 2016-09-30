@@ -28,6 +28,13 @@ you install *all* of the recommended packages. If you don't know what
 If you haven't already, you will also need to [add the ev3dev archive to apt][ev3dev-archive].
 Be sure to install the `ev3dev-archive-keyring` package. We will need it later.
 
+If you will be building for Raspberry Pi, you need to install the `raspbian-archive-keyring`
+package as well:
+
+    wget http://archive.raspbian.org/raspbian/pool/main/r/raspbian-archive-keyring/raspbian-archive-keyring_20120528.2_all.deb
+    sudo dpkg -i raspbian-archive-keyring_20120528.2_all.deb
+    rm raspbian-archive-keyring_20120528.2_all.deb
+
 If you have never used `git` before, you need to configure your name and email.
 In a terminal, run...
 
