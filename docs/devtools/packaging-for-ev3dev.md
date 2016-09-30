@@ -231,6 +231,10 @@ building packages for yourself.
         method          = sftp
         incoming        = ~/ubuntu
 
+    You may also need to install `python-paramiko` package for the next step:
+    
+        apt-get install python-paramiko
+        
     Then upload:
 
         dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
