@@ -145,23 +145,102 @@ building packages for yourself.
 
 1.  Make sure you have thoroughly tested the changes and that the package builds
     and installs correctly using the methods described above.
-2.  Run `lintian` on the test package(s) to ensure there are no packaging problems.
+
+2.  Run `lintian` on the `.changes` file to ensure there are no packaging problems.
+
+    TODO: we might be able to add lintian to the pbuilder-ev3dev tool so you
+    don't have to run lintian manually.
+
 3.  Ensure any version information (other than `debian/changelog`) is properly
     updated to the new version.
-4.  Delete any `debian/changelog` entries since the last release (you should
-    have at least one for doing a test build).
-5.  Make sure there are not any uncommited changes in git. If there are changes,
-    commit them.
-6.  Run `git-dch -R --commit` to create a `debian/changelog` entry. Edit it by
-    hand if necessary.
-7.  Run `git-buildpackage -S -us -uc --git-tag` to create the source package.
-8.  Build the release packages using `pbuilder-ev3dev`.
-9.  Sign the `.changes` file in `~/pbuilder/<release>-<arch>_result/` using `debsign`.
-10. Push the new release to the ev3dev archive using `dput`.
-11. Push the git branch and tag to GitHub.
-12. Close any issues on GitHub that are fixed by this release with a message
+
+4.  Update `debian/changelog`.
+
+    You can do this automatically:
+
+        1.  Delete any `debian/changelog` entries since the last release (you
+            should have at least one for doing a test build).
+        2.  Make sure there are not any uncommited changes in git. If there are
+            changes, commit them.
+        3.  Run `gbp dch -R --commit` to create a `debian/changelog` entry.
+            Edit it by hand if necessary.
+
+    Or if you have been maintaining it by hand:
+
+        1.  Run `dch -r`.
+        2.  Run `git commit -a -m "Update changelog for release"`.
+
+5.  Tag the commit:
+
+            gbp buildpackage --git-tag-only
+
+6.  Build the release packages using `pbuilder-ev3dev`. If you have run the `base`
+    command recently, you can omit those lines.
+
+            # build for EV3
+            OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev base
+            OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev build
+            # build for RPi 2/3 and BeagleBone
+            OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev base
+            DEBUILD_OPTIONS="--binary-only" OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+            # build for RPi 0/1
+            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
+            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+
+    If your package does not have any binary components (like a pure python
+    package), you can do this instead:
+
+            # build for EV3, RPi 2/3 and BeagleBone
+            OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev base
+            OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev build
+            # build for RPi 0/1
+            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
+            OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+
+7.  Sign the `.changes` files in `~/pbuilder-ev3dev/$OS/$DIST-$ARCH/` using `debsign`.
+
+        debsign ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
+        debsign ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
+        debsign ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
+8.  Upload the new release to the ev3dev archive using `dput`.
+
+    If you have never uploaded before, you will need to send your SSH public key
+    to @dlech and save the following as `~/.dput.cf`:
+
+            [ev3dev-deb]
+            login           = ev3dev-upload
+            fqdn            = reprepro.ev3dev.org
+            method          = sftp
+            incoming        = ~/debian
+
+            [ev3dev-rpi]
+            login           = ev3dev-upload
+            fqdn            = reprepro.ev3dev.org
+            method          = sftp
+            incoming        = ~/raspbian
+
+            [ev3dev-ubuntu]
+            login           = ev3dev-upload
+            fqdn            = reprepro.ev3dev.org
+            method          = sftp
+            incoming        = ~/ubuntu
+
+    Then upload:
+
+        dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
+        dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
+        dput ev3dev-rpi ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
+
+    Please be careful about `armhf` and `ev3dev-deb` vs. `ev3dev-rpi`!
+
+    You should receive an email after each upload. If not, let @dlech know about it.
+
+9.  Push the git branch and tag to GitHub.
+
+10. Close any issues on GitHub that are fixed by this release with a message
     that includes the package name and version number.
-13. Add a news article to the ev3dev.org site announcing the release.
+
+11. Add a news article to the ev3dev.org site announcing the release.
 
 ## Additional Resources
 
