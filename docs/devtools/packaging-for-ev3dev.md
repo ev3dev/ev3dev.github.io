@@ -152,12 +152,9 @@ Then send us a [pull request] on GitHub.
 building packages for yourself.
 
 1.  Make sure you have thoroughly tested the changes and that the package builds
-    and installs correctly using the methods described above.
-
-2.  Run `lintian` on the `.changes` file to ensure there are no packaging problems.
-
-    TODO: we might be able to add lintian to the pbuilder-ev3dev tool so you
-    don't have to run lintian manually.
+    and installs correctly using the methods described above. Be sure to
+    check the `+++ lintian output +++` section at the end of the `pbuilder-ev3dev`
+    output to see if there are any packaging problems.
 
 3.  Ensure any version information (other than `debian/changelog`) is properly
     updated to the new version.
