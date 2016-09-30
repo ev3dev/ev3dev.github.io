@@ -43,7 +43,7 @@ In a terminal, run...
 
 And the same info needs to be put into some environment variables. Paste the
 following to the end of `~/.bashrc`. You will need to start a new terminal
-or run run the same commands in the current terminal for these changes to take
+or run the same commands in the current terminal for these changes to take
 effect.
 
     export DEBFULLNAME="Your Name"
