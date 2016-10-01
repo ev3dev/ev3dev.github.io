@@ -159,6 +159,12 @@ On PC open ev3dev-mapping-ui in Unity and follow the steps below:
 
 {% include screenshot.html source="/images/xv11-tutorial/testing_lidar_with_mapping.png" caption="ev3dev-mapping-ui - 1 - open the scene 2 - select Robot object 3 - set IP addresses 4 - hit play"%}
 
+## Libraries
+
+[xv11lidar] is a simple low-level C library with just 3 functions - `InitLaser`, `ReadLaser` and `CloseLaser`.
+
+Library takes care of LIDAR communication and you can handle the motor with one of [ev3dev libraries] or shell script.
+
 ## Mechanical Integration
 
 At some point you will want to install the LIDAR on the robot. You can make inexpensive stand compatible with LEGO from polycarbonate, acrylic plastic or even wood.
@@ -180,6 +186,32 @@ It is possible to see the laser dot if looking at exactly correct angle.
 The laser pulse duration is only 200 microseconds so you would see a blinking dot on every revolution.
 
 Quite obviously I am not encouraging you to do that and if you do, you're doing it at own risk. 
+
+## Get Help
+
+We keep track of problems related to LIDAR interfacing on xv11lidar-test [issues][xv11lidar-test-issues] tracker. Please don't email the developers directly unless you have a personal question.
+
+<br/>
+
+<form class="input-group" onSubmit="window.open('https://github.com/bmegli/xv11lidar-test/issues?q=is%3Aissue+'
+        + document.getElementById('search-issues').value.replace(' ', '+')); return false;">
+    <span class="input-group-addon glyphicon glyphicon-search" style="top: 0"></span>
+    <input id="search-issues" class="form-control" type="search" placeholder="Example: unable to spin the motor" />
+    <span class="input-group-btn">
+        <input type="submit" value="Search Issues"  class="btn btn-primary">
+    </span>
+</form>
+
+<small>
+__Note:__ The [ev3dev-mapping]{:target="_blank"} and [xv11lidar]{:target="_blank"} repositories have their own
+ ev3dev-mapping [issues][ev3dev-mapping-issues]{:target="_blank"} and xv11lidar [issues][xv11lidar-issues]{:target="_blank"} trackers.
+</small>
+
+<br/>
+
+If you don't find anything helpful by searching, then create a [new issue]{:target="_blank"}
+(only __one__ problem, question or suggestion per issue please).
+
 
 ## References
 
@@ -214,3 +246,9 @@ Quite obviously I am not encouraging you to do that and if you do, you're doing 
 [ev3dev-mapping-modules]: https://github.com/bmegli/ev3dev-mapping-modules
 [ev3dev-mapping-ui]: https://github.com/bmegli/ev3dev-mapping-ui
 [Unity]: https://unity3d.com/
+[ev3dev-mapping-issues]: https://github.com/bmegli/ev3dev-mapping/issues?utf8=✓&q=is%3Aissue
+[xv11lidar-test-issues]: https://github.com/bmegli/xv11lidar-test/issues?utf8=✓&q=is%3Aissue%20
+[xv11lidar-issues]: https://github.com/bmegli/xv11lidar/issues?utf8=✓&q=is%3Aissue
+[new issue]: https://github.com/bmegli/xv11lidar-test/issues/new
+[xv11lidar]: https://github.com/bmegli/xv11lidar
+[ev3dev libraries]: /docs/libraries
