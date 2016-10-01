@@ -59,6 +59,13 @@ You will need half of EV3 cable, half of USB cable, header mating [JST PH 2.0mm 
 
 {% include screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" caption="1 - materials 2 - cut the cables 3 - strip wire 4 - solder grounds 5 - solder connector 6 - heat shrink tubing 7 - the connector 8 - connected" %}
 
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+The USB power connector is also reference potential for the UART lines.
+Plug USB power connector to EV3 or passive (non-powered) USB hub connected to EV3.
+LIDAR consumes around 135 mA from USB. EV3 has enough power to supply 2 LIDARS and reasonable Wi-Fi dongle.
+</div>
+
 ## Motor Port Mode
 
 <div class="alert alert-warning" markdown="1">
@@ -78,6 +85,12 @@ Then your motor interface will be available at:
 
 
 ## Sensor Port Mode
+
+<div class="alert alert-warning" markdown="1">
+{% include icon.html type="warning" %}
+Plug USB power connector to EV3 or passive (non-powered) USB hub connected to EV3, not to other device.
+The USB power connector is also reference potential for the UART lines.
+</div>
 
 I am assuming your data connector is connected to `port 1` (adjust commands otherwise).
 
@@ -107,8 +120,8 @@ Regardless, the LIDAR has also random error with variance dependent on distance,
 
 <div class="alert alert-info" markdown="1">
 {% include icon.html type="info" %}
-If your EV3 connects using Wi-Fi you need USB hub to power the laser. LIDAR consumes around 135 mA at 5V. 
-You can use passive (non-powered) USB hub for the laser and reasonable Wi-Fi dongle. 
+If your EV3 connects using Wi-Fi adapter you need passive (non-powered) USB hub to power the laser and Wi-Fi.
+LIDAR power has to be drawn from EV3 (or USB hub connected to EV3) in order to have the right UART reference potential.
 </div>
 
 Interested to see LIDAR output in realtime? Follow `ev3dev-mapping`
