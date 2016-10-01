@@ -189,7 +189,7 @@ Quite obviously I am not encouraging you to do that and if you do, you're doing 
 
 ## Get Help
 
-We keep track of problems related to LIDAR interfacing on xv11lidar-test [issues][xv11lidar-test-issues] tracker. Please don't email the developers directly unless you have a personal question.
+We keep track of problems related to LIDAR interfacing on xv11lidar-test [issues][xv11lidar-test-issues]{:target="_blank"} tracker. Please don't email the developers directly unless you have a personal question.
 
 <br/>
 
