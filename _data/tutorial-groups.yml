@@ -30,7 +30,7 @@
   items:
   - id: sd-card-image
     title: SD Card Imaging
-    description: "Deprecated guides on flashing an SD card with ev3dev images."
+    description: "Guides on flashing an SD card with ev3dev images."
   - id: system
     title: "Ev3dev System"
     description: "Configuring, updating and modifying an ev3dev installation."
