@@ -5,9 +5,9 @@ subtitle: Controlling ev3dev devices through the low-level driver APIs
 
 Ev3dev exposes motors, sensors and other EV3-related devices through a set of
 drivers that are built into the platform. If you want to access those drivers
-directly instead of using [a pre-built library](/docs/libraries), you'll need
-to read from and write to the sysfs properties that ev3dev exposes. Here are
-some resources to get you started.
+directly instead of using [a pre-built library](/docs/programming-languages),
+you'll need to read from and write to the sysfs properties that ev3dev exposes.
+Here are some resources to get you started.
 
 - **[Input and output ports](/docs/ports)**: The input and output ports on the
   EV3 and other ev3dev-supported hardware.
