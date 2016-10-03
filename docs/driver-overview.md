@@ -1,6 +1,6 @@
 ---
-title: Low-level driver access
-subtitle: Controlling ev3dev devices through the low-level drivers
+title: Hardware Drivers
+subtitle: Controlling ev3dev devices through the low-level driver APIs
 ---
 
 Ev3dev exposes motors, sensors and other EV3-related devices through a set of
@@ -17,7 +17,7 @@ some resources to get you started.
 
 - **[Supported Motors and Other Output Devices](/docs/motors)**: The drivers and
   interfaces that operate motors and other output devices. The most common
-  motor interface on ev3dev is the [`tacho-motor` class](/docs/drivers/tacho-motor-class/),
+  motor interface on ev3dev is the ["tacho-motor" class](/docs/drivers/tacho-motor-class/),
   so it is important to read through the documentation for it when writing motor
   code. You can also read through our [tacho motor tutorial](/docs/tutorials/tacho-motors)
   to learn how to use the motor interface.
