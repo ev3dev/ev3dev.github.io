@@ -251,4 +251,4 @@ If you don't find anything helpful by searching, then create a [new issue]{:targ
 [xv11lidar-issues]: https://github.com/bmegli/xv11lidar/issues?utf8=✓&q=is%3Aissue
 [new issue]: https://github.com/bmegli/xv11lidar-test/issues/new
 [xv11lidar]: https://github.com/bmegli/xv11lidar
-[ev3dev libraries]: /docs/libraries
+[ev3dev libraries]: /docs/programming-languages
