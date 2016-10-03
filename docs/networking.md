@@ -13,17 +13,23 @@ You have a few options for connecting to the internet.
 
 ### With a Wi-Fi dongle
 
-The simplest route is to purchase a Wi-Fi dongle and plug it into the EV3's USB
-port. Almost any USB Wi-Fi dongle which supports Linux will work, including the
-one that is supported by the official LEGO software. Once you have plugged in a
-dongle, you can use Brickman's "**_Wireless and Networks_ > _Wi-Fi_**" menu to
-connect to a network.
+The simplest route is to use a Wi-Fi dongle connected through the EV3's USB
+port. If you have a supported Wi-Fi dongle available already, we recommend that
+you use it; otherwise you can use one of the other networking options below.
+Many USB Wi-Fi dongles which support Linux will work, but we officially support
+and recommend the following (these are supported by the EV3's default operating
+system as well):
 
-### With a USB Ethernet adapter
+- NetGear WNA1100 Wireless-N 150 (officially supported by LEGO's software)
+- Edimax EW-7811Un 802.11n Wireless Adapter (officially supported by LEGO's
+  software)
+- EP-N8508GS 150Mbps Mini Wireless 802.11N USB Adapter (not officially supported
+  by LEGO, but also works)
 
-If you have a USB Ethernet adapter (or can buy one) which supports Linux, you
-can use it to access the network from your EV3. Just plug it into the brick and
-connect the adapter to an ethernet cable; no configuration is related.
+Once you have plugged in a dongle, you can use Brickman's
+"**_Wireless and Networks_ > _Wi-Fi_**" menu to connect to a network. Make sure
+you check the "**Powered**" box so that it starts searching for Wi-Fi networks,
+and then choose the one you want from the list that appears.
 
 ### With USB through a PC
 
@@ -38,11 +44,18 @@ your EV3 through it to access the Web. To learn more about this option, check
 out our [Connecting to the Internet via Bluetooth](/docs/tutorials/connecting-to-the-internet-via-bluetooth/)
 tutorial.
 
-# Tethering to a host PC (no internet access)
+### With a USB Ethernet adapter
 
-If you don't need to connect your brick to the Internet, you can use tether it
-to a PC. This can sometimes require less configuration than other options.
-Some of these guides may be partially incomplete on certain platforms.
+If you have a USB Ethernet adapter (or can buy one) which supports Linux, you
+can use it to access the network from your EV3. Just plug it into the brick and
+connect the adapter to an ethernet cable; no configuration is needed.
+
+# Tethering to a host PC (no Internet access)
+
+If you don't need to connect your brick to the Internet, you can use a
+technology called "tethering" to connect it directly to a PC. This can sometimes
+require less configuration than other options. Some of these guides may be
+partially incomplete on certain platforms.
 
 ### With Bluetooth
 
@@ -61,9 +74,10 @@ tutorial.
 
 Once you have a connection between your PC and ev3dev, you will almost certainly
 want to establish an SSH connection to the EV3. This allows you to install
-software, run code, and edit files. Read more in [Our nonexistent guide](/docs/tutorials/connecting-to-ev3dev-with-ssh/).
+software, run code, and edit files. Read more in
+[our SSH guide](/docs/tutorials/connecting-to-ev3dev-with-ssh/).
 
 ### File sharing with NFS
 
 One option to transfer code, configuration, and other files is NFS. You can learn
-more in [Setting Up an NFS Fileshare](/docs/tutorials/setting-up-an-nfs-file-share/).
+more with [our guide on setting up an NFS file share](/docs/tutorials/setting-up-an-nfs-file-share/).
