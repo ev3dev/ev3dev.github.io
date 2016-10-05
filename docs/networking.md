@@ -7,7 +7,7 @@ If you want to access your ev3dev installation from a PC or install new software
 on your EV3, you'll need to connect to a network. Here are some resources to
 help you out.
 
-# Connecting to the internet
+# Connecting to the Internet
 
 You have a few options for connecting to the internet.
 
@@ -50,7 +50,7 @@ If you have a USB Ethernet adapter (or can buy one) which supports Linux, you
 can use it to access the network from your EV3. Just plug it into the brick and
 connect the adapter to an ethernet cable; no configuration is needed.
 
-# Tethering to a host PC (no Internet access)
+# Tethering to a Host PC (no Internet access)
 
 If you don't need to connect your brick to the Internet, you can use a
 technology called "tethering" to connect it directly to a PC. This can sometimes
@@ -68,7 +68,7 @@ Another tethering option is using the mini USB port on the EV3. To try tethering
 with USB, try our [Using USB Tethering](/docs/tutorials/using-usb-tethering/)
 tutorial.
 
-# Further reading
+# Further Reading
 
 ### Remote terminal with SSH
 
