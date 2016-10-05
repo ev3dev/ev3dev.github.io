@@ -30,9 +30,9 @@ First, here are the things you need before starting:
   * USB Ethernet (wired) dongle
   * Bluetooth
 
-  For Raspberry Pi you will need to use the wired Ethernet connection first.
-  With PiStorms the EV3 options will work too since you have a screen to configure
-  them on.
+  For RasberryPi you can use wired Ethernet connection first.
+  With PiStorms the EV3 options will work too since you have a built-in screen to configure them on.
+  With BrickPi you can also setup other connection from the console using external screen and keyboard.
 
 
 {% include icon.html type="warning" %}
@@ -85,7 +85,7 @@ corresponds to your platform:
 <div class="colored-section">
 <div class="container" markdown="1">
 
-## Step 2: Copy the image on to the SD card
+## Step 2: Flash the SD card
 
 <div class="alert alert-danger">
     {% include icon.html type="danger" %}
@@ -185,8 +185,8 @@ troubleshooting tips below.
 You will notice the number in the battery in the upper right corner. This
 displays the remaining voltage of the power supply. It is not possible to
 calculate an accurate percent value of the remaining energy, so this value is
-chosen. If the voltage drops below 5V the brick will turn off. All not saved
-data may be lost. Keep in mind, that it may take a much longer time from 8V to
+chosen. If the voltage drops below 5V the brick will turn off. All unsaved
+data will be lost. Keep in mind, that it may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
 </div>
 
@@ -227,8 +227,8 @@ you want to use and on the OS of your host computer, so pick the one that applie
     * Setting up Wi-Fi Via the Brickman User Interface (hopefully you can figure
       this out, but it would be nice if someone made a tutorial)
     * [Setting Up Wi-Fi Using the Command Line](../tutorials/setting-up-wifi-using-the-command-line)
-      (requires another connection type first to get to the command line, but way
-      easier to enter you passphrase this way)
+      (requires another connection type first to get to the command line, but it's way
+      easier to enter your passphrase this way)
 * __Bluetooth__
     * Note: Bluetooth may not work on the first boot. Please reboot if you see "???"
       after you power on Bluetooth.
