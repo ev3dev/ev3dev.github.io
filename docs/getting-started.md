@@ -30,9 +30,9 @@ First, here are the things you need before starting:
   * USB Ethernet (wired) dongle
   * Bluetooth
 
-  For RasberryPi you can use wired Ethernet connection first.
+  For Raspberry Pi you can use a wired Ethernet connection first.
   With PiStorms the EV3 options will work too since you have a built-in screen to configure them on.
-  With BrickPi you can also setup other connection from the console using external screen and keyboard.
+  With BrickPi you can also set up other connections from the console using an external screen and keyboard.
 
 
 {% include icon.html type="warning" %}
@@ -214,7 +214,7 @@ Troubleshooting tips if your EV3 won't boot
 <div class="dark-bg colored-section">
 <div class="container" markdown="1">
 
-## Step 5: Setup a network connection
+## Step 5: Set up a network connection
 
 There are lots of choices here. Your choice depends on what type of connection
 you want to use and on the OS of your host computer, so pick the one that applies:
@@ -236,7 +236,7 @@ you want to use and on the OS of your host computer, so pick the one that applie
 
 {% include icon.html type="info" %}
 For Raspberry Pi with no display, you must use the wired Ethernet port
-to connect for the first time. You can setup additional connections using the
+to connect for the first time. You can set up additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
 
