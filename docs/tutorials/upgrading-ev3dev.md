@@ -27,7 +27,7 @@ This option will likely be the fastest by far. **By re-flashing your SD card, ho
      BeagleBone                         | `nightly-ev3dev-jessie-bone-generic-####-##-##.img.xz`
      {: .table .table-striped .table-bordered }
 
-2. Head over to our [Getting Started guide](/docs/getting-started#step-2-copy-the-image-on-to-the-sd-card)
+2. Head over to our [Getting Started guide](/docs/getting-started#step-2-flash-the-sd-card)
    and follow the "Copy the image to the SD card" step.
 
 
