@@ -1,6 +1,6 @@
 ---
 title: Writing an SD Card Image Using Apple Pi Baker on OS X
-subject: SD Card Image
+group: sd-card-image
 ---
 
 {% include imaging-tutorial-etcher-banner.html %}

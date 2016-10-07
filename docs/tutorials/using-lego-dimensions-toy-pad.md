@@ -1,6 +1,6 @@
 ---
 title: Using the LEGO Dimensions Toy Pad
-subject: Hardware - Other
+group: hardware-extras
 author: "@JorgePe"
 ---
 

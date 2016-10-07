@@ -1,6 +1,6 @@
 ---
 title: Using the Raspberry Pi Camera
-subject: Hardware - Cameras
+group: hardware-extras
 ---
 
 * Table of Contents

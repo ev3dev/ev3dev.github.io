@@ -1,6 +1,6 @@
 ---
 title: "Using Brickstrap to Cross-Compile (obsolete)"
-subject: "Cross-Compiling"
+group: cross-compiling
 author: "@dlech"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Setting Up a Python Development Environment with PyCharm
-subject: Software - Python
+group: software-languages
 author: "@antonvh"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Getting Started with C
-subject: Software - C
+group: software-languages
 author: "@wasabifan"
 ---
 
@@ -141,4 +141,4 @@ other than "Hello world!"
 If you want to use the motors, sensors, etc. of the EV3, you will need to either
 use an existing C library (not C++) or manually read from and write to the
 files that let you control devices. You can find a list of the known libraries
-on [our libraries page](/docs/libraries/).
+on [our programming languages page](/docs/programming-languages/).

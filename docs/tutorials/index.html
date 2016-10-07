@@ -4,18 +4,25 @@ excerpt: "Tutorials on a wide range of ev3dev functionality, including networkin
 include_masonry: "true"
 ---
 
-{% assign tutorials=site.pages | where: "category", "tutorials" | sort: "subject" | group_by: "subject" %}
-
-<div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-panel", "columnWidth": ".grid-sizer", "percentPosition": true }'>
-    <div class="grid-sizer col-xs-12 col-sm-6 col-md-6"></div>
-    {% for group in tutorials %}
-        {% unless group.name == "" %}
-            <div class="col-xs-12 col-sm-6 col-md-6 tutorial-panel">
-                <div class="panel panel-default rounded-panel" id="group-{{ group.name | downcase | replace: ' ','-' }}">
-                    <div class="panel-heading">{{ group.name }}</div>
+<p class="lead">
+    These tutorials will walk you through working with a wide range of hardware and
+    software. If you're looking for help with a specific goal, this is the place to
+    look!
+</p>
+{% for section in site.data.tutorial-groups %}
+    <h2>{{ section.title }}</h2>
+    <div class="row masonry-container" data-masonry='{ "itemSelector": ".tutorial-group-item-{{ section.id }}", "columnWidth": ".tutorial-grid-sizer-{{section.id}}", "percentPosition": true }'>
+        <div class="tutorial-grid-sizer-{{ section.id }} col-xs-12 col-sm-6 col-md-6"></div>
+        {% for group in section.items %}
+            <div class="col-xs-12 col-sm-6 col-md-6 tutorial-group-item-{{ section.id }}">
+                <div class="panel panel-default rounded-panel tutorial-panel" id="group-{{section.id}}-{{ group.id }}">
+                    <div class="panel-heading">{{ group.title }}</div>
                     <div class="panel-body">
+                        <p>
+                            {{ group.description }}
+                        </p>
                         <ul>
-                            {% assign items = group.items | sort: "title" %}
+                            {% assign items = site.pages | where: "category", "tutorials" | where: "group",group.id %}
                             {% for item in items %}
                             <li>
                                 <a href="{{ item.url }}">{{ item.title }}</a>
@@ -28,6 +35,6 @@ include_masonry: "true"
                     </div>
                 </div>
             </div>
-        {% endunless %}
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
+{% endfor %}

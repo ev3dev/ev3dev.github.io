@@ -130,7 +130,7 @@ Now it's time to write the image to the card.
 <div class="alert alert-info" markdown="1">
 {% include icon.html type="info" %}
 For more detailed information and more alternatives, check out
-[our other tutorials](/docs/tutorials/#group-sd-card-image){: .alert-link }.
+[our other tutorials](/docs/tutorials/#group-administration-and-setup-sd-card-image){: .alert-link }.
 You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
 Much of the information there is applicable to ev3dev.
 </div>
@@ -255,7 +255,7 @@ if you haven't done so already.
 The brick can run almost all programming languages that any other Linux distro can, so your
 favorite language is probably supported. Language bindings have already been
 written for many languages. **You can learn more about the available libraries
-[here](/docs/libraries).**
+[here](/docs/programming-languages).**
 
 If the language you want isn't listed, you still can use it, but you'll have to
 do more of the heavy lifting yourself. You can look at the [driver index page](/docs/drivers/)

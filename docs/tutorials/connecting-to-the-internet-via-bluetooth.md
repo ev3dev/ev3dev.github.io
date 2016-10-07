@@ -1,6 +1,6 @@
 ---
 title: Connecting to the Internet via Bluetooth
-subject: Networking
+group: basic-networking
 ---
 
 {% include icon.html type="warning" %}

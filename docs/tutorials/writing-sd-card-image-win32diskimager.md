@@ -1,14 +1,16 @@
 ---
 title: Writing an SD Card Image Using Win32DiskImager
-subject: SD Card Image
+group: sd-card-image
 ---
 
 {% include imaging-tutorial-etcher-banner.html %}
 
-1. Open up the folder where you downloaded the image file from [GitHub](https://github.com/ev3dev/ev3dev/releases).
+1. Make sure you have downloaded an ev3dev image file from
+   [GitHub](https://github.com/ev3dev/ev3dev/releases) and open the folder to
+   which you saved it.
 
 2. Right-click it, click "Extract All",
-and choose a location to extract the image to.
+   and choose a location to extract the image to.
 
     {% include screenshot.html source="/images/Windows-SD-Flash/Extract-zip.png" %}
 

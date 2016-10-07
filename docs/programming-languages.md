@@ -1,7 +1,8 @@
 ---
-title: Libraries
+title: Programming Languages
 subtitle: Control ev3dev devices from code
 excerpt: "If you are looking to write a program that takes advantage of motors, sensors, or other native devices, using a language binding is the way to go. These are the best options for each language."
+redirect_from: /docs/libraries
 ---
 
 Before you can start writing code that runs on ev3dev, you need to choose a
