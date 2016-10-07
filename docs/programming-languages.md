@@ -16,6 +16,7 @@ from below and follow the link to the library's homepage get started.
 Python is a high-level, general-purpose, interpreted scripting language. It is
 great for beginners, while also powerful for experienced coders.If you are new
 to programming and unsure which language to choose, Python is a great choice!
+There is a nice overview of the library features by @ndward at http://ev3python.com.
 
 **Warning!** There is another Python library named `python-ev3` created by
 @topikachu which is _not_ the same as this one. When searching for documentation
