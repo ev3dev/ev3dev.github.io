@@ -19,7 +19,7 @@ to programming and unsure which language to choose, Python is a great choice!
 
 If you are just starting programming ev3dev, take a look at 
 [ev3python.com](http://ev3python.com) by @ndward. The site is intended to help
-users of the LEGO EV3 MINDSTORMS to begin using the ev3dev Python programming
+users of the LEGO MINDSTORMS EV3 to begin using the ev3dev Python programming
 language to control their robot. 
 
 **Warning!** There is another Python library named `python-ev3` created by
