@@ -216,23 +216,9 @@ Troubleshooting tips if your EV3 won't boot
 
 ## Step 5: Set up a network connection
 
-There are lots of choices here. Your choice depends on what type of connection
-you want to use and on the OS of your host computer, so pick the one that applies:
-
-* __Ethernet over USB__ (just requires the USB cable that comes with the EV3)
-    * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-usb) tutorial
-* __USB Ethernet dongle__ (as in the kind with an RJ45 connector)
-    * If your network has a DHCP server, this will "just work".
-* __USB Wi-Fi Dongle__
-    * Setting up Wi-Fi Via the Brickman User Interface (hopefully you can figure
-      this out, but it would be nice if someone made a tutorial)
-    * [Setting Up Wi-Fi Using the Command Line](../tutorials/setting-up-wifi-using-the-command-line)
-      (requires another connection type first to get to the command line, but it's way
-      easier to enter your passphrase this way)
-* __Bluetooth__
-    * Note: Bluetooth may not work on the first boot. Please reboot if you see "???"
-      after you power on Bluetooth.
-    * [Connecting to the Internet](../tutorials/connecting-to-the-internet-via-bluetooth) tutorial
+There are lots of choices here. Visit our [networking page](/docs/networking)
+and choose the listed connection option that best suits you and your available
+devices.
 
 {% include icon.html type="info" %}
 For Raspberry Pi with no display, you must use the wired Ethernet port
@@ -240,6 +226,13 @@ to connect for the first time. You can set up additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
 
+</div>
+</div>
+
+<div class="colored-section">
+<div class="container" markdown="1">
+
+## Step 6: Connect to the EV3 via SSH
 Now that you have a network connection, you should
 [connect to your EV3 with SSH](/docs/tutorials/connecting-to-ev3dev-with-ssh)
 if you haven't done so already.
@@ -247,44 +240,27 @@ if you haven't done so already.
 </div>
 </div>
 
-<div class="colored-section">
-<div class="container" markdown="1">
-
-## Step 6: Do something awesome
-
-The brick can run almost all programming languages that any other Linux distro can, so your
-favorite language is probably supported. Language bindings have already been
-written for many languages. **You can learn more about the available libraries
-[here](/docs/programming-languages).**
-
-If the language you want isn't listed, you still can use it, but you'll have to
-do more of the heavy lifting yourself. You can look at the [driver index page](/docs/drivers/)
-for information on the interfaces you need to use to control devices. Once you get the
-hang of it, you can even write your own interface library and have it listed here!
-
-</div>
-</div>
-
 <div class="dark-bg colored-section">
 <div class="container" markdown="1">
 
-<div class="row">
-<div class="col-md-8" markdown="1">
-## Step 7: Calling it a day
+## Step 7: Choose a programming language and write some code
 
-When you are ready to wish your EV3 goodnight, turn if off by pressing the
-*back* button from the main menu in brickman or pressing and holding the *back*
-button from any screen in brickman. This will open a dialog where you can select
-*Power Off* to turn off the EV3. (Running `sudo poweroff` in a terminal works too.)
+The brick can run the vast majority of popular programming languages, so your
+favorite language is probably supported.
+
+<a class="btn btn-md btn-primary" href="/docs/programming-languages"><span class="glyphicon glyphicon-console"></span> See the available programming languages</a>
+
+### Writing your own interface library
+
+If the language you want isn't listed, you still can use it, but you'll have to
+do more of the heavy lifting yourself. You can look at the [driver overview page](/docs/driver-overview/)
+for information on the interfaces you need to use to control devices. Once you get the
+hang of it, you can even write your own interface library and have it listed on
+the programming languages page!
+
+</div>
 </div>
 
-<div class="col-md-4">
-{% include screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
-</div>
-</div>
-
-</div>
-</div>
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
