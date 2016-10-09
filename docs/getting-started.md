@@ -216,15 +216,16 @@ Troubleshooting tips if your EV3 won't boot
 
 ## Step 5: Set up a network connection
 
-There are lots of choices here. Visit our [networking page](/docs/networking)
-and choose the listed connection option that best suits you and your available
-devices.
+There are lots of choices here. Choose the connection option that best suits you
+and your available devices.
 
 {% include icon.html type="info" %}
 For Raspberry Pi with no display, you must use the wired Ethernet port
 to connect for the first time. You can set up additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
+
+<a class="btn btn-md btn-primary" href="/docs/networking"><span class="glyphicon glyphicon-globe"></span> Check out the available networking options</a>
 
 </div>
 </div>
@@ -233,9 +234,23 @@ to connect for the first time. You can set up additional connections using the
 <div class="container" markdown="1">
 
 ## Step 6: Connect to the EV3 via SSH
-Now that you have a network connection, you should
-[connect to your EV3 with SSH](/docs/tutorials/connecting-to-ev3dev-with-ssh)
-if you haven't done so already.
+
+Now that you have a network connection, you should connect to your EV3 with SSH.
+Connecting allows you to verify that the networking option that you configured
+in the previous step is working. Once you have an SSH connection, you will be
+able to securely run terminal commands on the EV3 from your PC. This lets you
+run programs, change settings, and install new programs.
+
+<a class="btn btn-md btn-primary" href="/docs/tutorials/connecting-to-ev3dev-with-ssh"><span class="glyphicon glyphicon-transfer"></span> Learn how to connect with SSH</a>
+
+To test this out, let's try running a command. Type (or copy-and-paste) the
+following into the terminal, and press enter. It will use the speakers and
+text-to-speech software to speak out loud. **If you are not on an EV3, this
+will not work. It requires the EV3's built-in speaker.**
+
+{% highlight bash %}
+espeak --stdout "Welcome to E V 3 dev!" | aplay -q
+{% endhighlight %}
 
 </div>
 </div>
@@ -246,17 +261,9 @@ if you haven't done so already.
 ## Step 7: Choose a programming language and write some code
 
 The brick can run the vast majority of popular programming languages, so your
-favorite language is probably supported.
+favorite language is probably supported. Pick your language and write some code!
 
 <a class="btn btn-md btn-primary" href="/docs/programming-languages"><span class="glyphicon glyphicon-console"></span> See the available programming languages</a>
-
-### Writing your own interface library
-
-If the language you want isn't listed, you still can use it, but you'll have to
-do more of the heavy lifting yourself. You can look at the [driver overview page](/docs/driver-overview/)
-for information on the interfaces you need to use to control devices. Once you get the
-hang of it, you can even write your own interface library and have it listed on
-the programming languages page!
 
 </div>
 </div>
