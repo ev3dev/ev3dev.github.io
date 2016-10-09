@@ -16,23 +16,16 @@ Whether you are creating a new package or modifying an existing one, there are
 some tools that you are going to need. We currently use Ubuntu trusty as the
 development environment. (We will only support trusty, but any thing newer should
 work - same goes for jessie or newer on Debian). If you are using Windows or Mac
-you can use [VirtualBox] or [Docker] to run trusty in a virtual machine.
+you can use [VirtualBox] or [Docker] to run trusty in a virtual machine/container.
 
-On your Ubuntu machine, you will need to install some packages.
+On your Ubuntu machine, you will need to install some packages. If you haven't
+already, you will need to [add the ev3dev archive to apt][ev3dev-archive].
 Note: If you are the kind of person that doesn't install recommends, make sure
 you install *all* of the recommended packages. If you don't know what
 "recommends" means, don't worry about it.
 
-    sudo apt-get install ubuntu-dev-tools qemu-user-static git-buildpackage debhelper
-
-If you haven't already, you will also need to [add the ev3dev archive to apt][ev3dev-archive].
-Be sure to install the `ev3dev-archive-keyring` package. We will need it later.
-If you will be building for Raspberry Pi, you need to install the `raspbian-archive-keyring`
-package as well.
-
-    sudo apt-add-repository "deb http://archive.ev3dev.org/ubuntu xenial main"
     sudo apt-get update
-    sudo apt-get install ev3dev-archive-keyring raspbian-archive-keyring
+    sudo apt-get install ubuntu-dev-tools pbuilder-ev3dev
 
 If you have never used `git` before, you need to configure your name and email.
 In a terminal, run...
@@ -55,12 +48,6 @@ And we need to configure [quilt] as well. Save the following to `~/.quiltrc`.
     QUILT_NO_DIFF_TIMESTAMPS=1
     QUILT_REFRESH_ARGS="-p ab"
     QUILT_DIFF_ARGS="--color=auto"
-
-Finally, we need to get the `pbuilder-ev3dev` script.
-
-    wget https://raw.githubusercontent.com/ev3dev/ev3dev-buildscripts/master/pbuilder-ev3dev
-    chmod +x pbuilder-ev3dev
-    sudo mv pbuilder-ev3dev /usr/local/bin
 
 ## Initializing/Updating pbuilder-ev3dev
 
@@ -212,13 +199,13 @@ building packages for yourself.
     If you have never uploaded before, you will need to send your SSH public key
     to @dlech and save the following as `~/.dput.cf`:
 
-        [ev3dev-deb]
+        [ev3dev-debian]
         login           = ev3dev-upload
         fqdn            = reprepro.ev3dev.org
         method          = sftp
         incoming        = ~/debian
 
-        [ev3dev-rpi]
+        [ev3dev-raspbian]
         login           = ev3dev-upload
         fqdn            = reprepro.ev3dev.org
         method          = sftp
@@ -230,18 +217,18 @@ building packages for yourself.
         method          = sftp
         incoming        = ~/ubuntu
 
-    You may also need to install `python-paramiko` package for the next step:
-    
-        apt-get install python-paramiko
-        
     Then upload:
 
-        dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
-        dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
-        dput ev3dev-rpi ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
+        dput ev3dev-debian ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
+        dput ev3dev-debian ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
+        dput ev3dev-raspbian ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
 
-    Please be careful about `armhf` and `ev3dev-deb` vs. `ev3dev-rpi`!
+    Please be careful about `armhf` and `ev3dev-debian` vs. `ev3dev-raspbian`!
     You should receive an email after each upload. If not, let @dlech know about it.
+
+    Note: if `dput` fails, you may also need to install `python-paramiko` package:
+
+        apt-get install python-paramiko
 
 9.  Push the git branch and tag to GitHub.
 
@@ -260,7 +247,6 @@ building packages for yourself.
 [VirtualBox]: https://www.virtualbox.org
 [Docker]: http://www.docker.com
 [ev3dev-archive]: {{ github.site.url }}/docs/devtools/installing-the-ev3dev-archive
-[pbuilder-ev3dev]: https://raw.githubusercontent.com/ev3dev/ev3dev-buildscripts/master/pbuilder-ev3dev
 [ev3dev-buildscripts]: https://github.com/ev3dev/ev3dev-buildscripts
 [quilt]: https://wiki.debian.org/UsingQuilt
 [fork]: https://help.github.com/articles/fork-a-repo/
