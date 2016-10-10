@@ -53,17 +53,17 @@ you will get an error: `exec user process caused "exec format error"`.
 
 ## Download the ev3dev cross-compiler image
 
-We provide images with developer tools already installed. Grab the one appropriate
-for your hardware...
+We provide a Docker image with the most common developer tools already installed.
+Download it by running...
 
-    docker pull ev3dev/debian-jessie-armel-cross
+    docker pull ev3dev/debian-jessie-cross
 
-This will take some time. The download is hundreds of megabytes.
+This will take some time. The download is nearly 1GB!
 
 
 When it is finished, we can give it a shorter name...
 
-    docker tag ev3dev/debian-jessie-armel-cross ev3cc
+    docker tag ev3dev/debian-jessie-cross ev3cc
 
 {% include icon.html type="info" %}
 Docker images are immutable. You can always revert back to this image after making
@@ -78,6 +78,8 @@ You can see a list of images you have downloaded by running...
 
     docker rmi <image-name-or-hash>
 
+But don't delete the one you just downloaded yet!
+
 
 ## Hello World!
 
@@ -85,14 +87,16 @@ Let's do the classic hello world program in C. Create a new, empty directory
 wherever you like. In your favorite text editor, paste this and save it as
 `hello.c`. For this example, we will be using `C:\Users\myname\example\hello.c`.
 
-    #include <stdio.h>
-    
-    int main(int argc, const char *argv[])
-    {
-        printf("Hello World!\n");
+{% highlight c %}
+#include <stdio.h>
 
-        return 0;
-    }
+int main(int argc, const char *argv[])
+{
+    printf("Hello World!\n");
+
+    return 0;
+}
+{% endhighlight %}
 
 {% include icon.html type="warning" %}
 If you are using Windows, you must explicitly allow [shared drives in the Docker
@@ -103,7 +107,7 @@ control panel first][shared-drives]{: .alert-link}!
 
 Now, we compile using the docker image. First we run a new docker container...
 
-    docker run --rm -it -v C:\Users\myname\example\:/home/compiler/example ev3cc
+    docker run --rm -it -v C:\Users\myname\example\:/src -w /src ev3cc
 
 Let's break down the command:
 
@@ -115,20 +119,19 @@ Let's break down the command:
   the command prompt inside of the container.
 * `-v <host-path>:<container-path>` lets us use a directory from our host computer
   inside of the container.
+* `-w <container-path>` is the working directory inside of the container.
 * `ev3cc` is the name of the docker image we are using.
 
-In the docker container, we are logged in as a user named `compiler` and start
-in the `/home/compiler` directory (`~` for short). First we need to go to our
-`example` directory...
+Now we can compile our program...
 
-    cd example
+    arm-linux-gnueabi-gcc -o hello hello.c
 
-And we can compile our program...
-
-    gcc hello.c -o hello
+Note: For BeagleBone and Raspberry Pi 2/3 use `gnueabihf` instead of `gnueabi`.
 
 Since this program does not depend on any hardware drivers, we can actually run
-this program inside of the docker container!
+this program inside of the Docker container! There are some caveats though...
+You must be running Docker >= 1.12 and if you are using a Linux host you must
+have the proper format registered with `binfmt_misc`.
 
     ./hello
 
@@ -144,34 +147,23 @@ To exit the docker container, simply type...
     exit
 
 
-## Using the "Real" Cross-Compiler
+## Advanced Usage
 
-In the hello world example above, we used the `gcc` command to compile our program.
-This is actually an ARM executable file that is being run using QEMU to emulate
-the ARM architecture. We didn't notice because our example was so small, but this
-can be very slow for large programs.
+If you need to install additional libraries, you need to be sure to install
+the `armel` version (or `armhf` for BeagleBone and Raspberry Pi 2/3). Example:
 
-However, our image has a "real" cross-compiler. This is a version of `gcc` that
-runs natively on x86_64 hardware but produces binaries that run on ARM hardware.
-To use this version of `gcc` instead, there are a couple things we need to do.
+    sudo apt-get install libsomething-dev:armel
 
-First, let's make a variable to save some typing because the cross-compiler has
-a very long path name.
+It is best to create a [Dockerfile] to do this so that you can repeat the
+process easily and share it with others. Here is an [example] on how you might
+do this.
 
-    export CC=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-gcc
+The same example also shows a trick of how to keep a Docker container running
+so that you can run builds without starting a new container each time.
 
-Now we can compile using the cross-compiler. It is important to add the `--sysroot`
-option because by default the cross-compiler looks in its own system root directory
-instead.
+[Dockerfile]: https://docker.github.io/engine/reference/builder/
+[example]: https://github.com/ev3dev/lms2012-compat/tree/ev3dev-jessie/docker
 
-    $CC --sysroot=/ -marm -march=armv4t -mfloat-abi=soft -o hello hello.c
-
-{% include icon.html type="info" %}
-Why all of the extra `-m` options? The CPU in the EV3 is so outdated that no
-one ships a cross-compiler for it anymore. If someone would like to compile a
-cross-compiler for us, that would be super. Until then, we are using an older
-toolchain that works but just requires some extra typing.
-{: .alert .alert-info}
 
 ## Using GDB
 
@@ -184,17 +176,12 @@ On your EV3, install `gdbserver`.
 
     sudo apt-get install gdbserver
 
-And in your docker container, install `gdb` (or use `arm-linux-gnueabi-gdb` in
-the cross-compiler directory in `/opt`):
-
-    sudo apt-get install gdb
-
 Now, let's debug our "hello world" program. First, we need to make sure we compile
 with debugging symbols (thats the `-g` flag). You will need to copy the new
 executable to the EV3 too if you haven't done the *mounting a remote file system*
 thing yet.
 
-    gcc -g -o hello hello.c
+    arm-linux-gnueabi-gcc -g -o hello hello.c
 
 On the EV3, run `gdbserver`. `host` is the name or IP address of your host
 computer (or VM) and `3333` is an arbitrary TCP port.
@@ -231,61 +218,3 @@ you should not type them.
     [Inferior 1 (process 1821) exited normally]
     qemu: Unsupported syscall: 26
     (gdb) q
-
-Since gdb is running in an emulated environment using qemu, you will
-occasionally see errors like the unsupported syscall above. Most errors don't
-seem to cause any problems, but it may limit the use of some features of gdb.
-
-
-## Example: Building the brickman Package
-
-This is how you can use docker to build the [brickman](https://github.com/ev3dev/brickman)
-package from source.
-
-First, we assume you have already pulled the cross-compiler image as described
-above. Then we need to get the source code. Run this wherever you would like to
-save the code. For this tutorial, we will assume `C:\Users\myname`. We also
-create a new empty directory to hold the build output.
-
-    git clone --recursive https://github.com/ev3dev/brickman brickman-src
-    mkdir brickman-build
-
-Now, we are going to create a new image based on that that includes the
-build dependencies. If you do this often, you will want to create a `Dockerfile`
-instead, but for this tutorial, we will do it manually by creating a docker
-container and saving the result as a new image. Let's start a new container...
-
-    docker run --name brickman -it ev3cc
-
-The `--name` option will give our container a name, otherwise docker generates
-a random name. In the container, install the build dependencies...
-
-    sudo apt-get update
-    sudo apt-get build-dep brickman
-    exit
-
-Then we save the container as a new image. We can also delete the container once
-the image is saved.
-
-    docker commit brickman brickman-ev3
-    docker rm brickman
-
-We now have a new image named `brickman-ev3`. Now, lets start a new container
-for building...
-
-    docker run --rm -it -v c:\Users\myname\brickman-src:/src -v c:\Users\myname\brickman-build:/build brickman-ev3
-
-This runs a new container with our source code at `/src` and our empty directory
-at `/build`. In the container, we build...
-
-    cd /build
-    cmake /src -DCMAKE_TOOLCHAIN_FILE=/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/toolchain.cmake
-    make
-    mkdir install
-    DESTDIR=install make install
-    exit
-
-The `CMAKE_TOOLCHAIN_FILE` option sets the appropriate options in `cmake` to
-make use of the cross-compiler to speed things up. We also created a new
-`install` directory. This will contain the files that need to be copied to
-the EV3 to actually run the program.
