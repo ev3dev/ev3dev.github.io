@@ -14,7 +14,7 @@ from below and follow the link to the library's homepage get started.
 <https://github.com/rhempel/ev3dev-lang-python>
 
 Python is a high-level, general-purpose, interpreted scripting language. It is
-great for beginners, while also powerful for experienced coders.If you are new
+great for beginners, while also powerful for experienced coders. If you are new
 to programming and unsure which language to choose, Python is a great choice!
 
 If you are just starting programming ev3dev, take a look at 
