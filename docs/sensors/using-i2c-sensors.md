@@ -73,8 +73,10 @@ Sensor Array. This just writes the ascii character `W` to register 0x41.
 
 ### Manually Loading Devices
 
-If you have autodetection disabled or if you have managed to change the I2C
-address of your sensor to something other than the default, you will have to
+If you have autodetection disabled (e.g. using the `i2c-other` mode of a port)
+or if you have managed to change the I2C address of your sensor to something
+other than the default or you are using something that is not even a LEGO
+compatible sensor, you will have to
 manually load a device in order to be able to use your sensor. We just have to
 tell the I2C adapter which driver to use and the address of the device. (You
 read the [addressing](./#addressing) section didn't you?)
