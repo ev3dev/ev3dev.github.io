@@ -49,11 +49,8 @@ __Note:__ The [ev3dev-lang]{:target="_blank"} repository has its own
 If you don't find anything helpful by searching, then create a [new issue]{:target="_blank"}
 (only __one__ problem, question or suggestion per issue please).
 
-<div class="panel panel-info">
-    <div class="panel-heading">
-        <h2 class="panel-title">Tips for Posting Issues</h2>
-    </div>
-<div class="panel-body" markdown="1">
+{% include begin-panel.html type="info" heading="Tips for Posting Issues" %}
+
 <strong>Most importantly for problems, we need to know the *exact* steps need to reproduce the
 issue. If you are writing a program, post the code. If you are following
 a tutorial, which step failed? Be as detailed as possible.</strong>
@@ -93,9 +90,8 @@ Some additional things to take into consideration:
         ```
 
 Learn more about [writing on GitHub]{:target="_blank"}.
-    
-</div>
-</div>
+
+{% include end-panel.html %}
 
 Gitter
 ------

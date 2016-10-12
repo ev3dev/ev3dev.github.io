@@ -32,12 +32,8 @@ Docker has excellent documentation, so we will just send you to their
 Docker installed for Windows, Mac or Linux.
 {: .well}
 
-<div class="panel panel-info" markdown="1">
-{% include icon.html type="info" %}
-Linux
-{:.panel-heading}
+{% include begin-panel.html type="info" heading="Linux" %}
 
-<div class="panel-body" markdown="1">
 Docker for Linux has quite a bit of information to read. This may help you sort
 through it. The most important parts are:
 
@@ -47,9 +43,8 @@ through it. The most important parts are:
  
 Also, you will need to install `qemu-user-static` on your host computer, otherwise
 you will get an error: `exec user process caused "exec format error"`.
-</div>
-</div>
 
+{% include end-panel.html %}
 
 ## Download the ev3dev cross-compiler image
 

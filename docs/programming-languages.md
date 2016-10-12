@@ -105,20 +105,14 @@ Python [here](https://github.com/ev3dev/ev3devKit/tree/ev3dev-jessie/demo/python
 
 # Out-of-date, abandoned and unfinished implementations
 
-<div class="panel panel-danger">
-<div class="panel-heading">
-    {% include icon.html type="danger" %}
-    Listings below this point are for libraries that are not up-to-date, have
-    been abandoned, or are unfinished.
-</div>
-<div class="panel-body">
-<p>
-    Use them with caution, as some functionality will likely be broken. If you
-    see a library below that you'd like to see in a better state, consider
-    contributing to it to get it updated and ready to use.
-</p>
-</div>
-</div>
+{% include begin-panel.html type="danger"
+heading="Listings below this point are for libraries that are not up-to-date, have been abandoned, or are unfinished." %}
+
+Use them with caution, as some functionality will likely be broken. If you
+see a library below that you'd like to see in a better state, consider
+contributing to it to get it updated and ready to use.
+
+{% include end-panel.html %}
 
 ## C\#
 <https://github.com/pgrudzien12/ev3dev-lang-csharp>

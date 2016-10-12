@@ -184,19 +184,17 @@ data will be lost. Keep in mind, that it may take a much longer time from 8V to
 </div>
 </div>
 
-<div class="panel panel-info">
-<div class="panel-heading">
-{% include icon.html type="info" %}
-Troubleshooting tips if your EV3 won't boot
-</div>
-<div class="panel-body" markdown="1">
+{% include begin-panel.html type="info" heading="Troubleshooting tips if your EV3 won't boot" %}
+
 * Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)
 * Try writing the image to the SD card again.
 * You may have a bad/incompatible SD card - try a different SD card.
 * Check the condition of the EV3 batteries.
-{% include end-section.html %}
+
+{% include end-panel.html %}
 
 {% include end-section.html %}
+
 
 {% include begin-section.html bg="dark" %}
 
