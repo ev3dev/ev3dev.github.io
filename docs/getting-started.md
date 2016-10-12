@@ -5,8 +5,7 @@ excerpt: "So you're ready to try out ev3dev. Great! Here are step-by-step instru
 no-wrapper: true
 ---
 
-<div class="colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html %}
 
 * Table of Contents
 {:toc}
@@ -42,11 +41,9 @@ in the December release, so if something seems broken or the documentation seems
 please [open an issue on GitHub](/support){: .alert-link}.
 {: .alert .alert-warning}
 
-</div>
-</div>
+{% include end-section.html %}
 
-<div class="dark-bg colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html bg="dark" %}
 
 ## Step 1: Download the latest ev3dev image file
 
@@ -79,19 +76,17 @@ corresponds to your platform:
 - Releases for the Raspberry Pi 2 and 3 start with `rpi2-`
 - Releases for the BeagleBone start with `evb-`
 </div>
-</div>
-</div>
 
-<div class="colored-section">
-<div class="container" markdown="1">
+{% include end-section.html %}
+
+{% include begin-section.html %}
 
 ## Step 2: Flash the SD card
 
-<div class="alert alert-danger">
-    {% include icon.html type="danger" %}
-    This will erase everything on your SD card! Backup your files
-    if you do not want to lose them!
-</div>
+{% include icon.html type="danger" %}
+This will erase everything on your SD card! Backup your files
+if you do not want to lose them!
+{: .alert .alert-danger }
 
 Now it's time to write the image to the card.
 
@@ -127,26 +122,22 @@ Now it's time to write the image to the card.
    {% include screenshot.html source="/images/etcher/success.png" caption="Etcher success screen" width="600px" %}
 <br/>
 
-<div class="alert alert-info" markdown="1">
 {% include icon.html type="info" %}
 For more detailed information and more alternatives, check out
 [our other tutorials](/docs/tutorials/#group-administration-and-setup-sd-card-image){: .alert-link }.
 You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
 Much of the information there is applicable to ev3dev.
-</div>
+{: .alert .alert-info }
 
-</div>
-</div>
+{% include end-section.html %}
 
-<div class="dark-bg colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html bg="dark" %}
 
 ## Step 3 (Raspberry Pi only): Update options in config.txt
 
-<div class="alert alert-warning" markdown="1">
 {% include icon.html type="warning" %}
 This is for Raspberry Pi only! Users of other platforms can skip this step.
-</div>
+{: .alert alert-warning }
 
 You must make some changes to `config.txt` to enable support for BrickPi or
 PiStorms before you put your SD card in your Raspberry Pi.
@@ -157,11 +148,9 @@ up `EV3DEV_BOOT`. This contains a file named `config.txt`. Open `config.txt`
 in your favorite text editor and follow the instructions in the file to enable
 either BrickPi or PiStorms.
 
-</div>
-</div>
+{% include end-section.html %}
 
-<div class="colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html %}
 
 <div class="row">
 <div class="col-md-8" markdown="1">
@@ -205,14 +194,11 @@ Troubleshooting tips if your EV3 won't boot
 * Try writing the image to the SD card again.
 * You may have a bad/incompatible SD card - try a different SD card.
 * Check the condition of the EV3 batteries.
-</div>
-</div>
+{% include end-section.html %}
 
-</div>
-</div>
+{% include end-section.html %}
 
-<div class="dark-bg colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html bg="dark" %}
 
 ## Step 5: Set up a network connection
 
@@ -244,11 +230,9 @@ Now that you have a network connection, you should
 [connect to your EV3 with SSH](/docs/tutorials/connecting-to-ev3dev-with-ssh)
 if you haven't done so already.
 
-</div>
-</div>
+{% include end-section.html %}
 
-<div class="colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html %}
 
 ## Step 6: Do something awesome
 
@@ -262,11 +246,9 @@ do more of the heavy lifting yourself. You can look at the [driver index page](/
 for information on the interfaces you need to use to control devices. Once you get the
 hang of it, you can even write your own interface library and have it listed here!
 
-</div>
-</div>
+{% include end-section.html %}
 
-<div class="dark-bg colored-section">
-<div class="container" markdown="1">
+{% include begin-section.html bg="dark" %}
 
 <div class="row">
 <div class="col-md-8" markdown="1">
@@ -283,8 +265,7 @@ button from any screen in brickman. This will open a dialog where you can select
 </div>
 </div>
 
-</div>
-</div>
+{% include end-section.html %}
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
