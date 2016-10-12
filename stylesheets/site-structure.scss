@@ -145,3 +145,16 @@ ul + p, ol + p {
 .xl-button-text {
     font-size: 22px;
 }
+
+// thanks http://stackoverflow.com/a/32490429/1976323
+$margins: (xs: 0.5rem, sm: 1rem, md: 1.5rem, lg: 2rem, xl: 2.5rem);
+
+@each $name, $value in $margins {
+  .margin-top-#{$name} {
+    margin-top: $value;
+  }
+
+  .margin-bottom-#{$name} {
+    margin-bottom: $value;
+  }
+}
