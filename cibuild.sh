@@ -41,6 +41,7 @@ if [ "$TRAVIS" == "true" ]; then
         alldatasheet.com
         kernel\.org
         lab\.open-roberta\.org
+        questforspace\.com
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source

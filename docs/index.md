@@ -41,6 +41,11 @@ supported libraries](/docs/programming-languages). Choose a language to
 get started!
 
 
+## Platform Comparison
+
+[Compare all of the hardware platforms supported by ev3dev.](platform-comparison)
+
+
 ## Hardware drivers
 
 If you need to directly program against the ev3dev driver APIs, you can
