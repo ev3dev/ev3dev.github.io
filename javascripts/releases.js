@@ -2,10 +2,10 @@
 var releaseCacheTimeMillis = 20 * 60 * 1000;
 
 var releasePlatformRegexes = {
-    ev3: "ev3-[\\w\\d-]*\\.img\\.xz",
-    rpi: "rpi-[\\w\\d-]*\\.img\\.xz",
-    rpi2: "rpi2-[\\w\\d-]*\\.img\\.xz",
-    bone: "(evb|bone)-[\\w\\d-]*\\.img\\.xz",
+    ev3: "ev3dev-jessie-ev3-generic-[\\d-]+\\.zip",
+    rpi: "ev3dev-jessie-rpi-generic-[\\d-]+\\.zip",
+    rpi2: "ev3dev-jessie-rpi2-generic-[\\d-]+\\.zip",
+    bone: "ev3dev-jessie-bone-generic-[\\d-]+\\.zip",
 }
 
 function initDownloadLinks() {
