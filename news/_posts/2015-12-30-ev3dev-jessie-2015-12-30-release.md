@@ -1,6 +1,6 @@
 ---
 author: "@dlech"
-title: "Announcing ev3dev-jessie-12-30 Release"
+title: "Announcing ev3dev-jessie-2015-12-30 Release"
 ---
 
 We have reached the [2015-Q4] milestone (and just barely in time). There are
