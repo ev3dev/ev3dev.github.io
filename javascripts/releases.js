@@ -42,7 +42,8 @@ function initDownloadLinks() {
                 for (var assetIndex in releaseAssets) {
                     if (platformRegex.test(releaseAssets[assetIndex].name)) {
                         $linkElem.attr('href', releaseAssets[assetIndex]['browser_download_url']);
-                        $linkElem.append(' <small>(' + (releaseAssets[assetIndex]['size'] / 1024 / 1024).toFixed(1) + ' MB)</small>');
+                        var fileSize = releaseAssets[assetIndex]['size'] >> 20;
+                        $('<small/>').text('(' + fileSize.toFixed(1) + ' MiB)').appendTo($linkElem);
                         return true;
                     }
                 }
