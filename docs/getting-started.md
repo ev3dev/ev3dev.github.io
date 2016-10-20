@@ -129,7 +129,7 @@ Now it's time to write the image to the card.
 
 <div class="alert alert-info" markdown="1">
 {% include icon.html type="info" %}
-For more detailed information and more alternatives, check out
+For more detailed information and flashing utility alternatives, check out
 [our other tutorials](/docs/tutorials/#group-administration-and-setup-sd-card-image){: .alert-link }.
 You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
 Much of the information there is applicable to ev3dev.
@@ -208,6 +208,23 @@ Troubleshooting tips if your EV3 won't boot
 </div>
 </div>
 
+<div class="row">
+<div class="col-md-8" markdown="1">
+### Shutting down
+
+You'll often want to turn off your EV3 while it isn't in use. When you are ready
+to wish your EV3 good night, turn if off by pressing the *back* button from the
+main menu in brickman or pressing _and holding_ the *back* button from any screen
+in brickman. This will open a dialog where you can select *Power Off* to turn
+off the EV3. _If you're using the command line, running `sudo poweroff` in a
+terminal works too._
+</div>
+
+<div class="col-md-4">
+{% include screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
+</div>
+</div>
+
 </div>
 </div>
 
@@ -216,8 +233,9 @@ Troubleshooting tips if your EV3 won't boot
 
 ## Step 5: Set up a network connection
 
-There are lots of choices here. Choose the connection option that best suits you
-and your available devices.
+Click on the button below to visit our networking page. There are lots of
+choices here; choose the connection option that best suits you and your
+available hardware.
 
 {% include icon.html type="info" %}
 For Raspberry Pi with no display, you must use the wired Ethernet port
@@ -225,7 +243,7 @@ to connect for the first time. You can set up additional connections using the
 `connmanctl` command.
 {: class="alert alert-info"}
 
-<a class="btn btn-md btn-primary" href="/docs/networking"><span class="glyphicon glyphicon-globe"></span> Check out the available networking options</a>
+<a class="btn btn-md btn-primary" href="/docs/networking" target="_blank"><span class="glyphicon glyphicon-globe"></span> Check out the available networking options</a>
 
 </div>
 </div>
@@ -239,18 +257,21 @@ Now that you have a network connection, you should connect to your EV3 with SSH.
 Connecting allows you to verify that the networking option that you configured
 in the previous step is working. Once you have an SSH connection, you will be
 able to securely run terminal commands on the EV3 from your PC. This lets you
-run programs, change settings, and install new programs.
+run programs, change settings, and install new programs. Click the button below
+to learn how to connect.
 
-<a class="btn btn-md btn-primary" href="/docs/tutorials/connecting-to-ev3dev-with-ssh"><span class="glyphicon glyphicon-transfer"></span> Learn how to connect with SSH</a>
+<a class="btn btn-md btn-primary" href="/docs/tutorials/connecting-to-ev3dev-with-ssh" target="_blank"><span class="glyphicon glyphicon-transfer"></span> Learn how to connect with SSH</a>
 
 To test this out, let's try running a command. Type (or copy-and-paste) the
-following into the terminal, and press enter. It will use the speakers and
-text-to-speech software to speak out loud. **If you are not on an EV3, this
-will not work. It requires the EV3's built-in speaker.**
+following into the terminal, and press enter. It will use a nifty program called
+`fortune` to print out a random quote from a database. Feel free to try it
+multiple times!
 
 {% highlight bash %}
-espeak --stdout "Welcome to E V 3 dev!" | aplay -q
+fortune
 {% endhighlight %}
+
+If you don't see any errors printed, you're good to go!
 
 </div>
 </div>
