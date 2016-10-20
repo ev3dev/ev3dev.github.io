@@ -7,10 +7,11 @@ group: hardware-standard
 {:toc}
 
 {% include icon.html type="danger" %}
-This tutorial has been updated to kernel release 10. This is different from the
-version that comes pre-installed on the current image files. Check your kernel
-version by running `uname -r`. If it does not contain `-10-ev3dev-` in the version,
-upgrade your kernel and try again before filing a bug.
+This tutorial has been updated for changes introduced in ev3dev kernel release
+10. **If you are running on an image file from before October 27th 2016 and have
+not manually upgraded your kernel, you will need to upgrade before continuing.**
+You can check your kernel version by running `uname -r`. If it does not contain
+`-10-ev3dev-` or higher, you are not running a supported version.
 {: .alert .alert-danger}
 
 This tutorial uses a command line shell to demonstrate how to use the [tacho-motor] class.
