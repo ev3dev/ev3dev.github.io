@@ -14,7 +14,10 @@ You can check your kernel version by running `uname -r`. If it does not contain
 `-10-ev3dev-` or higher, you are not running a supported version.
 {: .alert .alert-danger}
 
-This tutorial uses a command line shell to demonstrate how to use the [tacho-motor] class.
+This tutorial uses a command line shell to demonstrate how to use the
+[tacho-motor] class. Although there are many devices that can be used as tacho
+motors, the most common ones are the standard EV3 "large" and "medium" motors
+as well as normal NXT motors.
 
 ## About tachometers
 
