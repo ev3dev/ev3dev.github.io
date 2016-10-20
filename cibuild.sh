@@ -26,24 +26,38 @@ fi
 echo "Building site ------------------------------------"
 bundle exec jekyll build --trace
 
-# credit: code snippet borrowed from jekyllrb.com website source
-IGNORE_HREFS=$(ruby -e 'puts %w{
-    example.com
-    https:\/\/github\.com\/myuser\/myrepo
-    .*revolds-whitepaper\.pdf
-    https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
-    warmcat.com
-    robosnap.net
-    01.org
-    alldatasheet.com
-}.map{|h| "/#{h}/"}.join(",")')
+if [ "$TRAVIS" == "true" ]; then
+    # Travis has issues with https, so we have to ignore quite a few extra sites
+
+    # credit: code snippet borrowed from jekyllrb.com website source
+    IGNORE_HREFS=$(ruby -e 'puts %w{
+        example.com
+        https:\/\/github\.com\/myuser\/myrepo
+        .*revolds-whitepaper\.pdf
+        https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
+        robosnap.net
+        warmcat.com
+        01.org
+        alldatasheet.com
+        kernel\.org
+        lab\.open-roberta\.org
+        questforspace\.com
+    }.map{|h| "/#{h}/"}.join(",")')
+else
+    # credit: code snippet borrowed from jekyllrb.com website source
+    IGNORE_HREFS=$(ruby -e 'puts %w{
+        example.com
+        https:\/\/github\.com\/myuser\/myrepo
+        https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
+        robosnap.net
+    }.map{|h| "/#{h}/"}.join(",")')
+fi
 
 # Explanation of ignored sites:
 # - example.com and github.com/myuser/myrepo are fake/example links
 # - The edit on github pages don't exist when you create a page, so ignoring them.
 #   They are automatically generated anyway.
-#  -revolds-whitepaper.pdf causes problems on travis but is really a good link (for now)
-# - warmcat.com works locally but fails on travis for some reason related to ssl
+# - robosnap.net no longer exists, but keeping the link for historical reasons
 
 echo "Validating HTML ----------------------------------"
 # We want to use the publish script so that we can implement other transformations in the future

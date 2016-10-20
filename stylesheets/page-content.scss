@@ -65,3 +65,8 @@
     80% { border-left-color: $brand-primary; }
     100% { border-left-color: $panel-default-border; }
 }
+
+table.table-left-header > tbody > tr > th:last-of-type {
+    border-right-color: lighten($table-border-color, 20%);
+    border-right-width: 2px;
+}

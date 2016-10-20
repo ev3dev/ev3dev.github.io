@@ -1,0 +1,17 @@
+{% comment %}
+
+Used to begin a bootstrap panel.
+
+Parameters:
+
+    type:    Can be one of "success", "info", "warning" or "danger".
+    heading: The heading text.
+
+{% endcomment %}
+<div class="panel panel-{{ include.type }}">
+<div class="panel-heading">
+{% include icon.html %}{% comment %}
+Note: the `type` parameter is implicitly passed through to icon.html.{% endcomment %}
+{{ include.heading }}
+</div>
+<div class="panel-body" markdown="1">

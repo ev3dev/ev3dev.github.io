@@ -16,7 +16,7 @@ Adding it is quite simple. Save the following as `/etc/apt/sources.list.d/ev3dev
 
 Then trust the keyring by running...
 
-    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 2B210565
+    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys D57D95AF93178A7C
 
 Now, lets try it out...
 

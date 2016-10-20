@@ -76,7 +76,9 @@ If you are using an older version, please upgrade.
     1.  On your host computer, with the EV3 connected via USB, open up the
         network application indicator (1). You should already see an entry for
         *LEGO Group EV3+ev3dev* (2). Click *Edit Connections...* (3) to open
-        `nm-connection-manager`.
+        `nm-connection-manager`. If you are using a different desktop environment
+        that does not have this menu, you can run `nm-connection-editor` from
+        a terminal instead.
 
         {% include screenshot.html source="/images/ubuntu/15.10/network-application-indicator-edit-connections.png" %}
 
@@ -91,6 +93,10 @@ If you are using an older version, please upgrade.
     4.  Enter a *Connection Name* (1) and select the *Device MAC Address* of your
         EV3 from the list (2). The name can be anything you like. The MAC address
         will always start with `12:16:53`, so choose that one.
+
+        Be sure to delete the network interface name (e.g. `bnep0` or `enp0s20f0u4c2`)
+        in (2), leaving only the MAC address. Otherwise, the connection may not work
+        if you plug the EV3 into a different USB port later.
 
         {% include screenshot.html source="/images/ubuntu/15.10/editing-ev3dev-ethernet.png" %}
 

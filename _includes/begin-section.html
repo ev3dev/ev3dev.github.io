@@ -1,0 +1,11 @@
+{% comment %}
+
+Used to begin a visually separated section.
+
+Parameters:
+
+    bg: Sets the background to light or dark. (optional)
+
+{% endcomment %}
+<div class="colored-section{% if include.bg %} {{ include.bg }}-bg{% endif %}">
+<div class="container" markdown="1">

@@ -36,6 +36,6 @@ detected on a given input port. When the sensor is removed, the line discipline
 is detached (process killed).
 
 [UART]: https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter
-[line discipline]: http://kernel.org/doc/Documentation/serial/tty.txt
+[line discipline]: https://www.kernel.org/doc/Documentation/serial/tty.txt
 [ev3.rules]: https://github.com/ev3dev/ev3-systemd/blob/ev3dev-jessie/debian/ev3.udev#L19
 [ev3-uart@.service]: https://github.com/ev3dev/ev3-systemd/blob/ev3dev-jessie/systemd/ev3-uart%40.service
