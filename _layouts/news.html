@@ -11,26 +11,27 @@ layout: page
         {% endif %}
     {% endif %}
 {% endfor %}
-
-<div class="col-lg-9">
-    {{ content }}
-</div>
-<div class="col-lg-3">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Post Info</h3>
+<div class="row">
+    <div class="col-lg-9">
+        {{ content }}
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Post Info</h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Posted on {{ page.date | date_to_long_string  }}
+                </li>
+                {% if page.author %}
+                <li class="list-group-item">
+                    {% for author in page.author %}
+                    {% include author-card.html author=author %}
+                    {% endfor %}
+                </li>
+                {% endif %}
+            </ul>
         </div>
-        <ul class="list-group">
-            <li class="list-group-item">
-                Posted on {{ page.date | date_to_long_string  }}
-            </li>
-            {% if page.author %}
-            <li class="list-group-item">
-                {% for author in page.author %}
-                {% include author-card.html author=author %}
-                {% endfor %}
-            </li>
-            {% endif %}
-        </ul>
     </div>
 </div>
