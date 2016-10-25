@@ -137,7 +137,7 @@ Much of the information there is applicable to ev3dev.
 
 {% include icon.html type="warning" %}
 This is for Raspberry Pi only! Users of other platforms can skip this step.
-{: .alert alert-warning }
+{: .alert .alert-warning }
 
 You must make some changes to `config.txt` to enable support for BrickPi or
 PiStorms before you put your SD card in your Raspberry Pi.
