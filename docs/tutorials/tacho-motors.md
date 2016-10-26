@@ -8,7 +8,7 @@ group: hardware-standard
 
 {% include icon.html type="danger" %}
 This tutorial has been updated for changes introduced in ev3dev kernel release
-10. **If you are running on an image file from before October 27th 2016 and have
+10. **If you are running on an image file from before 2016-10-17 and have
 not manually upgraded your kernel, you will need to upgrade before continuing.**
 You can check your kernel version by running `uname -r`. If it does not contain
 `-10-ev3dev-` or higher, you are not running a supported version.
@@ -16,8 +16,8 @@ You can check your kernel version by running `uname -r`. If it does not contain
 
 This tutorial uses a command line shell to demonstrate how to use the
 [tacho-motor] class. Although there are many devices that can be used as tacho
-motors, the most common ones are the standard EV3 "large" and "medium" motors
-as well as normal NXT motors.
+motors, the most common ones are the standard "EV3 Large Servo Motor" and
+"EV3 Medium Servo Motor" as well as normal NXT motors.
 
 ## About tachometers
 
