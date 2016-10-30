@@ -50,7 +50,7 @@ title: EV3 Processor
 
 ## Pin Assignments
 
-There are 400 pins on the chip. The pins are multiplexed so that each pin can perform multiple functions. This is how the EV3 uses each pin. See section 10.4.9 in the AM1808 technical reference manual to see where this came from.
+There are 400 pins on the chip. 160 of the pins are multiplexed, meaning that each pin can perform multiple functions. This is how the EV3 uses each multiplexed pin. See section 10.4.9 in the AM1808 technical reference manual to see where this came from.
 
 This is based on the lms2012 code and hardware schematic revision J. Both are not 100% reliable representations of the mass produced hardware, so there could be inaccurate information here. You have been warned.
 
@@ -888,7 +888,7 @@ This is based on the lms2012 code and hardware schematic revision J. Both are no
     <td>P_EN</td>
     <td>System power enable</td>
   </tr>
-  </td>
+  <tr>
     <td>0</td>
     <td></td>
     <td><i>N/C</i></td>
