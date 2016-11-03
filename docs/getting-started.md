@@ -61,9 +61,8 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 <br/>
 To get started, you will need to download the release corresponding to the platform
-you are using. If you want the latest and greatest, check out the ["nightly"][nightly]
-image builds. If you are looking for older releases or other file types, you can
-check out the [GitHub releases page][releases].
+you are using. For additional downloads and advanced information, check out our
+[dedicated download page](/download).
 
 </div>
 <div class="release-link-alt" markdown="1">
@@ -84,7 +83,7 @@ corresponds to your platform:
 ## Step 2: Flash the SD card
 
 {% include icon.html type="danger" %}
-This will erase everything on your SD card! Backup your files
+This will erase everything on your SD card! Back up your files
 if you do not want to lose them!
 {: .alert .alert-danger }
 
