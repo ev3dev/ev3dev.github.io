@@ -2,7 +2,7 @@
 title: Programming Languages
 subtitle: Control ev3dev devices from code
 excerpt: "If you are looking to write a program that takes advantage of motors, sensors, or other native devices, using a language binding is the way to go. These are the best options for each language."
-redirect_from: /docs/libraries
+redirect_from: /docs/libraries/index.html
 ---
 
 Before you can start writing code that runs on ev3dev, you need to choose a
@@ -105,8 +105,7 @@ Python [here](https://github.com/ev3dev/ev3devKit/tree/ev3dev-jessie/demo/python
 
 # Out-of-date, abandoned and unfinished implementations
 
-{% include begin-panel.html type="danger"
-heading="Listings below this point are for libraries that are not up-to-date, have been abandoned, or are unfinished." %}
+{% include begin-panel.html type="danger" heading="Listings below this point are for libraries that are not up-to-date, have been abandoned, or are unfinished." %}
 
 Use them with caution, as some functionality will likely be broken. If you
 see a library below that you'd like to see in a better state, consider

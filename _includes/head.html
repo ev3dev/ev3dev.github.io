@@ -5,7 +5,7 @@
 
     <title>{{ page.title | xml_escape }}</title>
     {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt | strip_html | strip }}"/>
+    <meta name="description" content="{{ page.excerpt | strip_html | strip | xml_escape }}"/>
     {% else %}
     <!-- Description content not available -->
     {% endif %}

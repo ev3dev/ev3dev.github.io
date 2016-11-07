@@ -47,7 +47,7 @@ terminal or Brickman.
 We need to install the compiler and some other tools. Execute the following
 command to install them:
 
-{% highlight shell %}
+{% highlight sh %}
 sudo apt-get install build-essential
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ sudo apt-get install build-essential
 We need a place to store the code that you'll write. In the terminal, run the
 following commands:
 
-{% highlight shell %}
+{% highlight sh %}
 mkdir c-demo
 cd c-demo
 {% endhighlight %}
@@ -64,7 +64,7 @@ cd c-demo
 The code that you write will live in its own file. Let's reate a file called
 `main.c` and open it in nano:
 
-{% highlight shell %}
+{% highlight sh %}
 nano main.c
 {% endhighlight %}
 
@@ -91,7 +91,7 @@ libraries.
 
 Create a file called `Makefile` and open it:
 
-{% highlight shell %}
+{% highlight sh %}
 nano Makefile
 {% endhighlight %}
 
