@@ -4,8 +4,7 @@ layout: page
 excerpt: "ev3dev documentation, tutorials, technical reference, getting started guides, and information on the underlying technologies."
 ---
 
-{% include begin-panel.html type="info"
-heading="ev3dev is a community-maintained project that relies on contributors like you." %}
+{% include begin-panel.html type="info" heading="ev3dev is a community-maintained project that relies on contributors like you." %}
 
 If there's a topic that you think we should have docs for, please
 consider [contributing](../contribute).

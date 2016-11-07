@@ -127,8 +127,7 @@ no-wrapper: true
 </div>
 <div class="row margin-top-xl">
 <div class="col-md-12 margin-top-xl">
-{% include begin-panel.html type="info"
-heading="How to pick the correct image file..." %}
+{% include begin-panel.html type="info" heading="How to pick the correct image file..." %}
 
 There are multiple image files for each release. Look for
 the file name that matches the device you are using.
