@@ -242,6 +242,301 @@
         "vendor_website": "http://www.dexterindustries.com/shop/dflex-lego-mindstorms-nxt-flexible-sensor-for-mindstorms/"
     },
     {
+        "id": "FATCATLAB_ADC",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Channel 1",
+                "id": "0",
+                "name": "CH1-VOLTAGE",
+                "units": "mV",
+                "units_description": "millivolts",
+                "value0": "Voltage (0 to 3300)"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Channel 2",
+                "id": "1",
+                "name": "CH2-VOLTAGE",
+                "units": "mV",
+                "units_description": "millivolts",
+                "value0": "Voltage (0 to 3300)"
+            },
+            {
+                "data_sets": "2",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Both Channels",
+                "id": "2",
+                "name": "VOLTAGE",
+                "units": "mV",
+                "units_description": "millivolts",
+                "value0": "Channel 1 Voltage (0 to 3300)",
+                "value1": "Channel 2 Voltage (0 to 3300)"
+            }
+        ],
+        "name": "fcl-adc",
+        "num_modes": "3",
+        "num_view_modes": "2",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_ADC_TYPE_ID",
+        "url_name": "fatcatlab-adc-adapter",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "ADC Adapter",
+        "vendor_website": "http://fatcatlab.com/product/adc-adapter"
+    },
+    {
+        "id": "FATCATLAB_GESTURE",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
+                "description": "Gesture",
+                "id": "0",
+                "name": "GESTURE",
+                "notes": "\n[^gesture-values]: Gesture Values:\n    \n    | Value | Description |\n    |-------|-------------|\n    | 0     | *none*      |\n    | 1     | left        |\n    | 2     | right       |\n    | 3     | up          |\n    | 4     | down        |\n    | 5     | near        |\n    | 6     | far         |\n    \n    ",
+                "value0": "Gesture (0 to 6)",
+                "value0_footnote": "[^gesture-values]"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
+                "description": "Proximity",
+                "id": "1",
+                "name": "PROXIMITY",
+                "value0": "Voltage (0 to 127)"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "description": "Color",
+                "id": "2",
+                "name": "RGB-RAW",
+                "value0": "Red",
+                "value1": "Green",
+                "value2": "Blue"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
+                "description": "Clear",
+                "id": "3",
+                "name": "CLEAR",
+                "name_footnote": "[^clear]",
+                "notes": "\n[^clear]: The `CLEAR` mode is used to reset\n    the value of the `GESTURE` mode back to zero.\n    \n    ",
+                "value0": "Always 1"
+            }
+        ],
+        "name": "fcl-gesture",
+        "num_modes": "4",
+        "num_view_modes": "4",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_GESTURE_TYPE_ID",
+        "url_name": "fatcatlab-gesture-sensor",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "Gesture Sensor",
+        "vendor_website": "http://fatcatlab.com/product/gesture-sensor"
+    },
+    {
+        "id": "FATCATLAB_LIGHT",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "description": "Illuminance",
+                "id": "0",
+                "name": "ILLUMINANCE",
+                "units": "lx",
+                "units_description": "lux",
+                "value0": "Illuminance (0 to 65535)"
+            }
+        ],
+        "name": "fcl-light",
+        "num_modes": "1",
+        "num_view_modes": "1",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_LIGHT_TYPE_ID",
+        "url_name": "fatcatlab-light-sensor",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "Light Sensor",
+        "vendor_website": "http://fatcatlab.com/product/light-sensor"
+    },
+    {
+        "id": "FATCATLAB_ALTITUDE",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "decimals": "1",
+                "description": "Pressure",
+                "id": "0",
+                "name": "PRESSURE",
+                "units": "hPa",
+                "units_description": "hectopascals",
+                "value0": "Pressure (3000 to 11000)"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "decimals": "1",
+                "description": "Altitude",
+                "id": "1",
+                "name": "ALTITUDE",
+                "units": "m",
+                "units_description": "meters",
+                "value0": "Altitude (-5000 to 90000)"
+            }
+        ],
+        "name": "fcl-altitude",
+        "num_modes": "2",
+        "num_view_modes": "2",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_ALTITUDE_TYPE_ID",
+        "url_name": "fatcatlab-altitude-sensor",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "Altitude Sensor",
+        "vendor_website": "http://fatcatlab.com/product/altitude-sensor"
+    },
+    {
+        "id": "FATCATLAB_IR",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S8",
+                "description": "IR Remote Control",
+                "id": "0",
+                "name": "IR DATA",
+                "notes": "\n[^ir-mode-values]: Button values:\n    \n    | Value | Button                 |\n    |-------|------------------------|\n    | 0     | *none*                 |\n    | 1-9   | 1-9 (digits)           |\n    | 10    | 0 (zero)               |\n    | 11    | + (plus)               |\n    | 12    | - (minus)              |\n    | 13    | &#x23ee; (previous)    |\n    | 14    | &#x23ed; (next)        |\n    | 15    | &#x23ef; (play/pause)  |\n    | 21    | OK                     |\n    | 22    | &#x21b0; (back)        |\n    | 30    | &#x23fb; (power)       |\n    | 40    | MENU                   |\n    | 50    | &#x1f507; (mute)       |\n    | 60    | MODE                   |\n    \n    ",
+                "units_description": "button",
+                "value0": "Channel 1 (0 to 60)",
+                "value0_footnote": "[^ir-mode-values]"
+            }
+        ],
+        "name": "fcl-ir",
+        "num_modes": "1",
+        "num_view_modes": "1",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_IR_TYPE_ID",
+        "url_name": "fatcatlab-ir-receiver",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "IR Receiver",
+        "vendor_website": "http://fatcatlab.com/product/ir-receiver"
+    },
+    {
+        "id": "FATCATLAB_9DOF",
+        "mode_info": [
+            {
+                "data_sets": "3",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "decimals": "1",
+                "description": "Gyroscope",
+                "id": "0",
+                "name": "GYRO",
+                "units": "d/s",
+                "units_description": "degrees per second",
+                "value0": "X-axis rotational speed (-20000  to 20000)",
+                "value1": "Y-axis rotational speed (-20000  to 20000)",
+                "value2": "Z-axis rotational speed (-20000  to 20000)"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "decimals": "3",
+                "description": "Accelerometer",
+                "id": "1",
+                "name": "ACC",
+                "units": "g",
+                "units_description": "standard gravity",
+                "value0": "X-axis acceleration (-16000 to 16000)",
+                "value1": "Y-axis acceleration (-16000 to 16000)",
+                "value2": "Z-axis acceleration (-16000 to 16000)"
+            },
+            {
+                "data_sets": "3",
+                "data_type": "LEGO_SENSOR_DATA_S32",
+                "description": "Magnetometer",
+                "id": "2",
+                "name": "MAGNET",
+                "units": "uT",
+                "units_description": "microteslas",
+                "value0": "X-axis magnetic flux density (-4800 to 4800)",
+                "value1": "Y-axis magnetic flux density (-4800 to 4800)",
+                "value2": "Z-axis magnetic flux density (-4800 to 4800)"
+            }
+        ],
+        "name": "fcl-9dof",
+        "num_modes": "3",
+        "num_view_modes": "3",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_9DOF_TYPE_ID",
+        "url_name": "fatcatlab-9dof-sensor",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "9DOF Sensor",
+        "vendor_website": "http://fatcatlab.com/product/9dof-sensor"
+    },
+    {
+        "id": "FATCATLAB_HUMIDITY",
+        "mode_info": [
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "decimals": "1",
+                "description": "Temperature (Celsius)",
+                "id": "0",
+                "name": "CENTIGRADE",
+                "units": "C",
+                "units_description": "degrees Celsius",
+                "value0": "Temperature (-400 to 1250)"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "decimals": "1",
+                "description": "Temperature (Fahrenheit)",
+                "id": "1",
+                "name": "FAHRENHEIT",
+                "units": "F",
+                "units_description": "degrees Fahrenheit",
+                "value0": "Temperature (-400 to 2570)"
+            },
+            {
+                "data_sets": "1",
+                "data_type": "LEGO_SENSOR_DATA_S16",
+                "decimals": "1",
+                "description": "Humidity",
+                "id": "2",
+                "name": "HUMIDITY",
+                "units": "%RH",
+                "units_description": "percent relative humidity",
+                "value0": "Humidity (0 to 1000)"
+            }
+        ],
+        "name": "fcl-humidity",
+        "num_modes": "3",
+        "num_view_modes": "3",
+        "sensor_type": "ev3-uart-sensor",
+        "source_file": "drivers/lego/sensors/ev3_uart_sensor_defs.c",
+        "source_line": 25,
+        "type_id": "FATCATLAB_HUMIDITY_TYPE_ID",
+        "url_name": "fatcatlab-humidity-sensor",
+        "vendor_name": "Fatcatlab",
+        "vendor_part_name": "Humidity Sensor",
+        "vendor_website": "http://fatcatlab.com/product/humidity-sensor"
+    },
+    {
         "default_address": "0x01",
         "i2c_mode_info": [
             {
