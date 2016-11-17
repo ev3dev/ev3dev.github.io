@@ -42,6 +42,7 @@ if [ "$TRAVIS" == "true" ]; then
         kernel\.org
         lab\.open-roberta\.org
         questforspace\.com
+        bountysource\.com
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
