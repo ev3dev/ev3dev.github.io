@@ -16,8 +16,8 @@ You can check your kernel version by running `uname -r`. If it does not contain
 
 This tutorial uses a command line shell to demonstrate how to use the
 [tacho-motor] class. Although there are many devices that can be used as tacho
-motors, the most common ones are the standard "EV3 Large Servo Motor" and
-"EV3 Medium Servo Motor" as well as normal NXT motors.
+motors, the most common ones are the EV3 Large motor, the
+EV3 Medium motor, and the NXT motor.
 
 ## About tachometers
 
