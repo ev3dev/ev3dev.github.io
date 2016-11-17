@@ -132,7 +132,7 @@ Much of the information there is applicable to ev3dev.
 
 {% include begin-section.html bg="dark" %}
 
-## Step 3 (Raspberry Pi only): Update options in config.txt
+## Step 3A (Raspberry Pi only): Update options in config.txt
 
 {% include icon.html type="warning" %}
 This is for Raspberry Pi only! Users of other platforms can skip this step.
@@ -146,6 +146,21 @@ after flashing it in order for it to be detected. In your file browser, open
 up `EV3DEV_BOOT`. This contains a file named `config.txt`. Open `config.txt`
 in your favorite text editor and follow the instructions in the file to enable
 either BrickPi or PiStorms.
+
+## Step 3B (BeagleBone only): Select cape in uEnv.txt
+
+{% include icon.html type="warning" %}
+This is for Beaglebone only! Users of other platforms can skip this step.
+{: .alert .alert-warning }
+
+You must make some changes to `uEnv.txt` to enable support for FatcatLab EVB or
+QuestCape before you put your SD card in your BeagleBone.
+
+You may have to remove the SD card from your host computer and plug it back in
+after flashing it in order for it to be detected. In your file browser, open
+up `EV3DEV_BOOT`. This contains a file named `uEnv.txt`. Open `uEnv.txt`
+in your favorite text editor and follow the instructions in the file to select
+the cape your are using.
 
 {% include end-section.html %}
 
