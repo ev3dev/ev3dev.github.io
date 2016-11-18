@@ -234,12 +234,6 @@ Click on the button below to visit our networking page. There are lots of
 choices here; choose the connection option that best suits you and your
 available hardware.
 
-{% include icon.html type="info" %}
-For Raspberry Pi with no display, you must use the wired Ethernet port
-to connect for the first time. You can set up additional connections using the
-`connmanctl` command.
-{: class="alert alert-info"}
-
 <a class="btn btn-md btn-primary" href="/docs/networking" target="_blank"><span class="glyphicon glyphicon-globe"></span> Check out the available networking options</a>
 
 {% include end-section.html %}
@@ -257,16 +251,20 @@ to learn how to connect.
 
 <a class="btn btn-md btn-primary" href="/docs/tutorials/connecting-to-ev3dev-with-ssh" target="_blank"><span class="glyphicon glyphicon-transfer"></span> Learn how to connect with SSH</a>
 
-To test this out, let's try running a command. Type (or copy-and-paste) the
-following into the terminal, and press enter. It will use a nifty program called
-`fortune` to print out a random quote from a database. Feel free to try it
-multiple times!
+To test this out, let's try running a command (make sure that you have completed
+the earlier part of this step first).
 
-{% highlight bash %}
-fortune
+Type the command `fortune` into the SSH shell opened above and press
+<kbd>Enter</kbd>. It will use a nifty program called `fortune` to print out a
+random quote from a database. Feel free to try it multiple times!
+
+{% highlight none %}
+robot@ev3dev:~$ fortune
+Your domestic life may be harmonious.
 {% endhighlight %}
 
-If you don't see any errors printed, you're good to go!
+If you don't see any errors printed, and your output looks similar to the above,
+you're good to go!
 
 {% include end-section.html %}
 
@@ -274,11 +272,15 @@ If you don't see any errors printed, you're good to go!
 
 ## Step 7: Choose a programming language and write some code
 
+{% include icon.html type="info" %}
+If you were sent here from a language- or framework-specific webpage, you can
+skip this step and return there for further instructions.
+{: .alert .alert-info }
+
 The brick can run the vast majority of popular programming languages, so your
 favorite language is probably supported. Pick your language and write some code!
 
 <a class="btn btn-md btn-primary" href="/docs/programming-languages"><span class="glyphicon glyphicon-console"></span> See the available programming languages</a>
-
 
 {% include end-section.html %}
 
