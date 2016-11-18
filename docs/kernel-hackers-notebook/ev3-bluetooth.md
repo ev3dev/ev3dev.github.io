@@ -14,9 +14,7 @@ ENW8929A2KF with TI part number CC2560A instead.
 
 * [PAN1325A website](https://na.industrial.panasonic.com/products/wireless-connectivity/bluetooth/bluetooth-classic/series/pan1325a1315a-series/CS460)
 * [PAN1325A datasheet](http://na.industrial.panasonic.com/sites/default/pidsa/files/panasonic_pan13xx_datasheet_v4.61.pdf) (pdf)
-* [CC2560 website](http://www.ti.com/product/cc2560)
-* [CC2560 datasheet](http://www.ti.com/lit/ds/symlink/cc2560.pdf)
-* [CC256x wiki](http://processors.wiki.ti.com/index.php/CC256x)
+* [CC2560 wiki](http://processors.wiki.ti.com/index.php/CC256x)
 
 ## Notes
 
