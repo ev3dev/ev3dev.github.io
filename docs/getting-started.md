@@ -258,10 +258,8 @@ Type the command `fortune` into the SSH shell opened above and press
 <kbd>Enter</kbd>. It will use a nifty program called `fortune` to print out a
 random quote from a database. Feel free to try it multiple times!
 
-{% highlight none %}
-robot@ev3dev:~$ fortune
-Your domestic life may be harmonious.
-{% endhighlight %}
+    robot@ev3dev:~$ fortune
+    Your domestic life may be harmonious.
 
 If you don't see any errors printed, and your output looks similar to the above,
 you're good to go!
