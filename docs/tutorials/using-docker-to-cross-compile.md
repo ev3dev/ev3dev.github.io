@@ -156,7 +156,7 @@ do this.
 The same example also shows a trick of how to keep a Docker container running
 so that you can run builds without starting a new container each time.
 
-[Dockerfile]: https://docker.github.io/engine/reference/builder/
+[Dockerfile]: https://docs.docker.com/engine/reference/builder/
 [example]: https://github.com/ev3dev/lms2012-compat/tree/ev3dev-jessie/docker
 
 
