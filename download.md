@@ -9,7 +9,7 @@ no-wrapper: true
 <div class="row margin-bottom-xl">
     <div class="col-sm-12">
         <p class="lead">
-            <span class="glyphicon glyphicon-download"/>
+            <span class="glyphicon glyphicon-download"></span>
             Select the download below that corresponds to your hardware.
             <br/>
             <small>
@@ -29,7 +29,7 @@ no-wrapper: true
             </p>
         </div>
         <a data-release-link-platform="ev3" class="btn btn-lg btn-primary">
-            <span class="glyphicon glyphicon-download-alt"/>
+            <span class="glyphicon glyphicon-download-alt"></span>
             Download for EV3
         </a>
     </div>
@@ -49,13 +49,13 @@ no-wrapper: true
         </div>
         <div class="margin-bottom-md">
             <a data-release-link-platform="rpi" class="btn btn-md btn-primary">
-                <span class="glyphicon glyphicon-download-alt"/>
+                <span class="glyphicon glyphicon-download-alt"></span>
                 Download for Raspberry Pi Model 0/1
             </a>
         </div>
         <div class="margin-bottom-md">
             <a data-release-link-platform="rpi2" class="btn btn-md btn-primary">
-                <span class="glyphicon glyphicon-download-alt"/>
+                <span class="glyphicon glyphicon-download-alt"></span>
                 Download for Raspberry Pi Model 2/3
             </a>
         </div>
@@ -76,7 +76,7 @@ no-wrapper: true
         </div>
         <div class="margin-bottom-md">
             <a data-release-link-platform="bone" class="btn btn-md btn-primary">
-                <span class="glyphicon glyphicon-download-alt"/>
+                <span class="glyphicon glyphicon-download-alt"></span>
                 Download for BeagleBone
             </a>
         </div>
@@ -105,7 +105,7 @@ no-wrapper: true
         </p>
         <div class="margin-top-md">
             <a class="btn btn-md btn-primary" href="https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/">
-                <span class="glyphicon glyphicon-link"/>
+                <span class="glyphicon glyphicon-link"></span>
                 Snapshots
             </a>
         </div>
@@ -119,7 +119,7 @@ no-wrapper: true
         </p>
         <div class="margin-top-md">
             <a class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
-                <span class="glyphicon glyphicon-link"/>
+                <span class="glyphicon glyphicon-link"></span>
                 GitHub Releases
             </a>
         </div>
