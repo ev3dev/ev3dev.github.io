@@ -131,7 +131,7 @@ projectname. In the other fields choose a nice parent and project directory.
 
 {% include screenshot.html source="/images/osx/PyCharm/clone-repo.png" %}
 
-When all goes wel you get a new window with your fresh empty project. If the
+When all goes well you get a new window with your fresh empty project. If the
 'testing' dialog stays on screen for a long time, it might be that your
 PyCharm master password is needed for your PyCharm password storage. Cancel
 the checkout, type the master password and try again.
