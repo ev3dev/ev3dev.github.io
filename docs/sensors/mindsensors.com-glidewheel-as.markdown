@@ -7,4 +7,4 @@ title: mindsensors.com GlideWheel-AS (AngleSensor)
 sensor_index: 43
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

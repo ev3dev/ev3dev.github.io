@@ -50,7 +50,7 @@ if you haven't done so already after burning the image. For this go:
 `sudo nano /boot/flash/config.txt` (the password is still `maker`)
 Scroll down and uncomment the appropriate lines for your hardware.
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 I have multiple Raspberry Pis and Mindstorms brains. I like to keep
 them apart on the network by giving them separate names. I renamed mine like
 this:<br />`sudo hostnamectl set-hostname ev3dev-rpi`
@@ -65,7 +65,7 @@ the same login name as on my development computer.][users] Remember to give
 yourself sudo rights as explained on that same page. After adding that user,
 you can [set up passwordless ssh][passwordless].
 
-{% include icon.html type="danger" %}
+{% include /style/icon.html type="danger" %}
 This doesn't matter on BrickPi, but on robots with a screen, you will *not* be
 able to launch programs using the Brickman interface. For this, you *must* use
 the `robot` user! Only set up your own user account if you really know what you
@@ -120,7 +120,7 @@ So go grab a copy of that one and start it on your development machine.
 
 [pycharm]: https://www.jetbrains.com/pycharm/
 
-{% include screenshot.html source="/images/osx/PyCharm/welcome.png" %}
+{% include /util/screenshot.html source="/images/osx/PyCharm/welcome.png" %}
 
 What we are going to do now is make a clone of our project on the ev3dev
 machine to start working on it on the development machine.
@@ -129,7 +129,7 @@ Now type the hostname of the ev3dev machine, followed by a semicolon the
 projectname. In the other fields choose a nice parent and project directory.
 (You might have to add `.local` after `ev3dev` depending on your DNS setup.)
 
-{% include screenshot.html source="/images/osx/PyCharm/clone-repo.png" %}
+{% include /util/screenshot.html source="/images/osx/PyCharm/clone-repo.png" %}
 
 When all goes well you get a new window with your fresh empty project. If the
 'testing' dialog stays on screen for a long time, it might be that your
@@ -178,7 +178,7 @@ Tataaa! The motor is running full power for a second.
 Back to the development machine. Maybe you noticed a problem: PyCharm puts
 red curly lines under the ev3dev library. 
 
-{% include screenshot.html source="/images/osx/PyCharm/missing-lib.png" %}
+{% include /util/screenshot.html source="/images/osx/PyCharm/missing-lib.png" %}
 
 And that's logical, because the ev3dev library is missing on the development
 machine. If we install it we won't be able to run motors, but the documentation

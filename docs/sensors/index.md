@@ -141,7 +141,7 @@ kernel.
 {% assign prev_vendor_name = 'dummy' %}
 {% for sensor_data in site.data.sensors %}
     {% assign sensor = sensor_data %}
-    {% include sensor-connection.html %}
+    {% include /docs/sensor-connection.html %}
     <tr>
     {% if sensor.vendor_name != prev_vendor_name %}
         {% assign vendor_name_rowspan = 0 %}

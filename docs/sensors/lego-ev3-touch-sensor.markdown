@@ -7,4 +7,4 @@ title: LEGO EV3 Touch Sensor (45507)
 sensor_index: 30
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

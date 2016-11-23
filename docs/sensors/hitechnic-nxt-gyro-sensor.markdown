@@ -7,4 +7,4 @@ title: HiTechnic NXT Gyro Sensor (NGY1044)
 sensor_index: 18
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

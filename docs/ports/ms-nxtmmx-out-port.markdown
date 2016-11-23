@@ -7,4 +7,4 @@ title: mindsensors.com NXTMMX Output Port
 port_index: 6
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

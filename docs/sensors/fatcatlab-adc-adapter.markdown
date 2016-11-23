@@ -7,4 +7,4 @@ title: Fatcatlab ADC Adapter
 sensor_index: 4
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

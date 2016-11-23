@@ -7,4 +7,4 @@ title: LEGO NXT Sound Sensor (9845)
 sensor_index: 39
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

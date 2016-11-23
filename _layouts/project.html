@@ -4,7 +4,7 @@ layout: page
 
 <div class="row">
     <div class="col-lg-9">
-        {% include youtube-embed.html %}
+        {% include /util/youtube-embed.html %}
         {{ content }}
     </div>
     <div class="col-lg-3">
@@ -15,7 +15,7 @@ layout: page
             <ul class="list-group">
                 {% if page.programming_language %}
                 <li class="list-group-item">
-                    Written with {% include language-logo.html language=page.programming_language %}<br />
+                    Written with {% include /style/language-logo.html language=page.programming_language %}<br />
                 </li>
                 {% endif %}
                 {% if page.project_homepage_url %}
@@ -36,7 +36,7 @@ layout: page
                 {% if page.author %}
                 <li class="list-group-item">
                     {% for author in page.author %}
-                    {% include author-card.html author = author %}
+                    {% include /util/author-card.html author = author %}
                     {% endfor %}
                 </li>
                 {% endif %}

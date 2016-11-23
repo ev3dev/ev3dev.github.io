@@ -8,7 +8,7 @@ on your EV3, you'll need to connect to a network. Here are some resources to
 help you out.
 
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 For Raspberry Pi platforms with no display, you must use the wired Ethernet port
 to connect for the first time. You can set up additional connections using the
 `connmanctl` command through a remote SSH session.

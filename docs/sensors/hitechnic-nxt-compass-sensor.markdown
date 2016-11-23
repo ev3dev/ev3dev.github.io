@@ -7,4 +7,4 @@ title: HiTechnic NXT Compass Sensor (NMC1034)
 sensor_index: 22
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

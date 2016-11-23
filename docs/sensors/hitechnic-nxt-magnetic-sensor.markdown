@@ -7,4 +7,4 @@ title: HiTechnic NXT Magnetic Sensor (NMS1035)
 sensor_index: 23
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

@@ -7,4 +7,4 @@ title: LEGO Motor 9V Mini-motor, newer lighter weight (43362)
 motor_index: 2
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

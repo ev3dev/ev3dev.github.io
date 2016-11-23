@@ -12,7 +12,7 @@ it turns out that it is super-useful for working with compiled languages on
 the EV3!
 {: .lead .clearfix}
 
-{% include icon.html type="danger" %}
+{% include /style/icon.html type="danger" %}
 This method of cross-compiling is no longer supported. Please use [Docker]{: .alert-link}
 instead. Brickstrap still exists, but starting with v0.6.0, it only creates
 disk images from Docker images. If you *really* want to keep using the old
@@ -232,7 +232,7 @@ tools on your host computer (not in brickstrap shell)...
 
     sudo apt-get install gcc-arm-linux-gnueabi g++-arm-linux-gnueabi cmake valac pkg-config
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 These cross-compiler packages are only available on Ubuntu. Sorry Debian users.
 {:.alert .alert-warning}
 

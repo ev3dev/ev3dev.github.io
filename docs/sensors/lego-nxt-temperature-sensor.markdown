@@ -7,4 +7,4 @@ title: LEGO NXT Temperature Sensor (9749)
 sensor_index: 36
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

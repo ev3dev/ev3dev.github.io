@@ -102,9 +102,9 @@ Copy this code into a file on the Ev3 brick to run it. If you do `sudo chmod +x 
 
 # The complete event type and code mapping of the ps3 controller
 I mapped out all codes for you! Here they are:
-{% include screenshot.html source="/images/Website/sixaxis_event_codes.png" %}
+{% include /util/screenshot.html source="/images/Website/sixaxis_event_codes.png" %}
 
 # The result: a remote controlled robot
 How cool! No computer needed. Just a gamepad and the ev3 brick. 
 
-{% include youtube-embed.html youtube_video_id="brfgF3D5c4k" %}
+{% include /util/youtube-embed.html youtube_video_id="brfgF3D5c4k" %}

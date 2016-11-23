@@ -7,4 +7,4 @@ title: LEGO Motor 9V Micromotor (70823)
 motor_index: 6
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

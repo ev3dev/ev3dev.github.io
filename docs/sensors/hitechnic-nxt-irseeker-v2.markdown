@@ -7,4 +7,4 @@ title: HiTechnic NXT IRSeeker V2 (NSK1042)
 sensor_index: 24
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

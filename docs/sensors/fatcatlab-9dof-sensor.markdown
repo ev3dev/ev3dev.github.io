@@ -7,4 +7,4 @@ title: Fatcatlab 9DOF Sensor
 sensor_index: 9
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

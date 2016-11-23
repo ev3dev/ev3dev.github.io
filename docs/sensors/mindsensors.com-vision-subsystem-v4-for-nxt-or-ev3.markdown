@@ -7,4 +7,4 @@ title: mindsensors.com Vision Subsystem v4 for NXT or EV3 (NXTCam-v4)
 sensor_index: 47
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

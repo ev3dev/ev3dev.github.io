@@ -7,4 +7,4 @@ title: HiTechnic NXT EOPD (NEO1048)
 sensor_index: 16
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

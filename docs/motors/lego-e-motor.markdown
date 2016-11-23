@@ -7,4 +7,4 @@ title: LEGO E-Motor (9670)
 motor_index: 14
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

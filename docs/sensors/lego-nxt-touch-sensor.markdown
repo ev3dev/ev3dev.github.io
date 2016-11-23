@@ -7,4 +7,4 @@ title: LEGO NXT Touch Sensor (9843)
 sensor_index: 37
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

@@ -7,4 +7,4 @@ title: LEGO EV3 Infrared Sensor (45509)
 sensor_index: 31
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

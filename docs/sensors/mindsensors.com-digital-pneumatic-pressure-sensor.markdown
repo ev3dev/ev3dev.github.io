@@ -7,4 +7,4 @@ title: mindsensors.com Digital Pneumatic Pressure Sensor (PPS58-Nx)
 sensor_index: 52
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

@@ -5,7 +5,7 @@ redirect_from:
   - /docs/tutorials/writing-sd-card-image-mac-command-line/
 ---
 
-{% include imaging-tutorial-etcher-banner.html %}
+{% include /docs/imaging-tutorial-etcher-banner.html %}
 
 1.  If you have not already unzipped the ev3dev disk image, lets do that first.
 

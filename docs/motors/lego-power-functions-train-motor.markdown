@@ -7,4 +7,4 @@ title: LEGO Power Functions Train Motor (88002)
 motor_index: 9
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

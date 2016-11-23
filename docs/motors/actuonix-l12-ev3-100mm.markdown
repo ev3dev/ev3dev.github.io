@@ -7,4 +7,4 @@ title: Actuonix L12 EV3 100mm (L12-EV3-100)
 motor_index: 0
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

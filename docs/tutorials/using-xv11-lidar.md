@@ -14,7 +14,7 @@ XV11 LIDAR communicates using UART, 8N1 at 3.3V with baud rate 115200.
 
 EV3 has all the required hardware to communicate with the LIDAR and ev3dev has the software.
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 The instructions on this page apply to EV3.
 You can also get it working with Raspberry PI and BrickPI but BrickPI doesn't support
 other-uart mode for sensor port and dedicated Raspberry Pi UART GPIO pins are already taken by BrickPI.
@@ -32,22 +32,22 @@ To interface the LIDAR one has to:
 
 For the details, follow video tutorial:
 <div class="alert alert-info" markdown="1">
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 Use the simplified 2-wire way of soldering the motor connector. No resistors needed. See below.
 </div>
 
-{% include youtube-embed.html youtube_video_id="G6uVg34VzHw" %}
+{% include /util/youtube-embed.html youtube_video_id="G6uVg34VzHw" %}
 
 ## Motor Connector
 
 You will need half of EV3 cable, header mating [JST PH 2.0mm pitch] connector with 2 pins and heat shrink tubes.
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" caption="LIDAR motor connector scheme" %}
+{% include /util/screenshot.html source="/images/xv11-tutorial/lidar_motor_scheme.png" caption="LIDAR motor connector scheme" %}
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_motor_photo.jpg" caption="1 - materials 2 - strip wire 3 - solder connector 4 - heat shrink tubing 5 - the connector 6 - connected" %}
+{% include /util/screenshot.html source="/images/xv11-tutorial/lidar_motor_photo.jpg" caption="1 - materials 2 - strip wire 3 - solder connector 4 - heat shrink tubing 5 - the connector 6 - connected" %}
 
 <div class="alert alert-info" markdown="1">
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 With the above scheme use positive duty cycle to drive the motor counterclockwise.
 </div>
 	
@@ -55,12 +55,12 @@ With the above scheme use positive duty cycle to drive the motor counterclockwis
 
 You will need half of EV3 cable, half of USB cable, header mating [JST PH 2.0mm pitch] connector with 4 pins and heat shrink tubes.
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" caption="LIDAR data connector scheme" %}
+{% include /util/screenshot.html source="/images/xv11-tutorial/lidar_data_scheme.png" caption="LIDAR data connector scheme" %}
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" caption="1 - materials 2 - cut the cables 3 - strip wire 4 - solder grounds 5 - solder connector 6 - heat shrink tubing 7 - the connector 8 - connected" %}
+{% include /util/screenshot.html source="/images/xv11-tutorial/lidar_data_photo.jpg" caption="1 - materials 2 - cut the cables 3 - strip wire 4 - solder grounds 5 - solder connector 6 - heat shrink tubing 7 - the connector 8 - connected" %}
 
 <div class="alert alert-info" markdown="1">
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 The USB power connector is also reference potential for the UART lines.
 Plug USB power connector to EV3 or passive (non-powered) USB hub connected to EV3.
 LIDAR consumes around 135 mA from USB. EV3 has enough power to supply 2 LIDARS and reasonable Wi-Fi dongle.
@@ -69,7 +69,7 @@ LIDAR consumes around 135 mA from USB. EV3 has enough power to supply 2 LIDARS a
 ## Motor Port Mode
 
 <div class="alert alert-warning" markdown="1">
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 LIDAR should be spinning counterclockwise at around 200-300 RPM. With the wiring from this tutorial use positive duty cycle around 45 to spin counterclockwise at around 300 RPM.
 </div>
 	
@@ -87,7 +87,7 @@ Then your motor interface will be available at:
 ## Sensor Port Mode
 
 <div class="alert alert-warning" markdown="1">
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 Plug USB power connector to EV3 or passive (non-powered) USB hub connected to EV3, not to other device.
 The USB power connector is also reference potential for the UART lines.
 </div>
@@ -110,7 +110,7 @@ If you assume that XV11 LIDAR returns you the distance to the object you will ha
 
 The scheme below is for Revo LDS. For XV11 it is enough to change some signs. See [xv11lidar-test] for detailed formulas.
 
-{% include screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" caption="Revo LDS rotational geometry"%}
+{% include /util/screenshot.html source="/images/xv11-tutorial/lidar_rotational_geometry.png" caption="Revo LDS rotational geometry"%}
 
 You may ignore the above and the reported distance will still be approximately correct. 
 You will introduce systematic error, dependent on angle, bounded by 25 mm on x and y.
@@ -119,7 +119,7 @@ Regardless, the LIDAR has also random error with variance dependent on distance,
 ## Testing the LIDAR
 
 <div class="alert alert-info" markdown="1">
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 If your EV3 connects using Wi-Fi adapter you need passive (non-powered) USB hub to power the laser and Wi-Fi.
 LIDAR power has to be drawn from EV3 (or USB hub connected to EV3) in order to have the right UART reference potential.
 </div>
@@ -157,7 +157,7 @@ cd ev3dev-mapping-modules/bin
 
 On PC open ev3dev-mapping-ui in Unity and follow the steps below:
 
-{% include screenshot.html source="/images/xv11-tutorial/testing_lidar_with_mapping.png" caption="ev3dev-mapping-ui - 1 - open the scene 2 - select Robot object 3 - set IP addresses 4 - hit play"%}
+{% include /util/screenshot.html source="/images/xv11-tutorial/testing_lidar_with_mapping.png" caption="ev3dev-mapping-ui - 1 - open the scene 2 - select Robot object 3 - set IP addresses 4 - hit play"%}
 
 ## Libraries
 
@@ -173,7 +173,7 @@ Order same spacers (25 mm high for M3 screws are ok). Drill the holes for spacer
 
 Everything for just a few € or $.
 
-{% include screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" caption="LIDAR stand from polycarbonate with M3 screws spacers" %}
+{% include /util/screenshot.html source="/images/xv11-tutorial/mechanical_integration.JPG" caption="LIDAR stand from polycarbonate with M3 screws spacers" %}
 
 ## Laser Specs and Safety
 

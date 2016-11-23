@@ -7,4 +7,4 @@ title: mindsensors.com Sensor building kit for NXT with PCF8574 IC (PCF8574-Nx)
 sensor_index: 50
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

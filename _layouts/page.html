@@ -6,13 +6,13 @@
 {% else %}
 <!doctype html>
 <html>
-{% include head.html %}
+{% include /page-core/html-head.html %}
 {% if page.jumbotron-heading or page.jumbotron-content %}
 <body class="has-jumbotron {{page.extra-body-classes}}">
 {% else %}
 <body class="no-jumbotron {{page.extra-body-classes}}">
 {% endif %}
-    {% include header.html %}
+    {% include /page-core/page-header.html %}
     {% if page.jumbotron-heading or page.jumbotron-content %}
     <div class="jumbotron">
         <div class="container">
@@ -23,7 +23,7 @@
     {% endif %}
     {% if page.title and page.no-display-title != 1 %}
     <div class="container">
-        {% include title.html %}
+        {% include /page-core/title.html %}
     </div>
     {% endif %}
     {% unless page.no-wrapper %}
@@ -33,7 +33,7 @@
     {% unless page.no-wrapper %}
     </div>
     {% endunless %}
-    {% include footer.html %}
+    {% include /page-core/page-footer.html %}
 </body>
 </html>
 {% endif %}

@@ -52,7 +52,7 @@ Now that you have your own copy the site, it's time to create your page. To
 start, use the file list and choose the `projects/_posts` folder. Select the
 file called `2014-03-21-Example-Project.md` to open it in the browser.
 
-{% include screenshot.html source="/images/Website/Project-template-file-on-GitHub.png" scale="100" %}
+{% include /util/screenshot.html source="/images/Website/Project-template-file-on-GitHub.png" scale="100" %}
 
 GitHub will try to read the file and render it how it thinks it's intended to
 be displayed. Although the preview that it shows you probably won't look
@@ -71,7 +71,7 @@ the dashes). [This][raw template] is what you should have.
 Now use the "back" button of your browser to go back to the posts folder. Click
 the "+" button to create a new file.
 
-{% include screenshot.html source="/images/Website/Add-file-on-GitHub.png" %}
+{% include /util/screenshot.html source="/images/Website/Add-file-on-GitHub.png" %}
 
 Give it a name using the format "`YYYY-MM-DD-my-project-name.md`", where
 `YYYY`, `MM`, and `DD` are the current year, month, and day, and
@@ -81,7 +81,7 @@ properties as you can, and delete the lines of the ones you can't fill out.
 After the second set of dashes ('---'), you can type your description text,
 which is parsed as [Kramdown][kramdown basics] on the site.
 
-{% include screenshot.html source="/images/Website/Creating-file-on-GitHub.png" scale="100" %}
+{% include /util/screenshot.html source="/images/Website/Creating-file-on-GitHub.png" scale="100" %}
 
 Once you are happy with the content of your new page, click the "Commit new
 file" button to save your changes. This is when you should go and preview your
@@ -100,7 +100,7 @@ If you followed step 3, you will need to switch to the `gh-pages` branch that
 you created earlier using the same box in the upper-left corner. Click it and
 select "gh-pages."
 
-{% include screenshot.html source="/images/Website/Switching-branches-on-GitHub.png" scale="50" %}
+{% include /util/screenshot.html source="/images/Website/Switching-branches-on-GitHub.png" scale="50" %}
 
 Now click the green "Compare, review and pull request" button.
 
@@ -110,7 +110,7 @@ Then click "Create pull request," and enter a title and brief description of
 your new page before clicking the button that says "Create pull request" again
 to submit your changes.
 
-{% include screenshot.html source="/images/Website/Submitting-a-PR.png" scale="100" %}
+{% include /util/screenshot.html source="/images/Website/Submitting-a-PR.png" scale="100" %}
 
 The project maintainers will be notified automatically that you have submitted
 edits, and will review and merge your changes when they get the chance.

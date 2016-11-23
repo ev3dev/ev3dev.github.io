@@ -7,4 +7,4 @@ title: Fatcatlab Altitude Sensor
 sensor_index: 7
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

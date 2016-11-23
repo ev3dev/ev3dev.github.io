@@ -7,4 +7,4 @@ title: mindsensors.com Multiplexer for NXT/EV3 Motors (NXTMMX-v2)
 sensor_index: 48
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}
