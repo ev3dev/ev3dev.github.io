@@ -7,4 +7,4 @@ title: Fatcatlab Light Sensor
 sensor_index: 6
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

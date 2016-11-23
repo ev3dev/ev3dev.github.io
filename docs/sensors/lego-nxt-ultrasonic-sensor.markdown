@@ -7,4 +7,4 @@ title: LEGO NXT Ultrasonic Sensor (9846)
 sensor_index: 40
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

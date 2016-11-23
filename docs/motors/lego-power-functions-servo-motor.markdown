@@ -7,4 +7,4 @@ title: LEGO Power Functions Servo Motor (88004)
 motor_index: 11
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

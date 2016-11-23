@@ -7,4 +7,4 @@ title: HiTechnic NXT IRReceiver Sensor (NIR1032)
 sensor_index: 20
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

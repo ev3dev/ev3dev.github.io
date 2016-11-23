@@ -7,4 +7,4 @@ title: LEGO NXT Light Sensor (9844)
 sensor_index: 38
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

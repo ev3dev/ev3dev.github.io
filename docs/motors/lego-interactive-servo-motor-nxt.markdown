@@ -7,4 +7,4 @@ title: LEGO Interactive Servo Motor (NXT) (9842)
 motor_index: 15
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

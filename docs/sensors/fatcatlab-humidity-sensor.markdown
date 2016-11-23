@@ -7,4 +7,4 @@ title: Fatcatlab Humidity Sensor
 sensor_index: 10
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

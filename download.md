@@ -5,7 +5,7 @@ excerpt: Download ev3dev SD card images.
 no-wrapper: true
 ---
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 <div class="row margin-bottom-xl">
     <div class="col-sm-12">
         <p class="lead">
@@ -88,9 +88,9 @@ no-wrapper: true
         <img src="/images/downloads/fatcatlab-and-questcape.jpg" class="img-responsive" alt="EVB and QuestCape">
     </div>
 </div>
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html bg="dark" %}
+{% include /style/begin-section.html bg="dark" %}
 <div class="row">
     <h1>Other Images</h1>
 </div>
@@ -127,7 +127,7 @@ no-wrapper: true
 </div>
 <div class="row margin-top-xl">
 <div class="col-md-12 margin-top-xl">
-{% include begin-panel.html type="info" heading="How to pick the correct image file..." %}
+{% include /style/begin-panel.html type="info" heading="How to pick the correct image file..." %}
 
 There are multiple image files for each release. Look for
 the file name that matches the device you are using.
@@ -140,12 +140,12 @@ Raspberry Pi Model 2/3 | `*-rpi2-*.img`
 BeagleBone             | `*-bone-*.img`
 {: .table .table-striped .table-bordered }
 
-{% include end-panel.html %}
+{% include /style/end-panel.html %}
 </div>
 </div>
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 
 # Source Code
 
@@ -166,4 +166,4 @@ links to some of the more interesting repositories are listed below.
 * [Raspberry Pi Linux Kernel](https://github.com/ev3dev/rpi-kernel)
 * [BeagleBone Linux Kernel](https://github.com/ev3dev/bb.org-kernel)
 
-{% include end-section.html %}
+{% include /style/end-section.html %}

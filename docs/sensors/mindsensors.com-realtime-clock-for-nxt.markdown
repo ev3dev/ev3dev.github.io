@@ -7,4 +7,4 @@ title: mindsensors.com Realtime Clock for NXT (RTC-Nx-v3)
 sensor_index: 54
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

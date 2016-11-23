@@ -7,4 +7,4 @@ title: mindsensors.com Touch Sensor Multiplexer for NXT & EV3 (TouchMux)
 sensor_index: 55
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

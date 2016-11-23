@@ -247,7 +247,7 @@ while True:
 {% endhighlight %}
 
 This video shows the script in action:
-{% include youtube-embed.html youtube_video_id="0d3MdZuDOTc" %}
+{% include /util/youtube-embed.html youtube_video_id="0d3MdZuDOTc" %}
 
 ## Final notes
 

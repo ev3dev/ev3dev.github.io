@@ -7,4 +7,4 @@ title: LEGO EV3 Color Sensor (45506)
 sensor_index: 29
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

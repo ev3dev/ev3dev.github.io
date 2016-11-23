@@ -7,4 +7,4 @@ title: Fatcatlab IR Receiver
 sensor_index: 8
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

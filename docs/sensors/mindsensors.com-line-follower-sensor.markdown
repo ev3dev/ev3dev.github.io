@@ -7,4 +7,4 @@ title: mindsensors.com Line Follower Sensor (LineLeader)
 sensor_index: 46
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

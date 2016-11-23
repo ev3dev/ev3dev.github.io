@@ -7,4 +7,4 @@ title: LEGO WeDo Tilt Sensor (9584)
 sensor_index: 34
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

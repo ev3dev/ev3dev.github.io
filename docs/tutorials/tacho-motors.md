@@ -6,7 +6,7 @@ group: hardware-standard
 * Table of Contents
 {:toc}
 
-{% include icon.html type="danger" %}
+{% include /style/icon.html type="danger" %}
 This tutorial has been updated for changes introduced in ev3dev kernel release
 10. **If you are running on an image file from before 2016-10-17 and have
 not manually upgraded your kernel, you will need to upgrade before continuing.**

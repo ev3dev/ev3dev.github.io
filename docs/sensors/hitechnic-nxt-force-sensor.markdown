@@ -7,4 +7,4 @@ title: HiTechnic NXT Force Sensor (NFS1074)
 sensor_index: 17
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

@@ -7,4 +7,4 @@ title: EV3 Output Port
 port_index: 4
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

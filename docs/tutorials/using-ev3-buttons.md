@@ -15,7 +15,7 @@ The buttons on the EV3 are mapped as regular keyboard keys
 * RIGHT (5)
 * DOWN (6)
 
-{% include screenshot.html source="/images/ev3/labeled-buttons.png" %}
+{% include /util/screenshot.html source="/images/ev3/labeled-buttons.png" %}
 
 ## Polling Key States
 

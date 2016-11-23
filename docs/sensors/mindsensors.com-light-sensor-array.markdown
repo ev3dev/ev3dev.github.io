@@ -7,4 +7,4 @@ title: mindsensors.com Light Sensor Array (LightSensorArray)
 sensor_index: 45
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

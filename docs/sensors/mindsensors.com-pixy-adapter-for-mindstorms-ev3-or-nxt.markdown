@@ -7,4 +7,4 @@ title: mindsensors.com Pixy Adapter for MINDSTORMS EV3 or NXT (PixyAdapter)
 sensor_index: 53
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

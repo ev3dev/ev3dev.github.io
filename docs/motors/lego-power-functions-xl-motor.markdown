@@ -7,4 +7,4 @@ title: LEGO Power Functions XL-Motor (8882)
 motor_index: 12
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

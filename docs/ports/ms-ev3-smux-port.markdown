@@ -7,4 +7,4 @@ title: mindsensors.com EV3 Sensor Multiplexer Input Port
 port_index: 5
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

@@ -5,11 +5,11 @@ layout: page
 <hr />
 <div class="nav-dropdown-arrow">
     <div>
-        {% include breadcrumbs.html %}
+        {% include /page-core/breadcrumbs.html %}
     </div>
     {% if page.kernel_version %}
         <div class="alert alert-info">
-            {% include icon.html type="info" %}
+            {% include /style/icon.html type="info" %}
             This docs page is for kernel version <code>{{ page.kernel_version }}</code>
         </div>
     {% endif %}
@@ -26,6 +26,6 @@ layout: page
 <h2> Author </h2>
 {% endif %}
 {% for author in page.author %}
-<div style="float: left; margin-right: 20px;">{% include author-card.html author=author theme='light' %}</div>
+<div style="float: left; margin-right: 20px;">{% include /util/author-card.html author=author theme='light' %}</div>
 {% endfor %}
 {% endif %}

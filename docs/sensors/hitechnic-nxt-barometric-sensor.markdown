@@ -7,4 +7,4 @@ title: HiTechnic NXT Barometric Sensor (NBR1036)
 sensor_index: 14
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

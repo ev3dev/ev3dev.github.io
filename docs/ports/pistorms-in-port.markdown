@@ -7,4 +7,4 @@ title: mindsensors.com PiStorms Input Port
 port_index: 7
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

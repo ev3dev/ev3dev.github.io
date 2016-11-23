@@ -7,4 +7,4 @@ title: HiTechnic NXT Acceleration / Tilt Sensor (NAC1040)
 sensor_index: 13
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

@@ -7,4 +7,4 @@ title: Microinfinity Digital Gyroscope And Accelerometer (CruizCore XG 1300L)
 sensor_index: 41
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

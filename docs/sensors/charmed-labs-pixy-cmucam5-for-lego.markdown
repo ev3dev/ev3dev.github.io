@@ -7,4 +7,4 @@ title: Charmed Labs Pixy (CMUcam5) for LEGO
 sensor_index: 2
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

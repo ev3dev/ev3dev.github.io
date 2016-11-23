@@ -7,4 +7,4 @@ title: HiTechnic NXT IRLink Sensor (NIL1046)
 sensor_index: 19
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

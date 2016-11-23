@@ -7,4 +7,4 @@ title: HiTechnic NXT Color Sensor V2 (NCO1038)
 sensor_index: 15
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

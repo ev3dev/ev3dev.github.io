@@ -7,4 +7,4 @@ title: LEGO Technic Motor 9V (74569)
 motor_index: 8
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

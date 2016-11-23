@@ -7,4 +7,4 @@ title: Generic NXT Analog Sensor
 sensor_index: 0
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

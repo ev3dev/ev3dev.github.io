@@ -7,4 +7,4 @@ title: mindsensors.com Gyro, MultiSensitivity Accelerometer and Compass (Absolut
 sensor_index: 42
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

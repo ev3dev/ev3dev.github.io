@@ -7,4 +7,4 @@ title: HiTechnic NXT Angle Sensor (NAA1030)
 sensor_index: 12
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}
