@@ -10,6 +10,16 @@ programming language. Community members have built libraries that let you use
 features such as motors and sensors from your code. Choose the language you want
 from below and follow the link to the library's homepage get started.
 
+
+<div class="alert alert-info" markdown="1">
+{% include icon.html type="info" %}
+If the language you want isn't listed, you still can use it, but you'll have to
+do more of the heavy lifting yourself. You can look at the [driver overview page](/docs/driver-overview/){: .alert-link }
+for information on the interfaces you need to use to control devices. Once you get the
+hang of it, you can even write your own interface library and have it listed on
+the programming languages page!
+</div>
+
 ## Python
 <https://github.com/rhempel/ev3dev-lang-python>
 
