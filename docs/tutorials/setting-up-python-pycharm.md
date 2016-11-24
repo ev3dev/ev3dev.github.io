@@ -201,7 +201,7 @@ property is defined. Neat huh? Happy coding.
 
 ## Additional features for the PyCharm Professional version ##
 
-The Professional version of PyCharm (which can be obtained for free for educational institutions and OSS projects) has a few more features to make your development environment much smoother. If you are a student (or anyone that can confirm a .edu email), then visit [this link](https://www.jetbrains.com/student/) to apply for the free version of PyCharm professional.
+The Professional version of PyCharm (which can be obtained for free for educational institutions and OSS projects) has a few more features to make your development environment much smoother. If you are a student (or anyone that can confirm a .edu email), then visit [this link](https://www.jetbrains.com/student/) to apply for the free version of PyCharm professional.  If you are an open source developer you can visit [this link](https://www.jetbrains.com/buy/opensource/) to see if you qualify for a free version of PyCharm professional.
 
 Here is a list of the tools you can use with PyCharm professional to make your Python development easier.
 
