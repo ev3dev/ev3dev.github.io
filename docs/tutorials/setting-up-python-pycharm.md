@@ -185,6 +185,10 @@ machine. If we install it we won't be able to run motors, but the documentation
 and autocomplete will be active. So on your development machine start a
 terminal and do:
 
+    pip install python-ev3dev
+
+or
+
     git clone https://github.com/rhempel/ev3dev-lang-python.git
     python ev3dev-lang-python/setup.py install
     rm -r ev3dev-lang-python/ # Optional to remove the downloaded files. It's installed now anyway.
