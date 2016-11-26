@@ -8,45 +8,31 @@ author: "@antonvh, @fisherds"
 {:toc}
 
 This tutorial shows how to set up a nice working environment for developing
-Python on Ev3dev. The platform used is a BrickPi, but most of it is usable
-for regular LEGO EV3 bricks.
+Python on Ev3dev.
 {:.lead}
 
-Ev3dev is a lean and modern system to run on the Raspberry Pi that powers the
-BrickPi. It's got multiple languages that work in a pretty similar way and
-make switching easy. Moreover, if you code in ev3dev on the BrickPi, people
-with a regular EV3 and Ev3dev will be able to run your code! Alas, it doesn't
-work the other way around as the BrickPi has a more limited set of motor
-commands.
-
-For this tutorial, I will suppose you have burned an SD disk, connected your
-RPi and BrickPi to an ethernet cable and booted it. If you have an EV3 brick
-without ethernet, [set up another networking connection first][network].
-
-[network]: /docs/tutorials
+For this tutorial, I will suppose you have burned an SD disk, booted it, and [connected to your
+RPi/BrickPi/EV3][network].
 
 ## Log in to ev3dev
 
-Now you can either attach a screen and keyboard to it for the setup, or
-connect to it via ssh. I prefer the latter. My router has a DNS that registers
-hostnames. It allows me to start a Terminal (on Mac) or Putty (on Windows) and
-simply do:
+Now you can either or connect your ev3dev device [via ssh][ssh] or attach a screen and keyboard to it
+if using RPi. To log in via ssh, start a Terminal (on Mac) or Putty (on Windows) and type:
 
-`ssh robot@ev3dev`
+`ssh robot@ev3dev.local`
 
-If you don't have a DNS try: `robot@ev3dev.local` or connect to it's IP
-address directly. eg. `robot@192.168.0.2`
+or use the IP address. eg. `robot@192.168.0.2`
 
-The password is `maker` by default. If you used screen and keyboard, you're
-automatically logged in.
+The password is `maker` by default.
 
 {% include icon.html type="info" %}
 If you are not using the EV3, but instead using an RPi solution there are
-several Mindstorms shields available now. We have to setup the right one.
+several Mindstorms shields available now. You have to setup the right one.
 To do that type.
 
 `sudo nano /boot/flash/config.txt` (the password is still `maker`)<br>
-Scroll down and uncomment the appropriate lines for your hardware.
+Scroll down and uncomment the appropriate lines for your hardware.<br>
+Finally do `sudo reboot`.
 {:.alert .alert-info}
 
 {% include icon.html type="info" %}
@@ -55,7 +41,7 @@ them apart on the network by giving them separate names. I renamed mine like
 this:<br />`sudo hostnamectl set-hostname ev3dev-rpi`
 {:.alert .alert-info}
 
-Finally do `sudo reboot`.
+
 
 ## Set up development environment
 
@@ -66,23 +52,19 @@ and some Open Source projects, you should probably read the PyCharm Professional
 alternatives shown later.
 {:.alert .alert-danger}
 
+{% include icon.html type="info" %}
 I prefer to have a passwordless ssh to the robot. For this I [add a user with
 the same login name as on my development computer.][users] Remember to give
 yourself sudo rights as explained on that same page. After adding that user,
-you can [set up passwordless ssh][passwordless].
+you can [set up passwordless ssh][passwordless].<br>
+With passwordless ssh and the same username on the ev3dev machine, you can go
+`ssh ev3dev` and you're in!
 
-{% include icon.html type="danger" %}
 This doesn't matter on BrickPi, but on robots with a screen, you will *not* be
 able to launch programs using the Brickman interface. For this, you *must* use
 the `robot` user! Only set up your own user account if you really know what you
 are doing.
 {:.alert .alert-danger}
-
-[users]: https://www.raspberrypi.org/documentation/linux/usage/users.md
-[passwordless]: https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
-
-With passwordless ssh and the same username on the ev3dev machine, you can go
-`ssh ev3dev` and you're in!
 
 Next we need a versioning system. That's a tool for tracking changes you made
 to your code. Coincidentally the same tool is also very handy for transferring
@@ -123,8 +105,6 @@ Now typing code in nano is fine, but it's much nicer to do it inside a real
 IDE (Integrated Development Environment). There are many, like Visual Studio,
 Eclipse and PyCharm. My favourite is [PyCharm Community Edition][pycharm].
 So go grab a copy of that one and start it on your development machine.
-
-[pycharm]: https://www.jetbrains.com/pycharm/
 
 {% include screenshot.html source="/images/osx/PyCharm/welcome.png" %}
 
@@ -193,15 +173,7 @@ library using Python's built-in package manager [pip](https://en.wikipedia.org/w
 
     pip install python-ev3dev
 
-{% include icon.html type="info" %}
-If you are using a version of Python 3 before 3.4 you may not have pip installed.  You can update your host
-computer Python version, install pip, or run this manual install:
-
-    git clone https://github.com/rhempel/ev3dev-lang-python.git
-    python ev3dev-lang-python/setup.py install
-    rm -r ev3dev-lang-python/ # Optional to remove the downloaded files. It's installed now anyway.
-
-{:.alert .alert-info}
+c
 
 
 ## Using the power of the IDE
@@ -222,9 +194,9 @@ Here is a list of the tools you can use with PyCharm professional to make your P
 
 | Tool + link | Purpose |
 | ----------- | ------- |
-| [SFTP Remote Server][1] | An alternative to the approach used above to transfer files from your host computer to the EV3 pretty instantly when the file is saved on your host computer. |
-| [SSH Terminal][2] | Lets you make the SSH connection directly within PyCharm instead of using a separate tool (like PuTTY). |
-| [Remote Interpreter][3] | Let's you avoid needing an SSH terminal since you just hit play within PyCharm to run programs. Allows debugging, logs, etc. all within your host computer PyCharm IDE (but it can be SLOW!) |
+| [SFTP Remote Server][remote-server] | An alternative to the approach used above to transfer files from your host computer to the EV3 pretty instantly when the file is saved on your host computer. |
+| [SSH Terminal][pycharm-ssh] | Lets you make the SSH connection directly within PyCharm instead of using a separate tool (like PuTTY). |
+| [Remote Interpreter][remote-interpreter] | Let's you avoid needing an SSH terminal since you just hit play within PyCharm to run programs. Allows debugging, logs, etc. all within your host computer PyCharm IDE (but it can be SLOW!) |
 
 With these tools and installing ev3dev-lang-python on your host computer, you can really make the Python development process pretty user friendly.
 
@@ -286,6 +258,11 @@ Once set up, PyCharm will install some helper info to the ev3, and will index th
 
 Done! Now both of the important steps (file transfer and execution) are all within PyCharm. You write code using your host computer, which has code completion help from your local install of ev3dev-lang-python. Then when you save the file on your host computer, it's automatically sent to the EV3 via your SFTP Remote Server setup. Then you can run your code using the SSH Terminal that is within PyCharm. You are ready to go!
 
-[1]: https://www.jetbrains.com/help/pycharm/2016.3/creating-a-remote-server-configuration.html
-[2]: https://www.jetbrains.com/help/pycharm/2016.3/ssh-terminal.html
-[3]: https://www.jetbrains.com/help/pycharm/2016.3/configuring-remote-interpreters-via-ssh.html
+[network]: /docs/tutorials
+[ssh]: /docs/tutorials/connecting-to-ev3dev-with-ssh/
+[users]: https://www.raspberrypi.org/documentation/linux/usage/users.md
+[passwordless]: https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
+[pycharm]: https://www.jetbrains.com/pycharm/
+[remote-server]: https://www.jetbrains.com/help/pycharm/2016.3/creating-a-remote-server-configuration.html
+[pycharm-ssh]: https://www.jetbrains.com/help/pycharm/2016.3/ssh-terminal.html
+[remote-interpreter]: https://www.jetbrains.com/help/pycharm/2016.3/configuring-remote-interpreters-via-ssh.html
