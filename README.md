@@ -1,11 +1,12 @@
 Pretty website for ev3dev [![Build Status](https://travis-ci.org/ev3dev/ev3dev.github.io.svg?branch=master)](https://travis-ci.org/ev3dev/ev3dev.github.io)
 ================
 
-This is the source repository for the web page at <http://www.ev3dev.org>. If you want
-to learn more about ev3dev, visit the site or check out our [GitHub repo](github.com/ev3dev/ev3dev).
+This is the source repository for the **web page** at <http://www.ev3dev.org>. If you want
+to learn more about ev3dev in general, visit the site or check out our
+[GitHub repo](github.com/ev3dev/ev3dev).
 
 Feel free to fork and make a pull request! If you're looking for ways to
-contribute, check out issues [tagged "help wanted"](https://github.com/ev3dev/ev3dev.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22); there are often tasks there
+contribute to our website, check out issues [tagged "help wanted"](https://github.com/ev3dev/ev3dev.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22); there are often tasks there
 which are well-suited to new contributors.
 
 Previewing Locally
@@ -43,7 +44,7 @@ You will still need to run the following too...
 
 ### Installing Jekyll on  Windows
 
-Firstly, follow the instructions in step 1
+First, follow the instructions in step 1
 [here](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/):
 "Installing Ruby and the Ruby DevKit."
 
@@ -55,7 +56,7 @@ Then run:
     bundle install
     bundle exec jekyll serve --safe --incremental
 
-Now you should be able to visit your page at: [http://localhost:4000](http://localhost:4000).
+Now you should be able to visit your page at: <http://localhost:4000>.
 It should auto-update when you change the source files, so all you have to do is
 refresh your browser.
 
