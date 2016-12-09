@@ -135,6 +135,75 @@ If you are using an older version, please upgrade.
 
         {% include /util/screenshot.html source="/images/brickman/wired-status-online-connect-automatically-selected.png" %}
 
+
+*   {: tab="Debian_commandline"}{% include /style/icon.html type="info" %}
+    These instructions were written using Debian look-alikes for those wanting to know what happens under the hood.
+    The commands need to be executed by or as root.
+    {:class="alert alert-info"}
+
+    1.  Connect the USB cable to your computer and its mini-B plug to the EV3 (slot marked "PC").
+
+    2.  Verify that USB tethering is disabled: "Wireless and Networks" > "Tethering.
+
+    3.  Set default Linux network settings: "Wireless and Networks" > "All Network Connections" > "Wired" >
+        "IPv4" > "Change" > "Load Linux Defaults".  The EV3 should get address 10.42.0.3, gateway 10.42.0.1.
+
+    4.  Verify if the EV3 is recognized by your Linux PC:  "lsusb" should show
+        
+        `Bus 001 Device 002: ID 0525:a4aa Netchip Technology, Inc. Linux-USB CDC Composite Gadge (Ethernet and ACM)`
+        
+        (Bus and Device may differ).
+
+    5.  Your system should load cdc_ether to manage the EV3:  check with "lsmod | grep cdc".
+        ```
+        Module                  Size  Used by
+        cdc_ether              16384  0 
+        ```
+        
+    6.  Check dmesg to find which device has been assigned to the EV3 network: "dmesg | grep cdc"
+        ```
+        cdc_ether 1-5:1.0 usb0: register 'cdc_ether' at usb-0000:00:02.1-5, CDC Ethernet Device, d6:6a:37:7e:16:07
+        usbcore: registered new interface driver cdc_ether
+        cdc_ether 1-5:1.0 enp0s2f1u5: renamed from usb0
+        cdc_ether 1-5:1.0 enp0s2f1u5: kevent 12 may have been dropped
+        The device is enp0s2f1u5 in this case.
+        ```
+        
+    7.  Assign the gateway address to the EV3 network device:
+    
+        `# ifconfig enp0s2f1u5 10.42.0.1 netmask 255.255.255.0  up`
+        
+    8.  Verify if you can ping the EV3:
+        ```
+        # ping 10.42.0.3
+        PING 10.42.0.3 (10.42.0.3) 56(84) bytes of data.
+        64 bytes from 10.42.0.3: icmp_seq=1 ttl=64 time=0.812 ms
+        64 bytes from 10.42.0.3: icmp_seq=2 ttl=64 time=0.685 ms
+        64 bytes from 10.42.0.3: icmp_seq=3 ttl=64 time=0.670 ms
+        ^C
+        ```
+        
+    9.  You have now established a network connection and you can ssh to the EV3.  If you have an internet
+        connection which you want to make available to your EV3, there is more that needs to be done.
+
+    10.  Allow your system to forward IP traffic (given eth0 carries your internet connection):
+        ```
+        # echo 1 > /proc/sys/net/ipv4/ip_forward
+        ```
+        (to make this permanent, add "net.ipv4.ip_forward=1" to /etc/sysctl.conf)
+        ```
+        # iptables --append FORWARD --in-interface enp0s2f1u5  -j ACCEPT
+        # iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
+        ```
+        
+    11.  Assign a name-server (eg. google-public-dns-a) to your EV3 (you need to be logged in on your EV3 as root):
+    
+        `# echo "nameserver 8.8.8.8" > /etc/resolv.conf`
+        
+    12.  Verify if you can ping that nameserver:
+    
+         `# ping 8.8.8.8`
+
 *   {: tab="Windows"}{% include /style/icon.html type="info" %}
     These instructions were written using Windows 10, but should work on Windows
     7 and 8 as well.
