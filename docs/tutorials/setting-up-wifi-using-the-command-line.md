@@ -3,7 +3,7 @@ title: Setting Up Wi-Fi Using the Command Line
 group: basic-networking
 ---
 
-{% include icon.html type="danger" %}
+{% include /style/icon.html type="danger" %}
 You must have another way to connect to your robot first before following this
 tutorial. On the EV3, that means USB or Bluetooth. If you have a Raspberry Pi,
 you can plug in a monitor and keyboard to the Raspberry Pi. The instructions

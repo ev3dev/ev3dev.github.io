@@ -2,13 +2,23 @@
 title: Programming Languages
 subtitle: Control ev3dev devices from code
 excerpt: "If you are looking to write a program that takes advantage of motors, sensors, or other native devices, using a language binding is the way to go. These are the best options for each language."
-redirect_from: /docs/libraries
+redirect_from: /docs/libraries/index.html
 ---
 
 Before you can start writing code that runs on ev3dev, you need to choose a
 programming language. Community members have built libraries that let you use
 features such as motors and sensors from your code. Choose the language you want
 from below and follow the link to the library's homepage get started.
+
+
+<div class="alert alert-info" markdown="1">
+{% include /style/icon.html type="info" %}
+If the language you want isn't listed, you still can use it, but you'll have to
+do more of the heavy lifting yourself. You can look at the [driver overview page](/docs/driver-overview/){: .alert-link }
+for information on the interfaces you need to use to control devices. Once you get the
+hang of it, you can even write your own interface library and have it listed on
+the programming languages page!
+</div>
 
 ## Python
 <https://github.com/rhempel/ev3dev-lang-python>
@@ -105,14 +115,13 @@ Python [here](https://github.com/ev3dev/ev3devKit/tree/ev3dev-jessie/demo/python
 
 # Out-of-date, abandoned and unfinished implementations
 
-{% include begin-panel.html type="danger"
-heading="Listings below this point are for libraries that are not up-to-date, have been abandoned, or are unfinished." %}
+{% include /style/begin-panel.html type="danger" heading="Listings below this point are for libraries that are not up-to-date, have been abandoned, or are unfinished." %}
 
 Use them with caution, as some functionality will likely be broken. If you
 see a library below that you'd like to see in a better state, consider
 contributing to it to get it updated and ready to use.
 
-{% include end-panel.html %}
+{% include /style/end-panel.html %}
 
 ## C\#
 <https://github.com/pgrudzien12/ev3dev-lang-csharp>

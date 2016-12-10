@@ -4,7 +4,7 @@ group: software-editors
 author: "@wasabifan"
 ---
 
-{% include screenshot.html source="/images/misc-screenshots/nano.png" caption="The nano text editor" width="100%" %}
+{% include /util/screenshot.html source="/images/misc-screenshots/nano.png" caption="The nano text editor" width="100%" %}
 
 Nano is a text editor which runs as a textual application in a terminal window.
 It comes with ev3dev and can be used from a remote SSH session.

@@ -9,11 +9,11 @@ layout: page
 <hr />
 <div class="nav-dropdown-arrow">
     <div>
-        {% include breadcrumbs.html %}
+        {% include /page-core/breadcrumbs.html %}
     </div>
     {% if page.kernel_version %}
         <div class="alert alert-info">
-            {% include icon.html type="info" %}
+            {% include /style/icon.html type="info" %}
             This docs page is for kernel version <code>{{ page.kernel_version }}</code>
         </div>
     {% endif %}

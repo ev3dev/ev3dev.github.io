@@ -4,7 +4,7 @@ group: software-languages
 author: "@wasabifan"
 ---
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 If you're looking to write programs that are more than simple test apps
 or demos and are willing to try something a bit more involved, we
 recommend following the
@@ -17,7 +17,7 @@ your ev3dev device, and running it. We will assume that you have already
 configured a means of connecting to your device from a PC.
 {:.lead}
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 Note that C is not a particularly friendly language, especially for beginners.
 It would be recommended to use Python or another easier language.
 {: .alert .alert-warning}
@@ -47,7 +47,7 @@ terminal or Brickman.
 We need to install the compiler and some other tools. Execute the following
 command to install them:
 
-{% highlight shell %}
+{% highlight sh %}
 sudo apt-get install build-essential
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ sudo apt-get install build-essential
 We need a place to store the code that you'll write. In the terminal, run the
 following commands:
 
-{% highlight shell %}
+{% highlight sh %}
 mkdir c-demo
 cd c-demo
 {% endhighlight %}
@@ -64,7 +64,7 @@ cd c-demo
 The code that you write will live in its own file. Let's reate a file called
 `main.c` and open it in nano:
 
-{% highlight shell %}
+{% highlight sh %}
 nano main.c
 {% endhighlight %}
 
@@ -91,7 +91,7 @@ libraries.
 
 Create a file called `Makefile` and open it:
 
-{% highlight shell %}
+{% highlight sh %}
 nano Makefile
 {% endhighlight %}
 

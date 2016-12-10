@@ -5,11 +5,11 @@ excerpt: Download ev3dev SD card images.
 no-wrapper: true
 ---
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 <div class="row margin-bottom-xl">
     <div class="col-sm-12">
         <p class="lead">
-            <span class="glyphicon glyphicon-download"/>
+            <span class="glyphicon glyphicon-download"></span>
             Select the download below that corresponds to your hardware.
             <br/>
             <small>
@@ -29,7 +29,7 @@ no-wrapper: true
             </p>
         </div>
         <a data-release-link-platform="ev3" class="btn btn-lg btn-primary">
-            <span class="glyphicon glyphicon-download-alt"/>
+            <span class="glyphicon glyphicon-download-alt"></span>
             Download for EV3
         </a>
     </div>
@@ -49,13 +49,13 @@ no-wrapper: true
         </div>
         <div class="margin-bottom-md">
             <a data-release-link-platform="rpi" class="btn btn-md btn-primary">
-                <span class="glyphicon glyphicon-download-alt"/>
+                <span class="glyphicon glyphicon-download-alt"></span>
                 Download for Raspberry Pi Model 0/1
             </a>
         </div>
         <div class="margin-bottom-md">
             <a data-release-link-platform="rpi2" class="btn btn-md btn-primary">
-                <span class="glyphicon glyphicon-download-alt"/>
+                <span class="glyphicon glyphicon-download-alt"></span>
                 Download for Raspberry Pi Model 2/3
             </a>
         </div>
@@ -76,7 +76,7 @@ no-wrapper: true
         </div>
         <div class="margin-bottom-md">
             <a data-release-link-platform="bone" class="btn btn-md btn-primary">
-                <span class="glyphicon glyphicon-download-alt"/>
+                <span class="glyphicon glyphicon-download-alt"></span>
                 Download for BeagleBone
             </a>
         </div>
@@ -88,9 +88,9 @@ no-wrapper: true
         <img src="/images/downloads/fatcatlab-and-questcape.jpg" class="img-responsive" alt="EVB and QuestCape">
     </div>
 </div>
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html bg="dark" %}
+{% include /style/begin-section.html bg="dark" %}
 <div class="row">
     <h1>Other Images</h1>
 </div>
@@ -105,7 +105,7 @@ no-wrapper: true
         </p>
         <div class="margin-top-md">
             <a class="btn btn-md btn-primary" href="https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/">
-                <span class="glyphicon glyphicon-link"/>
+                <span class="glyphicon glyphicon-link"></span>
                 Snapshots
             </a>
         </div>
@@ -119,7 +119,7 @@ no-wrapper: true
         </p>
         <div class="margin-top-md">
             <a class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
-                <span class="glyphicon glyphicon-link"/>
+                <span class="glyphicon glyphicon-link"></span>
                 GitHub Releases
             </a>
         </div>
@@ -127,8 +127,7 @@ no-wrapper: true
 </div>
 <div class="row margin-top-xl">
 <div class="col-md-12 margin-top-xl">
-{% include begin-panel.html type="info"
-heading="How to pick the correct image file..." %}
+{% include /style/begin-panel.html type="info" heading="How to pick the correct image file..." %}
 
 There are multiple image files for each release. Look for
 the file name that matches the device you are using.
@@ -141,12 +140,12 @@ Raspberry Pi Model 2/3 | `*-rpi2-*.img`
 BeagleBone             | `*-bone-*.img`
 {: .table .table-striped .table-bordered }
 
-{% include end-panel.html %}
+{% include /style/end-panel.html %}
 </div>
 </div>
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 
 # Source Code
 
@@ -167,4 +166,4 @@ links to some of the more interesting repositories are listed below.
 * [Raspberry Pi Linux Kernel](https://github.com/ev3dev/rpi-kernel)
 * [BeagleBone Linux Kernel](https://github.com/ev3dev/bb.org-kernel)
 
-{% include end-section.html %}
+{% include /style/end-section.html %}

@@ -17,7 +17,7 @@ For Input Port 5 you have to make sure that correct baudrate for the sensor is s
 and load the driver manually. I2C/NXT sensors should work with slow 9600 baudrate 
 used originally in Mindstorms NXT.
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 Some devices behave erratically if baudrate is changed while they are plugged in. 
 If needed unplug your sensor, change the baudrate and plug the sensor again.
 {: .alert .alert-warning}

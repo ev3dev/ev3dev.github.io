@@ -1,20 +1,26 @@
 Pretty website for ev3dev [![Build Status](https://travis-ci.org/ev3dev/ev3dev.github.io.svg?branch=master)](https://travis-ci.org/ev3dev/ev3dev.github.io)
 ================
 
-This is the web page at <http://www.ev3dev.org> and also <http://ev3dev.github.io>.
+This is the source repository for the **web page** at <http://www.ev3dev.org>. If you want
+to learn more about ev3dev in general, visit the site or check out our
+[GitHub repo](github.com/ev3dev/ev3dev).
 
-Feel free to fork and make a pull request.
+Feel free to fork and make a pull request! If you're looking for ways to
+contribute to our website, check out issues [tagged "help wanted"](https://github.com/ev3dev/ev3dev.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22); there are often tasks there
+which are well-suited to new contributors.
 
-You can view your changes locally by installing [jekyll](https://help.github.com/articles/using-jekyll-with-pages).
-
-Installing Jekyll in Ubuntu 16.04
+Previewing Locally
 ---
 
-### Install Ruby via apt-get
+You can view your changes locally by installing [Jekyll](https://help.github.com/articles/using-jekyll-with-pages).
+
+### Installing Jekyll in Ubuntu 16.04
+
+#### Install Ruby via apt-get
     sudo apt-get install git ruby ruby-dev zlib1g-dev nodejs
     sudo gem install bundler
 
-### Install Ruby via RVM (Ruby Version Manager)
+#### Install Ruby via RVM (Ruby Version Manager)
 If you use ruby for other things and don't want to mess up you system ruby
 installation, you can install ruby via `rvm` instead. Note that you must do the
 'source' line when you open a new xterm or add it to `~/.bashrc`.
@@ -28,7 +34,7 @@ You will still need to run the following too...
     sudo apt-get install git zlib1g-dev nodejs
     sudo gem install bundler
 
-### Checkout Code and Run Jekyll
+#### Check Out Code and Run Jekyll
     git clone git@github.com:<user>/ev3dev.github.io
     cd ev3dev.github.io
     bundle install
@@ -36,10 +42,11 @@ You will still need to run the following too...
     www-browser http://localhost:4000 &
     # work, work, work
 
-Installing Jekyll in  Windows
----
+### Installing Jekyll on  Windows
 
-- Follow the instructions in step 1 [here](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/) (Installing Ruby and the Ruby DevKit).
+First, follow the instructions in step 1
+[here](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/):
+"Installing Ruby and the Ruby DevKit."
 
 Then run:
 
@@ -49,7 +56,9 @@ Then run:
     bundle install
     bundle exec jekyll serve --safe --incremental
 
-Now you should be able to visit your page at: [http://localhost:4000](http://localhost:4000). It should auto-update when you change the source files, so all you have to do is refresh your browser.
+Now you should be able to visit your page at: <http://localhost:4000>.
+It should auto-update when you change the source files, so all you have to do is
+refresh your browser.
 
 Previewing Your Changes Online
 ---

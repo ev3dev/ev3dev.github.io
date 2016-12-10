@@ -25,4 +25,4 @@ The ev3dev version must be at least [ev3dev-jessie-2015-05-01](https://github.co
 
 ## Example of extension for the EV3 Print3rbot:
 
-{% include youtube-embed.html youtube_video_id="UwpghsdmDsE" %}
+{% include /util/youtube-embed.html youtube_video_id="UwpghsdmDsE" %}
