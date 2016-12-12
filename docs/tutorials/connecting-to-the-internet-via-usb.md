@@ -178,6 +178,7 @@ If you are using an older version, please upgrade.
         ```
         
     9.  Check dmesg to find which device has been assigned to the EV3 network: `dmesg | grep cdc`
+
         ```
         cdc_ether 1-5:1.0 usb0: register 'cdc_ether' at usb-0000:00:02.1-5, CDC Ethernet Device, d6:6a:37:7e:16:07
         usbcore: registered new interface driver cdc_ether
@@ -186,11 +187,13 @@ If you are using an older version, please upgrade.
         The device is enp0s2f1u5 in this case.
         ```
         
-    10.  Assign the gateway address to the EV3 network device:
+    10. Assign the gateway address to the EV3 network device:
     
         `# ifconfig enp0s2f1u5 10.42.0.1 netmask 255.255.255.0  up`
         
-    11.  Verify if you can ping the EV3:
+    11. Verify if you can ping the EV3:
+
+
         ```
         # ping 10.42.0.3
         PING 10.42.0.3 (10.42.0.3) 56(84) bytes of data.
@@ -200,24 +203,28 @@ If you are using an older version, please upgrade.
         ^C
         ```
         
-    12.  You have now established a network connection and you can ssh to the EV3.  If you have an internet
-        connection which you want to make available to your EV3, there is more that needs to be done.
+    12. You have now established a network connection and you can ssh to the
+        EV3.  If you have an internet connection which you want to make
+        available to your EV3, there is more that needs to be done.
 
-    13.  Allow your system to forward IP traffic (given eth0 carries your internet connection):
-        ```
-        # echo 1 > /proc/sys/net/ipv4/ip_forward
-        ```
+    13. Allow your system to forward IP traffic (given eth0 carries your
+        internet connection):
+
+        `# echo 1 > /proc/sys/net/ipv4/ip_forward`
+
         (to make this permanent, add "net.ipv4.ip_forward=1" to /etc/sysctl.conf)
+
         ```
         # iptables --append FORWARD --in-interface enp0s2f1u5  -j ACCEPT
         # iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
         ```
         
-    14.  Assign a name-server (eg. google-public-dns-a) to your EV3 (you need to be logged in on your EV3 as root):
+    14. Assign a name-server (eg. google-public-dns-a) to your EV3 (you need
+        to be logged in on your EV3 as root):
     
         `# echo "nameserver 8.8.8.8" > /etc/resolv.conf`
         
-    15.  Verify if you can ping that nameserver:
+    15. Verify if you can ping that nameserver:
     
         `# ping 8.8.8.8`
 
