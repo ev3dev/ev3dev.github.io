@@ -198,3 +198,21 @@ typing `m.` and pycharm will suggest all possible methods and properties.
 Choose one. Now you can put your cursor inside the property and press F1 to
 see the docs. Or press cmd-down arrow to look inside the library where this
 property is defined. Neat huh? Happy coding.
+
+## Setting up a remote interpreter ##
+
+The Professional version of PyCharm (which can be obtained for free for 
+educational institutions and OSS projects) can support remote debugging, which
+maked development even easier. When creating a new project in PyCharm, rather than 
+using the default interpreter, click on the gear icon and select `add remote`.
+Enter the hostname of the ev3 (likely ev3dev.local), username and password
+(robot/maker if you haven't changed the defaults). The path to python  will be 
+/usr/bin/python for Python 2 or /usr/bin/python3 for Python 3 (unless you want to
+use a virtualenv). Once set up, PyCharm will install some helper info to the ev3,
+and will index the existing files on the ev3 which takes a while, so you can do
+something else for a little while. Once it's finished, you'll need to set up a 
+deployment mapping as per https://www.jetbrains.com/help/pycharm/2016.1/creating-a-remote-server-configuration.html
+Set `Automatic upload` to make things a bit easier as well. 
+
+ Now you should be able
+to run and debug code on the ev3, but using PyCharm as the interface.
