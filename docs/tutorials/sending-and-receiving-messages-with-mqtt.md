@@ -37,9 +37,9 @@ system we can use `mosquitto`
     sudo apt-get install mosquitto
 
 This installs and also starts the mosquitto daemon. You can check if it is
-working:
+working by using the 'systemctl' command:
 
-    robot@ev3dev:~# service mosquitto status
+    robot@ev3dev:~# systemctl status mosquitto
     ● mosquitto.service - LSB: mosquitto MQTT v3.1 message broker
        Loaded: loaded (/etc/init.d/mosquitto)
        Active: active (running) since Wed 2016-05-11 07:40:51 WEST; 7min ago
@@ -50,9 +50,10 @@ Now we are able to send and receive messages through the broker (by default
 mosquitto uses port 1883). 
 
 This tutorial uses python scripts so we need to install one python library:
+.
+    pip3 install paho-mqtt
 
-    sudo easy_install paho-mqtt
-
+If not already available you can install 'pip3' by 'sudo apt-get install python3-pip'.
 All scripts were tested successully on a EV3 running the latest ev3dev version
 (as of 12 May 2016) and also on a Raspberry Pi 3 with a BrickPi running the same
 ev3dev version and a laptop running Ubuntu 16.04.
@@ -94,7 +95,8 @@ test it on our PC or on another EV3:
       client.subscribe("topic/test")
 
     def on_message(client, userdata, msg):
-      if (msg.payload == "Hello world!"):
+      # Convert payload from binary to ascii-format
+      if (msg.payload.decode('ascii') == "Hello world!"):
         print("Yes!")
         client.disconnect()
         
@@ -108,6 +110,7 @@ test it on our PC or on another EV3:
 
 Note: the second EV3 (the "Subscriber") just needs the "paho-mqtt" library,
 there is no need to install the "mosquitto" daemon.
+Note: when the publisher sends a string as payload, convert it in the Subscrider from binary string to ascii as in the example above. When the Publisher sends a number, you can use 'int(mas.payload)' as in the next example.
 
 ## A more practical example
 
