@@ -5,7 +5,7 @@ excerpt: "So you're ready to try out ev3dev. Great! Here are step-by-step instru
 no-wrapper: true
 ---
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 
 * Table of Contents
 {:toc}
@@ -34,16 +34,16 @@ First, here are the things you need before starting:
   With BrickPi you can also set up other connections from the console using an external screen and keyboard.
 
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 The instructions on this page only apply to releases dated December
 2015 or later. Older releases are no longer supported. There are many major changes
 in the December release, so if something seems broken or the documentation seems incorrect,
 please [open an issue on GitHub](/support){: .alert-link}.
 {: .alert .alert-warning}
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html bg="dark" %}
+{% include /style/begin-section.html bg="dark" %}
 
 ## Step 1: Download the latest ev3dev image file
 
@@ -76,13 +76,13 @@ corresponds to your platform:
 - Releases for the BeagleBone start with `evb-`
 </div>
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 
 ## Step 2: Flash the SD card
 
-{% include icon.html type="danger" %}
+{% include /style/icon.html type="danger" %}
 This will erase everything on your SD card! Back up your files
 if you do not want to lose them!
 {: .alert .alert-danger }
@@ -92,21 +92,21 @@ Now it's time to write the image to the card.
 1. Download and install Etcher from [their website](http://etcher.io).
 2. Launch Etcher after it has finished installing.
 
-   {% include screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="600px" %}
+   {% include /util/screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="600px" %}
 
 3. Click the "Select image" button and browse to the folder where you
    downloaded an ev3dev release. Select the file that you downloaded.
    The release can be a `.img.zip` or `.img.xz`; whichever
    you have will work with Etcher.
 
-   {% include screenshot.html source="/images/etcher/image-selected.png" caption="Image chosen in Etcher" width="600px" %}
+   {% include /util/screenshot.html source="/images/etcher/image-selected.png" caption="Image chosen in Etcher" width="600px" %}
 
 4. Plug the SD card into your PC (if your PC doesn't have a micro SD
    slot, you can use an adapter or external reader). Etcher should
    detect the new device and display its information under the "Select
    drive" step. Confirm that the selected drive is correct.
 
-   {% include screenshot.html source="/images/etcher/drive-selected.png" caption="Drive selected in Etcher" width="600px" %}
+   {% include /util/screenshot.html source="/images/etcher/drive-selected.png" caption="Drive selected in Etcher" width="600px" %}
    
 5. If you have multiple removable drives available, you may need to
      use the "Change" button to select the proper device.
@@ -114,27 +114,27 @@ Now it's time to write the image to the card.
 6. When you are confident that you have selected the correct drive,
    click "Flash!" and wait for the operation to complete.
    
-   {% include screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="600px" %}
+   {% include /util/screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="600px" %}
 
 7. If you arrive at this screen, you have successfully flashed your SD card and are ready to move on to the next step.
    
-   {% include screenshot.html source="/images/etcher/success.png" caption="Etcher success screen" width="600px" %}
+   {% include /util/screenshot.html source="/images/etcher/success.png" caption="Etcher success screen" width="600px" %}
 <br/>
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 For more detailed information and flashing utility alternatives, check out
 [our other tutorials](/docs/tutorials/#group-administration-and-setup-sd-card-image){: .alert-link }.
 You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
 Much of the information there is applicable to ev3dev.
 {: .alert .alert-info }
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html bg="dark" %}
+{% include /style/begin-section.html bg="dark" %}
 
 ## Step 3A (Raspberry Pi only): Update options in config.txt
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 This is for Raspberry Pi only! Users of other platforms can skip this step.
 {: .alert .alert-warning }
 
@@ -149,7 +149,7 @@ either BrickPi or PiStorms.
 
 ## Step 3B (BeagleBone only): Select cape in uEnv.txt
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 This is for Beaglebone only! Users of other platforms can skip this step.
 {: .alert .alert-warning }
 
@@ -162,9 +162,9 @@ up `EV3DEV_BOOT`. This contains a file named `uEnv.txt`. Open `uEnv.txt`
 in your favorite text editor and follow the instructions in the file to select
 the cape your are using.
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 
 <div class="row">
 <div class="col-md-8" markdown="1">
@@ -194,18 +194,18 @@ data will be lost. Keep in mind, that it may take a much longer time from 8V to
 </div>
 
 <div class="col-md-4">
-{% include screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
+{% include /util/screenshot.html source="/images/brickman/main-menu.png" caption="When the boot is complete, the LEDs will turn green and you will see something like this on the screen" %}
 </div>
 </div>
 
-{% include begin-panel.html type="info" heading="Troubleshooting tips if your EV3 won't boot" %}
+{% include /style/begin-panel.html type="info" heading="Troubleshooting tips if your EV3 won't boot" %}
 
 * Make sure nothing is plugged into the EV3 (USB/sensors/motors/etc.)
 * Try writing the image to the SD card again.
 * You may have a bad/incompatible SD card - try a different SD card.
 * Check the condition of the EV3 batteries.
 
-{% include end-panel.html %}
+{% include /style/end-panel.html %}
 
 <div class="row">
 <div class="col-md-8" markdown="1">
@@ -220,13 +220,13 @@ terminal works too._
 </div>
 
 <div class="col-md-4">
-{% include screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
+{% include /util/screenshot.html source="/images/brickman/shutdown-menu.png" caption="The 'Shutdown...' dialog in Brickman" %}
 </div>
 </div>
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html bg="dark" %}
+{% include /style/begin-section.html bg="dark" %}
 
 ## Step 5: Set up a network connection
 
@@ -236,9 +236,9 @@ available hardware.
 
 <a class="btn btn-md btn-primary" href="/docs/networking" target="_blank"><span class="glyphicon glyphicon-globe"></span> Check out the available networking options</a>
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html %}
+{% include /style/begin-section.html %}
 
 ## Step 6: Connect to the EV3 via SSH
 
@@ -264,13 +264,13 @@ random quote from a database. Feel free to try it multiple times!
 If you don't see any errors printed, and your output looks similar to the above,
 you're good to go!
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
-{% include begin-section.html bg="dark" %}
+{% include /style/begin-section.html bg="dark" %}
 
 ## Step 7: Choose a programming language and write some code
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 If you were sent here from a language- or framework-specific webpage, you can
 skip this step and return there for further instructions.
 {: .alert .alert-info }
@@ -280,7 +280,7 @@ favorite language is probably supported. Pick your language and write some code!
 
 <a class="btn btn-md btn-primary" href="/docs/programming-languages"><span class="glyphicon glyphicon-console"></span> See the available programming languages</a>
 
-{% include end-section.html %}
+{% include /style/end-section.html %}
 
 
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD

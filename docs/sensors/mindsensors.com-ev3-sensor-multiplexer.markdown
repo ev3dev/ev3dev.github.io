@@ -7,4 +7,4 @@ title: mindsensors.com EV3 Sensor Multiplexer (EV3SensorMUX)
 sensor_index: 44
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

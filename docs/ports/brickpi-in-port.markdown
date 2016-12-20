@@ -7,4 +7,4 @@ title: Dexter Industries BrickPi Input Port
 port_index: 0
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

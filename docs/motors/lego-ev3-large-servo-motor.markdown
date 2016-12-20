@@ -7,4 +7,4 @@ title: LEGO EV3 Large Servo Motor (45502)
 motor_index: 3
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

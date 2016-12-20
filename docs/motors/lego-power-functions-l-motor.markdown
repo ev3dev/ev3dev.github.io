@@ -7,4 +7,4 @@ title: LEGO Power Functions L-Motor (88003)
 motor_index: 10
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

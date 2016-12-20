@@ -7,4 +7,4 @@ title: HiTechnic NXT Color Sensor
 sensor_index: 11
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

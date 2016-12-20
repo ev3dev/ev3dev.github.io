@@ -1,5 +1,5 @@
 {% assign sensor=site.data.sensors[page.sensor_index] %}
-{% include sensor-connection.html %}
+{% include /docs/sensor-connection.html %}
 {% assign footnotes='' %}
 {% if sensor.notes %}
     {% assign footnotes=footnotes | append: sensor.notes %}

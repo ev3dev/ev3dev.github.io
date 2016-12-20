@@ -7,4 +7,4 @@ title: HiTechnic NXT SuperPro Prototype Board (SPR2010)
 sensor_index: 26
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

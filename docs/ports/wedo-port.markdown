@@ -7,4 +7,4 @@ title: LEGO WeDo Port
 port_index: 9
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

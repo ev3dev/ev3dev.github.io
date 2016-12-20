@@ -7,4 +7,4 @@ title: LEGO EV3 Gyro Sensor (45505)
 sensor_index: 28
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

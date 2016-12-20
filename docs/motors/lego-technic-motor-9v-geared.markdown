@@ -7,4 +7,4 @@ title: LEGO Technic Motor 9V Geared  (47154)
 motor_index: 5
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

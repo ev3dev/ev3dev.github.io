@@ -7,4 +7,4 @@ title: LEGO Energy Display (9668)
 sensor_index: 35
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

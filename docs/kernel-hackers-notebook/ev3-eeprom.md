@@ -82,10 +82,10 @@ If your EV3 has a hardware version not on this list, please add it
 
 ## Bluetooth MAC address
 
-NOTE: On hardware version 3, the bluetooth address starts at 0x3F00 instead of 0x3F06.
+NOTE: On hardware V0.30, the bluetooth address starts at 0x3F00 instead of 0x3F06.
 
-LEGO's manufacturer ID is 00:16:53, so these should always be the first 3 16-bit words. The last 3 words are unique to each individual EV3.
+LEGO's manufacturer ID is 00:16:53, so these should always be the first 3 bytes. The last 3 bytes are unique to each individual EV3.
 
 Get formatted bluetooth MAC address:
 
-    hexdump -e '5/1 "%02X:" "%02X"' -s 0x3f06 -n 6 < /sys/bus/i2c/drivers/at24/1-0050/eeprom
+    hexdump -e '5/1 "%02X:" "%02X"' -s 0x3f06 -n 6 < /sys/bus/i2c/devices/1-0050/eeprom

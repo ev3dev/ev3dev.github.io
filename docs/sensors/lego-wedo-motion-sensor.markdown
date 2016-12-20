@@ -7,4 +7,4 @@ title: LEGO WeDo Motion Sensor (9583)
 sensor_index: 33
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

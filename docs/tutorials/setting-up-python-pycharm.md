@@ -22,7 +22,7 @@ this up, head over to our [SSH tutorial](/docs/tutorials/connecting-to-ev3dev-wi
 
 ## Configure code synchronization
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 The first half of this tutorial assumes you are using the free "Community"
 version of PyCharm. However, if you have access to the "Professional" version of
 PyCharm, which is free for students and some key open-source projects, you we
@@ -52,7 +52,7 @@ Now let's make a new project using our versioning system. Just type:
     git init --bare myproject.git
     mkdir myproject
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 If you'd like to call your project something different, you can replace
 instances of `myproject` with your own name. Make sure it doesn't contain spaces
 or other special characters.
@@ -81,7 +81,7 @@ This tutorial focuses on PyCharm Community Edition (although these instructions
 also work for more advanced versions of the software). If you haven't already,
 install [PyCharm][pycharm].
 
-{% include screenshot.html source="/images/PyCharm/welcome.png" %}
+{% include /util/screenshot.html source="/images/PyCharm/welcome.png" %}
 
 What we are going to do now is make a clone of the project that we created on
 the ev3dev machine so we can work on it on the development PC. In the Welcome
@@ -90,7 +90,7 @@ Now type the hostname of the ev3dev machine (which is usually going to be
 `ev3dev` or `ev3dev.local`), followed by a colon and then the project name. In
 the other fields choose a nice parent and project directory.
 
-{% include screenshot.html source="/images/PyCharm/clone-repo.png" %}
+{% include /util/screenshot.html source="/images/PyCharm/clone-repo.png" %}
 
 If all goes well you should end up with a new PyCharm window open to your new
 empty project. If the 'testing' dialog stays on screen for a long time, it might
@@ -141,7 +141,7 @@ the motor spin for three seconds.
 While saving the code we used earlier, you may have noticed a problem: PyCharm
 puts red curly lines under the ev3dev library's import line.
 
-{% include screenshot.html source="/images/PyCharm/missing-lib.png" %}
+{% include /util/screenshot.html source="/images/PyCharm/missing-lib.png" %}
 
 This is because the ev3dev library is missing on the development machine and as
 a result PyCharm believes your code is referencing nonexistent classes. We can
@@ -243,7 +243,7 @@ button instead of typing `python3 filename.py` in the SSH terminal? It'd feel
 like the program was just running on your own computer. This is, theoretically,
 possible in Pycharm; however, it has some serious issues.
 
-{% include icon.html type="danger" %}
+{% include /style/icon.html type="danger" %}
 In my testing, on a real EV3, this approach was so slow it was unusable (perhaps
 an RPi would work better). You can try it out. Maybe you'll have better luck.
 {:.alert .alert-danger}

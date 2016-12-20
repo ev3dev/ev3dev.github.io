@@ -77,4 +77,5 @@ defaults:
       excerpt_separator: <!--more-->
       
 kramdown:
-    toc_levels: "2,3"
+  toc_levels: "2,3"
+  input: GFM

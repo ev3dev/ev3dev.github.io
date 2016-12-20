@@ -7,4 +7,4 @@ title: HiTechnic NXT Sensor Multiplexer (NSX2020)
 sensor_index: 25
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

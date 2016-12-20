@@ -154,7 +154,7 @@ change the motor speed. It will also stop the motor and quit if the payload is j
 
 This video shows a demonstration of both Publisher and Suscriber scripts running,
 with just a few improvements on the Publisher side to allow using EV3 buttons:
-{% include youtube-embed.html youtube_video_id="RmoC-vybW10" %}
+{% include /util/youtube-embed.html youtube_video_id="RmoC-vybW10" %}
 
 ## Final notes
 

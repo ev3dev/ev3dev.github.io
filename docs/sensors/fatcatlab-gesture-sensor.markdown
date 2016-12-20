@@ -7,4 +7,4 @@ title: Fatcatlab Gesture Sensor
 sensor_index: 5
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

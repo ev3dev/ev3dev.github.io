@@ -7,4 +7,4 @@ title: Generic EV3 Analog Sensor
 sensor_index: 1
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

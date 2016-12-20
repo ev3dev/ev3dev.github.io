@@ -7,4 +7,4 @@ title: mindsensors.com 8-channel Servo Controller (NxtServo)
 sensor_index: 49
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

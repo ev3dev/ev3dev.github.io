@@ -7,4 +7,4 @@ title: LEGO EV3 Medium Servo Motor (45503)
 motor_index: 4
 ---
 
-{% include motor.md %}
+{% include /docs/motor.md %}

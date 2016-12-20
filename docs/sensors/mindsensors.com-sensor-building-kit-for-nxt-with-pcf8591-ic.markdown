@@ -7,4 +7,4 @@ title: mindsensors.com Sensor building kit for NXT with PCF8591 IC (PCF8591-Nx)
 sensor_index: 51
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

@@ -7,4 +7,4 @@ title: LEGO WeDo USB Hub (9581)
 sensor_index: 32
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

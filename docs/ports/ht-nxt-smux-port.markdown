@@ -7,4 +7,4 @@ title: HiTechnic NXT Sensor Multiplexer Input Port
 port_index: 2
 ---
 
-{% include port.md %}
+{% include /docs/port.md %}

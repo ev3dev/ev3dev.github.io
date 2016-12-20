@@ -4,7 +4,7 @@ group: software-languages
 author: "@wasabifan"
 ---
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 If you're looking to write programs that are more than simple test apps
 or demos and are willing to try something a bit more involved, we
 recommend following the
@@ -17,7 +17,7 @@ your ev3dev device, and running it. We will assume that you have already
 configured a means of connecting to your device from a PC.
 {:.lead}
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 Note that C is not a particularly friendly language, especially for beginners.
 It would be recommended to use Python or another easier language.
 {: .alert .alert-warning}

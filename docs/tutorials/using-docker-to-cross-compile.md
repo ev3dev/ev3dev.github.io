@@ -19,7 +19,7 @@ let us know if you have problems or find a better way of doing it!
 
 [Docker]: http://www.docker.com/
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 This will only work on 64-bit operating systems. We do not maintain images for
 32-bit operating systems.
 {:.alert .alert-warning}
@@ -32,7 +32,7 @@ Docker has excellent documentation, so we will just send you to their
 Docker installed for Windows, Mac or Linux.
 {: .well}
 
-{% include begin-panel.html type="info" heading="Linux" %}
+{% include /style/begin-panel.html type="info" heading="Linux" %}
 
 Docker for Linux has quite a bit of information to read. This may help you sort
 through it. The most important parts are:
@@ -44,7 +44,7 @@ through it. The most important parts are:
 Also, you will need to install `qemu-user-static` on your host computer, otherwise
 you will get an error: `exec user process caused "exec format error"`.
 
-{% include end-panel.html %}
+{% include /style/end-panel.html %}
 
 ## Download the ev3dev cross-compiler image
 
@@ -60,7 +60,7 @@ When it is finished, we can give it a shorter name...
 
     docker tag ev3dev/debian-jessie-cross ev3cc
 
-{% include icon.html type="info" %}
+{% include /style/icon.html type="info" %}
 Docker images are immutable. You can always revert back to this image after making
 changes without having to download it again.
 {:.alert .alert-info}
@@ -93,7 +93,7 @@ int main(int argc, const char *argv[])
 }
 {% endhighlight %}
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 If you are using Windows, you must explicitly allow [shared drives in the Docker
 control panel first][shared-drives]{: .alert-link}!
 {: .alert .alert-warning}

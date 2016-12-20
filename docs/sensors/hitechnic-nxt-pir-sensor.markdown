@@ -7,4 +7,4 @@ title: HiTechnic NXT PIR Sensor (NIS1070)
 sensor_index: 21
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

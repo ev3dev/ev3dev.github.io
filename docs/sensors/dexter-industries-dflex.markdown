@@ -7,4 +7,4 @@ title: Dexter Industries dFlex
 sensor_index: 3
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

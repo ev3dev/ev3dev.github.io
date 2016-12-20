@@ -3,7 +3,7 @@ title: Upgrading Ev3dev
 group: system
 ---
 
-{% include icon.html type="warning" %}
+{% include /style/icon.html type="warning" %}
 By upgrading ev3dev you are also upgrading the drivers, so there may be changes that break user software. 
 You should check the ev3dev [news feed](http://www.ev3dev.org/news/){: .alert-link } for breaking changes before upgrading.
 {: .alert .alert-warning}
@@ -44,7 +44,7 @@ This option will be the slowest, but it is easy to do and will also make sure th
        sudo apt-get upgrade
        sudo apt-get dist-upgrade
 
-   {% include icon.html type="warning" %}
+   {% include /style/icon.html type="warning" %}
    The `upgrade` step may take a couple hours to complete, depending on your
    network connection, hardware and the number of outdated packages.
    {: .alert .alert-warning}
@@ -84,4 +84,4 @@ This option will only upgrade core ev3dev packages and not other software.
 After the brick has rebooted (assuming you installed a new kernel version), press `About` on the brick's main menu and scroll down to "Kernel" to confirm it
 has a current kernel.
 
-{% include screenshot.html source="/images/brickman/about-kernel-version.png" caption="Brickman's about page" %}
+{% include /util/screenshot.html source="/images/brickman/about-kernel-version.png" caption="Brickman's about page" %}

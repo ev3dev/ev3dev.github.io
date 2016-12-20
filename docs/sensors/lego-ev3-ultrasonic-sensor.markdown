@@ -7,4 +7,4 @@ title: LEGO EV3 Ultrasonic Sensor (45504)
 sensor_index: 27
 ---
 
-{% include sensor.md %}
+{% include /docs/sensor.md %}

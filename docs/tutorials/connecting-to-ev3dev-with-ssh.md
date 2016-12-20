@@ -15,7 +15,7 @@ you have configured a network connection before continuing.
 
     <div class="panel panel-info">
     <div class="panel-heading">
-    {% include icon.html type="info" %}
+    {% include /style/icon.html type="info" %}
     If you have never connected before, you will be prompted to confirm the
     authenticity of the host, so type <code>yes</code> when prompted.
     </div>
@@ -55,7 +55,7 @@ you have configured a network connection before continuing.
 
     <div class="panel panel-info">
     <div class="panel-heading">
-    {% include icon.html type="info" %}
+    {% include /style/icon.html type="info" %}
     If you have never connected before, you will be prompted to confirm the
     authenticity of the host, so type <code>yes</code> when prompted.
     </div>
@@ -96,28 +96,28 @@ you have configured a network connection before continuing.
     *PuTTY Configuration* window, type in `ev3dev` for the "host name".
     Then click the *Open* button to connect.
 
-    {% include screenshot.html source="/images/windows/10/putty-configuration-ev3dev.png" %}
+    {% include /util/screenshot.html source="/images/windows/10/putty-configuration-ev3dev.png" %}
 
     <div class="panel panel-info">
     <div class="panel-heading">
 
-    {% include icon.html type="info" %}
+    {% include /style/icon.html type="info" %}
     The first time you connect, you'll get a warning about the new fingerprint.
     This is normal. Just click *Yes* to continue. You won't see this again
     unless you re-flash your SD card.
 
     </div>
     <div class="panel-body">
-    {% include screenshot.html source="/images/windows/10/putty-security-alert.png" %}
+    {% include /util/screenshot.html source="/images/windows/10/putty-security-alert.png" %}
     </div>
     </div>
 
     Once you are connected, type in the ev3dev username (`robot`) and the password
     (`maker` if you haven't changed it yet) and then you should be logged in.
 
-    {% include screenshot.html source="/images/windows/10/putty-robot-at-ev3dev.png" %}
+    {% include /util/screenshot.html source="/images/windows/10/putty-robot-at-ev3dev.png" %}
 
-    {% include icon.html type="success" %}
+    {% include /style/icon.html type="success" %}
     Pro tip! You can copy text by selecting it (dragging accross it with your cursor)
     and paste by right-clicking on the PuTTY window.
     {: .alert .alert-success }
