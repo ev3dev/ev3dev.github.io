@@ -25,9 +25,9 @@ this up, head over to our [SSH tutorial](/docs/tutorials/connecting-to-ev3dev-wi
 {% include /style/icon.html type="info" %}
 The first half of this tutorial assumes you are using the free "Community"
 version of PyCharm. However, if you have access to the "Professional" version of
-PyCharm, which is free for students and some key open-source projects, you we
-recommend that you read through the PyCharm Professional version alternatives
-shown later.
+PyCharm, which is free for students and some other
+[special circumstances][pycharm-discounts], we recommend that you read through
+the PyCharm Professional version alternatives shown later.
 {:.alert .alert-info}
 
 The goal is to be able to transfer code as you write it to the EV3 or other
@@ -268,6 +268,7 @@ better. Good luck!
 [users]: https://www.raspberrypi.org/documentation/linux/usage/users.md
 [passwordless]: https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
 [pycharm]: https://www.jetbrains.com/pycharm/
+[pycharm-discounts]: https://www.jetbrains.com/pycharm/buy/#edition=discounts
 [remote-server]: https://www.jetbrains.com/help/pycharm/2016.3/creating-a-remote-server-configuration.html
 [pycharm-ssh]: https://www.jetbrains.com/help/pycharm/2016.3/ssh-terminal.html
 [remote-interpreter]: https://www.jetbrains.com/help/pycharm/2016.3/configuring-remote-interpreters-via-ssh.html
