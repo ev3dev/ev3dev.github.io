@@ -23,10 +23,11 @@ this up, head over to our [SSH tutorial](/docs/tutorials/connecting-to-ev3dev-wi
 ## Configure code synchronization
 
 {% include icon.html type="info" %}
-The first half of this tutorial assumes you are using the free version of PyCharm.
-However, if you have access to the Professional Version of PyCharm, which is free for students
-and some open-source projects, you should probably read the PyCharm Professional version
-alternatives shown later.
+The first half of this tutorial assumes you are using the free "Community"
+version of PyCharm. However, if you have access to the "Professional" version of
+PyCharm, which is free for students and some key open-source projects, you we
+recommend that you read through the PyCharm Professional version alternatives
+shown later.
 {:.alert .alert-info}
 
 The goal is to be able to transfer code as you write it to the EV3 or other
@@ -78,7 +79,7 @@ Finally, do:
 
 This tutorial focuses on PyCharm Community Edition (although these instructions
 also work for more advanced versions of the software). If you haven't already,
-install [PyCharm](pycharm).
+install [PyCharm][pycharm].
 
 {% include screenshot.html source="/images/PyCharm/welcome.png" %}
 
@@ -157,7 +158,7 @@ On your host computer install the ev3dev-python library using Python's built-in 
 With the IDE (PyCharm) set up and the library installed you can code much
 faster. PyCharm will highlight most coding errors and typos. It will also
 suggest to autocomplete your code and show documentation. You can start
-typing `m.` and pycharm will suggest all possible methods and properties.
+typing `m.` and PyCharm will suggest all possible methods and properties.
 Choose one. Now you can put your cursor inside the property and press F1 to
 see the docs. Or press cmd/control-down arrow to look inside the library where this
 property is defined. Neat, huh? Happy coding.
@@ -197,12 +198,12 @@ also allows you to have some other git remote (say GitHub) instead of using the
 EV3 as your git remote. Here are the steps necessary to set up your file
 transfer mechanism using a PyCharm Remote Server.
 
-- Within PyCharm choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for OS X)
+- Within PyCharm choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS)
 - Expand Build, Execution, Deployment
 - Click Deployment
-- Click the + icon to add a new remote server, name it whatever you like (`EV3` for example)
+- Click the `+` icon to add a new remote server, name it whatever you like (`EV3` for example)
 - Select SFTP, then set the following parameters:
-  - SFTP host: `ev3dev.local` (or other name if renamed or use the IP address)
+  - SFTP host: `ev3dev` or `ev3dev.local`, depending on your network configuration (this will be different if you have renamed the EV3)
   - Port: 22 (don't change it)
   - Root path: / (don't bother change it as we'll set the full path later)
   - User name: `robot`
@@ -213,7 +214,7 @@ transfer mechanism using a PyCharm Remote Server.
     - Deployment path on server: `/home/robot/myfolderpath`
   - Click the button at the top that says `Use this server as default`
   - Hit OK
-- Reopen the _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for OS X) area  (note we had to save the earlier step first)
+- Reopen the _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS) area  (note we had to save the earlier step first)
 - Expand _Build, Execution, Deployment_, expand _Deployment_, then select _Options_
 - For `Upload changed files automatically to the default server`, select `On explicit save action`
   
@@ -229,7 +230,7 @@ like PuTTY, MobaXterm, or a Mac Terminal, just do it from within PyCharm. To
 start an SSH session just use the menu option _Tools_ > _Start SSH Session..._
 
 It should prompt you for what remote server you want to use and then open an SSH connection to your EV3 in a new tab. Assuming you have completed the step above, you will see your already configured remote all ready to go. You can even skip that selection step by setting the default Deployment server.
-- Choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for OS X)
+- Choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS)
 - Expand Tools
 - Select SSH Terminal
 - Change Deployment server from `Select server on every run` to your configured server (for example `EV3` if you named it that)
@@ -248,7 +249,7 @@ an RPi would work better). You can try it out. Maybe you'll have better luck.
 {:.alert .alert-danger}
 
 
-- Choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for OS X)
+- Choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS)
 - Expand your project
 - Select `Python Interpreter`
 - Click the three little dots to add a new interpreter and select Add Remote
@@ -262,7 +263,7 @@ do something else for a little while. When it's done you can use the PyCharm IDE
 play button to run your code on ev3. It's a pretty slick idea if it worked
 better. Good luck!
 
-[network]: /docs/tutorials
+[network]: /docs/networking/
 [ssh]: /docs/tutorials/connecting-to-ev3dev-with-ssh/
 [users]: https://www.raspberrypi.org/documentation/linux/usage/users.md
 [passwordless]: https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
