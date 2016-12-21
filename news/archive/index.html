@@ -6,10 +6,12 @@ title: News Archive
 
 {% for post in site.posts %}
     {% if post.categories contains "news" %}
-    <div class="news-item">
-        <div class="news-item-header">
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <hr/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">
+                <a href="{{ post.url }}"> {{ post.title }}</a>
+                <span class="pull-right label font-light">{{ post.date | date_to_string }}</span>
+            </h2>
         </div>
     </div>
     {% endif %}
