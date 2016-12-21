@@ -26,8 +26,8 @@ this up, head over to our [SSH tutorial](/docs/tutorials/connecting-to-ev3dev-wi
 The first half of this tutorial assumes you are using the free "Community"
 version of PyCharm. However, if you have access to the "Professional" version of
 PyCharm, which is free for students and some other
-[special circumstances][pycharm-discounts], we recommend that you read through
-the PyCharm Professional version alternatives shown later.
+[special circumstances][pycharm-discounts]{: .alert-link }, we recommend that
+you read through the PyCharm Professional version alternatives shown later.
 {:.alert .alert-info}
 
 The goal is to be able to transfer code as you write it to the EV3 or other
@@ -106,13 +106,13 @@ the brick, so we want this enabled. Choose _Yes_.
 
 Now add the following test code:
 
-{% highlight python %}
+```python
 from ev3dev.auto import *
 import time
 
 m = Motor(OUTPUT_A)
 m.run_timed(time_sp=3000, speed_sp=500)
-{% endhighlight %}
+```
 
 Once you have entered that code, choose _VCS_ > _Commit Changes..._ or press
 <kbd>Ctrl</kbd>+<kbd>K</kbd> (<kbd>Cmd</kbd>+<kbd>K</kbd> on Mac).
@@ -153,12 +153,14 @@ On your host computer install the ev3dev-python library using Python's built-in 
 
     pip install python-ev3dev
 
+<div markdown="1">
 {% include /style/icon.html type="info" %}
 Note, on a system that has both Python 2 and Python 3 installed, for example a Mac, use
 
     pip3 install python-ev3dev
 
 to install python-ev3dev for use with the Python 3 interpreter.
+</div>
 {:.alert .alert-info}
 
 Once you have installed the library the red curly lines will go away and autocomplete
