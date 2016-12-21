@@ -153,6 +153,19 @@ On your host computer install the ev3dev-python library using Python's built-in 
 
     pip install python-ev3dev
 
+{% include /style/icon.html type="info" %}
+Note, on a system that has both Python 2 and Python 3 installed, for example a Mac, use
+
+    pip3 install python-ev3dev
+
+to install python-ev3dev for use with the Python 3 interpreter.
+{:.alert .alert-info}
+
+Once you have installed the library the red curly lines will go away and autocomplete
+will work for ev3dev-python commands (very handy).
+
+{% include /util/screenshot.html source="/images/PyCharm/installed-lib.png" %}
+
 ## Using the power of the IDE
 
 With the IDE (PyCharm) set up and the library installed you can code much
@@ -202,6 +215,9 @@ transfer mechanism using a PyCharm Remote Server.
 - Expand Build, Execution, Deployment
 - Click Deployment
 - Click the `+` icon to add a new remote server, name it whatever you like (`EV3` for example)
+
+{% include /util/screenshot.html source="/images/PyCharm/sftp-setup-1.png" %}
+
 - Select SFTP, then set the following parameters:
   - SFTP host: `ev3dev` or `ev3dev.local`, depending on your network configuration (this will be different if you have renamed the EV3)
   - Port: 22 (don't change it)
@@ -209,14 +225,23 @@ transfer mechanism using a PyCharm Remote Server.
   - User name: `robot`
   - Password: `maker` (this is the default password; if you have changed it, use your own)
   - Save password: Check the box to make it easier on yourself.
+  - You can also uncheck 'Visible only for this project' at the top.
+
+{% include /util/screenshot.html source="/images/PyCharm/sftp-setup-2.png" %}
+
 - Click the Mappings tab (if blank, hit OK the come back to this spot, sometimes it requires you to save it first)
   - Select the path for your files on the EV3, for example:
     - Deployment path on server: `/home/robot/myfolderpath`
   - Click the button at the top that says `Use this server as default`
   - Hit OK
+
+{% include /util/screenshot.html source="/images/PyCharm/sftp-setup-3.png" %}
+
 - Reopen the _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS) area  (note we had to save the earlier step first)
 - Expand _Build, Execution, Deployment_, expand _Deployment_, then select _Options_
 - For `Upload changed files automatically to the default server`, select `On explicit save action`
+
+{% include /util/screenshot.html source="/images/PyCharm/sftp-setup-4.png" %}
   
 You can test this setup without executing any code. Just make a change, save the
 file, and see if the file is in sync on your EV3. Note, in order to run that
@@ -229,11 +254,17 @@ This tool is really just a convenience. Instead of using a separate program,
 like PuTTY, MobaXterm, or a Mac Terminal, just do it from within PyCharm. To
 start an SSH session just use the menu option _Tools_ > _Start SSH Session..._
 
-It should prompt you for what remote server you want to use and then open an SSH connection to your EV3 in a new tab. Assuming you have completed the step above, you will see your already configured remote all ready to go. You can even skip that selection step by setting the default Deployment server.
+It will prompt you for what remote server you want to use.  Select `EV3` (if you named it that).  Next it will have a dialog that says "Connecting to Remote Host ... Are you sure?", click Yes. Then an SSH connection to your EV3 will open in a new Terminal tab. 
+
+{% include /util/screenshot.html source="/images/PyCharm/ssh-setup-1.png" %}  
+
+You can even skip that selection step (saves 1 click!) by setting the default Deployment server.
 - Choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS)
 - Expand Tools
 - Select SSH Terminal
 - Change Deployment server from `Select server on every run` to your configured server (for example `EV3` if you named it that)
+
+{% include /util/screenshot.html source="/images/PyCharm/ssh-setup-2.png" %}  
 
 ### Setting up a Remote Interpreter
 
@@ -247,7 +278,6 @@ possible in Pycharm; however, it has some serious issues.
 In my testing, on a real EV3, this approach was so slow it was unusable (perhaps
 an RPi would work better). You can try it out. Maybe you'll have better luck.
 {:.alert .alert-danger}
-
 
 - Choose _File_ > _Settings_ for Windows and Linux (or _PyCharm_ > _Preferences_ for macOS)
 - Expand your project
