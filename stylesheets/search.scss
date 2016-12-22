@@ -26,13 +26,9 @@
     margin-left: 20px;
 }
 
-.search-result {
-    display: none;
-    
-    h4 {
-        font-size: large;
-        margin-bottom: 0;
-    }
+.search-result h4 {
+    font-size: large;
+    margin-bottom: 0;
 }
 
 .search-result > div:empty {

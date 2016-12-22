@@ -72,6 +72,13 @@
                     <form class="navbar-form navbar-right dropdown" onsubmit="return false;">
                         <input type="text" id="search-input" class="form-control" placeholder="Quick nav" autocomplete="off" />
                         <div class="dropdown-menu" id="search-dropdown">
+                            <div class="search-results-container" id="search-no-data-warning">
+                                {% include /style/icon.html type="warning" class="heading-icon" %}
+                                We were unable to retrieve search data from the
+                                server. Make sure that JavaScript is enabled and
+                                that nothing is blocking network access.
+                            </div>
+
                             <div class="search-results-container" id="search-results-docs">
                                 <h2>In docs</h2>
                                 <div data-content="docs-results">

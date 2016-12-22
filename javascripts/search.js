@@ -1,7 +1,7 @@
 var searchData;
-var searchData;
 var dataLoading = false;
 var itemLoadTimer, searchKeystrokeEventTimer;
+var autoselectedSearchResult = null;
 
 var projectResultArea, docResultArea, newsResultArea, miscResultArea;
 $(document).ready(function () {
@@ -11,7 +11,7 @@ $(document).ready(function () {
     miscResultArea = $('#search-results-misc > div');
 
     var searchQuery = getQueryParam("search");
-    if (searchQuery != undefined && searchQuery != "") { //If a search query was provided in the query strings, execute the search
+    if (searchQuery) { //If a search query was provided in the query strings, execute the search
         loadSearchData(function () {
             searchUpdate();
         });
@@ -29,9 +29,17 @@ $(document).ready(function () {
 
     $('#search-input')
         .focus(searchFocus)
-        .keyup(searchTextChanged);
+        .keyup(function(event) {
+            if(event.which == 13) {
+                if(searchKeystrokeEventTimer == undefined && autoselectedSearchResult)
+                    window.location = autoselectedSearchResult;
+                return;
+            }
+            
+            searchTextChanged()
+        });
 
-
+    $('#search-no-data-warning').hide();
 });
 
 Array.prototype.clean = function (deleteValue) {
@@ -68,24 +76,34 @@ function searchTextChanged() {
 }
 
 //Loads the data from the JSON document
-function loadSearchData(callback) {
+function loadSearchData(callback, numRetries) {
     if (dataLoading)
         return;
 
     dataLoading = true;
-    $.getJSON("/search-index.json", function (e) {
+    $.getJSON("/search-index.json")
+    .done(function(loadedData) {
         dataLoading = false;
-        searchData = e.slice(0, -1);
+        searchData = loadedData.slice(0, -1);
+        for(var dataIndex = 0; dataIndex < searchData.length; dataIndex++) {
+            searchData[dataIndex].category = searchData[dataIndex].category.split(' ');
+        }
 
         if (callback != undefined)
             callback();
+    })
+    .fail(function(error) {
+        dataLoading = false;
+
+        if(numRetries == undefined || numRetries > 0)
+            loadSearchData(callback, (Number(numRetries) || 3) - 1)
     });
 }
 
 //Function to actually execute the search (currently only searches title)
 function findResults(term) {
     if (!searchData)
-        return undefined;
+        return null;
 
     //Split by word
     var terms = term.toLowerCase().split(/\W/g);
@@ -153,38 +171,45 @@ function doSearch(query) {
     newsResultArea.children('.search-result').remove();
     miscResultArea.children('.search-result').remove();
 
+    var results = findResults(query);
+    $('#search-no-data-warning').toggle(!results);
+    
+    docResultArea.parent().toggle(!!results);
+    projectResultArea.parent().toggle(!!results);
+    newsResultArea.parent().toggle(!!results);
+    miscResultArea.parent().toggle(!!results);
+    $('#search-dropdown').css('height', results ? '' : 'auto' );
+
     //Start the dropdown box's 'open' animation
     if (!$('#search-dropdown').is(":visible"))
-        $('#search-dropdown').slideDown(400, function () {
-        });
+        $('#search-dropdown').slideDown(400);
 
-    var results = findResults(query);
+    if(results && results.length > 0) {
+        autoselectedSearchResult = null;
 
-    //Load and animate the search results (use good JavaScript practices and do it recursively using acync callbacks)
-    function loadItem(i) {
-        var resultArea = miscResultArea;
+        (function loadItem(startIndex) {
+            var resultArea = miscResultArea;
 
-        var categoryTags = results[i].category.split(' ');
-        if (categoryTags.indexOf('docs') != -1)
-            resultArea = docResultArea;
-        else if (categoryTags.indexOf('projects') != -1)
-            resultArea = projectResultArea;
-        else if (categoryTags.indexOf('news') != -1)
-            resultArea = newsResultArea;
+            var categoryTags = results[startIndex].category;
+            if (categoryTags.indexOf('docs') != -1)
+                resultArea = docResultArea;
+            else if (categoryTags.indexOf('projects') != -1)
+                resultArea = projectResultArea;
+            else if (categoryTags.indexOf('news') != -1)
+                resultArea = newsResultArea;
 
-        resultArea.loadTemplate($('#search-result-template'), results[i], { append: true });
+            resultArea.loadTemplate($('#search-result-template'), results[startIndex], { append: true });
 
-        resultArea.children().last().show(20);
-
-        if (i < results.length - 1) {
-            itemLoadTimer = setTimeout(function () {
-                loadItem(i + 1)
-            }, 5);
-        }
+            if (startIndex < results.length - 1) {
+                itemLoadTimer = setTimeout(function () {
+                    loadItem(startIndex + 1)
+                }, 0);
+            }
+            else {
+                autoselectedSearchResult = $('.search-result a').first().attr('href');
+            }
+        })(0)
     }
-
-    if (results.length > 0)
-        loadItem(0);
 }
 
 
