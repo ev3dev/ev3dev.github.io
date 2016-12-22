@@ -100,7 +100,7 @@ test it on our PC or on another EV3:
       client.subscribe("topic/test")
 
     def on_message(client, userdata, msg):
-      if msg.payload.decode('ascii') == "Hello world!":
+      if msg.payload.decode() == "Hello world!":
         print("Yes!")
         client.disconnect()
         
