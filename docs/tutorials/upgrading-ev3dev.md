@@ -12,29 +12,17 @@ There are multiple ways that you can upgrade ev3dev.
 
 # Option 1: Re-flashing your SD card (fastest)
 
-This option will likely be the fastest by far. **By re-flashing your SD card, however, you will lose any files that were stored in your ev3dev installation, including code and installed programs.**
+This option will likely be the fastest by far. **However, by re-flashing your SD card, you will lose any files that were stored in your ev3dev installation, including code and installed programs.**
 
-1. Download a recent image file. We haven't done a full release in a while, so
-   we recommend that you download the newest [nightly image](https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/).
-   - Choose a recent day from the list on that page and then download the file
-     that matches your platform based on the table below.
-     
-     Hardware platform                  | File name
-     -----------------------------------|-------------
-     LEGO MINDSTORMS EV3                | `nightly-ev3dev-jessie-ev3-generic-####-##-##.img.xz`
-     Raspberry Pi Zero / Raspberry Pi 1 | `nightly-ev3dev-jessie-rpi-generic-####-##-##.img.xz`
-     Raspberry Pi 2 / Raspberry Pi 3    | `nightly-ev3dev-jessie-rpi2-generic-####-##-##.img.xz`
-     BeagleBone                         | `nightly-ev3dev-jessie-bone-generic-####-##-##.img.xz`
-     {: .table .table-striped .table-bordered }
-
-2. Head over to our [Getting Started guide](/docs/getting-started#step-2-flash-the-sd-card)
-   and follow the "Copy the image to the SD card" step.
-
+Head over to our [downloads page](/download) to download the appropriate image
+and then follow the linked instructions at the top of that page to flash the
+flash to your SD card.
 
 # Option 2: Upgrading all installed software (slowest)
 **Make sure that you have already configured a network connection and connected to ev3dev via SSH to use this option.**
 
-This option will be the slowest, but it is easy to do and will also make sure that other software is up-to-date.
+This option will be the slowest, but it is easy to do and will also make sure
+that other software is up-to-date.
 
 1. Run the following commands in order, waiting for each command to complete
    before typing the next. Some steps require confirmation to proceed. Press
@@ -81,7 +69,8 @@ This option will only upgrade core ev3dev packages and not other software.
 
 # Confirming that the upgrade worked
 
-After the brick has rebooted (assuming you installed a new kernel version), press `About` on the brick's main menu and scroll down to "Kernel" to confirm it
+After the brick has rebooted (assuming you installed a new kernel version),
+press `About` on the brick's main menu and scroll down to "Kernel" to confirm it
 has a current kernel.
 
 {% include /util/screenshot.html source="/images/brickman/about-kernel-version.png" caption="Brickman's about page" %}
