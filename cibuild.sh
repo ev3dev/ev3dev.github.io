@@ -43,6 +43,7 @@ if [ "$TRAVIS" == "true" ]; then
         lab\.open-roberta\.org
         questforspace\.com
         bountysource\.com
+        ofalcao.pt
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
@@ -51,6 +52,7 @@ else
         https:\/\/github\.com\/myuser\/myrepo
         https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
         robosnap.net
+        ofalcao.pt
     }.map{|h| "/#{h}/"}.join(",")')
 fi
 
