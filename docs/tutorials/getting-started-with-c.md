@@ -8,7 +8,7 @@ author: "@wasabifan"
 If you're looking to write programs that are more than simple test apps
 or demos and are willing to try something a bit more involved, we
 recommend following the
-[Using Docker to Cross-Compile](/docs/tutorials/using-docker-to-cross-compile/)
+[Using Docker to Cross-Compile](/docs/tutorials/using-docker-to-cross-compile/){: .alert-link }
 tutorial instead of this one.
 {: .alert .alert-info}
 
