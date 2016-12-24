@@ -48,6 +48,7 @@ We need to install the compiler and some other tools. Execute the following
 command to install them:
 
 {% highlight sh %}
+sudo apt-get update
 sudo apt-get install build-essential
 {% endhighlight %}
 
