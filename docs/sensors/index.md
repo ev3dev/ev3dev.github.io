@@ -115,7 +115,7 @@ One of the goals of ev3dev is to support as many sensors as possible. In fact,
 **even if a manufacturer's documentation says that a device does not work with
 the EV3, chances are it _will_ work with ev3dev.**
 
-If you have a sensor that is not supported let, let us know about it by
+If you have a sensor that is not supported yet, let us know about it by
 [opening an issue] on GitHub. For many sensors adding a driver is trivial -
 even if you are not a "kernel hacker" or a "c programmer". For the non-trivial
 sensors, see the [contributing page] for information on how to write a driver
