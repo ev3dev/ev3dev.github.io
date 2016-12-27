@@ -37,9 +37,9 @@ system we can use `mosquitto`
     sudo apt-get install mosquitto
 
 This installs and also starts the mosquitto daemon. You can check if it is
-working:
+working by using the `systemctl` command:
 
-    robot@ev3dev:~# service mosquitto status
+    robot@ev3dev:~# systemctl status mosquitto
     ● mosquitto.service - LSB: mosquitto MQTT v3.1 message broker
        Loaded: loaded (/etc/init.d/mosquitto)
        Active: active (running) since Wed 2016-05-11 07:40:51 WEST; 7min ago
@@ -49,19 +49,25 @@ working:
 Now we are able to send and receive messages through the broker (by default
 mosquitto uses port 1883). 
 
-This tutorial uses python scripts so we need to install one python library:
+This tutorial uses python scripts so we need to install the python library paho-mqtt.
+You need 'pip3' to install this module, so if you have not already done so, you will
+need to install `pip3`:
 
-    sudo easy_install paho-mqtt
+    sudo apt-get install python3-pip
+
+Now you can install paho-mqtt:
+
+    sudo pip3 install paho-mqtt
 
 All scripts were tested successully on a EV3 running the latest ev3dev version
-(as of 12 May 2016) and also on a Raspberry Pi 3 with a BrickPi running the same
+(as of 21 Dec 2016) and also on a Raspberry Pi 3 with a BrickPi running the same
 ev3dev version and a laptop running Ubuntu 16.04.
 
 ## Publisher example
 
 A very simple script to publish a message:
 
-    #!/usr/bin/env python
+    #!/usr/bin/env python3
 
     import paho.mqtt.client as mqtt
 
@@ -83,7 +89,7 @@ will receive a MQTT message with "Hello world!" as the payload. We can test it w
 a mobile phone (there are several free MQTT client apps available) but we can also
 test it on our PC or on another EV3:
 
-    #!/usr/bin/env python
+    #!/usr/bin/env python3
 
     import paho.mqtt.client as mqtt
 
@@ -94,7 +100,7 @@ test it on our PC or on another EV3:
       client.subscribe("topic/test")
 
     def on_message(client, userdata, msg):
-      if (msg.payload == "Hello world!"):
+      if msg.payload.decode() == "Hello world!":
         print("Yes!")
         client.disconnect()
         
@@ -109,13 +115,17 @@ test it on our PC or on another EV3:
 Note: the second EV3 (the "Subscriber") just needs the "paho-mqtt" library,
 there is no need to install the "mosquitto" daemon.
 
+Note: when the publisher sends a string as payload use `decode()` as in the
+example above. When the Publisher sends a number, you can use `int(msg.payload)`
+as shown in the next example.
+
 ## A more practical example
 
 We will use MQTT messages to control the speed of an EV3 motor on port A.
 We will do this by changing just one motor attribute: `duty_cycle_sp`
 so we define a topic for this purpose and susbcribe to it: `topic/motor-A/dt`
 
-    #!/usr/bin/env python
+    #!/usr/bin/env python3
     
     import paho.mqtt.client as mqtt
     from ev3dev.auto import *
