@@ -38,10 +38,10 @@ links works and the information is still relevant.
 As the hardware drivers are being finalized, development will be shifting to
 software that can interface with the hardware. There are many [packages on
 GitHub][ev3dev-github-org] that you can hack on. Additionally, there are some
-language bindings listed on the [home page](/) that are not part of the ev3dev
-GitHub organization (yet).
+language bindings listed on the [Programming Languages page](/docs/programming-languages)
+that would love some community support.
 
-If you have never used GitHub before, it's super-easy. [Read about it][GitHub Help],
+If you have never used GitHub before, it's super easy. [Read about it][GitHub Help],
 then send a pull request.
 
 ## Write a driver

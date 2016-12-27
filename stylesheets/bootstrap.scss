@@ -68,3 +68,8 @@
 .panel-danger {
     @include panel-variant($panel-danger-heading-bg);
 }
+
+// Custom breadcrumb separator
+.breadcrumb > li + li::before {
+    content: ">"
+}

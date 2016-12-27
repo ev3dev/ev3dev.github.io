@@ -1,6 +1,7 @@
 ---
 title: Share
 excerpt: "We have a projects page where users can browse projects that have been built using ev3dev. You can add your own too! Each project gets a dedicated page for the author to explain what they have been working on, as well as provide videos, pictures, build instructions, code, and any other media that pertains to the project."
+extra-head-content: '<script async defer src="https://buttons.github.io/buttons.js"></script>'
 ---
 <div class="lead">
     <center>
@@ -8,22 +9,22 @@ excerpt: "We have a projects page where users can browse projects that have been
     </center>
 </div>
 
-<div class="row">
-    <div class="col-md-6" markdown="1">
-<h3><span class="glyphicon glyphicon-star heading-icon"></span>Give us a star on GitHub</h3>
-"Stars" are a great way to show support for a GitHub project. Visit [ours][] and star us!
-</div>
-    <div class="col-md-6" markdown="1">
-<h3><span class="glyphicon glyphicon-check heading-icon"></span>Vote for ev3dev</h3>
-Vote for ev3dev in the [mindsensor.com][] poll (it's about half way down
-the page).
-</div>
-</div>
+Give us a star on GitHub
+---
 
-<hr/>
+<a class="github-button"
+    aria-label="Star ev3dev/ev3dev on GitHub"
+    href="https://github.com/ev3dev/ev3dev"
+    data-text="Visit us and star"
+    data-style="mega" data-icon="octicon-star"
+    data-count-href="/ev3dev/ev3dev/stargazers"
+    data-count-api="/repos/ev3dev/ev3dev#stargazers_count"
+    data-count-aria-label="# stargazers on GitHub">Star</a>
+
+"Stars" are a great way to show support for a GitHub project. Visit [ours][ev3dev-repo] and star us!
 
 Show us your ev3dev projects
-------------------------
+---
 
 We have a [projects page] where users can browse projects that have
 been built using ev3dev. You can add your own too!  Each project gets a
@@ -38,4 +39,4 @@ check out [the tutorial][Adding a new project].
 [template project]: https://raw.githubusercontent.com/ev3dev/ev3dev.github.io/master/projects/_posts/2014-03-21-Example-Project.md
 [template page]: /projects/2014/03/21/Example-Project/
 [Adding a new project]: ../docs/tutorials/adding-new-project/
-[ours]: https://github.com/ev3dev/ev3dev
+[ev3dev-repo]: https://github.com/ev3dev/ev3dev
