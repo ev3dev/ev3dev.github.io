@@ -3,14 +3,14 @@ title: Share
 excerpt: "We have a projects page where users can browse projects that have been built using ev3dev. You can add your own too! Each project gets a dedicated page for the author to explain what they have been working on, as well as provide videos, pictures, build instructions, code, and any other media that pertains to the project."
 extra-head-content: '<script async defer src="https://buttons.github.io/buttons.js"></script>'
 ---
+
 <div class="lead">
     <center>
         Do you like ev3dev? Show your support!
     </center>
 </div>
 
-Give us a star on GitHub
----
+## Give us a star on GitHub
 
 <a class="github-button"
     aria-label="Star ev3dev/ev3dev on GitHub"
@@ -23,8 +23,7 @@ Give us a star on GitHub
 
 "Stars" are a great way to show support for a GitHub project. Visit [ours][ev3dev-repo] and star us!
 
-Show us your ev3dev projects
----
+## Show us your ev3dev projects
 
 We have a [projects page] where users can browse projects that have
 been built using ev3dev. You can add your own too!  Each project gets a
