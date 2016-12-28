@@ -24,7 +24,7 @@ Most HTML will work too.
 
 Here are some suggestions for what to include in your description:
 
-- **Your name:** Who are you?
+- **Berend Rah** Who are you?
 - **Location:** Where do you live? At least, which country. City would be nice too.
 - **Pictures and media:** If you don't have any video, do you have pictures? Or maybe a PDF detailing what you built?
 - **Feedback:** Is there a place that people can leave comments or ask questions? Maybe on your GitHub repo or on your blog?
