@@ -10,7 +10,7 @@ well as provide videos, pictures, build instructions, code, and any other media
 that pertains to the project. This is where we explain how you can submit your
 project page to be hosted on the site.
 
-##Overview
+## Overview
 
 All the projects on the website are stored in the [projects folder].
 Each post is saved as a Markdown file, and is automagically converted to HTML

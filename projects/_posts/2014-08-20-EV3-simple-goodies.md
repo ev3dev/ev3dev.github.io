@@ -40,7 +40,7 @@ but with some simple edits you can place them where **you** want them.
 
 
 ### Have your EV3 report the IP-addresses by speach after boot 
-##### Starting at ev3dev image ev3dev-jessie-2014-10-07
+**Starting at ev3dev image ev3dev-jessie-2014-10-07**
 
 For this an update is needed to `/etc/rc.local`
 
@@ -57,7 +57,7 @@ fi
 and place the script [`tellIP`](https://github.com/BertLindeman/bert-ev3dev-examples/blob/master/tellIP)
 in the directory: `/media/mmc_p1/`
 
-##### OLDER ev3dev images (ev3dev-jessie-2014-10-07-12 and before)
+**OLDER ev3dev images (ev3dev-jessie-2014-10-07-12 and before)**
 
 For this an update is needed to `/media/mmc_p1/ev3dev.rc.local`
 

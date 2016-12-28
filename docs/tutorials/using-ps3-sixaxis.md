@@ -1,13 +1,15 @@
 ---
 title: Bluetooth PS3 gamepad in Python
 group: hardware-extras
-author: Anton Vanhoucke
+author: "@antonvh"
 ---
 
 * Table of Contents
 {:toc}
 
-The cool thing about the PS3 gamepad is that it's a normal Bluetooth device and connects directly to the Ev3. You can easily run programs in brickman and use the pad without another computer or laptop.
+The cool thing about the PS3 gamepad is that it's a normal Bluetooth device and
+connects directly to the EV3. You can easily run programs in brickman and use
+the pad without another computer or laptop.
 
 # What you need
 - A PS3 gamepad (also known as Sixaxis controller or Dualshock 3)
@@ -16,23 +18,31 @@ The cool thing about the PS3 gamepad is that it's a normal Bluetooth device and 
 - ev3-ev3dev-jessie-2015-12-30.img or later
 
 # Connection
-The PS3 pairing process in Brickman is a little strange, but works fine. Stick exactly to these steps: 
+The PS3 pairing process in Brickman is a little strange, but works fine. Stick
+exactly to these steps: 
 
 1. On the Ev3 brick go to 'Wireless and Networks' > 'Bluetooth'
 2. Make sure Bluetooth is Powered and the brick is Visible. 
-3. Connect the gamepad via a mini usb cable to the Ev3. I used the large usb port next to the micro SD slot.
+3. Connect the gamepad via a mini usb cable to the Ev3. I used the large usb
+    port next to the micro SD slot.
 4. Under Devices a 'PLAYSTATION(R) 3 controller' should show up. But don't pair!
 4. Remove the USB cable again.
 5. Press the PS3 button on the gamepad.
 6. The brick now asks "Authorize service HID?" Press "Accept" 
 
-You're done! Whenever you press the PS3 button on the gamepad now, it will try to connect to the ev3 brick. Nice!
+You're done! Whenever you press the PS3 button on the gamepad now, it will try
+to connect to the ev3 brick. Nice!
 
-If brickman doesn't work or if you don't have a display, like on a BrickPi, `bluetoothctl` is the way to go. The gentoo linux guys wrote [a nice tutorial](https://wiki.gentoo.org/wiki/Sony_DualShock)
+If brickman doesn't work or if you don't have a display, like on a BrickPi,
+`bluetoothctl` is the way to go. The gentoo linux guys wrote [a nice tutorial](https://wiki.gentoo.org/wiki/Sony_DualShock)
 
 
 # Running motors with a PS3 sixaxis controller
-Now on to Python. In python we need the evdev (without a 3) to read gamepad events. Here's a quick program that will take the right stick Y axis and use it to set the speed of a motor in port A. Note that motor control is in a separate thread. That's because controlling the motors is much slower than reading the gamepad. Multithreading synchronizes both.
+Now on to Python. In python we need the evdev (without a 3) to read gamepad
+events. Here's a quick program that will take the right stick Y axis and use it
+to set the speed of a motor in port A. Note that motor control is in a separate
+thread. That's because controlling the motors is much slower than reading the
+gamepad. Multithreading synchronizes both.
 
 {% highlight python %}
 #!/usr/bin/env python
@@ -98,7 +108,8 @@ for event in gamepad.read_loop():   #this loops infinitely
         break
 {% endhighlight %}
 
-Copy this code into a file on the Ev3 brick to run it. If you do `sudo chmod +x your_file_name.py`, you can even run it from the brickman interface!
+Copy this code into a file on the Ev3 brick to run it. If you do
+`sudo chmod +x your_file_name.py`, you can even run it from the brickman interface!
 
 # The complete event type and code mapping of the ps3 controller
 I mapped out all codes for you! Here they are:

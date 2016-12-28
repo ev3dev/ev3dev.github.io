@@ -2,19 +2,29 @@
 {% assign link='/' %}
 <ol class="breadcrumb" vocab="http://schema.org" typeof="BreadcrumbList">
     {% assign position = 1 %}
+    {% assign current_dir = site.data.breadcrumbs %}
+
     {% for dir in parent_dirs %}
         {% assign link=link | append: dir | append: '/' %}
+
+        {% assign pretty_name = dir %}
         {% if forloop.last %}
             {% assign itemElem = 'span' %}
             {% assign liClass = 'active' %}
+            {% assign pretty_name = page.title %}
         {% else %}
             {% assign itemElem = 'a' %}
             {% assign hrefAttrib = 'href="' | append: link | append: '"' %}
+
+            {% assign current_dir = current_dir[dir] %}
+            {% if current_dir.name %}
+                {% assign pretty_name = current_dir.name %}
+            {% endif %}
         {% endif %}
-        
+
         <li property="itemListElement" typeof="ListItem" class="{{liClass}}">
             <{{itemElem}} {{ hrefAttrib }} property="item" typeof="WebPage">
-                <span property="name">{{ dir }}</span>
+                <span property="name">{{ pretty_name }}</span>
             </{{itemElem}}>
             <meta property="position" content="{{position}}">
         </li>

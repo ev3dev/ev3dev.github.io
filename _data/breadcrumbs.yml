@@ -1,0 +1,16 @@
+docs:
+  name: "Documentation"
+  devtools:
+    name: Developer Tools
+  drivers:
+    name: Kernel Drivers
+  kernel-hackers-notebook:
+    name: Kernel Hacker's Notebook
+  motors:
+    name: Motors
+  ports:
+    name: Input and Output Ports
+  sensors:
+    name: Sensors
+  tutorials:
+    name: Tutorials
