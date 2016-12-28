@@ -151,17 +151,7 @@ autocomplete will be detected in the library so that PyCharm can help you out.
 
 On your host computer install the ev3dev-python library using Python's built-in package manager [pip](https://en.wikipedia.org/wiki/Pip_(package_manager)).
 
-    pip install python-ev3dev
-
-<div markdown="1">
-{% include /style/icon.html type="info" %}
-Note, on a system that has both Python 2 and Python 3 installed, for example a Mac, use
-
     pip3 install python-ev3dev
-
-to install python-ev3dev for use with the Python 3 interpreter.
-</div>
-{:.alert .alert-info}
 
 Once you have installed the library the red curly lines will go away and autocomplete
 will work for ev3dev-python commands (very handy).
