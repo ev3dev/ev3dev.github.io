@@ -10,7 +10,7 @@ author: "Kees Smit"
 ## Intro
 
 The CMUcam5 Pixy camera is available in a version designed for
-LEGO MIndstorms. In this tutorial we explain how to use it with ev3dev
+LEGO Mindstorms. In this tutorial we explain how to use it with ev3dev
 and python.
 General information about Pixy for LEGO MIndstorms can be found on
 Charmed Lab's [wiki-page](http://cmucam.org/projects/cmucam5/wiki/LEGO_Wiki).
@@ -26,16 +26,19 @@ you will need a special Pixy adapter for EV3.
 you to set the signatures (object you want Pixy to detect). To use this tool
 you need to connect the camera directly to your PC by using a mini USB cable.
 For this you can use the USB cable of your EV3. Beware that when the camera 
-is connected to your PC this way, it's valuesare not updated! So before 
-starting your script be sure the camerais disconnected form your computer 
+is connected to your PC this way, it's values are not updated! So before 
+starting your script be sure the camera is disconnected from your computer 
 and thus only connected to your EV3.
 
 ## Connecting to the camera and reading data
 
-Use the `Sensor` class to connect to the Pixy camera:
+In your script use the `Sensor` class to connect to the Pixy camera:
 
-    pixy = Sensor(address='in1')
-    assert pixy.connected, "Error while connecting Pixy camera to port1"
+```python
+from ev3dev.ev3 import *
+pixy = Sensor(address='in1')
+assert pixy.connected, "Error while connecting Pixy camera to port1"
+```
 
 In this statement it is assumed the camera is connected to input port 1.
 It's recommended to use the `assert` statement: when the connection fails
@@ -47,28 +50,32 @@ Next set the mode for the camera:
 
 The Pixy camera has the following modes:
 * ALL: the camera searches for all signatures you've set for it.
-* SIGi: the camera searches for signature #i (i=1 to 7).
+* SIGn: the camera searches for signature #n (n=1 to 7).
 
 The data which you can retreive from the camera depends on the camera mode. You
-can find detailed information on [this page](http://www.ev3dev.org/docs/sensors/charmed-labs-pixy-cmucam5-for-lego/).
+can find detailed information on [this page](/docs/sensors/charmed-labs-pixy-cmucam5-for-lego).
 We will explain it to you with some examples.
 
 When mode is set to 'ALL' retreive data the following way:
 
-    sig = pixy.value(1)*256 + pixy.value(0) # Signature of largest object
-    x_centroid = pixy.value(2)    # X-centroid of largest SIG1-object
-    y_centroid = pixy.value(3)    # Y-centroid of largest SIG1-object
-    width = pixy.value(4)         # Width of the largest SIG1-object
-    height = pixy.value(5)        # Height of the largest SIG1-object
+```python
+sig = pixy.value(1)*256 + pixy.value(0) # Signature of largest object
+x_centroid = pixy.value(2)    # X-centroid of largest SIG1-object
+y_centroid = pixy.value(3)    # Y-centroid of largest SIG1-object
+width = pixy.value(4)         # Width of the largest SIG1-object
+height = pixy.value(5)        # Height of the largest SIG1-object
+```
 
 When mode is set to one of the signatures (e.g. `SIG1`) retreive data
 as follows:
 
-    count = pixy.value(0)  # The number of objects that match signature 1
-    x = pixy.value(1)      # X-centroid of the largest SIG1-object
-    y = pixy.value(2)      # Y-centroid of the largest SIG1-object
-    w = pixy.value(3)      # Width of the largest SIG1-object
-    h = pixy.value(4)      # Height of the largest SIG1-object
+```python
+count = pixy.value(0)  # The number of objects that match signature 1
+x = pixy.value(1)      # X-centroid of the largest SIG1-object
+y = pixy.value(2)      # Y-centroid of the largest SIG1-object
+w = pixy.value(3)      # Width of the largest SIG1-object
+h = pixy.value(4)      # Height of the largest SIG1-object
+```
 
 Below are two practical examples. They are tested with the latest version of ev3dev
 (as of 21 Dec 2016) and with CMUcam5 Pixy camera for LEGO Mindstorms.
@@ -117,8 +124,8 @@ This example uses a EV3 with Pixy camera, two LargeMotors and a TouchSensor.
 The robot follows the object with signature SIG1. To stop the program the
 user has to press the TouchSensor.
 This example uses a simple implementation for a PID-controller. The example
-works very well, but finetuning of the PID-constants can make the robot 
-react en move smoother.
+works very well, but fine tuning of the PID-constants can make the robot 
+react and move smoother.
 
 ```
 #!/usr/bin/env python3
