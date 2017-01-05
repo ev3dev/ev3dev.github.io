@@ -1,7 +1,7 @@
 ---
 title: Using the CMUcam5 Pixy for LEGO Mindstorms
 group: hardware-extras
-author: "Kees Smit"
+author: "@KWSmit"
 ---
 
 * Table of Contents
@@ -33,11 +33,11 @@ and thus only connected to your EV3.
 
 ## Connecting to the camera and reading data
 
-In your script use the `Sensor` class to connect to the Pixy camera:
+In python use the `Sensor` class to connect to the Pixy camera:
 
 ```python
 from ev3dev.ev3 import *
-pixy = Sensor(address='in1')
+pixy = Sensor(address=INPUT_1)
 assert pixy.connected, "Error while connecting Pixy camera to port1"
 ```
 
@@ -96,7 +96,7 @@ from ev3dev.ev3 import *
 lcd = Screen()
 
 # Connect Pixy camera
-pixy = Sensor(address='in1')
+pixy = Sensor(address=INPUT_1)
 assert pixy.connected, "Connecting PixyCam"
 
 # Set mode
@@ -142,18 +142,18 @@ def limit_speed(speed):
   return speed
 
 # Connect Pixy camera and set mode
-pixy = Sensor(address = 'in1')
+pixy = Sensor(address = INPUT_1)
 assert pixy.connected, "Error while connecting Pixy camera"
 pixy.mode = 'SIG1'
 
 # Connect TouchSensor (to stop script)
-ts = TouchSensor('in4')
+ts = TouchSensor(INPUT_4)
 assert ts.connected, "Error while connecting TouchSensor"
 
 # Connect LargeMotors
-rmotor = LargeMotor('outA')
+rmotor = LargeMotor(OUTPUT_A)
 assert rmotor.connected, "Error while connecting right motor"
-lmotor = LargeMotor('outD')
+lmotor = LargeMotor(OUTPUT_D)
 assert lmotor.connected, "Error while connecting left motor"
 
 # Defining constants
