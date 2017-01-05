@@ -12,18 +12,19 @@ author: "Kees Smit"
 The CMUcam5 Pixy camera is available in a version designed for
 LEGO Mindstorms. In this tutorial we explain how to use it with ev3dev
 and python.
-General information about Pixy for LEGO MIndstorms can be found on
+
+General information about Pixy for LEGO Mindstorms can be found on
 Charmed Lab's [wiki-page](http://cmucam.org/projects/cmucam5/wiki/LEGO_Wiki).
 
 ## What you need
 
-* LEGO MIndstorms EV3.
+* LEGO Mindstorms EV3.
 * CMUcam5 Pixy for LEGO Mindstorms, connected to the EV3 with the cable
-deliverd with your camera. If you have a regular version of CMUcam5 Pixy
+delivered with your camera. If you have a regular version of CMUcam5 Pixy
 you will need a special Pixy adapter for EV3.
 
 **Note:** the Pixy camera comes with it's own tool: PixyMon. This tool helps
-you to set the signatures (object you want Pixy to detect). To use this tool
+you to set the signatures (objects you want Pixy to detect). To use this tool
 you need to connect the camera directly to your PC by using a mini USB cable.
 For this you can use the USB cable of your EV3. Beware that when the camera 
 is connected to your PC this way, it's values are not updated! So before 
@@ -49,10 +50,11 @@ Next set the mode for the camera:
     pixy.mode = 'ALL'
 
 The Pixy camera has the following modes:
+
 * ALL: the camera searches for all signatures you've set for it.
 * SIGn: the camera searches for signature #n (n=1 to 7).
 
-The data which you can retreive from the camera depends on the camera mode. You
+The data which you retreive from the camera depends on the camera mode. You
 can find detailed information on [this page](/docs/sensors/charmed-labs-pixy-cmucam5-for-lego).
 We will explain it to you with some examples.
 
