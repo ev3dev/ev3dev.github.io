@@ -23,13 +23,14 @@ Charmed Lab's [wiki-page](http://cmucam.org/projects/cmucam5/wiki/LEGO_Wiki).
 delivered with your camera. If you have a regular version of CMUcam5 Pixy
 you will need a special Pixy adapter for EV3.
 
-**Note:** the Pixy camera comes with it's own tool: PixyMon. This tool helps
+{% include /style/begin-panel.html type="info" heading="Note" %}
+The Pixy camera comes with its own tool: PixyMon. This tool helps
 you to set the signatures (objects you want Pixy to detect). To use this tool
 you need to connect the camera directly to your PC by using a mini USB cable.
-For this you can use the USB cable of your EV3. Beware that when the camera 
-is connected to your PC this way, it's values are not updated! So before 
-starting your script be sure the camera is disconnected from your computer 
-and thus only connected to your EV3.
+For this you can use the USB cable of your EV3. Beware that when PixyMon
+is running on your PC (and the camera is plugged in to your PC), its values
+are not updated to the EV3. So before starting your script be sure PixyMon
+is not running!{% include /style/end-panel.html %}
 
 ## Connecting to the camera and reading data
 
@@ -42,23 +43,25 @@ assert pixy.connected, "Error while connecting Pixy camera to port1"
 ```
 
 In this statement it is assumed the camera is connected to input port 1.
-It's recommended to use the `assert` statement: when the connection fails
+It's recommended to use the ```assert``` statement: when the connection fails
 the program ends with a meaningful error message.
 
 Next set the mode for the camera:
 
-    pixy.mode = 'ALL'
+```python
+pixy.mode = 'ALL'
+```
 
 The Pixy camera has the following modes:
 
 * ALL: the camera searches for all signatures you've set for it.
 * SIGn: the camera searches for signature #n (n=1 to 7).
 
-The data which you retreive from the camera depends on the camera mode. You
+The data which you retrieve from the camera depends on the camera mode. You
 can find detailed information on [this page](/docs/sensors/charmed-labs-pixy-cmucam5-for-lego).
 We will explain it to you with some examples.
 
-When mode is set to 'ALL' retreive data the following way:
+When the mode is set to ```ALL```, you can retrieve data as follows:
 
 ```python
 sig = pixy.value(1)*256 + pixy.value(0) # Signature of largest object
@@ -68,7 +71,7 @@ width = pixy.value(4)         # Width of the largest SIG1-object
 height = pixy.value(5)        # Height of the largest SIG1-object
 ```
 
-When mode is set to one of the signatures (e.g. `SIG1`) retreive data
+When mode is set to one of the signatures (e.g. `SIG1`), retrieve data
 as follows:
 
 ```python
@@ -79,15 +82,34 @@ w = pixy.value(3)      # Width of the largest SIG1-object
 h = pixy.value(4)      # Height of the largest SIG1-object
 ```
 
-Below are two practical examples. They are tested with the latest version of ev3dev
-(as of 21 Dec 2016) and with CMUcam5 Pixy camera for LEGO Mindstorms.
+Below are two practical examples. They are tested with the latest version of 
+ev3dev (as of 21 Dec 2016) and with CMUcam5 Pixy camera for LEGO Mindstorms.
+
+{% include /style/begin-panel.html type="info" heading="Note" %}
+To run the scripts form Brickman, be sure it's executable. To make it
+executable run ```chmod +x <file>``` once in the terminal. Also don't forget
+the shebang ```#!/usr/bin/env python3``` in the first line of your script.
+{% include /style/end-panel.html %}
 
 ## Example 1 - Display detected object on EV3-LCD
 
+This example uses an EV3 with a Pixy camera and a TouchSenor plugged in.
 In this example the camera searches for objects with signature SIG1
 and displays the data graphically on the LCD of the EV3. It draws a 
 rectangle centered at the X and Y centroid coordinates with measured
-width and height. End this script by pressing Ctrl+C.
+width and height. End this script by pressing the TouchSensor.
+
+{% include /style/begin-panel.html type="info" heading="Note" %}
+When running this script from the SSH terminal, the Brickman display may
+reappear at any time, momentarily or permanently. Furthermore, when the script
+stops it may take a while to before the screen reverts back to the Brickman
+interface. To prevent this, follow these instructions:
+
+* Run ```sudo chvt 6``` before starting the script. This will clear the display.
+For this command you need the password for robot, which is 'maker' by default.
+* Run your script (once or several times).
+* Run ```sudo chvt 1``` to bring back the interface of Brickman.
+{% include /style/end-panel.html %}
 
 ```
 #!/usr/bin/env python3
@@ -99,10 +121,14 @@ lcd = Screen()
 pixy = Sensor(address=INPUT_1)
 assert pixy.connected, "Connecting PixyCam"
 
+# Connect TouchSensor
+ts = TouchSensor(address=INPUT_4)
+assert ts.connected, "Connecting TouchSensor"
+
 # Set mode
 pixy.mode = 'SIG1'
 
-while True:
+while not ts.value():
   lcd.clear()
   if pixy.value(0) != 0:  # Object with SIG1 detected
     x = pixy.value(1) 
@@ -117,14 +143,15 @@ while True:
     lcd.update()
 ```
 
-The video shows this script running:
+This video shows this script running:
 {% include /util/youtube-embed.html youtube_video_id="b2LZpY1qbKE" %}
 
 ## Example 2 - Following an object
 
-This example uses a EV3 with Pixy camera, two LargeMotors and a TouchSensor.
+This example uses an EV3 with Pixy camera, two LargeMotors and a TouchSensor.
 The robot follows the object with signature SIG1. To stop the program the
 user has to press the TouchSensor.
+
 This example uses a simple implementation for a PID-controller. The example
 works very well, but fine tuning of the PID-constants can make the robot 
 react and move smoother.
@@ -199,5 +226,5 @@ rmotor.stop()
 lmotor.stop()
 ```
 
-The video shows this script running:
+This video shows this script running:
 {% include /util/youtube-embed.html youtube_video_id="cDimWUEDwPU" %}
