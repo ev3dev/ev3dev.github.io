@@ -137,7 +137,7 @@ public class BumperCar {
 }
 {% endhighlight %}
 
-Explore [JavaDocs](https://ev3dev-lang-java.github.io/docs/api) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
+Explore [JavaDocs](http://ev3dev-lang-java.github.io/docs/api/v0.2.0/index.html) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
 
 ## Roadmap
 
