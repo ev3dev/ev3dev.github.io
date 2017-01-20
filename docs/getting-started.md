@@ -168,6 +168,7 @@ the cape your are using.
 
 <div class="row">
 <div class="col-md-8" markdown="1">
+
 ## Step 4: Boot ev3dev
 
 Put the SD Card in your EV3 and power it on. At first, you will see the
@@ -190,8 +191,9 @@ data will be lost. Keep in mind, that it may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
 
 **Note:** If you are using Raspberry Pi hardware without a screen, just wait for
-the Activity LED to stop flashing, then go to the next step. If you have connected 
-the pi to a screen monitor via HDMI press `ALT-F2` at the end of the boot sequence. 
+the Activity LED to stop flashing, then go to the next step. If alternatively 
+you have connected the pi to a screen monitor via HDMI 
+press <kbd>Alt</kbd>+<kbd>F2</kbd> at the end of the boot sequence. 
 This should take you to a login prompt. Login as 'robot' with password 'maker'. 
 
 
