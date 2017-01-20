@@ -175,9 +175,6 @@ MINDSTORMS boot splash and the red LEDs will be on. This is immediately
 followed by the ev3dev boot splash and the LEDs changing to orange. The
 LEDs indicate disk (SD card) activity.
 
-**Note:** If you are using Raspberry Pi hardware without a screen, just wait for
-the Activity LED to stop flashing, then go to the next step.
-
 After about one minute, the screen will go blank. This happens on the first boot
 only. The first boot takes longer than subsequent boots because the EV3
 has to create a unique SSH host ids and take care of a few other housekeeping
@@ -191,6 +188,13 @@ calculate an accurate percent value of the remaining energy, so this value is
 chosen. If the voltage drops below 5V the brick will turn off. All unsaved
 data will be lost. Keep in mind, that it may take a much longer time from 8V to
 6.5V than from 6.5V down to 5V!
+
+**Note:** If you are using Raspberry Pi hardware without a screen, just wait for
+the Activity LED to stop flashing, then go to the next step. If you have connected 
+the pi to a screen monitor via HDMI press `ALT-F2` at the end of the boot sequence. 
+This should take you to a login prompt. Login as 'robot' with password 'maker'. 
+
+
 </div>
 
 <div class="col-md-4">
