@@ -43,7 +43,6 @@ Once you have plugged in a dongle, you can use Brickman's
 you check the "**Powered**" box so that it starts searching for Wi-Fi networks,
 and then choose the one you want from the list that appears.
 
-**Note** 
 
 ### With USB through a PC
 
