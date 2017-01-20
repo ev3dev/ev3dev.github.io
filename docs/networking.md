@@ -9,10 +9,9 @@ help you out.
 
 
 {% include /style/icon.html type="info" %}
-For Raspberry Pi platforms with no display 
-([to be able to use Brickman](http://lechnology.com/2016/05/adding-a-display-to-brickpi/)), 
-you must use the wired Ethernet port to connect for the first time through a remote SSH 
-session. An alternative is to connect the pi to an HDMI screen monitor 
+For Raspberry Pi platforms with no display, you must use the 
+wired Ethernet port to connect for the first time through a remote SSH 
+session. An alternative method is to connect the pi to an HDMI screen monitor 
 and USB keyboard and press <kbd>Alt</kbd>+<kbd>F2</kbd> at the end of
 the boot sequence to reach a login prompt (id: robot, password: maker). Once 
 connected, you can then set up additional connections using 
