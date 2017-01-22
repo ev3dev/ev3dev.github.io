@@ -193,7 +193,7 @@ data will be lost. Keep in mind, that it may take a much longer time from 8V to
 **Note:** If you are using Raspberry Pi hardware without a screen, just wait for
 the Activity LED to stop flashing, then go to the next step. If alternatively 
 you have connected the pi to a screen monitor via HDMI 
-press <kbd>Alt</kbd>+<kbd>F2</kbd> at the end of the boot sequence. 
+press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F6</kbd> at the end of the boot sequence. 
 This should take you to a login prompt. Login as 'robot' with password 'maker'. 
 
 
