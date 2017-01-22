@@ -12,11 +12,12 @@ help you out.
 For Raspberry Pi platforms with no display, you must use the 
 wired Ethernet port to connect for the first time through a remote SSH 
 session. An alternative method is to connect the pi to an HDMI screen monitor 
-and USB keyboard and press <kbd>Alt</kbd>+<kbd>F2</kbd> at the end of
+and USB keyboard and press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F6</kbd> at the end of
 the boot sequence to reach a login prompt (id: robot, password: maker). Once 
 connected, you can then set up additional connections using 
-[`connmanctl`](https://wiki.archlinux.org/index.php/Connman#Usage) commands.
+[`connmanctl`](http://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/) commands.
 {: class="alert alert-info"}
+
 
 # Connecting to the Internet
 
