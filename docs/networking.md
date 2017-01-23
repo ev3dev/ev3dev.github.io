@@ -15,7 +15,7 @@ session. An alternative method is to connect the pi to an HDMI screen monitor
 and USB keyboard and press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F6</kbd> at the end of
 the boot sequence to reach a login prompt (id: robot, password: maker). Once 
 connected, you can then set up additional connections using 
-[`connmanctl`](http://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/) commands.
+[`connmanctl`](/docs/tutorials/setting-up-wifi-using-the-command-line/) commands.
 {: class="alert alert-info"}
 
 
