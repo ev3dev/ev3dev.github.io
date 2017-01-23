@@ -9,10 +9,15 @@ help you out.
 
 
 {% include /style/icon.html type="info" %}
-For Raspberry Pi platforms with no display, you must use the wired Ethernet port
-to connect for the first time. You can set up additional connections using the
-`connmanctl` command through a remote SSH session.
+For Raspberry Pi platforms with no display, you must use the 
+wired Ethernet port to connect for the first time through a remote SSH 
+session. An alternative method is to connect the pi to an HDMI screen monitor 
+and USB keyboard and press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F6</kbd> at the end of
+the boot sequence to reach a login prompt (id: robot, password: maker). Once 
+connected, you can then set up additional connections using 
+[`connmanctl`](/docs/tutorials/setting-up-wifi-using-the-command-line/) commands.
 {: class="alert alert-info"}
+
 
 # Connecting to the Internet
 
@@ -37,6 +42,7 @@ Once you have plugged in a dongle, you can use Brickman's
 "**_Wireless and Networks_ > _Wi-Fi_**" menu to connect to a network. Make sure
 you check the "**Powered**" box so that it starts searching for Wi-Fi networks,
 and then choose the one you want from the list that appears.
+
 
 ### With USB through a PC
 
