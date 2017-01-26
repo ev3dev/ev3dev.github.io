@@ -57,6 +57,9 @@
         <th><code>vendor_id</code></th>
         <td>
             {{ sensor.vendor_id }}<!--
+            {% if sensor.alt_vendor_id %}
+            --> or {{ sensor.alt_vendor_id }}<!--
+            {% endif %}
             {% if sensor.vendor_id_footnote %}
                 --><span markdown="1">{{ sensor.vendor_id_footnote }}</span><!--
             {% endif %}
