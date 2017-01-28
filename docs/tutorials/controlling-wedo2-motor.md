@@ -72,8 +72,12 @@ newer releases show a HCI/LMP 4.0 version this new chipset doesn't include the
 Bluetooth Low Energy subset of the BT 4.0 standard.
 
 If you don't see status "UP RUNNING" you will need to activate Bluetooth 
-first (one easy way is using the Brickman User Interface: choose "Wireless and 
-Networks" at the main screen then "Bluetooth").
+first - one easy way is using the Brickman User Interface: choose "Wireless and 
+Networks" at the main screen then "Bluetooth" but you can also run
+
+    connmanctl enable bluetooth
+
+from a command line as well.
 
 We also need a recent bluez version for BLE support. Most recent builds of ev3dev
 will have it already (checked with "ev3-ev3dev-jessie-2015-12-30.img.xz").
@@ -125,12 +129,7 @@ this is normal as we're not giving enough power to overcome it's inertia.
 
 To use pyhton with the WeDo 2.0 we need a BLE library. Unfortunately BLE
 support in python is still quite imature but there is at least one library that
-works in ev3dev - [gattlib](https://bitbucket.org/OscarAcena/pygattlib)
-
-    sudo apt-get install pkg-config libboost-python-dev libboost-thread-dev \
-     libbluetooth-dev libglib2.0-dev python-dev
-
-    sudo pip install gattlib
+works in ev3dev - [gattlib](https://bitbucket.org/OscarAcena/pygattlib).
 
 Since the beginning of 2017 (snapshot-ev3dev-jessie-ev3-generic-2017-01-16) this
 library is already included in the ev3dev image. You can check the version of the
@@ -139,14 +138,14 @@ installed package with:
     dpkg -s python3-gattlib | grep "Version:"
     Version: 0.20150805-1ev3dev1
 
-If version is older (or inexistent) you should update/install it:
+If version is older (or nonexistent) you should update/install it:
 
     sudo apt update
     sudo apt install python3-gattlib
 
-This short python script makes the motor spin 2 second in each direction then stop:
+This short python script makes the motor spin 2 seconds in each direction then stop:
 
-{% highlight python %}
+```python
 #!/usr/bin/env python3
 from gattlib import GATTRequester
 from time import sleep
@@ -157,7 +156,7 @@ sleep(2)
 req.write_by_handle(0x3d, "\x01\x01\x01\x9C")
 sleep(2)
 req.write_by_handle(0x3d, "\x01\x01\x01\x00")
-{% endhighlight %}
+```
 
 ## A more practical example
 
@@ -168,7 +167,7 @@ to assure this never happens.
 We will use an EV3 touch sensor to control the direction of the WeDo 2.0 motor and
 periodically refresh the connection.
 
-{% highlight python %}
+```python
 #!/usr/bin/env python3
     
 from ev3dev.auto import *
@@ -215,7 +214,7 @@ while True:
     req.connect(True)
     print("OK")
     sleep(DELAY)
-{% endhighlight %}
+```
 
 This video shows the script in action:
 {% include /util/youtube-embed.html youtube_video_id="0d3MdZuDOTc" %}
@@ -226,11 +225,13 @@ This is just an introduction to the WeDo 2.0 BLE protocol. LEGO has released
 a ["Communication Software Development Kit"](https://education.lego.com/en-us/support/wedo-2/developer-kits) with some information about
 the several BLE services (not just the motor but also sensors, RGB Light, 
 piezzo buzzer, battery...).
+
 If rumours are true, the next generation of LEGO Power Functions and Mindstorms
 will both share some components with the WeDo 2.0 (the Hub is already announcing
 itself as "LEGO Power Functions 2" device) so this might be just the start.
-In the beginning of 2017 LEGO announced the [LEGO BOOST](https://www.lego.com/en-us/boost) line, a kind of WeDo 2.0
-update for general users (the WeDo 2.0 is intended for Educational) that will
-bring us a BOOS Move Hub (similar to the WeDo 2.0 Smart Hub but with 2 motors
+
+Also in January 2017 LEGO announced the [LEGO BOOST](https://www.lego.com/en-us/boost) line, a kind of
+WeDo 2.0 update for general users (the WeDo 2.0 is intended for Educational) that will
+bring us a BOOST Move Hub (similar to the WeDo 2.0 Smart Hub but with 2 motors
 and a tilt sensor already included), a new motor and 2 new sensors. Most
 probably the contents of this tutorial could also be used with Boost.
