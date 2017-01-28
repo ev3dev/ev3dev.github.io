@@ -69,7 +69,7 @@ In the above situation, `hci0` is our Bluetooth 4.0 BLE device (note "BUS: USB")
 Initial releases of EV3 bricks will show older HCI/LMP versions for the internal
 USB device (`hci1` here) but it always be shown with `BUS: UART`. Although the
 newer releases show a HCI/LMP 4.0 version this new chipset doesn't include the
-Bluetooth Low Energy subset ot the BT 4.0 standard.
+Bluetooth Low Energy subset of the BT 4.0 standard.
 
 If you don't see status "UP RUNNING" you will need to activate Bluetooth 
 first (one easy way is using the Brickman User Interface: choose "Wireless and 
