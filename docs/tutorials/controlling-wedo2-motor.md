@@ -31,21 +31,21 @@ If ev3dev recognizes our Bluetooth 4.0 dongle, we'll have two hci devices - the
 internal bluetooth and the new USB one:
 
     robot@ev3dev:~# hciconfig -a
-    hci1:   Type: BR/EDR  Bus: UART
-	    BD Address: 00:17:EC:48:44:6B  ACL MTU: 1021:4  SCO MTU: 180:4
-       	    UP RUNNING 
-            RX bytes:863 acl:0 sco:0 events:32 errors:0
-    	    TX bytes:1396 acl:0 sco:0 commands:32 errors:0
-	    Features: 0xff 0xff 0x2d 0xfe 0x9b 0xff 0x79 0x83
+    hci1:	Type: BR/EDR  Bus: UART
+    	    BD Address: 24:71:89:28:F0:D3  ACL MTU: 1021:4  SCO MTU: 180:4
+	    UP RUNNING 
+	    RX bytes:1139 acl:0 sco:0 events:54 errors:0
+	    TX bytes:2011 acl:0 sco:0 commands:54 errors:0
+	    Features: 0xff 0xfe 0x2d 0xfe 0x9b 0xff 0x79 0x87
 	    Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
-	    Link policy: RSWITCH HOLD SNIFF PARK 
+	    Link policy: RSWITCH HOLD SNIFF 
 	    Link mode: SLAVE ACCEPT 
 	    Name: 'ev3dev'
-	    Class: 0x000000
+	    Class: 0x000100
 	    Service Classes: Unspecified
-	    Device Class: Miscellaneous, 
-	    HCI Version: 2.1 (0x4)  Revision: 0x0
-	    LMP Version: 2.1 (0x4)  Subversion: 0x191f
+	    Device Class: Computer, Uncategorized
+	    HCI Version: 4.0 (0x6)  Revision: 0x0
+	    LMP Version: 4.0 (0x6)  Subversion: 0x1b55
 	    Manufacturer: Texas Instruments Inc. (13)
 
     hci0:   Type: BR/EDR  Bus: USB
@@ -65,10 +65,19 @@ internal bluetooth and the new USB one:
 	    LMP Version: 4.0 (0x6)  Subversion: 0x220e
 	    Manufacturer: Broadcom Corporation (15)
 
-In the above situation, `hci0` is our Bluetooth 4.0 BLE device (note "BUS: USB" and
-"HCI version: 4.0"). If you don't see status "UP RUNNING" you need to activate
-Bluetooth first (one easy way is using the Brickman User Interface: choose "Wireless
-and Networks" at the main screen then "Bluetooth")
+In the above situation, `hci0` is our Bluetooth 4.0 BLE device (note "BUS: USB").
+Initial releases of EV3 bricks will show older HCI/LMP versions for the internal
+USB device (`hci1` here) but it always be shown with `BUS: UART`. Although the
+newer releases show a HCI/LMP 4.0 version this new chipset doesn't include the
+Bluetooth Low Energy subset of the BT 4.0 standard.
+
+If you don't see status "UP RUNNING" you will need to activate Bluetooth 
+first - one easy way is using the Brickman User Interface: choose "Wireless and 
+Networks" at the main screen then "Bluetooth" but you can also run
+
+    connmanctl enable bluetooth
+
+from a command line as well.
 
 We also need a recent bluez version for BLE support. Most recent builds of ev3dev
 will have it already (checked with "ev3-ev3dev-jessie-2015-12-30.img.xz").
@@ -101,82 +110,43 @@ then stop:
 (You need to run this script with sudo, unless you already have root previleges)
 
 We see that it uses the gatttool command to send a sequence of 4 bytes to one specific
-handler (0x003d). The WeDo 2.0 has several handlers but until LEGO Education releases
-the promised SDK this is the only handler we "know" how to use:
-
-This is meaning of those 4 bytes:
+handler (0x003d). This is the meaning of those 4 bytes:
 * the first byte defines the port (01 or 02)
 * the second byte defines the command (01 = motor speed)
 * the third byte defines the length of the following argument(s) (01)
-* the fouth byte is the argument, in this case the speed percentage
+* the fourth byte is the argument, in this case the speed percentage
 
 To spin in one direction we send a positive value from 1 to 100 (or 01 to 64 in
 hexadecimal).
 To spin in the opposite direction we send a "negative" value from
 255 to 156 (or FF to 9C in hexadecimal).
 To stop the motor we set the speed as zero (00).
-Please note that for small speed values (less than 20%) the motor will not respond.
+Please note that for small speed values (less than 20%) the motor will not respond,
+this is normal as we're not giving enough power to overcome it's inertia.
 
 
 ## Python example
 
 To use pyhton with the WeDo 2.0 we need a BLE library. Unfortunately BLE
 support in python is still quite imature but there is at least one library that
-works in ev3dev - [gattlib](https://bitbucket.org/OscarAcena/pygattlib)
+works in ev3dev - [gattlib](https://bitbucket.org/OscarAcena/pygattlib).
 
-    sudo apt-get install pkg-config libboost-python-dev libboost-thread-dev \
-     libbluetooth-dev libglib2.0-dev python-dev
+Since the beginning of 2017 (snapshot-ev3dev-jessie-ev3-generic-2017-01-16) this
+library is already included in the ev3dev image. You can check the version of the
+installed package with:
 
-    sudo pip install gattlib
+    dpkg -s python3-gattlib | grep "Version:"
+    Version: 0.20150805-1ev3dev1
 
-This library is also used as an extension for a more known library, [pybluez](https://pypi.python.org/pypi/PyBluez)
-so if you want a library for both bluetooth "Classic" and BLE this would be better:
+If version is older (or nonexistent) you should update/install it:
 
-    pip install pybluez
-    pip install pybluez[ble]
+    sudo apt update
+    sudo apt install python3-gattlib
 
-Unfortunately I couldn't make it work in my ev3dev system.
+This short python script makes the motor spin 2 seconds in each direction then stop:
 
-Please note that it takes **a lot** of memory and around 2 hours to install gattlib.
-After some failures ("virtual memory exhausted: Cannot allocate memory") I finally
-succeeded extending my ev3dev swapfile to almost 1 GB (please first check if you have
-enough free space in your SD card):
-
-    robot@ev3dev:~$ sudo dd if=/dev/zero of=/swapfile1 bs=1024 count=917504
-    917504+0 records in
-    917504+0 records out
-    939524096 bytes (940 MB) copied, 442.332 s, 2.1 MB/s
-
-it will take 5 to 10 minutes to allocate space for such a big file
-
-    robot@ev3dev:~$ sudo mkswap /swapfile1
-    Setting up swapspace version 1, size = 917500 KiB
-    no label, UUID=55fcb430-451b-4699-955c-5754bf65999b
-
-    robot@ev3dev:~$ sudo swapon /swapfile1
-    swapon: /swapfile1: insecure permissions 0644, 0600 suggested.
-
-this is a temporary measure so we'll skip security warning
-
-    robot@ev3dev:~$ sudo swapon -s
-    Filename				Type		Size	Used	Priority
-    /dev/zram0                             	partition	98300	8188	16383
-    /swapfile1                             	file    	917500	0	-1
-
-We don't want to use the swapfile in memory (it will overflow) so we disable it:
-
-    sudo systemctl stop zram_swap.service
-
-After installation completes we reset the swapfile configuration:
-
-    sudo systemctl start zram_swap.service
-    sudo swapoff /swapfile1
-    sudo rm /swapfile1
-
-This short python script makes the motor spin 2 second in each direction then stop:
-
-{% highlight python %}
-#!/usr/bin/python
+```python
+#!/usr/bin/env python3
 from gattlib import GATTRequester
 from time import sleep
 
@@ -186,7 +156,7 @@ sleep(2)
 req.write_by_handle(0x3d, "\x01\x01\x01\x9C")
 sleep(2)
 req.write_by_handle(0x3d, "\x01\x01\x01\x00")
-{% endhighlight %}
+```
 
 ## A more practical example
 
@@ -197,8 +167,8 @@ to assure this never happens.
 We will use an EV3 touch sensor to control the direction of the WeDo 2.0 motor and
 periodically refresh the connection.
 
-{% highlight python %}
-#!/usr/bin/python
+```python
+#!/usr/bin/env python3
     
 from ev3dev.auto import *
 from gattlib import GATTRequester
@@ -244,15 +214,24 @@ while True:
     req.connect(True)
     print("OK")
     sleep(DELAY)
-{% endhighlight %}
+```
 
 This video shows the script in action:
 {% include /util/youtube-embed.html youtube_video_id="0d3MdZuDOTc" %}
 
 ## Final notes
 
-We still need to know all motor commands and option. But until LEGO releases
-its SDK there is at list this way to extend the number of motors available to the EV3.
-And if rumours are true, the next generation of LEGO Power Functions and Mindstorms
+This is just an introduction to the WeDo 2.0 BLE protocol. LEGO has released
+a ["Communication Software Development Kit"](https://education.lego.com/en-us/support/wedo-2/developer-kits) with some information about
+the several BLE services (not just the motor but also sensors, RGB Light, 
+piezzo buzzer, battery...).
+
+If rumours are true, the next generation of LEGO Power Functions and Mindstorms
 will both share some components with the WeDo 2.0 (the Hub is already announcing
 itself as "LEGO Power Functions 2" device) so this might be just the start.
+
+Also in January 2017 LEGO announced the [LEGO BOOST](https://www.lego.com/en-us/boost) line, a kind of
+WeDo 2.0 update for general users (the WeDo 2.0 is intended for Educational) that will
+bring us a BOOST Move Hub (similar to the WeDo 2.0 Smart Hub but with 2 motors
+and a tilt sensor already included), a new motor and 2 new sensors. Most
+probably the contents of this tutorial could also be used with Boost.

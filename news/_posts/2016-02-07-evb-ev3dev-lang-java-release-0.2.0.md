@@ -3,7 +3,7 @@ author: "@jabrena"
 title: "Announcing ev3dev-lang-java v0.2.0"
 ---
 
-If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
+If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://ev3dev-lang-java.github.io) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
 
 ## What features are included in last release?
 
@@ -137,7 +137,7 @@ public class BumperCar {
 }
 {% endhighlight %}
 
-Explore [JavaDocs](https://ev3dev-lang-java.github.io/ev3dev-lang-java/docs/api/) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
+Explore [JavaDocs](http://ev3dev-lang-java.github.io/docs/api/v0.2.0/index.html) from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.
 
 ## Roadmap
 
@@ -166,7 +166,7 @@ If you have some doubt about this library, please create a issue:
 
 ## References
 
-* [ev3dev-lang-java](https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/)
+* [ev3dev-lang-java](https://ev3dev-lang-java.github.io)
 * [Tiobe](http://www.tiobe.com/index.php/tiobe_index)
 * [Githut](http://githut.info/)
 * [IEEE Spectrum](http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages)

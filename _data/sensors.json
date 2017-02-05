@@ -1205,6 +1205,7 @@
         "vendor_website": "http://www.hitechnic.com/cgi-bin/commerce.cgi?preadd=action&key=NIS1070"
     },
     {
+        "alt_vendor_id": "HiTechnc",
         "default_address": "0x01",
         "i2c_mode_info": [
             {

@@ -146,7 +146,7 @@ platforms and their features.
                 <th colspan="2">LEDs</th>
                 <td>2 - Red/Green</td>
                 <td colspan="2">2 - Blue</td>
-                <td>2 - Red/Green/Blue</td>
+                <td>2<span markdown="1">[^pistorms-leds]</span> - Red/Green/Blue</td>
                 <td>None</td>
                 <td>None</td>
             </tr>
@@ -263,6 +263,9 @@ platforms and their features.
     [Blog.](http://lechnology.com/2016/05/adding-a-display-to-brickpi)
 
 [^evb-buttons]: EVB and QuestCape cannot detect simultaneous button presses.
+
+[^pistorms-leds]: Some hardware revisions of the PiStorms only have 1 physical LED.
+    However, 2 LEDs will still appear in sysfs.
 
 [^raspberry-pi-sound]: The headphone jack on Raspberry Pi can be used for sound.
 
