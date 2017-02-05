@@ -11,7 +11,7 @@ platforms and their features.
             <tr>
                 <th colspan="2">Manufacturer</th>
                 <td>LEGO</td>
-                <td colspan="2">Dexter Industries</td>
+                <td colspan="3">Dexter Industries</td>
                 <td>mindsensors.com</td>
                 <td>FatcatLab</td>
                 <td>Quest Institute</td>
@@ -19,7 +19,7 @@ platforms and their features.
             <tr>
                 <th colspan="2">Website</th>
                 <td><a href="http://mindstorms.lego.com" target="_blank">mindstorms.lego.com</a></td>
-                <td colspan="2"><a href="http://www.dexterindustries.com/BrickPi" target="_blank">dexterindustries.com</a></td>
+                <td colspan="3"><a href="http://www.dexterindustries.com/BrickPi" target="_blank">dexterindustries.com</a></td>
                 <td><a href="http://www.mindsensors.com/content/78-pistorms-lego-interface" target="_blank">mindsensors.com</a></td>
                 <td><a href="http://fatcatlab.com/product/evb/" target="_blank">fatcatlab.com</a></td>
                 <td><a href="http://questforspace.com/" target="_blank">questforspace.com</a></td>
@@ -29,6 +29,7 @@ platforms and their features.
                 <td>EV3</td>
                 <td>BrickPi</td>
                 <td>BrickPi+</td>
+                <td>BrickPi3</td>
                 <td>PiStorms</td>
                 <td>EVB</td>
                 <td>QuestCape</td>
@@ -38,6 +39,7 @@ platforms and their features.
                 <td>31313 (Retail set)<br>45544 (Education Core set)<br>45500 (EV3 Intelligent Brick)</td>
                 <td>BrickPi v1.7.3<span markdown="1">[^brickpi-1-version]</span></td>
                 <td>BrickPi v2.8</td>
+                <td>BrickPi v3.2.1</td>
                 <td>PiStorms<br>PiStorms-v2</td>
                 <td>EVB v1.0</td>
                 <td>QuestCape v1.4</td>
@@ -45,7 +47,7 @@ platforms and their features.
             <tr>
                 <th colspan="2">Compatible CPU Board</th>
                 <td>N/A</td>
-                <td colspan="3">Raspberry Pi Zero<br>Raspberry Pi Model A/A+/B/B+<br>Raspberry Pi 2 Model B<br>Raspberry Pi 3 Model B</td>
+                <td colspan="4">Raspberry Pi Zero<br>Raspberry Pi Model A/A+/B/B+<br>Raspberry Pi 2 Model B<br>Raspberry Pi 3 Model B</td>
                 <td colspan="2">BeagleBone (White)<br>BeagleBone Black<br>BeagleBone Green<span markdown="1">[^beaglebone-green]</span><sup>,</sup><span markdown="1">[^beaglebone-green-wireless]</span></td>
             </tr>
             <tr>
@@ -53,6 +55,7 @@ platforms and their features.
                 <th>Resolution</th>
                 <td>178x128 pixels<span markdown="1">[^ev3-color-display]</span></td>
                 <td colspan="2" rowspan="5">N/A<span markdown="1">[^brickpi-display]</span></td>
+                <td rowspan="5"><i>N/A</i></td>
                 <td>320x240 pixels</td>
                 <td>220x176 pixels</td>
                 <td>220x176 pixels</td>
@@ -89,7 +92,7 @@ platforms and their features.
                 <th rowspan="7">Buttons</th>
                 <th>Count</th>
                 <td>6</td>
-                <td colspan="2">0</td>
+                <td colspan="3">0</td>
                 <td>1</td>
                 <td>6<span markdown="1">[^evb-buttons]</span></td>
                 <td>6<span markdown="1">[^evb-buttons]</span></td>
@@ -97,7 +100,7 @@ platforms and their features.
             <tr>
                 <th>Enter</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>Yes</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -105,7 +108,7 @@ platforms and their features.
             <tr>
                 <th>Up</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -113,7 +116,7 @@ platforms and their features.
             <tr>
                 <th>Down</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -121,7 +124,7 @@ platforms and their features.
             <tr>
                 <th>Left</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -129,7 +132,7 @@ platforms and their features.
             <tr>
                 <th>Right</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -137,7 +140,7 @@ platforms and their features.
             <tr>
                 <th>Back (Backspace)</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -146,6 +149,7 @@ platforms and their features.
                 <th colspan="2">LEDs</th>
                 <td>2 - Red/Green</td>
                 <td colspan="2">2 - Blue</td>
+                <td>1 - Yellow (Amber)</td>
                 <td>2<span markdown="1">[^pistorms-leds]</span> - Red/Green/Blue</td>
                 <td>None</td>
                 <td>None</td>
@@ -153,7 +157,7 @@ platforms and their features.
             <tr>
                 <th colspan="2">Speaker</th>
                 <td>Yes</td>
-                <td colspan="2">No<span markdown="1">[^raspberry-pi-sound]</span></td>
+                <td colspan="3">No<span markdown="1">[^raspberry-pi-sound]</span></td>
                 <td>No<span markdown="1">[^raspberry-pi-sound]</span></td>
                 <td>Yes</td>
                 <td>No</td>
@@ -164,6 +168,7 @@ platforms and their features.
                 <td>4</td>
                 <td>4 + 1 I2C only</td>
                 <td>4</td>
+                <td>4 + 1 <a href="http://wiki.seeed.cc/Grove_System/" target="_blank">Grove</a> I2C</td>
                 <td>4</td>
                 <td>4</td>
                 <td>4</td>
@@ -171,7 +176,7 @@ platforms and their features.
             <tr>
                 <th>Automatic Detection</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes<span markdown="1">[^evb-sensors]</span></td>
                 <td>Yes</td>
@@ -179,7 +184,7 @@ platforms and their features.
             <tr>
                 <th>EV3 Sensors</th>
                 <td>Yes</td>
-                <td colspan="2">Yes<span markdown="1">[^brickpi-ev3-sensors]</span></td>
+                <td colspan="3">Yes<span markdown="1">[^brickpi-ev3-sensors]</span></td>
                 <td>Yes<span markdown="1">[^pistorms-ev3-sensors]</span></td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -187,7 +192,7 @@ platforms and their features.
             <tr>
                 <th>NXT Sensors</th>
                 <td>Yes</td>
-                <td colspan="2">Yes<span markdown="1">[^brickpi-nxt-sensors]</span></td>
+                <td colspan="3">Yes<span markdown="1">[^brickpi-nxt-sensors]</span></td>
                 <td>Yes<span markdown="1">[^pistorms-nxt-sensors]</span></td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -196,6 +201,7 @@ platforms and their features.
                 <th>Port Addresses</th>
                 <td><code>in1</code><br><code>in2</code><br><code>in3</code><br><code>in4</code></td>
                 <td colspan="2"><code>ttyAMA0:S1</code><br><code>ttyAMA0:S2</code><br><code>ttyAMA0:S3</code><br><code>ttyAMA0:S4</code></td>
+                <td><i>Not yet supported in ev3dev</i></td>
                 <td><code>pistorms:BAS1</code><br><code>pistorms:BAS2</code><br><code>pistorms:BBS1</code><br><code>pistorms:BBS2</code></td>
                 <td colspan="2"><code>evb:in1</code><br><code>evb:in2</code><br><code>evb:in3</code><br><code>evb:in4</code></td>
             </tr>
@@ -203,7 +209,7 @@ platforms and their features.
                 <th rowspan="3">Output Ports</th>
                 <th>Count</th>
                 <td>4</td>
-                <td colspan="2">4</td>
+                <td colspan="3">4</td>
                 <td>4</td>
                 <td>4</td>
                 <td>4</td>
@@ -211,7 +217,7 @@ platforms and their features.
             <tr>
                 <th>Automatic Detection</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
@@ -220,6 +226,7 @@ platforms and their features.
                 <th>Port Addresses</th>
                 <td><code>outA</code><br><code>outB</code><br><code>outC</code><br><code>outD</code></td>
                 <td colspan="2"><code>ttyAMA0:M1</code><br><code>ttyAMA0:M2</code><br><code>ttyAMA0:M3</code><br><code>ttyAMA0:M4</code></td>
+                <td><i>Not yet supported in ev3dev</i></td>
                 <td><code>pistorms:BAM1</code><br><code>pistorms:BAM2</code><br><code>pistorms:BBM1</code><br><code>pistorms:BBM2</code></td>
                 <td colspan="2"><code>evb:outA</code><br><code>evb:outB</code><br><code>evb:outC</code><br><code>evb:outD</code></td>
             </tr>
@@ -229,6 +236,7 @@ platforms and their features.
                 <td>Yes</td>
                 <td>No</td>
                 <td>Yes</td>
+                <td><i>Not yet supported in ev3dev</i></td>
                 <td>Yes</td>
                 <td>Yes</td>
                 <td>No</td>
@@ -236,7 +244,7 @@ platforms and their features.
             <tr>
                 <th>Current</th>
                 <td>Yes</td>
-                <td colspan="2">No</td>
+                <td colspan="3">No</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>No</td>
@@ -274,7 +282,8 @@ platforms and their features.
 
 [^brickpi-ev3-sensors]: BrickPi only supports the LEGO EV3 sensors (Color,
     Infrared, Ultrasonic, Gyro, Touch). [The UART sensor implementation is buggy
-    in the BrickPi firmware.](https://github.com/DexterInd/BrickPi/issues/24)
+    in the BrickPi and BrickPi+ firmware](https://github.com/DexterInd/BrickPi/issues/24).
+    EV3 sensor support on the BrickPi3 is improved.
 
 [^pistorms-ev3-sensors]: PiStorms only supports the LEGO EV3 sensors (Color,
     Infrared, Ultrasonic, Gyro, Touch).
