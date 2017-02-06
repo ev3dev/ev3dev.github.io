@@ -17,21 +17,19 @@ source_code_url: "https://github.com/osmado/ev3_wiimote" # Provide a link to you
 
 excerpt: "A wiimote controlled robot using ROS and ev3dev." # A short summary of your project. This can be a sentence or a paragraph, but it's recommended to keep it under 3 sentences.
 ---
-Overview
---------
+## Overview
 
 This project has two diffent parts:
+
 - ev3dev_ros_distribution
 - ev3_wiimote
 
-ev3dev_ros_distribution
------------------------
+## ev3dev_ros_distribution
 
-Create a Robot Operating System (ROS) Jade distribution into Ev3dev software "https://github.com/osmado/ev3dev_ros_distribution".
+Create a Robot Operating System (ROS) Jade distribution into Ev3dev software [https://github.com/osmado/ev3dev_ros_distribution].
 This project describes how to create a docker container that includes ev3dev and ROS. Beside, It explians howto use the dcoker image to compile ROS software.
   
-ev3_wiimote
------------
+## ev3_wiimote
 
-ROS node to drive a Lego robot from a wiimote controller "https://github.com/osmado/ev3_wiimote".
+ROS node to drive a Lego robot from a wiimote controller [https://github.com/osmado/ev3_wiimote].
 This example project combines ROS and wiimote (libcwiid). It is only a basic functionality project (turn right, turn left and go ahead).
