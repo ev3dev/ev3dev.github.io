@@ -26,8 +26,8 @@ This project has two diffent parts:
 
 ## ev3dev_ros_distribution
 
-Create a Robot Operating System (ROS) Jade distribution into Ev3dev software [ev3dev_ros_distribution](https://github.com/osmado/ev3dev_ros_distribution).
-This project describes how to create a docker container that includes ev3dev and ROS. Beside, It explians howto use the dcoker image to compile ROS software.
+Create a Robot Operating System (ROS) Jade distribution installed in an ev3dev image [ev3dev_ros_distribution](https://github.com/osmado/ev3dev_ros_distribution).
+This project describes how to create a docker container that includes ev3dev and ROS. It also explains how to use the Docker image to compile ROS software.
   
 ## ev3_wiimote
 
