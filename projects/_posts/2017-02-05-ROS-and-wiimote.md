@@ -21,15 +21,15 @@ excerpt: "A wiimote controlled robot using ROS and ev3dev." # A short summary of
 
 This project has two diffent parts:
 
-- ev3dev_ros_distribution
-- ev3_wiimote
+  - ev3dev_ros_distribution
+  - ev3_wiimote
 
 ## ev3dev_ros_distribution
 
-Create a Robot Operating System (ROS) Jade distribution into Ev3dev software [https://github.com/osmado/ev3dev_ros_distribution].
+Create a Robot Operating System (ROS) Jade distribution into Ev3dev software [ev3dev_ros_distribution](https://github.com/osmado/ev3dev_ros_distribution).
 This project describes how to create a docker container that includes ev3dev and ROS. Beside, It explians howto use the dcoker image to compile ROS software.
   
 ## ev3_wiimote
 
-ROS node to drive a Lego robot from a wiimote controller [https://github.com/osmado/ev3_wiimote].
+ROS node to drive a Lego robot from a wiimote controller [ev3_wiimote](https://github.com/osmado/ev3_wiimote).
 This example project combines ROS and wiimote (libcwiid). It is only a basic functionality project (turn right, turn left and go ahead).
