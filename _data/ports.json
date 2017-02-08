@@ -79,6 +79,85 @@
         "url_name": "brickpi-out-port"
     },
     {
+        "connection_types": "NXT/Analog, NXT/I2C, EV3/Analog, EV3/UART",
+        "description": "Dexter Industries BrickPi3 Input Port",
+        "mode_info": [
+            {
+                "description": "No sensor",
+                "id": "BRICKPI3_IN_PORT_MODE_NONE",
+                "name": "none"
+            },
+            {
+                "description": "NXT/Analog sensor",
+                "id": "BRICKPI3_IN_PORT_MODE_NXT_ANALOG",
+                "name": "nxt-analog",
+                "name_footnote": "[^nxt-analog-mode]",
+                "notes": "\n[^nxt-analog-mode]: The [nxt-analog] driver will be loaded when\n    this mode is set. You must manually specify the correct\n    driver for your sensor using `set_device` if you want to use\n    another driver. Any driver with a connection type of\n    NXT/Analog is allowed.\n    ^\n    [nxt-analog]: /docs/sensors/generic-nxt-analog-sensor\n    \n    "
+            },
+            {
+                "description": "LEGO NXT Color sensor",
+                "id": "BRICKPI3_IN_PORT_MODE_NXT_COLOR",
+                "name": "nxt-color"
+            },
+            {
+                "description": "NXT/I2C sensor",
+                "id": "BRICKPI3_IN_PORT_MODE_NXT_I2C",
+                "name": "nxt-i2c",
+                "name_footnote": "[^nxt-i2c-mode]",
+                "notes": "\n[^nxt-i2c-mode]: No sensors are loaded by default. You must\n    manually specify the sensor that is connected and its address\n    by using the `set_device` attribute. This is equivalent to\n    [manually loading] I2C devices. The sensor port address will\n    be the BrickPi3 port address with \":i2c\" and the decimal I2C\n    address appended.\n    ^\n    [manually loading]: /docs/sensors/using-i2c-sensors/#manually-loading-devices\n    \n    "
+            },
+            {
+                "description": "EV3/Analog sensor",
+                "id": "BRICKPI3_IN_PORT_MODE_EV3_ANALOG",
+                "name": "ev3-analog",
+                "name_footnote": "[^ev3-analog-mode]",
+                "notes": "\n[^ev3-analog-mode]: Only the LEGO EV3 Touch sensor is supported.\n    The `lego-ev3-touch` sensor driver will load automatically\n    when this port mode is set.\n    \n    "
+            },
+            {
+                "description": "EV3/UART sensor",
+                "id": "BRICKPI3_IN_PORT_MODE_EV3_UART",
+                "name": "ev3-uart",
+                "name_footnote": "[^ev3-uart-mode]",
+                "notes": "\n[^ev3-uart-mode]: Only the LEGO EV3 Ultrasonic, Color, Gyro,\n    and Infrared sensors are supported. They cannot be automatically\n    detected, so you must specify the sensor manually using the\n    `set_device` attribute. No sensor drivers are loaded by default.\n    \n    "
+            }
+        ],
+        "module": "brickpi3-ports-in",
+        "name": "brickpi3-in-port",
+        "num_modes": 6,
+        "prefix": "in",
+        "source_file": "drivers/lego/brickpi3/brickpi3_ports_in.c",
+        "source_line": 73,
+        "url_name": "brickpi3-in-port"
+    },
+    {
+        "connection_types": "tacho-motor, dc-motor, led",
+        "description": "Dexter Industries BrickPi3 Output Port",
+        "mode_info": [
+            {
+                "description": "NXT/EV3 Large Motor",
+                "id": "BRICKPI3_OUT_PORT_MODE_TACHO_MOTOR",
+                "name": "tacho-motor"
+            },
+            {
+                "description": "RCX/Power Functions motor",
+                "id": "BRICKPI3_OUT_PORT_MODE_DC_MOTOR",
+                "name": "dc-motor"
+            },
+            {
+                "description": "RCX/Power Functions LED",
+                "id": "BRICKPI3_OUT_PORT_MODE_LED",
+                "name": "led"
+            }
+        ],
+        "module": "brickpi3-ports-out",
+        "name": "brickpi3-out-port",
+        "num_modes": 3,
+        "prefix": "out",
+        "source_file": "drivers/lego/brickpi3/brickpi3_ports_out.c",
+        "source_line": 70,
+        "url_name": "brickpi3-out-port"
+    },
+    {
         "connection_types": "NXT/I2C, NXT/Analog",
         "description": "HiTechnic NXT Sensor Multiplexer Input Port",
         "mode_info": [
