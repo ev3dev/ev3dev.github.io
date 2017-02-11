@@ -2,54 +2,77 @@
 var releaseCacheTimeMillis = 20 * 60 * 1000;
 
 var releasePlatformRegexes = {
-    ev3: "ev3dev-jessie-ev3-generic-[\\d-]+\\.zip",
-    rpi: "ev3dev-jessie-rpi-generic-[\\d-]+\\.zip",
-    rpi2: "ev3dev-jessie-rpi2-generic-[\\d-]+\\.zip",
-    bone: "ev3dev-jessie-bone-generic-[\\d-]+\\.zip",
+    ev3: /ev3dev-jessie-ev3-generic-[\d-]+\.zip/,
+    rpi: /ev3dev-jessie-rpi-generic-[\d-]+\.zip/,
+    rpi2: /ev3dev-jessie-rpi2-generic-[\d-]+\.zip/,
+    bone: /ev3dev-jessie-bone-generic-[\d-]+\.zip/,
 }
 
-function initDownloadLinks() {
-    getApiValue('https://api.github.com/repos/ev3dev/ev3dev/releases', releaseCacheTimeMillis, function (releases, error) {
-        if(error) {
-            console.error("Download links not available! Falling back to static content.");
-            $('.release-link-container').hide();
-            $('.release-link-alt').show();
-            
+function loadReleasesByPlatform(successCallback, errorCallback, clearCache) {
+    getApiValue('https://api.github.com/repos/ev3dev/ev3dev/releases', releaseCacheTimeMillis, function (releasesApiData, error) {
+        if (error) {
+            errorCallback(error);
             return;
         }
-        
-        releases.sort(function (a, b) {
-            if (Date.parse(a['created_at']) < Date.parse(b['created_at']))
-                return 1;
-            if (Date.parse(a['created_at']) > Date.parse(b['created_at']))
-                return -1;
 
-            return 0;
+        var releaseMap = {};
+        releasesApiData.forEach(function (releaseApiData) {
+            releaseApiData['assets'].forEach(function (assetApiData) {
+                var assetPlatform = $.grep(Object.keys(releasePlatformRegexes), function (platId) {
+                    return releasePlatformRegexes[platId].test(assetApiData['name']);
+                })[0];
+
+                if (!assetPlatform)
+                    return true;
+
+                if (!Array.isArray(releaseMap[assetPlatform]))
+                    releaseMap[assetPlatform] = [];
+
+                releaseMap[assetPlatform].push({
+                    releaseName: releaseApiData['name'],
+                    creationDate: Date.parse(releaseApiData['created_at']),
+                    platform: assetPlatform,
+                    size: assetApiData['size'],
+                    downloadUrl: assetApiData['browser_download_url']
+                });
+            });
         });
+
+        Object.keys(releaseMap).forEach(function (platformId) {
+            releaseMap[platformId].sort(function (a, b) {
+                return (b.creationDate > a.creationDate) - (b.creationDate < a.creationDate);
+            });
+        })
+
+        successCallback(releaseMap);
+    }, clearCache);
+}
+
+function initDownloadLinks(clearCache) {
+    loadReleasesByPlatform(function (releaseMap) {
 
         $('a[data-release-link-platform]').each(function (i, element) {
             var $linkElem = $(element);
             var targetReleasePlatform = $linkElem.data('release-link-platform');
-            if (!releasePlatformRegexes[targetReleasePlatform]) {
-                console.error('"' + targetReleasePlatform + '" is an invalid release target.');
+            var targetRelease = (releaseMap[targetReleasePlatform] || [])[0];
+
+            if (!targetRelease) {
+                console.error('"' + targetReleasePlatform + '" is an invalid release target or no releases for the given platform exist.');
                 return true;
             }
 
-            var platformRegex = new RegExp(releasePlatformRegexes[targetReleasePlatform]);
+            $linkElem.attr('href', targetRelease.downloadUrl);
+            $linkElem.children('small.download-size-label').remove();
 
-            for (var releaseIndex in releases) {
-                var releaseAssets = releases[releaseIndex].assets;
-                for (var assetIndex in releaseAssets) {
-                    if (platformRegex.test(releaseAssets[assetIndex].name)) {
-                        $linkElem.attr('href', releaseAssets[assetIndex]['browser_download_url']);
-                        var fileSize = releaseAssets[assetIndex]['size'] >> 20;
-                        $('<small/>').text(' (' + fileSize + ' MiB)').appendTo($linkElem);
-                        return true;
-                    }
-                }
-            }
+            var fileSize = targetRelease.size >> 20;
+            $('<small/>').addClass('download-size-label').text(' (' + fileSize + ' MiB)').appendTo($linkElem);
         });
-    });
+    },
+    function (error) {
+        console.error("Download links not available! Falling back to static content.");
+        $('.release-link-container').hide();
+        $('.release-link-alt').show();
+    }, clearCache);
 }
 
 $(document).ready(function () {
@@ -57,8 +80,12 @@ $(document).ready(function () {
     // We do this as soon as the document loads so that the page flash is minimal.
     $('.release-link-alt').hide();
     $('.release-link-container').show();
-    
+
     if ($('a[data-release-link-platform]').length > 0) {
         initDownloadLinks();
     }
+
+    $('a.release-refresh-button').click(function() {
+        initDownloadLinks(true);
+    });
 });

@@ -8,18 +8,20 @@ function supportsHtml5Storage() {
     }
 }
 
-function getApiValue(endpointUrl, cacheTime, callback) {
-    try {
-        var cacheData = supportsHtml5Storage() ? JSON.parse(localStorage[cacheKey]) : null;
-        // This does an exact match for the URL given. Different spacing, duplicate slashes,
-        // alternate caps, etc. will result in the cache being bypassed.
-        if (cacheData && cacheData[endpointUrl] && Date.now() - cacheData[endpointUrl].dateRetrieved < cacheTime) {
-            callback(cacheData[endpointUrl].requestResult);
-            return;
+function getApiValue(endpointUrl, cacheTime, callback, clearCache) {
+    if(!clearCache) {
+        try {
+            var cacheData = supportsHtml5Storage() ? JSON.parse(localStorage[cacheKey]) : null;
+            // This does an exact match for the URL given. Different spacing, duplicate slashes,
+            // alternate caps, etc. will result in the cache being bypassed.
+            if (cacheData && cacheData[endpointUrl] && Date.now() - cacheData[endpointUrl].dateRetrieved < cacheTime) {
+                callback(cacheData[endpointUrl].requestResult);
+                return;
+            }
         }
-    }
-    catch (e) {
-        // Ignore the error; if the saved JSON is invalid, we'll just request it from the server.
+        catch (e) {
+            // Ignore the error; if the saved JSON is invalid, we'll just request it from the server.
+        }
     }
     
     console.log('No cached copy of API data for endpoint "' + endpointUrl  + '" found. Downloading from remote server.');

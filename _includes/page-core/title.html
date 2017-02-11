@@ -13,6 +13,8 @@
     {% assign edit_path = repo_url | append: '/edit/master/' | append: page.path %}
 {% elsif page.path contains 'news/' %}
     {% assign show_news_link = 1 %}
+{% elsif page.path == 'download.md' %}
+    {% assign show_downloads_refresh_link = 1 %}
 {% endif %}
 
 <div class="page-header">
@@ -20,6 +22,8 @@
         <a class="btn btn-primary pull-right" href="{{ edit_path }}"><span class="glyphicon glyphicon-pencil"></span> Edit on Github</a>
     {% elsif show_news_link %}
         <a class="btn btn-primary pull-right" href="/news/atom.xml">Subscribe via Atom</a>
+    {% elsif show_downloads_refresh_link %}
+        <a class="btn btn-primary pull-right release-refresh-button"><span class="glyphicon glyphicon-refresh"></span> Reload releases</a>
     {% endif %}
     <h1>
         {{ page.title | xml_escape }}
