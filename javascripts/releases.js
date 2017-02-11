@@ -62,10 +62,16 @@ function initDownloadLinks(clearCache) {
             }
 
             $linkElem.attr('href', targetRelease.downloadUrl);
-            $linkElem.children('small.download-size-label').remove();
 
+            $linkElem.data('toggle', 'tooltip');
+            $linkElem.data('placement', 'right');
+            $linkElem.attr('title', targetRelease.releaseName);
+
+            $linkElem.children('small.download-size-label').remove();
             var fileSize = targetRelease.size >> 20;
             $('<small/>').addClass('download-size-label').text(' (' + fileSize + ' MiB)').appendTo($linkElem);
+
+            $linkElem.tooltip();
         });
     },
     function (error) {
