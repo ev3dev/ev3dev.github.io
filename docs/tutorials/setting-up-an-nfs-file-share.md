@@ -159,7 +159,7 @@ And then you should be able to see the files on your host computer when you do `
 - The [OS X `showmount`][OSXshowmount] manpage
 
 [OSXServerNFSExport]: http://support.apple.com/kb/HT4695
-[BarryODonavanNFS]: http://www.barryodonovan.com/index.php/2012/12/12/apple-os-x-as-an-nfs-server-with-linux-clients
+[BarryODonavanNFS]: https://www.barryodonovan.com/2012/12/12/apple-os-x-as-an-nfs-server-with-linux-clients
 [linuxexports5]:  http://linux.die.net/man/5/exports
 [linuxexportfs8]: http://linux.die.net/man/8/exportfs
 [OSXexports5]: http://www.manpages.info/macosx/exports.5.html
