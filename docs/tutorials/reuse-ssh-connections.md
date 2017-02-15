@@ -7,7 +7,7 @@ author: [ "@Dave-Baum" ]
 * Table of Contents
 {:toc}
 
-## Why Do It?
+## Intro
 
 Establishing an ssh connection requires a a lot of communication between your host computer
 and the EV3 and can take several seconds.  Although this is fine a long-lived connection,
@@ -15,7 +15,7 @@ it can be quite tedious if you want to use ssh to invoke a single command or scp
 files.  By instructing ssh to reuse connections, each connection after the first one will
 reuse the session that was already established, drastically speeding up ssh and scp commands.
 
-## How To Do It (OSX, Linux)
+## Congifuration (OSX, Linux)
 
 Edit or create a new file at `~/.ssh/config`.  Add the following contents:
 
@@ -38,7 +38,7 @@ call it `ev3` and connect as user `robot`, the file would look like this:
 Note that if you already have a DNS entry for your ev3, you can use that name in the `Host` line and you do
 not need a `HostName` line.
 
-## Try It
+## Testing
 
 Start by creating a new ssh session to your EV3.  If it was named `ev3`, you would do the following:
 
@@ -54,6 +54,6 @@ In another terminal session, use ssh to list the files in your ev3's home direct
 If connection sharing is working properly there should have been no prompt for your password and
 the ssh command will have executed very quickly.  As long as the initial ssh session is still running,
 any new connections will share the existing connection.  This even works with scp.  For example,
-to copy some_file.txt from you host to the home directory on the ev3:
+to copy `some_file.txt` from your host to the home directory on the ev3:
 
     scp some_file.txt ev3:
