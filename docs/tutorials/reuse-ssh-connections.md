@@ -26,7 +26,7 @@ Edit or create a new file at `~/.ssh/config`.  Add the following contents:
       ControlPath ~/.ssh/master-%r@%h:%p
 
 Where `<name>` is the name you want to use to refer to your ev3, `<address>` is its ip address, and `<user>` is
-the user name (the default is `robot`).  For example, if your ev3 has address `192.168.1.10` and you want to
+the user name (the default is `robot`).  For example, if your ev3 has address `192.168.1.10`, you want to
 call it `ev3` and connect as user `robot`, the file would look like this:
 
     Host ev3
@@ -35,17 +35,17 @@ call it `ev3` and connect as user `robot`, the file would look like this:
       ControlMaster auto
       ControlPath ~/.ssh/master-%r@%h:%p
 
-Note that if you already have a DNS entry for your ev3, you can use that name in the Host line and you do
-not need a HostName line.
+Note that if you already have a DNS entry for your ev3, you can use that name in the `Host` line and you do
+not need a `HostName` line.
 
 ## Try It
 
-Start by creating a new ssh session to your EV3.  If it was named "ev3", you would do the following:
+Start by creating a new ssh session to your EV3.  If it was named `ev3`, you would do the following:
 
     ssh ev3
 
 After a few seconds you will be prompted for a password and then will be greeted with the shell
-prompt from the eve.
+prompt from the ev3.
 
 In another terminal session, use ssh to list the files in your ev3's home directory:
 
