@@ -193,7 +193,7 @@ If you are using an older version, please upgrade.
         this, so first you need to install `blueman` on your host computer. Make sure
         you have the `bridge-utils` package too, it's required.
 
-            sudo apt-get install blueman
+            sudo apt-get install blueman bridge-utils
 
     2.  Run the Blueman *Bluetooth Manager*.
 
