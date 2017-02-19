@@ -57,6 +57,7 @@ Array.prototype.clean = function (deleteValue) {
 //Load the search data if the user seems like they intend to enter a query
 //If they have already entered text, open the suggestions
 function searchFocus() {
+    ga('send', 'event', 'search', 'focus');
     if (!searchData)
         loadSearchData(function () {
             searchUpdate();
@@ -95,8 +96,13 @@ function loadSearchData(callback, numRetries) {
     .fail(function(error) {
         dataLoading = false;
 
-        if(numRetries == undefined || numRetries > 0)
-            loadSearchData(callback, (Number(numRetries) || 3) - 1)
+        if(numRetries == undefined || numRetries > 0) {
+            ga('send', 'event', 'search', 'load fail (retry)');
+            loadSearchData(callback, (Number(numRetries) || 3) - 1);
+        }
+        else {
+            ga('send', 'event', 'search', 'load fail');
+        }
     });
 }
 
@@ -173,6 +179,13 @@ function doSearch(query) {
 
     var results = findResults(query);
     $('#search-no-data-warning').toggle(!results);
+
+    ga('send', 'event', {
+        eventCategory: 'search',
+        eventAction: 'query',
+        eventLabel: query,
+        eventValue: !!results ? results.length : 0
+    });
     
     docResultArea.parent().toggle(!!results);
     projectResultArea.parent().toggle(!!results);
