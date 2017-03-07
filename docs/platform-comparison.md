@@ -201,7 +201,7 @@ platforms and their features.
                 <th>Port Addresses</th>
                 <td><code>in1</code><br><code>in2</code><br><code>in3</code><br><code>in4</code></td>
                 <td colspan="2"><code>ttyAMA0:S1</code><br><code>ttyAMA0:S2</code><br><code>ttyAMA0:S3</code><br><code>ttyAMA0:S4</code></td>
-                <td><i>Not yet supported in ev3dev</i></td>
+                <td><code>spi0.1:S1</code><br><code>spi0.1:S2</code><br><code>spi0.1:S3</code><br><code>spi0.1:S4</code></td>
                 <td><code>pistorms:BAS1</code><br><code>pistorms:BAS2</code><br><code>pistorms:BBS1</code><br><code>pistorms:BBS2</code></td>
                 <td colspan="2"><code>evb:in1</code><br><code>evb:in2</code><br><code>evb:in3</code><br><code>evb:in4</code></td>
             </tr>
@@ -226,7 +226,7 @@ platforms and their features.
                 <th>Port Addresses</th>
                 <td><code>outA</code><br><code>outB</code><br><code>outC</code><br><code>outD</code></td>
                 <td colspan="2"><code>ttyAMA0:M1</code><br><code>ttyAMA0:M2</code><br><code>ttyAMA0:M3</code><br><code>ttyAMA0:M4</code></td>
-                <td><i>Not yet supported in ev3dev</i></td>
+                <td><code>spi0.1:M1</code><br><code>spi0.1:M2</code><br><code>spi0.1:M3</code><br><code>spi0.1:M4</code></td>
                 <td><code>pistorms:BAM1</code><br><code>pistorms:BAM2</code><br><code>pistorms:BBM1</code><br><code>pistorms:BBM2</code></td>
                 <td colspan="2"><code>evb:outA</code><br><code>evb:outB</code><br><code>evb:outC</code><br><code>evb:outD</code></td>
             </tr>
@@ -236,7 +236,7 @@ platforms and their features.
                 <td>Yes</td>
                 <td>No</td>
                 <td>Yes</td>
-                <td><i>Not yet supported in ev3dev</i></td>
+                <td>Yes</td>
                 <td>Yes</td>
                 <td>Yes</td>
                 <td>No</td>
