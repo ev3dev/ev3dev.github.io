@@ -34,8 +34,9 @@ You're done! Whenever you press the PS3 button on the gamepad now, it will try
 to connect to the EV3 brick. Nice!
 
 If Brickman doesn't work or if you don't have a display, like on a BrickPi,
-`bluetoothctl` is the way to go. The Gentoo Linux guys wrote [a nice tutorial]
-(https://wiki.gentoo.org/wiki/Sony_DualShock)
+`bluetoothctl` is the way to go. The Gentoo Linux guys wrote [a nice tutorial][gentoo].
+
+[gentoo]: https://wiki.gentoo.org/wiki/Sony_DualShock
 
 
 # Running motors with a PS3 sixaxis controller
