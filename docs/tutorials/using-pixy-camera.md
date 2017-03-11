@@ -58,7 +58,7 @@ The Pixy camera has the following modes:
 * SIGn: the camera searches for signature #n (n=1 to 7).
 
 The data which you retrieve from the camera depends on the camera mode. You
-can find detailed information on [this page](/docs/sensors/charmed-labs-pixy-cmucam5-for-lego).
+can find detailed information on [this page](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensor_data.html#pixy-lego).
 We will explain it to you with some examples.
 
 When the mode is set to ```ALL```, you can retrieve data as follows:

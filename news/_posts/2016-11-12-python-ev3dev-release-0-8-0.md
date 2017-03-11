@@ -46,4 +46,4 @@ sudo apt-get update
 sudo apt-get install --only-upgrade python3-ev3dev
 {% endhighlight %}
 
-[fonts]: http://ev3dev-lang.readthedocs.io/projects/python-ev3dev/en/stable/other.html#bitmap-fonts
+[fonts]: http://ev3dev-lang-python.readthedocs.io/en/stable/other.html?highlight=bitmap%20fonts#bitmap-fonts
