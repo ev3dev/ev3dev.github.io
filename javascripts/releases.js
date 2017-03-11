@@ -1,5 +1,5 @@
-// Cache will time out after 20 minutes
-var releaseCacheTimeMillis = 20 * 60 * 1000;
+// Cache will time out after five minutes
+var releaseCacheTimeMillis = 5 * 60 * 1000;
 
 var releasePlatformRegexes = {
     ev3: /ev3dev-jessie-ev3-generic-[\d-]+\.zip/,
@@ -8,7 +8,7 @@ var releasePlatformRegexes = {
     bone: /ev3dev-jessie-bone-generic-[\d-]+\.zip/,
 }
 
-function loadReleasesByPlatform(successCallback, errorCallback, clearCache) {
+function loadReleasesByPlatform(successCallback, errorCallback) {
     getApiValue('https://api.github.com/repos/ev3dev/ev3dev/releases', releaseCacheTimeMillis, function (releasesApiData, error) {
         if (error) {
             errorCallback(error);
@@ -30,6 +30,7 @@ function loadReleasesByPlatform(successCallback, errorCallback, clearCache) {
 
                 releaseMap[assetPlatform].push({
                     releaseName: releaseApiData['name'],
+                    assetName: assetApiData['name'],
                     creationDate: Date.parse(releaseApiData['created_at']),
                     platform: assetPlatform,
                     size: assetApiData['size'],
@@ -45,10 +46,10 @@ function loadReleasesByPlatform(successCallback, errorCallback, clearCache) {
         })
 
         successCallback(releaseMap);
-    }, clearCache);
+    });
 }
 
-function initDownloadLinks(clearCache) {
+function initDownloadLinks() {
     loadReleasesByPlatform(function (releaseMap) {
 
         $('a[data-release-link-platform]').each(function (i, element) {
@@ -63,22 +64,21 @@ function initDownloadLinks(clearCache) {
 
             $linkElem.attr('href', targetRelease.downloadUrl);
 
-            $linkElem.data('toggle', 'tooltip');
-            $linkElem.data('placement', 'right');
-            $linkElem.attr('title', targetRelease.releaseName);
-
-            $linkElem.children('small.download-size-label').remove();
+            $linkElem.children('small.download-info-label').remove();
             var fileSize = targetRelease.size >> 20;
-            $('<small/>').addClass('download-size-label').text(' (' + fileSize + ' MiB)').appendTo($linkElem);
+            $('<small/>').addClass('download-info-label badge').text(fileSize + ' MiB').appendTo($linkElem);
+            $('<small/>').addClass('download-info-label').css({
+                'display': 'block',
+                'font-size': '65%'
+            }).text(targetRelease.assetName).appendTo($linkElem);
 
-            $linkElem.tooltip();
         });
     },
     function (error) {
         console.error("Download links not available! Falling back to static content.");
         $('.release-link-container').hide();
         $('.release-link-alt').show();
-    }, clearCache);
+    });
 }
 
 $(document).ready(function () {
@@ -90,8 +90,4 @@ $(document).ready(function () {
     if ($('a[data-release-link-platform]').length > 0) {
         initDownloadLinks();
     }
-
-    $('a.release-refresh-button').click(function() {
-        initDownloadLinks(true);
-    });
 });

@@ -9,7 +9,7 @@ function supportsHtml5Storage() {
 }
 
 function getApiValue(endpointUrl, cacheTime, callback, clearCache) {
-    if(!clearCache) {
+    if(clearCache != true) {
         try {
             var cacheData = supportsHtml5Storage() ? JSON.parse(localStorage[cacheKey]) : null;
             // This does an exact match for the URL given. Different spacing, duplicate slashes,
