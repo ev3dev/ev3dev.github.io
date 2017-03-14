@@ -87,7 +87,7 @@ this library can be used by languages including Vala and Genie, among
 [many others](https://wiki.gnome.org/Projects/GObjectIntrospection/Users). This
 is great for people who want to use higher-level syntax while still producing a
 performant application, or people who want a less error-prone API for C. The
-[Brick Manager][https://github.com/ev3dev/brickman] for ev3dev is written using
+[Brick Manager](https://github.com/ev3dev/brickman) for ev3dev is written using
 this library.
 
 [Get started with ev3devKit](https://github.com/ev3dev/ev3devKit){: .btn .btn-default }
