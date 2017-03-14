@@ -20,7 +20,7 @@ First, here are the things you need before starting:
   on the EV3. **All cards larger than 32GB will not work with the EV3!**
 * A computer with an adapter for the SD card. You will need administrator user
   permissions on this computer.
-* A way to communicate.
+* A way to communicate with the device.
 
   For the EV3, this can be one of the following:
 
