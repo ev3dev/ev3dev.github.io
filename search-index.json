@@ -1,26 +1,50 @@
 ---
 layout:
 ---
+{% capture json %}
 [
     {% for post in site.posts %}
     {
-      "title"    : "{{ post.title }}",
-        "href": "{{ post.url }}",
-        "author":  "{{ post.author | join: ', ' }}",
-        "date": "{{ post.date | date_to_long_string }}",
-        "loopid" : "post-{{ forloop.index }}",
-        "category": "{{ post.categories }}"
-    },
-    {% endfor %}    
-    {% for page in site.pages %}
-    {
-      "title"    : "{{ page.title }}",
-      "href"     : "{{ page.url }}",
-      "loopid": "page-{{ forloop.index }}",
-      "category": "{{ page.categories }}",
-      {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
-      "breadcrumbs": "{{ parent_dirs | join: ' > ' }}"
+        "title":"{{ post.title }}",
+        "href":"{{ post.url }}",
+        "author":"{{ post.author | join: ', ' }}",
+        "date":"{{ post.date | date_to_long_string }}",
+        "loopid":"post-{{ forloop.index }}",
+        "category":"{{ post.categories }}"
     },
     {% endfor %}
-    false    
+    {% for page in site.pages %}{% unless page.redirect_to %}
+    {
+        "title":"{{ page.title }}",
+        "href":"{{ page.url }}",
+        "loopid":"page-{{ forloop.index }}",
+        "category":"{{ page.categories }}",
+        {% capture _ %}
+        {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
+        {% assign current_dir = site.data.breadcrumbs %}
+        {% assign breadcrumbs = '' %}
+        {% if parent_dirs.empty %}
+            {% assign breadcrumbs = '/' %}
+        {% else %}
+            {% for dir in parent_dirs %}
+                {% assign pretty_name = dir %}
+                {% unless forloop.last %}
+                    {% assign current_dir = current_dir[dir] %}
+                    {% if current_dir.name %}
+                    {% assign pretty_name = current_dir.name  %}
+                    {% endif %}
+
+                    {% assign breadcrumbs = breadcrumbs | append: pretty_name %}
+                    {% unless forloop.rindex0 <= 1 %}
+                        {% assign breadcrumbs = breadcrumbs | append: " > " %}
+                    {% endunless %}
+                {% endunless %}
+            {% endfor %}
+        {% endif %}
+        {% endcapture %}
+        "breadcrumbs":"{{ breadcrumbs }}"
+    },
+    {% endunless %}{% endfor %}
+    false
 ]
+{% endcapture %}{{ json | replace:"  "," "  | replace:"  "," "  | replace:"  "," "  | replace:"  "," " }}
