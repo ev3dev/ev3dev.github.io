@@ -14,7 +14,7 @@
 {% endif %}
     {% include /page-core/page-header.html %}
     {% if page.jumbotron-heading or page.jumbotron-content %}
-    <div class="jumbotron">
+    <div class="jumbotron {{ page.jumbotron-additional-classes }}" {% if page.jumbotron-id %}id="{{ page.jumbotron-id }}"{% endif %}>
         <div class="container">
             <h1>{{ page.jumbotron-heading }}</h1>
             {{ page.jumbotron-content }}

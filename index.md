@@ -27,6 +27,7 @@ extra-head-content: |
   }
   </script>
 
+jumbotron-id: landing-jumbotron
 jumbotron-heading: |
   ev3dev is your EV3 <strong><i>re-imagined</i></strong>
 jumbotron-content: |
@@ -45,7 +46,7 @@ jumbotron-content: |
       </p>
   </div>
   <div class="col-lg-4">
-      <img class="img-responsive" id="splash-thumbnail" src="images/logo_ev3dev_mono.png" alt="ev3dev boot logo" />
+      <img class="img-responsive" id="splash-thumbnail" src="images/hero-ev3-image.png" alt="ev3dev on an ev3" />
   </div>
 excerpt: "ev3dev is a Debian Linux-based operating system that runs on several LEGO MINDSTORMS compatible platforms including the LEGO MINDSTORMS EV3 and Raspberry Pi-powered BrickPi."
 ---

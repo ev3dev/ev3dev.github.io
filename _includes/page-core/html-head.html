@@ -18,7 +18,9 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="/stylesheets/site-structure.css">
+    {% if page.url == "/" %}
     <link rel="stylesheet" href="/stylesheets/landing-content.css">
+    {% endif %}
 
     <!-- Template for search results -->
     <script type="text/html" id="search-result-template">
