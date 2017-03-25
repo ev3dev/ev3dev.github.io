@@ -51,12 +51,12 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 <br/>
 <div class="text-center">
-<a data-release-link-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
+<a data-download-button-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
 <br/><br/>
 <h2 class="centered-light-heading"> Other platforms </h2>
-<a data-release-link-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
-<a data-release-link-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
-<a data-release-link-platform="bone" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
+<a data-download-button-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
+<a data-download-button-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
+<a data-download-button-platform="bone" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
 </div>
 
 <br/>

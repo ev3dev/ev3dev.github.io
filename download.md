@@ -28,7 +28,7 @@ no-wrapper: true
                 the primary focus of development.
             </p>
         </div>
-        <a data-release-link-platform="ev3" class="btn btn-lg btn-primary">
+        <a data-download-button-platform="ev3">
             <span class="glyphicon glyphicon-download-alt"></span>
             Download for EV3
         </a>
@@ -48,13 +48,13 @@ no-wrapper: true
             </p>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi" class="btn btn-md btn-primary">
+            <a data-download-button-platform="rpi">
                 <span class="glyphicon glyphicon-download-alt"></span>
                 Download for Raspberry Pi Model 0/1
             </a>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi2" class="btn btn-md btn-primary">
+            <a data-download-button-platform="rpi2">
                 <span class="glyphicon glyphicon-download-alt"></span>
                 Download for Raspberry Pi Model 2/3
             </a>
@@ -75,7 +75,7 @@ no-wrapper: true
             </p>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="bone" class="btn btn-md btn-primary">
+            <a data-download-button-platform="bone">
                 <span class="glyphicon glyphicon-download-alt"></span>
                 Download for BeagleBone
             </a>

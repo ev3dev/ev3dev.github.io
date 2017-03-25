@@ -52,9 +52,9 @@ function loadReleasesByPlatform(successCallback, errorCallback) {
 function initDownloadLinks() {
     loadReleasesByPlatform(function (releaseMap) {
 
-        $('a[data-release-link-platform]').each(function (i, element) {
+        $('a[data-download-button-platform]').each(function (i, element) {
             var $linkElem = $(element);
-            var targetReleasePlatform = $linkElem.data('release-link-platform');
+            var targetReleasePlatform = $linkElem.data('download-button-platform');
             var targetRelease = (releaseMap[targetReleasePlatform] || [])[0];
 
             if (!targetRelease) {
@@ -63,14 +63,20 @@ function initDownloadLinks() {
             }
 
             $linkElem.attr('href', targetRelease.downloadUrl);
+            $linkElem.addClass('btn-group-vertical download-button-container');
 
-            $linkElem.children('small.download-info-label').remove();
+            var $upperSection = $linkElem.children('.download-button-upper');
+            if($upperSection.length <= 0) {
+                var $contents = $linkElem.contents();
+                $upperSection = $('<span/>').addClass('btn btn-lg btn-primary download-button-upper').appendTo($linkElem);
+                $contents.appendTo($upperSection);
+            }
+
+            $linkElem.children('.download-button-lower').remove();
+            var $lowerSection = $('<span/>').addClass('btn download-button-lower').text(targetRelease.assetName).appendTo($linkElem);
+
             var fileSize = targetRelease.size >> 20;
-            $('<small/>').addClass('download-info-label badge').text(fileSize + ' MiB').appendTo($linkElem);
-            $('<small/>').addClass('download-info-label').css({
-                'display': 'block',
-                'font-size': '65%'
-            }).text(targetRelease.assetName).appendTo($linkElem);
+            $('<small/>').addClass('download-info-label badge').text(fileSize + ' MiB').appendTo($lowerSection);
 
         });
     },
@@ -87,7 +93,7 @@ $(document).ready(function () {
     $('.release-link-alt').hide();
     $('.release-link-container').show();
 
-    if ($('a[data-release-link-platform]').length > 0) {
+    if ($('a[data-download-button-platform]').length > 0) {
         initDownloadLinks();
     }
 });
