@@ -26,29 +26,11 @@ defaults:
       categories: "docs"
   -
     scope:
-      path: "docs/drivers"
-      type: "pages"
-    values:
-      category: "drivers"
-  -
-    scope:
       path: "docs/tutorials"
       type: "pages"
     values:
       category: "tutorials"
       layout: "tutorial"
-  -
-    scope:
-      path: "docs/sensors"
-      type: "pages"
-    values:
-      category: "sensors"
-  -
-    scope:
-      path: "docs/motors"
-      type: "pages"
-    values:
-      category: "motors"
   -
     scope:
       path: "docs/devtools"

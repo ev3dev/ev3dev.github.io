@@ -1,26 +1,56 @@
 ---
 layout:
 ---
+{% capture json %}
 [
     {% for post in site.posts %}
     {
-      "title"    : "{{ post.title }}",
-        "href": "{{ post.url }}",
-        "author":  "{{ post.author | join: ', ' }}",
-        "date": "{{ post.date | date_to_long_string }}",
-        "loopid" : "post-{{ forloop.index }}",
-        "category": "{{ post.categories }}"
-    },
-    {% endfor %}    
-    {% for page in site.pages %}
-    {
-      "title"    : "{{ page.title }}",
-      "href"     : "{{ page.url }}",
-      "loopid": "page-{{ forloop.index }}",
-      "category": "{{ page.categories }}",
-      {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
-      "breadcrumbs": "{{ parent_dirs | join: ' > ' }}"
+        "title":"{{ post.title }}",
+        "href":"{{ post.url }}",
+        "author":"{{ post.author | join: ', ' }}",
+        "date":"{{ post.date | date_to_long_string }}",
+        "loopid":"post-{{ forloop.index }}",
+        "category":"{{ post.categories }}"
     },
     {% endfor %}
-    false    
+    {% for page in site.pages %}{% unless page.redirect_to %}
+    {
+        "title":"{{ page.title }}",
+        "href":"{{ page.url }}",
+        "loopid":"page-{{ forloop.index }}",
+        "category":"{{ page.categories }}",
+        {% capture _ %} Capturing the generated content will prevent whitespace from being rendered
+
+        {% assign parent_dirs=page.url | replace_first: '/', '' | split: '/' %}
+        {% assign current_dir = site.data.breadcrumbs %}
+        {% assign breadcrumbs = '' %}
+
+        {% if parent_dirs.empty %}
+            Show just a slash to indicate the site root for empty breadcrumbs
+            {% assign breadcrumbs = '/' %}
+        {% else %}
+            {% for dir in parent_dirs %}
+                Unless overridden, the "pretty" name will be the URL/directory name
+                {% assign pretty_name = dir %}
+                {% unless forloop.last %} The last iteration is the current page, which we don't want in breadcrumbs
+                    Traverse the tree of breadcrumb segment overrides
+                    {% assign current_dir = current_dir[dir] %}
+                    {% if current_dir.name %} Override the pretty name if one is present in the data file
+                        {% assign pretty_name = current_dir.name  %}
+                    {% endif %}
+
+                    Append the chosen name for this segment
+                    {% assign breadcrumbs = breadcrumbs | append: pretty_name %}
+                    {% unless forloop.rindex0 <= 1 %} Append a separator if this isn't the last segment
+                        {% assign breadcrumbs = breadcrumbs | append: " > " %}
+                    {% endunless %}
+                {% endunless %}
+            {% endfor %}
+        {% endif %}
+        {% endcapture %}
+        "breadcrumbs":"{{ breadcrumbs }}"
+    },
+    {% endunless %}{% endfor %}
+    false
 ]
+{% endcapture %}{{ json | replace:"  "," "  | replace:"  "," "  | replace:"  "," "  | replace:"  "," " }}
