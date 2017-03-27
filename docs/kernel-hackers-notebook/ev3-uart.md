@@ -28,7 +28,7 @@ device class. The interesting part is the LEGOEV3 [line discipline] that runs
 on top of the tty driver.
 
 ### LEGOEV3 Line Discipline
-Source: [ev3_uart_sensor_ld.c](https://github.com/ev3dev/lego-linux-drivers/blob/master/sensors/ev3_uart_sensor_ld.c)
+Source: [ev3_uart_sensor_ld.c](https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/sensors/ev3_uart_sensor_ld.c)
 
 There are udev rules in place ([ev3.rules] in conjunction with [ev3-uart@.service])
 that attach the line discipline to a tty (serial port) when a UART sensor is
