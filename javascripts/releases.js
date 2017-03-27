@@ -68,7 +68,7 @@ function initDownloadLinks() {
             var $upperSection = $linkElem.children('.download-button-upper');
             if($upperSection.length <= 0) {
                 var $contents = $linkElem.contents();
-                $upperSection = $('<span/>').addClass('btn btn-lg btn-primary download-button-upper').appendTo($linkElem);
+                $upperSection = $('<span/>').addClass('btn btn-primary download-button-upper').appendTo($linkElem);
                 $contents.appendTo($upperSection);
             }
 

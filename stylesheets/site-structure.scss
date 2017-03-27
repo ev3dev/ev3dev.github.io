@@ -234,29 +234,59 @@ ul + p, ol + p {
     }
 
     .download-button-upper {
-        font-size: 25px;
         font-weight: bold; 
     }
 
     .download-button-lower {
         background-color: $gray;
         color: white;
-        font-size: 85%;
         
         padding-top: 4px;
         padding-bottom: 4px;
-        height: 30px;
 
         .badge {
             color: $gray;
             background-color: white;
 
             padding: 2px 5px;
-            font-size: 11px;
-            margin-right: -10px;
-            margin-left: 10px;
         }
     }
+
+    &.btn-group-lg {
+        .download-button-upper {
+            font-size: 25px;
+        }
+
+        .download-button-lower {
+            font-size: 85%;
+            height: 30px;
+
+            .badge {
+                font-size: 11px;
+                margin-right: -10px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &.btn-group-md {
+        .download-button-upper {
+            font-size: 17px;
+        }
+
+        .download-button-lower {
+            font-size: 75%;
+            height: 25px;
+
+            .badge {
+                font-size: 10px;
+                margin-right: -10px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    // small and extra-small download buttons are not used
 }
 
 // thanks http://stackoverflow.com/a/32490429/1976323
