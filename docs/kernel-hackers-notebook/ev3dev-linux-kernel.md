@@ -121,15 +121,15 @@ drivers to LMS2012 drivers.
 
 Most everything is in the [lego-linux-drivers] repository nowadays.
 
-[legoev3_analog.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_analog.c
-[legoev3_ports_in.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_ports_in.c
-[legoev3_ports_out.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_ports_out.c
-[legoev3_bluetooth.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_bluetooth.c
-[legoev3_i2c.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_i2c.c
-[legoev3_battery.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_battery.c
-[legoev3_motor.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_motor.c
-[tacho_motor_class.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/motors/tacho_motor_class.c
-[legoev3_sound.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_sound.c
+[legoev3_analog.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_analog.c
+[legoev3_ports_in.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_ports_in.c
+[legoev3_ports_out.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_ports_out.c
+[legoev3_bluetooth.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_bluetooth.c
+[legoev3_i2c.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_i2c.c
+[legoev3_battery.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_battery.c
+[legoev3_motor.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_motor.c
+[tacho_motor_class.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/motors/tacho_motor_class.c
+[legoev3_sound.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_sound.c
 [board-legoev3.c]: https://github.com/ev3dev/ev3-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/board-legoev3.c
 [legoev3-fiq.c]: https://github.com/ev3dev/ev3-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/legoev3-fiq.c
 [st7586fb.c]: https://github.com/ev3dev/ev3-kernel/blob/ev3dev-jessie/drivers/video/st7586fb.c
