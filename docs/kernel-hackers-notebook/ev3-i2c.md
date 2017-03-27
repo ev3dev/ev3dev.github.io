@@ -40,4 +40,4 @@ See [I2C Sensor Addressing](http://docs.ev3dev.org/projects/lego-linux-drivers/e
 [framework for I2C drivers]: https://www.kernel.org/doc/Documentation/i2c/
 [drivers/i2c/busses/i2c-davinci.c]: https://github.com/ev3dev/ev3-kernel/blob/ev3dev-jessie/drivers/i2c/busses/i2c-davinci.c
 [arch/arm/mach-davinci/legoev3-fiq.c]: https://github.com/ev3dev/ev3-kernel/blob/ev3dev-jessie/arch/arm/mach-davinci/legoev3-fiq.c
-[drivers/i2c/busses/i2c-legoev3.c]: https://github.com/ev3dev/lego-linux-drivers/blob/master/ev3/legoev3_i2c.c
+[drivers/i2c/busses/i2c-legoev3.c]: https://github.com/ev3dev/lego-linux-drivers/blob/ev3dev-jessie/ev3/legoev3_i2c.c
