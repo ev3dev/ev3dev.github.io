@@ -3,6 +3,7 @@ title: Downloads
 subtitle: Bootable SD card image files
 excerpt: Download ev3dev SD card images.
 no-wrapper: true
+redirect_from: /download/
 ---
 
 {% include /style/begin-section.html %}

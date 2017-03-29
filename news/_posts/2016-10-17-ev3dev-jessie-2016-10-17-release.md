@@ -80,4 +80,4 @@ Also, `sudo ev3dev-config` will help you with some basic administrative tasks.
 
 ### Download
 
-We have a fancy new [download](/download) page. Check it out!
+We have a fancy new [download](/downloads) page. Check it out!

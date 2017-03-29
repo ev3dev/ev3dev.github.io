@@ -21,4 +21,4 @@ More details are in the [release notes].
 
 ### Download
 
-You can find SD card images on our [download](/download) page.
+You can find SD card images on our [download](/downloads) page.

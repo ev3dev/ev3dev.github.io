@@ -14,7 +14,7 @@ There are multiple ways that you can upgrade ev3dev.
 
 This option will likely be the fastest by far. **However, by re-flashing your SD card, you will lose any files that were stored in your ev3dev installation, including code and installed programs.**
 
-Head over to our [downloads page](/download) to download the appropriate image
+Head over to our [downloads page](/downloads) to download the appropriate image
 and then follow the linked instructions at the top of that page to flash the
 flash to your SD card.
 
