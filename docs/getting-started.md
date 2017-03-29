@@ -62,7 +62,7 @@ please [open an issue on GitHub](/support){: .alert-link}.
 <br/>
 To get started, you will need to download the release corresponding to the platform
 you are using. For additional downloads and advanced information, check out our
-[dedicated download page](/download).
+[dedicated download page](/downloads).
 
 </div>
 <div class="release-link-alt" markdown="1">

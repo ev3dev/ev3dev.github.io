@@ -43,10 +43,10 @@ group: sd-card-image
     include the partition number.
 
     In this example we downloaded the compressed disk image file to
-    `~/Download/` and our SD card is `/dev/sdb`. Adjust these values as
+    `~/Downloads/` and our SD card is `/dev/sdb`. Adjust these values as
     needed. This will take a long time.
 
-        user@host ~ $ xzcat ~/Download/ev3dev-yyyy-mm-dd.img.xz | sudo dd bs=4M of=/dev/sdb
+        user@host ~ $ xzcat ~/Downloads/ev3dev-yyyy-mm-dd.img.xz | sudo dd bs=4M of=/dev/sdb
         [sudo] password for user:
 
     **TIP:** You can monitor the progress of this by running the following in
