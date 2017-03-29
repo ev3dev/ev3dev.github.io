@@ -18,6 +18,13 @@ redirect_from: /download/
                 page for installation instructions.
             </small>
         </p>
+        <div class="alert alert-info">
+            <p>
+                <span class="glyphicon glyphicon-info"></span>
+                Looking for ev3dev-stretch? You can find Debian Stretch-based images in our
+                <a class="alert-link" href="https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/">development snapshots</a>.
+            </p>
+        </div>
     </div>
 </div>
 <div class="row margin-bottom-xl">
