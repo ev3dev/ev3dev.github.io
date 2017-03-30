@@ -5,7 +5,7 @@ author: "@liam-b"
 ---
 
 {% include /style/icon.html type="warning" %}
-Note that Node.js runs frustratingly slowly on the EV3 brick and is limited to an old version of both Node.js and npm. You may want to consider using Python or another ev3dev-supported language instead.
+Note that Node.js runs frustratingly slowly on the EV3 brick and is limited to version v0.10.29 for Node.js and version 1.4.21 for npm. You may want to consider using Python or another ev3dev-supported language instead.
 {: .alert .alert-warning}
 
 <p class="lead">
