@@ -38,7 +38,7 @@ skips the parts that are unused space. This makes writing the image go two to
 three times faster than our previous release!
 
 [Getting Started]: /docs/getting-started
-[Etcher]: http://etcher.io
+[Etcher]: https://etcher.io
 [bmap]: https://source.tizen.org/documentation/reference/bmaptool
 
 
