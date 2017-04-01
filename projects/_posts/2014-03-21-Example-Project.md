@@ -19,7 +19,7 @@ excerpt: "An example/template project to make creating a new project page easier
 ---
 
 Put your content here. It will be processed as markdown using the 
-[kramdown](http://kramdown.gettalong.org/syntax.html) markdown engine.
+[kramdown](https://kramdown.gettalong.org/syntax.html) markdown engine.
 Most HTML will work too.
 
 Here are some suggestions for what to include in your description:

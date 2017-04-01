@@ -44,6 +44,7 @@ if [ "$TRAVIS" == "true" ]; then
         questforspace\.com
         bountysource\.com
         barryodonovan\.com
+        unity3d\.com
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source

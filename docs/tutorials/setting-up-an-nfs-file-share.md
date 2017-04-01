@@ -158,7 +158,7 @@ And then you should be able to see the files on your host computer when you do `
 - The [OS X `nfsd`][OSXnfsd] manpage
 - The [OS X `showmount`][OSXshowmount] manpage
 
-[OSXServerNFSExport]: http://support.apple.com/kb/HT4695
+[OSXServerNFSExport]: https://support.apple.com/kb/HT4695
 [BarryODonavanNFS]: https://www.barryodonovan.com/2012/12/12/apple-os-x-as-an-nfs-server-with-linux-clients
 [linuxexports5]:  https://linux.die.net/man/5/exports
 [linuxexportfs8]: https://linux.die.net/man/8/exportfs

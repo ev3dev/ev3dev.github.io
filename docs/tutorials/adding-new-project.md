@@ -118,7 +118,7 @@ edits, and will review and merge your changes when they get the chance.
 [projects page]: /projects
 [mindsensor.com]: http://mindsensors.com/
 [projects folder]: https://github.com/ev3dev/ev3dev.github.io/tree/master/projects/_posts
-[kramdown basics]: http://kramdown.gettalong.org/quickref.html
+[kramdown basics]: https://kramdown.gettalong.org/quickref.html
 [template project]: https://github.com/ev3dev/ev3dev.github.io/blob/master/projects/_posts/2014-03-21-Example-Project.md
 [template page]: /projects/2014/03/21/Example-Project/
 [raw template]: https://raw.githubusercontent.com/ev3dev/ev3dev.github.io/master/projects/_posts/2014-03-21-Example-Project.md
