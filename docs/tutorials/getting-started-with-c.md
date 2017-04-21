@@ -52,6 +52,25 @@ sudo apt-get update
 sudo apt-get install build-essential
 {% endhighlight %}
 
+If this doesn't work, you'll need to edit /etc/apt/sources.list using nano to include additional repositories:
+
+{% highlight sh %}
+sudo nano /etc/apt/sources.list
+{% endhighlight %}
+
+delete the '#' at the start of all lines that have one in this file. Save the file by pressing <kbd>Ctrl</kbd>+<kbd>O</kbd> and exit the editor with <kbd>Ctrl</kbd>+<kbd>X</kbd>. Now update the package list:
+
+{% highlight sh %}
+sudo apt-get update
+{% endhighlight %}
+
+This should allow the install to work:
+
+{% highlight sh %}
+sudo apt-get install build-essential
+{% endhighlight %}
+
+
 ## Create a project folder
 We need a place to store the code that you'll write. In the terminal, run the
 following commands:
