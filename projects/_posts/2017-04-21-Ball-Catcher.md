@@ -4,7 +4,7 @@ author: [ "@dsharlet" ] # your GitHub user name
 programming_language: "C++" # The programming language used in this project
 
 youtube_video_id: Y0w_cRt7RzI # The video ID of the YouTube video to be displayed with this post
-thumbnail_override: "/images/projects/2017-04-21-Ball-Catcher/2017-04-21-delta-robot.jpg" # If you don't have a YouTube video (or the video thumbnail isn't good) you can uncomment this line to set your own image for the project. 
+thumbnail_override: "/images/projects/2017-04-21-ball-catcher/2017-04-21-delta-robot.jpg" # If you don't have a YouTube video (or the video thumbnail isn't good) you can uncomment this line to set your own image for the project. 
 
 project_homepage_url: "http://www.dsharlet.com/2015/02/22/lego-mindstorms-delta-robot-catching-ball-stereo-vision/" # Homepage for this project
 source_code_url: "https://github.com/dsharlet/DeltaCatch" # Provide a link to your code
