@@ -73,3 +73,13 @@
 .breadcrumb > li + li::before {
     content: ">"
 }
+
+// Horizontally-scrollable <pre>
+// thanks http://stackoverflow.com/a/32772238/2422874
+pre, pre > code {
+    overflow: auto;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    white-space: pre;
+}
