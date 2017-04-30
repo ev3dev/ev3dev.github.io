@@ -28,10 +28,8 @@ review your changes before incorporating them into the site.
 Even if a page doesn't have the edit link, you can actually still make changes.
 Just find it [here][this-website].
 
-We are also in the process of migrating the [wiki] documentation to this site.
-It would be nice to get some help with this. There are just a [few pages left](https://github.com/ev3dev/ev3dev/issues/153#issuecomment-93602107)
-that need to be migrated. Pick one, copy it and go through it to make sure
-links works and the information is still relevant.
+You can also contribute to our more informal [wiki] if you are not comfortable
+with contributing to the main website.
 
 ## Write some software
 
@@ -76,7 +74,6 @@ These contributions will be used to purchase additional hardware, like sensors a
 
 [pull requests]: https://help.github.com/articles/using-pull-requests
 [wiki]: https://github.com/ev3dev/ev3dev/wiki
-[contribute-to-wiki]: https://github.com/ev3dev/ev3dev/wiki/How-to-Contribute-to-This-Wiki
 [this-website]: https://github.com/ev3dev/ev3dev.github.io
 [GitHub Help]: https://help.github.com/
 [mindsensors.com EV3 Console Adapter]: http://mindsensors.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=189&MMN_position=39:39
