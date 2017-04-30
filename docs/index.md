@@ -9,13 +9,6 @@ excerpt: "ev3dev documentation, tutorials, technical reference, getting started 
 If there's a topic that you think we should have docs for, please
 consider [contributing](../contribute).
 
-[Some pages](https://github.com/ev3dev/ev3dev/issues/153#issuecomment-93602107)
-have not been migrated from our old wiki yet. We'd love some help
-with getting these last few pages migrated! If you would like to
-help out, read more about what's needed in the
-[documentation section](../contribute#write-some-documentation)
-of our "contributing" page.
-
 {% include /style/end-panel.html %}
 
 
