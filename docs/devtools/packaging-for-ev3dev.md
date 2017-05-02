@@ -197,7 +197,7 @@ building packages for yourself.
 8.  Upload the new release to the ev3dev archive using `dput`.
 
     If you have never uploaded before, you will need to send your SSH public key
-    to @dlech and save the following as `~/.dput.cf`:
+    and your GPG public key to @dlech and save the following as `~/.dput.cf`:
 
         [ev3dev-debian]
         login           = ev3dev-upload
