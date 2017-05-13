@@ -102,9 +102,13 @@ control panel first][shared-drives]{: .alert-link}!
 
 {% include /style/begin-panel.html type="info" heading="Docker Toolbox" %}
 If you are using Windows 10 Home edition, you may have received the following error:
+
 `HyperV is not available on home editions. Please use Docker Toolbox.`
-This is fine, you can just [download Docker Toolbox instead][docker-toolbox]{: .alert-link}. Docker Toolbox however handles shared drives differently; there is no whale icon in the system tray. Instead, Docker Toolbox automatically allows sharing of your `C:\Users\myname` folder.
-Also, the path handling is different, you have to use paths in linux style, so the command would be
+
+This is fine, you can just [download Docker Toolbox instead][docker-toolbox]{: .alert-link}.
+
+Docker Toolbox however handles shared drives differently; there is no whale icon in the system tray. Instead, Docker Toolbox automatically allows sharing of your `C:\Users\myname` folder. Also, the path handling is different, you have to use paths in linux style, so the command would be
+
 `docker run --rm --it -v /c/Users/myname/example/:/src -w /src ev3cc`
 {% include /style/end-panel.html %}
 
