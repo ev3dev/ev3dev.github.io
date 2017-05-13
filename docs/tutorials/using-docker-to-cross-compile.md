@@ -101,7 +101,7 @@ control panel first][shared-drives]{: .alert-link}!
 [shared-drives]: https://docs.docker.com/docker-for-windows/#/shared-drives
 
 {% include /style/begin-panel.html type="info" heading="Docker Toolbox" %}
-If you are using Windows 10 Home edition, you may have received the following error:
+Unless you are using Windows 10 Pro edition, you may have received the following error when trying to install Docker using `Install Docker.msi`:
 
 `HyperV is not available on home editions. Please use Docker Toolbox.`
 
