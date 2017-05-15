@@ -100,6 +100,20 @@ control panel first][shared-drives]{: .alert-link}!
 
 [shared-drives]: https://docs.docker.com/docker-for-windows/#/shared-drives
 
+{% include /style/begin-panel.html type="info" heading="Docker Toolbox" %}
+Unless you are using Windows 10 Pro edition, you may have received the following error when trying to install Docker using `Install Docker.msi`:
+
+`HyperV is not available on home editions. Please use Docker Toolbox.`
+
+This is fine, you can just [download Docker Toolbox instead][docker-toolbox]{: .alert-link}.
+
+Docker Toolbox however handles shared drives differently; there is no whale icon in the system tray. Instead, Docker Toolbox automatically allows sharing of your `C:\Users\myname` folder. Also, the path handling is different, you have to use paths in linux style, so the command below has to be changed:
+
+`docker run --rm --it -v /c/Users/myname/example/:/src -w /src ev3cc`
+{% include /style/end-panel.html %}
+
+[docker-toolbox]: https://www.docker.com/products/docker-toolbox
+
 Now, we compile using the docker image. First we run a new docker container...
 
     docker run --rm -it -v C:\Users\myname\example\:/src -w /src ev3cc
