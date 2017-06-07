@@ -50,6 +50,17 @@ to learn.
 
 [Get started with JavaScript](https://github.com/wasabifan/ev3dev-lang-js){: .btn .btn-default }
 
+## Java
+<http://ev3dev-lang-java.github.io/>
+
+Java is a general-purpose computer programming language that is concurrent,
+
+class-based, object-oriented. In Java 8, the language added some functional
+
+ features very interesting to learn.
+
+[Get started with Java](https://github.com/ev3dev-lang-java/ev3dev-lang-java){: .btn .btn-default }
+
 ## Go
 <https://github.com/ev3go/ev3dev>
 
@@ -128,9 +139,6 @@ contributing to it to get it updated and ready to use.
 
 ## Pure Java
 <https://github.com/mob41/ev3dev-lang-java>
-
-## Java LeJOS compatibility layer
-<https://github.com/ev3dev-lang-java/ev3dev-lang-java>
 
 ## R
 <https://github.com/ev3dev/ev3dev-lang/tree/R-legacy/R>
