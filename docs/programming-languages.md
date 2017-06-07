@@ -53,8 +53,7 @@ to learn.
 ## Java
 <http://ev3dev-lang-java.github.io/>
 
-Java is a general-purpose computer programming language that is concurrent,
-class-based, object-oriented. In Java 8, the language added some functional features very interesting to learn.
+Java is a general-purpose computer programming language that is concurrent,class-based, object-oriented. In Java 8, the language added some functional features very interesting to learn.
 
 [Get started with Java](https://github.com/ev3dev-lang-java/ev3dev-lang-java){: .btn .btn-default }
 
