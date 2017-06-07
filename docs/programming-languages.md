@@ -50,10 +50,12 @@ to learn.
 
 [Get started with JavaScript](https://github.com/wasabifan/ev3dev-lang-js){: .btn .btn-default }
 
-## Java
+## Java with LeJOS.
 <http://ev3dev-lang-java.github.io/>
 
 Java is a general-purpose computer programming language that is concurrent,class-based, object-oriented. In Java 8, the language added some functional features very interesting to learn.
+
+In this project, the Objects to manage the robot follow the LeJOS Approach. The project has support for EV3 Sensors and the LeJOS local navigation stack.
 
 [Get started with Java](https://github.com/ev3dev-lang-java/ev3dev-lang-java){: .btn .btn-default }
 
