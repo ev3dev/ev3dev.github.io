@@ -55,7 +55,7 @@ to learn.
 
 Java is a general-purpose computer programming language that is concurrent,class-based, object-oriented. In Java 8, the language added some functional features very interesting to learn.
 
-The project has support for EV3 Sensors and Actuators. The project include support for LeJOS local navigation stack.
+The project has support for EV3 Sensors and Actuators. The project includes the support for LeJOS local navigation stack.
 
 In this project, the Objects included in the different libraries follow the LeJOS Interfaces, not confuse with another Java project based on [ev3dev unified language binding for Java](https://github.com/mob41/ev3dev-lang-java)
 
