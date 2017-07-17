@@ -103,10 +103,10 @@ Now update the fstab on the EV3.
 
 On the EV3 we first need to enable and start NFS modules. Type these commands on the command line:
 
-    systemctl enable nfs-common.service
-    systemctl start nfs-common.service
-    systemctl enable rpcbind.service
-    systemctl start rpcbind.service
+    sudo systemctl enable nfs-common.service
+    sudo systemctl start nfs-common.service
+    sudo systemctl enable rpcbind.service
+    sudo systemctl start rpcbind.service
 
 Next you'll need to update a file (as root) called `/etc/fstab`. You should have already set up USB Networking, so `ssh` to the EV3 and run an editor like `vi` or `nano` to edit the file. Here's the line you want to add to `/etc/fstab` - DO NOT TOUCH ANYTHING ELSE IN THERE!
 
