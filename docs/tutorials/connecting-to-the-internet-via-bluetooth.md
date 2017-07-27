@@ -275,7 +275,7 @@ If you are using an older version, please upgrade.
 
         {% include /util/screenshot.html source="/images/brickman/bluetooth-powered-my-computer.png" %}
 		
-	4.  Select your computer from the menu and then select the *Pair* button. On the your host computer click on 
+	4.  Select your computer from the menu and then select the *Pair* button. (If you don't know how your computer is named, click on *Home* > *System* > *About*. Here your *PC name* should be listed) On the your host computer click on 
 		ev3dev and then select the *Pair*
 
         {% include /util/screenshot.html source="/images/brickman/bluetooth-my-computer-not-paired.png" %}
