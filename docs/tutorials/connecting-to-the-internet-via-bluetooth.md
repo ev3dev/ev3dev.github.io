@@ -296,7 +296,7 @@ If you are using an older version, please upgrade.
 
    7.   Select *Connect* here. You can also check the box for *Connect automatically*.
         This way you don't have to connect manually after you reboot.
-        On the host computer it shouold look like this:
+        On the host computer it should look like this:
         
         #Picture	
         {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-connect-selected.png" %}
