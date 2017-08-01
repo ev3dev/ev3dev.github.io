@@ -270,7 +270,7 @@ If you are using an older version, please upgrade.
    2.   On your host computer, go to: *Start* > *Settings* > *Devices* > *Bluetooth*. Turn Bluethooth *On*.
         It should look like this:
         
-        {% include /util/screenshot.html source="/images/windows/10/BluethoothXName.PNG" %}
+        {% include /util/screenshot.html source="/images/windows/10/bluethooth-settings.PNG" %}
 
    3.   On the EV3, select *Start Scan* on the *Bluetooth* menu. It should find your
         computer. (This could take a while)
@@ -285,7 +285,7 @@ If you are using an older version, please upgrade.
 
    5.   Confirm the passkey on both devices when requested.
         
-        {% include /util/screenshot.html source="/images/windows/10/Capture.PNG" %}
+        {% include /util/screenshot.html source="/images/windows/10/bluethooth-confirm-passkey-pc.PNG" %}
         {% include /util/screenshot.html source="/images/brickman/bluetooth-confirm-passkey.png" %}
 	
    6.   On the EV3, you should have a *Network Connection* button. Select it to
@@ -298,7 +298,7 @@ If you are using an older version, please upgrade.
         This way you don't have to connect manually after you reboot.
         On the host computer it should look like this:
         
-        {% include /util/screenshot.html source="/images/windows/10/ConnectedEV3dev.PNG" %}	
+        {% include /util/screenshot.html source="/images/windows/10/bluethooth-connected-ev3dev.PNG" %}	
         {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-connect-selected.png" %}
 
    8.   *State* should change to *Connected* to indicate that the EV3 has an Internet connection.
