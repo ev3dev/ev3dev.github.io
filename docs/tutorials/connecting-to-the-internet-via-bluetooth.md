@@ -255,7 +255,60 @@ If you are using an older version, please upgrade.
 
         {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
 
-*   {: tab="Windows"}__HELP WANTED!__ See [issue #287](https://github.com/ev3dev/ev3dev/issues/287).
+*   {: tab="Windows"}{% include /style/icon.html type="info" %}
+    These instructions were written using Windows 10 Enterprise.
+    It should work for other versions of Windows 10 as well.
+    {: .alert .alert-info}
+
+    1.  On the EV3, first verify that Bluetooth is powered on. In brickman 
+        open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
+        *Powered* checkbox is checked. (The *Visible* checkbox doesn't matter)
+        The Bluetooth icon next to the battery in the status bar also indicates that Bluetooth is powered on.
+
+        {% include /util/screenshot.html source="/images/brickman/bluetooth-powered-visible-no-devices.png" %}
+
+   2.   On your host computer, go to: *Start* > *Settings* > *Devices* > *Bluetooth*. Turn Bluethooth *On*.
+        It should look like this:
+        
+        {% include /util/screenshot.html source="/images/windows/10/bluethooth-settings.png" %}
+
+   3.   On the EV3, select *Start Scan* on the *Bluetooth* menu. It should find your
+        computer. (This could take a while)
+
+        {% include /util/screenshot.html source="/images/brickman/bluetooth-powered-my-computer.png" %}
+
+   4.   Select your computer from the menu and then select the *Pair* button. (If you don't know how your computer is named,
+        click on *Home* > *System* > *About*. Here your *PC name* should be listed) On the your host computer click on 
+        ev3dev and then select the *Pair*
+
+        {% include /util/screenshot.html source="/images/brickman/bluetooth-my-computer-not-paired.png" %}
+
+   5.   Confirm the passkey on both devices when requested.
+        
+        {% include /util/screenshot.html source="/images/windows/10/bluethooth-confirm-passkey-pc.png" %}
+        {% include /util/screenshot.html source="/images/brickman/bluetooth-confirm-passkey.png" %}
+	
+   6.   On the EV3, you should have a *Network Connection* button. Select it to
+        open the network connection settings. (You can also find the connection
+        in *Wireless and Networks > All Network Connections*)
+
+        {% include /util/screenshot.html source="/images/brickman/bluetooth-my-computer-0-network-connection-selected.png" %}
+
+   7.   Select *Connect* here. You can also check the box for *Connect automatically*.
+        This way you don't have to connect manually after you reboot.
+        On the host computer it should look like this:
+        
+        {% include /util/screenshot.html source="/images/windows/10/bluethooth-connected-ev3dev.png" %}	
+        {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-connect-selected.png" %}
+
+   8.   *State* should change to *Connected* to indicate that the EV3 has an Internet connection.
+        (This could take a little bit longer)
+        Now you can see the IP-address of the EV3 in the status bar. It should be something like *192.164.137.3*.
+        If it isn't or you like to change it: (*Wireless and Networks > All Network Connections* > 
+        *Your-PC-Name* >) *IPv4* > *Change* > *Load Windows defaults*
+       
+        {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
+	
 {: tab-list="os"}
 
 Now that you have a network connection, you should
