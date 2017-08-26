@@ -70,7 +70,8 @@ If you are using an older version, please upgrade.
     These instructions were written using Ubuntu 15.10 and the default desktop
     (aka Unity). However, the instructions should work for other versions of Ubuntu
     and its derivatives as well as other desktops like GNOME Shell, Cinnamon
-    and MATE.
+    and MATE. Ubuntu 17.05 needs to have the `dnsmasq` package installed for this
+    to work (it is not installed by default).
     {:class="alert alert-info"}
 
     1.  On your host computer, with the EV3 connected via USB, open up the
