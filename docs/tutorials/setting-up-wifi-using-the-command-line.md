@@ -15,7 +15,7 @@ Here is how. It's easy in an interactive tool call `connmanctl`. You connect
 once, and next time you boot, it's all configured. On my ev3dev machine it went
 like this:
 
-    robot@ev3dev:~$ sudo connmanctl
+    robot@ev3dev:~$ connmanctl
     Error getting VPN connections: The name net.connman.vpn was not provided by any
     connmanctl> enable wifi
     Enabled wifi
