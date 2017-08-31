@@ -13,10 +13,6 @@ notebook computer. This means that we get the same versions of all of the librar
 running on the EV3 but compile with the power of a desktop processor.
 {: .lead .clearfix}
 
-We are totally new to Docker, so this tutorial is a work in progress. Please
-let us know if you have problems or find a better way of doing it!
-{: .lead .well}
-
 [Docker]: http://www.docker.com/
 
 {% include /style/icon.html type="warning" %}
