@@ -46,6 +46,9 @@ if [ "$TRAVIS" == "true" ]; then
         barryodonovan\.com
         unity3d\.com
         x3dom\.org
+        https:\/\/connectbot\.org
+        https:\/\/etcher\.io
+        https:\/\/www\.noflojs\.org
         https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
     }.map{|h| "/#{h}/"}.join(",")')
 else
