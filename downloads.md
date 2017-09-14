@@ -109,7 +109,7 @@ redirect_from: /download/
             We occasionally build images for testing purposes. These images
             are published without any prior testing and there are no release
             notes. However, you might be interested in these images if you
-            want to try out the latest bug fixes.
+            want to try out the latest new features and bug fixes.
         </p>
         <div class="margin-top-md">
             <a class="btn btn-md btn-primary" href="https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/">
@@ -162,7 +162,7 @@ Since ev3dev is based on Debian Linux many software packages come
 from the official Debian repositories. Source code for these packages
 can be found at [packages.debian.org](https://packages.debian.org).
 
-The software the was developed by ev3dev.org is hosted on the
+The software that was developed by ev3dev.org is hosted on the
 [ev3dev GitHub](https://github.com/ev3dev) site. Direct
 links to some of the more interesting repositories are listed below.
 
