@@ -16,4 +16,4 @@ is (hopefully) sufficient to get all of the changes.
 
 [ev3dev kernel]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-rpi2/changelog
 [Download]: https://github.com/ev3dev/ev3dev/releases/tag/rpi2-ev3dev-jessie-2015-09-15
-[release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/rpi2-ev3dev-jessie-2015-09-15.img-release-notes.md
+[release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/rpi2-ev3dev-jessie-2015-09-15.img-release-notes.md

@@ -12,4 +12,4 @@ of new packages that you do need to install though: `iptables` and `ev3dev-connm
 Here is the [download] and the [release notes].
 
 [download]: https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-02-24
-[release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3dev-jessie-2015-02-24.img-release-notes.md
+[release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/ev3dev-jessie-2015-02-24.img-release-notes.md

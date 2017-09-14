@@ -92,7 +92,7 @@ a Raspberry Pi 2 to the cause, we can make an image for it too.
 
 [Debian Kernel Handbook]: http://kernel-handbook.alioth.debian.org/
 [Download]: https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-05-01
-[release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3dev-jessie-2015-05-01.img-release-notes.md
+[release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/ev3dev-jessie-2015-05-01.img-release-notes.md
 [dc-motor class]: /docs/drivers/dc-motor-class/
 [servo-motor class]: /docs/drivers/servo-motor-class/
 [tacho-motor class]: /docs/drivers/tacho-motor-class/

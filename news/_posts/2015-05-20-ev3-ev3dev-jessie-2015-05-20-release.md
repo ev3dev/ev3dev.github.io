@@ -84,7 +84,7 @@ A tiny 4x6 font for cramming as much as possible on the EV3 screen.
 
 
 [Download]: https://github.com/ev3dev/ev3dev/releases/tag/ev3-ev3dev-jessie-2015-05-20
-[release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3-ev3dev-jessie-2015-05-20.img-release-notes.md
+[release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/ev3-ev3dev-jessie-2015-05-20.img-release-notes.md
 [ev3dev changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
 [ckt11 changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-May/057147.html
 [BrickPi]: http://www.dexterindustries.com/BrickPi/

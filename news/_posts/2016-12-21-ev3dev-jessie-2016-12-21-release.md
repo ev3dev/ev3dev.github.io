@@ -16,7 +16,7 @@ There are of course a few changes though. There are some updated packages and an
 updated kernel with some bug fixes. There is also a new `python3-rpyc` package.
 More details are in the [release notes].
 
-[release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3dev-jessie-ev3-generic-2016-12-21-release-notes.md
+[release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/ev3dev-jessie-ev3-generic-2016-12-21-release-notes.md
 
 
 ### Download

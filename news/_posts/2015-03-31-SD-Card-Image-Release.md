@@ -15,4 +15,4 @@ Here is the [download] and the [release notes].
 
 [#267]: https://github.com/ev3dev/ev3dev/issues/267
 [download]: https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-03-31
-[release notes]: https://github.com/ev3dev/ev3dev/blob/master/release-notes/ev3dev-jessie-2015-03-31.img-release-notes.md
+[release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/ev3dev-jessie-2015-03-31.img-release-notes.md
