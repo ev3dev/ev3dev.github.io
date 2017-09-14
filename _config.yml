@@ -11,7 +11,7 @@ exclude:
   - .travis.yml
   - maintainer-notes.md
 
-gems:
+plugins:
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-redirect-from
