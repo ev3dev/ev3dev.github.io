@@ -12,7 +12,7 @@ title: EV3 Sound
 
 ## Device Driver
 
-The driver is implemented as an [ALSA](https://www.kernel.org/doc/Documentation/sound/alsa/) sound driver. There is an [input](https://www.kernel.org/doc/Documentation/input/input.txt) device that is integrated into the ASLA driver to provide a system beep (e.g. ^G). There are also extra attributes for manually controlling tone mode since the input device required root privileges when used from a remote terminal (i.e. ssh).
+The driver is implemented as an [ALSA](https://www.kernel.org/doc/html/latest/sound/index.html) sound driver. There is an [input](https://www.kernel.org/doc/Documentation/input/input.txt) device that is integrated into the ASLA driver to provide a system beep (e.g. ^G). There are also extra attributes for manually controlling tone mode since the input device required root privileges when used from a remote terminal (i.e. ssh).
 
 ## Notes
 

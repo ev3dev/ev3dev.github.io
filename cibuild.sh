@@ -45,6 +45,8 @@ if [ "$TRAVIS" == "true" ]; then
         bountysource\.com
         barryodonovan\.com
         unity3d\.com
+        x3dom\.org
+        https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
@@ -53,6 +55,7 @@ else
         https:\/\/github\.com\/myuser\/myrepo
         https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
         robosnap.net
+        https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
     }.map{|h| "/#{h}/"}.join(",")')
 fi
 
