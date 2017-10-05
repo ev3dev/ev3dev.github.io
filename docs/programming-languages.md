@@ -50,6 +50,19 @@ to learn.
 
 [Get started with JavaScript](https://github.com/wasabifan/ev3dev-lang-js){: .btn .btn-default }
 
+## Java
+<https://github.com/mob41/ev3dev-lang-java>
+
+Comparing with other different programming languages, Java is suitable for beginners in programming. It is a object-oriented programming language that can easily represent the objects in the real life. Through learning from the [official Java online document](https://docs.oracle.com/javase/tutorial/) and [getting started from jev3dev](https://jev3dev.tk/), you will catch up with programming using Java in ev3dev. Moreover, as Java's syntax is based on C, C/C++/C# programmers are probably hookable into Java.
+
+This project is implemented according the [unified language binding specification](http://ev3dev-lang.readthedocs.org/en/latest/spec.html) that ensures you can access the wanted function on every unified bindings on ev3dev.
+
+In addition to features, this binding has also included a dominant way to draw graphics on the EV3 display easily through the [Java Graphics2D API](https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html). It allows you to draw different shapes and images with a single instruction. For more details about this, please visit [the following page](http://www.jev3dev.tk/getting_started-lcd-hello_world.html).
+
+If you are new from programming, or moving from C/C++/C#, you are also recommended to use Java.
+
+[Get started with Java](https://jev3dev.tk/getting_started.html){: .btn .btn-default }
+
 ## Java (LeJOS-compatible)
 <http://ev3dev-lang-java.github.io/>
 
