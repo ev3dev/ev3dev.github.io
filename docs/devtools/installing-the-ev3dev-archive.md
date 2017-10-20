@@ -9,14 +9,18 @@ on one of our debian packages, you will need some packages from this archive.
 
 If you just want to write programs for the EV3 itself, you don't need this.
 
-Adding it is quite simple. Save the following as `/etc/apt/sources.list.d/ev3dev.list`.
+Only Ubuntu Trusty (for Travis CI) and the latest Ubuntu LTS are supported
+(the latest Ubuntu Stable might work).
 
-    deb http://archive.ev3dev.org/ubuntu trusty main
-    #deb-src http://archive.ev3dev.org/ubuntu trusty main
+{% include /style/icon.html type="info" %}
+This package archive was move from `archive.ev3dev.org` to a PPA in mid-2017.
+If you are using `archive.ev3dev.org`, you should delete it from `/etc/apt/lists.d/`
+and set up the new PPA instead.
+{: .alert .alert-info}
 
-Then trust the keyring by running...
+Adding it is quite simple. Just run the following command.
 
-    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys D57D95AF93178A7C
+    sudo apt-add-repository ppa:ev3dev/tools
 
 Now, lets try it out...
 
