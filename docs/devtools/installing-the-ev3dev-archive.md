@@ -24,7 +24,7 @@ Adding it is quite simple. Just run the following command.
 
 Now, lets try it out...
 
-    sudo apt-get update
-    sudo apt-get install ev3dev-archive-keyring
+    sudo apt update
+    sudo apt install ev3dev-archive-keyring
 
 If the package installs, then you are good to go.
