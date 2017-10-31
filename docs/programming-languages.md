@@ -21,7 +21,7 @@ the programming languages page!
 </div>
 
 ## Python
-<https://github.com/rhempel/ev3dev-lang-python>
+<https://github.com/ev3dev/ev3dev-lang-python>
 
 Python is a high-level, general-purpose, interpreted scripting language. It is
 great for beginners, while also powerful for experienced coders. If you are new
