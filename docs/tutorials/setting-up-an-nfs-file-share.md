@@ -1,7 +1,7 @@
 ---
 title: Setting Up an NFS File Share
 group: advanced-networking
-author: [ "@antonvh","@rhempel","JNFitzgerald" ]
+author: [ "@antonvh","@rhempel","JNFitzgerald", "Jesko Appelfeller" ]
 ---
 
 * Table of Contents
@@ -101,52 +101,6 @@ Now update the fstab on the EV3.
 
 ## How To Do It - EV3
 
-On the EV3 we first need to enable and start NFS modules. Type these commands on the command line:
-
-    sudo systemctl enable nfs-common.service
-    sudo systemctl start nfs-common.service
-    sudo systemctl enable rpcbind.service
-    sudo systemctl start rpcbind.service
-
-Next you'll need to update a file (as root) called `/etc/fstab`. You should have already set up USB Networking, so `ssh` to the EV3 and run an editor like `vi` or `nano` to edit the file. Here's the line you want to add to `/etc/fstab` - DO NOT TOUCH ANYTHING ELSE IN THERE!
-
-
-    # NOTE - the following examples all use the same IP address for the host, in practice, there would
-    #        be separate addresses for each host!
-
-    # For the Linux example, it would look like:
-    192.168.2.1:/home/hostuserid/nfs/ev3dev /home/robot/nfs/linux   nfs users,noauto,rw,vers=3  0 0
-
-    # For the Windows Hanewin example, it would look like:
-    192.168.0.199:\E\Users\James\Dropbox\ev3dev                       /home/robot/nfs/windows nfs users,noauto,rw,vers=3  0 0
-
-    # For the OSX example, it would look like:
-    192.168.2.1:/Users/youruserid/Public    /home/robot/nfs/osx     nfs users,noauto,rw,vers=3  0 0
-
-
-It's not too hard to figure out what's going on here. The host machine with the nfs mount is at `192.168.2.1` and we added `/home/hostuserid/nfs/ev3dev` (or whatever the host is exporting the directory as) to the `/etc/exports` file on that machine. The next section of the line says we want to mount it locally at `/home/ev3userid/nfs/linux`, or whatever directory you choose.
-
-The options tell `mount` that:
-
-- this is an nfs share
-- we do not want to automatically mount it at boot time (in case the host is not connected)
-- general users are allowed to mount the share
-- we want read/write access
-- we are using nfs V3 on the host
-
-Once you've updated the `/etc/fstab` file, you will need to create the mount points. Since I test `ev3dev` o n all three major platforms, I have separate directories for each nfs host. You probably only need to create one of these, but this script creates all three for me:
-
-    mkdir -p ~/nfs/linux
-    mkdir -p ~/nfs/windows
-    mkdir -p ~/nfs/osx
-
-Then all you need to do is mount the share, like this: 
-
-    mount ~/nfs/linux
-    
-...or whichever of the above three directories you want to mount.
-
-And then you should be able to see the files on your host computer when you do `ls /home/ev3userid/nfs/ev3dev`!
 
 ## References
 
