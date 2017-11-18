@@ -97,9 +97,53 @@ After creating the file, the `nfsd` daemon [should automatically start up][OSXSe
 
 If you make changes to `/etc/exports`, activate them with `nfsd update`.
 
-Now update the fstab on the EV3.  
-
 ## How To Do It - EV3
+
+On the client - ev3dev - side, we need to create a system mount unit in order to mount our newly created NFS share. **Note**: The classic way of mounting the NFS share via an entry in /etc/fstab does not work!
+
+First off, we need the NFS kernel module. Open an SSH connection to ev3dev and type the following:
+
+    modprobe nfs
+    
+To make this persistent across reboots, we need to add NFS to the module file:
+
+    echo NFS >> /etc/modules
+    
+Next, we need to create a system mount unit file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
+
+Create and open the file `/etc/systemd/system/home-robot-nfsshare.mount`. Add the following sections:
+
+    [Unit]
+    Description=Mount an nfs share
+    After=network.target
+    
+    [Mount]
+    What=192.168.0.10:/path/to/shared/folder
+    Where=/home/robot/nfsshare
+    Type=nfs
+    
+    [Install]
+    WantedBy=multi-user.target
+    
+The `[Unit]` section provides a general description of the systemd unit file we have just created. The `After=network.target` line tells systemd to only attempt to mount this after a network connection has been established.
+
+The `[Mount]` section describes what to mount where. For the `What=` line, replace `192.168.0.10` with the IP addres of the computer on which you configured your NFS share and `/path/to/shared/folder` with the folder you have configured to be shared. As stated above, `/home/robot/nfsshare` is the path where we want to mount the NFS share.
+
+The `[Install]` section describes, when to start this unit after it has been enabled. `WantedBy=multi-user.target` means that this file will be executed after the system is ready for a user to log in.
+
+In order to mount the NFS share, you first need to reload the systemd daemon:
+
+    systemctl daemon-reload
+    
+Then, we need to start the mount unit we have just created:
+
+    systemctl start home-robot-nfsshare.mount
+    
+To verify that everything worked, look into the `/home/robot/nfsshare` directory and check that the files from your NFS share are there. **Note**: The directory `/home/robot/nfsshare` should have been created automatically.
+
+If you want your NFS share to be mounted at boot, you need to enable the mount unit by typing:
+
+    systemctl enable home-robot-nfsshare.mount
 
 
 ## References
@@ -119,3 +163,5 @@ Now update the fstab on the EV3.
 [OSXexports5]: http://www.manpages.info/macosx/exports.5.html
 [OSXnfsd]: http://www.manpages.info/macosx/nfsd.8.html 
 [OSXshowmount]: http://www.manpages.info/macosx/showmount.8.html
+[systemd mount units]: https://www.freedesktop.org/software/systemd/man/systemd.mount.html
+
