@@ -99,17 +99,11 @@ If you make changes to `/etc/exports`, activate them with `nfsd update`.
 
 ## How To Do It - EV3
 
-On the client - ev3dev - side, we need to create a system mount unit in order to mount our newly created NFS share. **Note**: The classic way of mounting the NFS share via an entry in /etc/fstab does not work!
+On the client - ev3dev - side, we need to create, test and enable a systemd `mount.unit` file in order to mount our newly created NFS share. {% include /style/icon.html type="warning" %}
+The classic way of mounting the NFS share via an entry in /etc/fstab does not work!
+{: .alert .alert-warning}
 
-First off, we need the NFS kernel module. Open an SSH connection to ev3dev and type the following:
-
-    modprobe nfs
-    
-To make this persistent across reboots, we need to add NFS to the module file:
-
-    echo NFS >> /etc/modules
-    
-Next, we need to create a system mount unit file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
+First off, we need to create our `mount.unit` file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
 
 Create and open the file `/etc/systemd/system/home-robot-nfsshare.mount`. Add the following sections:
 
@@ -133,17 +127,17 @@ The `[Install]` section describes, when to start this unit after it has been ena
 
 In order to mount the NFS share, you first need to reload the systemd daemon:
 
-    systemctl daemon-reload
+    sudo systemctl daemon-reload
     
 Then, we need to start the mount unit we have just created:
 
-    systemctl start home-robot-nfsshare.mount
+    sudo systemctl start home-robot-nfsshare.mount
     
 To verify that everything worked, look into the `/home/robot/nfsshare` directory and check that the files from your NFS share are there. **Note**: The directory `/home/robot/nfsshare` should have been created automatically.
 
 If you want your NFS share to be mounted at boot, you need to enable the mount unit by typing:
 
-    systemctl enable home-robot-nfsshare.mount
+    sudo systemctl enable home-robot-nfsshare.mount
 
 
 ## References
