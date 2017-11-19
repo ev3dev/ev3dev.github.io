@@ -63,8 +63,12 @@ refresh your browser.
 Previewing Your Changes Online
 ---
 
-We have a special script to use to publish your changes using the `gh-pages`
-branch of your fork of ev3dev.github.io. If you have SSH setup for your GitHub
+We have a special ruby script to use to publish your changes using the `gh-pages`
+branch of your fork of ev3dev.github.io. 
+
+It requires you to install Ruby (see previous section), but Jekyll is not needed.
+
+If you have SSH setup for your GitHub
 account, simply run`./publish.rb <gh-user>` where `<gh-user>` is your actual GitHub
 user name.
 This will copy the contents of `_site`, fix it up a bit and push it to your
