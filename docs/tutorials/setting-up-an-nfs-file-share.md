@@ -99,13 +99,13 @@ If you make changes to `/etc/exports`, activate them with `nfsd update`.
 
 ## How To Do It - EV3
 
-On the client - ev3dev - side, we need to create, test and enable a systemd `mount.unit` file in order to mount our newly created NFS share.
+On the client - ev3dev - side, we need to create, test and enable a systemd [systemd.mount] file in order to mount our newly created NFS share.
 
 {% include /style/icon.html type="warning" %}
 The classic way of mounting the NFS share via an entry in `/etc/fstab` does not work! It can cause ev3dev to hang during boot up.
 {: .alert .alert-warning}
 
-First off, we need to create our `mount.unit` file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
+First off, we need to create our [systemd.mount] file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
 
 Create and open the file `/etc/systemd/system/home-robot-nfsshare.mount`. Add the following sections:
 
@@ -159,5 +159,4 @@ If you want your NFS share to be mounted at boot, you need to enable the mount u
 [OSXexports5]: http://www.manpages.info/macosx/exports.5.html
 [OSXnfsd]: http://www.manpages.info/macosx/nfsd.8.html 
 [OSXshowmount]: http://www.manpages.info/macosx/showmount.8.html
-[systemd mount units]: https://www.freedesktop.org/software/systemd/man/systemd.mount.html
-
+[systemd.mount]: https://manpages.debian.org/jessie/systemd/systemd.mount.5.en.html
