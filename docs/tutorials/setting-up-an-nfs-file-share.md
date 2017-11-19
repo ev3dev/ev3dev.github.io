@@ -99,8 +99,10 @@ If you make changes to `/etc/exports`, activate them with `nfsd update`.
 
 ## How To Do It - EV3
 
-On the client - ev3dev - side, we need to create, test and enable a systemd `mount.unit` file in order to mount our newly created NFS share. {% include /style/icon.html type="warning" %}
-The classic way of mounting the NFS share via an entry in /etc/fstab does not work!
+On the client - ev3dev - side, we need to create, test and enable a systemd `mount.unit` file in order to mount our newly created NFS share.
+
+{% include /style/icon.html type="warning" %}
+The classic way of mounting the NFS share via an entry in `/etc/fstab` does not work! It can cause ev3dev to hang during boot up.
 {: .alert .alert-warning}
 
 First off, we need to create our `mount.unit` file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
