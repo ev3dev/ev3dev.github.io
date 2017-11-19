@@ -1,7 +1,7 @@
 ---
 title: Setting Up an NFS File Share
 group: advanced-networking
-author: [ "@antonvh","@rhempel","JNFitzgerald" ]
+author: [ "@antonvh","@rhempel","JNFitzgerald", "Jesko Appelfeller" ]
 ---
 
 * Table of Contents
@@ -97,56 +97,50 @@ After creating the file, the `nfsd` daemon [should automatically start up][OSXSe
 
 If you make changes to `/etc/exports`, activate them with `nfsd update`.
 
-Now update the fstab on the EV3.  
-
 ## How To Do It - EV3
 
-On the EV3 we first need to enable and start NFS modules. Type these commands on the command line:
+On the client - ev3dev - side, we need to create, test and enable a systemd `mount.unit` file in order to mount our newly created NFS share.
 
-    sudo systemctl enable nfs-common.service
-    sudo systemctl start nfs-common.service
-    sudo systemctl enable rpcbind.service
-    sudo systemctl start rpcbind.service
+{% include /style/icon.html type="warning" %}
+The classic way of mounting the NFS share via an entry in `/etc/fstab` does not work! It can cause ev3dev to hang during boot up.
+{: .alert .alert-warning}
 
-Next you'll need to update a file (as root) called `/etc/fstab`. You should have already set up USB Networking, so `ssh` to the EV3 and run an editor like `vi` or `nano` to edit the file. Here's the line you want to add to `/etc/fstab` - DO NOT TOUCH ANYTHING ELSE IN THERE!
+First off, we need to create our `mount.unit` file. This file needs to be named after the directory where we want to mount our NSF share, with the slashes replaced by hyphens. For this tutorial, we will mount the NFS share at `/home/robot/nfsshare/` - feel free to change this to suit your needs. 
 
+Create and open the file `/etc/systemd/system/home-robot-nfsshare.mount`. Add the following sections:
 
-    # NOTE - the following examples all use the same IP address for the host, in practice, there would
-    #        be separate addresses for each host!
-
-    # For the Linux example, it would look like:
-    192.168.2.1:/home/hostuserid/nfs/ev3dev /home/robot/nfs/linux   nfs users,noauto,rw,vers=3  0 0
-
-    # For the Windows Hanewin example, it would look like:
-    192.168.0.199:\E\Users\James\Dropbox\ev3dev                       /home/robot/nfs/windows nfs users,noauto,rw,vers=3  0 0
-
-    # For the OSX example, it would look like:
-    192.168.2.1:/Users/youruserid/Public    /home/robot/nfs/osx     nfs users,noauto,rw,vers=3  0 0
-
-
-It's not too hard to figure out what's going on here. The host machine with the nfs mount is at `192.168.2.1` and we added `/home/hostuserid/nfs/ev3dev` (or whatever the host is exporting the directory as) to the `/etc/exports` file on that machine. The next section of the line says we want to mount it locally at `/home/ev3userid/nfs/linux`, or whatever directory you choose.
-
-The options tell `mount` that:
-
-- this is an nfs share
-- we do not want to automatically mount it at boot time (in case the host is not connected)
-- general users are allowed to mount the share
-- we want read/write access
-- we are using nfs V3 on the host
-
-Once you've updated the `/etc/fstab` file, you will need to create the mount points. Since I test `ev3dev` o n all three major platforms, I have separate directories for each nfs host. You probably only need to create one of these, but this script creates all three for me:
-
-    mkdir -p ~/nfs/linux
-    mkdir -p ~/nfs/windows
-    mkdir -p ~/nfs/osx
-
-Then all you need to do is mount the share, like this: 
-
-    mount ~/nfs/linux
+    [Unit]
+    Description=Mount an nfs share
+    After=network.target
     
-...or whichever of the above three directories you want to mount.
+    [Mount]
+    What=192.168.0.10:/path/to/shared/folder
+    Where=/home/robot/nfsshare
+    Type=nfs
+    
+    [Install]
+    WantedBy=multi-user.target
+    
+The `[Unit]` section provides a general description of the systemd unit file we have just created. The `After=network.target` line tells systemd to only attempt to mount this after a network connection has been established.
 
-And then you should be able to see the files on your host computer when you do `ls /home/ev3userid/nfs/ev3dev`!
+The `[Mount]` section describes what to mount where. For the `What=` line, replace `192.168.0.10` with the IP addres of the computer on which you configured your NFS share and `/path/to/shared/folder` with the folder you have configured to be shared. As stated above, `/home/robot/nfsshare` is the path where we want to mount the NFS share.
+
+The `[Install]` section describes, when to start this unit after it has been enabled. `WantedBy=multi-user.target` means that this file will be executed after the system is ready for a user to log in.
+
+In order to mount the NFS share, you first need to reload the systemd daemon:
+
+    sudo systemctl daemon-reload
+    
+Then, we need to start the mount unit we have just created:
+
+    sudo systemctl start home-robot-nfsshare.mount
+    
+To verify that everything worked, look into the `/home/robot/nfsshare` directory and check that the files from your NFS share are there. **Note**: The directory `/home/robot/nfsshare` should have been created automatically.
+
+If you want your NFS share to be mounted at boot, you need to enable the mount unit by typing:
+
+    sudo systemctl enable home-robot-nfsshare.mount
+
 
 ## References
 
@@ -165,3 +159,5 @@ And then you should be able to see the files on your host computer when you do `
 [OSXexports5]: http://www.manpages.info/macosx/exports.5.html
 [OSXnfsd]: http://www.manpages.info/macosx/nfsd.8.html 
 [OSXshowmount]: http://www.manpages.info/macosx/showmount.8.html
+[systemd mount units]: https://www.freedesktop.org/software/systemd/man/systemd.mount.html
+
