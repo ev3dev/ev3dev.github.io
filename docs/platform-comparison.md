@@ -225,8 +225,8 @@ platforms and their features.
             <tr>
                 <th>Port Addresses</th>
                 <td><code>outA</code><br><code>outB</code><br><code>outC</code><br><code>outD</code></td>
-                <td colspan="2"><code>ttyAMA0:M1</code><br><code>ttyAMA0:M2</code><br><code>ttyAMA0:M3</code><br><code>ttyAMA0:M4</code></td>
-                <td><code>spi0.1:M1</code><br><code>spi0.1:M2</code><br><code>spi0.1:M3</code><br><code>spi0.1:M4</code></td>
+                <td colspan="2"><code>ttyAMA0:MA</code><br><code>ttyAMA0:MB</code><br><code>ttyAMA0:MC</code><br><code>ttyAMA0:MD</code></td>
+                <td><code>spi0.1:MA</code><br><code>spi0.1:MB</code><br><code>spi0.1:MC</code><br><code>spi0.1:MD</code></td>
                 <td><code>pistorms:BAM1</code><br><code>pistorms:BAM2</code><br><code>pistorms:BBM1</code><br><code>pistorms:BBM2</code></td>
                 <td colspan="2"><code>evb:outA</code><br><code>evb:outB</code><br><code>evb:outC</code><br><code>evb:outD</code></td>
             </tr>
