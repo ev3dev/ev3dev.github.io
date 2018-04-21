@@ -3,11 +3,6 @@ title: Connecting to the Internet via USB
 group: basic-networking
 ---
 
-{% include /style/icon.html type="warning" %}
-These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link} and later.
-If you are using an older version, please upgrade.
-{: .alert .alert-warning}
-
 *   {: tab="Mac OSX"}{% include /style/icon.html type="warning" %}
     If you are using OS X version 10.11, this may or may not work. Let us know about your
     experience on [Issue #471](https://github.com/ev3dev/ev3dev/issues/471){: .alert-link}.
