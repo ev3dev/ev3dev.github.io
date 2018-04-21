@@ -3,11 +3,6 @@ title: Connecting to the Internet via Bluetooth
 group: basic-networking
 ---
 
-{% include /style/icon.html type="warning" %}
-These instructions are for [brickman v0.7.0](/news/2015/12/15/Package-Release/){: .alert-link}.
-If you are using an older version, please upgrade.
-{: .alert .alert-warning}
-
 *   {: tab="Android"}{% include /style/icon.html type="info" %}
     These instructions were written using Android 4.1.2 but they should work for
     other versions as well.
