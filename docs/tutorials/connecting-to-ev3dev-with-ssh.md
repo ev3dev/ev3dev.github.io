@@ -124,5 +124,5 @@ you have configured a network connection before continuing.
 {: tab-list="os"}
 
 
-[PuTTY]: http://www.chiark.greenend.org.uk/%7Esgtatham/putty/
-[PuTTY download]: http://www.chiark.greenend.org.uk/~sgtatham/putty/
+[PuTTY]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
+[PuTTY download]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
