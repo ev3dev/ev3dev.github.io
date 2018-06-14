@@ -36,6 +36,7 @@ if [ "$TRAVIS" == "true" ]; then
         robosnap.net
         dsharlet.com
         alioth.debian.org
+        manpages.info
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
