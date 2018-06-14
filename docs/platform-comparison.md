@@ -268,7 +268,7 @@ platforms and their features.
     16 bpp, with adjustable backlight.
 
 [^brickpi-display]: It is possible to stack a display on top of BrickPi.
-    [Blog.](http://lechnology.com/2016/05/adding-a-display-to-brickpi)
+    [Blog.](https://lechnology.com/2016/05/adding-a-display-to-brickpi)
 
 [^evb-buttons]: EVB and QuestCape cannot detect simultaneous button presses.
 
