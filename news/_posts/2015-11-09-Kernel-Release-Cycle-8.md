@@ -32,7 +32,7 @@ Lots of new hardware support this go around.
 * [mindsensors.com PiStorms](http://www.mindsensors.com/stem-education/13-pistorms-base-kit)
 * [mindsensors.com NxtCam](http://www.mindsensors.com/ev3-and-nxt/14-vision-subsystem-v4-for-nxt-or-ev3-nxtcam-v4)
 * [mindsensors.com PixyAdapt](http://www.mindsensors.com/ev3-and-nxt/36-pixy-adapter-with-pixy-camera-for-mindstorms-ev3)
-* [Charmed Labs Pixy for LEGO MINDSTORMS](http://charmedlabs.com/default/pixy-for-lego-mindstorms/)
+* [Charmed Labs Pixy for LEGO MINDSTORMS](https://pixycam.com/pixy-lego/)
 
 ### Changelogs
 

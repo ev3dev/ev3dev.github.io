@@ -14,7 +14,7 @@ LEGO Mindstorms. In this tutorial we explain how to use it with ev3dev
 and python.
 
 General information about Pixy for LEGO Mindstorms can be found on
-Charmed Lab's [wiki-page](http://cmucam.org/projects/cmucam5/wiki/LEGO_Wiki).
+Charmed Lab's [wiki-page](https://docs.pixycam.com/wiki/doku.php?id=wiki:v1:lego_wiki).
 
 ## What you need
 
