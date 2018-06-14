@@ -34,6 +34,7 @@ if [ "$TRAVIS" == "true" ]; then
         https:\/\/.*
         example.com
         robosnap.net
+        dsharlet.com
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
