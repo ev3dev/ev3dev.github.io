@@ -31,25 +31,9 @@ if [ "$TRAVIS" == "true" ]; then
 
     # credit: code snippet borrowed from jekyllrb.com website source
     IGNORE_HREFS=$(ruby -e 'puts %w{
+        https:\/\/.*
         example.com
-        https:\/\/github\.com\/myuser\/myrepo
-        .*revolds-whitepaper\.pdf
-        https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
         robosnap.net
-        warmcat.com
-        01.org
-        alldatasheet.com
-        kernel\.org
-        lab\.open-roberta\.org
-        questforspace\.com
-        bountysource\.com
-        barryodonovan\.com
-        unity3d\.com
-        x3dom\.org
-        https:\/\/connectbot\.org
-        https:\/\/etcher\.io
-        https:\/\/www\.noflojs\.org
-        https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
