@@ -169,7 +169,7 @@ If you have some doubt about this library, please create a issue:
 * [ev3dev-lang-java](https://ev3dev-lang-java.github.io)
 * [Tiobe](http://www.tiobe.com/index.php/tiobe_index)
 * [Githut](http://githut.info/)
-* [IEEE Spectrum](http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages)
+* [IEEE Spectrum](https://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages)
 * [Redmonk](https://redmonk.com/sogrady/category/programming-languages/)
 
 
