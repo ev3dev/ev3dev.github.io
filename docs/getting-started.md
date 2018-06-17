@@ -124,7 +124,7 @@ Now it's time to write the image to the card.
 {% include /style/icon.html type="info" %}
 For more detailed information and flashing utility alternatives, check out
 [our other tutorials](/docs/tutorials/#group-administration-and-setup-sd-card-image){: .alert-link }.
-You can also check out [this page for RaspberryPi](http://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
+You can also check out [this page for RaspberryPi](https://elinux.org/RPi_Easy_SD_Card_Setup){: .alert-link }.
 Much of the information there is applicable to ev3dev.
 {: .alert .alert-info }
 
