@@ -217,24 +217,9 @@ group: basic-networking
 
         {% include /util/screenshot.html source="/images/brickman/networking-connections-wired-only.png" %}
 
-    12. Internet Connection Sharing on Windows is temperamental, so we are going
-        to use a static IP address to make it a bit more reliable. Select *IPv4* on the menu.
-
-        {% include /util/screenshot.html source="/images/brickman/wired-status-disconnected-ipv4-selected.png" %}
-
-    13. Select *Change...*.
-
-        {% include /util/screenshot.html source="/images/brickman/wired-status-disconnected-ipv4-empty.png" %}
-
-    14. Then choose *Load Windows Defaults*.
-
-        {% include /util/screenshot.html source="/images/brickman/networking-load-windows-defaults.png" %}
-
-    15. The settings on the *IPv4* screen will remain blank because we are not
-        connected yet. Go back to the previous screen and check the box for
-        *Connect automatically*. This way you don't have to connect manually
-        after you reboot. Then select *Connect*. *State* should change to
-        *Online* to indicate that your EV3 is connected to the Internet.
+    12. Check the box for *Connect automatically*. This way you don't have to
+        connect manually after you reboot. Then select *Connect*. *State* should
+        change to *Online* to indicate that your EV3 is connected to the Internet.
 
         {% include /util/screenshot.html source="/images/brickman/wired-status-online-connect-selected.png" %}
 {: tab-list="os"}

@@ -304,13 +304,9 @@ group: basic-networking
     8.  *State* should change to *Online* to indicate that the EV3 has an
         Internet connection. (This could take a little bit longer.) Now you can
         see the IP-address of the EV3 in the status bar. It should be something
-        like *192.164.137.3*.
+        like *192.164.137.3* (not as pictured).
 
         {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
-
-        If it isn't or you like to change it: *Wireless and Networks* > *All
-        Network Connections* > *Your-PC-Name* > *IPv4* > *Change* > *Load
-        Windows defaults*
 {: tab-list="os"}
 
 Now that you have a network connection, you should
