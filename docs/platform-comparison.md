@@ -19,7 +19,7 @@ platforms and their features.
             <tr>
                 <th colspan="2">Website</th>
                 <td><a href="http://mindstorms.lego.com" target="_blank">mindstorms.lego.com</a></td>
-                <td colspan="3"><a href="http://www.dexterindustries.com/BrickPi" target="_blank">dexterindustries.com</a></td>
+                <td colspan="3"><a href="https://www.dexterindustries.com/BrickPi" target="_blank">dexterindustries.com</a></td>
                 <td><a href="http://www.mindsensors.com/content/78-pistorms-lego-interface" target="_blank">mindsensors.com</a></td>
                 <td><a href="http://fatcatlab.com/product/evb/" target="_blank">fatcatlab.com</a></td>
                 <td><a href="http://questforspace.com/" target="_blank">questforspace.com</a></td>

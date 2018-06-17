@@ -98,4 +98,4 @@ a Raspberry Pi 2 to the cause, we can make an image for it too.
 [tacho-motor class]: /docs/drivers/tacho-motor-class/
 [ev3dev changelog]: https://github.com/ev3dev/ev3dev-kpkg/blob/ev3dev-jessie/ev3dev-ev3/changelog
 [ckt10 changelog]: https://lists.ubuntu.com/archives/kernel-team/2015-April/056345.html
-[Dexter Industries BrickPi]: http://www.dexterindustries.com/BrickPi/
+[Dexter Industries BrickPi]: https://www.dexterindustries.com/BrickPi/

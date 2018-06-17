@@ -27,8 +27,8 @@ things may not work as expected until the next brickman release.
 
 Lots of new hardware support this go around.
 
-* [Dexter Industries BrickPi+](http://www.dexterindustries.com/shop/brickpi-advanced-for-raspberry-pi/)
-* [Dexter Industries dFlex](http://www.dexterindustries.com/shop/dflex-lego-mindstorms-nxt-flexible-sensor-for-mindstorms/)
+* [Dexter Industries BrickPi+](https://www.dexterindustries.com/shop/brickpi-advanced-for-raspberry-pi/)
+* [Dexter Industries dFlex](https://www.dexterindustries.com/shop/dflex-lego-mindstorms-nxt-flexible-sensor-for-mindstorms/)
 * [mindsensors.com PiStorms](http://www.mindsensors.com/stem-education/13-pistorms-base-kit)
 * [mindsensors.com NxtCam](http://www.mindsensors.com/ev3-and-nxt/14-vision-subsystem-v4-for-nxt-or-ev3-nxtcam-v4)
 * [mindsensors.com PixyAdapt](http://www.mindsensors.com/ev3-and-nxt/36-pixy-adapter-with-pixy-camera-for-mindstorms-ev3)

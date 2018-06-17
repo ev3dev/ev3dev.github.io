@@ -45,7 +45,7 @@ In this release, the library has implemented the support for the EV3 Brick and t
 * [45544 LEGO MINDSTORMS Education EV3 Core Set](https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set-/5003400)
 * [31313 LEGO MINDSTORMS EV3](http://www.lego.com/en-us/mindstorms/products/mindstorms-ev3-31313)
 
-In the next releases, the library will add support for [Raspberry Pi](https://www.raspberrypi.org/) boards as [Mindsensors PiStorms](http://www.mindsensors.com/stem-with-robotics/13-pistorms-v2-base-kit-raspberry-pi-brain-for-lego-robot) & [Dexter Industries BrickPi+](http://www.dexterindustries.com/brickpi/) in order to use the power of Raspberry Pi. 
+In the next releases, the library will add support for [Raspberry Pi](https://www.raspberrypi.org/) boards as [Mindsensors PiStorms](http://www.mindsensors.com/stem-with-robotics/13-pistorms-v2-base-kit-raspberry-pi-brain-for-lego-robot) & [Dexter Industries BrickPi+](https://www.dexterindustries.com/brickpi/) in order to use the power of Raspberry Pi. 
 
 Take a look the following table to observe the differences:
 

@@ -36,7 +36,7 @@ jumbotron-content: |
           operating system that runs on several LEGO<sup>&reg;</sup> MINDSTORMS compatible
           platforms including the <a href="http://www.lego.com/en-us/mindstorms/products/mindstorms-ev3-31313">LEGO<sup>&reg;</sup> MINDSTORMS EV3</a>
           and <a href="https://www.raspberrypi.org/">Raspberry Pi</a>-powered
-          <a href="http://www.dexterindustries.com/BrickPi/">BrickPi</a>.
+          <a href="https://www.dexterindustries.com/BrickPi/">BrickPi</a>.
       </p>
       <p>
           Just like you can take apart your LEGO<sup>&reg;</sup> models and build something

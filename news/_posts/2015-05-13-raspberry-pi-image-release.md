@@ -23,6 +23,6 @@ the BrickPi firmware.
 
 Here is the [download] and the [release notes].
 
-[Dexter Industries BrickPi]: http://www.dexterindustries.com/BrickPi/
+[Dexter Industries BrickPi]: https://www.dexterindustries.com/BrickPi/
 [download]: https://github.com/ev3dev/ev3dev/releases/tag/rpi-ev3dev-jessie-2015-05-13
 [release notes]: https://github.com/ev3dev/ev3dev/blob/ev3dev-jessie/release-notes/rpi-ev3dev-jessie-2015-05-13.img-release-notes.md
