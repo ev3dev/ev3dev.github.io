@@ -19,7 +19,7 @@ Since we don't have `raspi-config` you have to do this manually. Edit
 Remove the comment (`#`) before `start_x=1` and `gpu_mem=128` (and optionally
 `disable_camera_led=1`).
 
-See <http://selinux.org/RPiconfig#Camera> for slightly more info on these options.
+See <https://elinux.org/RPiconfig#Camera> for slightly more info on these options.
 
 Save the changes, then reboot the Raspberry Pi.
 
