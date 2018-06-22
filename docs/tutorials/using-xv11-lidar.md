@@ -238,7 +238,7 @@ If you don't find anything helpful by searching, then create a [new issue]{:targ
 [JST PH 2.0mm pitch]: http://www.jst-mfg.com/product/detail_e.php?series=199
 [xv11lidar-test]: https://github.com/bmegli/xv11lidar-test
 [xv11hacking]: http://xv11hacking.wikispaces.com/LIDAR+Sensor
-[Revo LDS Whitepaper]: http://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
+[Revo LDS Whitepaper]: https://www.robotshop.com/media/files/PDF/revolds-whitepaper.pdf
 [laser specs]: https://22eccb839e35374fb256-2040e42aee01271224a32cb55734f01b.ssl.cf2.rackcdn.com/wp-content/uploads/2015/04/Important_Information_XV_Series_3-language_EN-FR-ES_low1.pdf
 [laser safety class 1]: https://en.wikipedia.org/wiki/Laser_safety#Class_1
 
