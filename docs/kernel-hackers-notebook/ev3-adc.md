@@ -11,7 +11,7 @@ The EV3 uses a Texas Instruments ADS7957 chip. It is connected to the CPU via an
 * 16 channels
 * 10-bit resolution
 * 20kHz max clock rate
-* Using the 5V input mode (i.e. 1024 == 5.00V)
+* Using the 5V input mode (i.e. 1023 == 5.00V)
 
 ## Documentation
 
