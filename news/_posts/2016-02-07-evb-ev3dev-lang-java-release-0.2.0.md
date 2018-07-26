@@ -3,7 +3,7 @@ author: "@jabrena"
 title: "Announcing ev3dev-lang-java v0.2.0"
 ---
 
-If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](http://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://ev3dev-lang-java.github.io) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
+If you like [Linux](https://www.linux.com/) features from ev3dev and you enjoy with [Java](https://www.java.com/), this library is the solution to develop Java software for robots on ev3dev. [ev3dev-lang-java](https://ev3dev-lang-java.github.io) is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.
 
 ## What features are included in last release?
 
