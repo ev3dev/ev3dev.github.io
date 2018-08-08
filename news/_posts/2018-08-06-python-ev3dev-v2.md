@@ -3,11 +3,15 @@ author: "@WasabiFan"
 title: "python-ev3dev version 2 for ev3dev-stretch available in beta"
 ---
 
+<img src="/images/news/python-sample.png" alt="Python driving sample" width="500" class="image-responsive pull-right" />
+
 After several months' work, python-ev3dev version 2 is available in beta. This
 release is specifically targeted at [ev3dev-stretch](https://www.ev3dev.org/news/2018/06/14/ev3dev-stretch/),
 and comes with a variety of improvements to existing interfaces as well as some
 new features. In particular, we hope that writing software for driving robots
 will now be significantly easier.
+
+<!--more-->
 
 The highlights include:
 
@@ -19,8 +23,8 @@ The highlights include:
 - New color conversion methods in `ev3dev2.sensor.lego.ColorSensor`
 
 If you haven't already, see @dlech's [news post on Stretch](https://www.ev3dev.org/news/2018/06/14/ev3dev-stretch/)
-for information on the new ev3dev version. If you're running the image from August
-6 or newer, the library should come pre-installed; otherwise, you'll need
+for information on the new ev3dev version. If you're running the [image from August 6](https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/2018-08-06/)
+or newer, the library should come pre-installed; otherwise, you'll need
 to install the `python3-ev3dev2` package via `apt-get`.
 
 Once your ev3dev installation is ready, head over to our [upgrading guide](https://python-ev3dev.readthedocs.io/en/ev3dev-stretch/upgrading-to-stretch.html)
