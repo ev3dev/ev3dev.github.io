@@ -6,6 +6,10 @@ var releasePlatformRegexes = {
     rpi: "ev3dev-jessie-rpi-generic-[\\d-]+\\.zip",
     rpi2: "ev3dev-jessie-rpi2-generic-[\\d-]+\\.zip",
     bone: "ev3dev-jessie-bone-generic-[\\d-]+\\.zip",
+    ev3_beta: "ev3dev-stretch-ev3-generic-[\\d-]+\\.zip",
+    rpi_beta: "ev3dev-stretch-rpi-generic-[\\d-]+\\.zip",
+    rpi2_beta: "ev3dev-stretch-rpi2-generic-[\\d-]+\\.zip",
+    bone_beta: "ev3dev-stretch-bone-generic-[\\d-]+\\.zip",
 }
 
 function initDownloadLinks() {

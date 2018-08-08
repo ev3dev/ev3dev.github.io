@@ -21,8 +21,7 @@ redirect_from: /download/
         <div class="alert alert-info">
             <p>
                 <span class="glyphicon glyphicon-info"></span>
-                Looking for ev3dev-stretch? You can find Debian Stretch-based images in our
-                <a class="alert-link" href="https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/">development snapshots</a>.
+                ev3dev-stretch is now in BETA. <strong>This version is recommended for new users!</strong>
             </p>
         </div>
     </div>
@@ -36,10 +35,18 @@ redirect_from: /download/
                 the primary focus of development.
             </p>
         </div>
-        <a data-release-link-platform="ev3" class="btn btn-lg btn-primary">
-            <span class="glyphicon glyphicon-download-alt"></span>
-            Download for EV3
-        </a>
+        <div class="margin-bottom-md">
+            <a data-release-link-platform="ev3_beta" class="btn btn-lg btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
+                <span class="glyphicon glyphicon-download-alt"></span>
+                Download ev3dev-stretch beta for EV3
+            </a>
+        </div>
+        <div class="margin-bottom-md">
+            <a data-release-link-platform="ev3" class="btn btn-lg btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+                <span class="glyphicon glyphicon-download-alt"></span>
+                Download ev3dev-jessie for EV3
+            </a>
+        </div>
     </div>
     <div class="col-sm-4 hidden-xs">
         <img src="/images/downloads/ev3.jpg" class="img-responsive" alt="LEGO MINDSTORMS EV3">
@@ -56,15 +63,27 @@ redirect_from: /download/
             </p>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi" class="btn btn-md btn-primary">
+            <a data-release-link-platform="rpi_beta" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download for Raspberry Pi Model 0/1
+                Download ev3dev-stretch beta for Raspberry Pi Model 0/1
             </a>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi2" class="btn btn-md btn-primary">
+            <a data-release-link-platform="rpi2_beta" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download for Raspberry Pi Model 2/3
+                Download ev3dev-stretch beta for Raspberry Pi Model 2/3
+            </a>
+        </div>
+        <div class="margin-bottom-md">
+            <a data-release-link-platform="rpi" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+                <span class="glyphicon glyphicon-download-alt"></span>
+                Download ev3dev-jessie for Raspberry Pi Model 0/1
+            </a>
+        </div>
+        <div class="margin-bottom-md">
+            <a data-release-link-platform="rpi2" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+                <span class="glyphicon glyphicon-download-alt"></span>
+                Download ev3dev-jessie for Raspberry Pi Model 2/3
             </a>
         </div>
     </div>
@@ -83,9 +102,15 @@ redirect_from: /download/
             </p>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="bone" class="btn btn-md btn-primary">
+            <a data-release-link-platform="bone_beta" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download for BeagleBone
+                Download ev3dev-stretch beta for BeagleBone
+            </a>
+        </div>
+        <div class="margin-bottom-md">
+            <a data-release-link-platform="bone" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+                <span class="glyphicon glyphicon-download-alt"></span>
+                Download ev3dev-jessie for BeagleBone
             </a>
         </div>
         <div class="margin-bottom-md">
