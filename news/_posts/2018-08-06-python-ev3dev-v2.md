@@ -3,7 +3,7 @@ author: "@WasabiFan"
 title: "python-ev3dev version 2 for ev3dev-stretch available in beta"
 ---
 
-<img src="/images/news/python-sample.png" alt="Python driving sample" width="500" class="image-responsive pull-right" />
+<img src="/images/news/python-sample.png" alt="Python driving sample" style="width: 500px; max-width: 100%;" class="image-responsive pull-right" />
 
 After several months' work, python-ev3dev version 2 is available in beta. This
 release is specifically targeted at [ev3dev-stretch](https://www.ev3dev.org/news/2018/06/14/ev3dev-stretch/),
