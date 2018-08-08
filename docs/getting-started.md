@@ -33,14 +33,6 @@ First, here are the things you need before starting:
   With PiStorms the EV3 options will work too since you have a built-in screen to configure them on.
   With BrickPi you can also set up other connections from the console using an external screen and keyboard.
 
-
-{% include /style/icon.html type="warning" %}
-The instructions on this page only apply to releases dated December
-2015 or later. Older releases are no longer supported. There are many major changes
-in the December release, so if something seems broken or the documentation seems incorrect,
-please [open an issue on GitHub](/support){: .alert-link}.
-{: .alert .alert-warning}
-
 {% include /style/end-section.html %}
 
 {% include /style/begin-section.html bg="dark" %}
@@ -49,14 +41,25 @@ please [open an issue on GitHub](/support){: .alert-link}.
 
 <div class="release-link-container" markdown="1">
 
+{% include /style/icon.html type="info" %}
+We recommend the ev3dev-stretch beta version for new users. You can find some
+work-in-progress documentation for ev3dev-stretch [here](http://docs.ev3dev.org/en/ev3dev-stretch/){: .alert-link}.
+{: .alert .alert-info}
+
 <br/>
 <div class="text-center">
-<a data-release-link-platform="ev3" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download for LEGO MINDSTORMS EV3</a>
+<a data-release-link-platform="ev3_beta" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download ev3dev-stretch beta for LEGO MINDSTORMS EV3</a>
+<br/><br/>
+<a data-release-link-platform="ev3" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-download-alt"></span> Download ev3dev-jessie for LEGO MINDSTORMS EV3</a>
 <br/><br/>
 <h2 class="centered-light-heading"> Other platforms </h2>
-<a data-release-link-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
-<a data-release-link-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
-<a data-release-link-platform="bone" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
+<a data-release-link-platform="rpi_beta" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
+<a data-release-link-platform="rpi2_beta" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
+<a data-release-link-platform="bone_beta" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
+<br/><br/>
+<a data-release-link-platform="rpi" class="btn btn-md btn-default download-button-small">Raspberry Pi 1</a>
+<a data-release-link-platform="rpi2" class="btn btn-md btn-default download-button-small">Raspberry Pi 2</a>
+<a data-release-link-platform="bone" class="btn btn-md btn-default download-button-small">BeagleBone</a>
 </div>
 
 <br/>
