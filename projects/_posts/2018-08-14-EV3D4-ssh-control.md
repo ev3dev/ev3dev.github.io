@@ -9,7 +9,7 @@ author: [ "@peprolinbot" ] # your GitHub user name
 programming_language: "Python" # The programming language used in this project
 
 youtube_video_id: # The video ID of the YouTube video to be displayed with this post
-thumbnail_override: "/images/projects/2018-08-14-EV3D4-ssh_control/my-image.png" # If you don't have a YouTube video (or the video thumbnail isn't good) you can uncomment this line to set your own image for the project. 
+thumbnail_override: "/images/projects/2018-08-14-EV3D4-ssh-control/my-image.png" # If you don't have a YouTube video (or the video thumbnail isn't good) you can uncomment this line to set your own image for the project. 
 
 project_homepage_url: "https://github.com/peprolinbot/EV3D4-ssh_control" # Homepage for this project
 source_code_url: "https://github.com/peprolinbot/EV3D4-ssh_control" # Provide a link to your code
