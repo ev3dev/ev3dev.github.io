@@ -14,7 +14,7 @@ project_homepage_url: "https://github.com/peprolinbot/EV3D4-ssh_control" # Homep
 source_code_url: "https://github.com/peprolinbot/EV3D4-ssh_control" # Provide a link to your code
 building_instructions_url: "https://www.lego.com/r/www/r/mindstorms/-/media/franchises/mindstorms%202014/downloads/bi/ev3d4.pdf?l.r2=1665046395" # how to build the model out of LEGO (*not* how to build the source code)
 
-excerpt: "This is a Lego EV3 R2D2 copy(EV3D4) remote controll via ssh." # A short summary of your project. This can be a sentence or a paragraph, but it's recommended to keep it under 3 sentences.
+excerpt: "This is a Lego EV3 R2D2 copy(EV3D4) remote controll via ssh using your computer's keyboard. It's like playing a game!" # A short summary of your project. This can be a sentence or a paragraph, but it's recommended to keep it under 3 sentences.
 ---
 
 ## Build
