@@ -34,7 +34,7 @@ Docker for Linux has quite a bit of information to read. This may help you sort
 through it. The most important parts are:
 
 * Add the Docker package repository
-* Install the `docker-engine` package
+* Install the `docker-ce` package
 * Add your user to the `docker` group
  
 Also, you will need to install `qemu-user-static` on your host computer, otherwise
