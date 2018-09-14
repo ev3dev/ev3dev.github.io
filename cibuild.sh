@@ -33,6 +33,7 @@ if [ "$TRAVIS" == "true" ]; then
     IGNORE_HREFS=$(ruby -e 'puts %w{
         https:\/\/.*
         example.com
+        robotsquare.com
         robosnap.net
         dsharlet.com
         alioth.debian.org
