@@ -33,7 +33,6 @@ if [ "$TRAVIS" == "true" ]; then
     IGNORE_HREFS=$(ruby -e 'puts %w{
         https:\/\/.*
         example.com
-        robotsquare.com
         robosnap.net
         dsharlet.com
         alioth.debian.org
@@ -45,7 +44,6 @@ else
         example.com
         https:\/\/github\.com\/myuser\/myrepo
         https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
-        robotsquare.com
         robosnap.net
         alioth.debian.org
         https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
