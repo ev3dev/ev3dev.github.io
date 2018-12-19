@@ -36,19 +36,7 @@ language to control their robot.
 @topikachu which is _not_ the same as this one. When searching for documentation
 online, make sure that you are reading about @rhempel's `ev3dev-lang-python`.
 
-[Get started with Python](https://github.com/rhempel/ev3dev-lang-python){: .btn .btn-default }
-
-## JavaScript
-<https://github.com/wasabifan/ev3dev-lang-js>
-
-JavaScript is the scripting language of the Web. With a program called Node.js,
-you can write JavaScript that can be run locally like any other scripting
-language. JavaScript with Node.js is great for writing web servers and other
-asynchronous programs which don't need to run tight loops or precise timers. It
-has a syntax similar to that of C and related languages, and is relatively easy
-to learn.
-
-[Get started with JavaScript](https://github.com/wasabifan/ev3dev-lang-js){: .btn .btn-default }
+[Get started with Python](https://github.com/ev3dev/ev3dev-lang-python){: .btn .btn-default }
 
 ## Java
 <https://github.com/mob41/ev3dev-lang-java>
@@ -146,6 +134,10 @@ see a library below that you'd like to see in a better state, consider
 contributing to it to get it updated and ready to use.
 
 {% include /style/end-panel.html %}
+
+
+## JavaScript
+<https://github.com/wasabifan/ev3dev-lang-js>
 
 ## C\#
 <https://github.com/pgrudzien12/ev3dev-lang-csharp>
