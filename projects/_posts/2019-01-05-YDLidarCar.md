@@ -29,7 +29,7 @@ Therefor, I created a modified version of the SDK and integrated it into an exam
 
 It is a EV3 based car with front steering and rear wheel drive.
 
-![Image](https://github.com/Schwaneberg/YDLidarCar/blob/master/LDD-CAD/LidarCar.png)
+![Image](https://raw.githubusercontent.com/Schwaneberg/YDLidarCar/master/LDD-CAD/LidarCar.png)
 
 The project basically contains two C++ classes: One to control the car and one to obtain data from an YDLidar X4.
 A third class *CruiseControl* is provided as a proof of concept.
