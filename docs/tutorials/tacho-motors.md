@@ -379,5 +379,5 @@ motor is not actually moving. This can be caused by something mechanically
 preventing the motor from rotating or it could mean that the power being sent
 to the motor is not enough (too small) to make the motor move.
 
-[tacho-motor]: http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html#tacho-motor-subsystem
+[tacho-motor]: http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/motors.html#tacho-motor-subsystem
 [tachometer]: https://en.wikipedia.org/wiki/Tachometer

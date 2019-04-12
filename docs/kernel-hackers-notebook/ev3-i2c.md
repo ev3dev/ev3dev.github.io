@@ -34,7 +34,7 @@ is done in [arch/arm/mach-davinci/legoev3-fiq.c] and the rest is in
 
 ## I2C Addressing
 
-See [I2C Sensor Addressing](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/i2c.html#addressing).
+See [I2C Sensor Addressing](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/i2c.html#addressing).
 
 [i2c]: https://en.wikipedia.org/wiki/I2c
 [framework for I2C drivers]: https://www.kernel.org/doc/Documentation/i2c/

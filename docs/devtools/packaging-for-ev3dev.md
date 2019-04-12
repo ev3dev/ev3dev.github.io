@@ -15,7 +15,7 @@ packages.
 Whether you are creating a new package or modifying an existing one, there are
 some tools that you are going to need. We currently use Ubuntu trusty as the
 development environment. (We will only support trusty, but any thing newer should
-work - same goes for jessie or newer on Debian). If you are using Windows or Mac
+work - same goes for stretch or newer on Debian). If you are using Windows or Mac
 you can use [VirtualBox] or [Docker] to run trusty in a virtual machine/container.
 
 On your Ubuntu machine, you will need to install some packages. If you haven't
@@ -58,10 +58,10 @@ available (as in the case with security updates).
 
 The same command is used for both creating and updating:
 
-    OS=debian DIST=jessie ARCH=armel pbuilder-ev3dev base
+    OS=debian DIST=stretch ARCH=armel pbuilder-ev3dev base
 
 Replace the variables as needed. `OS` can be `debian` or `rasbian`. `DIST` can
-be any Debian distribution supported by ev3dev (currently only `jessie`). `ARCH`
+be any Debian distribution supported by ev3dev (currently only `stretch`). `ARCH`
 is any valid Debian architecture (`armel`, `armhf`, etc.). The images are stored
 in `~/pbuilder-ev3dev`.
 
@@ -80,9 +80,9 @@ After you have forked the repository on GitHub, run...
 
 To build a package, simply run `pbuilder-ev3dev` from the source code directory.
 
-    OS=debian DIST=jessie ARCH=armel pbuilder-ev3dev build
+    OS=debian DIST=stretch ARCH=armel pbuilder-ev3dev build
 
-The .deb package(s) will be placed in `~/pbuilder-ev3dev/debian/jessie-armel`.
+The .deb package(s) will be placed in `~/pbuilder-ev3dev/debian/stretch-armel`.
 You can copy these files to your EV3 and install them.
 
 ## Modifying a Package
@@ -119,7 +119,7 @@ making changes, you can try them out by building the package as described above
 with one difference. You need to use the `dev-build` command so that it will
 not fail because of your changes.
 
-    OS=debian DIST=jessie ARCH=armel pbuilder-ev3dev dev-build
+    OS=debian DIST=stretch ARCH=armel pbuilder-ev3dev dev-build
 
 Once you are happy with your changes, commit them and push them back to GitHub.
 **Note:** Some packages use [quilt] for managing patches. If you want to figure
@@ -169,30 +169,30 @@ building packages for yourself.
     command recently, you can omit those lines.
 
         # build for EV3
-        OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev base
-        OS=debian ARCH=armel DIST=jessie pbuilder-ev3dev build
+        OS=debian ARCH=armel DIST=stretch pbuilder-ev3dev base
+        OS=debian ARCH=armel DIST=stretch pbuilder-ev3dev build
         # build for RPi 2/3 and BeagleBone
-        OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev base
-        DEBUILD_OPTIONS="--binary-only" OS=debian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+        OS=debian ARCH=armhf DIST=stretch pbuilder-ev3dev base
+        DEBUILD_OPTIONS="--binary-only" OS=debian ARCH=armhf DIST=stretch pbuilder-ev3dev build
         # build for RPi 0/1
-        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
-        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+        OS=raspbian ARCH=armhf DIST=stretch pbuilder-ev3dev base
+        OS=raspbian ARCH=armhf DIST=stretch pbuilder-ev3dev build
 
     If your package does not have any binary components (like a pure python
     package), you can do this instead:
 
         # build for EV3, RPi 2/3 and BeagleBone
-        OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev base
-        OS=debian ARCH=amd64 DIST=jessie pbuilder-ev3dev build
+        OS=debian ARCH=amd64 DIST=stretch pbuilder-ev3dev base
+        OS=debian ARCH=amd64 DIST=stretch pbuilder-ev3dev build
         # build for RPi 0/1
-        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev base
-        OS=raspbian ARCH=armhf DIST=jessie pbuilder-ev3dev build
+        OS=raspbian ARCH=armhf DIST=stretch pbuilder-ev3dev base
+        OS=raspbian ARCH=armhf DIST=stretch pbuilder-ev3dev build
 
 7.  Sign the `.changes` files in `~/pbuilder-ev3dev/$OS/$DIST-$ARCH/` using `debsign`.
 
-        debsign ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
-        debsign ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
-        debsign ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
+        debsign ~/pbuilder-ev3dev/debian/stretch-armel/<package>_<version>_armel.changes
+        debsign ~/pbuilder-ev3dev/debian/stretch-armhf/<package>_<version>_armhf.changes
+        debsign ~/pbuilder-ev3dev/raspbian/stretch-armhf/<package>_<version>_armhf.changes
 
 8.  Upload the new release to the ev3dev archive using `dput`.
 
@@ -219,9 +219,9 @@ building packages for yourself.
 
     Then upload:
 
-        dput ev3dev-debian ~/pbuilder-ev3dev/debian/jessie-armel/<package>_<version>_armel.changes
-        dput ev3dev-debian ~/pbuilder-ev3dev/debian/jessie-armhf/<package>_<version>_armhf.changes
-        dput ev3dev-raspbian ~/pbuilder-ev3dev/raspbian/jessie-armhf/<package>_<version>_armhf.changes
+        dput ev3dev-debian ~/pbuilder-ev3dev/debian/stretch-armel/<package>_<version>_armel.changes
+        dput ev3dev-debian ~/pbuilder-ev3dev/debian/stretch-armhf/<package>_<version>_armhf.changes
+        dput ev3dev-raspbian ~/pbuilder-ev3dev/raspbian/stretch-armhf/<package>_<version>_armhf.changes
 
     Please be careful about `armhf` and `ev3dev-debian` vs. `ev3dev-raspbian`!
     You should receive an email after each upload. If not, let @dlech know about it.
