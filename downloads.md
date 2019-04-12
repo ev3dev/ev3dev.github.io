@@ -41,6 +41,14 @@ redirect_from: /download/
                 Download ev3dev-stretch for EV3
             </a>
         </div>
+        <div class="margin-bottom-md">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    A LEGO-approved version of ev3dev-stretch is available for download on the 
+                    <a href="https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3">LEGO Education website <i class="fa fa-external-link"></i></a>.
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-sm-4 hidden-xs">
         <img src="/images/downloads/ev3.jpg" class="img-responsive" alt="LEGO MINDSTORMS EV3">
