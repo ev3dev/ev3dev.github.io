@@ -3,11 +3,6 @@ title: Upgrading Ev3dev
 group: system
 ---
 
-{% include /style/icon.html type="warning" %}
-By upgrading ev3dev you are also upgrading the drivers, so there may be changes that break user software. 
-You should check the ev3dev [news feed](http://www.ev3dev.org/news/){: .alert-link } for breaking changes before upgrading.
-{: .alert .alert-warning}
-
 There are multiple ways that you can upgrade ev3dev.
 
 # Option 1: Re-flashing your SD card (fastest)
