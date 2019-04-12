@@ -27,8 +27,9 @@ that other software is up-to-date.
        sudo apt upgrade
 
    {% include /style/icon.html type="warning" %}
-   The `upgrade` step may take a couple hours to complete, depending on your
-   network connection, hardware and the number of outdated packages.
+   The `upgrade` step may take anywhere from a couple minutes to a couple hours
+   to complete, depending on your network connection, hardware and the number of
+   outdated packages.
    {: .alert .alert-warning}
 
 2. Reboot by typing `sudo reboot` or by using the "Shutdown..." menu in Brickman
