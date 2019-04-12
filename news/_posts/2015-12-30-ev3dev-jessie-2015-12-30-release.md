@@ -43,7 +43,7 @@ We've also added a driver for battery indication on BrickPi+.
 
 ### Open-Roberta Lab
 
-Thanks to the work of @ensonic, we now have support for <http://lab.open-roberta.org>
+Thanks to the work of @ensonic, we now have support for <https://lab.open-roberta.org>
 out-of-the-box. It is prevented from running by default, so you do have to start
 it manually...
 
