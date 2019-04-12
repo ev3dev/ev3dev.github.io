@@ -32,11 +32,11 @@ If you are just starting programming ev3dev, take a look at
 users of the LEGO MINDSTORMS EV3 to begin using the ev3dev Python programming
 language to control their robot. 
 
-There are also some sample programs at https://github.com/ev3dev/ev3dev-lang-python-demo.
+There are also some sample programs at <https://github.com/ev3dev/ev3dev-lang-python-demo>.
 
 **Warning!** There is another Python library named `python-ev3` created by
 @topikachu which is _not_ the same as this one. When searching for documentation
-online, make sure that you are reading about @rhempel's `ev3dev-lang-python`.
+online, make sure that you are reading about `ev3dev-lang-python`.
 
 [Get started with Python](https://github.com/ev3dev/ev3dev-lang-python){: .btn .btn-default }
 
