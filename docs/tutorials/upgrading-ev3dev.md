@@ -23,9 +23,8 @@ that other software is up-to-date.
    before typing the next. Some steps require confirmation to proceed. Press
    'y' when asked.
 
-       sudo apt-get update
-       sudo apt-get upgrade
-       sudo apt-get dist-upgrade
+       sudo apt update
+       sudo apt upgrade
 
    {% include /style/icon.html type="warning" %}
    The `upgrade` step may take a couple hours to complete, depending on your
@@ -43,8 +42,8 @@ This option will only upgrade core ev3dev packages and not other software.
 
 1. Run the following commands, replacing `linux-image-ev3dev-ev3` as shown below:
 
-       sudo apt-get update
-       sudo apt-get install linux-image-ev3dev-ev3
+       sudo apt update
+       sudo apt install linux-image-ev3dev-ev3
 
    Hardware platform                  | Package name
    -----------------------------------|-------------
