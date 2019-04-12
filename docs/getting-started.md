@@ -48,15 +48,15 @@ work-in-progress documentation for ev3dev-stretch [here](http://docs.ev3dev.org/
 
 <br/>
 <div class="text-center">
-<a data-release-link-platform="ev3_beta" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download ev3dev-stretch beta for LEGO MINDSTORMS EV3</a>
-<br/><br/>
-<a data-release-link-platform="ev3" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-download-alt"></span> Download ev3dev-jessie for LEGO MINDSTORMS EV3</a>
+<!-- <a data-release-link-platform="ev3_beta" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-download-alt"></span> Download ev3dev-buster beta for LEGO MINDSTORMS EV3</a>
+<br/><br/> -->
+<a data-release-link-platform="ev3" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-download-alt"></span> Download ev3dev-stretch for LEGO MINDSTORMS EV3</a>
 <br/><br/>
 <h2 class="centered-light-heading"> Other platforms </h2>
-<a data-release-link-platform="rpi_beta" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
+<!-- <a data-release-link-platform="rpi_beta" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
 <a data-release-link-platform="rpi2_beta" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
 <a data-release-link-platform="bone_beta" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
-<br/><br/>
+<br/><br/> -->
 <a data-release-link-platform="rpi" class="btn btn-md btn-default download-button-small">Raspberry Pi 1</a>
 <a data-release-link-platform="rpi2" class="btn btn-md btn-default download-button-small">Raspberry Pi 2</a>
 <a data-release-link-platform="bone" class="btn btn-md btn-default download-button-small">BeagleBone</a>

@@ -2,14 +2,14 @@
 var releaseCacheTimeMillis = 20 * 60 * 1000;
 
 var releasePlatformRegexes = {
-    ev3: "ev3dev-jessie-ev3-generic-[\\d-]+\\.zip",
-    rpi: "ev3dev-jessie-rpi-generic-[\\d-]+\\.zip",
-    rpi2: "ev3dev-jessie-rpi2-generic-[\\d-]+\\.zip",
-    bone: "ev3dev-jessie-bone-generic-[\\d-]+\\.zip",
-    ev3_beta: "ev3dev-stretch-ev3-generic-[\\d-]+\\.zip",
-    rpi_beta: "ev3dev-stretch-rpi-generic-[\\d-]+\\.zip",
-    rpi2_beta: "ev3dev-stretch-rpi2-generic-[\\d-]+\\.zip",
-    bone_beta: "ev3dev-stretch-bone-generic-[\\d-]+\\.zip",
+    ev3: "ev3dev-stretch-ev3-generic-[\\d-]+\\.zip",
+    rpi: "ev3dev-stretch-rpi-generic-[\\d-]+\\.zip",
+    rpi2: "ev3dev-stretch-rpi2-generic-[\\d-]+\\.zip",
+    bone: "ev3dev-stretch-bone-generic-[\\d-]+\\.zip",
+    ev3_beta: "ev3dev-buster-ev3-generic-[\\d-]+\\.zip",
+    rpi_beta: "ev3dev-buster-rpi-generic-[\\d-]+\\.zip",
+    rpi2_beta: "ev3dev-buster-rpi2-generic-[\\d-]+\\.zip",
+    bone_beta: "ev3dev-buster-bone-generic-[\\d-]+\\.zip",
 }
 
 function initDownloadLinks() {

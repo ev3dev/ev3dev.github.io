@@ -18,12 +18,6 @@ redirect_from: /download/
                 page for installation instructions.
             </small>
         </p>
-        <div class="alert alert-info">
-            <p>
-                <span class="glyphicon glyphicon-info"></span>
-                ev3dev-stretch is now in BETA. <strong>This version is recommended for new users!</strong>
-            </p>
-        </div>
     </div>
 </div>
 <div class="row margin-bottom-xl">
@@ -35,16 +29,16 @@ redirect_from: /download/
                 the primary focus of development.
             </p>
         </div>
-        <div class="margin-bottom-md">
-            <a data-release-link-platform="ev3_beta" class="btn btn-lg btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
+        <!-- <div class="margin-bottom-md">
+            <a data-release-link-platform="ev3_beta" class="btn btn-lg btn-default" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-stretch beta for EV3
+                Download ev3dev-buster beta for EV3
             </a>
-        </div>
+        </div> -->
         <div class="margin-bottom-md">
-            <a data-release-link-platform="ev3" class="btn btn-lg btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+            <a data-release-link-platform="ev3" class="btn btn-lg btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-jessie for EV3
+                Download ev3dev-stretch for EV3
             </a>
         </div>
     </div>
@@ -62,28 +56,28 @@ redirect_from: /download/
                 on which model you have.
             </p>
         </div>
-        <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi_beta" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
+        <!-- <div class="margin-bottom-md">
+            <a data-release-link-platform="rpi_beta" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-stretch beta for Raspberry Pi Model 0/1
+                Download ev3dev-buster beta for Raspberry Pi Model 0/1
             </a>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi2_beta" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
+            <a data-release-link-platform="rpi2_beta" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-stretch beta for Raspberry Pi Model 2/3
+                Download ev3dev-buster beta for Raspberry Pi Model 2/3
+            </a>
+        </div> -->
+        <div class="margin-bottom-md">
+            <a data-release-link-platform="rpi" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
+                <span class="glyphicon glyphicon-download-alt"></span>
+                Download ev3dev-stretch for Raspberry Pi Model 0/1
             </a>
         </div>
         <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+            <a data-release-link-platform="rpi2" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-jessie for Raspberry Pi Model 0/1
-            </a>
-        </div>
-        <div class="margin-bottom-md">
-            <a data-release-link-platform="rpi2" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
-                <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-jessie for Raspberry Pi Model 2/3
+                Download ev3dev-stretch for Raspberry Pi Model 2/3
             </a>
         </div>
     </div>
@@ -101,16 +95,16 @@ redirect_from: /download/
                 I/O pin conflicts.
             </p>
         </div>
-        <div class="margin-bottom-md">
-            <a data-release-link-platform="bone_beta" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
+        <!-- <div class="margin-bottom-md">
+            <a data-release-link-platform="bone_beta" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-stretch beta for BeagleBone
+                Download ev3dev-buster beta for BeagleBone
             </a>
-        </div>
+        </div> -->
         <div class="margin-bottom-md">
-            <a data-release-link-platform="bone" class="btn btn-md btn-default" href="https://github.com/ev3dev/ev3dev/releases">
+            <a data-release-link-platform="bone" class="btn btn-md btn-primary" href="https://github.com/ev3dev/ev3dev/releases">
                 <span class="glyphicon glyphicon-download-alt"></span>
-                Download ev3dev-jessie for BeagleBone
+                Download ev3dev-stretch for BeagleBone
             </a>
         </div>
         <div class="margin-bottom-md">
