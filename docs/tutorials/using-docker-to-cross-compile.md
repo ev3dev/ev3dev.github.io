@@ -47,14 +47,14 @@ you will get an error: `exec user process caused "exec format error"`.
 We provide a Docker image with the most common developer tools already installed.
 Download it by running...
 
-    docker pull ev3dev/debian-jessie-cross
+    docker pull ev3dev/debian-stretch-cross
 
 This will take some time. The download is nearly 1GB!
 
 
 When it is finished, we can give it a shorter name...
 
-    docker tag ev3dev/debian-jessie-cross ev3cc
+    docker tag ev3dev/debian-stretch-cross ev3cc
 
 {% include /style/icon.html type="info" %}
 Docker images are immutable. You can always revert back to this image after making
@@ -177,11 +177,7 @@ so that you can run builds without starting a new container each time.
 Although it is possible to run gdb directly on the EV3, you will quickly run
 out of memory. To get around this, we will do remote debugging.
 
-On your EV3, install `gdbserver`.
-
-    sudo apt-get install gdbserver
-
-Now, let's debug our "hello world" program. First, we need to make sure we compile
+Let's debug our "hello world" program. First, we need to make sure we compile
 with debugging symbols (thats the `-g` flag). You will need to copy the new
 executable to the EV3 too if you haven't done the *mounting a remote file system*
 thing yet.
@@ -193,11 +189,10 @@ computer (or VM) and `3333` is an arbitrary TCP port.
 
     gdbserver host:3333 hello
 
-Then back in the brickstrap shell run gdb. `target remote` tells gdb to connect
-to your EV3. Host name resolution seems to have issues in the brickstrap shell,
-so you are better off using the IP address of your EV3 (192.168.0.100 in this
-example). And of course, the port number needs to match what you used with
-gdbserver.
+Then back in the docker container run gdb. `target remote` tells gdb to connect
+to your EV3. If you have trouble connecting by hostname, you can use the IP
+address of your EV3 instead (192.168.0.100 in this example). And of course, the
+port number needs to match what you used with gdbserver.
 
     gdb hello
 
