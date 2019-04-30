@@ -87,13 +87,7 @@ if you do not want to lose them!
 
 Now it's time to write the image to the card.
 
-{% include /style/icon.html type="danger" %}
-There is a [bug](https://github.com/balena-io/etcher/issues/2754){: .alert-link }
-that was introduced in Etcher v1.5.28. Make sure you install an older version or
-your SD card image may be corrupted! 
-{: .alert .alert-danger }
-
-1. Download and install Etcher from ~~[their website](https://etcher.io)~~ <https://github.com/balena-io/etcher/releases/tag/v1.5.26>.
+1. Download and install Etcher from [their website](https://etcher.io).
 2. Launch Etcher after it has finished installing.
 
    {% include /util/screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="600px" %}
