@@ -52,8 +52,8 @@ First, here are the things you need before starting:
 <a data-release-link-platform="rpi2_beta" class="btn btn-md btn-default download-button-small">Raspberry Pi 2</a>
 <a data-release-link-platform="bone_beta" class="btn btn-md btn-default download-button-small">BeagleBone</a>
 <br/><br/> -->
-<a data-release-link-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi 1</a>
-<a data-release-link-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2</a>
+<a data-release-link-platform="rpi" class="btn btn-md btn-primary download-button-small">Raspberry Pi Zero/1</a>
+<a data-release-link-platform="rpi2" class="btn btn-md btn-primary download-button-small">Raspberry Pi 2/3</a>
 <a data-release-link-platform="bone" class="btn btn-md btn-primary download-button-small">BeagleBone</a>
 </div>
 
