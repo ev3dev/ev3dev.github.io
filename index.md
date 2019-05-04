@@ -68,7 +68,7 @@ get started right away with your favorite language and libraries.
 
 ## <i class="fa fa-linux"></i> Backed by the full power of Linux
 
-Since ev3dev is built on Debian Linux, there are over 43,000 free 
+Since ev3dev is built on Debian Linux, there are over 51,000 free 
 software packages available for you to install.
 
 And with the Linux kernel at its core, many USB and Bluetooth devices, like
