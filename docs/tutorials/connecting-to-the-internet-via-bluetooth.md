@@ -250,10 +250,10 @@ group: basic-networking
 
         {% include /util/screenshot.html source="/images/brickman/networking-my-computer-0-disconnect-selected-online.png" %}
 
-*   {: tab="Windows"}{% include /style/icon.html type="info" %}
-    These instructions were written using Windows 10 Enterprise.
-    It should work for other versions of Windows 10 as well.
-    {: .alert .alert-info}
+*   {: tab="Windows"}{% include /style/icon.html type="danger" %}
+    These instructions do not actually result in an Internect connection. As far as we know,
+    it is not possible to get an Internet connection via Bluetooth using Windows 10.
+    {: .alert .alert-danger}
 
     1.  On the EV3, first verify that Bluetooth is powered on. In brickman
         open the *Wireless and Networks* menu and select *Bluetooth*. Make sure the
