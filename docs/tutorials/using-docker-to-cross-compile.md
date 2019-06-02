@@ -151,6 +151,9 @@ To exit the docker container, simply type...
 
     exit
 
+Note: if encountered `/lib/ld-linux.so.3: No such file or directory` error while
+running `./hello` in the docker environment, try 
+`qemu-arm-static -L /usr/arm-linux-gnueabi/ ./hello`
 
 ## Advanced Usage
 
