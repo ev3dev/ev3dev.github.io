@@ -79,6 +79,14 @@ C-based code. It is very lightweight and often the most portable across platform
 
 [Get started with C](https://github.com/in4lio/ev3dev-c){: .btn .btn-default }
 
+## Prolog
+<https://github.com/maweki/ev3dev-prolog>
+
+Prolog is a logic programming language that is often used in the context of AI
+and planning. Prolog programs allow for a high level of abstraction and a mix
+of declarative and imperative programming.
+
+[Get started with Prolog](https://github.com/maweki/ev3dev-prolog){: .btn .btn-default }
 
 ## Vala, Genie and other GObject-based languages with ev3devKit
 <https://github.com/ev3dev/ev3devKit>
