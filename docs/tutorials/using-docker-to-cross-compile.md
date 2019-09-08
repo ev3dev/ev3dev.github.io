@@ -13,7 +13,7 @@ notebook computer. This means that we get the same versions of all of the librar
 running on the EV3 but compile with the power of a desktop processor.
 {: .lead .clearfix}
 
-[Docker]: http://www.docker.com/
+[Docker]: https://www.docker.com/
 
 {% include /style/icon.html type="warning" %}
 This will only work on 64-bit operating systems. We do not maintain images for
@@ -24,7 +24,7 @@ This will only work on 64-bit operating systems. We do not maintain images for
 ## Getting Docker
 
 Docker has excellent documentation, so we will just send you to their
-[download](http://www.docker.com/products/docker) page. Come back when you have
+[install](https://docs.docker.com/install/) page. Come back when you have
 Docker installed for Windows, Mac or Linux.
 {: .well}
 

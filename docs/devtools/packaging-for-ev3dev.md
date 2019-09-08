@@ -245,7 +245,7 @@ building packages for yourself.
 
 
 [VirtualBox]: https://www.virtualbox.org
-[Docker]: http://www.docker.com
+[Docker]: https://www.docker.com
 [ev3dev-archive]: {{ github.site.url }}/docs/devtools/installing-the-ev3dev-archive
 [ev3dev-buildscripts]: https://github.com/ev3dev/ev3dev-buildscripts
 [quilt]: https://wiki.debian.org/UsingQuilt
