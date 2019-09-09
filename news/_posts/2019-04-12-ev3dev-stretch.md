@@ -3,7 +3,7 @@ author: "@dlech"
 title: "ev3dev-stretch is Stable"
 ---
 
-<img src="/images/news/brickman-stable-stamped.png" alt="Python driving sample" style="width: 300px; max-width: 100%;" class="image-responsive pull-right" />
+<img src="/images/news/brickman-stable-stamped.png" alt="Stamped with text: Stable" style="width: 300px; max-width: 100%;" class="image-responsive pull-right" />
 
 Thanks to everyone who has downloaded `ev3dev-stretch` snapshots, tested the
 latest kernel and reported issues on GitHub. We're declaring ev3dev-stretch

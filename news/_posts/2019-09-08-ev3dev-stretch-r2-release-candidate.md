@@ -3,7 +3,7 @@ author: "@dlech"
 title: "ev3dev-stretch R2 Release Candidate"
 ---
 
-<img src="/images/news/brickman-rc-stamped.png" alt="Python driving sample" style="width: 300px; max-width: 100%;" class="image-responsive pull-right" />
+<img src="/images/news/brickman-rc-stamped.png" alt="Stamped with text: Release Candidate" style="width: 300px; max-width: 100%;" class="image-responsive pull-right" />
 
 We have a new stable release candidate ready for testing. Be a pal and try it out.
 
