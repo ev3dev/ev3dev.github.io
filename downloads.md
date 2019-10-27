@@ -21,15 +21,6 @@ redirect_from: /download/
     </div>
 </div>
 <div class="row margin-bottom-xl">
-    <div class="col-sm-12">
-        <div class="alert alert-info" role="alert">
-            {% include /style/icon.html type="info" %}
-            Please consider testing the <a class="alert-link" href="/news/2019/09/08/ev3dev-stretch-r2-release-candidate">R2 release candidate</a> before 22 September 2019.
-            Follow the link for details.
-        </div>
-    </div>
-</div>
-<div class="row margin-bottom-xl">
     <div class="col-sm-8">
         <div class="margin-bottom-md">
             <h3>LEGO MINDSTORMS EV3</h3>
