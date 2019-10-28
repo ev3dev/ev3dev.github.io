@@ -90,7 +90,7 @@ then unplug and replug the LEGO Toy Pad again.
 The following script will check for the presence of a LEGO Toy Pad and initializes
 it, turning the middle (round) pad red for one second:
 
-{% highlight python %}
+```python
 
 #!/usr/bin/python
 
@@ -129,7 +129,7 @@ def main():
     dev.write(1,PADS_OFF)
     return
 
-{% endhighlight %}
+```
 
 If everything was OK the output should be:
 
@@ -149,7 +149,7 @@ I'll show just how to change the color of each pad but there are some other
 commands available (switch on/off, fade, flash...). You can see these commands
 in @woodenphone's [lego_dimensions_gateway.py](https://github.com/woodenphone/lego_dimensions_protocol/blob/master/lego_dimensions_gateway.py) script.
 
-{% highlight python %}
+```python
 
 #!/usr/bin/python
 
@@ -224,7 +224,7 @@ def main():
 if __name__ == '__main__':
     main()
   
-{% endhighlight %}
+```
 
 ## Reading tags
 
@@ -247,7 +247,7 @@ The script also tracks unknown UIDs. So:
 - whenever a tag is removed it turns the pad OFF:
 
 
-{% highlight python %}
+```python
 
 #!/usr/bin/python
 
@@ -364,5 +364,5 @@ def main():
 if __name__ == '__main__':
     main()
   
-{% endhighlight %}
+```
 
