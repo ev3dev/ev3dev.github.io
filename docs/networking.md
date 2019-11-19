@@ -14,8 +14,8 @@ wired Ethernet port to connect for the first time through a remote SSH
 session. An alternative method is to connect the pi to an HDMI screen monitor 
 and USB keyboard and press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F6</kbd> at the end of
 the boot sequence to reach a login prompt (id: robot, password: maker). Once 
-connected, you can then set up additional connections using 
-[`connmanctl`](/docs/tutorials/setting-up-wifi-using-the-command-line/) commands.
+connected, you can then set up additional connections [using the command line
+](/docs/tutorials/setting-up-wifi-using-the-command-line/){: .alert-link }.
 {: class="alert alert-info"}
 
 
@@ -43,6 +43,11 @@ Once you have plugged in a dongle, you can use Brickman's
 you check the "**Powered**" box so that it starts searching for Wi-Fi networks,
 and then choose the one you want from the list that appears.
 
+{% include /style/icon.html type="info" %}
+If you have a long Wi-Fi password, we *highly* recommend using a direct USB
+connection then [use the command line in a terminal to enter your passphrase
+](/docs/tutorials/setting-up-wifi-using-the-command-line/){: .alert-link }
+{: class="alert alert-info"}
 
 ### With USB through a PC
 
