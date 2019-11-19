@@ -21,7 +21,7 @@ connected, you can then set up additional connections using
 
 # Connecting to the Internet
 
-You have a few options for connecting to the internet.
+You have a few options for connecting to the internet. For a guide connecting your RaspberryPi look [here](https://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/).
 
 ### With a Wi-Fi dongle
 
