@@ -19,4 +19,4 @@ Changes since ev3dev-stretch R1:
 - Improved Bluetooth availability [#925](https://github.com/ev3dev/ev3dev/issues/925)
 - Updated `ev3dev-lang-python` and `ev3dev-lang-java` libraries.
 - Fixed a few small Linux kernel driver bugs
-- Included the library for the [Amazon Voice Control Contest](./2019-09-24-lego-amazon-voice-control-contest)
+- Included the Python `agt` package for the [Amazon Voice Control Contest](/news/2019/09/24/lego-amazon-voice-control-contest)
