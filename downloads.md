@@ -21,6 +21,19 @@ redirect_from: /download/
     </div>
 </div>
 <div class="row margin-bottom-xl">
+    <div class="col-sm-12">
+        <div class="alert alert-info">
+            <div class="lead">
+                {% include /style/icon.html type="info" %}
+                ev3dev-stretch R3 is almost ready!
+            </div>
+            
+            Please help test the next release of ev3dev.
+            <a class="alert-link" href="/news/2020/03/11/ev3dev-stretch-r3-release-candidate">Follow this link for more information.</a>.
+        </div>
+    </div>
+</div>
+<div class="row margin-bottom-xl">
     <div class="col-sm-8">
         <div class="margin-bottom-md">
             <h3>LEGO MINDSTORMS EV3</h3>
