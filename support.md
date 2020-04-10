@@ -125,7 +125,7 @@ Also, #ev3dev is logged by `ev3devlogbot`. You can find the logs at <http://ev3d
 If you don't already have an IRC client program, you can connect right in your
 browser. Just enter a nickname and click start below.
 
-<iframe src="https://kiwiirc.com/client/irc.freenode.net/?&theme=cli#ev3dev" class="button" style="width:100%; height:450px; border: none;" />
+<iframe src="https://kiwiirc.com/client/irc.freenode.net/?&theme=cli#ev3dev" class="button" style="width:100%; height:450px; border: none;"></iframe>
 
 [GitHub Issues]: https://help.github.com/articles/about-issues/
 [ev3dev-lang-python]: https://github.com/rhempel/ev3dev-lang-python
