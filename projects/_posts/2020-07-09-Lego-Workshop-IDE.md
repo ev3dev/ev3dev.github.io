@@ -3,6 +3,7 @@ author: [ "@freezed-or-frozen" ] # your GitHub user name
 programming_language: "Golang" # The programming language used in this project
 project_homepage_url: "https://github.com/freezed-or-frozen/lego-workshop" # Homepage for this project
 source_code_url: "https://github.com/freezed-or-frozen/lego-workshop" # Provide a link to your code
+thumbnail_override: "/images/projects/2020-07-09-Lego-Workshop-IDE/legoworkshop1.png"
 ---
 
 ## What ?
