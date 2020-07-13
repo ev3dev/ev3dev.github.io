@@ -25,6 +25,10 @@ download and run a Python script without having to create a `launch.json` file.
 Just open your file and press <kbd>CTRL</kbd>+<kbd>F5</kbd> or <kbd>Cmd ⌘</kbd>
 +<kbd>Return ↩</kbd> on Mac.
 
+If you find any problems, please report them [here][issues].
+
+[issues]: https://github.com/ev3dev/vscode-ev3dev-browser/issues
+
 
 ### Getting the Beta Version
 
