@@ -39,6 +39,8 @@ if [ "$TRAVIS" == "true" ]; then
         alioth.debian.org
         manpages.info
         kernel.ubuntu.com
+        hitechnic.com
+        mindstorms.lego.com
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
@@ -50,6 +52,8 @@ else
         robosnap.net
         alioth.debian.org
         kernel.ubuntu.com
+        hitechnic.com
+        mindstorms.lego.com
         https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
     }.map{|h| "/#{h}/"}.join(",")')
 fi
