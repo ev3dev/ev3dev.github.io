@@ -22,7 +22,7 @@ on the EV3 are not stopped when clicking the red stop button in VS Code.
 There is also one new feature courtesy of @WasabiFan. The `ev3dev` debugger is
 now registered as a default handler for Python files, so now it is possible to
 download and run a Python script without having to create a `launch.json` file.
-Just open your file and press <kbd>CTRL</kbd>+<kbd>F5</kbd> or <kbd>Cmd ⌘</kbd>
+Just open your file and press <kbd>F5</kbd> or <kbd>Cmd ⌘</kbd>
 +<kbd>Return ↩</kbd> on Mac.
 
 If you find any problems, please report them [here][issues].
