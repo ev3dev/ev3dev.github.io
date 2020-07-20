@@ -10,6 +10,9 @@ title: "ev3dev-browser VS Code Extension Beta Release"
  class="image-responsive pull-right"
 />
 
+**Update 2020-07-20: Extension v1.2.0 has been released in the VS Code
+marketplace.**
+
 We are working on the next release of the [ev3dev-browser VS Code Extension][1]
 and we need testers! This version mostly contains bug fixes. It should do a
 better job detecting ev3dev devices. It also fixes a bug where subprocesses
