@@ -101,6 +101,15 @@ this library.
 
 [Get started with ev3devKit](https://github.com/ev3dev/ev3devKit){: .btn .btn-default }
 
+## Rust
+<https://github.com/pixix4/ev3dev-lang-rust>
+
+Rust is a low-level, compiled language which is highly performant while still
+providing modern language features. It provides memory safety without using
+garbage collection and is easy to interact with existing C libraries.
+
+[Get started with Rust](https://github.com/pixix4/ev3dev-lang-rust){: .btn .btn-default }
+
 <br>
 <br>
 
