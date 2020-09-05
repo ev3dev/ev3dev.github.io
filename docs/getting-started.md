@@ -282,7 +282,19 @@ skip this step and return there for further instructions.
 The brick can run the vast majority of popular programming languages, so your
 favorite language is probably supported. Pick your language and write some code!
 
+1. Choose a Language
+
 <a class="btn btn-md btn-primary" href="/docs/programming-languages"><span class="glyphicon glyphicon-console"></span> See the available programming languages</a>
+
+2. Choose a Toolchain
+
+The following flowcharts can help you select the appropriate toolchain for:
+* [C/C++]
+* TBD
+
+3. Build Libraries (TBD)
+
+4. Download to Target & Debug/Run your program (TBD)
 
 {% include /style/end-section.html %}
 
@@ -292,3 +304,4 @@ favorite language is probably supported. Pick your language and write some code!
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
 [releases]:https://github.com/ev3dev/ev3dev/releases
 [nightly]:https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
+[C/C++]:https://github.com/tcwan/ev3dev/images/workflow-c-cpp.svg
