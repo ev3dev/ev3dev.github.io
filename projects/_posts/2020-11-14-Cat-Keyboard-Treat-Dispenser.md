@@ -17,3 +17,13 @@ source_code_url: "https://github.com/smcbride-ca/ev3dev-Cat-Keyboard" # Provide 
 
 excerpt: "This is a robot that will automatically dispense treats. It was designed for my cat, and can be built using a Home set (31313) or Education edition set, and a few spare lego bricks." # A short summary of your project. This can be a sentence or a paragraph, but it's recommended to keep it under 3 sentences.
 ---
+
+This is a robot that will automatically dispense treats. It was designed for my cat, and can be built using a Home set (31313) or Education edition set, and a few spare lego bricks.
+
+![photo 1](/images/projects/2020-11-14-Cat-Keyboard-Pics/IMG_4085.jpg){: .img-responsive}
+
+![photo 2](/images/projects/2020-11-14-Cat-Keyboard-Pics/IMG_4086.jpg){: .img-responsive}
+
+![photo 3](/images/projects/2020-11-14-Cat-Keyboard-Pics/IMG_4087.jpg){: .img-responsive}
+
+![photo 4](/images/projects/2020-11-14-Cat-Keyboard-Pics/IMG_4089.jpg){: .img-responsive}
