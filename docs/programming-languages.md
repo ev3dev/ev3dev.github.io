@@ -23,7 +23,7 @@ the programming languages page!
 ## Python
 <https://github.com/ev3dev/ev3dev-lang-python>
 
-Python is a high-level, general-purpose, interpreted scripting language. It is
+[Python] is a high-level, general-purpose, interpreted scripting language. It is
 great for beginners, while also powerful for experienced coders. If you are new
 to programming and unsure which language to choose, Python is a great choice!
 
@@ -39,6 +39,28 @@ There are also some sample programs at <https://github.com/ev3dev/ev3dev-lang-py
 online, make sure that you are reading about `ev3dev-lang-python`.
 
 [Get started with Python](https://github.com/ev3dev/ev3dev-lang-python){: .btn .btn-default }
+
+[Python]: https://www.python.org
+
+## MicroPython
+<https://github.com/pybricks/pybricks-micropython/tree/v2>
+
+[MicroPython] is a stripped down variant of the Python programming language.
+This brings some advantages, like programs starting significantly faster than
+regular Python, but comes at the cost at not being fully compatible with code
+written for regular Python.
+
+[Pybricks] is a specialized version of MicroPython for LEGO MINDSTORMS and LEGO
+Powered Up smart hubs. Pybricks v2.0 is used by LEGO Education as their [Python
+for EV3](https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/python-for-ev3)
+solution and is the same version that is available in ev3dev-stretch.
+
+**TIP:** `ev3dev-lang-python` is also partially compatible with MicroPython.
+
+[Get started with MicroPython](https://pybricks.github.io/ev3-micropython/){: .btn .btn-default }
+
+[MicroPython]: https://micropython.org
+[Pybricks]: https://pybricks.com
 
 ## Java
 <http://ev3dev-lang-java.github.io/>
