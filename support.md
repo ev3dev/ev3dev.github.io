@@ -105,32 +105,8 @@ monitor our Gitter room and are happy to provide support in live chat.
 If you have a GitHub or Twitter account, come say hello at <https://gitter.im/ev3dev/chat>.
 
 [gitter.im]: https://gitter.im
-
-IRC
----
-
-IRC is [Internet Relay Chat]. You can find other ev3dev users in [#ev3dev on
-freenode.net]. It is a great way to ask quick questions or carry on a conversation.
-
-If you have never used IRC before, there are a some things you need to know:
-
-*   We are a global community - not everyone lives in the same time zone. If you
-    ask a question and no one answers, stay connected for a day or two and someone
-    may eventually answer (or leave a note that you will check the logs - see below).
-*   If no one ever answers you, do not be offended. The right person did not see
-    your message, or maybe no one knows the answer. Ask again later or open a GitHub issue.
-
-Also, #ev3dev is logged by `ev3devlogbot`. You can find the logs at <http://ev3dev.org/irclog>.
-
-If you don't already have an IRC client program, you can connect right in your
-browser. Just enter a nickname and click start below.
-
-<iframe src="https://kiwiirc.com/client/irc.freenode.net/?&theme=cli#ev3dev" class="button" style="width:100%; height:450px; border: none;"></iframe>
-
 [GitHub Issues]: https://help.github.com/articles/about-issues/
 [ev3dev-lang-python]: https://github.com/rhempel/ev3dev-lang-python
 [ev3dev-lang-python-issues]: https://github.com/rhempel/ev3dev-lang-python/issues
 [new issue]: https://github.com/ev3dev/ev3dev/issues/new
 [writing on GitHub]: https://help.github.com/categories/writing-on-github/
-[Internet Relay Chat]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
-[#ev3dev on freenode.net]: irc://irc.freenode.net/#ev3dev
