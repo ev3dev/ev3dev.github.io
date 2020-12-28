@@ -102,7 +102,7 @@ monitor our Gitter room and are happy to provide support in live chat.
 
 **This is the recommended means of live chat support for ev3dev.**
 
-If you have a GitHub or Twitter account, come say hello at <https://gitter.im/ev3dev/chat>.
+If you have a GitHub, GitLab or Twitter account, come say hello at <https://gitter.im/ev3dev/chat>.
 
 [gitter.im]: https://gitter.im
 [GitHub Issues]: https://help.github.com/articles/about-issues/
