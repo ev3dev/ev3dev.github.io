@@ -105,7 +105,7 @@ This is fine, you can just [download Docker Toolbox instead][docker-toolbox]{: .
 
 Docker Toolbox however handles shared drives differently; there is no whale icon in the system tray. Instead, Docker Toolbox automatically allows sharing of your `C:\Users\myname` folder. Also, the path handling is different, you have to use paths in linux style, so the command below has to be changed:
 
-`docker run --rm --it -v /c/Users/myname/example/:/src -w /src ev3cc`
+`docker run --rm -it -v /c/Users/myname/example/:/src -w /src ev3cc`
 {% include /style/end-panel.html %}
 
 [docker-toolbox]: https://www.docker.com/products/docker-toolbox
