@@ -40,4 +40,4 @@ accept the warning to start the installation.
 7. This may take a few minutes, so be patient while it finishes.
 Once it's done, you can eject the SD card from the system tray and unplug it from the computer.
 
-[imager]: https://sourceforge.net/projects/win32diskimager/files/latest/download
+[imager]: https://win32diskimager.org
