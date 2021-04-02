@@ -3,7 +3,7 @@ title: Color LCD on the EV3
 author: "@dlech"
 ---
 
-I was just brought to my attention on [IRC](/support/#irc) that we haven't been doing a very good job bragging on ourselves.
+I was just brought to my attention on IRC that we haven't been doing a very good job bragging on ourselves.
 
 So, the long story is... when I first got my EV3, of course I took it apart. In the course of poking and prodding around,
 I cracked the LCD screen. So I began to look for a replacement. It seems that the LCD was custom manufactured for LEGO
