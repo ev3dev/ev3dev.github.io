@@ -24,7 +24,8 @@ was designed, a physical LOGO turtle finally arrives: [LoEV3go](https://github.c
 Build your turtle (building instructions will hopefully come one day), run LoEV3go, open a web browser,
 write your LOGO code and watch the turtle draw on the ground.
 
-<img width="150" align="right" src="https://raw.github.com/obo/loev3go/master/screenshots/loev3go-in-action.jpg"/>
+<img width="150" alt="picture of robot drawing lines on a piece of paper" class="img-responsive" style="float: right;"
+ src="https://raw.github.com/obo/loev3go/master/screenshots/loev3go-in-action.jpg"/>
 
 Features:
 - Only 31313 EV3 Mindstorms Basic Set is needed (and an SD card for EV3).
