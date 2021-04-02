@@ -6,8 +6,8 @@ echo "Searching for BOMs -------------------------------"
 FOUND_BOM=false
 for filename in ./**/*.*; do
     # Make sure that the file is UTF-8 so we don't search binary files or other encodings
-    CURRENT_FILE_ENCODING="`file --mime-encoding --brief "$filename"`"
-    if [ "$CURRENT_FILE_ENCODING" == "utf-8" ] && [ "`head -c 3 -- "$filename"`" == $'\xef\xbb\xbf' ]
+    CURRENT_FILE_ENCODING="$(file --mime-encoding --brief "$filename")"
+    if [ "$CURRENT_FILE_ENCODING" == "utf-8" ] && [ "$(head -c 3 -- "$filename")" == $'\xef\xbb\xbf' ]
     then
         # Make note of all the files that failed so we can see it in the Travis log
         FOUND_BOM=true
