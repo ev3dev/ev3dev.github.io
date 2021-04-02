@@ -26,49 +26,9 @@ fi
 echo "Building site ------------------------------------"
 bundle exec jekyll build --trace
 
-if [ "$TRAVIS" == "true" ]; then
-    # Travis has issues with https, so we have to ignore quite a few extra sites
-
-    # credit: code snippet borrowed from jekyllrb.com website source
-    IGNORE_HREFS=$(ruby -e 'puts %w{
-        https:\/\/.*
-        example.com
-        fatcatlab.com
-        robosnap.net
-        dsharlet.com
-        alioth.debian.org
-        manpages.info
-        kernel.ubuntu.com
-        hitechnic.com
-        mindstorms.lego.com
-        processors.wiki.ti.com
-    }.map{|h| "/#{h}/"}.join(",")')
-else
-    # credit: code snippet borrowed from jekyllrb.com website source
-    IGNORE_HREFS=$(ruby -e 'puts %w{
-        example.com
-        https:\/\/github\.com\/myuser\/myrepo
-        https:\/\/github.com\/ev3dev\/ev3dev\.github\.io\/edit\/.*
-        fatcatlab.com
-        robosnap.net
-        alioth.debian.org
-        kernel.ubuntu.com
-        hitechnic.com
-        mindstorms.lego.com
-        processors.wiki.ti.com
-        https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
-    }.map{|h| "/#{h}/"}.join(",")')
-fi
-
-# Explanation of ignored sites:
-# - example.com and github.com/myuser/myrepo are fake/example links
-# - The edit on github pages don't exist when you create a page, so ignoring them.
-#   They are automatically generated anyway.
-# - robosnap.net no longer exists, but keeping the link for historical reasons
-
 echo "Validating HTML ----------------------------------"
 # We want to use the publish script so that we can implement other transformations in the future
-ruby publish.rb --no-fix-links --test "htmlproofer ./ --url-ignore $IGNORE_HREFS --check-html --allow-hash-href"
+ruby publish.rb --no-fix-links --test "htmlproofer ./ --disable-external --check-html --allow-hash-href"
 
 # If the site build succeeded but we found BOMs, we want to fail the build
 if [ $FOUND_BOM == true ]
