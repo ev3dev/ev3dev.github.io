@@ -41,6 +41,7 @@ if [ "$TRAVIS" == "true" ]; then
         kernel.ubuntu.com
         hitechnic.com
         mindstorms.lego.com
+        processors.wiki.ti.com
     }.map{|h| "/#{h}/"}.join(",")')
 else
     # credit: code snippet borrowed from jekyllrb.com website source
@@ -54,6 +55,7 @@ else
         kernel.ubuntu.com
         hitechnic.com
         mindstorms.lego.com
+        processors.wiki.ti.com
         https:\/\/na\.industrial\.panasonic\.com\/products\/wireless-connectivity\/bluetooth\/bluetooth-classic\/series\/pan1325a1315a-series\/CS460
     }.map{|h| "/#{h}/"}.join(",")')
 fi
