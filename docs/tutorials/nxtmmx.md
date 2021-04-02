@@ -30,6 +30,6 @@ Example - set Pass Count to 10:
 
     $ echo -e -n "\x$(printf '%x' 10)" | dd bs=1 of=direct seek=0x86
 
-[mindsensors.com NxtMMX]: http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensor_data.html#ms-nxtmmx
-[tacho-motor class]: http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html#tacho-motor-subsystem
+[mindsensors.com NxtMMX]: https://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensor_data.html#ms-nxtmmx
+[tacho-motor class]: https://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html#tacho-motor-subsystem
 [tahco-motor tutorial]: ../tacho-motors

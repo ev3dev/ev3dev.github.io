@@ -39,13 +39,13 @@ the ev3dev kernel. It is mostly information about the hardware and device driver
 
 ### Sensors (Input Devices)
 
-* [Sensor Driver Model](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensors.html#the-lego-sensor-subsytem)
-* [List of Sensors](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensors.html#supported-sensors)
+* [Sensor Driver Model](https://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensors.html#the-lego-sensor-subsytem)
+* [List of Sensors](https://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/sensors.html#supported-sensors)
 
 ### Motors (Output Devices)
 
-* [Motor Driver Model](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html#tacho-motor-subsystem)
-* [List of Motors](http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html)
+* [Motor Driver Model](https://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html#tacho-motor-subsystem)
+* [List of Motors](https://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/motors.html)
 
 
 ## Software

@@ -16,7 +16,7 @@ The only other notable change is for those with the [color screen hack](/news/20
 a crash at boot is fixed.
 
 Most of our work has been focused on **ev3dev-stretch**. It is nearing beta
-quality, so you might want to [check it out](http://docs.ev3dev.org/en/ev3dev-stretch/).
+quality, so you might want to [check it out](https://docs.ev3dev.org/en/ev3dev-stretch/).
 
 ### Download
 
