@@ -291,4 +291,4 @@ favorite language is probably supported. Pick your language and write some code!
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
 [releases]:https://github.com/ev3dev/ev3dev/releases
-[nightly]:https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
+[nightly]:https://ev3dev.jfrog.io/artifactory/snapshots/

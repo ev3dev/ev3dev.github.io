@@ -151,7 +151,7 @@ redirect_from: /download/
             want to try out the latest new features and bug fixes.
         </p>
         <div class="margin-top-md">
-            <a class="btn btn-md btn-primary" href="https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/">
+            <a class="btn btn-md btn-primary" href="https://ev3dev.jfrog.io/artifactory/snapshots/">
                 <span class="glyphicon glyphicon-link"></span>
                 Snapshots
             </a>
