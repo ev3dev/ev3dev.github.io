@@ -1,7 +1,7 @@
 ---
 title: Setting Up an NFS File Share
 group: advanced-networking
-author: [ "@antonvh","@rhempel","JNFitzgerald", "Jesko Appelfeller" ]
+author: [ "@antonvh","@rhempel","JNFitzgerald", "Jesko Appelfeller", "@GingerIndustries" ]
 ---
 
 * Table of Contents
@@ -30,7 +30,7 @@ The instructions here are for all three platforms Linux, Windows, and OSX - just
 
 ## How To Do It - Linux
 
-On your Linux box, you'll need to edit a file called `/etc/exports`. If you don't have this file, then you need to install `nfs-common` or a similar package. 
+On your Linux box, you'll need to edit a file called `/etc/exports`. If you don't have this file, then you need to install `nfs-common` or a similar package. (If that doesn't work and/or you already have `nfs-common` installed, install `nfs-kernel-server`. Some devices, like the Raspberry Pi, don't have it installed by default. **IMPORTANT: If installing `nfs-kernel-server`, before install create the target directories (`home/youruserid/nfs/ev3dev`). Otherwise, the service will fail to start.**)
 
 Open the file and add the following line:
 
