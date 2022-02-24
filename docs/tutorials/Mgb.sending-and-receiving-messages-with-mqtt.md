@@ -26,7 +26,7 @@ e-mail.
 * The `Broker` is responsible for coordinating the communication between publishers and
   subscribers. It can also store messages while subscribers are offline (a feature not
   used in this tutorial).
-
+****
 
 ## Requirements
 
