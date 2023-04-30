@@ -50,12 +50,28 @@ This brings some advantages, like programs starting significantly faster than
 regular Python, but comes at the cost at not being fully compatible with code
 written for regular Python.
 
+MicroPython works as a different Python interpreter, rather than as a library.
+It can be invoked by running it from the command line, for example:
+`micropython -c "import sys; print(sys.version)"` or
+`micropython -c "from ev3dev2.sound import Sound; Sound().speak('hello world')"`.
+You may add this as the first line of your Python script to run it with MicroPython:
+`#!/usr/bin/env micropython`.
+
+**TIP:** `ev3dev-lang-python` is also partially compatible with MicroPython.
+
 [Pybricks] is a specialized version of MicroPython for LEGO MINDSTORMS and LEGO
 Powered Up smart hubs. Pybricks v2.0 is used by LEGO Education as their [Python
 for EV3](https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/python-for-ev3)
 solution and is the same version that is available in ev3dev-stretch.
 
-**TIP:** `ev3dev-lang-python` is also partially compatible with MicroPython.
+You may run Pybricks from command line like this:
+`brickrun -r -- pybricks-micropython -c "from pybricks.hubs import EV3Brick; EV3Brick().speaker.beep()"`.
+You may add this as the first line of your Python script,
+`#!/usr/bin/env pybricks-micropython`,
+and then run it from the brick's file browser to run it with Pybricks.
+
+**TIP:** If you are into using Python's interactive mode when trying Pybricks,
+you can use `brickrun -r -- pybricks-micropython`, or its shortcut `pybricks-repl`.
 
 [Get started with MicroPython](https://pybricks.github.io/ev3-micropython/){: .btn .btn-default }
 
