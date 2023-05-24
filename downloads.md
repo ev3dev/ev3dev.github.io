@@ -143,21 +143,6 @@ redirect_from: /download/
 </div>
 <div class="row">
     <div class="col-md-6">
-        <h2>Snapshot Releases</h2>
-        <p>
-            We occasionally build images for testing purposes. These images
-            are published without any prior testing and there are no release
-            notes. However, you might be interested in these images if you
-            want to try out the latest new features and bug fixes.
-        </p>
-        <div class="margin-top-md">
-            <a class="btn btn-md btn-primary" href="https://ev3dev.jfrog.io/artifactory/snapshots/">
-                <span class="glyphicon glyphicon-link"></span>
-                Snapshots
-            </a>
-        </div>
-    </div>
-    <div class="col-md-6">
         <h2>Previous Releases</h2>
         <p>
             We don't recommend these for new users, but if you have a need
