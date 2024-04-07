@@ -244,6 +244,15 @@ available hardware.
 
 {% include /style/begin-section.html %}
 
+## Step 5.1: Update `apt`
+
+Currently, the image file downloaded from step 1 was built in 2020,
+some of its built-in packages are dated, and `apt` does not work out of the box.
+
+To fix `apt` in general, `/etc/apt/sources.list` needs to be changed to match
+https://github.com/ev3dev/docker-library/blob/master/ev3dev-stretch/layers/debian/etc/apt/sources.list
+
+
 ## Step 6: Connect to the EV3 via SSH
 
 Now that you have a network connection, you should connect to your EV3 with SSH.
