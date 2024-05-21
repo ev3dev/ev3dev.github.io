@@ -278,8 +278,7 @@ you're good to go!
 Currently, the image file downloaded from step 1 was built in 2020.
 `apt` does not work out of the box.
 
-To fix `apt` in general, `/etc/apt/sources.list` needs to be changed to match
-https://github.com/ev3dev/docker-library/blob/master/ev3dev-stretch/layers/debian/etc/apt/sources.list
+To fix `apt` in general, `/etc/apt/sources.list` needs to be changed to match [SourcesList]
 
 Specifically, you can run `sudo nano /etc/apt/sources.list`,
 delete the old content from that file,
@@ -304,4 +303,5 @@ favorite language is probably supported. Pick your language and write some code!
 [microSD]: https://en.wikipedia.org/wiki/Secure_Digital#SD
 [microSDHC]: https://en.wikipedia.org/wiki/Secure_Digital#SDHC
 [microSDXC]: https://en.wikipedia.org/wiki/Secure_Digital#SDXC
+[SourcesList]: https://github.com/ev3dev/docker-library/blob/master/ev3dev-stretch/layers/debian/etc/apt/sources.list
 [releases]:https://github.com/ev3dev/ev3dev/releases
