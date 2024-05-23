@@ -9,7 +9,7 @@
     description: "Communicating using special protocols between multiple devices on a network."
   - id: software-languages
     title: Programming Languages and Tooling
-    description: "Configuring a development environment, installing new languages, and using advanced language tools."
+    description: "Configuring a development environment, installing new languages, using advanced language tools and getting started guides for languages."
   - id: software-editors
     title: "Text Editors"
     description: "Tips on using text editors which ship with ev3dev out-of-the-box."
