@@ -278,7 +278,7 @@ you're good to go!
 Currently, the image file downloaded from step 1 was built in 2020.
 `apt` does not work out of the box.
 
-To fix `apt` in general, `/etc/apt/sources.list` needs to be changed to match [SourcesList]
+To fix `apt` in general, `/etc/apt/sources.list` needs to be changed to match [this file][SourcesList]
 
 Specifically, you can run `sudo nano /etc/apt/sources.list`,
 delete the old content from that file,
