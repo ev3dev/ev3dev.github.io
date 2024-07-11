@@ -61,3 +61,5 @@ defaults:
 kramdown:
   toc_levels: "2,3"
   input: GFM
+
+theme: jekyll-theme-midnight
