@@ -51,7 +51,7 @@ you have configured a network connection before continuing.
 *   {: tab="Ubuntu"}
     Type the following command in a terminal window.
 
-        ssh robot@ev3dev.local
+        ssh -o PreferredAuthentications=password robot@ev3dev.local
 
     <div class="panel panel-info">
     <div class="panel-heading">
