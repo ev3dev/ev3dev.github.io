@@ -48,7 +48,7 @@ If you have a serial terminal connected to Input Port 1, you will see the follow
 
     Jumping to entry point at: 0xC1080000
 
-NOTE: You can enter firmware update mode by writing 0x5555AAAA to memory address 0xFFFF1FFA (part of the 128K on-chip ram of the AM1808 processor) and then rebooting with `reboot -d -f -i`. This reboots without properly shutting down (see `reboot --help`), so we don't want to do this in ev3dev. On the official LEGO firmware, the firmware update writes over everything so it doesn't matter if it does not shut down properly. 
+NOTE: You can enter firmware update mode by writing 0x5555AAAA to memory address 0xFFFF1FFC (part of the 128K on-chip ram of the AM1808 processor) and then rebooting with `reboot -d -f -i`. This reboots without properly shutting down (see `reboot --help`), so we don't want to do this in ev3dev. On the official LEGO firmware, the firmware update writes over everything so it doesn't matter if it does not shut down properly. 
 
 ## Hardware Version
 
