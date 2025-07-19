@@ -95,29 +95,29 @@ Now it's time to write the image to the card.
 
    {% include /util/screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="600px" %}
 
-4. Click the "Select image" button and browse to the folder where you
+3. Click the "Select image" button and browse to the folder where you
    downloaded an ev3dev release. Select the file that you downloaded.
    The release can be a `.img.zip` or `.img.xz`; whichever
    you have will work with Etcher.
 
    {% include /util/screenshot.html source="/images/etcher/image-selected.png" caption="Image chosen in Etcher" width="600px" %}
 
-5. Plug the SD card into your PC (if your PC doesn't have a micro SD
+4. Plug the SD card into your PC (if your PC doesn't have a micro SD
    slot, you can use an adapter or external reader). Etcher should
    detect the new device and display its information under the "Select
    drive" step. Confirm that the selected drive is correct.
 
    {% include /util/screenshot.html source="/images/etcher/drive-selected.png" caption="Drive selected in Etcher" width="600px" %}
    
-6. If you have multiple removable drives available, you may need to
+5. If you have multiple removable drives available, you may need to
      use the "Change" button to select the proper device.
 
-7. When you are confident that you have selected the correct drive,
+6. When you are confident that you have selected the correct drive,
    click "Flash!" and wait for the operation to complete.
    
    {% include /util/screenshot.html source="/images/etcher/flash-started.png" caption="Etcher flashing the SD card" width="600px" %}
 
-8. If you arrive at this screen, you have successfully flashed your SD card and are ready to move on to the next step.
+7. If you arrive at this screen, you have successfully flashed your SD card and are ready to move on to the next step.
    
    {% include /util/screenshot.html source="/images/etcher/success.png" caption="Etcher success screen" width="600px" %}
 <br/>
