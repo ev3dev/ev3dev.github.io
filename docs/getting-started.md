@@ -87,7 +87,10 @@ if you do not want to lose them!
 
 Now it's time to write the image to the card.
 
-1. Download and install [Etcher v17](https://github.com/balena-io/etcher/releases/tag/v1.17.0) `Newer versions are broken and don't work with the ev3dev image!`
+1. Download and install [Etcher v17](https://github.com/balena-io/etcher/releases/tag/v1.17.0)
+
+   **Newer versions are broken and don't work with the ev3dev image!**
+   
 2. Launch Etcher after it has finished installing.
 
    {% include /util/screenshot.html source="/images/etcher/home.png" caption="Etcher home screen" width="600px" %}
