@@ -152,6 +152,9 @@ group: basic-networking
 
         {% include /util/screenshot.html source="/images/windows/10/devices-and-printers-rndis.png" %}
 
+        You may see a message like "EV3+ev3dev doesn't have a device driver". You can install the driver by following the
+        instructions here: http://developer.toradex.com/knowledge-base/how-to-install-microsoft-rndis-driver-for-windows-7
+
         {% include /style/icon.html type="info" %}
         PROTIP: You can get an icon that looks like an actual EV3 by installing
         [Programmable Brick Icons](https://github.com/ev3dev/PBrickIcons){: .alert-link}.
