@@ -131,6 +131,99 @@ group: basic-networking
 
         {% include /util/screenshot.html source="/images/brickman/wired-status-online-connect-automatically-selected.png" %}
 
+
+*   {: tab="linux_command_line"}{% include /style/icon.html type="info" %}
+    These instructions were written using Debian look-alikes for those wanting to know what happens under the hood.
+    The commands need to be executed by root.
+    {:class="alert alert-info"}
+
+    1.  Booting with a standard ev3dev image, lsusb will show
+
+        `Bus 002 Device 008: ID 0694:0005 Lego Group`
+        
+        I'll be using the EV3 as a USB Gadget, as follows.
+
+    2.  When you've copied the ev3dev's image to the SD-card, mount the second partition (EV3DEV_ROOTFS).
+        If your card is /dev/sdc, then mount /dev/sdc2 on a free directory:
+
+        `mount /dev/sdc2 /mnt/sdc2`
+
+    3.  Add the "g_cdc" module to /etc/modules (which currently contains only comments):
+
+        `echo "g_cdc" >> /mnt/sdc2/etc/modules`
+
+        Unmount /dev/sdc2, put the SD-card in the EV3 and start it up.
+
+    4.  Connect the USB cable to your computer and its mini-B plug to the EV3 (slot marked "PC").
+
+    5.  Verify that USB tethering is disabled: *"Wireless and Networks" > "Tethering*.
+
+    6.  Set default Linux network settings: *"Wireless and Networks" > "All Network Connections" > "Wired" >
+        "IPv4" > "Change" > "Load Linux Defaults"*.  The EV3 should get address 10.42.0.3, gateway 10.42.0.1.
+
+    7.  Verify if the EV3 is recognized by your Linux PC:  `lsusb` should show
+        
+        `Bus 001 Device 002: ID 0525:a4aa Netchip Technology, Inc. Linux-USB CDC Composite Gadge (Ethernet and ACM)`
+        
+        (Bus and Device may differ).
+
+    8.  Your system should load cdc_ether to manage the EV3:  check with `lsmod | grep cdc`.
+        ```
+        Module                  Size  Used by
+        cdc_ether              16384  0 
+        ```
+        
+    9.  Check dmesg to find which device has been assigned to the EV3 network: `dmesg | grep cdc`
+
+        ```
+        cdc_ether 1-5:1.0 usb0: register 'cdc_ether' at usb-0000:00:02.1-5, CDC Ethernet Device, d6:6a:37:7e:16:07
+        usbcore: registered new interface driver cdc_ether
+        cdc_ether 1-5:1.0 enp0s2f1u5: renamed from usb0
+        cdc_ether 1-5:1.0 enp0s2f1u5: kevent 12 may have been dropped
+        The device is enp0s2f1u5 in this case.
+        ```
+        
+    10. Assign the gateway address to the EV3 network device:
+    
+        `# ifconfig enp0s2f1u5 10.42.0.1 netmask 255.255.255.0  up`
+        
+    11. Verify if you can ping the EV3:
+
+
+        ```
+        # ping 10.42.0.3
+        PING 10.42.0.3 (10.42.0.3) 56(84) bytes of data.
+        64 bytes from 10.42.0.3: icmp_seq=1 ttl=64 time=0.812 ms
+        64 bytes from 10.42.0.3: icmp_seq=2 ttl=64 time=0.685 ms
+        64 bytes from 10.42.0.3: icmp_seq=3 ttl=64 time=0.670 ms
+        ^C
+        ```
+        
+    12. You have now established a network connection and you can ssh to the
+        EV3.  If you have an internet connection which you want to make
+        available to your EV3, there is more that needs to be done.
+
+    13. Allow your system to forward IP traffic (given eth0 carries your
+        internet connection):
+
+        `# echo 1 > /proc/sys/net/ipv4/ip_forward`
+
+        (to make this permanent, add "net.ipv4.ip_forward=1" to /etc/sysctl.conf)
+
+        ```
+        # iptables --append FORWARD --in-interface enp0s2f1u5  -j ACCEPT
+        # iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
+        ```
+        
+    14. Assign a name-server (eg. google-public-dns-a) to your EV3 (you need
+        to be logged in on your EV3 as root):
+    
+        `# echo "nameserver 8.8.8.8" > /etc/resolv.conf`
+        
+    15. Verify if you can ping that nameserver:
+    
+        `# ping 8.8.8.8`
+
 *   {: tab="Windows"}{% include /style/icon.html type="info" %}
     These instructions were written using Windows 10, but should work on Windows
     7 and 8 as well.
