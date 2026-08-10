@@ -3,7 +3,7 @@ author: [ "@Crelotik" ]
 programming_language: "Python" 
 youtube_video_id: iaOfkvl1cZQ
 # thumbnail_override: "/images/projects/my-project/my-image.png" # If you don't have a YouTube video (or the video thumbnail isn't good) you can uncomment this line to set your own image for the project. 
-source_code_url: "https://github.com/Crelotik/Ev3Locomotive" # Provide a link to your code
+source_code_url: "https://github.com/Crelotik/Ev3Locomotive" # Provide a link to your code 
 ---
 ![Photo of train controller](https://raw.githubusercontent.com/Crelotik/Ev3Locomotive/refs/heads/main/Pictures/Photo1.jpg)
 
