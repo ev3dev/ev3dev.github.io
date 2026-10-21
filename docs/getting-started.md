@@ -281,11 +281,27 @@ you're good to go!
 Currently, the image file downloaded from step 1 was built in 2020.
 `apt` does not work out of the box.
 
-To fix `apt` in general, `/etc/apt/sources.list` needs to be changed to match [this file][SourcesList]
+Debian has moved the packages for this release (stretch) to its archive server,
+so `/etc/apt/sources.list` needs to be changed to match [this file][SourcesList].
+You will know you need this if `sudo apt update` prints errors mentioning
+`httpredir.debian.org`.
 
-Specifically, you can run `sudo nano /etc/apt/sources.list`,
-delete the old content from that file,
-and replace them with the content from the link above.
+To fix it, copy and paste the following into the SSH shell and press
+<kbd>Enter</kbd>. It saves a backup of the old file as
+`/etc/apt/sources.list.bak`, writes the new one, and then updates the package
+lists:
+
+```sh
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo tee /etc/apt/sources.list > /dev/null << 'EOF'
+deb http://archive.debian.org/debian stretch main contrib non-free
+deb http://archive.ev3dev.org/debian stretch main
+EOF
+sudo apt update
+```
+
+If `apt update` finishes without errors, you can now install packages with
+`sudo apt install <package>`.
 
 
 ## Step 7: Choose a programming language and write some code
